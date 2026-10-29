@@ -5,7 +5,7 @@
   "prompt": "The graph below shows the amount of money spent on books in Germany, France, Italy and Austria between 1995 and 2005. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "source": "teacher",
   "source_date": "2026-07-24",
-  "image": null,
+  "image": "media/writing/t1-books-spending-1995-2005.png",
   "image_description": null,
   "note": "Unit 3 homework (graph given as a photo; wording reconstructed)",
   "ref": "telegram:IELTS_PREP_ARCHIVE",
@@ -105,7 +105,7 @@
   "prompt": "The line graph below shows the consumption of 3 different types of fast food in Britain from 1970 to 1990. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "source": "teacher",
   "source_date": "2026-08-12",
-  "image": null,
+  "image": "media/writing/t1-fast-food-britain-1970-1990.png",
   "image_description": null,
   "note": "written in class, 12 Aug (Types of graphs.pdf)",
   "ref": "telegram:IELTS_PREP_ARCHIVE"
@@ -128,8 +128,8 @@
   "prompt": "The graph below shows the number of students from the UK, the USA and Australia who studied in other countries between 2002 and 2008. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "source": "trial_exam",
   "source_date": "2026-08-14",
-  "image": null,
-  "image_description": null,
+  "image": "media/writing/latest_photo_190@15-07-2026_10-33-44.jpg",
+  "image_description": "Line graph, y axis number of students 0-60,000, years 2002-2008. UK: 2002 10,000; 2003 20,000; 2004 about 22,000; 2005 30,000; 2006 40,000; 2007 45,000; 2008 50,000 (steady rise). USA: 2002 30,000; 2003 35,000; 2004 peak about 58,000; 2005 45,000; 2006 35,000; 2007 40,000; 2008 45,000. Australia: 2002 50,000; 2003 peak 60,000; 2004 40,000; 2005 40,000; 2006 45,000; 2007 50,000; 2008 55,000. UK starts lowest and ends near Australia and above USA by 2008.",
   "note": "First Trial Exam, 14 Aug (wording reconstructed)",
   "ref": "telegram:IELTS_PREP_ARCHIVE",
   "prompt_reconstructed": true
@@ -260,12 +260,12 @@
  {
   "task": 1,
   "essay_type": "bar",
-  "prompt": "The bar chart below shows the percentage of men, women and children in the UK who ate five or more portions of fruit and vegetables per day between 2011 and 2017. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "prompt": "The bar chart below shows the percentage of men, women and children in the UK who ate more than five portions of vegetables and fish per day between 2011 and 2017. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "source": "trial_exam",
   "source_date": "2026-08-30",
-  "image": null,
-  "image_description": null,
-  "note": "Second Trial Exam, 30 Aug (wording reconstructed; students describe it as 'vegetables and fish')",
+  "image": "media/writing/t1-uk-vegetables-fish-2011-2017.jpg",
+  "image_description": "Bar chart, % of people in the UK eating more than 5 portions of vegetables and fish per day, 2011-2017. Women: 20, 20, 20, 28, 33, 36, 30. Men: 17.5, 18, 19, 22, 24, 23, 26. Children: 10, 14, 13, 14, 15, 14, 15.",
+  "note": "Second Trial Exam, 30 Aug (chart found online; it shows vegetables and fish, as the students described)",
   "ref": "telegram:IELTS_PREP_ARCHIVE",
   "prompt_reconstructed": true
  },
@@ -298,8 +298,8 @@
   "prompt": "The charts below show the percentage of the world's oil resources held in different regions, together with the proportion of the world's annual oil consumption in the same regions. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "source": "teacher",
   "source_date": "2026-09-09",
-  "image": null,
-  "image_description": null,
+  "image": "media/writing/t1-world-oil-resources-consumption.png",
+  "image_description": "Horizontal bar chart, % of total world oil resources / % of world annual oil consumption by region: Middle East 56.52 / 6.15; Canada 14.84 / 2.48; Central and South America 8.12 / 6.70; Eastern Europe 6.58 / 6.56; Africa 6.38 / 3.35; Asia 2.89 / 26.21; United States 1.85 / 25.48; Western Europe 1.47 / 19.24; Australia and New Zealand 0.30 / 1.31; Other 1.05 / 2.52.",
   "note": "class writing during the speaking test, 9 Sep (wording reconstructed)",
   "ref": "telegram:IELTS_PREP_ARCHIVE",
   "prompt_reconstructed": true
@@ -321,8 +321,8 @@
   "prompt": "The graph below shows the percentage of the population living in cities in four Asian countries (the Philippines, Malaysia, Thailand and Indonesia) from 1970 to 2020, with predictions for 2030 and 2040. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
   "source": "trial_exam",
   "source_date": "2026-09-11",
-  "image": null,
-  "image_description": null,
+  "image": "media/writing/t1-asian-cities-population-1970-2040.jpg",
+  "image_description": "Line graph, % of total population living in cities, 1970-2040 (2030 and 2040 predicted). Philippines: 32, 34, 48, 45, 42, 45, 50, 55. Malaysia: 30, 40, 45, 60, 70, 75, 80, 82. Thailand: 18, 23, 30, 30, 32, 33, 40, 50. Indonesia: 14, 17, 25, 30, 43, 52, 60, 63.",
   "note": "Final Trial Exam, 11 Sep (wording reconstructed)",
   "ref": "telegram:IELTS_PREP_ARCHIVE",
   "prompt_reconstructed": true
@@ -567,7 +567,7 @@
   "prompt": "The bar chart below shows numbers of seals, whales and dolphins recorded in the Gormez Straits from 2006 to 2018. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
   "source": "course_material",
   "source_date": null,
-  "image": null,
+  "image": "media/writing/t1-gormez-straits-seals-whales-dolphins.png",
   "image_description": null,
   "note": "model essay question in writing-task1-bar-chart.md",
   "ref": "IELTS_PREP_ARCHIVE/files/Bar Graph - Model Essays.pdf"
@@ -578,7 +578,7 @@
   "prompt": "The chart below shows the annual pay (thousands of US dollars) for doctors and other workers in seven countries in 2004. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
   "source": "course_material",
   "source_date": null,
-  "image": null,
+  "image": "media/writing/t1-doctors-pay-seven-countries-2004.jpg",
   "image_description": null,
   "note": "model essay question in writing-task1-bar-chart.md",
   "ref": "IELTS_PREP_ARCHIVE/files/Bar Graph - Model Essays.pdf"
@@ -589,7 +589,7 @@
   "prompt": "The line graph shows the percentages of Australian exports to four countries. Summarize the information by selecting and reporting the main features and make comparisons where relevant.",
   "source": "course_material",
   "source_date": null,
-  "image": null,
+  "image": "media/writing/t1-australian-exports-four-countries.png",
   "image_description": null,
   "note": "model essay question in writing-task1-line-graph.md",
   "ref": "LATEST_EXAMS_ARCHIVE/files/Writing Task 1 - Structure.pdf"
@@ -600,7 +600,7 @@
   "prompt": "The line graph shows the proportion of residents living in Australia in millions from different regions between 1976 and 2011.",
   "source": "course_material",
   "source_date": null,
-  "image": null,
+  "image": "media/writing/t1-australia-residents-by-region-1976-2011.png",
   "image_description": null,
   "note": "model essay question in writing-task1-line-graph.md",
   "ref": "LATEST_EXAMS_ARCHIVE/files/Writing Task 1 - Structure.pdf"
@@ -611,7 +611,7 @@
   "prompt": "The map below is of the town of Canterbury. A new school (S) is planned for the area. The map shows two possible sites for the school. Write at least 150 words.",
   "source": "course_material",
   "source_date": null,
-  "image": null,
+  "image": "media/writing/t1-canterbury-school-sites.png",
   "image_description": null,
   "note": "model essay question in writing-task1-map.md",
   "ref": "IELTS_PREP_ARCHIVE/files/Map Essay Structure.pdf"
@@ -622,7 +622,7 @@
   "prompt": "The maps below show the changes that have taken place at Queen Mary Hospital since its construction in 1960.",
   "source": "course_material",
   "source_date": null,
-  "image": null,
+  "image": "media/writing/t1-queen-mary-hospital-1960-2000.png",
   "image_description": null,
   "note": "model essay question in writing-task1-map.md",
   "ref": "IELTS_PREP_ARCHIVE/files/Map Essay Structure.pdf"
@@ -633,7 +633,7 @@
   "prompt": "The maps below show changes in the city of Nelson in recent times. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
   "source": "course_material",
   "source_date": null,
-  "image": null,
+  "image": "media/writing/t1-nelson-city-2000-today.png",
   "image_description": null,
   "note": "model essay question in writing-task1-map.md",
   "ref": "IELTS_PREP_ARCHIVE/files/Map Essay Structure.pdf"
@@ -655,7 +655,7 @@
   "prompt": "The line graph shows visits to and from the UK from 1979 to 1999, and the bar graph shows the most popular countries visited by UK residents in 1999.",
   "source": "course_material",
   "source_date": null,
-  "image": null,
+  "image": "media/writing/t1-uk-visits-1979-1999.jpg",
   "image_description": null,
   "note": "model essay question in writing-task1-multiple-graphs.md",
   "ref": "IELTS_PREP_ARCHIVE/files/Multiple Graphs .pdf"
@@ -666,7 +666,7 @@
   "prompt": "The pie chart below shows the main reasons why agricultural land becomes less productive. The table shows how these causes affected three regions of the world during the 1990s.",
   "source": "course_material",
   "source_date": null,
-  "image": null,
+  "image": "media/writing/t1-land-degradation.png",
   "image_description": null,
   "note": "model essay question in writing-task1-multiple-graphs.md",
   "ref": "IELTS_PREP_ARCHIVE/files/Multiple Graphs .pdf"
@@ -677,7 +677,7 @@
   "prompt": "The charts show the main methods of transportation for people travelling to a university for work or study in 2004 and 2009.",
   "source": "course_material",
   "source_date": null,
-  "image": null,
+  "image": "media/writing/t1-university-transport-2004-2009.jpg",
   "image_description": null,
   "note": "model essay question in writing-task1-pie-chart.md",
   "ref": "IELTS_PREP_ARCHIVE/files/Pie Chart Example Essays.pdf"
@@ -688,7 +688,7 @@
   "prompt": "The chart below shows the proportions of graduates from Brighton University in 2019 entering different employment sectors.",
   "source": "course_material",
   "source_date": null,
-  "image": null,
+  "image": "media/writing/t1-brighton-graduates-2019.png",
   "image_description": null,
   "note": "model essay question in writing-task1-pie-chart.md",
   "ref": "IELTS_PREP_ARCHIVE/files/Pie Chart Example Essays.pdf"
@@ -699,7 +699,7 @@
   "prompt": "The diagram illustrates the process that is used to manufacture bricks for the building industry.",
   "source": "course_material",
   "source_date": null,
-  "image": null,
+  "image": "media/writing/t1-brick-manufacturing.jpg",
   "image_description": null,
   "note": "model essay question in writing-task1-process-diagram.md",
   "ref": "IELTS_PREP_ARCHIVE/files/Process Diagram Structure.pdf"
@@ -710,7 +710,7 @@
   "prompt": "The diagrams below show the stages and equipment used in the cement-making process, and how cement is used to produce concrete for building purposes.",
   "source": "course_material",
   "source_date": null,
-  "image": null,
+  "image": "media/writing/t1-cement-concrete-production.png",
   "image_description": null,
   "note": "model essay question in writing-task1-process-diagram.md",
   "ref": "IELTS_PREP_ARCHIVE/files/Process Diagram Structure.pdf"
@@ -721,7 +721,7 @@
   "prompt": "The diagram below shows the process of using water to generate electricity for human use.",
   "source": "course_material",
   "source_date": null,
-  "image": null,
+  "image": "media/writing/t1-hydroelectric-power.png",
   "image_description": null,
   "note": "model essay question in writing-task1-process-diagram.md",
   "ref": "IELTS_PREP_ARCHIVE/files/Process Diagram Structure.pdf"
@@ -732,7 +732,7 @@
   "prompt": "The diagram illustrates how bees produce honey.",
   "source": "course_material",
   "source_date": null,
-  "image": null,
+  "image": "media/writing/t1-bees-honey.png",
   "image_description": null,
   "note": "model essay question in writing-task1-process-diagram.md",
   "ref": "IELTS_PREP_ARCHIVE/files/Process Diagram Structure.pdf"
@@ -743,7 +743,7 @@
   "prompt": "The table below shows the percentages of the population by age groups in one town who rode bicycles in 2011.",
   "source": "course_material",
   "source_date": null,
-  "image": null,
+  "image": "media/writing/t1-bicycles-by-age-2011.png",
   "image_description": null,
   "note": "model essay question in writing-task1-table.md",
   "ref": "IELTS_PREP_ARCHIVE/files/Table Example Essays.pdf"
@@ -754,7 +754,7 @@
   "prompt": "The table below shows the percentage participation of women in senior management in three companies between 1975 and 2015.",
   "source": "course_material",
   "source_date": null,
-  "image": null,
+  "image": "media/writing/t1-women-senior-management-1975-2015.png",
   "image_description": null,
   "note": "model essay question in writing-task1-table.md",
   "ref": "IELTS_PREP_ARCHIVE/files/Table Example Essays.pdf"
@@ -765,7 +765,7 @@
   "prompt": "The table below shows the estimated literacy rates by region and gender for 2000-2004.",
   "source": "course_material",
   "source_date": null,
-  "image": null,
+  "image": "media/writing/t1-literacy-rates-2000-2004.png",
   "image_description": null,
   "note": "practice task in writing-task1-table.md",
   "ref": "IELTS_PREP_ARCHIVE/files/Table Example Essays.pdf"

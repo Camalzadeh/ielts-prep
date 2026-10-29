@@ -1,0 +1,132 @@
+[
+  {
+    "prompt": "The chart below shows the type of transports young people in four countries prefer to use. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "replaced_by": "The chart below shows the type of transports young people in four countries prefer to use. Summarize the information by selecting and reporting the main features, and make comparisons where relevant. You should write at least 150 words.",
+    "reason": "duplicate of the same task with its chart"
+  },
+  {
+    "prompt": "The graph below shows the demand for electricity in England during typical days in winter and summer. The pie chart shows how electricity is used in an average English home. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "replaced_by": "The graph below shows the demand for electricity in England during typical days in winter and summer. The pie chart shows how electricity is used in an average English home. Summarise the information by selecting and reporting the main features and make comparisons where relevant. You should write at least 150 words.",
+    "reason": "duplicate of the same task with its chart"
+  },
+  {
+    "prompt": "The pie charts below show the devices people in the 18 to 25 age group use to watch television in Canada in two different years. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "replaced_by": "The pie charts below show the devices people in the 18 to 25 age group use to watch television in Canada in two different years. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+    "reason": "duplicate of the same task with its chart"
+  },
+  {
+    "prompt": "The pie charts below show the average household expenditures in Japan and Malaysia in the year 2010. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "replaced_by": "The pie charts below show the average household expenditures in Japan and Malaysia in the year 2010. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+    "reason": "duplicate of the same task with its chart"
+  },
+  {
+    "prompt": "The table compares the international tourist arrivals in the top eight countries in 2009 and 2010 and the change (in percentage). Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "replaced_by": "The table compares the international tourist arrivals in the top eight countries in 2009 and 2010 and the change (in percentage)",
+    "reason": "duplicate of the same task with its chart"
+  },
+  {
+    "prompt": "The charts show projections for global production by sector in 2040 and 2060. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "replaced_by": "The charts show projections for global production by sector in 2040 and 2060. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+    "reason": "duplicate of the same task with its chart"
+  },
+  {
+    "prompt": "The diagram below shows how fabric is manufactured from bamboo. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "replaced_by": "The diagram below shows how fabric is manufactured from bamboo. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+    "reason": "duplicate of the same task with its chart"
+  },
+  {
+    "prompt": "The bar chart below shows the types of music bought in the USA in 2010, by age group.",
+    "replaced_by": "The bar chart below shows the types of music bought in the USA in 2010, by age group. (24th May PBI TEST)",
+    "reason": "duplicate of the same task with its chart"
+  },
+  {
+    "prompt": "The maps below show the village of Stokeford in 1930 and 2010. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "replaced_by": "The maps below show the village of Stokeford in 1930 and 2010. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+    "reason": "duplicate of the same task with its chart"
+  },
+  {
+    "prompt": "The maps below show the village of Stokeford in 1930 and 2010.",
+    "replaced_by": "The maps below show the village of Stokeford in 1930 and 2010. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+    "reason": "duplicate of the same task with its chart"
+  },
+  {
+    "prompt": "Students from USA, UK and Australia studying in other countries, 2002-2008 (task wording not shown)",
+    "replaced_by": "The graph below shows the number of students from the UK, the USA and Australia who studied in other countries between 2002 and 2008. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "reason": "same task; the other copy has the full task wording"
+  },
+  {
+    "prompt": "The bar chart below shows the percentage of men, women and children in the UK who ate five or more portions of fruit and vegetables per day between 2011 and 2017. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "replaced_by": "The bar chart below shows the percentage of men, women and children in the UK who ate more than five portions of vegetables and fish per day between 2011 and 2017. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "reason": "wording corrected to match the chart (vegetables and fish)"
+  },
+  {
+    "prompt": "Today, many people use the internet and smartphones to transfer money to friends, family, and businesses.\n\nIs this a positive or negative development?",
+    "replaced_by": "Today, many people use the internet and smartphones to transfer money to friends, family, and businesses. Is this a positive or negative development?",
+    "reason": "duplicate of the same task (formatting only)"
+  },
+  {
+    "prompt": "Many university students want to learn about different subjects in addition to their main subjects. Others feel it is more important to give all their time and attention to studying for their qualification. Discuss both views and give your opinion.",
+    "replaced_by": "Many university students want to learn about different subjects in addition to their main subjects. Others feel it is more important to give all their time and attention to studying for a qualification. Discuss both these views and give your own opinion.",
+    "reason": "duplicate of the same task (formatting only)"
+  },
+  {
+    "prompt": "The line graph shows money spent on books in Germany, France, Italy and Austria from 1995 to 2005.",
+    "replaced_by": "The graph below shows the amount of money spent on books in Germany, France, Italy and Austria between 1995 and 2005. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "reason": "short summary of a task read from an essay photo"
+  },
+  {
+    "prompt": "Bar graph: proportion of UK businesses (small, medium, large) with a social media presence, 2012-2016.",
+    "replaced_by": "The bar chart illustrates the percentage of businesses in the UK who had a social media presence from 2012 to 2016. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "reason": "short summary of a task read from an essay photo"
+  },
+  {
+    "prompt": "Line graph: consumption of fast food (pizza, hamburger, fish & chips) in grams per week in Britain, 1970-1990",
+    "replaced_by": "The line graph below shows the consumption of 3 different types of fast food in Britain from 1970 to 1990. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "reason": "short summary of a task read from an essay photo"
+  },
+  {
+    "prompt": "Table: international tourist arrivals and % change, top eight countries, 2009-2010",
+    "replaced_by": "The table compares the international tourist arrivals in the top eight countries in 2009 and 2010 and the change (in percentage)",
+    "reason": "short summary of a task read from an essay photo"
+  },
+  {
+    "prompt": "Table: consumer expenditure on three categories in five countries, 2002",
+    "replaced_by": "The table below gives information on consumer spending on different items in five different countries in 2002. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "reason": "short summary of a task read from an essay photo"
+  },
+  {
+    "prompt": "Bar graphs: proportion of global oil resources and annual oil consumption across ten regions",
+    "replaced_by": "The charts below show the percentage of the world's oil resources held in different regions, together with the proportion of the world's annual oil consumption in the same regions. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "reason": "short summary of a task read from an essay photo"
+  },
+  {
+    "prompt": "Students' lack of concentration in the classroom: causes and solutions",
+    "replaced_by": "In many countries, students find it increasingly difficult to concentrate in the classroom. What are the causes of this problem? What solutions can you suggest?",
+    "reason": "short summary of a task read from an essay photo"
+  },
+  {
+    "prompt": "Homelessness is increasing in many countries: causes and solutions",
+    "replaced_by": "The number of homeless people is increasing in many major cities around the world. What are the causes of this problem? What solutions can you suggest?",
+    "reason": "short summary of a task read from an essay photo"
+  },
+  {
+    "prompt": "Machines/automated systems replacing humans: discuss advantages and disadvantages and explain why benefits outweigh drawbacks (outweigh question)",
+    "replaced_by": "Machines are taking over more and more jobs previously done by humans. Discuss the advantages and disadvantages and give your own opinion.",
+    "reason": "short summary of a task read from an essay photo"
+  },
+  {
+    "prompt": "Some people think that teachers should focus on academics more than motivating students",
+    "replaced_by": "Some people think that teachers should place greater emphasis on academic achievement rather than on motivating students. To what extent do you agree or disagree?",
+    "reason": "short summary of a task read from an essay photo"
+  },
+  {
+    "prompt": "Children spend a lot of time on smartphones (causes and positive/negative development)",
+    "replaced_by": "Some children spend hours every day on smartphones. Why is this the case? Do you think this is a positive or negative development?",
+    "reason": "short summary of a task read from an essay photo"
+  },
+  {
+    "prompt": "Some people think university students should study only main subjects; others think they should also take additional subjects (inferred from essay)",
+    "replaced_by": "Many university students want to learn about different subjects in addition to their main subjects. Others feel it is more important to give all their time and attention to studying for a qualification. Discuss both these views and give your own opinion.",
+    "reason": "short summary of a task read from an essay photo"
+  }
+]

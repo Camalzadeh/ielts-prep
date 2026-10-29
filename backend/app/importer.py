@@ -48,6 +48,7 @@ def run_import() -> dict[str, Any]:
         conn = db.connect()
         try:
             for name, fn in (("tests", import_tests), ("writing_prompts", import_writing_prompts),
+                             ("retired_prompts", retire_prompts),
                              ("speaking_questions", import_speaking_questions),
                              ("vocab", import_vocab), ("my_essays", import_my_essays),
                              ("photo_essays", import_photo_essays), ("test_results", import_test_results),
@@ -180,10 +181,41 @@ def import_tests(conn: sqlite3.Connection, errors: list[str]) -> int:
 
 
 # --------------------------------------------------------------------------- writing prompts
+RETIRED_PROMPTS_FILE = "retired_prompts.json"   # not matched by the writing_prompts*.json glob
+_retired_cache: tuple[float, dict[str, str | None]] | None = None
+
+
+def _retired() -> dict[str, str | None]:
+    """knowledge/data/retired_prompts.json: prompts taken out of the app ([{"prompt", "replaced_by", "reason"}]).
+    Maps the retired prompt text to the prompt that replaces it (None: removed without replacement)."""
+    global _retired_cache
+    path = db.KNOWLEDGE_DIR / "data" / RETIRED_PROMPTS_FILE
+    try:
+        mtime = path.stat().st_mtime
+    except OSError:
+        return {}
+    if _retired_cache is None or _retired_cache[0] != mtime:
+        mapping: dict[str, str | None] = {}
+        for item in _items(_read_json(path, [])):
+            prompt = _str(item.get("prompt"))
+            if prompt:
+                mapping[prompt] = _str(item.get("replaced_by"))
+        _retired_cache = (mtime, mapping)
+    return _retired_cache[1]
+
+
+def _prompt_id(conn: sqlite3.Connection, prompt: str | None) -> int | None:
+    row = conn.execute("SELECT id FROM writing_prompts WHERE prompt = ?", (prompt,)).fetchone() if prompt else None
+    return row[0] if row else None
+
+
 def _upsert_prompt(conn: sqlite3.Connection, item: dict) -> int | None:
     prompt = _str(item.get("prompt"))
     if not prompt:
         return None
+    retired = _retired()
+    if prompt in retired:   # never (re)created; its replacement (or the row kept for its essays) is used
+        return _prompt_id(conn, retired[prompt] or prompt)
     task = _int(item.get("task"))
     conn.execute(
         """INSERT INTO writing_prompts(task, module, essay_type, prompt, image_path, image_description,
@@ -206,11 +238,49 @@ def _upsert_prompt(conn: sqlite3.Connection, item: dict) -> int | None:
 
 def import_writing_prompts(conn: sqlite3.Connection, errors: list[str]) -> int:
     n = 0
+    retired = _retired()
     for path in _data_files("writing_prompts*.json"):
         for item in _items(_read_json(path, errors)):
+            if _str(item.get("prompt")) in retired:
+                continue
             if _upsert_prompt(conn, item):
                 n += 1
     return n
+
+
+def _mock_prompt_ids(conn: sqlite3.Connection) -> set[int]:
+    ids: set[int] = set()
+    for (plan,) in conn.execute("SELECT plan_json FROM mock_exams"):
+        writing = (db.loads(plan, {}) or {}).get("writing") or {}
+        if isinstance(writing, dict):
+            ids.update(v for v in writing.values() if isinstance(v, int))
+    return ids
+
+
+def retire_prompts(conn: sqlite3.Connection, errors: list[str]) -> dict[str, int]:
+    """Take the prompts in retired_prompts.json out of the DB (rows left from earlier imports). Essays on a
+    retired prompt move to its replacement; a prompt without a replacement keeps its row while essays or a
+    mock exam still refer to it. Idempotent."""
+    stats = {"deleted": 0, "essays_moved": 0, "kept_in_use": 0}
+    path = db.KNOWLEDGE_DIR / "data" / RETIRED_PROMPTS_FILE
+    if path.is_file() and _read_json(path, errors) is None:
+        return stats
+    in_mocks = _mock_prompt_ids(conn)
+    for prompt, replaced_by in _retired().items():
+        pid = _prompt_id(conn, prompt)
+        if pid is None:
+            continue
+        new_id = _prompt_id(conn, replaced_by)
+        if new_id is not None and new_id != pid:
+            stats["essays_moved"] += conn.execute("UPDATE writing_submissions SET prompt_id = ? WHERE prompt_id = ?",
+                                                  (new_id, pid)).rowcount
+        if pid in in_mocks or conn.execute("SELECT 1 FROM writing_submissions WHERE prompt_id = ? LIMIT 1",
+                                           (pid,)).fetchone():
+            stats["kept_in_use"] += 1
+            continue
+        conn.execute("DELETE FROM writing_prompts WHERE id = ?", (pid,))
+        stats["deleted"] += 1
+    return stats
 
 
 # --------------------------------------------------------------------------- speaking
@@ -294,7 +364,7 @@ def import_phrase_vocab(conn: sqlite3.Connection, errors: list[str]) -> int:
 
 # --------------------------------------------------------------------------- my essays
 def _match_prompt(conn: sqlite3.Connection, task: int | None, prompt: str) -> int | None:
-    target = _norm_text(prompt)
+    target = _norm_text(_retired().get(prompt) or prompt)   # an essay on a retired prompt goes to its replacement
     if not target:
         return None
     rows = conn.execute("SELECT id, task, prompt FROM writing_prompts").fetchall()
