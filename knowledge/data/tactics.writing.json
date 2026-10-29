@@ -1,0 +1,900 @@
+[
+  {
+    "skill": "writing",
+    "type": "task1_line",
+    "title": "Task 1: Line graph",
+    "summary": "Describe how one or more values change over time: rises, falls, fluctuations, peaks and points where lines cross.",
+    "rule": "Overview = main trends with NO numbers; bodies = key figures, not every year.",
+    "quick": {
+      "do": [
+        "0–3 min: find trends, highs, lows, crossings",
+        "Intro: paraphrase the task in 1 sentence",
+        "'Overall,' + main trends, no numbers",
+        "2 bodies: start, changes, end values; compare"
+      ],
+      "avoid": [
+        "Numbers or years in the overview",
+        "No overview → Task Achievement capped at 5",
+        "Describing every year instead of key points"
+      ],
+      "remember": [
+        "20 min, 150+ words (aim 170–190)",
+        "4 paragraphs; no conclusion needed"
+      ]
+    },
+    "steps": [
+      "Minutes 0-3: read the task, the title, axes, units and legend; find the main trends, the highest/lowest values and any crossings; decide how to split the data into two body groups.",
+      "Introduction (1 sentence, ~25 words): paraphrase - The line graph illustrates / presents data on + what + where + over the period from X to Y. Name the lines with 'namely' if there are few.",
+      "Overview (1-2 sentences, ~40 words): 'Overall,' + the general trend of each group (up / down) contrasted with while / whereas + the biggest change or the change of leader (e.g. 'China surpassed it and ranked first'). No numbers.",
+      "Body 1 (~60 words): the lines that started highest or fell - start value with year, main changes, end value.",
+      "Body 2 (~60 words): the lines that rose or started lowest - start value, changes, end value, crossings and peaks; compare with Body 1 lines (By comparison, / By contrast,).",
+      "Use both sentence patterns (rose sharply / there was a sharp rise) and approximations (around, just over, nearly).",
+      "Minutes 17-20: check numbers against the chart, units (thousands / millions / %), tenses, the/a, subject-verb agreement and the word count (at least 150; aim 170-190)."
+    ],
+    "traps": [
+      "Numbers, percentages or years in the overview - the teacher's rule is NO NUMBER/PERCENTAGE/YEAR there.",
+      "No overview at all, or an overview that only lists categories - this caps Task Achievement at band 5.",
+      "Copying the question word for word in the introduction instead of paraphrasing.",
+      "Giving opinions or reasons that the chart does not show (Task 1 is a report).",
+      "Under 150 words, or spending more than 20 minutes and losing time for Task 2 (which counts double).",
+      "Describing every single point year by year instead of selecting start, end, peaks, lows and crossings.",
+      "Wrong tense with 'by': By 2012 they HAD surged ... (past perfect), not 'surged'.",
+      "Wrong preposition: rose TO 10% (new level) vs rose BY 2% (size of change); peaked AT; a peak OF.",
+      "Using 'the number of' with uncountable nouns (the amount of money, not the number of money)."
+    ],
+    "tips": [
+      "4 paragraphs: Introduction (1 sentence), Overview (1-2 sentences, 'Overall,'), Body 1, Body 2. No conclusion is needed - the overview does that job.",
+      "Approximate word targets: introduction ~25-30, overview ~35-45, each body paragraph ~55-70 words.",
+      "Vary the subject: the number of / the figure for / that of / this figure - don't repeat the same noun.",
+      "Group lines with similar trends together (falling lines in Body 1, rising lines in Body 2), or the highest lines first.",
+      "If the graph has projected years (2030, 2040), use the prediction structures (is expected to, is predicted to, it is estimated that) and mention the projection in the overview.",
+      "Point out crossings and changes of rank: overtook, surpassed, outnumbered, became the largest."
+    ],
+    "example": "Australian exports (1990-2012): Overview - 'an upward trend was seen in ... India and China, while the US and Japan witnessed an opposite trend ... at the beginning Japan was the main importer ..., whereas in the last year China surpassed it and ranked first.' Body 1 = Japan (highest, falling) + US (fluctuating); Body 2 = China (lowest to highest) + India (steady rise).",
+    "language": [
+      "rose / increased / climbed / surged",
+      "fell / declined / dropped / dipped",
+      "fluctuated between",
+      "remained stable at",
+      "reached a peak of",
+      "overtook / surpassed",
+      "By 2012, ... had + V3"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "writing",
+    "type": "task1_bar",
+    "title": "Task 1: Bar chart",
+    "summary": "Compare categories shown as bars - either over several years (dynamic: trend language) or at one point in time (static: comparison and ranking language).",
+    "rule": "Several years = trend language; one year only = compare and rank.",
+    "quick": {
+      "do": [
+        "0–3 min: several years or one? Find highs, lows",
+        "Intro: paraphrase what, where, when",
+        "'Overall,' + main trend or ranking, no numbers",
+        "2 bodies with direct comparisons"
+      ],
+      "avoid": [
+        "Numbers or years in the overview",
+        "Trend verbs (rose, fell) for a one-year chart",
+        "Misreading units (thousands of dollars)"
+      ],
+      "remember": [
+        "20 min, 150+ words (aim 170–190)",
+        "4 paragraphs; no conclusion needed"
+      ]
+    },
+    "steps": [
+      "Minutes 0-3: read the task, the title, axes, units and legend; find the main trends, the highest/lowest values and any crossings; decide how to split the data into two body groups. Decide first: are there several years (dynamic) or one year (static)?",
+      "Introduction (1 sentence, ~25 words): The bar chart illustrates / compares + what + where + when (over a twelve-year period from 2006 to 2018 / in 2004).",
+      "Overview (1-2 sentences, ~40 words): 'Overall,' + the main trend (dynamic) or main comparison (static) + the highest category and any change of ranking. No numbers.",
+      "Body 1 (~60 words): dynamic - the categories with steadier or mixed changes; static - the first group (e.g. doctors), from highest to lowest.",
+      "Body 2 (~60 words): dynamic - the category with the most dramatic change; static - the second group (e.g. other workers), with direct comparisons (... which was $10,000 less than Italy).",
+      "Minutes 17-20: check numbers against the chart, units (thousands / millions / %), tenses, the/a, subject-verb agreement and the word count (at least 150; aim 170-190)."
+    ],
+    "traps": [
+      "Numbers, percentages or years in the overview - the teacher's rule is NO NUMBER/PERCENTAGE/YEAR there.",
+      "No overview at all, or an overview that only lists categories - this caps Task Achievement at band 5.",
+      "Copying the question word for word in the introduction instead of paraphrasing.",
+      "Giving opinions or reasons that the chart does not show (Task 1 is a report).",
+      "Under 150 words, or spending more than 20 minutes and losing time for Task 2 (which counts double).",
+      "Using trend verbs (rose, fell) for a static chart with only one year - there is no change over time; compare instead.",
+      "Misreading the units: 'thousands of US dollars' means 120 on the axis = $120,000.",
+      "Listing every bar in order without comparisons."
+    ],
+    "tips": [
+      "4 paragraphs: Introduction (1 sentence), Overview (1-2 sentences, 'Overall,'), Body 1, Body 2. No conclusion is needed - the overview does that job.",
+      "Approximate word targets: introduction ~25-30, overview ~35-45, each body paragraph ~55-70 words.",
+      "Vary the subject: the number of / the figure for / that of / this figure - don't repeat the same noun.",
+      "Static ranking language: topped the list, led with a substantial advantage, held the top spot, the joint second-place holders, recorded the lowest, respectively, the remaining three countries.",
+      "Dynamic language: stood at, before rising significantly to, saw a decline to, exhibited a steady upward trend, culminating in, surpassed."
+    ],
+    "example": "Annual pay of doctors and other workers in 2004 (static): Overview - 'physicians consistently commanded higher salaries than other professionals in all countries surveyed. The United States topped the list for both ...' Body 1 = doctors (from $120,000 in the US to $50,000 in Finland); Body 2 = other workers.",
+    "language": [
+      "topped the list",
+      "led with a substantial advantage",
+      "followed by",
+      "respectively",
+      "which was $X less than",
+      "stood at",
+      "exhibited a steady upward trend"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "writing",
+    "type": "task1_pie",
+    "title": "Task 1: Pie chart",
+    "summary": "Describe proportions of a whole (100%): the largest and smallest segments, and changes between years if there are several pies.",
+    "rule": "Show the biggest and smallest shares; group the small segments together.",
+    "quick": {
+      "do": [
+        "0–3 min: one year (rank) or several (changes)?",
+        "Intro: the proportion of… + who + when",
+        "'Overall,' + largest / smallest share, no numbers",
+        "Body 1: largest shares; Body 2: the rest"
+      ],
+      "avoid": [
+        "Numbers or percentages in the overview",
+        "'Percentage' in every sentence: vary it",
+        "9% → 16% = 7 percentage points, not 7%"
+      ],
+      "remember": [
+        "20 min, 150+ words (aim 170–190)",
+        "4 paragraphs; no conclusion needed"
+      ]
+    },
+    "steps": [
+      "Minutes 0-3: read the task, the title, axes, units and legend; find the main trends, the highest/lowest values and any crossings; decide how to split the data into two body groups. Note whether the pies show different years (describe changes) or one year (rank the segments).",
+      "Introduction (1 sentence, ~25 words): The pie chart(s) illustrate(s) the percentage / proportion of ... + who/what + when.",
+      "Overview (1-2 sentences, ~40 words): 'Overall,' + the largest (and smallest) segment; with several years add the main changes / change of leader (were overtaken by buses as the primary choice). No numbers.",
+      "Body 1 (~60 words): the largest segments with figures and comparisons (accounted for over half, at 51%; nearly twice as much as).",
+      "Body 2 (~60 words): 'Regarding the remaining categories,' - the smaller segments, ending with the smallest (a mere 3%, less than 1%).",
+      "Minutes 17-20: check numbers against the chart, units (thousands / millions / %), tenses, the/a, subject-verb agreement and the word count (at least 150; aim 170-190)."
+    ],
+    "traps": [
+      "Numbers, percentages or years in the overview - the teacher's rule is NO NUMBER/PERCENTAGE/YEAR there.",
+      "No overview at all, or an overview that only lists categories - this caps Task Achievement at band 5.",
+      "Copying the question word for word in the introduction instead of paraphrasing.",
+      "Giving opinions or reasons that the chart does not show (Task 1 is a report).",
+      "Under 150 words, or spending more than 20 minutes and losing time for Task 2 (which counts double).",
+      "Repeating 'percentage' in every sentence - rotate proportion / share / figure / fractions (just over a quarter, roughly three quarters).",
+      "Describing each of many small segments separately - group the small ones together.",
+      "Writing 'rose by 7%' when you mean percentage points (9% -> 16% is a rise of seven percentage points)."
+    ],
+    "tips": [
+      "4 paragraphs: Introduction (1 sentence), Overview (1-2 sentences, 'Overall,'), Body 1, Body 2. No conclusion is needed - the overview does that job.",
+      "Approximate word targets: introduction ~25-30, overview ~35-45, each body paragraph ~55-70 words.",
+      "Vary the subject: the number of / the figure for / that of / this figure - don't repeat the same noun.",
+      "Use the share verbs: account for, constitute, comprise, make up, represent, hold the largest share.",
+      "With two years, give both values in each sentence: rising from 9% to 16% between 2004 and 2009."
+    ],
+    "example": "Transport to a university, 2004 vs 2009: Overview - 'private cars were the most popular means of transport at the beginning of the period, while they were overtaken by buses as the primary choice in the final year.' Body 1 = cars and buses (the two that swapped places); Body 2 = bicycle, walking, train.",
+    "language": [
+      "accounted for",
+      "constituted exactly one-third",
+      "held the largest share",
+      "This was followed by",
+      "a mere 3%",
+      "less than 1%",
+      "Regarding the remaining categories"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "writing",
+    "type": "task1_table",
+    "title": "Task 1: Table",
+    "summary": "Select the key figures from many exact numbers: highest and lowest values, the biggest gaps and the patterns across rows and columns.",
+    "rule": "Select the key figures (highest, lowest, biggest gaps); don't copy the table.",
+    "quick": {
+      "do": [
+        "0–3 min: mark the biggest and smallest numbers",
+        "Intro: paraphrase what, who, when",
+        "'Overall,' + patterns across rows and columns",
+        "2 bodies, with a comparison in every sentence"
+      ],
+      "avoid": [
+        "Numbers in the overview",
+        "Turning the whole table into sentences",
+        "Treating a table with years as static"
+      ],
+      "remember": [
+        "20 min, 150+ words (aim 170–190)",
+        "4 paragraphs; no conclusion needed"
+      ]
+    },
+    "steps": [
+      "Minutes 0-3: read the task, the title, axes, units and legend; find the main trends, the highest/lowest values and any crossings; decide how to split the data into two body groups. Mark the largest and smallest numbers; compare rows (e.g. age groups) and columns (e.g. male vs female); if there are years, note the direction of each row.",
+      "Introduction (1 sentence, ~25 words): The table illustrates / shows the percentage(s) of ... + who + when (+ classified by gender / by region).",
+      "Overview (1-2 sentences, ~40 words): 'Overall,' + the main pattern across rows + the main pattern across columns, or the highest/lowest category at the end. No numbers.",
+      "Body 1 (~60 words): the first group of rows/columns with figures and direct comparisons (compared with a slightly higher figure of ...; whereas the corresponding figure for ...).",
+      "Body 2 (~60 words): the remaining rows/columns ('When it comes to ...', 'In terms of ...').",
+      "Minutes 17-20: check numbers against the chart, units (thousands / millions / %), tenses, the/a, subject-verb agreement and the word count (at least 150; aim 170-190)."
+    ],
+    "traps": [
+      "Numbers, percentages or years in the overview - the teacher's rule is NO NUMBER/PERCENTAGE/YEAR there.",
+      "No overview at all, or an overview that only lists categories - this caps Task Achievement at band 5.",
+      "Copying the question word for word in the introduction instead of paraphrasing.",
+      "Giving opinions or reasons that the chart does not show (Task 1 is a report).",
+      "Under 150 words, or spending more than 20 minutes and losing time for Task 2 (which counts double).",
+      "Copying the whole table into sentences - select only the main features.",
+      "Treating a table with years as static - if there are years, describe it like a line graph with trend verbs.",
+      "Confusing % with percentage points when describing differences between two percentages."
+    ],
+    "tips": [
+      "4 paragraphs: Introduction (1 sentence), Overview (1-2 sentences, 'Overall,'), Body 1, Body 2. No conclusion is needed - the overview does that job.",
+      "Approximate word targets: introduction ~25-30, overview ~35-45, each body paragraph ~55-70 words.",
+      "Vary the subject: the number of / the figure for / that of / this figure - don't repeat the same noun.",
+      "Compare in every sentence: compared with, whereas the corresponding figure for, a similar pattern was observed among.",
+      "Use 'making this group the least active overall' / 'making it the highest initial share' to add a ranking comment."
+    ],
+    "example": "Cycling by age and gender in 2011: Overview - younger people cycled more, and females cycled more than males in every age group, with the biggest gap among teenagers. Body 1 = the three youngest groups (male vs female in each); Body 2 = 40-59 and 60+.",
+    "language": [
+      "compared with",
+      "whereas the corresponding figure for",
+      "A similar pattern was observed among",
+      "When it comes to",
+      "In terms of",
+      "percentage points"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "writing",
+    "type": "task1_map",
+    "title": "Task 1: Map",
+    "summary": "Describe changes to a place over time, or compare possible sites, using location language and mostly passive verbs - there are no numbers.",
+    "rule": "Say what was added, removed or changed; use the passive; no numbers.",
+    "quick": {
+      "do": [
+        "0–3 min: list added, removed, unchanged features",
+        "Intro: the maps illustrate the changes in…",
+        "Overview: the biggest change, no years",
+        "2 bodies by area or by time, in the passive"
+      ],
+      "avoid": [
+        "Active verbs ('the school built')",
+        "'in the north of' (inside) vs 'to the north of'",
+        "Forgetting what stayed the same"
+      ],
+      "remember": [
+        "4 paragraphs: intro, overview, 2 bodies",
+        "Then vs now: present perfect passive"
+      ]
+    },
+    "steps": [
+      "Minutes 0-3: compare the maps; list what was added, removed, replaced, extended and what stayed the same; note the dates and the compass directions. Decide whether to organise the body by area (north/south) or by time (1960-1980 / 2000).",
+      "Introduction (1 sentence, ~25-30 words): The provided map(s) illustrate(s) the structural changes and developments that occurred at / in ... between ... and ... (two sites: illustrates two proposed locations for ...).",
+      "Overview (1-2 sentences, ~35-45 words): the most significant change without data or years - did the area become more urbanized, commercialized, industrialized or accessible? What stayed the same?",
+      "Body 1 (~65 words): the first area (e.g. the northern sector) or time period, or site 1 - location + changes in the passive (was replaced by, was converted into, was demolished).",
+      "Body 2 (~65 words): the second area / period / site, with linking (Conversely, / Meanwhile, / By the year 2000, further redevelopments took place).",
+      "Minutes 17-20: check tenses (past simple passive; present perfect passive for 'today'; had + V3 with 'by'), prepositions (in the north of vs to the north of) and the word count."
+    ],
+    "traps": [
+      "Numbers, percentages or years in the overview - the teacher's rule is NO NUMBER/PERCENTAGE/YEAR there.",
+      "No overview at all, or an overview that only lists categories - this caps Task Achievement at band 5.",
+      "Copying the question word for word in the introduction instead of paraphrasing.",
+      "Giving opinions or reasons that the chart does not show (Task 1 is a report).",
+      "Using active verbs as if buildings acted by themselves ('the school built') - use the passive (a school was built).",
+      "Mixing up 'in the north of' (inside the area) and 'to the north of' (outside it).",
+      "Forgetting features that did NOT change - saying what remained unchanged is part of the comparison.",
+      "Wrong tense for a 'then and now' map: use the present perfect passive (has been cleared, has been constructed)."
+    ],
+    "tips": [
+      "4 paragraphs: Introduction, Overview, 1st main feature, 2nd main feature (teacher's 'The Structure of MAP').",
+      "Ready-made overview types: urbanization, commercialization/leisure, industrialization, infrastructure/accessibility, internal layout changes.",
+      "For two possible sites use the present simple (S1 is situated ..., whereas S2 is centrally located ...) and compare their advantages.",
+      "Planned future changes: is planned to be built / it is planned that ... will."
+    ],
+    "example": "Queen Mary Hospital 1960-1980-2000: Overview - the whole area underwent significant modernization; medical facilities expanded while green space and parking shrank. Body 1 = 1960 and the changes by 1980 (shopping center replaced by a Cancer Centre; farmland cleared for a Nursing School); Body 2 = 2000 (Cancer Centre tripled in size; Nursing School relocated, halving the car park).",
+    "language": [
+      "was replaced by",
+      "was demolished",
+      "was converted into",
+      "was relocated",
+      "was extended",
+      "remained unchanged",
+      "to the north of",
+      "adjacent to",
+      "was cleared to make way for"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "writing",
+    "type": "task1_process",
+    "title": "Task 1: Process diagram",
+    "summary": "Describe every stage of a man-made or natural process in order, using sequence linkers and the present simple passive.",
+    "rule": "Describe every stage in order, using the passive and sequence words.",
+    "quick": {
+      "do": [
+        "0–3 min: count the stages, find first and last",
+        "Intro: the diagram illustrates the process of…",
+        "Overview: X stages, beginning with… ending in…",
+        "Body 1: first half; Body 2: second half"
+      ],
+      "avoid": [
+        "Skipping a stage",
+        "then… then… then: vary the sequencers",
+        "Active voice for a man-made process"
+      ],
+      "remember": [
+        "Man-made = passive; natural cycle = often active"
+      ]
+    },
+    "steps": [
+      "Minutes 0-3: count the stages, find the first and last stage, note whether the process is man-made (passive) or natural / a cycle (often active), and underline the label nouns you must use (kiln, mould, turbine).",
+      "Introduction (1 sentence, ~20-25 words): The diagram illustrates the step-by-step process of ... / The process diagram illustrates the generation of ...",
+      "Overview (1-2 sentences, ~30-40 words): 'Overall, there are (7) stages in the process, beginning with ___ and culminating in ___.' (+ simple / complex; two diagrams: compare their complexity).",
+      "Body 1 (~60-70 words): the first half of the stages, in order, with varied sequencers (Initially, / The process starts when ... / Next, / After that,).",
+      "Body 2 (~60-70 words): the second half of the stages (Subsequently, / Once this stage is complete, / Finally,), or the second diagram if there are two.",
+      "Minutes 17-20: check that no stage is missing, that the passive is correct (is dug, are fired) and the word count."
+    ],
+    "traps": [
+      "Numbers, percentages or years in the overview - the teacher's rule is NO NUMBER/PERCENTAGE/YEAR there.",
+      "No overview at all, or an overview that only lists categories - this caps Task Achievement at band 5.",
+      "Copying the question word for word in the introduction instead of paraphrasing.",
+      "Giving opinions or reasons that the chart does not show (Task 1 is a report).",
+      "Skipping a stage - every stage must be mentioned, in order (e.g. the drying oven stage in the brick process).",
+      "Repeating 'then ... then ... then' - vary the sequencers.",
+      "Active voice for man-made processes ('workers dig the clay') - use the passive (clay is dug).",
+      "Ignoring the labels and numbers on the diagram (temperatures, times) - include them in the body."
+    ],
+    "tips": [
+      "Raise the grammar score with -ing and relative clauses: after being crushed, before being purified, resulting in, which / where / in which.",
+      "Useful whole-process language: the process consists of (5) stages, this is done by machine, production is largely mechanised, the final product, ready for distribution.",
+      "Natural cycles end with something like 'allowing the process to continue / the cycle begins again'."
+    ],
+    "example": "Brick manufacturing: Overview - 'the production involves nine key stages, beginning with raw material extraction and culminating in delivery.' Body 1 = digging, grid and roller, adding sand and water, moulding / wire cutting, drying; Body 2 = two kiln firings, cooling chamber, packaging and delivery.",
+    "language": [
+      "Initially",
+      "Subsequently",
+      "Following this",
+      "Once this stage is complete",
+      "is heated / is filtered / are packaged",
+      "resulting in",
+      "culminating in"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "writing",
+    "type": "task1_mixed",
+    "title": "Task 1: Multiple / mixed graphs",
+    "summary": "Two different visuals on one topic (e.g. line graph + bar chart, pie chart + table): select the key feature of each and describe them in separate paragraphs.",
+    "rule": "One body paragraph per visual; the overview covers both.",
+    "quick": {
+      "do": [
+        "0–3 min: find the main feature of each visual",
+        "Intro: paraphrase both, joined with 'while'",
+        "'Overall,' + key feature of each, no numbers",
+        "Body 1 = graph 1 only; Body 2 = graph 2 only"
+      ],
+      "avoid": [
+        "Mixing both charts in one paragraph",
+        "An overview about only one chart",
+        "Trying to describe everything in both"
+      ],
+      "remember": [
+        "20 min, 150+ words (aim 170–190)"
+      ]
+    },
+    "steps": [
+      "Minutes 0-3: study both visuals, find the main feature of each (trend, max/min) and any obvious link between them.",
+      "Introduction (1 sentence, ~30 words): paraphrase both tasks joined with while / and (The line graph shows ..., while the bar chart shows ...).",
+      "Overview (1-2 sentences, ~40 words): 'Overall,' + the key feature of graph 1 + the key feature of graph 2 (increase/decrease, max/min). No numbers.",
+      "Body 1 (~60-70 words): the first graph only.",
+      "Body 2 (~60-70 words): the second graph only (Looking at ... / In terms of ... / Turning to ...).",
+      "Minutes 17-20: check numbers against the chart, units (thousands / millions / %), tenses, the/a, subject-verb agreement and the word count (at least 150; aim 170-190)."
+    ],
+    "traps": [
+      "Numbers, percentages or years in the overview - the teacher's rule is NO NUMBER/PERCENTAGE/YEAR there.",
+      "No overview at all, or an overview that only lists categories - this caps Task Achievement at band 5.",
+      "Copying the question word for word in the introduction instead of paraphrasing.",
+      "Giving opinions or reasons that the chart does not show (Task 1 is a report).",
+      "Under 150 words, or spending more than 20 minutes and losing time for Task 2 (which counts double).",
+      "Mixing data from both charts in the same paragraph - keep one paragraph per visual.",
+      "An overview that covers only one of the charts.",
+      "Trying to describe everything in both charts - with 20 minutes you must select."
+    ],
+    "tips": [
+      "Approximate word targets: introduction ~25-30, overview ~35-45, each body paragraph ~55-70 words.",
+      "Vary the subject: the number of / the figure for / that of / this figure - don't repeat the same noun.",
+      "Structure (teacher's board notes): INTRODUCTION - paraphrase the tasks, while/and; OVERVIEW - Overall, no number/percentage/year, increase/decrease, max/min; DETAIL PART - the first graph, the second graph.",
+      "Use the language of each chart type: trend language for the line graph, share language for the pie chart, comparison/ranking for a static bar chart or table."
+    ],
+    "example": "Visits to and from the UK (line) + top destinations in 1999 (bar): Overview - both numbers increased and residents going abroad always outnumbered visitors; France and Spain were the most popular destinations. Body 1 = line graph (start and end values); Body 2 = bar chart from most to least popular.",
+    "language": [
+      "..., while the bar chart shows ...",
+      "Looking at the destinations in 1999,",
+      "In terms of regional impact,",
+      "outnumbered"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "writing",
+    "type": "task2_opinion",
+    "title": "Task 2: Opinion (agree / disagree)",
+    "summary": "Give your opinion on ONE statement ('Do you agree or disagree?' / 'To what extent do you agree or disagree?') and support it with two reasons.",
+    "rule": "Pick one side and keep the same opinion from introduction to conclusion.",
+    "quick": {
+      "do": [
+        "0–5 min: underline every part, plan 2 reasons",
+        "Intro: paraphrase + your opinion + 2 reasons",
+        "Bodies: one reason each + a named example",
+        "Conclusion: restate opinion, no new ideas"
+      ],
+      "avoid": [
+        "An unclear or changing position",
+        "No named example (country, study, WHO)",
+        "Writing both sides as in a discussion essay"
+      ],
+      "remember": [
+        "40 min, 250+ words (aim 280–320)",
+        "4 paragraphs; Task 2 counts double"
+      ]
+    },
+    "steps": [
+      "Minutes 0-5: read the instruction line and identify the essay type; underline every part of the question; choose your position (if needed) and plan two body paragraphs, each with a topic sentence, explanation, result and a named real-world example.",
+      "Introduction (2-3 sentences, ~50 words): paraphrase the question, give your opinion and state your two supporting reasons (I disagree with the idea that ..., because ...). An optional concession first: While ... is definitely important, ...",
+      "Body 1 (~110 words): topic sentence with your 1st reason (To begin with, ...), explanation, result, example (A great example of this is seen in ...).",
+      "Body 2 (~110 words): topic sentence with your 2nd reason (Furthermore, / Similarly, ...), explanation, result, example (For instance, a recent study by ... confirmed that ...).",
+      "Conclusion (1-2 sentences, ~40 words): In conclusion, while ..., I strongly believe that ... + the two reasons in new words.",
+      "Minutes 35-40: check that every part of the question is answered, your position is the same in the introduction and conclusion, and check articles (a/an/the), subject-verb agreement, plurals, spelling of topic words and the word count (250+; aim 280-320)."
+    ],
+    "traps": [
+      "Under 250 words - the teacher's models are 300-350 words; aim for about 280-320.",
+      "Body paragraphs with no named example ('some countries') - name a country, organisation or study (WHO, Harvard, Finland).",
+      "Introducing new ideas in the conclusion.",
+      "Memorised, off-topic sentences or copying the question - paraphrase the topic with synonyms.",
+      "Starting every sentence with a linking word, or using 'On the other hand' just to add a point.",
+      "An unclear or changing position - the same opinion must appear in the introduction, both topic sentences and the conclusion.",
+      "Writing a discussion essay (one paragraph per side) when the question only asks for your opinion.",
+      "Two thin reasons in one paragraph instead of one well-developed reason per paragraph.",
+      "For 'To what extent ...' not saying how far you agree (completely / partly)."
+    ],
+    "tips": [
+      "4 paragraphs: Introduction (2-3 sentences), Body 1 (5-6 sentences), Body 2 (5-6 sentences), Conclusion (1-2 sentences).",
+      "Approximate word targets: introduction ~45-55, each body paragraph ~100-120, conclusion ~35-45 words.",
+      "Task 2 counts about twice as much as Task 1 - never run out of time for it (spend 40 minutes).",
+      "Use topic vocabulary from the matching 'Writing Topic' set in the vocabulary trainer (4-5 phrases per essay).",
+      "Both body paragraphs support YOUR side; deal with the other side in one 'While ...' clause in the introduction or conclusion.",
+      "Give the two reasons in the thesis in the same order as the body paragraphs."
+    ],
+    "example": "'A big salary is more important than job satisfaction.' Thesis: I disagree ... because long-term happiness and health depend on job satisfaction. Body 1 = mental health (Doctors Without Borders); Body 2 = happy workers are more productive and get promoted (Gallup: 21% more profitable).",
+    "language": [
+      "I disagree with the idea that",
+      "I completely agree with this perspective",
+      "To begin with,",
+      "Furthermore,",
+      "In conclusion, while ..., I strongly believe that"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "writing",
+    "type": "task2_discussion",
+    "title": "Task 2: Discussion (discuss both views + opinion)",
+    "summary": "Discuss two opposing views fairly AND say which one you support.",
+    "rule": "Present both views fairly, then clearly say which one you support.",
+    "quick": {
+      "do": [
+        "0–5 min: plan; the view you agree with = Body 2",
+        "Intro: both views + your opinion",
+        "Body 1: the view you disagree with, fairly",
+        "Body 2: your view + example; then conclude"
+      ],
+      "avoid": [
+        "Forgetting your own opinion",
+        "Attacking the first view inside Body 1",
+        "Unbalanced paragraphs (one long, one short)"
+      ],
+      "remember": [
+        "40 min, 250+ words (aim 280–320)",
+        "4 paragraphs; Task 2 counts double"
+      ]
+    },
+    "steps": [
+      "Minutes 0-5: read the instruction line and identify the essay type; underline every part of the question; choose your position (if needed) and plan two body paragraphs, each with a topic sentence, explanation, result and a named real-world example. Decide which view you agree with - it goes in Body 2.",
+      "Introduction (2-3 sentences, ~55 words): introduce both views (It is often argued that ..., whereas others contend that ...) and state your opinion (While ..., I believe that ... due to / by ...).",
+      "Body 1 (~110 words): the view you DISAGREE with - On the one hand, many people believe that ... ; explain why people hold it (Proponents of this view maintain that ...); example.",
+      "Body 2 (~110 words): the view you AGREE with - On the other hand, I agree with the perspective that ... ; explain why it is stronger; example (For instance, ...).",
+      "Conclusion (1-2 sentences, ~45 words): In conclusion, although ..., ... . Ultimately, I maintain that ... because ...",
+      "Minutes 35-40: check that every part of the question is answered, your position is the same in the introduction and conclusion, and check articles (a/an/the), subject-verb agreement, plurals, spelling of topic words and the word count (250+; aim 280-320)."
+    ],
+    "traps": [
+      "Under 250 words - the teacher's models are 300-350 words; aim for about 280-320.",
+      "Body paragraphs with no named example ('some countries') - name a country, organisation or study (WHO, Harvard, Finland).",
+      "Introducing new ideas in the conclusion.",
+      "Memorised, off-topic sentences or copying the question - paraphrase the topic with synonyms.",
+      "Starting every sentence with a linking word, or using 'On the other hand' just to add a point.",
+      "Forgetting your own opinion - put it in the introduction AND the conclusion.",
+      "Attacking the first view inside Body 1 - present it fairly and explain why people hold it.",
+      "Unbalanced paragraphs (one long, one short) - keep both at about 5-6 sentences.",
+      "Confusing it with an advantages/disadvantages essay - this type is about two opinions held by people."
+    ],
+    "tips": [
+      "4 paragraphs: Introduction (2-3 sentences), Body 1 (5-6 sentences), Body 2 (5-6 sentences), Conclusion (1-2 sentences).",
+      "Approximate word targets: introduction ~45-55, each body paragraph ~100-120, conclusion ~35-45 words.",
+      "Task 2 counts about twice as much as Task 1 - never run out of time for it (spend 40 minutes).",
+      "Use topic vocabulary from the matching 'Writing Topic' set in the vocabulary trainer (4-5 phrases per essay).",
+      "Order matters: the disagreed view first, the agreed view second, so the essay builds towards your opinion.",
+      "Reporting verbs: argue, contend, maintain, believe, emphasize, claim, hold the view that."
+    ],
+    "example": "Cars vs bicycles in cities: Intro - 'It is often argued that private vehicles offer the most efficient means of urban transportation, whereas others contend that bicycles represent a superior alternative ... I believe that bicycles are the optimal mode ...' Body 1 = cars (Dubai, Houston); Body 2 = bicycles (Amsterdam).",
+    "language": [
+      "It is often argued that ..., whereas others contend that",
+      "On the one hand, many people believe",
+      "Proponents of this view maintain",
+      "On the other hand, I agree with the perspective that",
+      "Ultimately, I maintain that"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "writing",
+    "type": "task2_adv_disadv",
+    "title": "Task 2: Advantages / disadvantages",
+    "summary": "Explain the advantages and the disadvantages of something - the same number of each; no need to choose a side.",
+    "rule": "Same number of advantages and disadvantages, in separate paragraphs.",
+    "quick": {
+      "do": [
+        "0–5 min: pick the same number of each (1+1, 2+2)",
+        "Intro: paraphrase + name both sides",
+        "Body 1: advantages; Body 2: disadvantages",
+        "Conclusion: sum up both, no new ideas"
+      ],
+      "avoid": [
+        "Unequal points or paragraph lengths",
+        "Choosing a winner when it isn't asked",
+        "Mixing both sides in one paragraph"
+      ],
+      "remember": [
+        "40 min, 250+ words (aim 280–320)",
+        "No opinion needed; if any, conclusion only"
+      ]
+    },
+    "steps": [
+      "Minutes 0-5: read the instruction line and identify the essay type; underline every part of the question; choose your position (if needed) and plan two body paragraphs, each with a topic sentence, explanation, result and a named real-world example. Choose the SAME number of advantages and disadvantages (1+1 or 2+2).",
+      "Introduction (2-3 sentences, ~50 words): paraphrase the topic with synonyms and altered structure; thesis naming the advantages and disadvantages you will discuss (While this practice offers clear advantages, such as ..., it also introduces significant drawbacks ...).",
+      "Body 1 (~110-130 words): the advantages - topic sentence (One prominent merit of ... is its ability to ...), explanation, example.",
+      "Body 2 (~110-130 words): the disadvantages - topic sentence (Conversely, ... / However, the widespread adoption of ... is not without drawbacks.), explanation of how it affects people, example.",
+      "Conclusion (1-2 sentences, ~40 words): summarise the core advantage and disadvantage (In conclusion, while ... can serve as a catalyst for ..., it simultaneously ...).",
+      "Minutes 35-40: check that every part of the question is answered, your position is the same in the introduction and conclusion, and check articles (a/an/the), subject-verb agreement, plurals, spelling of topic words and the word count (250+; aim 280-320)."
+    ],
+    "traps": [
+      "Under 250 words - the teacher's models are 300-350 words; aim for about 280-320.",
+      "Body paragraphs with no named example ('some countries') - name a country, organisation or study (WHO, Harvard, Finland).",
+      "Introducing new ideas in the conclusion.",
+      "Memorised, off-topic sentences or copying the question - paraphrase the topic with synonyms.",
+      "Starting every sentence with a linking word, or using 'On the other hand' just to add a point.",
+      "Unequal numbers of points or very different paragraph lengths.",
+      "Writing an outweigh essay (choosing a winner) when the question does not ask which side is stronger.",
+      "Mixing advantages and disadvantages in the same paragraph."
+    ],
+    "tips": [
+      "4 paragraphs: Introduction (2-3 sentences), Body 1 (5-6 sentences), Body 2 (5-6 sentences), Conclusion (1-2 sentences).",
+      "Approximate word targets: introduction ~45-55, each body paragraph ~100-120, conclusion ~35-45 words.",
+      "Task 2 counts about twice as much as Task 1 - never run out of time for it (spend 40 minutes).",
+      "Use topic vocabulary from the matching 'Writing Topic' set in the vocabulary trainer (4-5 phrases per essay).",
+      "No personal opinion is required; if you add one, keep it short and only in the conclusion.",
+      "Open Body 2 with a contrast linker: Conversely, / However, / On the other hand,",
+      "A realistic scenario is an acceptable example (a university student carrying a semester of textbooks on one tablet)."
+    ],
+    "example": "E-books vs paper books: two advantages (cost-efficiency, portability) and two disadvantages (loss of the physical reading experience, dependence on batteries). Conclusion restates both sides without taking a side.",
+    "language": [
+      "One prominent merit of",
+      "One of the most significant advantages of",
+      "Another key benefit is",
+      "Conversely,",
+      "is not without drawbacks",
+      "A clear illustration of this occurs when"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "writing",
+    "type": "task2_problem_solution",
+    "title": "Task 2: Problem / solution (and cause / solution)",
+    "summary": "Explain the problems (or the causes) of a situation and propose solutions - two questions answered in two body paragraphs.",
+    "rule": "Each solution must fix a problem you named, and say who acts.",
+    "quick": {
+      "do": [
+        "0–5 min: problems or causes? Plan both parts",
+        "Intro: paraphrase + main problem + solution",
+        "Body 1: problem / cause + named example",
+        "Body 2: solution, who does it, where it worked"
+      ],
+      "avoid": [
+        "Solutions that don't match the problems",
+        "Vague solutions with no actor",
+        "Causes when it asks for problems (or reverse)"
+      ],
+      "remember": [
+        "40 min, 250+ words (aim 280–320)",
+        "4 paragraphs; Task 2 counts double"
+      ]
+    },
+    "steps": [
+      "Minutes 0-5: read the instruction line and identify the essay type; underline every part of the question; choose your position (if needed) and plan two body paragraphs, each with a topic sentence, explanation, result and a named real-world example. Check the first question: 'What problems...?' -> problem paragraph; 'Why / What are the causes...?' -> cause paragraph (cause/solution plan).",
+      "Introduction (2 sentences, ~50 words): Sentence 1 paraphrase the topic; Sentence 2 thesis naming the main problem (or cause) and the main solution. Cause/solution template: 'This essay will examine how [cause 1] and [cause 2] cause this problem, and explain why government action is the most realistic solution to this global issue.'",
+      "Body 1 (~110-130 words): THE PROBLEM / CAUSE - Sentence 1 topic sentence (The primary reason why ... is ... / The main result of ... is ...); Sentences 2-3 explanation (When ..., ... This means that ...); Sentence 4 result; Sentence 5 real-world example naming a country or organisation (For instance, reports from the WWF show that ...).",
+      "Body 2 (~110-130 words): THE SOLUTION - Sentence 1 topic sentence (The primary solution is for governments to ...); Sentences 2-3 how it works and WHO implements it; Sentence 4 the positive result; Sentence 5 a matching example of a country where the solution worked (... Eventually, ... dropped significantly).",
+      "Conclusion (1 sentence, ~35-45 words): summarise the main problem/cause and the main solution (In conclusion, a combination of ... and ... causes ... However, this issue can be solved if governments ...).",
+      "Minutes 35-40: check that every part of the question is answered, your position is the same in the introduction and conclusion, and check articles (a/an/the), subject-verb agreement, plurals, spelling of topic words and the word count (250+; aim 280-320)."
+    ],
+    "traps": [
+      "Under 250 words - the teacher's models are 300-350 words; aim for about 280-320.",
+      "Body paragraphs with no named example ('some countries') - name a country, organisation or study (WHO, Harvard, Finland).",
+      "Introducing new ideas in the conclusion.",
+      "Memorised, off-topic sentences or copying the question - paraphrase the topic with synonyms.",
+      "Starting every sentence with a linking word, or using 'On the other hand' just to add a point.",
+      "Solutions that do not match the problems/causes (each solution should answer one cause: no jobs -> create jobs; low pay -> raise salaries).",
+      "Vague solutions with no actor - say who acts (governments, employers, schools, individuals) and how.",
+      "Describing causes when the question asks for problems (or vice versa).",
+      "If the question names actors ('the government and individuals'), leaving one of them out."
+    ],
+    "tips": [
+      "4 paragraphs: Introduction (2-3 sentences), Body 1 (5-6 sentences), Body 2 (5-6 sentences), Conclusion (1-2 sentences).",
+      "Approximate word targets: introduction ~45-55, each body paragraph ~100-120, conclusion ~35-45 words.",
+      "Task 2 counts about twice as much as Task 1 - never run out of time for it (spend 40 minutes).",
+      "Use topic vocabulary from the matching 'Writing Topic' set in the vocabulary trainer (4-5 phrases per essay).",
+      "Two points per paragraph is a good way to reach 300 words: 'The primary reason ... The second major cause is ...' / 'The primary solution ... The second step is for ...'.",
+      "The solution example should show the problem falling (e.g. the Philippines raised medical salaries and migration dropped significantly).",
+      "Cause/solution was the type practised most in the course (crime, homelessness, students' concentration, noise, brain drain)."
+    ],
+    "example": "Skilled professionals leaving poorer countries: Body 1 = unemployment + low salaries (thousands of teachers leave Asia every year); Body 2 = governments create jobs + employers raise salaries (the Philippines raised medical salaries -> migration dropped).",
+    "language": [
+      "This essay will examine how ... and explain why",
+      "The primary reason why ... is",
+      "The second major cause is",
+      "The primary solution is for governments to",
+      "The second step is for",
+      "A prime example of this strategy is",
+      "Eventually, ... dropped significantly"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "writing",
+    "type": "task2_cause_effect",
+    "title": "Task 2: Cause / effect",
+    "summary": "Explain why something is happening and what results it has - all causes in Body 1, all effects in Body 2.",
+    "rule": "All causes in Body 1, all effects in Body 2.",
+    "quick": {
+      "do": [
+        "0–5 min: underline every part, plan both",
+        "Intro: paraphrase + main cause + main effect",
+        "Body 1: cause, explanation, named example",
+        "Body 2: effects on people and society + study"
+      ],
+      "avoid": [
+        "Mixing causes and effects in one paragraph",
+        "Adding solutions the question didn't ask for",
+        "Only people when it says 'people and society'"
+      ],
+      "remember": [
+        "40 min, 250+ words (aim 280–320)",
+        "4 paragraphs; Task 2 counts double"
+      ]
+    },
+    "steps": [
+      "Minutes 0-5: read the instruction line and identify the essay type; underline every part of the question; choose your position (if needed) and plan two body paragraphs, each with a topic sentence, explanation, result and a named real-world example.",
+      "Introduction (2 sentences, ~50 words): Sentence 1 paraphrase (All over the world, ... has become much more common.); Sentence 2 thesis naming the main cause and the main effect (This trend is mainly caused by ... Ultimately, ... can lead to ...).",
+      "Body 1 (~110-130 words): THE CAUSE - topic sentence (The main cause behind the rise in ... is ...); 2 sentences of explanation; the result on society; a real-world example (For example, data from the ... shows that ...).",
+      "Body 2 (~110-130 words): THE EFFECT - topic sentence (The effects of this trend are mostly negative for ...); 2-3 sentences describing the outcome on individuals / society (For individuals, ... For society, ...); a matching study or statistic (To illustrate, a recent global study found that ...).",
+      "Conclusion (1-2 sentences, ~40 words): In conclusion, ... are the main reasons why ... This problem not only ... but also ...",
+      "Minutes 35-40: check that every part of the question is answered, your position is the same in the introduction and conclusion, and check articles (a/an/the), subject-verb agreement, plurals, spelling of topic words and the word count (250+; aim 280-320)."
+    ],
+    "traps": [
+      "Under 250 words - the teacher's models are 300-350 words; aim for about 280-320.",
+      "Body paragraphs with no named example ('some countries') - name a country, organisation or study (WHO, Harvard, Finland).",
+      "Introducing new ideas in the conclusion.",
+      "Memorised, off-topic sentences or copying the question - paraphrase the topic with synonyms.",
+      "Starting every sentence with a linking word, or using 'On the other hand' just to add a point.",
+      "Mixing causes and effects in the same paragraph.",
+      "Offering solutions that the question did not ask for (only add a short recommendation in the conclusion, if any).",
+      "Answering effects only on people when the question asks about 'people and society' - cover both."
+    ],
+    "tips": [
+      "4 paragraphs: Introduction (2-3 sentences), Body 1 (5-6 sentences), Body 2 (5-6 sentences), Conclusion (1-2 sentences).",
+      "Approximate word targets: introduction ~45-55, each body paragraph ~100-120, conclusion ~35-45 words.",
+      "Task 2 counts about twice as much as Task 1 - never run out of time for it (spend 40 minutes).",
+      "Use topic vocabulary from the matching 'Writing Topic' set in the vocabulary trainer (4-5 phrases per essay).",
+      "Cause/effect language: is mainly caused by, is driven by, stems from, leads to, results in, gives rise to, contributes to, as a result, consequently.",
+      "Name the cause and the effect already in the thesis so the reader knows the plan."
+    ],
+    "example": "More people are overweight: Body 1 = desk-based jobs and long hours (Harvard: workweek up 10 hours while obesity tripled); Body 2 = for individuals, heart disease and diabetes; for society, healthcare costs and lost productivity (American Diabetes Association: $327 billion).",
+    "language": [
+      "This trend is mainly caused by",
+      "The main cause behind the rise in ... is",
+      "The effects of this trend are",
+      "For individuals, ... For society,",
+      "To illustrate,",
+      "not only ... but also"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "writing",
+    "type": "task2_direct_question",
+    "title": "Task 2: Direct question (two-part / double question)",
+    "summary": "Answer two different direct questions (e.g. Why...? + Is it positive or negative?) - one body paragraph per question, in the order asked.",
+    "rule": "Answer both questions, one body paragraph each, in the order asked.",
+    "quick": {
+      "do": [
+        "0–5 min: write both questions + 1-line answers",
+        "Intro: paraphrase + answer both questions",
+        "Body 1 = question 1; Body 2 = question 2",
+        "Conclusion: restate both answers"
+      ],
+      "avoid": [
+        "One strong answer and one weak answer",
+        "No clear opinion when one is asked for",
+        "Answering in a different order"
+      ],
+      "remember": [
+        "40 min, 250+ words (aim 280–320)",
+        "4 paragraphs; Task 2 counts double"
+      ]
+    },
+    "steps": [
+      "Minutes 0-5: read the instruction line and identify the essay type; underline every part of the question; choose your position (if needed) and plan two body paragraphs, each with a topic sentence, explanation, result and a named real-world example. Write down both questions separately and a one-line answer to each.",
+      "Introduction (2-3 sentences, ~50 words): paraphrase the background statement; an outline statement that directly answers BOTH questions (This shift is primarily driven by ..., and I consider this to be a highly positive development because ... / This essay will explain why ... and argue that ...).",
+      "Body 1 (~110-130 words): answer question 1 - topic sentence using the wording of the question (The primary reason for ... is ... / ... is highly important because ...), explanation, example/result.",
+      "Body 2 (~110-130 words): answer question 2 - topic sentence with a direct answer (I firmly believe that ... / Instead of ..., the best way to ... is ...), explanation, example/result.",
+      "Conclusion (1-2 sentences, ~45 words): restate your answers to both questions using different vocabulary.",
+      "Minutes 35-40: check that every part of the question is answered, your position is the same in the introduction and conclusion, and check articles (a/an/the), subject-verb agreement, plurals, spelling of topic words and the word count (250+; aim 280-320)."
+    ],
+    "traps": [
+      "Under 250 words - the teacher's models are 300-350 words; aim for about 280-320.",
+      "Body paragraphs with no named example ('some countries') - name a country, organisation or study (WHO, Harvard, Finland).",
+      "Introducing new ideas in the conclusion.",
+      "Memorised, off-topic sentences or copying the question - paraphrase the topic with synonyms.",
+      "Starting every sentence with a linking word, or using 'On the other hand' just to add a point.",
+      "Answering only one question well (long Body 1, weak Body 2) - answer both equally.",
+      "Not giving a clear opinion when one question asks for it (Do you think ...? / positive or negative?).",
+      "Answering the questions in a different order from the prompt."
+    ],
+    "tips": [
+      "4 paragraphs: Introduction (2-3 sentences), Body 1 (5-6 sentences), Body 2 (5-6 sentences), Conclusion (1-2 sentences).",
+      "Approximate word targets: introduction ~45-55, each body paragraph ~100-120, conclusion ~35-45 words.",
+      "Task 2 counts about twice as much as Task 1 - never run out of time for it (spend 40 minutes).",
+      "Use topic vocabulary from the matching 'Writing Topic' set in the vocabulary trainer (4-5 phrases per essay).",
+      "Use the wording of each question in your topic sentences so the examiner can see which question you are answering.",
+      "'This essay will explain why ..., and argue that ...' is a safe, reusable outline for any two-question prompt.",
+      "Cause/effect, cause/solution and problem/solution are also two-question essays but have their own plans; any other pair of questions uses this plan."
+    ],
+    "example": "'Fewer people write by hand. What are the reasons? Is this positive or negative?' Outline: driven by digital devices and workplace efficiency, and highly positive because it speeds up communication and saves paper. Body 1 = reasons (Notion / OneNote at universities); Body 2 = positive (Google and Amazon paperless offices).",
+    "language": [
+      "This shift is primarily driven by",
+      "I consider this to be a highly positive development",
+      "This essay will explain why ... and argue that",
+      "The primary reason for ... is",
+      "Nevertheless, despite",
+      "Instead of ..., the best way to ... is"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "writing",
+    "type": "task2_outweigh",
+    "title": "Task 2: Outweigh (do the advantages outweigh the disadvantages?)",
+    "summary": "An opinion essay about advantages and disadvantages: decide which side is stronger and show it in the structure.",
+    "rule": "Choose a winner: two points for the stronger side, one for the weaker.",
+    "quick": {
+      "do": [
+        "0–5 min: decide which side wins",
+        "Intro: say which side outweighs",
+        "Body 1: stronger side, 2 points + examples",
+        "Body 2: weaker side, then why it is weak"
+      ],
+      "avoid": [
+        "A balanced essay with no winner",
+        "No verdict in the intro AND the conclusion",
+        "Listing the weaker side without limiting it"
+      ],
+      "remember": [
+        "40 min, 250+ words (aim 280–320)",
+        "4 paragraphs; Task 2 counts double"
+      ]
+    },
+    "steps": [
+      "Minutes 0-5: read the instruction line and identify the essay type; underline every part of the question; choose your position (if needed) and plan two body paragraphs, each with a topic sentence, explanation, result and a named real-world example. Decide which side wins: the stronger side gets two points, the weaker side one point.",
+      "Introduction (2 sentences, ~50 words): paraphrase; thesis stating which one outweighs the other (I firmly believe that the drawbacks of this practice, specifically regarding ... and ..., far outweigh the single advantage of ...).",
+      "Body 1 (~150 words): the STRONGER side - topic sentence, why it is strong, example; then a second topic sentence (Furthermore, / Additionally, ...), why it is strong, example.",
+      "Body 2 (~80-90 words): the WEAKER side - topic sentence (On the other hand, ... can serve as ...), why it is NOT strong (However, this benefit is weak because ...), example.",
+      "Conclusion (1-2 sentences, ~45 words): summarise and restate which side outweighs (... mean that the disadvantages clearly outweigh the advantages / this disadvantage is heavily eclipsed by ...).",
+      "Minutes 35-40: check that every part of the question is answered, your position is the same in the introduction and conclusion, and check articles (a/an/the), subject-verb agreement, plurals, spelling of topic words and the word count (250+; aim 280-320)."
+    ],
+    "traps": [
+      "Under 250 words - the teacher's models are 300-350 words; aim for about 280-320.",
+      "Body paragraphs with no named example ('some countries') - name a country, organisation or study (WHO, Harvard, Finland).",
+      "Introducing new ideas in the conclusion.",
+      "Memorised, off-topic sentences or copying the question - paraphrase the topic with synonyms.",
+      "Starting every sentence with a linking word, or using 'On the other hand' just to add a point.",
+      "Not answering the question directly - say which side outweighs in the introduction AND the conclusion.",
+      "Writing a balanced advantages/disadvantages essay with no winner.",
+      "Listing the weaker side without limiting it - admit the point, then explain why it is weak."
+    ],
+    "tips": [
+      "4 paragraphs: Introduction (2-3 sentences), Body 1 (5-6 sentences), Body 2 (5-6 sentences), Conclusion (1-2 sentences).",
+      "Approximate word targets: introduction ~45-55, each body paragraph ~100-120, conclusion ~35-45 words.",
+      "Task 2 counts about twice as much as Task 1 - never run out of time for it (spend 40 minutes).",
+      "Use topic vocabulary from the matching 'Writing Topic' set in the vocabulary trainer (4-5 phrases per essay).",
+      "The shape of the essay shows your answer: two developed points for the winner, one limited point for the loser.",
+      "Useful verbs: outweigh, override, overshadow, eclipse, be offset by."
+    ],
+    "example": "Children watching TV: Thesis - drawbacks (physical health, social development) far outweigh the single advantage of information. Body 1 = health (WHO: 40% higher rate of diabetes) + socialisation (Harvard study); Body 2 = information, 'However, this benefit is weak because ...' (80% choose cartoons).",
+    "language": [
+      "far outweigh",
+      "the single advantage of",
+      "However, this benefit is weak because",
+      "is heavily eclipsed by",
+      "the disadvantages clearly outweigh the advantages"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "writing",
+    "type": "task2_positive_negative",
+    "title": "Task 2: Positive / negative development",
+    "summary": "Judge a trend or change in society ('Is this a positive or negative development?') - the teacher recommends a one-sided answer with two reasons.",
+    "rule": "Say clearly: completely positive or completely negative, with two reasons.",
+    "quick": {
+      "do": [
+        "0–5 min: positive or negative? Pick 2 reasons",
+        "Intro: paraphrase the trend + a clear verdict",
+        "Bodies: reason, explanation, example, result",
+        "Conclusion: restate the verdict"
+      ],
+      "avoid": [
+        "Not saying if it is positive or negative",
+        "Explaining causes when 'why' isn't asked",
+        "No result sentence at the end of a body"
+      ],
+      "remember": [
+        "40 min, 250+ words (aim 280–320)",
+        "4 paragraphs; Task 2 counts double"
+      ]
+    },
+    "steps": [
+      "Minutes 0-5: read the instruction line and identify the essay type; underline every part of the question; choose your position (if needed) and plan two body paragraphs, each with a topic sentence, explanation, result and a named real-world example. Decide: completely positive or completely negative, and pick two reasons.",
+      "Introduction (2-3 sentences, ~50 words): paraphrase the trend (The growing trend of ... represents a major shift ...); thesis clearly stating a completely positive or completely negative development with two reasons (I completely agree that this change is an entirely positive development because it ... and ...).",
+      "Body 1 (5-6 sentences, ~110 words): topic sentence with the first reason (First, ...); explanation; example (For instance, data from the ... confirms that ...); result/consequence summarising the ultimate impact.",
+      "Body 2 (5-6 sentences, ~110 words): topic sentence with the second reason (Second, ...) - or the opposing side if you chose a balanced view; explanation; example; result/consequence.",
+      "Conclusion (1-2 sentences, ~45 words): restate the main points (In conclusion, the transition toward ... is a thoroughly beneficial change for ...).",
+      "Minutes 35-40: check that every part of the question is answered, your position is the same in the introduction and conclusion, and check articles (a/an/the), subject-verb agreement, plurals, spelling of topic words and the word count (250+; aim 280-320)."
+    ],
+    "traps": [
+      "Under 250 words - the teacher's models are 300-350 words; aim for about 280-320.",
+      "Body paragraphs with no named example ('some countries') - name a country, organisation or study (WHO, Harvard, Finland).",
+      "Introducing new ideas in the conclusion.",
+      "Memorised, off-topic sentences or copying the question - paraphrase the topic with synonyms.",
+      "Starting every sentence with a linking word, or using 'On the other hand' just to add a point.",
+      "Not saying clearly whether it is positive or negative.",
+      "Explaining the causes of the trend when the question does not ask 'why' (if it does, it is a direct-question essay).",
+      "Forgetting the result/consequence sentence at the end of each body paragraph - it is part of the teacher's plan for this type."
+    ],
+    "tips": [
+      "4 paragraphs: Introduction (2-3 sentences), Body 1 (5-6 sentences), Body 2 (5-6 sentences), Conclusion (1-2 sentences).",
+      "Approximate word targets: introduction ~45-55, each body paragraph ~100-120, conclusion ~35-45 words.",
+      "Task 2 counts about twice as much as Task 1 - never run out of time for it (spend 40 minutes).",
+      "Use topic vocabulary from the matching 'Writing Topic' set in the vocabulary trainer (4-5 phrases per essay).",
+      "Use evaluative adjectives: beneficial, positive, advantageous, detrimental, harmful, damaging.",
+      "You can show awareness of the other side in one clause: 'While some traditionalists believe that ..., I completely agree that ...'."
+    ],
+    "example": "'More people work from home - positive or negative?' Thesis: entirely positive because it improves time management and mental health. Body 1 = no commute (NBER: over one hour saved per day) -> daily life less rushed; Body 2 = flexibility -> lower stress, fewer sick days.",
+    "language": [
+      "I completely agree that this change is an entirely positive development",
+      "First, ... Second, ...",
+      "For instance, data from the ... confirms that",
+      "a thoroughly beneficial change",
+      "a highly detrimental trend"
+    ],
+    "source": "mixed"
+  }
+]

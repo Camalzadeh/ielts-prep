@@ -1,0 +1,3047 @@
+[
+  {
+    "skill": "writing1",
+    "id": "w1-trend-words",
+    "title": "Trend words: verb → noun",
+    "color": "green",
+    "applies_to": [
+      "line",
+      "bar",
+      "table",
+      "mixed"
+    ],
+    "note": "Verb pattern for most sentences; switch to the noun pattern to vary.",
+    "columns": [
+      "",
+      "Verb (X rose…)",
+      "Noun (a rise in X)"
+    ],
+    "rows": [
+      {
+        "tone": "up",
+        "cells": [
+          "↑ Up",
+          "increased · rose · grew · climbed · jumped · improved · went up",
+          "an increase · a rise · growth · a climb · a jump · an improvement"
+        ]
+      },
+      {
+        "tone": "up",
+        "cells": [
+          "↑↑ Fast up",
+          "surged to · soared · rocketed",
+          "a surge"
+        ]
+      },
+      {
+        "tone": "down",
+        "cells": [
+          "↓ Down",
+          "decreased · fell · declined · dropped · dipped · went down",
+          "a decrease · a fall · a decline · a drop · a dip"
+        ]
+      },
+      {
+        "tone": "down",
+        "cells": [
+          "↓↓ Fast down",
+          "plummeted",
+          ""
+        ]
+      },
+      {
+        "tone": "wave",
+        "cells": [
+          "↕ Up & down",
+          "fluctuated · varied",
+          "a fluctuation · a variation"
+        ]
+      },
+      {
+        "tone": "flat",
+        "cells": [
+          "→ No change",
+          "remained the same · remained static · remained unchanged · remained stable at · stabilized · levelled out",
+          "a period of stability"
+        ]
+      },
+      {
+        "tone": "peak",
+        "cells": [
+          "▲ Top",
+          "peaked at · reached a peak of",
+          "a peak · the highest point · an upward trend"
+        ]
+      },
+      {
+        "tone": "peak",
+        "cells": [
+          "▼ Bottom",
+          "hit a low of",
+          "the lowest point · a downward trend"
+        ]
+      },
+      {
+        "tone": "up",
+        "cells": [
+          "↺ Back up",
+          "recovered to · rebounded to",
+          ""
+        ]
+      }
+    ],
+    "example": "The number of books rose to 90,000 in Italy in 2000.",
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-size-adj-adv",
+    "title": "How big / how fast: adjective ↔ adverb",
+    "color": "purple",
+    "applies_to": [
+      "line",
+      "bar",
+      "table",
+      "mixed"
+    ],
+    "note": "Verb + adverb (increased significantly) or adjective + noun (a significant increase).",
+    "columns": [
+      "",
+      "Adjective (a … rise)",
+      "Adverb (rose …)"
+    ],
+    "rows": [
+      {
+        "tone": "peak",
+        "cells": [
+          "Big + fast",
+          "dramatic · sharp · sudden · steep · rapid",
+          "dramatically · sharply · suddenly · steeply · rapidly"
+        ]
+      },
+      {
+        "tone": "peak",
+        "cells": [
+          "Big",
+          "significant · considerable · substantial",
+          "significantly · considerably · substantially"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Steady",
+          "steady · gradual · moderate · slow",
+          "steadily · gradually · moderately · slowly"
+        ]
+      },
+      {
+        "tone": "flat",
+        "cells": [
+          "Small",
+          "slight · marginal",
+          "slightly · marginally"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-ready-combos",
+    "title": "Ready-made combos",
+    "color": "teal",
+    "applies_to": [
+      "line",
+      "bar",
+      "table",
+      "mixed"
+    ],
+    "columns": [
+      "",
+      "Verb + adverb",
+      "Adjective + noun"
+    ],
+    "rows": [
+      {
+        "tone": "up",
+        "cells": [
+          "↑",
+          "increased significantly · rose steeply · improved considerably · jumped suddenly",
+          "a dramatic improvement · a sudden increase · a rapid rise · steady growth · a significant increase"
+        ]
+      },
+      {
+        "tone": "wave",
+        "cells": [
+          "↕",
+          "fluctuated slightly",
+          "a slight fluctuation"
+        ]
+      },
+      {
+        "tone": "down",
+        "cells": [
+          "↓",
+          "fell rapidly · dropped dramatically · dipped sharply · decreased rapidly",
+          "a gradual decrease · a steep drop · a sharp decline · a rapid decrease · a rapid downward trend"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-sentence-patterns",
+    "title": "Two patterns for every trend",
+    "color": "blue",
+    "applies_to": [
+      "line",
+      "bar",
+      "table",
+      "mixed"
+    ],
+    "columns": [
+      "Pattern",
+      "Frame"
+    ],
+    "rows": [
+      {
+        "tone": "up",
+        "cells": [
+          "Verb",
+          "The number of … rose to … in …"
+        ]
+      },
+      {
+        "tone": "up",
+        "cells": [
+          "Noun",
+          "An increase was observed in … · An upward trend was observed in … · standing at …"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "There was",
+          "There was a sudden increase in … · There was a steady decline in …"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "saw / experienced",
+          "… saw a decline to … · … experienced substantial growth · … witnessed a sharp rise"
+        ]
+      },
+      {
+        "tone": "up",
+        "cells": [
+          "Start → end",
+          "… exhibited a steady upward trend, starting at … and reaching …"
+        ]
+      },
+      {
+        "tone": "wave",
+        "cells": [
+          "Fluctuation",
+          "… fluctuated between … and …"
+        ]
+      },
+      {
+        "tone": "flat",
+        "cells": [
+          "Stability",
+          "… remained stable at …"
+        ]
+      }
+    ],
+    "example": "An upward trend was observed in the number of books in Germany in 2000, standing at 120,000.",
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-number-prepositions",
+    "title": "Prepositions with numbers",
+    "color": "amber",
+    "applies_to": [
+      "line",
+      "bar",
+      "table",
+      "mixed"
+    ],
+    "columns": [
+      "Chunk",
+      "Shows"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "rose to … · fell to …",
+          "the final value"
+        ]
+      },
+      {
+        "cells": [
+          "rose by … · fell by …",
+          "the size of the change"
+        ]
+      },
+      {
+        "cells": [
+          "from … to …",
+          "start and end values"
+        ]
+      },
+      {
+        "cells": [
+          "stood at … · standing at …",
+          "the value at one point"
+        ]
+      },
+      {
+        "cells": [
+          "reaching … · culminating in …",
+          "where it ended up"
+        ]
+      },
+      {
+        "cells": [
+          "reached a peak of … · peaked at …",
+          "the highest value"
+        ]
+      },
+      {
+        "cells": [
+          "between … and …",
+          "a range (fluctuated between)"
+        ]
+      }
+    ],
+    "example": "It rose by 8 points, from 9% to 17%.",
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-number-amount",
+    "title": "Number, amount, percentage…",
+    "color": "green",
+    "applies_to": [
+      "line",
+      "bar",
+      "pie",
+      "table",
+      "mixed"
+    ],
+    "note": "✗ the number of money → ✓ the amount of money",
+    "columns": [
+      "Subject",
+      "Use with",
+      "Example"
+    ],
+    "rows": [
+      {
+        "tone": "good",
+        "cells": [
+          "the number of",
+          "countable",
+          "the number of tourists"
+        ]
+      },
+      {
+        "tone": "good",
+        "cells": [
+          "the amount of",
+          "uncountable",
+          "the amount of money · the amount of water"
+        ]
+      },
+      {
+        "tone": "good",
+        "cells": [
+          "the quantity of",
+          "countable + uncountable",
+          "the quantity of money"
+        ]
+      },
+      {
+        "tone": "good",
+        "cells": [
+          "the percentage of · the proportion of · the rate of",
+          "countable + uncountable",
+          "the proportion of students"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "the figure for · the indicator",
+          "any (to avoid repeating)",
+          "the figure for Austria"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-figure-for-values",
+    "title": "The figure for / that of + verbs for values",
+    "color": "pink",
+    "applies_to": [
+      "line",
+      "bar",
+      "pie",
+      "table",
+      "mixed"
+    ],
+    "columns": [
+      "",
+      "Chunks"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Avoid repeating",
+          "the figure for … · the corresponding figure for … · that of … · this figure"
+        ]
+      },
+      {
+        "cells": [
+          "Be / stand",
+          "was … · stood at …"
+        ]
+      },
+      {
+        "cells": [
+          "Share of a total",
+          "accounted for … · made up … · constituted … · comprised …"
+        ]
+      },
+      {
+        "cells": [
+          "Total / equal",
+          "amounted to … · consisted of … · equalled … · was equal to …"
+        ]
+      },
+      {
+        "cells": [
+          "With a trend noun",
+          "made up a significant rise · accounted for the majority"
+        ]
+      }
+    ],
+    "example": "The figure for Germany accounts for 40%, while that of Austria is half as much.",
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-multiples",
+    "title": "Multiples: double, triple, half",
+    "color": "purple",
+    "applies_to": [
+      "line",
+      "bar",
+      "pie",
+      "table",
+      "mixed"
+    ],
+    "columns": [
+      "",
+      "Verb",
+      "Noun / phrase"
+    ],
+    "rows": [
+      {
+        "tone": "up",
+        "cells": [
+          "×2",
+          "doubled · had doubled to …",
+          "a two-fold increase · twice as much as …"
+        ]
+      },
+      {
+        "tone": "up",
+        "cells": [
+          "×3",
+          "tripled · tripled in size",
+          "a three-fold increase"
+        ]
+      },
+      {
+        "tone": "up",
+        "cells": [
+          "×5",
+          "",
+          "a five-fold increase"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "≈ ×2",
+          "",
+          "nearly twice as much as … · almost twice as much as …"
+        ]
+      },
+      {
+        "tone": "down",
+        "cells": [
+          "÷2",
+          "halved · halved the size of …",
+          "half as much as …"
+        ]
+      }
+    ],
+    "example": "By 2000, the amount of money spent on books had doubled to 90 in Germany.",
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-approximation",
+    "title": "About, more than, less than",
+    "color": "teal",
+    "applies_to": [
+      "line",
+      "bar",
+      "pie",
+      "table",
+      "mixed"
+    ],
+    "columns": [
+      "≈ About",
+      "↑ A bit more",
+      "↓ A bit less"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "roughly",
+          "more than",
+          "less than"
+        ]
+      },
+      {
+        "cells": [
+          "approximately",
+          "well over",
+          "well below"
+        ]
+      },
+      {
+        "cells": [
+          "almost",
+          "just above",
+          "just below"
+        ]
+      },
+      {
+        "cells": [
+          "nearly",
+          "just over",
+          "just under"
+        ]
+      },
+      {
+        "cells": [
+          "about · around",
+          "a little more than",
+          "slightly less than"
+        ]
+      },
+      {
+        "cells": [
+          "exactly",
+          "a large proportion",
+          "a small proportion"
+        ]
+      },
+      {
+        "cells": [
+          "exactly one-third",
+          "a significant majority",
+          "an insignificant minority · a mere 3%"
+        ]
+      }
+    ],
+    "example": "Cars accounted for over half of all university commutes in 2004, at 51%.",
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-percent-words",
+    "title": "Percentages in words",
+    "color": "amber",
+    "applies_to": [
+      "pie",
+      "table",
+      "bar",
+      "mixed"
+    ],
+    "note": "Use words first, then the figure in brackets: just under a quarter (23%).",
+    "columns": [
+      "%",
+      "Say"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "6%",
+          "a small proportion"
+        ]
+      },
+      {
+        "cells": [
+          "23%",
+          "just under a quarter"
+        ]
+      },
+      {
+        "cells": [
+          "27%",
+          "approximately a quarter"
+        ]
+      },
+      {
+        "cells": [
+          "33%",
+          "exactly one-third"
+        ]
+      },
+      {
+        "cells": [
+          "48%",
+          "almost a half"
+        ]
+      },
+      {
+        "cells": [
+          "50%",
+          "exactly a half"
+        ]
+      },
+      {
+        "cells": [
+          "53%",
+          "more than half · over half"
+        ]
+      },
+      {
+        "cells": [
+          "72%",
+          "slightly less than three quarters"
+        ]
+      },
+      {
+        "cells": [
+          "77% · 85%",
+          "roughly three quarters · well over three quarters"
+        ]
+      },
+      {
+        "cells": [
+          "96%",
+          "a significant majority"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-comparisons",
+    "title": "Comparing two figures",
+    "color": "blue",
+    "applies_to": [
+      "line",
+      "bar",
+      "pie",
+      "table",
+      "mixed"
+    ],
+    "columns": [
+      "",
+      "Chunks"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "More / less",
+          "… more than … · … less than … · which was $10,000 less than …"
+        ]
+      },
+      {
+        "cells": [
+          "Times",
+          "nearly twice as much as … · almost twice as much as that of …"
+        ]
+      },
+      {
+        "cells": [
+          "Side by side",
+          "compared with … · in comparison with … · relative to …"
+        ]
+      },
+      {
+        "cells": [
+          "Contrast figure",
+          "whereas the corresponding figure for … was … · while the figure for … was …"
+        ]
+      },
+      {
+        "cells": [
+          "Similar",
+          "Similarly, · A similar pattern was observed in …"
+        ]
+      },
+      {
+        "cells": [
+          "Group",
+          "relative to the three · among the three"
+        ]
+      }
+    ],
+    "example": "12.1%, which was nearly twice as much as that of the civil service (5.6%).",
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-ranking",
+    "title": "Ranking: highest, overtook, followed by",
+    "color": "red",
+    "applies_to": [
+      "line",
+      "bar",
+      "pie",
+      "table",
+      "mixed"
+    ],
+    "columns": [
+      "",
+      "Chunks"
+    ],
+    "rows": [
+      {
+        "tone": "peak",
+        "cells": [
+          "Top",
+          "was the highest · ranked first · the main … · became the largest …"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Next",
+          "the second highest · the third highest · the joint second-place holders"
+        ]
+      },
+      {
+        "tone": "down",
+        "cells": [
+          "Bottom",
+          "was the lowest · the second lowest · ended at the lowest point"
+        ]
+      },
+      {
+        "tone": "up",
+        "cells": [
+          "Overtaking",
+          "surpassed … · overtook … · outnumbered … · surpassed it and ranked first"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "In order",
+          "followed by … · This was followed by … · … and … respectively"
+        ]
+      }
+    ],
+    "example": "This was followed by manufacturing at 16.3% and education at 14.7%.",
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-time-tense",
+    "title": "Time phrase → tense",
+    "color": "gray",
+    "applies_to": [
+      "line",
+      "bar",
+      "table",
+      "mixed"
+    ],
+    "note": "by + year → perfect tense (had + V3 / will have + V3).",
+    "columns": [
+      "Time phrase",
+      "Past data",
+      "Future data"
+    ],
+    "rows": [
+      {
+        "tone": "neutral",
+        "cells": [
+          "in … · from … to … · between … and … · during … · throughout … · over the period …",
+          "rose · fell · remained",
+          "will rise · will fall · will remain"
+        ]
+      },
+      {
+        "tone": "peak",
+        "cells": [
+          "by … · until …",
+          "had risen · had fallen · had doubled",
+          "will have risen · will have fallen · will have doubled"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "since …",
+          "there has been a steady decline · has risen",
+          ""
+        ]
+      }
+    ],
+    "example": "By 2012, they had surged to approximately 27 billion.",
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-time-phrases",
+    "title": "Time phrases (overview has no years!)",
+    "color": "green",
+    "applies_to": [
+      "line",
+      "bar",
+      "table",
+      "mixed"
+    ],
+    "columns": [
+      "",
+      "Chunks"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Start",
+          "at the beginning of the period · in the first year · initially"
+        ]
+      },
+      {
+        "cells": [
+          "End",
+          "by the end of the period · in the final year · in the last year"
+        ]
+      },
+      {
+        "cells": [
+          "Whole period",
+          "over the period shown · throughout the period · over a ten-year period · in the period from … to …"
+        ]
+      },
+      {
+        "cells": [
+          "Part of it",
+          "in the first half of … · during the remainder of the year · in the first three months · in the 1980s"
+        ]
+      },
+      {
+        "cells": [
+          "Then",
+          "after that · then · from that time on · over the next decade"
+        ]
+      },
+      {
+        "cells": [
+          "Before / after",
+          "before … · after … · around … · at the end of the last century"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-prediction",
+    "title": "Predictions (future data)",
+    "color": "purple",
+    "applies_to": [
+      "line",
+      "bar",
+      "table",
+      "map",
+      "mixed"
+    ],
+    "note": "For projected years or planned map changes. Vary: don't use will in every sentence.",
+    "columns": [
+      "Structure",
+      "Chunks"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "will",
+          "… will rise to … in … · … will decrease sharply …"
+        ]
+      },
+      {
+        "cells": [
+          "According to",
+          "According to current plans, there will be … · According to current predictions, there will be …"
+        ]
+      },
+      {
+        "cells": [
+          "It is … that",
+          "It is predicted that … will … · It is planned that … · It is estimated that …"
+        ]
+      },
+      {
+        "cells": [
+          "is + V3 + to",
+          "is expected to … · is projected to … · is forecast to … · is predicted to …"
+        ]
+      },
+      {
+        "cells": [
+          "likely / set",
+          "is likely to … · is set to …"
+        ]
+      },
+      {
+        "cells": [
+          "Future perfect",
+          "will have risen to … by …"
+        ]
+      },
+      {
+        "cells": [
+          "Overview",
+          "… and is expected to keep rising until the end of the period"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-linkers",
+    "title": "Task 1 linkers",
+    "color": "teal",
+    "applies_to": [],
+    "columns": [
+      "Function",
+      "Linkers"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Overview",
+          "Overall, · while … · whereas …"
+        ]
+      },
+      {
+        "cells": [
+          "Contrast",
+          "In contrast, · By contrast, · By comparison, · In contrast to …, · However, · Although …,"
+        ]
+      },
+      {
+        "cells": [
+          "Same time",
+          "Meanwhile,"
+        ]
+      },
+      {
+        "cells": [
+          "Similar",
+          "Similarly, · A similar pattern was observed in …"
+        ]
+      },
+      {
+        "cells": [
+          "Open a body paragraph",
+          "Regarding … · In terms of … · When it comes to … · Looking at …"
+        ]
+      },
+      {
+        "cells": [
+          "Add / highlight",
+          "In addition, · Additionally, · Notably,"
+        ]
+      },
+      {
+        "cells": [
+          "Pair of figures",
+          "… and … respectively"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-overview",
+    "title": "Overview recipe by chart",
+    "color": "amber",
+    "applies_to": [],
+    "note": "1–2 sentences, straight after the introduction.",
+    "columns": [
+      "Chart",
+      "Say (no numbers, no years)",
+      "Frame"
+    ],
+    "rows": [
+      {
+        "tone": "good",
+        "cells": [
+          "All",
+          "Overall, · main trends ↑↓ · max / min · while / whereas",
+          "Overall, while … rose, … fell"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Line",
+          "trend of each group · change of leader",
+          "… surpassed it and ranked first"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Bar",
+          "main trend or comparison · highest · ranking change",
+          "Overall, … earned more than … in every …"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Pie",
+          "largest / smallest segment · change of leader",
+          "… were overtaken by … as the primary choice"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Table",
+          "pattern across rows · pattern across columns",
+          "Overall, younger … were more likely to …"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Two charts",
+          "key feature of chart 1 · key feature of chart 2",
+          "Overall, … while the pie chart shows that …"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Map",
+          "urbanized · commercialized · industrialized · more accessible",
+          "Overall, the area experienced significant urbanization"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Process",
+          "number of stages · first stage · last stage",
+          "Overall, there are … stages in the process, beginning with … and culminating in …"
+        ]
+      },
+      {
+        "tone": "bad",
+        "cells": [
+          "✗ Never",
+          "numbers · percentages · years · a list of categories",
+          ""
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-map-changes",
+    "title": "Map: changes (passive)",
+    "color": "green",
+    "applies_to": [
+      "map"
+    ],
+    "note": "Past maps: was + V3. Then and now: has been + V3. Plans: is planned to be built.",
+    "columns": [
+      "Change",
+      "Chunks"
+    ],
+    "rows": [
+      {
+        "tone": "up",
+        "cells": [
+          "New",
+          "was built · was constructed · was added · was introduced · has been constructed"
+        ]
+      },
+      {
+        "tone": "down",
+        "cells": [
+          "Gone",
+          "was demolished · was removed · was flattened · was cleared to make way for …"
+        ]
+      },
+      {
+        "tone": "wave",
+        "cells": [
+          "Replaced",
+          "was replaced by … · was converted into … · was turned into … · was transformed into … · was developed into …"
+        ]
+      },
+      {
+        "tone": "up",
+        "cells": [
+          "Bigger",
+          "was expanded · was enlarged · was extended · tripled in size"
+        ]
+      },
+      {
+        "tone": "down",
+        "cells": [
+          "Smaller",
+          "was reduced · was cut down · halved the size of …"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Moved",
+          "was relocated · was moved · was relocated eastward"
+        ]
+      },
+      {
+        "tone": "up",
+        "cells": [
+          "Improved",
+          "was upgraded · was modernised · was made pedestrian-only"
+        ]
+      },
+      {
+        "tone": "flat",
+        "cells": [
+          "No change",
+          "remained unchanged · remained unaltered"
+        ]
+      },
+      {
+        "tone": "peak",
+        "cells": [
+          "Whole area",
+          "witnessed dramatic changes · experienced significant development · underwent significant modernization"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-map-location",
+    "title": "Map: where things are",
+    "color": "blue",
+    "applies_to": [
+      "map"
+    ],
+    "note": "in the north of = inside that part; to the north of = outside it, in that direction.",
+    "columns": [
+      "",
+      "Chunks"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Inside an area",
+          "in the north of … · in the south-east of … · in the centre of … · in the middle of …"
+        ]
+      },
+      {
+        "cells": [
+          "Outside, in a direction",
+          "to the north of … · to the west of … · just southwest of … · a bit west of …"
+        ]
+      },
+      {
+        "cells": [
+          "Next to",
+          "next to … · beside … · adjacent to … · adjoining …"
+        ]
+      },
+      {
+        "cells": [
+          "Across",
+          "opposite … · across from … · across the road from … · on the same side of the road as …"
+        ]
+      },
+      {
+        "cells": [
+          "Line / edge",
+          "between … and … · along … · runs alongside … · at the corner of …"
+        ]
+      },
+      {
+        "cells": [
+          "Further on",
+          "just past … · just beyond … · behind … · beyond …"
+        ]
+      },
+      {
+        "cells": [
+          "Static verbs",
+          "is situated · is located · lies · stands · is positioned · is centrally located · faces · overlooks"
+        ]
+      },
+      {
+        "cells": [
+          "Contains",
+          "contains · includes · features · comprises · consists of · surrounds"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-process-linkers",
+    "title": "Process: sequence & connect",
+    "color": "pink",
+    "applies_to": [
+      "process"
+    ],
+    "columns": [
+      "",
+      "Chunks"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Start",
+          "Initially, · In the first stage, · The process starts with … · The first step is to …"
+        ]
+      },
+      {
+        "cells": [
+          "Next",
+          "Next, · Subsequently, · Following this, · After that, · The next step is …"
+        ]
+      },
+      {
+        "cells": [
+          "After a stage",
+          "Once this stage is complete, · After completion of this stage, · Once … has been …, · As soon as this has finished,"
+        ]
+      },
+      {
+        "cells": [
+          "Connect stages",
+          "before · after · once · when · as soon as · while · during"
+        ]
+      },
+      {
+        "cells": [
+          "-ing clause",
+          "before being purified · after being crushed · after leaving the factory · following the extraction stage"
+        ]
+      },
+      {
+        "cells": [
+          "Combine",
+          "which · where · in which · by which · resulting in … · leading to …"
+        ]
+      },
+      {
+        "cells": [
+          "Describe",
+          "The process involves … · consists of … stages · is done by hand · is largely mechanised · ready for packaging"
+        ]
+      },
+      {
+        "cells": [
+          "End",
+          "In the final stage, · Finally, · The process culminates in … · The process ends in …"
+        ]
+      }
+    ],
+    "example": "Once the juice has been filtered, it is heated, resulting in the formation of syrup.",
+    "source": "teacher"
+  },
+  {
+    "skill": "writing1",
+    "id": "w1-process-passive",
+    "title": "Process: passive verbs by material",
+    "color": "amber",
+    "applies_to": [
+      "process"
+    ],
+    "note": "Man-made process: present simple passive (clay is dug). Natural cycle: active is fine (water evaporates).",
+    "columns": [
+      "Material",
+      "… is / are …"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Plants",
+          "picked · harvested · gathered · collected · sorted · washed · chopped · crushed · ground · dried · discarded"
+        ]
+      },
+      {
+        "cells": [
+          "Moving",
+          "transported to · taken to · sent to · placed into · fed through · poured into"
+        ]
+      },
+      {
+        "cells": [
+          "Liquids",
+          "heated · boiled · filtered · concentrated · condensed · treated with …"
+        ]
+      },
+      {
+        "cells": [
+          "Materials",
+          "bleached · dyed · polished · smoothed · soaked · submerged · made into · transformed into · combined · mixed"
+        ]
+      },
+      {
+        "cells": [
+          "Products",
+          "placed onto a conveyor belt · placed into a kiln · packed · bagged · labelled · delivered · shipped · ready to be used"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "id": "w2-question-type",
+    "title": "Question wording → essay type → plan",
+    "color": "blue",
+    "applies_to": [],
+    "note": "Read the instruction line, not the background sentence.",
+    "columns": [
+      "Question says…",
+      "Type",
+      "Body 1 → Body 2"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "To what extent do you agree or disagree?",
+          "Opinion",
+          "reason 1 → reason 2 (one side)"
+        ]
+      },
+      {
+        "cells": [
+          "Is this a positive or negative development?",
+          "Positive / negative",
+          "reason 1 → reason 2"
+        ]
+      },
+      {
+        "cells": [
+          "Discuss both views and give your opinion.",
+          "Discussion",
+          "view you disagree with → view you agree with"
+        ]
+      },
+      {
+        "cells": [
+          "What are the advantages and disadvantages?",
+          "Adv / disadv",
+          "advantages → disadvantages (same number)"
+        ]
+      },
+      {
+        "cells": [
+          "Do the advantages outweigh the disadvantages?",
+          "Outweigh",
+          "weaker side (1 point) → stronger side (2 points)"
+        ]
+      },
+      {
+        "cells": [
+          "What problems…? What measures…?",
+          "Problem / solution",
+          "problems → solutions"
+        ]
+      },
+      {
+        "cells": [
+          "What are the causes? What effects…?",
+          "Cause / effect",
+          "causes → effects"
+        ]
+      },
+      {
+        "cells": [
+          "What are the causes? What can be done?",
+          "Cause / solution",
+          "causes → solutions"
+        ]
+      },
+      {
+        "cells": [
+          "Two different questions",
+          "Direct question",
+          "answer question 1 → answer question 2"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "id": "w2-plan-teer",
+    "title": "4-paragraph plan + TEER",
+    "color": "green",
+    "applies_to": [],
+    "note": "Aim for about 300 words: 4 paragraphs, body paragraphs 5–6 sentences.",
+    "columns": [
+      "Part",
+      "Do",
+      "Frames"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Introduction (2–3)",
+          "paraphrase the topic → thesis",
+          "Nowadays, … · It is often argued that …, whereas others contend that …"
+        ]
+      },
+      {
+        "cells": [
+          "Body: T (topic)",
+          "the main point",
+          "To begin with, · The primary reason why … is … · One of the most significant advantages of … is …"
+        ]
+      },
+      {
+        "cells": [
+          "Body: E (explain ×2)",
+          "how / why, go deeper",
+          "This means that … · When …, …"
+        ]
+      },
+      {
+        "cells": [
+          "Body: R (result)",
+          "the direct consequence",
+          "As a result, · Consequently, · which naturally leads to …"
+        ]
+      },
+      {
+        "cells": [
+          "Body: E (example)",
+          "named country / organisation / study",
+          "For instance, · A clear example of this is …"
+        ]
+      },
+      {
+        "cells": [
+          "Body 2",
+          "same TEER for point 2",
+          "Furthermore, · On the other hand, · However,"
+        ]
+      },
+      {
+        "cells": [
+          "Conclusion (1–2)",
+          "restate your position, no new ideas",
+          "In conclusion, · Ultimately, I maintain that …"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "id": "w2-intro-openers",
+    "title": "Introduction: first sentence",
+    "color": "teal",
+    "applies_to": [],
+    "note": "Paraphrase the topic with synonyms; never copy the question.",
+    "columns": [
+      "",
+      "Openers"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Trend",
+          "Nowadays, the increasing popularity of … has led to … · The trend of … has become increasingly common in modern society."
+        ]
+      },
+      {
+        "cells": [
+          "Numbers growing",
+          "An increasing number of … are … · In many countries around the world, the number of … is increasing rapidly."
+        ]
+      },
+      {
+        "cells": [
+          "General",
+          "In today's world, many people choose to … · It is undeniably true that … · All over the world, … has become much more common."
+        ]
+      },
+      {
+        "cells": [
+          "Two views",
+          "It is often argued that …, whereas others contend that …"
+        ]
+      },
+      {
+        "cells": [
+          "Decline",
+          "In the contemporary digital era, the traditional practice of … is rapidly declining."
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "id": "w2-thesis-frames",
+    "title": "Thesis frames by type",
+    "color": "purple",
+    "applies_to": [],
+    "columns": [
+      "Type",
+      "Thesis"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Opinion",
+          "I completely agree with this perspective because … · I disagree with the idea that …, because …"
+        ]
+      },
+      {
+        "cells": [
+          "Positive / negative",
+          "I completely agree that this change is an entirely positive development because it … and …"
+        ]
+      },
+      {
+        "cells": [
+          "Discussion",
+          "While …, I believe that … by … and …"
+        ]
+      },
+      {
+        "cells": [
+          "Adv / disadv",
+          "While this practice offers clear advantages, such as …, it also introduces significant drawbacks that warrant careful consideration."
+        ]
+      },
+      {
+        "cells": [
+          "Outweigh",
+          "I firmly believe that the drawbacks of …, specifically regarding … and …, far outweigh the single advantage of …"
+        ]
+      },
+      {
+        "cells": [
+          "Cause / effect",
+          "This trend is mainly driven by …, and it results in … as well as …"
+        ]
+      },
+      {
+        "cells": [
+          "Problem / solution",
+          "While this trend causes major problems with …, the most effective solution is for governments to …"
+        ]
+      },
+      {
+        "cells": [
+          "Cause / solution",
+          "This essay will examine how … causes this problem, and explain why … is the most realistic solution."
+        ]
+      },
+      {
+        "cells": [
+          "Direct question",
+          "This shift is primarily driven by …, and I consider this to be a highly positive development because …"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "id": "w2-linkers-function",
+    "title": "Linkers by function",
+    "color": "amber",
+    "applies_to": [],
+    "columns": [
+      "Function",
+      "Linkers"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Listing",
+          "Firstly, · Secondly, · Thirdly, · Lastly, · Finally, · Last but not least,"
+        ]
+      },
+      {
+        "cells": [
+          "Adding",
+          "Additionally, · Furthermore, · Moreover, · In addition to … · Not only … but also … · as well as …"
+        ]
+      },
+      {
+        "cells": [
+          "Example",
+          "For example, · For instance, · To cite an example, · To illustrate, · One clear example is …"
+        ]
+      },
+      {
+        "tone": "good",
+        "cells": [
+          "Result",
+          "Therefore, · Thus, · As a result, · Consequently, · Hence, · As a consequence,"
+        ]
+      },
+      {
+        "cells": [
+          "Highlighting",
+          "Specifically, · Particularly, · Especially, · In particular, · Obviously,"
+        ]
+      },
+      {
+        "tone": "bad",
+        "cells": [
+          "Contrast",
+          "However, · While … · Whereas … · Although … · On the other hand, · Nevertheless, · Despite … · Even though … · By contrast,"
+        ]
+      },
+      {
+        "cells": [
+          "Cause",
+          "Owing to … · Because … · Due to … · Since … · As …"
+        ]
+      },
+      {
+        "cells": [
+          "Opinion",
+          "I believe … · In my opinion, · In my view, · I agree … · I disagree with … · I cannot accept …"
+        ]
+      },
+      {
+        "cells": [
+          "Conclusion",
+          "To conclude, · In conclusion, · In summary, · To summarize,"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "id": "w2-linker-grammar",
+    "title": "Linker grammar: what comes after",
+    "color": "red",
+    "applies_to": [],
+    "note": "On the other hand must show a contrasting side, not just add a point.",
+    "columns": [
+      "After it comes…",
+      "Linkers"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "comma + sentence",
+          "However, · Furthermore, · Moreover, · Consequently, · Therefore, · Nevertheless, · By contrast, · For example,"
+        ]
+      },
+      {
+        "cells": [
+          "a clause (subject + verb)",
+          "while · whereas · although · even though · because · since · as"
+        ]
+      },
+      {
+        "cells": [
+          "a noun or -ing",
+          "despite · in spite of · due to · owing to · in addition to · as well as · in comparison with"
+        ]
+      },
+      {
+        "cells": [
+          "noun phrase + comma + result",
+          "As a result of …, · As a consequence of …,"
+        ]
+      },
+      {
+        "cells": [
+          "a pair",
+          "not only … but also … · On the one hand, … On the other hand, …"
+        ]
+      },
+      {
+        "tone": "bad",
+        "cells": [
+          "✗ Wrong",
+          "Despite it was expensive · Due to people work long hours"
+        ]
+      },
+      {
+        "tone": "good",
+        "cells": [
+          "✓ Right",
+          "Despite being expensive · Although it was expensive · Due to long working hours · Because people work long hours"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "id": "w2-linkers-by-part",
+    "title": "Linkers by essay part",
+    "color": "teal",
+    "applies_to": [],
+    "columns": [
+      "Where",
+      "Linkers"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Introduction",
+          "While …, I believe … · whereas others contend that … · This essay will examine how … and explain why …"
+        ]
+      },
+      {
+        "cells": [
+          "Start Body 1",
+          "To begin with, · First, · On the one hand, · The primary reason why …"
+        ]
+      },
+      {
+        "cells": [
+          "Start Body 2",
+          "Furthermore, · Second, · Similarly, · On the other hand, · Conversely, · However, · Nevertheless, despite …"
+        ]
+      },
+      {
+        "cells": [
+          "2nd point in a paragraph",
+          "Additionally, · In addition, · The second major cause is … · The second step is …"
+        ]
+      },
+      {
+        "cells": [
+          "Result",
+          "As a result, · Consequently, · Therefore, · This means that … · which naturally leads to … · Eventually,"
+        ]
+      },
+      {
+        "cells": [
+          "Example",
+          "For example, · For instance, · To illustrate, · A clear example of this is … · A prime example of this …"
+        ]
+      },
+      {
+        "cells": [
+          "Conclusion",
+          "In conclusion, while … · Ultimately, I maintain that … · However, this issue can be solved if …"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "id": "w2-example-frames",
+    "title": "Example frames (end of each body)",
+    "color": "pink",
+    "applies_to": [],
+    "note": "One or two sentences; keep numbers plausible (approximately, nearly, more than).",
+    "columns": [
+      "Kind",
+      "Frames"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "General (place)",
+          "A clear example of this is …, where … · A clear example of this can be seen in …, where … · A prime example of this is …, which successfully … · A clear illustration of this is seen when …"
+        ]
+      },
+      {
+        "cells": [
+          "Statistic (study)",
+          "For instance, reports from … show that … · For example, data from … shows that … · For example, a study by … found that … · To illustrate, a recent global study found that …"
+        ]
+      },
+      {
+        "cells": [
+          "Research",
+          "This situation is clearly shown by research from …, which consistently proves that …"
+        ]
+      },
+      {
+        "tone": "good",
+        "cells": [
+          "✓ Name it",
+          "Finland · Norway · the WHO · UNICEF · the EU · Harvard University · Gallup"
+        ]
+      },
+      {
+        "tone": "bad",
+        "cells": [
+          "✗ Too vague",
+          "some countries · many people · experts"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "id": "w2-opinion-strength",
+    "title": "Opinion: strong vs hedged",
+    "color": "purple",
+    "applies_to": [
+      "opinion",
+      "discussion",
+      "outweigh",
+      "positive_negative",
+      "direct_question"
+    ],
+    "columns": [
+      "",
+      "Phrases"
+    ],
+    "rows": [
+      {
+        "tone": "good",
+        "cells": [
+          "Strong",
+          "I firmly believe that … · I strongly believe that … · I completely agree that … · Ultimately, I maintain that …"
+        ]
+      },
+      {
+        "tone": "bad",
+        "cells": [
+          "Strong against",
+          "I disagree with the idea that … · I cannot accept that … · I completely disagree with …"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Hedged",
+          "I would argue that … · To some extent, … · It could be argued that … · tend to … · may … · is likely to …"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Others' view",
+          "It is often argued that … · Some people believe that … · others contend that … · Many people believe that …"
+        ]
+      }
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "writing2",
+    "id": "w2-cause-result",
+    "title": "Cause → result",
+    "color": "green",
+    "applies_to": [],
+    "columns": [
+      "",
+      "Chunks"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Cause (+ clause)",
+          "because … · since … · as …"
+        ]
+      },
+      {
+        "cells": [
+          "Cause (+ noun)",
+          "due to … · owing to … · As a result of …, · As a consequence of …,"
+        ]
+      },
+      {
+        "cells": [
+          "Name the cause",
+          "This trend is mainly driven by … · This is mainly caused by … · The main cause behind the rise in … is … · The primary reason why … is …"
+        ]
+      },
+      {
+        "tone": "good",
+        "cells": [
+          "Result (new sentence)",
+          "As a result, · Consequently, · Therefore, · Thus, · Hence, · This means that …"
+        ]
+      },
+      {
+        "tone": "good",
+        "cells": [
+          "Result (in sentence)",
+          "which naturally leads to … · results in … · can lead to … · leaving them with no choice but to …"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "id": "w2-contrast-concession",
+    "title": "Contrast & concession",
+    "color": "red",
+    "applies_to": [],
+    "columns": [
+      "",
+      "Chunks"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "New sentence",
+          "However, · On the other hand, · By contrast, · Conversely, · Nevertheless,"
+        ]
+      },
+      {
+        "cells": [
+          "Same sentence",
+          "while … · whereas …"
+        ]
+      },
+      {
+        "cells": [
+          "Concession (+ clause)",
+          "Although …, · Even though …, · While …,"
+        ]
+      },
+      {
+        "cells": [
+          "Concession (+ noun / -ing)",
+          "Despite …, · In spite of …,"
+        ]
+      },
+      {
+        "cells": [
+          "Introduce drawbacks",
+          "However, the widespread adoption of … is not without drawbacks. · Conversely, …"
+        ]
+      },
+      {
+        "cells": [
+          "Weigh up",
+          "However, this disadvantage is heavily eclipsed by … · far outweigh this single drawback"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "id": "w2-conclusion-frames",
+    "title": "Conclusion frames by type",
+    "color": "gray",
+    "applies_to": [],
+    "note": "Restate your position in new words. No new ideas.",
+    "columns": [
+      "Type",
+      "Frame"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Opinion",
+          "In conclusion, while …, I strongly believe that …"
+        ]
+      },
+      {
+        "cells": [
+          "Positive / negative",
+          "In conclusion, the transition toward … is a thoroughly beneficial change for …"
+        ]
+      },
+      {
+        "cells": [
+          "Discussion",
+          "In conclusion, although …, … . Ultimately, I maintain that …"
+        ]
+      },
+      {
+        "cells": [
+          "Adv / disadv",
+          "In conclusion, while … can serve as a catalyst for …, it simultaneously …"
+        ]
+      },
+      {
+        "cells": [
+          "Outweigh",
+          "… mean that the disadvantages clearly outweigh the advantages."
+        ]
+      },
+      {
+        "cells": [
+          "Cause / effect",
+          "In conclusion, … are the main reasons why … . This problem not only … but also …"
+        ]
+      },
+      {
+        "cells": [
+          "Problem / solution",
+          "In conclusion, … are the main impacts of … today. Overcoming this problem requires immediate, combined efforts from …"
+        ]
+      },
+      {
+        "cells": [
+          "Cause / solution",
+          "In conclusion, a combination of … and … causes … . However, this issue can be solved if governments …"
+        ]
+      },
+      {
+        "cells": [
+          "Direct question",
+          "In conclusion, the shift away from … is a direct consequence of … . Ultimately, this change is highly beneficial because …"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "speaking",
+    "id": "sp-answer-formula",
+    "title": "Answer formula per part",
+    "color": "blue",
+    "applies_to": [],
+    "note": "Use 2–3 collocations in every answer; never just yes or no.",
+    "columns": [
+      "Part",
+      "Length",
+      "Formula"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Part 1",
+          "20–30 s · 2–3 sentences",
+          "direct answer → reason / detail → extra point, example or contrast"
+        ]
+      },
+      {
+        "cells": [
+          "Part 2",
+          "1 min notes · up to 2 min talk",
+          "one-line intro → bullets in order → most time on why / how you felt"
+        ]
+      },
+      {
+        "cells": [
+          "Part 3",
+          "40–60 s · 6–7 sentences",
+          "view → reason 1 → reason 2 or other side → example → Ultimately, …"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "speaking",
+    "id": "sp-time-buying",
+    "title": "Buying time & softeners",
+    "color": "gray",
+    "applies_to": [],
+    "note": "Part 1: the examiner can only repeat. Part 3: they may rephrase.",
+    "columns": [
+      "",
+      "Phrases"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Thinking",
+          "That's an interesting question. · I've never really thought about it, but … · Let me think … · Off the top of my head, · That's a tricky one, because …"
+        ]
+      },
+      {
+        "cells": [
+          "Soft start",
+          "To be completely honest, · Generally speaking, · I have to admit that … · From what I have seen, · If I had to pick one downside,"
+        ]
+      },
+      {
+        "cells": [
+          "Repeat / rephrase",
+          "Sorry, could you repeat the question, please? · Could you rephrase that, please?"
+        ]
+      },
+      {
+        "cells": [
+          "Fillers (a little)",
+          "Well, · Actually, · Let me see …"
+        ]
+      }
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "id": "sp-opinions",
+    "title": "Opinions: strong vs hedged",
+    "color": "purple",
+    "applies_to": [
+      "part1",
+      "part3"
+    ],
+    "columns": [
+      "",
+      "Phrases"
+    ],
+    "rows": [
+      {
+        "tone": "good",
+        "cells": [
+          "Strong",
+          "Without a doubt, · Absolutely, · I firmly believe that … · There's no question that … · I'm absolutely convinced that …"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Hedged",
+          "I would say that … · Generally speaking, · As far as I can tell, · I tend to think that … · It depends on … · To some extent,"
+        ]
+      },
+      {
+        "tone": "good",
+        "cells": [
+          "Agree",
+          "I couldn't agree more. · I'd partly agree with that. · That's true to some extent, but …"
+        ]
+      },
+      {
+        "tone": "bad",
+        "cells": [
+          "Disagree",
+          "I see what you mean, but … · I'm not sure I'd go that far. · I'm afraid I see it differently."
+        ]
+      }
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "id": "sp-reasons-examples",
+    "title": "Reasons, examples, adding, closing",
+    "color": "green",
+    "applies_to": [],
+    "columns": [
+      "",
+      "Phrases"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Reason",
+          "mainly because … · The main reason is that … · The thing is, … · This is probably due to … · …, which means that …"
+        ]
+      },
+      {
+        "cells": [
+          "Example",
+          "For instance, · Take … for example. · A good example of this is … · To give you an idea, …"
+        ]
+      },
+      {
+        "cells": [
+          "Adding",
+          "Also, · Plus, · On top of that, · Additionally,"
+        ]
+      },
+      {
+        "cells": [
+          "Contrast",
+          "However, · While …, · On the other hand, · That said,"
+        ]
+      },
+      {
+        "cells": [
+          "Generalising",
+          "On the whole, · By and large, · Most people tend to … · the younger generation · In my country, it's quite common to …"
+        ]
+      },
+      {
+        "cells": [
+          "Closing (Part 3)",
+          "Ultimately, · Therefore, · In short, · So, all things considered, · That's why I'd say …"
+        ]
+      }
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "id": "sp-time-frames",
+    "title": "Past vs now, future & speculating",
+    "color": "amber",
+    "applies_to": [],
+    "note": "Match the question tense: Did you…? → past; Have you ever…? → present perfect + past detail.",
+    "columns": [
+      "",
+      "Phrases"
+    ],
+    "rows": [
+      {
+        "tone": "neutral",
+        "cells": [
+          "Past habit",
+          "used to … · Back when I was a kid, · I had never … before, so …"
+        ]
+      },
+      {
+        "tone": "wave",
+        "cells": [
+          "Then vs now",
+          "In the past, … whereas nowadays … · Compared to … years ago, · These days, … has become far more … · There's been a real shift towards …"
+        ]
+      },
+      {
+        "tone": "up",
+        "cells": [
+          "Likely future",
+          "It's highly likely that … · I'd imagine that … · There's a good chance that … · … might well … · In the long run,"
+        ]
+      },
+      {
+        "tone": "down",
+        "cells": [
+          "Unlikely",
+          "I can't see … happening any time soon."
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Plans",
+          "I'm planning to … · I'm hoping to … · I'd love to …"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Imagining",
+          "If I had the chance, I'd … · If …, I would …"
+        ]
+      }
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "id": "sp-part2-moves",
+    "title": "Part 2: open, move, close",
+    "color": "teal",
+    "applies_to": [
+      "part2"
+    ],
+    "note": "Spend the most time on the last bullet (why / how you felt).",
+    "columns": [
+      "",
+      "Phrases"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Open",
+          "I'd like to talk about … · The person I'm going to describe is … · There are quite a few … I could talk about, but the one that stands out is …"
+        ]
+      },
+      {
+        "cells": [
+          "Move on",
+          "As for …, · Moving on to … · When it comes to …, · Another thing I remember is … · I should also mention that …"
+        ]
+      },
+      {
+        "cells": [
+          "Tell the story",
+          "At first …, then …, and in the end … · I'll never forget the moment when … · It turned out that … · We were just … when …"
+        ]
+      },
+      {
+        "cells": [
+          "Why / feelings",
+          "What made it special was … · The main reason I … is … · It made me realise that …"
+        ]
+      },
+      {
+        "cells": [
+          "Close / fill time",
+          "Looking back, · Compared to how it was before, · All in all, that's why … · … will always have a special place in my heart."
+        ]
+      }
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "id": "sp-feelings",
+    "title": "Describing feelings",
+    "color": "pink",
+    "applies_to": [
+      "part1",
+      "part2"
+    ],
+    "columns": [
+      "",
+      "Words"
+    ],
+    "rows": [
+      {
+        "tone": "good",
+        "cells": [
+          "Happy",
+          "thrilled · over the moon · proud · appreciated · on cloud nine"
+        ]
+      },
+      {
+        "tone": "good",
+        "cells": [
+          "Relaxed / renewed",
+          "relieved · a real weight off my shoulders · rejuvenated · refreshed · recharged my batteries"
+        ]
+      },
+      {
+        "tone": "wave",
+        "cells": [
+          "Nervous",
+          "nervous · on edge · butterflies in my stomach"
+        ]
+      },
+      {
+        "tone": "bad",
+        "cells": [
+          "Down",
+          "a bit gutted · disappointed · lethargic · exhausted"
+        ]
+      }
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "id": "sp-likes",
+    "title": "Likes beyond \"I like\"",
+    "color": "green",
+    "applies_to": [
+      "part1"
+    ],
+    "columns": [
+      "",
+      "Phrases"
+    ],
+    "rows": [
+      {
+        "tone": "good",
+        "cells": [
+          "Like",
+          "I'm really into … · I'm a big fan of … · I'm quite keen on … · … is right up my street. · I can't get enough of …"
+        ]
+      },
+      {
+        "tone": "bad",
+        "cells": [
+          "Dislike",
+          "I'm not really into … · … isn't really my thing. · I can't stand … · I'm not a big fan of …"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Prefer",
+          "I prefer … to … · I'd rather … than …"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "How often",
+          "on a daily basis · every now and then · once in a while · hardly ever · once in a blue moon · whenever I get the chance"
+        ]
+      }
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "id": "sp-word-upgrades",
+    "title": "Word upgrades",
+    "color": "purple",
+    "applies_to": [],
+    "columns": [
+      "Instead of",
+      "Say"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "very beautiful",
+          "breathtaking · picturesque · awe-inspiring · aesthetically pleasing · a sight for sore eyes"
+        ]
+      },
+      {
+        "cells": [
+          "very big / tall",
+          "soaring · imposing · monolithic · sprawling · towers over"
+        ]
+      },
+      {
+        "cells": [
+          "quiet / calm",
+          "tranquil · peaceful · a tranquil atmosphere · an urban oasis"
+        ]
+      },
+      {
+        "cells": [
+          "busy / lively",
+          "vibrant · bustling · always buzzing · packed with …"
+        ]
+      },
+      {
+        "cells": [
+          "old",
+          "dilapidated · quaint · rustic"
+        ]
+      },
+      {
+        "cells": [
+          "modern",
+          "state-of-the-art · sleek · futuristic · eco-friendly"
+        ]
+      },
+      {
+        "cells": [
+          "relax",
+          "unwind · chill out · wind down · put my feet up · recharge my batteries"
+        ]
+      },
+      {
+        "cells": [
+          "very early",
+          "at the crack of dawn · bright and early"
+        ]
+      },
+      {
+        "cells": [
+          "expensive",
+          "pricey · it would break the bank · ostentatious"
+        ]
+      },
+      {
+        "cells": [
+          "special place",
+          "a hidden gem · the focal point · stands out from the crowd"
+        ]
+      }
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "id": "sp-part2-vocab",
+    "title": "Part 2 vocab: use 1–2 of each type",
+    "color": "amber",
+    "applies_to": [
+      "part2",
+      "part3"
+    ],
+    "note": "Learn them in chunks; Part 3 answers reuse the same words.",
+    "columns": [
+      "Type",
+      "Examples"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Idioms",
+          "to escape the hustle and bustle · to lose track of time · at the crack of dawn · to stand out from the crowd · to have a green thumb · to hit it off"
+        ]
+      },
+      {
+        "cells": [
+          "Collocations",
+          "a hidden gem · breathtaking views · a tranquil atmosphere · a soaring skyscraper · a morning ritual · a bountiful harvest"
+        ]
+      },
+      {
+        "cells": [
+          "Phrasal verbs",
+          "wind down · chill out · drop by · wander around · tower over · blend in with"
+        ]
+      },
+      {
+        "cells": [
+          "Advanced words",
+          "awe-inspiring · panoramic · rustic · rejuvenated · solitude · imposing · cultivate"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "listening",
+    "id": "ls-map-words",
+    "title": "Map & plan words",
+    "color": "teal",
+    "applies_to": [
+      "map_labelling",
+      "plan_labelling"
+    ],
+    "note": "Find the entrance / you-are-here point and the compass first. Listen for prepositions.",
+    "columns": [
+      "",
+      "Words"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Directions",
+          "north · northeast · northwest · southeast · southwest · to your right · on your left"
+        ]
+      },
+      {
+        "cells": [
+          "Position",
+          "in the centre of · in the middle of · above · below · inside · outside · straight ahead"
+        ]
+      },
+      {
+        "cells": [
+          "Next to",
+          "next to · alongside · adjoining · adjacent to · behind · between · on the corner"
+        ]
+      },
+      {
+        "cells": [
+          "Across",
+          "opposite · across from · faces · on the same side of the road as · on the east side of"
+        ]
+      },
+      {
+        "cells": [
+          "Roads",
+          "junction · leads off · dead end · runs alongside · enter via"
+        ]
+      },
+      {
+        "cells": [
+          "Moving",
+          "turn right · go straight · along · head straight to · go through the entrance · upon entering"
+        ]
+      },
+      {
+        "cells": [
+          "How far",
+          "just past · a little beyond · beyond · before you get to · a bit west of · just southwest of"
+        ]
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "listening",
+    "id": "ls-answer-format",
+    "title": "Answer format: ✓ / ✗",
+    "color": "green",
+    "applies_to": [
+      "form_completion",
+      "note_completion",
+      "table_completion",
+      "sentence_completion",
+      "summary_completion",
+      "flowchart_completion",
+      "short_answer",
+      "multi_select"
+    ],
+    "note": "Writing in CAPITALS avoids doubt. Hyphenated words count as one word.",
+    "columns": [
+      "Rule",
+      "✓ Accepted",
+      "✗ Marked wrong"
+    ],
+    "rows": [
+      {
+        "tone": "good",
+        "cells": [
+          "Article left out",
+          "term (key: a term)",
+          ""
+        ]
+      },
+      {
+        "tone": "bad",
+        "cells": [
+          "Same idea, other words",
+          "a term",
+          "12 weeks"
+        ]
+      },
+      {
+        "tone": "good",
+        "cells": [
+          "Singular / plural (if gap allows)",
+          "beach · beaches",
+          ""
+        ]
+      },
+      {
+        "tone": "good",
+        "cells": [
+          "Numbers",
+          "digits: 2020 · 429",
+          ""
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Codes / postcodes",
+          "copy every letter: GT82LC",
+          "a missing letter"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Word limit",
+          "NO MORE THAN TWO WORDS AND/OR A NUMBER",
+          "a third word"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Units printed by the gap",
+          "just the number",
+          "repeating £ or kg"
+        ]
+      },
+      {
+        "tone": "good",
+        "cells": [
+          "Choose TWO",
+          "A, C in either order",
+          ""
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Spelling",
+          "British or American",
+          "any spelling mistake"
+        ]
+      }
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "listening",
+    "id": "ls-numbers-letters",
+    "title": "Numbers & letters traps",
+    "color": "amber",
+    "applies_to": [
+      "form_completion",
+      "note_completion",
+      "table_completion"
+    ],
+    "columns": [
+      "Trap",
+      "Listen for"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Letters that sound alike",
+          "A / E / I · B / P / V · G / J · M / N · S / F · Q / U"
+        ]
+      },
+      {
+        "cells": [
+          "Doubles",
+          "double L = LL · double five = 55 · triple = three of the same"
+        ]
+      },
+      {
+        "cells": [
+          "Zero",
+          "oh = 0 in phone numbers"
+        ]
+      },
+      {
+        "cells": [
+          "-teen vs -ty",
+          "thirteen / thirty · fifteen / fifty (stress on -teen)"
+        ]
+      },
+      {
+        "tone": "bad",
+        "cells": [
+          "Corrections",
+          "sorry, it's actually … · the last version is the answer"
+        ]
+      },
+      {
+        "tone": "bad",
+        "cells": [
+          "Old vs new price",
+          "it was £20 but now it's £18"
+        ]
+      },
+      {
+        "cells": [
+          "Dates",
+          "12 March · March 12"
+        ]
+      }
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "listening",
+    "id": "ls-signposts",
+    "title": "Signpost words",
+    "color": "purple",
+    "applies_to": [],
+    "note": "Distractors are mentioned, then rejected. Wait for the final answer.",
+    "columns": [
+      "Signal",
+      "Words"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Starting",
+          "First of all, · To begin with, · Let me start with …"
+        ]
+      },
+      {
+        "cells": [
+          "Moving on",
+          "Moving on to … · Next, · Now let's look at … · Turning to …"
+        ]
+      },
+      {
+        "tone": "bad",
+        "cells": [
+          "Change of mind (trap)",
+          "Actually, · Sorry, I mean … · I thought about …, but … · Originally …, but now …"
+        ]
+      },
+      {
+        "cells": [
+          "Contrast",
+          "However, · But … · On the other hand,"
+        ]
+      },
+      {
+        "cells": [
+          "Example",
+          "For example, · such as … · for instance,"
+        ]
+      },
+      {
+        "cells": [
+          "Important point",
+          "The main thing is … · What's really important is …"
+        ]
+      },
+      {
+        "cells": [
+          "Ending",
+          "To sum up, · Finally, · So, to conclude,"
+        ]
+      }
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "listening",
+    "id": "ls-gap-prediction",
+    "title": "Predict the gap",
+    "color": "blue",
+    "applies_to": [
+      "form_completion",
+      "note_completion",
+      "table_completion",
+      "sentence_completion",
+      "summary_completion",
+      "flowchart_completion",
+      "short_answer"
+    ],
+    "note": "Before the audio, decide the word type for every gap. The answer must fit the grammar.",
+    "columns": [
+      "Before the gap",
+      "Expect"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "a / an …",
+          "a singular noun"
+        ]
+      },
+      {
+        "cells": [
+          "many · several · a few …",
+          "a plural noun"
+        ]
+      },
+      {
+        "cells": [
+          "£ · $ · at … o'clock",
+          "a number · a time"
+        ]
+      },
+      {
+        "cells": [
+          "the … of",
+          "a noun"
+        ]
+      },
+      {
+        "cells": [
+          "very · quite …",
+          "an adjective"
+        ]
+      },
+      {
+        "cells": [
+          "Name / Address / Postcode",
+          "letters spelled out · numbers + letters"
+        ]
+      }
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "reading",
+    "id": "rd-tfng",
+    "title": "TFNG / YNNG decision",
+    "color": "green",
+    "applies_to": [
+      "tfng",
+      "ynng"
+    ],
+    "note": "TFNG = facts; YNNG = the writer's views. Answers follow passage order.",
+    "columns": [
+      "Answer",
+      "When",
+      "Clue"
+    ],
+    "rows": [
+      {
+        "tone": "good",
+        "cells": [
+          "TRUE / YES",
+          "the passage says the same thing in other words",
+          "a paraphrase match"
+        ]
+      },
+      {
+        "tone": "bad",
+        "cells": [
+          "FALSE / NO",
+          "the passage says the opposite",
+          "a direct contradiction"
+        ]
+      },
+      {
+        "tone": "flat",
+        "cells": [
+          "NOT GIVEN",
+          "the passage says nothing about this point, or only part of it",
+          "no information · not your own knowledge"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Write",
+          "the letters asked for: T · F · NG or Y · N · NG",
+          "TRUE in a Y/N/NG task = wrong"
+        ]
+      }
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "reading",
+    "id": "rd-qualifiers-paraphrase",
+    "title": "Qualifiers & paraphrases",
+    "color": "amber",
+    "applies_to": [
+      "tfng",
+      "ynng",
+      "mcq",
+      "matching_headings",
+      "summary_completion"
+    ],
+    "note": "IELTS paraphrases almost everything; scan for synonyms, not the same words.",
+    "columns": [
+      "",
+      "Words"
+    ],
+    "rows": [
+      {
+        "tone": "bad",
+        "cells": [
+          "Absolute (check carefully)",
+          "all · always · only · never · none · every · the first"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Partial",
+          "most · many · some · often · usually · may"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "many ≠ all",
+          "a passage saying many does not confirm all"
+        ]
+      },
+      {
+        "tone": "good",
+        "cells": [
+          "Paraphrase pairs",
+          "elderly = older people · rose = increased · not compulsory = optional"
+        ]
+      }
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "reading",
+    "id": "rd-time-plan",
+    "title": "60-minute time plan",
+    "color": "blue",
+    "applies_to": [],
+    "note": "Never leave a blank: wrong answers cost nothing.",
+    "columns": [
+      "Minutes",
+      "Do"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "0–17",
+          "Passage 1: all questions"
+        ]
+      },
+      {
+        "cells": [
+          "17–37",
+          "Passage 2: all questions"
+        ]
+      },
+      {
+        "cells": [
+          "37–60",
+          "Passage 3: all questions + guess the rest"
+        ]
+      },
+      {
+        "cells": [
+          "2–3 per passage",
+          "skim: title, first sentences, names, dates, numbers"
+        ]
+      },
+      {
+        "cells": [
+          "≈1.5 per question",
+          "stuck → guess, mark it, move on"
+        ]
+      },
+      {
+        "tone": "bad",
+        "cells": [
+          "0 extra",
+          "no transfer time: answers inside the 60 minutes"
+        ]
+      }
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "reading",
+    "id": "rd-question-order",
+    "title": "Which questions follow passage order",
+    "color": "gray",
+    "applies_to": [],
+    "columns": [
+      "",
+      "Question types"
+    ],
+    "rows": [
+      {
+        "tone": "good",
+        "cells": [
+          "In order",
+          "TFNG · YNNG · sentence completion · matching sentence endings · short answer · MCQ"
+        ]
+      },
+      {
+        "tone": "good",
+        "cells": [
+          "One section, in order",
+          "summary completion · note completion · diagram labelling"
+        ]
+      },
+      {
+        "tone": "bad",
+        "cells": [
+          "Not in order",
+          "matching headings · matching information · matching features"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Copy exact words",
+          "completion without a word box"
+        ]
+      },
+      {
+        "tone": "neutral",
+        "cells": [
+          "Match the meaning",
+          "completion with a word box"
+        ]
+      }
+    ],
+    "source": "standard"
+  }
+]

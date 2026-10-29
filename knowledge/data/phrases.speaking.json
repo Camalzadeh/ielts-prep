@@ -1,0 +1,380 @@
+[
+  {
+    "skill": "speaking",
+    "category": "Buying time / thinking",
+    "when": "Starting an answer when you need 1–2 seconds to think, without going silent",
+    "applies_to": ["part1", "part2", "part3"],
+    "items": [
+      {"phrase": "That's an interesting question.", "example": "That's an interesting question. I've never really thought about it, but I'd say people travel less in winter mainly because of the cost.", "note": "Part 3 mainly; don't use it for every question", "level": "core"},
+      {"phrase": "I've never really thought about it, but …", "example": "I've never really thought about it, but I suppose I check my watch less now that I always have my phone.", "level": "core"},
+      {"phrase": "Let me think … / Let me see …", "example": "Let me think … the last time I went to a museum was probably two years ago, on a school trip.", "level": "core"},
+      {"phrase": "Well, to be completely honest, …", "example": "Well, to be completely honest, I don't think I have the patience required to be a teacher.", "note": "from the teacher's model answers", "level": "core"},
+      {"phrase": "Off the top of my head, …", "example": "Off the top of my head, I'd say the most popular sport in my country is football, by far.", "note": "= without checking or thinking for long", "level": "advanced"},
+      {"phrase": "How can I put this? …", "example": "How can I put this? It's not that I dislike shopping, it's just that I find crowded malls exhausting.", "level": "advanced"},
+      {"phrase": "That's a tricky one, because …", "example": "That's a tricky one, because it really depends on the person's age and lifestyle.", "level": "core"}
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "category": "Asking the examiner to repeat or clarify",
+    "when": "When you didn't catch or didn't understand the question",
+    "applies_to": ["part1", "part3"],
+    "items": [
+      {"phrase": "Sorry, could you repeat the question, please?", "example": "Sorry, could you repeat the question, please? I didn't quite catch the last part.", "note": "Part 1: the examiner can repeat but not explain", "level": "core"},
+      {"phrase": "Sorry, do you mean … or …?", "example": "Sorry, do you mean buildings in my city or tall buildings in general?", "note": "Part 3: the examiner may rephrase", "level": "core"},
+      {"phrase": "Could you rephrase that, please?", "example": "I'm not quite sure what you mean by 'national identity' here. Could you rephrase that, please?", "level": "core"},
+      {"phrase": "If I've understood correctly, you're asking …", "example": "If I've understood correctly, you're asking whether children should choose their own hobbies. Well, …", "level": "advanced"}
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "speaking",
+    "category": "Giving opinions: strong",
+    "when": "Stating a clear, confident view",
+    "applies_to": ["part1", "part3"],
+    "items": [
+      {"phrase": "Without a doubt, …", "example": "Without a doubt, the living room is the main place where my family gathers every single evening.", "note": "from the teacher's model answers", "level": "core"},
+      {"phrase": "Absolutely, …", "example": "Absolutely, I love my hometown because it is where I grew up and made my best childhood memories.", "note": "a strong 'yes' to a Part 1 question", "level": "core"},
+      {"phrase": "I'm absolutely convinced that …", "example": "I'm absolutely convinced that learning a foreign language opens up far more job opportunities.", "level": "advanced"},
+      {"phrase": "I firmly believe (that) …", "example": "I firmly believe that children should spend more time outdoors than in front of screens.", "level": "core"},
+      {"phrase": "There's no question that …", "example": "There's no question that smartphones have changed the way friends keep in touch.", "level": "advanced"},
+      {"phrase": "Personally, I'm a big fan of …", "example": "Personally, I'm a big fan of old buildings because they give a city its character.", "level": "core"}
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "category": "Giving opinions: hedged",
+    "when": "Giving a softer, balanced opinion (very useful in Part 3, where extreme claims sound weak)",
+    "applies_to": ["part1", "part3"],
+    "items": [
+      {"phrase": "I would say (that) …", "example": "I would say it is a medium-sized city that is growing very fast because of new businesses.", "note": "from the teacher's model answers", "level": "core"},
+      {"phrase": "Generally speaking, …", "example": "Generally speaking, older generations prefer to stick to their routines rather than make spontaneous decisions.", "note": "from the teacher's model answers", "level": "core"},
+      {"phrase": "As far as I can tell, … / From what I have seen, …", "example": "From what I have seen, country people love outdoor activities like gardening and walking in nature.", "level": "core"},
+      {"phrase": "I tend to think (that) …", "example": "I tend to think that people read just as much as before, only on screens instead of paper.", "level": "advanced"},
+      {"phrase": "It depends on …", "pattern": "It (really) depends on + noun / whether …", "example": "It really depends on whether I prioritise comfort or style at that moment.", "level": "core"},
+      {"phrase": "I'm not entirely sure, but I'd imagine …", "example": "I'm not entirely sure, but I'd imagine most teenagers in my country spend at least three hours a day online.", "level": "advanced"},
+      {"phrase": "To some extent, … / Up to a point, …", "example": "To some extent, advertising helps us discover new products, but it also makes us buy things we don't need.", "level": "advanced"}
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "category": "Agreeing and disagreeing politely",
+    "when": "Responding to a statement or a view in a Part 3 question ('Some people say…, do you agree?')",
+    "applies_to": ["part3"],
+    "items": [
+      {"phrase": "I couldn't agree more.", "example": "I couldn't agree more. Children who read for pleasure usually have a much wider vocabulary.", "level": "core"},
+      {"phrase": "That's true to some extent, but …", "example": "That's true to some extent, but I think online friends can be just as supportive as real ones.", "level": "core"},
+      {"phrase": "I see what you mean, but …", "example": "I see what you mean, but tall buildings also save a lot of land in crowded cities.", "level": "core"},
+      {"phrase": "I'm not sure I'd go that far.", "example": "I'm not sure I'd go that far. Social media hasn't replaced face-to-face contact; it's just changed it.", "level": "advanced"},
+      {"phrase": "I'm afraid I see it differently.", "example": "I'm afraid I see it differently, because in my country young people actually value tradition a lot.", "level": "advanced"},
+      {"phrase": "I'd partly agree with that.", "example": "I'd partly agree with that. Money can buy comfort, but it can't buy close relationships.", "level": "core"}
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "speaking",
+    "category": "Giving reasons",
+    "when": "Explaining why: the second sentence of a Part 1 answer, the core of a Part 3 answer",
+    "applies_to": ["part1", "part2", "part3"],
+    "items": [
+      {"phrase": "mainly because … / largely because …", "example": "I prefer shopping online, mainly because I can compare prices in seconds.", "level": "core"},
+      {"phrase": "The main reason (for this) is (that) …", "example": "The main reason some people dislike international travel is the stress of being in an unfamiliar place.", "note": "from the teacher's model answers", "level": "core"},
+      {"phrase": "The thing is, …", "example": "The thing is, I work late most evenings, so I rarely have time to cook properly.", "note": "informal, very natural in Part 1", "level": "core"},
+      {"phrase": "This is probably due to …", "pattern": "due to + noun", "example": "This is probably due to the rapid growth of the population in big cities.", "level": "core"},
+      {"phrase": "…, which means (that) …", "example": "Land downtown is extremely expensive, which means developers have to build upward.", "note": "adds a result and shows a complex sentence", "level": "core"},
+      {"phrase": "What drives this is …", "example": "What drives this is mostly the pressure to look successful on social media.", "level": "advanced"},
+      {"phrase": "On top of that, … / Plus, …", "example": "On top of that, the marketing world changes so fast that there is always something new to learn.", "note": "adds a second reason; from the teacher's model answers", "level": "core"}
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "category": "Giving examples",
+    "when": "Supporting an opinion with a specific case (essential in Part 3)",
+    "applies_to": ["part1", "part3"],
+    "items": [
+      {"phrase": "For instance, … / For example, …", "example": "For instance, my grandparents always plan their days meticulously weeks in advance.", "note": "from the teacher's model answers", "level": "core"},
+      {"phrase": "Take … for example.", "example": "Take my younger brother, for example. He learned most of his English from video games.", "level": "core"},
+      {"phrase": "A good example of this is …", "example": "A good example of this is the old city centre in my hometown, which is now full of cafés and galleries.", "level": "core"},
+      {"phrase": "such as … / like …", "example": "Teenagers spend hours on apps such as TikTok and Instagram.", "level": "core"},
+      {"phrase": "I can think of a case where …", "example": "I can think of a case where a friend of mine moved abroad and made friends only through a sports club.", "level": "advanced"},
+      {"phrase": "To give you an idea, …", "example": "To give you an idea, a cup of coffee in the city centre costs almost twice as much as it did five years ago.", "level": "advanced"}
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "category": "Comparing past and present",
+    "when": "Questions about change: 'Is it different from the past?', 'How has … changed?', 'Did you … as a child?'",
+    "applies_to": ["part1", "part2", "part3"],
+    "items": [
+      {"phrase": "In the past, … whereas nowadays …", "example": "In the past, you had to live near someone to stay close, whereas nowadays social media keeps friendships alive across countries.", "level": "core"},
+      {"phrase": "used to + verb", "pattern": "I/People used to …, but now …", "example": "I used to go to the cinema every weekend, but now I mostly stream films at home.", "note": "past habits; don't say 'I am used to go'", "level": "core"},
+      {"phrase": "Back when I was a kid, …", "example": "Back when I was a kid, we spent the whole summer playing football in the street.", "level": "core"},
+      {"phrase": "Compared to … years ago, …", "example": "Compared to twenty years ago, people change jobs much more often.", "level": "core"},
+      {"phrase": "These days, … has become far more …", "example": "These days, online shopping has become far more common than going to physical stores.", "note": "present perfect for change up to now", "level": "core"},
+      {"phrase": "Things have changed dramatically since …", "example": "Things have changed dramatically since smartphones came along; nobody needs a wristwatch anymore.", "level": "advanced"},
+      {"phrase": "There's been a real shift towards …", "example": "There's been a real shift towards eco-friendly cars in the last few years.", "level": "advanced"}
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "speaking",
+    "category": "Talking about the future / speculating",
+    "when": "'Will … in the future?', 'How might … change?', imaginary situations; vary beyond 'will'",
+    "applies_to": ["part1", "part3"],
+    "items": [
+      {"phrase": "It's (highly) likely that … / … is likely to …", "example": "It's highly likely that most cars will be electric within twenty years.", "level": "core"},
+      {"phrase": "I'd imagine (that) …", "example": "I'd imagine that future buildings will be covered in plants to help clean the city air.", "level": "core"},
+      {"phrase": "There's a good chance that …", "example": "There's a good chance that robots will take over many routine jobs.", "level": "core"},
+      {"phrase": "might well / could well", "example": "Physical books might well become a luxury item one day.", "note": "'well' adds probability", "level": "advanced"},
+      {"phrase": "I can't see … happening (any time soon).", "example": "I can't see online classes replacing schools any time soon, because children need social contact.", "level": "advanced"},
+      {"phrase": "If …, I would … (second conditional)", "pattern": "If + past simple, would + verb", "example": "If I were to buy a car tomorrow, I would definitely choose a classic black one.", "note": "from the teacher's model answers", "level": "core"},
+      {"phrase": "In the long run, …", "example": "In the long run, working from home could change the way cities are designed.", "level": "advanced"},
+      {"phrase": "I'm planning to … / I'm hoping to … / I'd love to …", "example": "I'm hoping to move abroad for my master's degree in a couple of years.", "note": "personal plans (Part 1/2)", "level": "core"}
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "category": "Generalising",
+    "when": "Talking about people and society rather than only about yourself (Part 3)",
+    "applies_to": ["part3"],
+    "items": [
+      {"phrase": "On the whole, … / By and large, …", "example": "By and large, people in my country are very hospitable to guests.", "level": "core"},
+      {"phrase": "Most people tend to …", "example": "Most people tend to shop online for electronics but still buy food in local markets.", "level": "core"},
+      {"phrase": "A large number of people …", "example": "A large number of individuals are naturally night owls and work best late at night.", "note": "from the teacher's model answers", "level": "core"},
+      {"phrase": "the younger / older generation", "example": "The younger generation is much more comfortable making plans at the last minute.", "level": "core"},
+      {"phrase": "In my country, it's quite common to …", "example": "In my country, it's quite common to visit relatives every weekend.", "level": "core"},
+      {"phrase": "As a rule, …", "example": "As a rule, elderly people prefer face-to-face conversation to texting.", "level": "advanced"},
+      {"phrase": "More often than not, …", "example": "More often than not, children copy their parents' attitude to reading.", "level": "advanced"}
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "category": "Contrasting and showing the other side",
+    "when": "Adding a contrast in Part 1 (third sentence) or the alternative view in Part 3",
+    "applies_to": ["part1", "part2", "part3"],
+    "items": [
+      {"phrase": "However, …", "example": "However, I have learned to manage my time better to handle the pressure.", "note": "from the teacher's model answers", "level": "core"},
+      {"phrase": "On the other hand, …", "example": "On the other hand, older friends have a lot of life experience and can give you great advice.", "level": "core"},
+      {"phrase": "While … , …", "pattern": "While + clause, main clause", "example": "While video calls are helpful, they cannot replace real eye contact or body language.", "level": "core"},
+      {"phrase": "That said, … / Having said that, …", "example": "I love living in the city. Having said that, the traffic can be a nightmare.", "level": "advanced"},
+      {"phrase": "Even though …", "example": "Even though I love my city, I plan to move abroad soon for my studies.", "level": "core"},
+      {"phrase": "In contrast, …", "example": "In contrast, younger professionals often prefer high-rise apartments in the city centre.", "level": "core"},
+      {"phrase": "It's not that …, it's just that …", "example": "It's not that I dislike sport, it's just that I'd rather watch it than play it.", "level": "advanced"}
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "category": "Paraphrasing when you don't know a word",
+    "when": "You forget or don't know a word. Describe it instead of stopping (LR rewards paraphrase)",
+    "applies_to": ["part1", "part2", "part3"],
+    "items": [
+      {"phrase": "It's a kind of … / It's a sort of …", "example": "We stayed in a sort of small wooden house in the mountains, a bit like a cabin.", "level": "core"},
+      {"phrase": "the thing you use to …", "example": "I always carry a … oh, the thing you use to charge your phone without a socket, a power bank.", "level": "core"},
+      {"phrase": "I'm not sure what it's called in English, but …", "example": "I'm not sure what it's called in English, but it's a traditional sweet pastry we make for the spring holiday.", "level": "core"},
+      {"phrase": "What I mean is …", "example": "She's very… what I mean is, she always notices when someone in the room feels left out.", "level": "core"},
+      {"phrase": "someone who … / a place where …", "example": "My uncle is someone who repairs old clocks as a hobby.", "note": "relative clauses are the easiest paraphrase tool", "level": "core"},
+      {"phrase": "or rather, … / or to put it another way, …", "example": "It was a big building, or rather, a huge shopping complex with offices on top.", "level": "advanced"}
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "speaking",
+    "category": "Part 2: opening the talk",
+    "when": "The first 10–15 seconds of the long turn: name the topic and give background",
+    "applies_to": ["part2"],
+    "items": [
+      {"phrase": "I'd like to talk about …", "example": "I'd like to talk about a hiking trip I had to cancel at the last minute last spring.", "level": "core"},
+      {"phrase": "The person I'm going to describe is …", "example": "The person I'm going to describe is my aunt, who has an amazing green thumb.", "level": "core"},
+      {"phrase": "This happened about … ago, when …", "example": "This happened about two years ago, when I was in my final year at school.", "level": "core"},
+      {"phrase": "I've chosen … because …", "example": "I've chosen this place because it's a real hidden gem that most tourists never find.", "level": "core"},
+      {"phrase": "Let me start by telling you …", "example": "Let me start by telling you where this building is.", "level": "core"},
+      {"phrase": "There are quite a few … I could talk about, but the one that stands out is …", "example": "There are quite a few gifts I could talk about, but the one that really stands out is a watch my father gave me.", "level": "advanced"}
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "speaking",
+    "category": "Part 2: moving through the bullet points",
+    "when": "Signposting from one cue-card bullet to the next so the talk sounds organised",
+    "applies_to": ["part2"],
+    "items": [
+      {"phrase": "As for …, …", "pattern": "As for + bullet topic", "example": "As for what we did there, we mostly wandered around the old town and tried the street food.", "level": "core"},
+      {"phrase": "Moving on to …", "example": "Moving on to why I like it so much, it's mainly the peaceful atmosphere.", "level": "core"},
+      {"phrase": "When it comes to …, …", "example": "When it comes to what it looks like, it's a sleek glass tower that stands out against the sky.", "level": "core"},
+      {"phrase": "Another thing I remember is …", "example": "Another thing I remember is how cold it was when we left the house at the crack of dawn.", "note": "useful when you glance at your notes", "level": "core"},
+      {"phrase": "What made it special was …", "example": "What made it special was that the whole family was there for the first time in years.", "level": "core"},
+      {"phrase": "At first …, then …, and in the end …", "example": "At first we were annoyed, then we decided to play it by ear, and in the end we had a great day.", "note": "sequencing a story", "level": "core"},
+      {"phrase": "I should also mention that …", "example": "I should also mention that it's completely free to get in, which is quite rare nowadays.", "level": "advanced"}
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "speaking",
+    "category": "Part 2: closing and filling the time",
+    "when": "The last bullet (why / how you felt) and extending when you still have time",
+    "applies_to": ["part2"],
+    "items": [
+      {"phrase": "Looking back, …", "example": "Looking back, changing the plan was actually a blessing in disguise.", "level": "core"},
+      {"phrase": "The main reason I … is …", "example": "The main reason I like this place is that it lets me escape the hustle and bustle of the city.", "level": "core"},
+      {"phrase": "It made me realise (that) …", "example": "It made me realise that you don't need to spend a lot of money to have a memorable day.", "level": "core"},
+      {"phrase": "If I had the chance, I'd definitely …", "example": "If I had the chance, I'd definitely go back there and stay for at least a week.", "note": "adds a future/hypothetical angle to fill time", "level": "core"},
+      {"phrase": "Compared to how it was before, …", "example": "Compared to how it was ten years ago, the area is far livelier now.", "note": "a then-vs-now extension", "level": "core"},
+      {"phrase": "All in all, that's why …", "example": "All in all, that's why that morning will always stick in my mind.", "level": "core"},
+      {"phrase": "… will always have a special place in my heart.", "example": "That little café will always have a special place in my heart.", "level": "advanced"}
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "speaking",
+    "category": "Describing people",
+    "when": "Cue cards about a friend, family member, famous person, someone who helped you",
+    "applies_to": ["part2", "part3"],
+    "items": [
+      {"phrase": "He/She is the kind of person who …", "example": "She's the kind of person who always remembers your birthday and checks in when you're stressed.", "level": "core"},
+      {"phrase": "We hit it off straight away.", "example": "We met on the first day of primary school and hit it off straight away.", "note": "teacher's Topic 5 vocabulary", "level": "advanced"},
+      {"phrase": "easy-going / down-to-earth / outgoing / reliable", "example": "He's really down-to-earth. Even though he's successful, he never shows off.", "level": "core"},
+      {"phrase": "a shoulder to cry on", "example": "Whenever I had problems at home, she was always a shoulder to cry on.", "note": "teacher's Topic 5 vocabulary", "level": "advanced"},
+      {"phrase": "I really look up to him/her because …", "example": "I really look up to my grandfather because he built his business from nothing.", "level": "core"},
+      {"phrase": "in his/her (early/mid/late) thirties", "example": "She's in her late forties, quite tall, with short grey hair and a warm smile.", "level": "core"},
+      {"phrase": "We see eye to eye on most things.", "example": "We see eye to eye on most things, apart from football.", "note": "teacher's Topic 5 vocabulary", "level": "advanced"}
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "category": "Describing places",
+    "when": "Hometown, a place to visit, a building, a quiet or crowded place",
+    "applies_to": ["part1", "part2"],
+    "items": [
+      {"phrase": "It's located … / It's tucked away …", "example": "It's tucked away in a small side street behind the main square.", "level": "core"},
+      {"phrase": "a hidden gem", "example": "This little park is a real hidden gem; even many locals don't know about it.", "note": "teacher's Topic 1 vocabulary", "level": "advanced"},
+      {"phrase": "a relaxed / tranquil / lively atmosphere", "example": "The café has a really relaxed atmosphere, so I often go there to study.", "level": "core"},
+      {"phrase": "breathtaking views / picturesque scenery", "example": "From the top floor you get breathtaking views of the whole bay.", "note": "teacher's Topic 1 vocabulary", "level": "core"},
+      {"phrase": "to stand out from the crowd / to tower over", "example": "The new tower really stands out from the crowd because of its twisted shape.", "note": "teacher's Topic 2 vocabulary", "level": "advanced"},
+      {"phrase": "It's packed with … / It's always buzzing", "example": "On Friday nights the old town is always buzzing with tourists and street musicians.", "level": "core"},
+      {"phrase": "within walking distance of …", "example": "My flat is within walking distance of the sea, which is perfect in summer.", "level": "core"}
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "category": "Describing objects",
+    "when": "A gift, a piece of technology, something you own, something you saved for",
+    "applies_to": ["part1", "part2"],
+    "items": [
+      {"phrase": "It's made of … / It's about the size of …", "example": "It's made of dark leather and it's about the size of a paperback book.", "level": "core"},
+      {"phrase": "It comes in handy when …", "example": "My power bank really comes in handy when I'm travelling.", "level": "core"},
+      {"phrase": "I couldn't live without it.", "example": "Honestly, my noise-cancelling headphones are something I couldn't live without on public transport.", "level": "core"},
+      {"phrase": "It has sentimental value (for me).", "example": "It's not expensive, but it has huge sentimental value because it belonged to my grandmother.", "level": "advanced"},
+      {"phrase": "It was worth every penny.", "example": "It cost more than I expected, but it was worth every penny.", "level": "advanced"},
+      {"phrase": "sleek / sturdy / compact / user-friendly", "example": "It's a sleek, compact laptop that's really user-friendly.", "level": "core"}
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "speaking",
+    "category": "Describing experiences and events",
+    "when": "Telling a past story (narrative tenses): a trip, a problem, a plan that changed, an early morning",
+    "applies_to": ["part2"],
+    "items": [
+      {"phrase": "I'll never forget the moment when …", "example": "I'll never forget the moment when the sun came up over the mountains.", "level": "core"},
+      {"phrase": "We were just … when …", "pattern": "past continuous + when + past simple", "example": "We were just leaving the house when my friend called to cancel.", "level": "core"},
+      {"phrase": "I had never … before, so …", "pattern": "past perfect for earlier experience", "example": "I had never got up that early before, so I set three alarms.", "level": "core"},
+      {"phrase": "at the crack of dawn", "example": "We had to leave at the crack of dawn to catch the first flight.", "note": "teacher's Topic 3 vocabulary", "level": "advanced"},
+      {"phrase": "at the eleventh hour / at the last minute", "example": "The concert was cancelled at the eleventh hour because of the storm.", "note": "teacher's Topic 6 vocabulary", "level": "advanced"},
+      {"phrase": "It turned out (that) …", "example": "It turned out that the museum was closed on Mondays, so we had to change our plans.", "level": "core"},
+      {"phrase": "a once-in-a-lifetime experience", "example": "Seeing the northern lights was a once-in-a-lifetime experience.", "level": "advanced"}
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "category": "Describing feelings",
+    "when": "The 'how you felt' bullet; replace 'happy / sad / good'",
+    "applies_to": ["part2", "part1"],
+    "items": [
+      {"phrase": "thrilled / over the moon", "example": "When I found out I'd passed, I was absolutely over the moon.", "level": "core"},
+      {"phrase": "relieved", "example": "I was so relieved when the flight finally took off.", "level": "core"},
+      {"phrase": "a bit gutted / disappointed", "example": "I was a bit gutted at first, because I'd been looking forward to the trip for weeks.", "note": "'gutted' is informal British English", "level": "core"},
+      {"phrase": "It was a real weight off my shoulders.", "example": "Finishing that project was a real weight off my shoulders.", "level": "advanced"},
+      {"phrase": "I felt completely rejuvenated / refreshed", "example": "After a weekend in the mountains I felt completely rejuvenated.", "note": "teacher's Topic 3 vocabulary", "level": "advanced"},
+      {"phrase": "nervous / on edge / butterflies in my stomach", "example": "I had butterflies in my stomach before the interview.", "level": "core"},
+      {"phrase": "It made me feel really proud / appreciated", "example": "Her compliment made me feel really appreciated, because she rarely praises anyone.", "level": "core"}
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "category": "Likes and dislikes (beyond 'I like')",
+    "when": "Part 1 'Do you like…?' / 'What kind of … do you enjoy?' questions",
+    "applies_to": ["part1"],
+    "items": [
+      {"phrase": "I'm really into … / I'm a big fan of …", "example": "I'm really into science-fiction films, especially ones about space travel.", "level": "core"},
+      {"phrase": "I'm quite keen on …", "example": "I'm quite keen on cooking, although I only have time at weekends.", "level": "core"},
+      {"phrase": "… is right up my street.", "example": "Anything to do with history is right up my street.", "level": "advanced"},
+      {"phrase": "I can't get enough of …", "example": "I can't get enough of street food when I travel.", "level": "advanced"},
+      {"phrase": "I'm not really into … / … isn't really my thing.", "example": "Shopping malls aren't really my thing; I find them too noisy.", "level": "core"},
+      {"phrase": "I can't stand … / I'm not a big fan of …", "example": "I can't stand waiting in long queues, so I do most of my shopping online.", "level": "core"},
+      {"phrase": "I prefer … to … / I'd rather … than …", "pattern": "prefer + -ing/noun + to + -ing/noun; would rather + verb + than + verb", "example": "I'd rather read a book than watch TV in the evenings.", "level": "core"}
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "speaking",
+    "category": "Frequency and habits",
+    "when": "'How often do you…?', routines, habits",
+    "applies_to": ["part1"],
+    "items": [
+      {"phrase": "on a daily basis / every single day", "example": "I use online banking on a daily basis.", "note": "teacher's Part 1 vocabulary (Websites)", "level": "core"},
+      {"phrase": "once in a while / every now and then", "example": "I go to the cinema once in a while, maybe once every couple of months.", "level": "core"},
+      {"phrase": "hardly ever / rarely", "example": "I hardly ever wear a watch these days.", "level": "core"},
+      {"phrase": "whenever I get the chance", "example": "I visit the countryside whenever I get the chance.", "level": "core"},
+      {"phrase": "once in a blue moon", "example": "I only go to art galleries once in a blue moon.", "note": "= very rarely", "level": "advanced"},
+      {"phrase": "I make a point of …", "example": "I make a point of tidying my desk every Friday evening.", "level": "advanced"},
+      {"phrase": "It depends on the season / my schedule", "example": "It depends on my schedule, but usually two or three times a week.", "level": "core"}
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "speaking",
+    "category": "Idiomatic expressions (band 7+)",
+    "when": "Use 1–2 per part, naturally and accurately. A forced or misused idiom hurts more than it helps",
+    "applies_to": ["part1", "part2", "part3"],
+    "items": [
+      {"phrase": "to recharge my batteries", "example": "I go to my grandparents' village to recharge my batteries after exams.", "note": "teacher's Topic 1 vocabulary", "level": "advanced"},
+      {"phrase": "to escape the hustle and bustle", "example": "Parks let city dwellers escape the hustle and bustle for an hour.", "note": "teacher's Topic 1 vocabulary", "level": "advanced"},
+      {"phrase": "to lose track of time", "example": "When I'm reading a good novel, I completely lose track of time.", "note": "teacher's Topic 1 vocabulary", "level": "advanced"},
+      {"phrase": "to play it by ear", "example": "We didn't book anything; we just played it by ear.", "note": "teacher's Topic 6 vocabulary", "level": "advanced"},
+      {"phrase": "a blessing in disguise", "example": "Missing that train was a blessing in disguise, because I met an old friend at the station.", "level": "advanced"},
+      {"phrase": "to be up in the air", "example": "My summer plans are still up in the air.", "note": "teacher's Topic 6 vocabulary", "level": "advanced"},
+      {"phrase": "the early bird catches the worm", "example": "My dad always says the early bird catches the worm, so he starts work at six.", "note": "teacher's Topic 3 vocabulary", "level": "advanced"},
+      {"phrase": "to burn the candle at both ends", "example": "During exam season, many students burn the candle at both ends.", "note": "from the teacher's Part 3 model answers", "level": "advanced"},
+      {"phrase": "a double-edged sword", "example": "Social media is a double-edged sword: it connects us but also distracts us.", "note": "teacher's Part 1 vocabulary (History)", "level": "advanced"},
+      {"phrase": "to get on like a house on fire", "example": "My cousin and I got on like a house on fire from the very first day.", "note": "teacher's Topic 5 vocabulary", "level": "advanced"}
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "speaking",
+    "category": "Adding and concluding (Part 3 closers)",
+    "when": "Adding a point and closing a Part 3 answer in one short sentence",
+    "applies_to": ["part3"],
+    "items": [
+      {"phrase": "Additionally, … / Furthermore, …", "example": "Furthermore, keeping house plants can drastically improve the air quality inside an apartment.", "note": "from the teacher's model answers", "level": "core"},
+      {"phrase": "Ultimately, …", "example": "Ultimately, living in a new country helps people become more independent.", "note": "the teacher's most frequent closer", "level": "core"},
+      {"phrase": "Therefore, … / Consequently, …", "example": "Consequently, punctuality is almost always viewed as a positive trait.", "level": "core"},
+      {"phrase": "In short, …", "example": "In short, it's a rewarding hobby that benefits both your health and your wallet.", "level": "core"},
+      {"phrase": "So, all things considered, …", "example": "So, all things considered, I think the advantages outweigh the drawbacks.", "level": "advanced"},
+      {"phrase": "That's why I'd say …", "example": "That's why I'd say that face-to-face communication will never disappear.", "level": "core"}
+    ],
+    "source": "teacher"
+  }
+]

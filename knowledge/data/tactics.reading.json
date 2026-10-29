@@ -1,0 +1,700 @@
+[
+  {
+    "skill": "reading",
+    "type": "general",
+    "title": "Academic Reading: overall strategy",
+    "summary": "3 passages, 40 questions, 60 minutes with no extra transfer time. The passages get harder, so manage your time and never leave a blank.",
+    "rule": "60 minutes, no transfer time: about 20 minutes per passage, no blanks.",
+    "quick": {
+      "do": [
+        "Skim 2–3 min: title, first sentences, names, dates",
+        "Read instructions: word limit and answer form",
+        "Underline key words, scan for synonyms",
+        "Do in-order tasks first, matching tasks last"
+      ],
+      "avoid": [
+        "30 min on Passage 1 → rushed Passage 3",
+        "Options that repeat the passage's exact words",
+        "Your own knowledge instead of the passage"
+      ],
+      "remember": [
+        "Split time ~17 / 20 / 23 min; no transfer time",
+        "No penalty for wrong answers → guess every blank"
+      ]
+    },
+    "steps": [
+      "Split the hour as about 17 / 20 / 23 minutes for Passages 1 / 2 / 3. Passage 3 is the hardest and usually has more inference questions.",
+      "Skim the passage for 2–3 minutes: title, subtitle, the first sentence of each paragraph, names, dates and numbers. Write a 1–3 word note next to each paragraph.",
+      "Read the instructions for each question group: the word limit, the answer form (letters, words, Y/N/NG) and whether options can be used more than once.",
+      "Underline the key words in each question, especially names, numbers and capitalised words that cannot be paraphrased. Then scan for them or their synonyms.",
+      "Read the sentence before and after the place you find carefully, then answer. Most question groups follow the order of the passage.",
+      "Do the in-order tasks first (completion, TFNG, MCQ). Do the 'any order' tasks (matching information, matching features) last, when you already know the text.",
+      "With 1–2 minutes left for a passage, guess every empty answer and move on."
+    ],
+    "traps": [
+      "Spending 30+ minutes on Passage 1 and rushing Passage 3. Set a checkpoint: Passage 2 should start by minute 17–20.",
+      "Word matching: the option or sentence that repeats the passage's exact words is often the distractor. The real answer is usually a paraphrase.",
+      "Using your own knowledge instead of what the passage actually says.",
+      "On paper: forgetting that there is NO transfer time in Reading. Write answers on the answer sheet as you go."
+    ],
+    "tips": [
+      "Wrong answers lose no marks, so never leave a blank.",
+      "Copied words must be spelled exactly as in the passage. British or American spelling is fine, but a misspelled word is wrong.",
+      "Respect the word limit: 'NO MORE THAN TWO WORDS' means one or two words. A hyphenated word counts as one word, and a number in digits counts as a number.",
+      "For TFNG / YNNG write the form the instructions ask for. Writing TRUE in a YES/NO/NOT GIVEN task is marked wrong.",
+      "Rough targets: 30/40 ≈ band 7.0, 27 ≈ 6.5, 23 ≈ 6.0. Aim for 1.5 minutes per question.",
+      "Computer test: use the highlight and notes tools on key words (the app's reading screen also supports highlighting).",
+      "After a test, check every mistake against an explanation (the teacher used ieltsdeal.com): find the proving sentence and note the paraphrase you missed."
+    ],
+    "example": "Illustrative: Question key word 'elderly' → in the passage look for 'older people' / 'pensioners' / 'over 65', not the word 'elderly' itself.",
+    "language": [
+      "Paraphrase pairs: rose ↔ increased / climbed; not compulsory ↔ optional; cheap ↔ inexpensive / low-cost; began ↔ originated / dates back to",
+      "Limiting words to notice: only, all, always, never, most, some, the first, mainly"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "reading",
+    "type": "tfng",
+    "title": "True / False / Not Given",
+    "summary": "Decide whether each statement agrees with the FACTS in the passage, contradicts them, or is not covered.",
+    "rule": "FALSE = the passage says the opposite; NOT GIVEN = it says nothing about it.",
+    "quick": {
+      "do": [
+        "Underline key words + qualifiers (all, only, most)",
+        "Find the place; answers follow passage order",
+        "Compare the statement idea by idea",
+        "F or NG? A sentence makes it impossible → F"
+      ],
+      "avoid": [
+        "'Some / many' does not confirm 'all / most'",
+        "A comparison the passage never makes → NG",
+        "Real-world knowledge: not in the passage → NG"
+      ],
+      "remember": [
+        "Write TRUE / FALSE / NOT GIVEN, never YES / NO"
+      ]
+    },
+    "steps": [
+      "Read the statement and underline the key words plus any qualifier (all, only, always, more than, first, most).",
+      "Scan for the part of the passage that covers this topic. The answers follow passage order, so Q5 is between Q4 and Q6.",
+      "Read that sentence (and the ones around it) carefully and compare it with the statement idea by idea.",
+      "TRUE = the passage says the same thing in other words. FALSE = the passage says the opposite (a direct contradiction). NOT GIVEN = the passage gives no information about this specific claim.",
+      "If you are choosing between FALSE and NOT GIVEN, ask: 'Can I point to a sentence that makes this statement impossible?' If yes, FALSE. If not, NOT GIVEN."
+    ],
+    "traps": [
+      "Qualifiers: a passage saying 'many' or 'some' does not confirm 'all' or 'most'. 'One of the first' is not 'the first'.",
+      "Comparisons: the statement says X is bigger / older / more popular, but the passage mentions both and never compares them → NOT GIVEN.",
+      "Partial match: the topic is in the passage but one detail (a reason, a date, a cause) is not → NOT GIVEN.",
+      "Using your own knowledge: even if the statement is true in real life, if the passage doesn't say it, it is NOT GIVEN.",
+      "Same words, different meaning: the statement reuses passage words but changes the subject, time or degree."
+    ],
+    "tips": [
+      "Never write YES / NO here. Use TRUE / FALSE / NOT GIVEN (or T / F / NG if allowed).",
+      "If you can't find the information quickly, it is often NOT GIVEN. Mark it, move on, and come back if time allows.",
+      "Usually there is at least one of each answer in a set, but don't rely on that pattern."
+    ],
+    "example": "Statement: 'Children must go to the school where they are registered.' Passage: 'The law says that parents must ensure that their child regularly attends the school where he/she is registered.' must go ↔ must ensure … attends → TRUE.",
+    "language": [
+      "Contradiction signals (often FALSE): however, in fact, contrary to, rather than, not until, no longer, it was later shown",
+      "Hedging that changes the claim: may, might, is thought to, it is possible that, some experts suggest"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "reading",
+    "type": "ynng",
+    "title": "Yes / No / Not Given",
+    "summary": "Decide whether each statement agrees with the WRITER'S views or claims, contradicts them, or is not covered.",
+    "rule": "YES / NO = the writer's own view; no view on this exact point = NOT GIVEN.",
+    "quick": {
+      "do": [
+        "Underline the opinion words and qualifiers",
+        "Find the paragraph; answers follow passage order",
+        "Separate the writer's view from reported views",
+        "Agrees = YES, disagrees = NO, no opinion = NG"
+      ],
+      "avoid": [
+        "'Critics claim X' ≠ the writer believes X",
+        "'One factor' ≠ 'the main reason'",
+        "A fact mentioned ≠ the writer's opinion"
+      ],
+      "remember": [
+        "Write YES / NO / NOT GIVEN, never TRUE / FALSE"
+      ]
+    },
+    "steps": [
+      "Underline the opinion part of the statement (should, is wrong to, is the best way, is overrated) and any qualifier.",
+      "Find the paragraph where the writer discusses this point. The answers follow passage order.",
+      "Separate the writer's own view from the views the writer only reports ('Some critics argue…', 'It is widely believed…').",
+      "YES = the writer agrees. NO = the writer clearly disagrees or says the opposite. NOT GIVEN = the writer gives no opinion on this exact point."
+    ],
+    "traps": [
+      "Reported views: 'Many people claim X' does not mean the writer believes X. Look for the writer's own reaction (however, but, this is mistaken).",
+      "Degree: the writer thinks something is 'one factor', while the statement says it is 'the main reason'.",
+      "A fact being mentioned does not mean the writer has an opinion about it.",
+      "Writing TRUE / FALSE instead of YES / NO is marked wrong."
+    ],
+    "tips": [
+      "Use the exact form the instructions ask for: YES / NO / NOT GIVEN (the course answer keys use Y / N / NG).",
+      "This task appears most often with Passage 3 argument texts. Read the first and last paragraphs to get the writer's overall position."
+    ],
+    "example": "Statement: 'Forsythe's findings contradicted previous beliefs on the function of fractals in art.' The passage describes fractals in art and Forsythe's work, but never says his findings contradicted earlier beliefs → NOT GIVEN.",
+    "language": [
+      "Writer's stance: I would argue, it is clear that, undoubtedly, admittedly, surely, it is a mistake to, this is unconvincing",
+      "Reported (not the writer's) views: critics claim, it is often said, according to, some believe"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "reading",
+    "type": "matching_headings",
+    "title": "Matching headings",
+    "summary": "Choose the heading that summarises the MAIN IDEA of each paragraph or section. There are more headings than paragraphs.",
+    "rule": "Match the heading to the whole paragraph's main idea, not to one detail.",
+    "quick": {
+      "do": [
+        "Read all headings; underline each key idea",
+        "Cross out the heading used in the example",
+        "Read first 1–2 and last sentence → main idea",
+        "Do easy paragraphs first, cross off used ones"
+      ],
+      "avoid": [
+        "A heading that repeats a word from the paragraph",
+        "A heading that fits only one detail",
+        "Similar headings: 'causes' vs 'effects'"
+      ],
+      "remember": [
+        "Not in order; each heading used once",
+        "Do this task first: it maps the text"
+      ]
+    },
+    "steps": [
+      "Read all the headings first and underline the key idea in each (e.g. 'reasons for…', 'a failed attempt', 'future applications').",
+      "Cross out any heading used in the example.",
+      "For each paragraph, read the first one or two sentences and the last sentence, and decide its main idea in your own words.",
+      "Choose the heading that matches that main idea. Then read the whole paragraph quickly to confirm it covers the paragraph, not one sentence.",
+      "Do the easy paragraphs first. Cross out used headings, then decide the difficult ones from what is left."
+    ],
+    "traps": [
+      "Word-matching trap: a heading that repeats a word from the paragraph is often wrong. Match the meaning, not the vocabulary.",
+      "Detail vs main idea: a heading that fits one example or detail in the paragraph is not the answer.",
+      "Two similar headings: check the exact focus, e.g. 'causes of' vs 'effects of', 'past' vs 'current'.",
+      "The topic sentence is not always first. A paragraph can start with background and turn at 'However…'."
+    ],
+    "tips": [
+      "Do this task before the other questions on the passage. It gives you a map of the text.",
+      "Each heading is normally used only once.",
+      "Answers are not in order. Write the roman numerals carefully (iv ≠ vi)."
+    ],
+    "example": "Illustrative: A paragraph explains how researchers finally identified who built the moai statues. The heading 'ii' (a definite answer about the statues' origin) matches the main idea, while a heading about statue size only matches one detail.",
+    "language": [
+      "Turn signals where the main idea often appears: however, but, yet, in fact, the key point is",
+      "Paragraph-function words in headings: reasons, consequences, comparison, a solution, a challenge, a turning point, an unexpected finding"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "reading",
+    "type": "matching_information",
+    "title": "Matching information (which paragraph contains…)",
+    "summary": "Find which paragraph contains a specific piece of information, such as an example, a reason, a comparison or a reference to something.",
+    "rule": "Find the paragraph with that exact TYPE of info: example, reason, figure…",
+    "quick": {
+      "do": [
+        "Check: can a letter be used more than once?",
+        "Underline the info type + the topic",
+        "Do this task last, after the others",
+        "Scan likely paragraphs for a paraphrase"
+      ],
+      "avoid": [
+        "Expecting passage order: answers are random",
+        "Reading for main ideas: it's often one sentence",
+        "Topic is there, but not the type asked for"
+      ],
+      "remember": [
+        "'a figure' → numbers; 'a person' → names"
+      ]
+    },
+    "steps": [
+      "Read the instructions: can a letter be used more than once? (Often 'NB You may use any letter more than once'.)",
+      "Underline the TYPE of information (an example of, a description of, a reason for, a comparison between, a reference to) and the topic.",
+      "Leave this task until after the other tasks on the passage, so you already know roughly where things are.",
+      "Use your paragraph notes to guess the likely paragraph, then scan it for a paraphrase of the topic and check that the type matches (for example, it really is an example, not a definition).",
+      "Answer the easiest ones first, guess the rest."
+    ],
+    "traps": [
+      "Answers are NOT in passage order, and some paragraphs may have no answer.",
+      "The detail is often one sentence in the middle of a paragraph, not its main idea. Don't use heading-style reading here.",
+      "A paragraph can mention the topic without giving the requested type (it mentions costs but gives no 'estimate of costs')."
+    ],
+    "tips": [
+      "Watch for specific words in the question: 'a figure / statistic' → look for numbers; 'a named person' → look for names; 'a historical reference' → look for dates.",
+      "This is one of the most frequent reading tasks in the practice tests. Train scanning for paraphrases."
+    ],
+    "example": "Illustrative: 'a reference to the cost of a project' → look for figures with $ / million, or words like expense, budget, funding.",
+    "language": [
+      "Type words: example (for instance, such as), reason (because, due to, as a result of), comparison (whereas, unlike, compared with), prediction (will, is likely to, in future)"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "reading",
+    "type": "matching_features",
+    "title": "Matching features (people / theories / places / dates)",
+    "summary": "Match statements or findings to the person, group, place or time they belong to.",
+    "rule": "Match each statement to the person whose words say the same thing.",
+    "quick": {
+      "do": [
+        "Highlight every name in the passage first",
+        "Read what each person found or claimed",
+        "Underline each statement's key idea, then match",
+        "Check: options may be reused or not used"
+      ],
+      "avoid": [
+        "Expecting passage order: statements are random",
+        "Missing later mentions (surname, he / she)",
+        "Choosing a nearby name, not who made the claim"
+      ],
+      "remember": []
+    },
+    "steps": [
+      "Look at the list of features (usually names) and find and highlight each one in the passage. Note that a name can appear more than once.",
+      "Read what the passage says next to each name: their finding, claim or opinion.",
+      "Read each statement, underline its key idea, and match it to the person whose words say the same thing in other words.",
+      "Check the instructions: options may be used more than once, and some may not be used."
+    ],
+    "traps": [
+      "Statements are in random order, not in passage order.",
+      "Surnames only: after the first mention, a person is usually referred to by surname or by 'he / she / the researcher'. Follow the pronouns.",
+      "Two people discussing the same topic: check who actually made the claim, not who is mentioned nearby."
+    ],
+    "tips": [
+      "Highlighting all the names first saves a lot of time.",
+      "If one person appears in only one place, match those statements first. It narrows down the rest."
+    ],
+    "example": "Illustrative: Statement: 'Animal behaviour can be affected by artificial light.' Find the researcher who says that 'street lighting disrupts the patterns of nocturnal species'. That is the paraphrase.",
+    "language": [
+      "Reporting verbs: argues, claims, suggests, found, demonstrated, proposed, questioned, rejected"
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "reading",
+    "type": "matching_sentence_endings",
+    "title": "Matching sentence endings",
+    "summary": "Join each sentence beginning to the ending that makes a grammatical sentence that is TRUE according to the passage.",
+    "rule": "The ending must fit the grammar AND say what the passage says.",
+    "quick": {
+      "do": [
+        "Underline key words in each beginning",
+        "Find each beginning in the passage, in order",
+        "Predict the ending, then find the same meaning",
+        "Check grammar: singular/plural, verb form"
+      ],
+      "avoid": [
+        "Endings that fit grammatically but not the text",
+        "Extra endings that link to the wrong subject",
+        "Endings true in general, not in the passage"
+      ],
+      "remember": [
+        "Each ending used once; beginnings in order"
+      ]
+    },
+    "steps": [
+      "Read the sentence beginnings and underline their key words. They follow passage order.",
+      "Scan the passage for each beginning and read what the passage says about it.",
+      "Predict the ending in your own words, then find the option with the same meaning.",
+      "Check the grammar: does the ending fit the beginning (singular/plural, verb form, a clause vs a noun phrase)?"
+    ],
+    "traps": [
+      "Several endings may be grammatically possible but only one is correct according to the passage.",
+      "Extra endings are distractors that mention passage topics but connect them to the wrong subject.",
+      "Choosing an ending that is true in general but is not what the passage says about this beginning."
+    ],
+    "tips": [
+      "Use grammar to eliminate options first, then decide on meaning.",
+      "Each ending is used only once. Cross off used ones."
+    ],
+    "example": "Illustrative: 'Early experiments with the device failed because…' → only endings that start with a reason clause fit (e.g. 'the materials could not withstand high temperatures'). Then check which reason the passage gives.",
+    "language": [
+      "Cause/effect links in the passage: because, owing to, which led to, as a result, consequently"
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "reading",
+    "type": "summary_completion",
+    "title": "Summary completion",
+    "summary": "Complete a summary of part of the passage, either with words from the passage or with options from a word box.",
+    "rule": "Find the summary's section, then fill the gaps in order by meaning.",
+    "quick": {
+      "do": [
+        "Check: words from the passage or a box (A–L)?",
+        "Use title + first sentence to find the section",
+        "Predict word type and singular / plural",
+        "Re-read the finished sentence to check"
+      ],
+      "avoid": [
+        "Box: words copied from the passage are often traps",
+        "Changing the form of a word you copy",
+        "Breaking the word limit or misspelling"
+      ],
+      "remember": [
+        "Box = match meaning; passage = copy exact words"
+      ]
+    },
+    "steps": [
+      "Check the instructions: words FROM THE PASSAGE (with a word limit) or a box of options (A–L)?",
+      "Read the summary title and the first sentence to find which section of the passage it covers. A summary usually covers one section, sometimes the whole passage.",
+      "For each gap, predict the part of speech (noun / adjective / verb form / number) and whether a noun should be singular or plural.",
+      "Find the start of the section and work forward. The gaps are usually in passage order.",
+      "Box version: match the meaning, since the options are paraphrases. Passage version: copy the exact word(s).",
+      "Read the completed sentence again to check grammar and meaning."
+    ],
+    "traps": [
+      "Word box: several options fit grammatically. Only one has the meaning the passage gives. Distractors may be words that appear in the passage.",
+      "Passage version: changing the word form (writing 'develop' when the passage has 'development'). Copy the exact form that fits.",
+      "Breaking the word limit or adding words that are already printed around the gap.",
+      "Misspelling a copied word. It is right there in the passage, so check it letter by letter."
+    ],
+    "tips": [
+      "Articles and adjectives before the gap help: 'an ____' → word starting with a vowel sound; 'many ____' → plural noun.",
+      "In the practice tests this task appears mostly in Passage 3, so the paraphrasing can be heavy."
+    ],
+    "example": "Summary: 'Zebras tend to live together in small units, which experts call ____.' Passage: '…tracking zebra groups, officially known as harems…' small units ↔ groups, experts call ↔ officially known as → harems.",
+    "language": [
+      "Grammar clues: a/an + singular noun; many/several/a number of + plural noun; to + base verb; the most + adjective"
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "reading",
+    "type": "note_completion",
+    "title": "Note completion",
+    "summary": "Fill gaps in notes about the passage with words copied from it, within the word limit.",
+    "rule": "Copy the exact word(s) from the passage, within the word limit.",
+    "quick": {
+      "do": [
+        "Read the word limit",
+        "Use the note headings to find the section",
+        "Predict the answer type (number, name, noun)",
+        "Scan in order, copy exactly, re-read the note"
+      ],
+      "avoid": [
+        "Writing a synonym instead of the passage word",
+        "Too many words: pick the key noun",
+        "Spelling mistakes when copying"
+      ],
+      "remember": [
+        "Answers are usually nouns, in passage order"
+      ]
+    },
+    "steps": [
+      "Read the word limit, e.g. 'ONE WORD ONLY' or 'NO MORE THAN TWO WORDS AND/OR A NUMBER'.",
+      "Use the note headings to find the relevant section of the passage.",
+      "Predict the type of each answer (a number, a name, a plural noun, a material, a place).",
+      "Scan for the key words around each gap. Answers are usually in passage order.",
+      "Copy the word(s) exactly and check that the note reads correctly."
+    ],
+    "traps": [
+      "Writing a synonym instead of the passage word. The answer must come from the passage.",
+      "Writing too many words because the passage phrase is long. Pick the key noun.",
+      "Spelling errors in copied words."
+    ],
+    "tips": [
+      "Notes are short, so the grammar is often reduced. Rely on meaning and word type more than on full-sentence grammar.",
+      "Answers are usually nouns."
+    ],
+    "example": "Illustrative: Note: 'Used cheap ____ to build the walls' (ONE WORD). Passage: 'the walls were made of inexpensive clay' → clay (cheap ↔ inexpensive).",
+    "language": [
+      "Paraphrase pairs to expect: build ↔ construct, cheap ↔ inexpensive, used for ↔ served as, made of ↔ consisted of"
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "reading",
+    "type": "sentence_completion",
+    "title": "Sentence completion",
+    "summary": "Complete sentences about the passage using words copied from it.",
+    "rule": "Copy the passage word(s) that complete the sentence correctly.",
+    "quick": {
+      "do": [
+        "Check the word limit",
+        "Underline key words, predict the word type",
+        "Scan for the paraphrase (in passage order)",
+        "Copy the exact word(s) and re-read"
+      ],
+      "avoid": [
+        "Wrong word form (adjective instead of noun)",
+        "Going over the word limit",
+        "A nearby word that doesn't complete the meaning"
+      ],
+      "remember": [
+        "British or American spelling: both accepted"
+      ]
+    },
+    "steps": [
+      "Check the word limit and whether the answer must come from the passage.",
+      "Underline the key words in the sentence and predict the type of word needed.",
+      "Scan for the paraphrase of the sentence. Questions follow passage order.",
+      "Copy the exact word(s) that complete the sentence grammatically and with the same meaning."
+    ],
+    "traps": [
+      "Wrong word form: the gap needs a noun but you copied the adjective or verb from the same phrase.",
+      "Exceeding the limit: 'NO MORE THAN TWO WORDS' → 'the new modern facility' is wrong.",
+      "Choosing a nearby word instead of the one that really completes the meaning."
+    ],
+    "tips": [
+      "Answers are usually single nouns or short noun phrases (in a course Unit 4 passage: transformation, young age, optimism, skills, negative emotions).",
+      "If the passage uses British and American spellings, either is accepted (authorisation / authorization)."
+    ],
+    "example": "Sentence: 'Staff need ____ to enter restricted areas.' Passage: 'Do not enter restricted areas without authorization.' → authorisation / authorization.",
+    "language": [
+      "Negative to positive paraphrase: 'not without X' ↔ 'need X'; 'prevented' ↔ 'did not allow'"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "reading",
+    "type": "table_completion",
+    "title": "Table completion",
+    "summary": "Fill gaps in a table that organises information from the passage.",
+    "rule": "Each gap needs the same type of word as the rest of its column.",
+    "quick": {
+      "do": [
+        "Read the column and row headings",
+        "Check the filled cells in the same column",
+        "Find the section; work through it in order",
+        "Copy the exact words within the limit"
+      ],
+      "avoid": [
+        "Following rows when the text goes by columns",
+        "Repeating words already in the heading"
+      ],
+      "remember": [
+        "Usually 1–2 words; numbers in digits are fine"
+      ]
+    },
+    "steps": [
+      "Read the column and row headings. They tell you what kind of information each gap needs.",
+      "Look at the completed cells in the same column. Your answer should be the same type (a date, a material, a use).",
+      "Find the section of the passage, usually one section read in order, row by row.",
+      "Copy the exact words within the word limit."
+    ],
+    "traps": [
+      "Reading the table in the wrong direction. Check whether it follows rows or columns as the passage goes.",
+      "Repeating information already in the heading (e.g. writing 'year 1850' when the column is 'Year')."
+    ],
+    "tips": [
+      "Short answers: tables rarely need more than one or two words.",
+      "Numbers can be written in digits."
+    ],
+    "example": "Illustrative: Column 'Advantages', row 'Bamboo', other cells: 'lightweight', 'durable' → the gap is an adjective describing a material's strength, e.g. 'flexible'.",
+    "language": [],
+    "source": "standard"
+  },
+  {
+    "skill": "reading",
+    "type": "flowchart_completion",
+    "title": "Flow-chart completion",
+    "summary": "Complete the stages of a process or sequence of events described in the passage.",
+    "rule": "Follow the real time order of the process, not the sentence order.",
+    "quick": {
+      "do": [
+        "Follow the arrows: what happens first, next, last",
+        "Find the paragraph(s) that describe the process",
+        "Predict each box: a noun or a verb form",
+        "Match boxes in order and copy exact words"
+      ],
+      "avoid": [
+        "'Before this…': text order ≠ real order",
+        "Mixing up the steps before and after the gap"
+      ],
+      "remember": []
+    },
+    "steps": [
+      "Follow the arrows and understand the sequence before reading. What happens first, next and last?",
+      "Find the paragraph that describes the process (often one or two paragraphs).",
+      "Predict the word type for each box. Steps are often a noun (a material, a tool) or a verb in a fixed form.",
+      "Match each box to the passage in order and copy the exact words."
+    ],
+    "traps": [
+      "The passage may describe the steps in a different order than they happen (e.g. 'Before this, …'). Follow the time words, not the sentence order.",
+      "Mixing up the step before and after the gap."
+    ],
+    "tips": [
+      "Sequence words in the passage locate each stage quickly."
+    ],
+    "example": "Illustrative: Box: 'leaves are ____ in the sun' → passage: 'the leaves are then left to dry outdoors' → dried / dry (check which form fits the box).",
+    "language": [
+      "Sequence words: first, initially, then, next, after that, once, subsequently, before this, finally"
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "reading",
+    "type": "diagram_labelling",
+    "title": "Diagram labelling",
+    "summary": "Label the parts of a machine, structure or process shown in a diagram, using words from the passage.",
+    "rule": "Use the labelled parts as landmarks; copy the noun that names each part.",
+    "quick": {
+      "do": [
+        "Study the diagram: existing labels and gaps",
+        "Find the short section that describes it",
+        "Follow the description in order from landmarks",
+        "Copy the part's name within the word limit"
+      ],
+      "avoid": [
+        "Ignoring position words (above, beneath)",
+        "Writing a description instead of a name"
+      ],
+      "remember": [
+        "Answers are nearly always nouns, in order"
+      ]
+    },
+    "steps": [
+      "Study the diagram: identify what is already labelled and where the gaps are.",
+      "Find the paragraph(s) that describe the object. It is usually a short section.",
+      "Use the labelled parts as landmarks and follow the description in order (top to bottom, inside to outside, start to end).",
+      "Copy the noun(s) that name each part, within the word limit."
+    ],
+    "traps": [
+      "Labelling the wrong part because you ignored a position word (above, beneath, attached to).",
+      "Writing a description instead of the name of the part."
+    ],
+    "tips": [
+      "Answers are nearly always nouns copied from the text, in the order of the description."
+    ],
+    "example": "Illustrative: a cross-section of a well with one label missing at the bottom. The text says '…a flight of steps leads down to a pool at the base…'. Use the labelled steps as a landmark, so the bottom label is 'pool'.",
+    "language": [
+      "Position words: above, below, beneath, at the base of, on top of, attached to, inside, surrounding, connected to"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "reading",
+    "type": "mcq",
+    "title": "Multiple choice (one answer)",
+    "summary": "Choose the one option (A–D) that matches what the passage says.",
+    "rule": "Answer in your own words first, then pick the option that paraphrases it.",
+    "quick": {
+      "do": [
+        "Read the stem only; underline its key words",
+        "Find the answer place (in passage order)",
+        "Form your own answer",
+        "Check every option; eliminate the wrong ones"
+      ],
+      "avoid": [
+        "Options that copy passage words, change meaning",
+        "True options that don't answer this question",
+        "Extreme words (always, only) vs a cautious text"
+      ],
+      "remember": []
+    },
+    "steps": [
+      "Read the question stem only (not the options yet) and underline its key words.",
+      "Find the part of the passage that answers the stem. Questions follow passage order.",
+      "Read that part carefully and form your own answer.",
+      "Compare EVERY option with the text. Eliminate those that are false, not mentioned, or answer a different question.",
+      "Choose the option that paraphrases the passage's meaning."
+    ],
+    "traps": [
+      "Options that copy passage words but change the meaning (wrong subject, wrong time, opposite direction).",
+      "An option that is true according to the passage but doesn't answer this question.",
+      "Extreme options (always, completely, the only) when the passage is more cautious.",
+      "Last question of a set may ask about the whole passage ('the best title', 'the writer's purpose'). Think of the overall message."
+    ],
+    "tips": [
+      "In the practice tests most MCQs are in Passage 3. Expect inference and the writer's purpose.",
+      "If two options remain, go back to the text and find the exact words that rule one out."
+    ],
+    "example": "Illustrative: Q: 'Why did the project fail?' Option A repeats the passage words 'lack of funding', but the passage says funding was 'never a problem'. The real reason is a paraphrase in option C.",
+    "language": [
+      "Purpose questions: to illustrate, to challenge, to explain, to compare, to argue against",
+      "Turn signals near the answer: but, however, although, in reality, contrary to"
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "reading",
+    "type": "multi_select",
+    "title": "Choose TWO / THREE letters",
+    "summary": "Choose two or three correct options from a list. Each correct letter scores one mark.",
+    "rule": "Choose only the options the passage clearly supports for THIS question.",
+    "quick": {
+      "do": [
+        "Check how many letters and what is asked",
+        "Find the paragraph(s) in the passage",
+        "Mark each option true / false / not mentioned",
+        "Pick only the clearly supported ones"
+      ],
+      "avoid": [
+        "Mentioned but wrong kind (disadvantage ≠ advantage)",
+        "True in real life but not in the passage"
+      ],
+      "remember": [
+        "Any order; each letter = 1 mark",
+        "Never write more letters than asked"
+      ]
+    },
+    "steps": [
+      "Check how many letters to choose and what the question asks for (which TWO advantages / which TWO statements are true).",
+      "Locate the part of the passage. It is often one paragraph, sometimes spread over several.",
+      "Check each option against the text and mark it true, false or not mentioned.",
+      "Pick only the options the passage clearly supports."
+    ],
+    "traps": [
+      "Options that are mentioned but are not what the question asks (a disadvantage when it asks for an advantage).",
+      "Options that are true in the real world but not stated in the passage."
+    ],
+    "tips": [
+      "The letters can be written in either order.",
+      "Each letter is marked separately. If you are sure of one, still guess the other: there is no penalty.",
+      "Never write more letters than asked."
+    ],
+    "example": "Illustrative: 'Which TWO benefits of the scheme are mentioned?' If the passage lists costs, safety and speed, but says safety 'has not yet improved', then safety is not a benefit.",
+    "language": [],
+    "source": "standard"
+  },
+  {
+    "skill": "reading",
+    "type": "short_answer",
+    "title": "Short-answer questions",
+    "summary": "Answer wh-questions about the passage with a few words copied from it.",
+    "rule": "The question word tells you the answer type; copy only those words.",
+    "quick": {
+      "do": [
+        "Read the word limit",
+        "Underline the question word (what, how many…)",
+        "Scan for paraphrased key words, in order",
+        "Write only the answer words, copied exactly"
+      ],
+      "avoid": [
+        "Answering in a full sentence",
+        "Too many words for the limit",
+        "'Which TWO…': give both, one per box"
+      ],
+      "remember": [
+        "Numbers and dates can be written in digits"
+      ]
+    },
+    "steps": [
+      "Read the word limit.",
+      "Underline the question word (what, which, where, how many, who). It tells you the answer type.",
+      "Scan for the paraphrased key words. The answers follow passage order.",
+      "Write only the words that answer the question, copied exactly."
+    ],
+    "traps": [
+      "Answering in a full sentence. Just give the words.",
+      "Writing an answer that is correct but too long for the limit.",
+      "'Which TWO…' questions in this format need both items, one in each box."
+    ],
+    "tips": [
+      "'How many / how long / when' → a number or date, which can be written in digits."
+    ],
+    "example": "Illustrative: Q: 'What material was used for the roof?' (ONE WORD) Passage: 'the roof was covered in locally produced slate' → slate.",
+    "language": [],
+    "source": "standard"
+  }
+]

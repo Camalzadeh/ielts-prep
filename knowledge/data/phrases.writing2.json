@@ -1,0 +1,1737 @@
+[
+  {
+    "skill": "writing2",
+    "category": "Introduction: paraphrasing the topic",
+    "when": "Sentence 1 of the introduction: rewrite the topic statement in your own words using synonyms",
+    "applies_to": [
+      "opinion",
+      "discussion",
+      "adv_disadv",
+      "problem_solution",
+      "cause_effect",
+      "direct_question",
+      "outweigh",
+      "positive_negative"
+    ],
+    "items": [
+      {
+        "phrase": "In today's world, many people choose to ... instead of ...",
+        "example": "In today's world, many people choose to focus on earning a high salary instead of finding a job they truly love.",
+        "level": "core"
+      },
+      {
+        "phrase": "These days, many ... / Nowadays, ...",
+        "example": "These days, many parents provide their children with a vast array of playthings, ranging from creative tools and puzzles to advanced technological gadgets.",
+        "level": "core"
+      },
+      {
+        "phrase": "Nowadays, the increasing popularity of ... has led to ...",
+        "example": "Nowadays, the increasing popularity of e-books has led to a decline in the use of traditional paper books.",
+        "level": "core"
+      },
+      {
+        "phrase": "An increasing number of ... are ...",
+        "example": "An increasing number of skilled professionals, such as school teachers and medical doctors, are leaving developing nations to work in richer countries.",
+        "note": "Teacher's cause/solution template. Use 'An increasing amount of' with uncountable nouns.",
+        "level": "core"
+      },
+      {
+        "phrase": "An increasing amount of ... is severely affecting ...",
+        "example": "An increasing amount of noise pollution is severely affecting public spaces in modern cities.",
+        "level": "core"
+      },
+      {
+        "phrase": "All over the world, ... has become much more common.",
+        "example": "All over the world, raising children in single-parent families has become much more common.",
+        "level": "core"
+      },
+      {
+        "phrase": "In many countries around the world, the number of ... is increasing rapidly.",
+        "example": "In many countries around the world, the number of people who are overweight is increasing rapidly.",
+        "level": "core"
+      },
+      {
+        "phrase": "It is undeniably true that ...",
+        "example": "It is undeniably true that human beings are throwing away more and more plastic waste into the natural world today.",
+        "level": "core"
+      },
+      {
+        "phrase": "... has become a serious issue, putting a heavy strain on ...",
+        "example": "Overpopulation in cities has become a serious issue, putting a heavy strain on government resources and public systems.",
+        "level": "core"
+      },
+      {
+        "phrase": "The growing trend of ... represents a major shift in how modern society operates today.",
+        "example": "The growing trend of remote work represents a major shift in how modern society operates today.",
+        "level": "core"
+      },
+      {
+        "phrase": "The trend of ... has become increasingly common in modern society.",
+        "example": "The trend of delaying marriage and parenthood until a person reaches their thirties has become increasingly common in modern society.",
+        "level": "core"
+      },
+      {
+        "phrase": "In the contemporary digital era, the traditional practice of ... is rapidly declining.",
+        "example": "In the contemporary digital era, the traditional practice of handwriting with a pen or pencil is rapidly declining.",
+        "level": "advanced"
+      },
+      {
+        "phrase": "It is common for contemporary ... to devote a significant portion of their ... to ...",
+        "example": "It is common for contemporary children to devote a significant portion of their leisure time to watching television.",
+        "level": "advanced"
+      },
+      {
+        "phrase": "... is widely regarded as one of the most critical ...",
+        "example": "A surging global population is widely regarded as one of the most critical environmental crises on Earth.",
+        "level": "advanced"
+      },
+      {
+        "phrase": "... plays a critical role in shaping ...",
+        "example": "Urban planning plays a critical role in shaping the daily lives of city residents.",
+        "level": "core"
+      },
+      {
+        "phrase": "In many cultures, ... is considered a fundamental ..., yet ... remain highly controversial.",
+        "example": "In many cultures, disciplining children is considered a fundamental responsibility of parenting, yet the methods used remain highly controversial.",
+        "level": "advanced"
+      },
+      {
+        "phrase": "In modern society, people frequently ...",
+        "example": "In modern society, people frequently spend large amounts of money on celebrating personal family events, such as weddings and birthdays.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Introduction: presenting two views",
+    "when": "Discussion essays (and concessions): report what different people think before giving your view",
+    "applies_to": [
+      "discussion",
+      "opinion",
+      "positive_negative",
+      "outweigh"
+    ],
+    "items": [
+      {
+        "phrase": "It is often argued that ..., whereas others contend that ...",
+        "pattern": "It is often argued that [view A], whereas others contend that [view B].",
+        "example": "It is often argued that private vehicles offer the most efficient means of urban transportation, whereas others contend that bicycles represent a superior alternative for city travel.",
+        "note": "The teacher uses this skeleton in both discussion models - reusable for any discussion question.",
+        "level": "core"
+      },
+      {
+        "phrase": "Some people believe that ..., while others argue that ...",
+        "example": "Some people believe that cars are the best way to travel in a city, while others argue that bicycles are better.",
+        "note": "Simpler version (standard).",
+        "level": "core"
+      },
+      {
+        "phrase": "While some traditionalists / critics believe that ..., I ...",
+        "example": "While some traditionalists believe that early family planning is ideal, I completely agree that postponing these major milestones is a highly positive development.",
+        "level": "core"
+      },
+      {
+        "phrase": "While some critics argue that ..., I believe that ...",
+        "example": "While some critics argue that these expensive parties are simply a waste of money, I believe that celebrating these milestones is very important for keeping families close.",
+        "level": "core"
+      },
+      {
+        "phrase": "Proponents of this view maintain / emphasize that ...",
+        "example": "Proponents of this view maintain that ecological crises, such as climate change and biodiversity loss, are inherently transboundary issues.",
+        "level": "advanced"
+      },
+      {
+        "phrase": "argue / contend / maintain / believe / emphasize / claim / hold the view that",
+        "example": "Many people hold the view that university education should be free.",
+        "note": "Reporting verbs from the discussion handout notes.",
+        "level": "core"
+      },
+      {
+        "phrase": "Opponents of this idea point out that ...",
+        "example": "Opponents of this idea point out that annual driving tests would be expensive and time-consuming.",
+        "note": "Standard reporting phrase.",
+        "level": "advanced"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Thesis: opinion (agree / disagree)",
+    "when": "Sentence 2 of an opinion essay: give your opinion AND state your two supporting reasons",
+    "applies_to": [
+      "opinion"
+    ],
+    "items": [
+      {
+        "phrase": "I disagree with the idea that ..., because ...",
+        "pattern": "I disagree with the idea that [statement], because [reason 1] and [reason 2].",
+        "example": "I disagree with the idea that a big paycheck is more important than job satisfaction, because long-term happiness and health depend heavily on how happy you are with your daily work.",
+        "level": "core"
+      },
+      {
+        "phrase": "I completely agree with this perspective. This issue leads to ... because ..., while ...",
+        "example": "I completely agree with this perspective. This issue leads to severe ecological degradation because the expansion of human settlements causes massive deforestation, while the resulting rise in consumer demands drastically worsens atmospheric pollution.",
+        "level": "core"
+      },
+      {
+        "phrase": "While ... is definitely important, the value of ... should not be ignored.",
+        "example": "While having enough money is definitely important, the value of enjoying your work should not be ignored.",
+        "note": "Concession before the thesis - shows awareness of the other side.",
+        "level": "core"
+      },
+      {
+        "phrase": "I strongly / firmly agree / disagree that ...",
+        "example": "I strongly disagree that drivers should be forced to take a test every year, because it would be costly and would not target the real causes of accidents.",
+        "level": "core"
+      },
+      {
+        "phrase": "I partly agree that ... However, ...",
+        "example": "I partly agree that modern buildings change the character of cities; however, insisting on a traditional style for every new building would be impractical.",
+        "note": "For 'To what extent...?': say clearly if you agree completely or partly.",
+        "level": "core"
+      },
+      {
+        "phrase": "I am of the opinion that ...",
+        "example": "I am of the opinion that money should be spent on renovating existing public buildings.",
+        "note": "Standard alternative.",
+        "level": "advanced"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Thesis: positive / negative development",
+    "when": "Say clearly whether the trend is completely positive or completely negative, with two reasons",
+    "applies_to": [
+      "positive_negative",
+      "direct_question"
+    ],
+    "items": [
+      {
+        "phrase": "I completely agree that this change is an entirely positive development because it ... and ...",
+        "example": "I completely agree that this change is an entirely positive development because it improves daily time management and enhances employees' mental health.",
+        "level": "core"
+      },
+      {
+        "phrase": "I completely agree that ... is a highly positive development. This social shift ensures that ...",
+        "example": "I completely agree that postponing these major milestones is a highly positive development. This social shift ensures that individuals are much more emotionally mature and possess the necessary financial security to raise a stable family.",
+        "level": "core"
+      },
+      {
+        "phrase": "I believe this is an entirely negative development because ...",
+        "example": "I believe that living alone in cities is an entirely negative development because it increases loneliness and weakens family support.",
+        "note": "For a negative answer: an entirely negative development / a highly detrimental trend / a thoroughly harmful change for ...",
+        "level": "core"
+      },
+      {
+        "phrase": "I consider this to be a highly positive development because ...",
+        "example": "I consider this to be a highly positive development because it enhances global communication speed and reduces paper consumption.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Thesis: discussion",
+    "when": "Discussion introduction: both views + which side you support",
+    "applies_to": [
+      "discussion"
+    ],
+    "items": [
+      {
+        "phrase": "While ..., I believe that ... by ... and ...",
+        "pattern": "While [view you disagree with] is/are [concession], I believe that [your view] due to / by [reason 1] and [reason 2].",
+        "example": "While global ecological agreements are vital, I believe that international cooperation yields the most substantial advantages for businesses by establishing stable economic frameworks and expanding consumer markets.",
+        "level": "core"
+      },
+      {
+        "phrase": "While ... provide unmatched ..., I believe that ... due to ...",
+        "example": "While automobiles provide unmatched personal comfort, I believe that bicycles are the optimal mode of transport within urban environments due to their efficiency in traffic and environmental sustainability.",
+        "level": "core"
+      },
+      {
+        "phrase": "Although both views have some merit, I would argue that ...",
+        "example": "Although both views have some merit, I would argue that protecting the present generation matters more than researching the past.",
+        "note": "Standard alternative.",
+        "level": "advanced"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Thesis: advantages / disadvantages",
+    "when": "State which advantages and disadvantages you will discuss - the same number of each; no need to choose a side",
+    "applies_to": [
+      "adv_disadv"
+    ],
+    "items": [
+      {
+        "phrase": "While this practice offers clear advantages, such as ..., it also introduces significant drawbacks that warrant careful consideration.",
+        "example": "While this practice offers clear advantages, such as accelerating cognitive development, it also introduces significant drawbacks that warrant careful consideration.",
+        "level": "core"
+      },
+      {
+        "phrase": "While this shift offers clear benefits regarding ... and ..., it also introduces notable drawbacks concerning ... and ..., making it a development with equally balanced positive and negative impacts.",
+        "example": "While this shift offers clear benefits regarding convenience and accessibility, it also introduces notable drawbacks concerning reading habits and technological dependence, making it a development with equally balanced positive and negative impacts.",
+        "level": "advanced"
+      },
+      {
+        "phrase": "This essay will discuss the main benefits and drawbacks of ...",
+        "example": "This essay will discuss the main benefits and drawbacks of having a large number of toys.",
+        "note": "Simple, safe thesis (standard).",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Thesis: outweigh",
+    "when": "State clearly which side outweighs the other (the stronger side gets two points in the body)",
+    "applies_to": [
+      "outweigh"
+    ],
+    "items": [
+      {
+        "phrase": "I firmly believe that the drawbacks of this practice, specifically regarding ... and ..., far outweigh the single advantage of ...",
+        "example": "I firmly believe that the drawbacks of this practice, specifically regarding physical health and social development, far outweigh the single advantage of information.",
+        "note": "Disadvantages win.",
+        "level": "core"
+      },
+      {
+        "phrase": "While this ... increases ..., I believe the benefits of ... and ... far outweigh this single drawback.",
+        "example": "While this zoning strategy increases daily travel times for citizens, I believe the benefits of reduced pollution and organized infrastructure development across the city far outweigh this single drawback.",
+        "note": "Advantages win.",
+        "level": "core"
+      },
+      {
+        "phrase": "Although ... has some drawbacks, its benefits are far more significant.",
+        "example": "Although information technology has some drawbacks, its benefits are far more significant.",
+        "note": "Standard short version.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Thesis: problem / solution",
+    "when": "State the main problem and the main solution you will discuss",
+    "applies_to": [
+      "problem_solution"
+    ],
+    "items": [
+      {
+        "phrase": "This worrying trend has created serious ... problems across the globe, making it absolutely necessary for ... to ...",
+        "example": "This worrying trend has created serious environmental problems across the globe, making it absolutely necessary for national governments to work closely together with ordinary citizens to reduce the long-term damage.",
+        "level": "core"
+      },
+      {
+        "phrase": "While this trend causes major problems with ..., the most effective solution is for governments to ...",
+        "example": "While this trend causes major problems with severe air and water pollution, the most effective solution is for governments to move people out of crowded cities by developing rural areas.",
+        "level": "core"
+      },
+      {
+        "phrase": "This essay will discuss the main problems this causes and suggest ...",
+        "example": "This essay will discuss the main problems this causes and suggest practical measures that governments and individuals can take.",
+        "note": "Standard alternative.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Thesis: cause / effect",
+    "when": "State the main cause and the main effect you will discuss",
+    "applies_to": [
+      "cause_effect"
+    ],
+    "items": [
+      {
+        "phrase": "This trend is mainly caused by ... and ... . Ultimately, ... can lead to ... for ...",
+        "example": "This trend is mainly caused by changing views on marriage and a rising divorce rate among young couples. Ultimately, growing up in this environment can lead to emotional stress and behavioral problems for children involved.",
+        "level": "core"
+      },
+      {
+        "phrase": "This trend is mainly driven by ..., and it results in ... for individuals as well as ... for society.",
+        "example": "This trend is mainly driven by modern office-based jobs that limit physical movement, and it results in severe health problems for individuals as well as heavy financial burdens for society.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Thesis: cause / solution",
+    "when": "The teacher's fill-in template for 'What are the causes? What can be done?' (the type practised most in the course)",
+    "applies_to": [
+      "problem_solution",
+      "cause_effect"
+    ],
+    "items": [
+      {
+        "phrase": "This essay will examine how ... and ... cause this problem, and explain why government action is the most realistic solution to this global issue.",
+        "pattern": "This essay will examine how [cause 1] and [cause 2] cause this problem, and explain why [solution] is the most realistic solution to this issue.",
+        "example": "This essay will examine how unemployment and low salaries cause this problem, and explain why government action is the most realistic solution to this global issue.",
+        "level": "core"
+      },
+      {
+        "phrase": "This essay will examine how ... causes this problem, and explain why government action through ... is the most realistic solution",
+        "example": "This essay will examine how urban overpopulation causes this problem, and explain why government action through better city planning is the most realistic solution to this issue.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Thesis: direct (two-part) question",
+    "when": "One outline sentence that directly answers BOTH questions",
+    "applies_to": [
+      "direct_question"
+    ],
+    "items": [
+      {
+        "phrase": "This shift is primarily driven by ... and ..., and I consider this to be a highly positive development because ...",
+        "example": "This shift is primarily driven by the ubiquity of digital devices and the demand for workplace efficiency, and I consider this to be a highly positive development because it enhances global communication speed and reduces paper consumption.",
+        "note": "Why? + positive or negative?",
+        "level": "core"
+      },
+      {
+        "phrase": "While some critics argue that ..., I believe that ... is very important for ... However, ... is caused by ... rather than ...",
+        "example": "While some critics argue that these expensive parties are simply a waste of money, I believe that celebrating these milestones is very important for keeping families close. However, the modern trend of overspending is caused by social pressure rather than real necessity.",
+        "note": "How important? + Do you think...?",
+        "level": "core"
+      },
+      {
+        "phrase": "This essay will explain why I completely disagree with ..., and argue that the most effective way to ... is through ...",
+        "example": "This essay will explain why I completely disagree with the use of physical punishment on children, and argue that the most effective way to correct bad behavior is through the removal of privileges and clear communication.",
+        "note": "Agree/disagree? + What is the best way...? A safe, reusable outline for any two-question prompt.",
+        "level": "core"
+      },
+      {
+        "phrase": "There are several reasons for this, and I believe it is a ... development.",
+        "example": "There are several reasons why people take photographs of themselves at famous places, and I believe it is a largely negative trend.",
+        "note": "Short standard version.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Topic sentences: reasons and opinions",
+    "when": "First sentence of each body paragraph in opinion, positive/negative and direct-question essays",
+    "applies_to": [
+      "opinion",
+      "positive_negative",
+      "direct_question"
+    ],
+    "items": [
+      {
+        "phrase": "To begin with, ... plays a massive role in ...",
+        "example": "To begin with, job satisfaction plays a massive role in a person's mental health and everyday happiness.",
+        "level": "core"
+      },
+      {
+        "phrase": "Furthermore, ... / Similarly, ...",
+        "example": "Furthermore, workers who love their jobs are generally much more creative, productive, and loyal to their companies.",
+        "level": "core"
+      },
+      {
+        "phrase": "First, ... / Second, ...",
+        "example": "First, eliminating the daily journey to an office allows individuals to utilize their time much more efficiently.",
+        "level": "core"
+      },
+      {
+        "phrase": "The primary reason for ... is ...",
+        "example": "The primary reason for the decline in manual writing is the rapid advancement and widespread accessibility of digital technology.",
+        "level": "core"
+      },
+      {
+        "phrase": "... is highly important because it ... and ...",
+        "example": "Celebrating major family milestones is highly important because it strengthens personal relationships and protects cultural traditions.",
+        "level": "core"
+      },
+      {
+        "phrase": "I firmly disagree with the view that ...",
+        "example": "I firmly disagree with the view that parents should physically punish their children when they make mistakes.",
+        "level": "core"
+      },
+      {
+        "phrase": "I firmly believe that this transition toward ... is a profoundly positive development.",
+        "example": "I firmly believe that this transition toward digital communication is a profoundly positive development.",
+        "level": "core"
+      },
+      {
+        "phrase": "Nevertheless, despite the clear ... of ..., it is obvious that ...",
+        "example": "Nevertheless, despite the clear cultural value of these gatherings, it is obvious that modern spending has become way too high.",
+        "level": "core"
+      },
+      {
+        "phrase": "Instead of ..., the best way to ... is through ...",
+        "example": "Instead of physical force, the best way to punish and correct a child's behavior is through non-violent, behavioral consequences.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Topic sentences: two views",
+    "when": "Discussion essay: Body 1 = the view you disagree with, Body 2 = the view you agree with",
+    "applies_to": [
+      "discussion"
+    ],
+    "items": [
+      {
+        "phrase": "On the one hand, many people believe / maintain that ...",
+        "example": "On the one hand, many people maintain that commuting by car is the most advantageous method of navigating a city.",
+        "level": "core"
+      },
+      {
+        "phrase": "On the other hand, I agree with the perspective that ...",
+        "example": "On the other hand, I agree with the perspective that bicycles are a far better alternative for urban transit.",
+        "level": "core"
+      },
+      {
+        "phrase": "Those who support ... argue that ...",
+        "example": "Those who support research into family history argue that it helps people understand their identity.",
+        "note": "Standard alternative opener for Body 1.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Topic sentences: advantages and disadvantages",
+    "when": "Opening the advantage / disadvantage paragraphs (also outweigh essays)",
+    "applies_to": [
+      "adv_disadv",
+      "outweigh"
+    ],
+    "items": [
+      {
+        "phrase": "One prominent merit of ... is its ability to ...",
+        "example": "One prominent merit of providing a diverse selection of toys is its ability to stimulate a child's psychological and intellectual growth.",
+        "level": "core"
+      },
+      {
+        "phrase": "One of the most significant advantages of ... is ...",
+        "example": "One of the most significant advantages of e-books is cost-efficiency.",
+        "level": "core"
+      },
+      {
+        "phrase": "Another key benefit is ..., as ...",
+        "example": "Another key benefit is the flexibility that digital readers offer, as individuals can store hundreds of books on a single device.",
+        "level": "core"
+      },
+      {
+        "phrase": "Conversely, ... can severely hinder ...",
+        "example": "Conversely, an oversupply of playthings can severely hinder a child's social integration and creative resourcefulness.",
+        "level": "core"
+      },
+      {
+        "phrase": "However, the widespread adoption of ... is not without drawbacks.",
+        "example": "However, the widespread adoption of e-books is not without drawbacks.",
+        "level": "core"
+      },
+      {
+        "phrase": "On the one hand, excessive ... severely damages ...",
+        "example": "On the one hand, excessive television viewing severely damages the physical well-being of young individuals.",
+        "note": "Outweigh essay: stronger side first.",
+        "level": "core"
+      },
+      {
+        "phrase": "On the other hand, ... can serve as an accessible tool for ...",
+        "example": "On the other hand, television can serve as an accessible tool for global education and information.",
+        "note": "Outweigh essay: the weaker side (one point only).",
+        "level": "core"
+      },
+      {
+        "phrase": "However, this benefit is weak because ...",
+        "example": "However, this benefit is weak because television remains a completely passive learning medium that lacks interactive engagement.",
+        "note": "Admit the weaker point, then limit it.",
+        "level": "core"
+      },
+      {
+        "phrase": "On the other hand, ... create the notable disadvantage of ...",
+        "example": "On the other hand, zoning policies create the notable disadvantage of extended commuting times.",
+        "level": "core"
+      },
+      {
+        "phrase": "advantage = merit / benefit / strength / positive aspect / upside; disadvantage = drawback / downside / negative aspect / limitation",
+        "example": "A major downside of this policy is the cost.",
+        "note": "Synonyms to avoid repeating 'advantage' and 'disadvantage'.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Topic sentences: causes, problems, effects and solutions",
+    "when": "Opening the body paragraphs of two-part essays (problem/solution, cause/effect, cause/solution)",
+    "applies_to": [
+      "problem_solution",
+      "cause_effect"
+    ],
+    "items": [
+      {
+        "phrase": "The primary reason why ... is ...",
+        "example": "The primary reason why these experts choose to migrate is the high level of unemployment in their home countries.",
+        "level": "core"
+      },
+      {
+        "phrase": "The second major cause is ...",
+        "example": "The second major cause is the low salary given to those who find work.",
+        "level": "core"
+      },
+      {
+        "phrase": "The main cause behind the rise in ... is ...",
+        "example": "The main cause behind the rise in single-parent families is how the younger generation views marital commitment.",
+        "level": "core"
+      },
+      {
+        "phrase": "The primary cause of rising ... is ...",
+        "example": "The primary cause of rising obesity rates is the inactive nature of modern work cultures.",
+        "level": "core"
+      },
+      {
+        "phrase": "On the one hand, the rising amount of ... creates several predictable problems for ...",
+        "example": "On the one hand, the rising amount of plastic waste creates several predictable problems for our planet.",
+        "level": "core"
+      },
+      {
+        "phrase": "The main result of ... is the huge rise in ...",
+        "example": "The main result of overpopulation is the huge rise in pollution across city areas.",
+        "level": "core"
+      },
+      {
+        "phrase": "The effects of this trend are mostly negative for ...",
+        "example": "The effects of this trend are mostly negative for a child's development.",
+        "level": "core"
+      },
+      {
+        "phrase": "The effects of this widespread ... are deeply damaging to both individuals and the wider community.",
+        "example": "The effects of this widespread weight gain are deeply damaging to both individuals and the wider community.",
+        "level": "core"
+      },
+      {
+        "phrase": "The primary solution is for governments to ...",
+        "example": "The primary solution is for governments to create more jobs.",
+        "level": "core"
+      },
+      {
+        "phrase": "The second step is for ... to ...",
+        "example": "The second step is for employers to increase the basic salary.",
+        "level": "core"
+      },
+      {
+        "phrase": "There are practical steps that can be taken by different groups to solve these issues successfully.",
+        "example": "There are practical steps that can be taken by different groups to solve these issues successfully.",
+        "level": "core"
+      },
+      {
+        "phrase": "However, the best way to solve these ... problems is for governments to ...",
+        "example": "However, the best way to solve these pollution problems is for governments to lower the number of people living in big cities.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Giving reasons and causes",
+    "when": "Explaining why something happens (teacher's 'Causes and reasons' linkers + cause verbs)",
+    "applies_to": [
+      "opinion",
+      "discussion",
+      "adv_disadv",
+      "problem_solution",
+      "cause_effect",
+      "direct_question",
+      "outweigh",
+      "positive_negative"
+    ],
+    "items": [
+      {
+        "phrase": "because + clause",
+        "example": "Doing work that matters protects people from anxiety because human happiness relies on purpose rather than just a large bank account.",
+        "level": "core"
+      },
+      {
+        "phrase": "due to + noun",
+        "example": "The Earth's air quality is deteriorating due to the toxic gas emissions generated by daily human activities.",
+        "note": "due to / owing to + NOUN, not a full clause.",
+        "level": "core"
+      },
+      {
+        "phrase": "owing to + noun",
+        "example": "Many graduates leave owing to the lack of jobs in their home countries.",
+        "level": "core"
+      },
+      {
+        "phrase": "since / as + clause",
+        "example": "Since electronic books do not require printing, binding, or physical shipping, both publishers and consumers save a substantial amount of money.",
+        "level": "core"
+      },
+      {
+        "phrase": "This happens because ...",
+        "example": "This happens because building things forces young children to look closely at shapes and follow a clear plan from start to finish.",
+        "level": "core"
+      },
+      {
+        "phrase": "is mainly caused by / is driven by",
+        "example": "This trend is mainly driven by modern office-based jobs that limit physical movement.",
+        "level": "core"
+      },
+      {
+        "phrase": "stems from / arises from",
+        "example": "Much of the noise in public places stems from overcrowding.",
+        "note": "Cause verbs listed in the cause/effect notes.",
+        "level": "advanced"
+      },
+      {
+        "phrase": "in search of",
+        "example": "Thousands of people migrate from rural regions every year in search of better job opportunities.",
+        "level": "core"
+      },
+      {
+        "phrase": "One reason for this is that ...",
+        "example": "One reason for this is that social media rewards people for posting photos of themselves.",
+        "note": "Standard.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Explaining and developing an idea",
+    "when": "Sentences 2-3 of a body paragraph: go deeper into detail - how or why",
+    "applies_to": [
+      "opinion",
+      "discussion",
+      "adv_disadv",
+      "problem_solution",
+      "cause_effect",
+      "direct_question",
+      "outweigh",
+      "positive_negative"
+    ],
+    "items": [
+      {
+        "phrase": "When ..., ...",
+        "example": "When people spend more than forty hours a week at a job, the emotional environment of the workplace changes their entire life.",
+        "note": "The teacher's favourite way to explain cause and effect inside one sentence.",
+        "level": "core"
+      },
+      {
+        "phrase": "This means that ...",
+        "example": "This means that even qualified individuals cannot find work, leaving them with no choice but to look for jobs abroad.",
+        "level": "core"
+      },
+      {
+        "phrase": "This lack of ... directly impedes / means that ...",
+        "example": "This lack of social exposure directly impedes the development of essential interpersonal skills like empathy, negotiation, and conflict resolution.",
+        "level": "core"
+      },
+      {
+        "phrase": "By + -ing, ... enable(s) ...",
+        "example": "By standardizing regulatory frameworks, international agreements enable multinational corporations to access foreign consumer bases.",
+        "level": "advanced"
+      },
+      {
+        "phrase": "Without ..., ... are more likely to ...",
+        "example": "Without a two-parent support system, children are more likely to face emotional struggles.",
+        "level": "core"
+      },
+      {
+        "phrase": "As the number of ... grows, ...",
+        "example": "As the number of people grows, the amount of daily trash and car exhaust quickly becomes too much for city systems to handle.",
+        "level": "core"
+      },
+      {
+        "phrase": "For individuals, ... For society, ...",
+        "example": "For individuals, carrying excess weight is directly linked to dangerous illnesses. For society, these health issues create a massive crisis for public healthcare systems.",
+        "note": "Answers questions about effects 'on people and society' precisely.",
+        "level": "core"
+      },
+      {
+        "phrase": "The main issue is that ..., which poses a ... threat to ...",
+        "example": "The main issue is that plastic does not break down naturally over time, which poses a permanent and severe threat to sea creatures.",
+        "level": "core"
+      },
+      {
+        "phrase": "The most immediate danger comes from ...",
+        "example": "The most immediate danger comes from car smoke, as millions of residents use cars and motorbikes to get to work.",
+        "level": "core"
+      },
+      {
+        "phrase": "The biggest issue is ...",
+        "example": "The biggest issue is the lack of daily attention, care, and love from both parents during childhood.",
+        "level": "core"
+      },
+      {
+        "phrase": "In other words, / That is to say,",
+        "example": "In other words, people risk their financial security to gain social approval.",
+        "note": "Standard linkers for rephrasing an idea more clearly.",
+        "level": "core"
+      },
+      {
+        "phrase": "Instead of ..., ...",
+        "example": "Instead of learning to invent their own games out of simple, everyday objects, children become entirely dependent on pre-manufactured external stimulation.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Results and consequences",
+    "when": "Sentence 4 of a body paragraph: show the direct consequence or outcome",
+    "applies_to": [
+      "opinion",
+      "discussion",
+      "adv_disadv",
+      "problem_solution",
+      "cause_effect",
+      "direct_question",
+      "outweigh",
+      "positive_negative"
+    ],
+    "items": [
+      {
+        "phrase": "As a result, ...",
+        "example": "As a result, readers can buy a wide variety of titles at a much lower price than printed versions.",
+        "level": "core"
+      },
+      {
+        "phrase": "As a result of + noun, ...",
+        "example": "As a result of these low salaries, they feel unhappy and are forced to leave their homes to find a better life elsewhere.",
+        "note": "Followed by a noun phrase, then a comma and the result.",
+        "level": "core"
+      },
+      {
+        "phrase": "As a consequence of + noun, ...",
+        "example": "As a consequence of these higher salaries, they feel valued and choose to stay in their homes.",
+        "level": "core"
+      },
+      {
+        "phrase": "Consequently, ...",
+        "example": "Consequently, this intense crowding transforms public areas into chaotic and stressful environments.",
+        "level": "core"
+      },
+      {
+        "phrase": "Therefore, ... / Thus, ... / Hence, ...",
+        "example": "Therefore, passion does not mean staying poor; it is actually a reliable path to true financial success.",
+        "level": "core"
+      },
+      {
+        "phrase": "Therefore, due to these ... changes, ...",
+        "example": "Therefore, due to these spatial planning changes, central public areas become much quieter, calmer, and more comfortable for the community.",
+        "level": "core"
+      },
+      {
+        "phrase": "which naturally leads to ...",
+        "example": "This high level of commitment makes them stand out to their managers, which naturally leads to fast career growth.",
+        "level": "core"
+      },
+      {
+        "phrase": "leads to / results in / gives rise to / contributes to",
+        "example": "An increasing number of residents automatically results in a higher volume of vehicles on the road.",
+        "note": "'results in' - never 'results in to'.",
+        "level": "core"
+      },
+      {
+        "phrase": "leaving them with no choice but to ...",
+        "example": "Even qualified individuals cannot find work, leaving them with no choice but to look for jobs abroad.",
+        "level": "advanced"
+      },
+      {
+        "phrase": "This allows ... to ...",
+        "example": "This allows educated people to use their skills at home instead of moving away.",
+        "level": "core"
+      },
+      {
+        "phrase": "making it ... / making daily life much more ...",
+        "example": "This extra time is directly used for family care, which makes daily life much more manageable and less rushed.",
+        "level": "core"
+      },
+      {
+        "phrase": "Eventually, ... dropped significantly.",
+        "example": "Eventually, health worker migration dropped significantly, keeping talent inside the country.",
+        "note": "End a solution paragraph by showing the problem falling.",
+        "level": "core"
+      },
+      {
+        "phrase": "ultimately ...",
+        "example": "...which ultimately harms wildlife and ruins natural habitats.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Giving examples: general (country, organisation, scenario)",
+    "when": "Sentence 5 of a body paragraph: a short, specific example naming a country or organisation",
+    "applies_to": [
+      "opinion",
+      "discussion",
+      "adv_disadv",
+      "problem_solution",
+      "cause_effect",
+      "direct_question",
+      "outweigh",
+      "positive_negative"
+    ],
+    "items": [
+      {
+        "phrase": "A clear example of this is ..., where ...",
+        "example": "A clear example of this is New Delhi, where overcrowding has caused dangerous winter smog and severe river pollution.",
+        "level": "core"
+      },
+      {
+        "phrase": "A clear example of this can be seen in ..., where ...",
+        "example": "A clear example of this can be seen in sprawling modern cities like Dubai or Houston, where expansive highway systems are designed specifically for automotive travel.",
+        "level": "core"
+      },
+      {
+        "phrase": "A great example of this is seen in ..., where ...",
+        "example": "A great example of this is seen in charity organizations like Doctors Without Borders, where doctors willingly give up the huge salaries of private hospitals to help people in need.",
+        "level": "core"
+      },
+      {
+        "phrase": "A prime example of this (strategy / joint effort) is ...",
+        "example": "A prime example of this strategy is South Korea, which successfully moved thousands of workers out of crowded Seoul by building a completely new city called Sejong.",
+        "level": "core"
+      },
+      {
+        "phrase": "A clear instance of this is ..., where ...",
+        "example": "A clear instance of this is Curitiba, Brazil, where master planners built dedicated bus rapid transit lines connecting distinct structural zones.",
+        "level": "core"
+      },
+      {
+        "phrase": "A clear illustration of this is seen when / occurs when ...",
+        "example": "A clear illustration of this occurs when a traveler is left unable to read their novel during a long flight simply because they forgot to bring a charging cable.",
+        "level": "core"
+      },
+      {
+        "phrase": "For example, several modern cities, namely ... and ..., have ...",
+        "example": "For example, several modern cities, namely Barcelona and Seoul, have designed decentralized neighborhoods with localized public squares.",
+        "level": "core"
+      },
+      {
+        "phrase": "For example, [country] recently introduced ...",
+        "example": "For example, the Philippines recently introduced laws to upgrade medical salaries.",
+        "level": "core"
+      },
+      {
+        "phrase": "For instance, when ..., they naturally ...",
+        "example": "For instance, when a child spends hours successfully assembling a complex Lego castle, they naturally develop advanced spatial awareness.",
+        "level": "core"
+      },
+      {
+        "phrase": "To cite an example, / To show an example, / One clear example is",
+        "example": "To cite an example, Norway's prison system focuses heavily on rehabilitation rather than punishment.",
+        "note": "From the teacher's Linking Words handout; the example is from her 'General examples' idea bank.",
+        "level": "core"
+      },
+      {
+        "phrase": "Take ... as an example.",
+        "example": "Take Finland as an example: its education system emphasizes equality and free school meals.",
+        "note": "Standard.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Giving examples: studies and statistics",
+    "when": "Supporting a point with a named study, report or plausible figure (teacher's 'statistical examples' approach)",
+    "applies_to": [
+      "opinion",
+      "discussion",
+      "adv_disadv",
+      "problem_solution",
+      "cause_effect",
+      "direct_question",
+      "outweigh",
+      "positive_negative"
+    ],
+    "items": [
+      {
+        "phrase": "For instance, reports from the ... show that ...",
+        "example": "For instance, reports from the World Wildlife Fund (WWF) show that thousands of marine animals die every year after accidentally ingesting plastic debris.",
+        "level": "core"
+      },
+      {
+        "phrase": "For example, data from the ... shows that ...",
+        "example": "For example, data from the National Center for Health Statistics shows that most divorces involving children under six happen among couples under the age of 25.",
+        "level": "core"
+      },
+      {
+        "phrase": "For example, a study by ... found that ...",
+        "example": "For example, a study by Harvard University found that the average global workweek has increased by 10 hours over the last 40 years.",
+        "level": "core"
+      },
+      {
+        "phrase": "For instance, the World Health Organization reported that ...",
+        "example": "For instance, the World Health Organization reported that children who watch more than three hours of television daily suffer from a forty percent higher rate of childhood diabetes.",
+        "level": "core"
+      },
+      {
+        "phrase": "To illustrate, a recent global study found that ...",
+        "example": "To illustrate, a recent global study found that children raised in single-parent homes have a 30% higher chance of facing mental health struggles.",
+        "level": "core"
+      },
+      {
+        "phrase": "For example, statistics published by ... reveal that ...",
+        "example": "For example, statistics published by National Geographic reveal that millions of acres of forest are cleared every year to make room for residential housing.",
+        "level": "core"
+      },
+      {
+        "phrase": "This situation is clearly shown by business research from companies like ..., which consistently proves that ...",
+        "example": "This situation is clearly shown by business research from companies like Gallup, which consistently proves that happy and connected workers make their teams 21% more profitable.",
+        "level": "advanced"
+      },
+      {
+        "phrase": "For instance, a recent ... study by ... confirmed that ...",
+        "example": "For instance, a recent atmospheric study by NASA confirmed that the Earth's air quality is deteriorating at an unprecedented rate.",
+        "level": "core"
+      },
+      {
+        "phrase": "For instance, data from the ... confirms that ...",
+        "example": "For instance, data from the National Bureau of Economic Research confirms that remote workers save over one hour per day on average.",
+        "level": "core"
+      },
+      {
+        "phrase": "government data shows that ...",
+        "example": "A clear example of this can be seen in South Korea and Japan, where government data shows that older parents are far better equipped to afford quality early childhood education.",
+        "level": "core"
+      },
+      {
+        "phrase": "Nearly / Over / Approximately X% of ...",
+        "example": "Nearly 40% of students globally report that school curriculums do not match the skills required by employers.",
+        "note": "From the teacher's statistical-examples handout. Keep numbers plausible and use cautious words (nearly, around, more than).",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Adding points",
+    "when": "Adding a second point or more information (teacher's 'Adding information' linkers)",
+    "applies_to": [
+      "opinion",
+      "discussion",
+      "adv_disadv",
+      "problem_solution",
+      "cause_effect",
+      "direct_question",
+      "outweigh",
+      "positive_negative"
+    ],
+    "items": [
+      {
+        "phrase": "Furthermore, ...",
+        "example": "Furthermore, this passive habit acts as a major barrier to healthy childhood socialization.",
+        "level": "core"
+      },
+      {
+        "phrase": "Moreover, ...",
+        "example": "Moreover, regular exercise improves concentration at work.",
+        "level": "core"
+      },
+      {
+        "phrase": "Additionally, ...",
+        "example": "Additionally, this separation catalyzes the development of balanced infrastructure across the entire city.",
+        "level": "core"
+      },
+      {
+        "phrase": "In addition, ... / In addition to + noun / -ing",
+        "example": "In addition, electronic reading is completely dependent on digital devices.",
+        "note": "'In addition to' is followed by a noun or -ing: In addition to saving money, ...",
+        "level": "core"
+      },
+      {
+        "phrase": "Not only ... but also ...",
+        "example": "This problem not only ruins the physical health of individuals but also places a massive financial strain on medical systems.",
+        "level": "core"
+      },
+      {
+        "phrase": "as well as",
+        "example": "It results in severe health problems for individuals as well as heavy financial burdens for society.",
+        "level": "core"
+      },
+      {
+        "phrase": "Another key benefit / problem is ...",
+        "example": "Another key benefit is the flexibility that digital readers offer.",
+        "level": "core"
+      },
+      {
+        "phrase": "Similarly, ...",
+        "example": "Similarly, population density directly fuels environmental contamination due to the massive reliance on transportation.",
+        "level": "core"
+      },
+      {
+        "phrase": "What is more, ...",
+        "example": "What is more, cycling is free.",
+        "note": "Standard, slightly less formal.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Listing and sequencing points",
+    "when": "Ordering several points or solutions (teacher's 'Listing' linkers)",
+    "applies_to": [
+      "opinion",
+      "discussion",
+      "adv_disadv",
+      "problem_solution",
+      "cause_effect",
+      "direct_question",
+      "outweigh",
+      "positive_negative"
+    ],
+    "items": [
+      {
+        "phrase": "Firstly, ... Secondly, ... Thirdly, ...",
+        "example": "Firstly, the widespread adoption of typing significantly boosts productivity. Secondly, moving away from paper-based documentation offers immense environmental benefits.",
+        "level": "core"
+      },
+      {
+        "phrase": "First, ... Second, ... Finally, ...",
+        "example": "First, governments should launch national campaigns. Second, teamwork between authorities and private businesses can reduce plastic use. Finally, states must pass stricter laws to limit plastic production.",
+        "level": "core"
+      },
+      {
+        "phrase": "Fourthly, / Lastly, / Finally, / Last but not least,",
+        "example": "Last but not least, online courses allow people to study at their own pace.",
+        "level": "core"
+      },
+      {
+        "phrase": "To begin with, ...",
+        "example": "To begin with, job satisfaction plays a massive role in a person's mental health.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Contrast and concession",
+    "when": "Showing the other side or a contrast (teacher's 'Concessions and contrasts' linkers)",
+    "applies_to": [
+      "opinion",
+      "discussion",
+      "adv_disadv",
+      "problem_solution",
+      "cause_effect",
+      "direct_question",
+      "outweigh",
+      "positive_negative"
+    ],
+    "items": [
+      {
+        "phrase": "However, ...",
+        "example": "However, the widespread adoption of e-books is not without drawbacks.",
+        "level": "core"
+      },
+      {
+        "phrase": "While / Whereas + clause",
+        "example": "While having enough money is definitely important, the value of enjoying your work should not be ignored.",
+        "level": "core"
+      },
+      {
+        "phrase": "Although / Even though + clause",
+        "example": "Although private cars offer superior comfort and utility for long-distance travel, they frequently contribute to urban congestion.",
+        "level": "core"
+      },
+      {
+        "phrase": "On the other hand, ...",
+        "example": "On the other hand, a high-stress job that feels meaningless quickly destroys a person's mood, regardless of how much money they make.",
+        "note": "Must introduce a CONTRASTING side - not just another point.",
+        "level": "core"
+      },
+      {
+        "phrase": "Nevertheless, ...",
+        "example": "Nevertheless, despite the clear cultural value of these gatherings, it is obvious that modern spending has become way too high.",
+        "level": "core"
+      },
+      {
+        "phrase": "Despite / In spite of + noun / -ing",
+        "example": "...leading to deep personal happiness despite working in dangerous areas.",
+        "note": "Despite + -ing / noun. Wrong: 'Despite it was expensive'. Right: 'Despite being expensive' / 'Although it was expensive'.",
+        "level": "core"
+      },
+      {
+        "phrase": "By contrast, / In contrast, ...",
+        "example": "By contrast, individuals in their thirties have accumulated valuable life experiences.",
+        "level": "core"
+      },
+      {
+        "phrase": "Conversely, ...",
+        "example": "Conversely, an oversupply of playthings can severely hinder a child's social integration.",
+        "level": "core"
+      },
+      {
+        "phrase": "In comparison with + noun",
+        "example": "In comparison with paper books, e-books are far cheaper to produce.",
+        "level": "core"
+      },
+      {
+        "phrase": "regardless of",
+        "example": "...regardless of how much money they make.",
+        "level": "core"
+      },
+      {
+        "phrase": "..., yet ...",
+        "example": "Disciplining children is considered a fundamental responsibility of parenting, yet the methods used remain highly controversial.",
+        "level": "core"
+      },
+      {
+        "phrase": "rather than",
+        "example": "Norway's prison system focuses heavily on rehabilitation rather than punishment.",
+        "level": "core"
+      },
+      {
+        "phrase": "Admittedly, ... / It is true that ...; however, ...",
+        "example": "Admittedly, private healthcare can reduce waiting times; however, it makes treatment unaffordable for many.",
+        "note": "Standard concession phrases.",
+        "level": "advanced"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Highlighting and stressing",
+    "when": "Emphasising one point (teacher's 'Highlighting and stressing' linkers)",
+    "applies_to": [
+      "opinion",
+      "discussion",
+      "adv_disadv",
+      "problem_solution",
+      "cause_effect",
+      "direct_question",
+      "outweigh",
+      "positive_negative"
+    ],
+    "items": [
+      {
+        "phrase": "Specifically, / specifically regarding",
+        "example": "I firmly believe that the drawbacks of this practice, specifically regarding physical health and social development, far outweigh the single advantage of information.",
+        "level": "core"
+      },
+      {
+        "phrase": "Particularly, / particularly",
+        "example": "The most effective modern strategy is the temporary removal of privileges, particularly access to digital entertainment.",
+        "level": "core"
+      },
+      {
+        "phrase": "Especially, / especially",
+        "example": "This convenience is especially helpful for students or professionals who need to access multiple textbooks at the same time.",
+        "level": "core"
+      },
+      {
+        "phrase": "In particular, ...",
+        "example": "In particular, young children are vulnerable to advertising.",
+        "level": "core"
+      },
+      {
+        "phrase": "Obviously, / it is obvious that",
+        "example": "It is obvious that modern spending has become way too high.",
+        "level": "core"
+      },
+      {
+        "phrase": "undoubtedly / undeniably / clearly",
+        "example": "In conclusion, overpopulation is undoubtedly the primary threat to the natural world.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Expressing opinion: strong",
+    "when": "Stating a firm position (opinion, discussion, outweigh, positive/negative, direct-question essays)",
+    "applies_to": [
+      "opinion",
+      "discussion",
+      "outweigh",
+      "positive_negative",
+      "direct_question"
+    ],
+    "items": [
+      {
+        "phrase": "I firmly believe that ...",
+        "example": "I firmly believe that this transition toward digital communication is a profoundly positive development.",
+        "level": "core"
+      },
+      {
+        "phrase": "I strongly believe that ...",
+        "example": "In conclusion, while a big salary offers clear material benefits, I strongly believe that loving your career is much more important for long-term happiness and health.",
+        "level": "core"
+      },
+      {
+        "phrase": "I completely agree with this perspective / that ...",
+        "example": "I completely agree with this perspective.",
+        "level": "core"
+      },
+      {
+        "phrase": "I firmly disagree with the view that ...",
+        "example": "I firmly disagree with the view that parents should physically punish their children when they make mistakes.",
+        "level": "core"
+      },
+      {
+        "phrase": "I disagree with / I cannot accept ...",
+        "example": "I cannot accept the idea that traditional music is no longer relevant.",
+        "note": "From the teacher's 'Presenting your opinion' list.",
+        "level": "core"
+      },
+      {
+        "phrase": "I agree / I concur",
+        "example": "I concur with the view that public money should be spent on existing buildings.",
+        "level": "core"
+      },
+      {
+        "phrase": "Ultimately, I maintain that ...",
+        "example": "Ultimately, I maintain that bicycles are the superior choice for city travel.",
+        "level": "core"
+      },
+      {
+        "phrase": "I am convinced that ...",
+        "example": "I am convinced that annual driving tests are unnecessary.",
+        "note": "Standard.",
+        "level": "advanced"
+      },
+      {
+        "phrase": "It is clear to me that ...",
+        "example": "It is clear to me that job satisfaction matters more than salary.",
+        "note": "Standard.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Expressing opinion: neutral and cautious (hedging)",
+    "when": "Softer ways to give a view or to avoid over-generalising",
+    "applies_to": [
+      "opinion",
+      "discussion",
+      "outweigh",
+      "positive_negative",
+      "direct_question"
+    ],
+    "items": [
+      {
+        "phrase": "I believe / I think",
+        "example": "I believe that celebrating these milestones is very important for keeping families close.",
+        "level": "core"
+      },
+      {
+        "phrase": "In my opinion, / In my view,",
+        "example": "In my view, governments should invest more in public transport.",
+        "level": "core"
+      },
+      {
+        "phrase": "I admit that ...",
+        "example": "I admit that television can be educational, but most children do not watch educational programmes.",
+        "note": "Teacher's opinion list - useful for a concession.",
+        "level": "core"
+      },
+      {
+        "phrase": "I partly agree that ...",
+        "example": "I partly agree that technology has made people less sociable.",
+        "level": "core"
+      },
+      {
+        "phrase": "It could be argued that ...",
+        "example": "It could be argued that tourists who only take photos still support the local economy.",
+        "note": "Standard hedging.",
+        "level": "advanced"
+      },
+      {
+        "phrase": "tend to / are likely to / are more likely to",
+        "example": "Teenagers are more likely to fall into bad habits without steady rules.",
+        "level": "core"
+      },
+      {
+        "phrase": "may / might / can",
+        "example": "Excessive screen time may harm children's eyesight.",
+        "level": "core"
+      },
+      {
+        "phrase": "in most cases / generally / to some extent",
+        "example": "Generally, older parents are better prepared financially.",
+        "note": "Standard.",
+        "level": "core"
+      },
+      {
+        "phrase": "It seems that ... / It appears that ...",
+        "example": "It appears that social media has increased the pressure to spend on weddings.",
+        "note": "Standard.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Evaluating: positive, negative and outweigh",
+    "when": "Judging a development or comparing advantages and disadvantages",
+    "applies_to": [
+      "positive_negative",
+      "outweigh",
+      "adv_disadv",
+      "direct_question"
+    ],
+    "items": [
+      {
+        "phrase": "a highly positive / thoroughly beneficial / entirely positive development",
+        "example": "In conclusion, the transition toward remote employment is a thoroughly beneficial change for the global workforce.",
+        "level": "core"
+      },
+      {
+        "phrase": "a highly detrimental trend / a thoroughly harmful change / damaging",
+        "example": "Living alone in large cities is a highly detrimental trend for older people.",
+        "level": "core"
+      },
+      {
+        "phrase": "beneficial / advantageous / detrimental / harmful / damaging",
+        "example": "Physical punishment is a highly damaging practice.",
+        "level": "core"
+      },
+      {
+        "phrase": "outweigh",
+        "example": "The disadvantages clearly outweigh the advantages.",
+        "level": "core"
+      },
+      {
+        "phrase": "far outweigh this single drawback",
+        "example": "I believe the benefits of reduced pollution and organized infrastructure far outweigh this single drawback.",
+        "level": "core"
+      },
+      {
+        "phrase": "be (heavily) eclipsed by",
+        "example": "However, this disadvantage is heavily eclipsed by the immense rewards of cleaner residential air.",
+        "level": "advanced"
+      },
+      {
+        "phrase": "override / overshadow / be offset by",
+        "example": "The convenience of fast food is offset by its long-term health costs.",
+        "level": "advanced"
+      },
+      {
+        "phrase": "these benefits are countered by ...",
+        "example": "These benefits are countered by the loss of the physical reading experience.",
+        "level": "core"
+      },
+      {
+        "phrase": "serve as a catalyst for",
+        "example": "An extensive collection of toys can serve as a catalyst for multifaceted learning.",
+        "level": "advanced"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Solutions and recommendations",
+    "when": "Body paragraph on solutions: say WHO acts and HOW it works",
+    "applies_to": [
+      "problem_solution",
+      "cause_effect",
+      "direct_question"
+    ],
+    "items": [
+      {
+        "phrase": "The primary solution is for governments to ...",
+        "example": "The primary solution is for governments to create more jobs.",
+        "level": "core"
+      },
+      {
+        "phrase": "The second step is for ... to ...",
+        "example": "The second step is for employers to increase the basic salary.",
+        "level": "core"
+      },
+      {
+        "phrase": "Governments should ... / States must ...",
+        "example": "Finally, states must pass stricter laws to limit plastic production.",
+        "level": "core"
+      },
+      {
+        "phrase": "Governments can do this by + -ing",
+        "example": "Governments can do this by spending money to build up rural areas and smaller towns.",
+        "level": "core"
+      },
+      {
+        "phrase": "Furthermore, the government can offer ...",
+        "example": "Furthermore, the government can offer lower taxes and cheaper land to companies that open offices outside big cities.",
+        "level": "core"
+      },
+      {
+        "phrase": "When states / governments invest in ..., they ...",
+        "example": "When states invest in building schools and hospitals, they open up many positions for graduates.",
+        "level": "core"
+      },
+      {
+        "phrase": "When ..., many citizens will naturally ...",
+        "example": "When good jobs and great public services are available in the countryside, many citizens will naturally choose to move away from crowded zones.",
+        "level": "core"
+      },
+      {
+        "phrase": "teamwork between authorities and private businesses can ...",
+        "example": "Second, teamwork between authorities and private businesses can reduce plastic use by actively investing in alternative materials.",
+        "level": "core"
+      },
+      {
+        "phrase": "launch national campaigns to raise public awareness",
+        "example": "First, governments should launch national campaigns to encourage people to join environmental activities.",
+        "level": "core"
+      },
+      {
+        "phrase": "Parents must therefore ...",
+        "example": "Parents must therefore regulate screen time to ensure balanced development.",
+        "level": "core"
+      },
+      {
+        "phrase": "Society must learn to ...",
+        "example": "Society must learn to separate the true emotional value of these milestones from the commercial pressure to overspend.",
+        "level": "core"
+      },
+      {
+        "phrase": "requires immediate, combined efforts from ...",
+        "example": "Overcoming this global problem requires immediate, combined efforts from individual citizens, businesses, and governments alike.",
+        "level": "core"
+      },
+      {
+        "phrase": "It is essential / vital that ... (should) + base verb",
+        "example": "It is essential that schools teach children about healthy eating.",
+        "note": "Standard recommendation structure.",
+        "level": "advanced"
+      },
+      {
+        "phrase": "should be encouraged / required to",
+        "example": "Companies should be required to recycle their packaging.",
+        "note": "Standard.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Conclusion frames by essay type",
+    "when": "1-2 sentences: restate your position and key points in new words - no new ideas",
+    "applies_to": [
+      "opinion",
+      "discussion",
+      "adv_disadv",
+      "problem_solution",
+      "cause_effect",
+      "direct_question",
+      "outweigh",
+      "positive_negative"
+    ],
+    "items": [
+      {
+        "phrase": "In conclusion, while ..., I strongly believe that ...",
+        "example": "In conclusion, while a big salary offers clear material benefits, I strongly believe that loving your career is much more important for long-term happiness and health.",
+        "note": "Opinion essay.",
+        "level": "core"
+      },
+      {
+        "phrase": "In conclusion, ... is undoubtedly the primary threat to ...",
+        "example": "In conclusion, overpopulation is undoubtedly the primary threat to the natural world.",
+        "note": "Opinion essay (agree).",
+        "level": "core"
+      },
+      {
+        "phrase": "In conclusion, the transition toward ... is a thoroughly beneficial change for ... By ... and ..., this practice ensures that ...",
+        "example": "In conclusion, the transition toward remote employment is a thoroughly beneficial change for the global workforce. By saving valuable time on commuting and providing a less stressful environment, this practice ensures that workers enjoy better health.",
+        "note": "Positive/negative essay.",
+        "level": "core"
+      },
+      {
+        "phrase": "In conclusion, although ..., ... . Ultimately, I maintain that ... because ...",
+        "example": "In conclusion, although private cars offer superior comfort and utility for long-distance travel, they frequently contribute to urban congestion. Ultimately, I maintain that bicycles are the superior choice for city travel because they facilitate faster transit.",
+        "note": "Discussion essay.",
+        "level": "core"
+      },
+      {
+        "phrase": "In conclusion, while ... can serve as a catalyst for ..., it simultaneously ...",
+        "example": "In conclusion, while an extensive collection of toys can serve as a catalyst for multifaceted learning, it simultaneously risks children's social development.",
+        "note": "Advantages/disadvantages essay.",
+        "level": "core"
+      },
+      {
+        "phrase": "In conclusion, ... provide undeniable ...; however, these benefits are countered by ...",
+        "example": "In conclusion, e-books provide undeniable cost savings and unmatched portability; however, these benefits are countered by the loss of the physical reading experience.",
+        "note": "Advantages/disadvantages essay.",
+        "level": "core"
+      },
+      {
+        "phrase": "... mean that the disadvantages clearly outweigh the advantages.",
+        "example": "The severe risks it poses to a child's physical health and interpersonal skills mean that the disadvantages clearly outweigh the advantages.",
+        "note": "Outweigh essay (disadvantages win).",
+        "level": "core"
+      },
+      {
+        "phrase": "However, this disadvantage is heavily eclipsed by the immense rewards of ...",
+        "example": "In conclusion, segregating different urban functions introduces the undeniable challenge of longer commutes. However, this disadvantage is heavily eclipsed by the immense rewards of cleaner residential air.",
+        "note": "Outweigh essay (advantages win).",
+        "level": "core"
+      },
+      {
+        "phrase": "In conclusion, ... are the main impacts of ... today. Overcoming this global problem requires immediate, combined efforts from ...",
+        "example": "In conclusion, environmental damage and high cleanup costs are the main impacts of plastic pollution today. Overcoming this global problem requires immediate, combined efforts from individual citizens, businesses, and governments alike.",
+        "note": "Problem/solution essay.",
+        "level": "core"
+      },
+      {
+        "phrase": "In conclusion, although ... creates difficult challenges like ..., smart government actions can solve these issues.",
+        "example": "In conclusion, although overpopulation creates difficult challenges like severe air and water pollution, smart government actions can solve these issues.",
+        "note": "Problem/solution essay.",
+        "level": "core"
+      },
+      {
+        "phrase": "In conclusion, ... are the main reasons why ... This problem not only ... but also ...",
+        "example": "In conclusion, desk-bound office jobs and a lack of daily exercise are the main reasons why obesity is skyrocketing. This problem not only ruins the physical health of individuals but also places a massive financial strain on medical systems.",
+        "note": "Cause/effect essay.",
+        "level": "core"
+      },
+      {
+        "phrase": "In conclusion, a combination of ... and ... causes ... However, this issue can be solved if governments ...",
+        "example": "In conclusion, a combination of high unemployment and poor wages causes professionals to leave. However, this issue can be solved if governments improve working conditions and give experts a strong reason to stay.",
+        "note": "Cause/solution essay (teacher's template).",
+        "level": "core"
+      },
+      {
+        "phrase": "In conclusion, the shift away from ... is a direct consequence of ... Ultimately, this change is highly beneficial because ...",
+        "example": "In conclusion, the shift away from handwriting is a direct consequence of technological integration and the need for operational speed. Ultimately, this change is highly beneficial because it optimizes human productivity.",
+        "note": "Direct question essay: restate the answers to BOTH questions.",
+        "level": "core"
+      },
+      {
+        "phrase": "In conclusion, while ..., ... Society must learn to ...",
+        "example": "In conclusion, while the celebration of personal family events plays an essential role in maintaining family unity, the money spent on them has become artificially high. Society must learn to separate the true emotional value of these milestones from the commercial pressure to overspend.",
+        "note": "Direct question essay.",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Conclusion linkers",
+    "when": "First words of the final paragraph (teacher's 'Conclusion linkers')",
+    "applies_to": [
+      "opinion",
+      "discussion",
+      "adv_disadv",
+      "problem_solution",
+      "cause_effect",
+      "direct_question",
+      "outweigh",
+      "positive_negative"
+    ],
+    "items": [
+      {
+        "phrase": "In conclusion,",
+        "example": "In conclusion, physical punishment is a highly damaging practice that fails to teach children proper behavior.",
+        "level": "core"
+      },
+      {
+        "phrase": "To conclude,",
+        "example": "To conclude, the benefits of information technology far outweigh its drawbacks.",
+        "level": "core"
+      },
+      {
+        "phrase": "In summary, / To summarize,",
+        "example": "In summary, both governments and individuals have a role to play in reducing waste.",
+        "level": "core"
+      },
+      {
+        "phrase": "Ultimately, ...",
+        "example": "Ultimately, the superior method of discipline is to enforce behavioral consequences.",
+        "level": "core"
+      },
+      {
+        "phrase": "All things considered, / On balance,",
+        "example": "On balance, I believe the advantages of remote work outweigh its drawbacks.",
+        "note": "Standard alternatives.",
+        "level": "advanced"
+      }
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "writing2",
+    "category": "Linker grammar: what follows each linker",
+    "when": "Many linking mistakes are grammar mistakes - check what comes after the linker",
+    "applies_to": [
+      "opinion",
+      "discussion",
+      "adv_disadv",
+      "problem_solution",
+      "cause_effect",
+      "direct_question",
+      "outweigh",
+      "positive_negative"
+    ],
+    "items": [
+      {
+        "phrase": "Linker + comma + full sentence: However, / Furthermore, / Moreover, / Consequently, / Therefore, / For instance,",
+        "example": "However, this benefit is weak because television remains a completely passive learning medium.",
+        "level": "core"
+      },
+      {
+        "phrase": "Linker + clause (joins two clauses): while / whereas / although / even though / because / since / as",
+        "example": "It is often argued that the primary objective of international collaboration is to protect the natural environment, whereas others contend that commercial enterprises derive the greatest benefit.",
+        "level": "core"
+      },
+      {
+        "phrase": "Linker + noun / -ing (NOT a clause): despite / in spite of / due to / owing to / in addition to / as well as / in comparison with",
+        "example": "...due to the toxic gas emissions generated by daily human activities.",
+        "note": "Wrong: 'Due to people work long hours'. Right: 'Due to long working hours' / 'Because people work long hours'.",
+        "level": "core"
+      },
+      {
+        "phrase": "Linker + noun phrase + comma + result: As a result of ..., / As a consequence of ...,",
+        "example": "As a result of these low salaries, they feel unhappy.",
+        "level": "core"
+      },
+      {
+        "phrase": "Paired linkers: Not only ... but also ... / On the one hand ... On the other hand ...",
+        "example": "This problem not only ruins the physical health of individuals but also places a massive financial strain on medical systems.",
+        "level": "core"
+      },
+      {
+        "phrase": "Do not start every sentence with a linker",
+        "example": "When an employee feels genuinely excited about their duties, they invest their personal energy into finding better ways to solve problems.",
+        "note": "Use linkers where the logic changes, not in every sentence (Coherence and Cohesion).",
+        "level": "core"
+      }
+    ],
+    "source": "teacher"
+  }
+]

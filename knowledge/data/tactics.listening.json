@@ -1,0 +1,611 @@
+[
+  {
+    "skill": "listening",
+    "type": "general",
+    "title": "Listening: overall strategy",
+    "summary": "4 parts, 40 questions, about 30 minutes of audio heard ONCE. Use the reading time to predict answers, and follow the questions in order.",
+    "rule": "You hear it once: read ahead, follow in order, never stop on a miss.",
+    "quick": {
+      "do": [
+        "Reading time: limit, key words, predict types",
+        "Keep your eyes 1–2 questions ahead",
+        "Missed one? Let it go and catch the next",
+        "Use pauses to check, then read ahead"
+      ],
+      "avoid": [
+        "Writing the first thing heard: final version counts",
+        "Misspelling a word you know = wrong",
+        "Breaking the word limit"
+      ],
+      "remember": [
+        "Paper: 10 min to transfer; computer: 2 min only",
+        "Numbers in digits; no penalty → no blanks"
+      ]
+    },
+    "steps": [
+      "Know the parts: Part 1 everyday conversation (form/note/table: names, numbers, dates). Part 2 monologue (MCQ, map/plan, matching). Part 3 academic discussion (MCQ, matching, choose TWO). Part 4 lecture (note completion, one word per gap).",
+      "In the reading time before each part, read the instructions and word limit, underline the key words, and predict each answer type (number? name? plural noun?).",
+      "While listening, keep your eyes one or two questions ahead. Answers come in question order.",
+      "If you miss an answer, let it go immediately and listen for the next one. Guess at the end.",
+      "Use the pause between parts to check the section you finished quickly, then read ahead to the next part."
+    ],
+    "traps": [
+      "Stopping on a missed question and losing the next three. Always move forward.",
+      "Writing the first thing you hear. Speakers often correct themselves or reject an option. The final version counts.",
+      "Spelling: a word you know but misspell is wrong. Illustrative: writing 'accomodation' instead of 'accommodation' scores zero.",
+      "Word limit: 'ONE WORD ONLY' + a two-word answer = wrong, even if the meaning is right."
+    ],
+    "tips": [
+      "Paper test: 10 minutes at the end to transfer answers. Computer test: only 2 minutes to check, so type the answers as you go.",
+      "Write numbers as digits (2020, 429, 19). A number in digits does not count as a word.",
+      "Capital letters don't matter, but writing ALL CAPITALS on paper avoids any doubt.",
+      "Teacher's ruling: a missing article does not make an answer wrong (key 'a topic / one topic' → 'topic' is accepted). But don't add words that break the limit.",
+      "Write the word you heard, not an equivalent: when the key was 'a term', '12 weeks' was marked wrong even though the speaker also said 12 weeks.",
+      "Singular/plural: both are accepted only when the key allows it. Check the grammar around the gap ('two ____' → plural).",
+      "Never leave a blank: there is no penalty for wrong answers. Rough target: 30/40 ≈ band 7.0, 26 ≈ 6.5, 23 ≈ 6.0.",
+      "After the test, read the audioscript for every mistake and write down why (spelling, plural, distractor, word limit, didn't hear)."
+    ],
+    "example": "Illustrative: 'My postcode is GT8 2LC — no sorry, it's GT8 2LG.' → write GT82LG. The correction is the answer, copied letter by letter.",
+    "language": [
+      "Corrections: sorry, I mean…; no, wait…; actually…; let me check — oh, it's…; I tell a lie",
+      "Rejecting an option: I thought about X, but…; X would be nice, however…; that used to be the case, but now…",
+      "Moving on to the next point: right, so…; now, moving on to…; the next thing is…; finally…"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "listening",
+    "type": "form_completion",
+    "title": "Form completion",
+    "summary": "Fill in a form (booking, registration, enquiry) with personal details, numbers and short facts. Mostly Part 1.",
+    "rule": "Write the final, spelled-out version: speakers often correct themselves.",
+    "quick": {
+      "do": [
+        "Read the form title and all field labels",
+        "Predict each gap: name, number, date, price",
+        "Use filled-in fields as landmarks",
+        "Check spelling and word limit in the pause"
+      ],
+      "avoid": [
+        "Similar letters: A/E/I, B/P/V, G/J, M/N",
+        "13 vs 30, 15 vs 50; 'double five' = 55",
+        "Repeating a unit already printed (£)"
+      ],
+      "remember": [
+        "Copy codes letter by letter: GT82LC"
+      ]
+    },
+    "steps": [
+      "Read the form title and all the field labels. Imagine the conversation (a booking, a membership, a lost item).",
+      "Predict each gap: a name (spelled out), a number, a date, a postcode, a price, a time, a single noun.",
+      "Note what is already filled in. The speaker may say it as a landmark just before the next answer.",
+      "Write as you listen, then check the spelling and the word limit in the pause."
+    ],
+    "traps": [
+      "Letters that sound alike: A/E/I, B/P/V, G/J, M/N, S/F, Q/U. 'Double L' = LL.",
+      "Numbers: thirteen/thirty, fifteen/fifty (-teen is stressed at the end). 'Oh' = 0, 'double five' = 55, 'triple' = three of the same.",
+      "Corrections: the caller gives a number or date, then changes it. Write the last version.",
+      "Prices and times that changed: 'It was £20, but now it's £18' → 18.",
+      "Writing the unit when it is already printed next to the gap (£ ____ → just the number)."
+    ],
+    "tips": [
+      "Codes and postcodes: copy letter by letter, e.g. GT82LC.",
+      "Dates: 12 March or March 12 are both fine.",
+      "Practise numbers and letters dictation. The teacher posted numbers & letters practice videos for this.",
+      "A missing article doesn't make an answer wrong (teacher's ruling), but obey the word limit."
+    ],
+    "example": "Illustrative: Field 'Surname: ____'. Audio: 'It's Jamieson — J-A-M-I-E-S-O-N.' Write the spelled version, not the version you would guess from the sound.",
+    "language": [
+      "Spelling signals: that's spelled…; double S; with a Y at the end; capital…",
+      "Correction signals: sorry, I mean…; no, actually…; it was…, but it's changed to…; not X — Y"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "listening",
+    "type": "note_completion",
+    "title": "Note completion",
+    "summary": "Complete notes with words you hear. This is the most common task: Part 1 details and the whole Part 4 lecture.",
+    "rule": "Write the exact word you hear; check grammar, plural and spelling.",
+    "quick": {
+      "do": [
+        "Read the limit (Part 4: usually ONE WORD)",
+        "Use the headings to follow the talk",
+        "Predict word type and singular / plural",
+        "Listen for the words just before the gap"
+      ],
+      "avoid": [
+        "Missing plural -s after 'many' or 'two'",
+        "Writing a synonym, not the word you heard",
+        "Waiting on a gap after a new heading starts"
+      ],
+      "remember": [
+        "Part 4 has no break: read all 10 gaps first"
+      ]
+    },
+    "steps": [
+      "Read the word limit (Part 4 is usually ONE WORD ONLY).",
+      "Read the headings in the notes. They tell you the order of the talk and where you are.",
+      "For each gap predict the part of speech and form (noun singular/plural, adjective, verb) from the words around it.",
+      "Listen for the paraphrase of the words just before the gap. The answer usually comes right after.",
+      "When the speaker moves to a new heading and you still have a gap, leave it and go on."
+    ],
+    "traps": [
+      "Plural -s: 'many ____' or 'two ____' need a plural. Illustrative: the speaker says 'several metals', so writing 'metal' is wrong.",
+      "Spelling of words you know: weather, environment, necessary, government, accommodation.",
+      "Writing a synonym or equivalent instead of the word you heard. The answer must be the word in the recording.",
+      "The notes paraphrase the speech, so the word before the gap may not be the word you hear."
+    ],
+    "tips": [
+      "In Part 4 there is no break in the middle of the lecture. Read all 10 gaps in the preparation time.",
+      "Answers are usually nouns, often less common academic words. You don't need to understand them fully, just spell them correctly.",
+      "Check that the completed note makes sense grammatically."
+    ],
+    "example": "Illustrative: Note: 'Some species of ____ can survive in poor soil' (ONE WORD). Audio: '…certain types of fungus are able to live where the soil has few nutrients…' species ↔ types → fungus.",
+    "language": [
+      "Lecture signposts: first of all…; let's turn to…; another important factor is…; to sum up…; an example of this is…",
+      "Emphasis that marks an answer: what's crucial here is…; the key thing is…; in particular…"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "listening",
+    "type": "table_completion",
+    "title": "Table completion",
+    "summary": "Fill gaps in a table (e.g. options compared by price, location, features). Read the table the way the speaker will move through it.",
+    "rule": "Follow the table cell by cell as the speaker goes, usually row by row.",
+    "quick": {
+      "do": [
+        "Read column headings and row labels",
+        "Predict types from filled cells in each column",
+        "Track the next cell with your pen",
+        "Check spelling, plurals and the word limit"
+      ],
+      "avoid": [
+        "Losing your place: use the row labels",
+        "Features of another option, or 'no longer' ones",
+        "Repeating units from the column heading"
+      ],
+      "remember": [
+        "Common in Parts 1–2; answers are short"
+      ]
+    },
+    "steps": [
+      "Read the column headings and row labels. Decide whether the speaker will go row by row (usually) or column by column.",
+      "Look at the filled cells in the same column to predict the type of each answer.",
+      "Follow the table with your pen as the speaker talks, so you always know which cell is next.",
+      "Check spelling, plurals and the word limit."
+    ],
+    "traps": [
+      "Losing your place when the speaker moves to the next row. Use the row labels as landmarks.",
+      "Distractors: the speaker mentions a feature of a different option, or one that is 'no longer' available.",
+      "Units already printed in the column heading (Price (£), Time (mins)) should not be repeated."
+    ],
+    "tips": [
+      "Tables are common in Parts 1–2. The answers are short: a number, a name, one or two nouns."
+    ],
+    "example": "Illustrative: Row 'Hotel B', column 'Disadvantage', other rows say 'noisy', 'far from beach'. Audio: '…it's lovely, but the rooms are rather small…' → small rooms / small (check the limit).",
+    "language": [
+      "Contrast signals for disadvantages: but, the only problem is, the downside is, unfortunately",
+      "Next-row signals: as for…; moving on to…; the second one…; then there's…"
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "listening",
+    "type": "sentence_completion",
+    "title": "Sentence completion",
+    "summary": "Complete sentences with words from the recording, within the word limit.",
+    "rule": "Write the exact words you hear, not an equivalent meaning.",
+    "quick": {
+      "do": [
+        "Underline key words, predict the word type",
+        "Listen for a paraphrase of the sentence start",
+        "Write the exact word(s) you hear",
+        "Check grammar and the word limit"
+      ],
+      "avoid": [
+        "Wrong form: noun after 'the', verb after 'to'",
+        "Equivalents: key 'a term' ≠ '12 weeks'"
+      ],
+      "remember": [
+        "Answers follow the order of the recording"
+      ]
+    },
+    "steps": [
+      "Read each sentence and underline the key words. Predict the type of word needed.",
+      "Expect the recording to paraphrase the start of the sentence. Listen for the meaning, not the same words.",
+      "Write the exact word(s) you hear that complete the sentence grammatically.",
+      "Check that the completed sentence makes sense and fits the limit."
+    ],
+    "traps": [
+      "The word form must fit the sentence: a noun after 'the', a verb after 'to', an adjective after 'very'.",
+      "Equivalent amounts are not accepted. Write the words you heard (the '12 weeks' vs 'a term' case)."
+    ],
+    "tips": [
+      "Answers follow the order of the recording."
+    ],
+    "example": "Illustrative: 'A module takes ____.' Audio (paraphrased): the speaker says a module takes a term and also mentions twelve weeks → a term / one term / term (article optional), not '12 weeks'.",
+    "language": [
+      "Paraphrase signals: in other words; that is to say; which means"
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "listening",
+    "type": "summary_completion",
+    "title": "Summary completion",
+    "summary": "Complete a short paragraph summarising part of the talk, with your own heard words or options from a box.",
+    "rule": "With a box, match the meaning: the word you hear is rarely in the box.",
+    "quick": {
+      "do": [
+        "Check: words from the audio or a box of letters?",
+        "Read the whole summary; predict word types",
+        "Box: group the options, think of synonyms",
+        "Follow line by line as the speaker talks"
+      ],
+      "avoid": [
+        "Choosing the box word you heard",
+        "Options mentioned but rejected or linked elsewhere"
+      ],
+      "remember": [
+        "Usually Parts 3–4; answers in order"
+      ]
+    },
+    "steps": [
+      "Check whether you write words from the recording or choose letters from a box.",
+      "Read the whole summary first to get the story, then predict each gap's word type.",
+      "Box version: before the audio, group the options by type (nouns, adjectives) and note synonyms of each, because you will hear paraphrases.",
+      "Follow the summary line by line as the speaker talks."
+    ],
+    "traps": [
+      "Box version: the word you hear is usually NOT the word in the box. Match meaning.",
+      "Options mentioned by the speaker but rejected or attached to a different idea."
+    ],
+    "tips": [
+      "Usually in Parts 3–4. Answers are in order."
+    ],
+    "example": "Illustrative: Box option 'expensive'. Audio: '…the main drawback is that it costs a great deal…' → expensive.",
+    "language": [
+      "Paraphrase pairs: costs a great deal ↔ expensive; doesn't last long ↔ short-lived; hard to find ↔ rare"
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "listening",
+    "type": "flowchart_completion",
+    "title": "Flow-chart completion",
+    "summary": "Complete the stages of a process or procedure (often a research project in Part 3), with words or option letters.",
+    "rule": "Follow the speakers' final decision on each step, not their first idea.",
+    "quick": {
+      "do": [
+        "Follow the arrows before the audio",
+        "Predict each box: a noun or an action",
+        "Listen for sequence words → next stage"
+      ],
+      "avoid": [
+        "A step suggested, then changed",
+        "Steps said out of order ('before that…')"
+      ],
+      "remember": [
+        "Letter options: cross out used ones; some unused"
+      ]
+    },
+    "steps": [
+      "Follow the arrows and understand the sequence before the audio.",
+      "Predict each box: often a noun (a material, a tool) or a verb/action.",
+      "Listen for sequence words. They mark when the speaker moves to the next stage."
+    ],
+    "traps": [
+      "Two speakers may discuss a step and then change their minds ('Shall we survey first? — No, let's do the interviews first'). Follow the final decision.",
+      "Steps mentioned out of order with 'before that…'."
+    ],
+    "tips": [
+      "If the options are letters, cross out those you use. Some options are not used."
+    ],
+    "example": "Illustrative: Box: 'Analyse the ____'. Audio: 'Once we've got the questionnaires back, we'll go through the data…' → data (check if 'results' is the word used).",
+    "language": [
+      "Sequence: first, to start with, after that, once, then, the next stage, finally, before that",
+      "Change of plan: actually, let's…; no, we'd better…; on second thoughts"
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "listening",
+    "type": "short_answer",
+    "title": "Short-answer questions",
+    "summary": "Answer wh-questions with a few words from the recording.",
+    "rule": "Write only the words that answer the question, within the limit.",
+    "quick": {
+      "do": [
+        "Read the limit; underline the question word",
+        "Predict the answer type",
+        "Listen for the paraphrase; write only the answer"
+      ],
+      "avoid": [
+        "Full sentences or too many words",
+        "'Which TWO…' items can be far apart"
+      ],
+      "remember": [
+        "Numbers in digits"
+      ]
+    },
+    "steps": [
+      "Read the word limit and underline the question word (what, where, how much, which TWO).",
+      "Predict the type of answer from the question word.",
+      "Listen for the paraphrase of the question and write only the answer words."
+    ],
+    "traps": [
+      "Writing a full sentence or more words than allowed.",
+      "A list question ('Which TWO things…?') may have the items far apart in the recording."
+    ],
+    "tips": [
+      "Numbers in digits."
+    ],
+    "example": "Illustrative: Q: 'What should visitors bring?' (ONE WORD) Audio: '…it gets cold at night, so do pack a jacket…' → jacket.",
+    "language": [
+      "Advice/obligation signals: make sure you…; don't forget…; you'll need…; it's essential to…"
+    ],
+    "source": "standard"
+  },
+  {
+    "skill": "listening",
+    "type": "mcq",
+    "title": "Multiple choice (one answer)",
+    "summary": "Choose A, B or C. Usually all three are mentioned, but only one answers the question.",
+    "rule": "All options are usually mentioned; choose the one confirmed at the end.",
+    "quick": {
+      "do": [
+        "Underline stem key words + option differences",
+        "Rephrase the options in your head",
+        "Listen for the stem's idea; options follow",
+        "Mark ✓ / ✗ as each option is mentioned"
+      ],
+      "avoid": [
+        "The first option you hear (often rejected)",
+        "The option with the recording's exact words",
+        "Part 3: one suggests, the other disagrees"
+      ],
+      "remember": [
+        "Missed it? Guess, move to the next stem"
+      ]
+    },
+    "steps": [
+      "Read the stem and underline the key words. Then underline the key DIFFERENCE between the options.",
+      "Rephrase the options in your head so you can recognise paraphrases.",
+      "Listen for the stem's idea first. The options come after it.",
+      "As each option is mentioned, mark ✓ / ✗. Choose the one that is confirmed at the end, not the first one you hear."
+    ],
+    "traps": [
+      "All options are usually mentioned. The distractors are mentioned and then rejected ('I thought about…, but…').",
+      "The option that repeats the exact words of the recording is often wrong. The answer is a paraphrase.",
+      "In Part 3, one speaker suggests something and the other disagrees. The answer is what they AGREE on or what the question's person thinks.",
+      "Past vs present: 'it used to be…, but now…'."
+    ],
+    "tips": [
+      "If you missed it, make a quick guess and move straight to the next question. The next stem is your landmark.",
+      "Listen for who the question is about: 'What does the woman think…?'"
+    ],
+    "example": "Illustrative: Q: 'Where will the group meet?' A café B library C station. Audio: 'Let's meet at the café — oh, it's closed on Mondays. The library then.' → B.",
+    "language": [
+      "Rejection: but, however, actually, the trouble is, that's not really…, I'm not sure about that",
+      "Agreement (Part 3): exactly, that's a good point, I agree, yes, let's go with that",
+      "Correction: sorry, I mean…; no, wait…; or rather…"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "listening",
+    "type": "multi_select",
+    "title": "Choose TWO / THREE letters",
+    "summary": "Choose two or three options from a list (A–E or more). Each correct letter is one mark, and the letters can be in either order.",
+    "rule": "Tick only the options confirmed by the speakers' final decision.",
+    "quick": {
+      "do": [
+        "Read exactly which TWO things are asked",
+        "Underline option key words; think of synonyms",
+        "Listen to the whole section: answers far apart",
+        "Mark ✓ / ✗ / ? as each is discussed"
+      ],
+      "avoid": [
+        "Rejected options, or true for the wrong person",
+        "Negatives about wrong options ('won't be a problem')"
+      ],
+      "remember": [
+        "Any order; each letter = 1 mark",
+        "Always write two letters, even if unsure"
+      ]
+    },
+    "steps": [
+      "Read the question carefully: which TWO things are they asked about (problems? benefits? things the man will do?).",
+      "Underline the key word in each option and think of synonyms.",
+      "Listen for the whole section. The two answers can be far apart and come in any order.",
+      "Mark each option ✓ / ✗ / ? as it is discussed. Confirm with the speakers' final decision."
+    ],
+    "traps": [
+      "Most options are mentioned. Distractors are rejected, are true for the wrong person, or answer a different question.",
+      "Answers are often expressed negatively for the wrong options ('that won't be a problem')."
+    ],
+    "tips": [
+      "Letters can go in either box (IN EITHER ORDER in the answer keys).",
+      "Each letter is marked separately, so always write two letters even if you are sure of only one.",
+      "This is the third most common listening task in the practice tests, mostly in Parts 2–3."
+    ],
+    "example": "Illustrative: 'Which TWO problems did the students have?' Audio: '…finding participants was hard… the software was fine… but we ran out of time…' → participants + time. 'Software' is the distractor.",
+    "language": [
+      "Positive confirmation: the real problem was, what really helped was, the main advantage",
+      "Rejection: wasn't an issue, didn't matter, we didn't need to, that turned out to be fine"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "listening",
+    "type": "matching",
+    "title": "Matching",
+    "summary": "Match a list of items (people, places, stages) to options (opinions, features, comments). Common in Parts 2–3.",
+    "rule": "Items come in order; choose what the speaker finally says or agrees with.",
+    "quick": {
+      "do": [
+        "Note a key word or synonym next to each option",
+        "Read the items: they follow the recording",
+        "Hear the item name, then match what's said",
+        "Check: can options be used more than once?"
+      ],
+      "avoid": [
+        "The first option mentioned for an item",
+        "Waiting for the same words: expect paraphrase",
+        "Losing your place: next item name → move on"
+      ],
+      "remember": [
+        "More options than items"
+      ]
+    },
+    "steps": [
+      "Read the options (A–H) and write a short key word or synonym next to each.",
+      "Read the numbered items. They come in the order of the recording.",
+      "Listen for each item's name, then for what is said about it, and choose the option that paraphrases it.",
+      "Check the instructions: options can sometimes be used more than once, and there are more options than items."
+    ],
+    "traps": [
+      "Several options are mentioned for each item. Choose the one the speaker finally says or agrees with.",
+      "Options are paraphrased opinions, so the same words are rarely heard.",
+      "Losing your place: if the next item's name comes up, move on."
+    ],
+    "tips": [
+      "Keep your options list visible and cross out used ones (unless reuse is allowed)."
+    ],
+    "example": "Illustrative: Item 'The museum shop'. Option D 'offers a discount for students'. Audio: '…and if you show your student card at the shop, you'll pay ten per cent less…' → D.",
+    "language": [
+      "Opinion signals: I found it…; what struck me was…; to be honest…; I wasn't impressed with…",
+      "Disagreement (Part 3): I'm not sure I agree; really? I thought…; that's true, but…"
+    ],
+    "source": "mixed"
+  },
+  {
+    "skill": "listening",
+    "type": "map_labelling",
+    "title": "Map labelling",
+    "summary": "Match places to letters on a map while the speaker gives a tour or directions. Usually Part 2.",
+    "rule": "Follow the route from the start point; position words decide the letter.",
+    "quick": {
+      "do": [
+        "Find the start point and the compass",
+        "Name the labelled landmarks",
+        "Read the list of places (described in order)",
+        "Trace the route with your pen as you listen"
+      ],
+      "avoid": [
+        "Left / right from the page, not the speaker",
+        "'Just past' vs 'just before'; 'opposite' vs 'next to'",
+        "Landmarks or old locations that aren't answers"
+      ],
+      "remember": [
+        "Usually Part 2; places in question order"
+      ]
+    },
+    "steps": [
+      "In the reading time, find the starting point (entrance / 'You are here') and the compass (N is usually up).",
+      "Name the labelled landmarks. The speaker will use them to locate the answers.",
+      "Read the list of places in order. The speaker usually describes them in question order, moving around the map.",
+      "Follow the route with your finger or pen as you listen, and turn the map in your head when the speaker turns.",
+      "Listen for position phrases more than nouns: just past, opposite, before you get to, on your left."
+    ],
+    "traps": [
+      "Left/right depends on the direction the speaker is facing, not on the page. Follow the route.",
+      "'Just past' vs 'just before', 'opposite' vs 'next to'. One preposition changes the letter.",
+      "Places on the map that are not answers. The speaker may mention them as landmarks only.",
+      "Old vs new layouts: 'the café used to be here, but it has moved to…'."
+    ],
+    "tips": [
+      "Learn the teacher's map word list until you recognise it instantly (it is also useful for Writing Task 1 maps).",
+      "If you miss one place, wait for the next landmark to find your place again."
+    ],
+    "example": "Illustrative: 'As you come in through the main entrance, the reception is on your right, and just past it, opposite the lifts, is the café.' → café = the letter across from the lifts, beyond reception.",
+    "language": [
+      "Compass: north / south / east / west; northeast, northwest, southeast, southwest; the north side of",
+      "Position: in the centre of / in the middle of; above / below; inside / outside; next to; alongside; adjoining; adjacent to; behind; between; in front of; opposite / across from; on the corner; on the right-hand / left-hand side; on the same side of the road as",
+      "Route: enter via; go straight (ahead); along; turn left / right; leads off; runs alongside; at the junction; dead end; just past; a little beyond; before you get to; upon entering…, it's on the right",
+      "Location verbs: is located / situated / positioned; faces; centrally located"
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "listening",
+    "type": "plan_labelling",
+    "title": "Plan labelling (floor plan / layout)",
+    "summary": "Label rooms or areas on a building plan or site layout, usually from a guided tour in Part 2.",
+    "rule": "Walk in from the entrance with the speaker; place rooms by labelled ones.",
+    "quick": {
+      "do": [
+        "Find the entrance and the labelled rooms",
+        "Decide which way you face as you walk in",
+        "Read the room list (described in order)",
+        "Listen for positions: between, behind, next to"
+      ],
+      "avoid": [
+        "Left / right from the page, not the speaker",
+        "Rooms that are being moved or planned"
+      ],
+      "remember": [
+        "Usually a Part 2 guided tour"
+      ]
+    },
+    "steps": [
+      "Find the entrance and any labelled rooms. Decide which way you 'face' when you walk in.",
+      "Read the list of rooms to place. They are described in order.",
+      "Follow the speaker through the building: ground floor before upstairs, entrance outwards.",
+      "Listen for positions relative to labelled rooms (between the gym and reception, behind the stage)."
+    ],
+    "traps": [
+      "Left and right from the speaker's position, not from your view of the page.",
+      "Rooms that are being moved or planned ('this will be turned into…')."
+    ],
+    "tips": [
+      "Use the same map vocabulary as for maps. The teacher's examples are building plans: 'the restroom is positioned between the gym and reception', 'the seating area is adjacent to the gym'."
+    ],
+    "example": "Illustrative: 'Go through the entrance, turn left, and the classroom will be straight ahead.' → the room at the end after the left turn from the door.",
+    "language": [
+      "located in front of; faces; situated behind; positioned between; adjacent to; to the left side of; straight ahead; on your left; next to; across from",
+      "Floors: on the ground floor, upstairs, downstairs, at the back, at the front, in the far corner"
+    ],
+    "source": "teacher"
+  },
+  {
+    "skill": "listening",
+    "type": "diagram_labelling",
+    "title": "Diagram labelling",
+    "summary": "Label parts of a machine, device or process diagram with words or letters, usually in Parts 3–4.",
+    "rule": "Use the labelled parts and position words to place each answer.",
+    "quick": {
+      "do": [
+        "Study the diagram: start point, existing labels",
+        "Predict the word type (usually a noun)",
+        "Follow the description landmark by landmark"
+      ],
+      "avoid": [
+        "Catching the noun but ignoring position words",
+        "Unknown word? Write what you hear, spell it well"
+      ],
+      "remember": [
+        "Usually Parts 3–4"
+      ]
+    },
+    "steps": [
+      "Study the diagram: what is it, and what is labelled already? Find the start of the process or the top of the object.",
+      "Predict the word type (usually nouns: a part, a material).",
+      "Follow the description in order, using the labelled parts as landmarks and position words as guides."
+    ],
+    "traps": [
+      "Position words (above, attached to, underneath) decide which label it is. Don't just catch the noun.",
+      "Technical words you don't know: write what you hear and spell carefully."
+    ],
+    "tips": [
+      "If the answers are letters from a list, match meaning: the speaker may describe a part's function rather than name it."
+    ],
+    "example": "Illustrative: 'The water collects in a tank at the bottom, and from there a pipe carries it up to the filter.' → the bottom box = tank, the connecting part = pipe.",
+    "language": [
+      "Position/connection: at the top / bottom; underneath; attached to; connected to; inside; surrounding; passes through; flows into"
+    ],
+    "source": "standard"
+  }
+]

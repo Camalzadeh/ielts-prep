@@ -1,0 +1,4205 @@
+[
+  {
+    "topic": "Films",
+    "aliases": [
+      "Movies",
+      "Film you watched and enjoyed",
+      "Your least favourite movie",
+      "Cinema"
+    ],
+    "words": [
+      {
+        "term": "cinematic blockbusters",
+        "meaning": "Highly popular, expensive and commercially successful films",
+        "example": "Nowadays, I only visit the cinema occasionally, perhaps once every couple of months, to watch major cinematic blockbusters."
+      },
+      {
+        "term": "heart-wrenching storyline",
+        "meaning": "A movie plot that is terribly sad and emotional",
+        "example": "I remember being completely captivated by the vibrant colors, the iconic soundtrack, and the heart-wrenching storyline."
+      },
+      {
+        "term": "top-tier acting",
+        "meaning": "High-quality dramatic performance of the highest standard",
+        "example": "I generally gravitate toward foreign films because they offer a much wider variety of genres, larger production budgets, and top-tier acting."
+      },
+      {
+        "term": "social outing",
+        "meaning": "A fun trip taken with friends outside the house",
+        "example": "Yes, I always look forward to going to the movie theater with my friends because it turns a simple activity into a fun social outing."
+      },
+      {
+        "term": "outside distractions",
+        "meaning": "Background noises or movements breaking your focus",
+        "example": "If it is a complex, deep drama or a thriller, I prefer watching it completely solo so I can fully concentrate on the plot without any outside distractions."
+      },
+      {
+        "term": "convoluted plots",
+        "meaning": "Storylines that are incredibly complicated and hard to follow",
+        "example": "I am most drawn to psychological thrillers and mystery movies that feature complex, convoluted plots and unexpected twists."
+      },
+      {
+        "term": "fond childhood memories",
+        "meaning": "Happy, warm memories from growing up",
+        "example": "Even today, watching that movie instantly triggers a wave of fond childhood memories."
+      },
+      {
+        "term": "a box-office hit",
+        "meaning": "a film that earns a lot of money in cinemas",
+        "example": "The film was a huge box-office hit, so we had to book tickets a week in advance."
+      },
+      {
+        "term": "to binge-watch",
+        "meaning": "to watch many episodes or films one after another",
+        "example": "I sometimes binge-watch a whole series over the weekend."
+      },
+      {
+        "term": "a plot twist",
+        "meaning": "a sudden, unexpected change in the story",
+        "example": "The plot twist at the end completely took me by surprise."
+      },
+      {
+        "term": "to keep you on the edge of your seat",
+        "meaning": "to make you excited and nervous to see what happens",
+        "example": "Good thrillers keep you on the edge of your seat until the last scene."
+      },
+      {
+        "term": "the special effects",
+        "meaning": "images and sounds created artificially for a film",
+        "example": "The special effects were impressive, but the story was quite weak."
+      },
+      {
+        "term": "a streaming platform",
+        "meaning": "an online service for watching films and series",
+        "example": "These days I watch most films on streaming platforms rather than at the cinema."
+      }
+    ]
+  },
+  {
+    "topic": "Reading",
+    "aliases": [
+      "Books",
+      "Story you read recently",
+      "Book that made you happy",
+      "Stories (not confirmed)",
+      "Story or book with animals in it"
+    ],
+    "words": [
+      {
+        "term": "a page-turner",
+        "meaning": "a book so exciting you can't stop reading",
+        "example": "It was a real page-turner; I finished it in two days."
+      },
+      {
+        "term": "a bookworm",
+        "meaning": "a person who loves reading",
+        "example": "I was a real bookworm as a child and always had a book in my bag."
+      },
+      {
+        "term": "to curl up with a good book",
+        "meaning": "to sit comfortably and read",
+        "example": "On rainy evenings I love to curl up with a good book."
+      },
+      {
+        "term": "an e-reader",
+        "meaning": "a small device for reading digital books",
+        "example": "My e-reader is perfect for travelling because it's so light."
+      },
+      {
+        "term": "a paperback",
+        "meaning": "a book with a soft cover",
+        "example": "I still prefer paperbacks to e-books because I like the feel of paper."
+      },
+      {
+        "term": "to read for pleasure",
+        "meaning": "to read because you enjoy it, not for work",
+        "example": "Unfortunately, I rarely read for pleasure during exam season."
+      },
+      {
+        "term": "to broaden your vocabulary",
+        "meaning": "to learn many new words",
+        "example": "Reading novels in English really broadens your vocabulary."
+      },
+      {
+        "term": "a gripping plot",
+        "meaning": "a very exciting, interesting story",
+        "example": "The novel has a gripping plot set in Istanbul."
+      },
+      {
+        "term": "to be hooked on",
+        "meaning": "to be unable to stop doing something you enjoy",
+        "example": "I got hooked on detective novels as a teenager."
+      },
+      {
+        "term": "an audiobook",
+        "meaning": "a recording of a book being read aloud",
+        "example": "I listen to audiobooks on my way to work."
+      },
+      {
+        "term": "non-fiction",
+        "meaning": "factual books such as biographies or history",
+        "example": "These days I read mostly non-fiction, especially biographies."
+      },
+      {
+        "term": "attention span",
+        "meaning": "how long you can concentrate",
+        "example": "Some people say social media has shortened our attention span for long books."
+      }
+    ]
+  },
+  {
+    "topic": "Gifts",
+    "aliases": [
+      "Gift you want to buy",
+      "Presents"
+    ],
+    "words": [
+      {
+        "term": "a thoughtful gift",
+        "meaning": "a present chosen with care for the person",
+        "example": "The most thoughtful gift I ever got was a photo album my sister made by hand."
+      },
+      {
+        "term": "sentimental value",
+        "meaning": "importance because of memories, not price",
+        "example": "That old watch has huge sentimental value for me."
+      },
+      {
+        "term": "a token of appreciation",
+        "meaning": "a small gift to say thank you",
+        "example": "We gave our teacher flowers as a token of appreciation."
+      },
+      {
+        "term": "to splash out on",
+        "meaning": "to spend a lot of money on something",
+        "example": "I splashed out on new headphones for my brother's birthday."
+      },
+      {
+        "term": "a gift voucher / gift card",
+        "meaning": "a card that can be exchanged for goods in a shop",
+        "example": "When I'm not sure what someone likes, I give a gift voucher."
+      },
+      {
+        "term": "handmade",
+        "meaning": "made by hand, not by a machine",
+        "example": "Handmade gifts feel much more personal to me."
+      },
+      {
+        "term": "to wrap a present",
+        "meaning": "to cover a gift in decorative paper",
+        "example": "I'm terrible at wrapping presents, so I usually use a gift bag."
+      },
+      {
+        "term": "to exchange gifts",
+        "meaning": "to give each other presents",
+        "example": "In my family we exchange gifts on New Year's Eve."
+      },
+      {
+        "term": "it's the thought that counts",
+        "meaning": "the intention matters more than the gift",
+        "example": "Even if a present is cheap, it's the thought that counts."
+      },
+      {
+        "term": "a surprise",
+        "meaning": "something unexpected",
+        "example": "Planning a surprise for my mother's birthday took weeks."
+      },
+      {
+        "term": "materialistic",
+        "meaning": "caring too much about money and possessions",
+        "example": "Some people say gift-giving has become too materialistic."
+      },
+      {
+        "term": "to treat someone (to something)",
+        "meaning": "to buy something nice for someone",
+        "example": "I treated my parents to dinner at a nice restaurant."
+      }
+    ]
+  },
+  {
+    "topic": "Mirrors",
+    "aliases": [
+      "Mirror"
+    ],
+    "words": [
+      {
+        "term": "look presentable",
+        "meaning": "To appear clean, neat, and nice enough for other people to see you",
+        "example": "Throughout the day, I might quickly glance at one to make sure I look presentable."
+      },
+      {
+        "term": "personal grooming",
+        "meaning": "The practice of cleaning and making your physical appearance neat",
+        "example": "Besides its main use for personal grooming and checking your look, a mirror has a few design functions too."
+      },
+      {
+        "term": "full-length mirror",
+        "meaning": "A tall mirror that shows your entire body",
+        "example": "Yes, I recently bought a big, full-length mirror for my bedroom during a home renovation."
+      },
+      {
+        "term": "fitting room",
+        "meaning": "A small private cubicle in a clothing store",
+        "example": "Absolutely, I would never buy clothes without checking how they look in a fitting room mirror first."
+      },
+      {
+        "term": "practical necessity",
+        "meaning": "Something done because it is useful and required, not for vanity",
+        "example": "I wouldn't say I am obsessed with my appearance, but I use mirrors out of practical necessity."
+      },
+      {
+        "term": "reflect the light",
+        "meaning": "To bounce light back from a surface",
+        "example": "When you put them opposite a window, they reflect the light and make a small space look much bigger."
+      },
+      {
+        "term": "stylish touch",
+        "meaning": "A small elegant or fashionable detail",
+        "example": "Plus, a mirror with a pretty frame adds a stylish touch to an empty wall."
+      },
+      {
+        "term": "pocket mirror",
+        "meaning": "A tiny mirror you carry in your clothes or bag",
+        "example": "No, I rarely carry a pocket mirror with me when I go out."
+      },
+      {
+        "term": "front-facing camera",
+        "meaning": "The camera on a phone that points toward the user",
+        "example": "Since modern smartphones have front-facing cameras that work perfectly for checking how I look, a real mirror is not necessary."
+      },
+      {
+        "term": "home renovation",
+        "meaning": "Improving or repairing a house/apartment",
+        "example": "Yes, I recently bought a big, full-length mirror for my bedroom during a home renovation."
+      },
+      {
+        "term": "to check your reflection",
+        "meaning": "to look at yourself in a mirror",
+        "example": "I always check my reflection quickly before leaving the house."
+      },
+      {
+        "term": "to make a room look bigger",
+        "meaning": "to create the impression of more space",
+        "example": "A large mirror makes a small hallway look bigger."
+      }
+    ]
+  },
+  {
+    "topic": "Clothes",
+    "aliases": [
+      "Shoes",
+      "Fashion",
+      "Clothing",
+      "Shoes (duplicate of earlier photo)"
+    ],
+    "words": [
+      {
+        "term": "go-to option",
+        "meaning": "Your first and most reliable choice for a quick decision",
+        "example": "They are my ultimate go-to option because they offer unbeatable comfort and are incredibly easy to style."
+      },
+      {
+        "term": "smart-casual attire",
+        "meaning": "Neat clothing blending professional and casual items",
+        "example": "I am a huge advocate for smart-casual attire that seamlessly blends comfort with a polished appearance."
+      },
+      {
+        "term": "timeless appeal",
+        "meaning": "Staying attractive and popular forever, despite changing trends",
+        "example": "Overall, muted colors dominate my daily fashion choices because they offer a timeless appeal."
+      },
+      {
+        "term": "unmatched versatility",
+        "meaning": "Being incredibly adaptable for many situations",
+        "example": "I genuinely love wearing T-shirts, primarily because of the unmatched versatility they bring to daily fashion."
+      },
+      {
+        "term": "professional dress code",
+        "meaning": "Formal workplace rules dictating smart clothing",
+        "example": "During weekdays, I adhere to a more structured, professional dress code to maintain a business-ready appearance for meetings and office tasks."
+      },
+      {
+        "term": "runway trends",
+        "meaning": "Latest fashion ideas showcased by models at designer shows",
+        "example": "Today, color preferences are dictated far more by individual personality, unique style, and current runway trends rather than gender."
+      },
+      {
+        "term": "understated style",
+        "meaning": "An elegant fashion style that is subtle and not flashy",
+        "example": "For me, they represent the ultimate balance between comfort and understated style."
+      },
+      {
+        "term": "restrictive clothing",
+        "meaning": "Tight or stiff clothes limiting physical movement",
+        "example": "You would never catch me wearing overly formal, restrictive clothing like full three-piece suits or stiff tuxedos unless it is an absolute requirement for an event."
+      },
+      {
+        "term": "to dress up / dress down",
+        "meaning": "to wear formal / casual clothes",
+        "example": "I only dress up for weddings; the rest of the time I dress down."
+      },
+      {
+        "term": "comfortable trainers",
+        "meaning": "soft sports shoes for daily wear",
+        "example": "I live in comfortable trainers because I walk a lot."
+      },
+      {
+        "term": "to keep up with the latest trends",
+        "meaning": "to follow what is fashionable now",
+        "example": "I don't really try to keep up with the latest trends."
+      },
+      {
+        "term": "fast fashion",
+        "meaning": "cheap clothes produced quickly, often harmful to the environment",
+        "example": "I try to avoid fast fashion because the clothes fall apart quickly."
+      },
+      {
+        "term": "to suit someone",
+        "meaning": "to look good on someone",
+        "example": "Bright colours don't really suit me, so I stick to navy and grey."
+      }
+    ]
+  },
+  {
+    "topic": "Cities",
+    "aliases": [
+      "City you visited that you liked",
+      "City you've been to and want to visit again",
+      "City life",
+      "Urban life"
+    ],
+    "words": [
+      {
+        "term": "a bustling metropolis",
+        "meaning": "a big, busy city",
+        "example": "Istanbul is a bustling metropolis that never seems to sleep."
+      },
+      {
+        "term": "urban sprawl",
+        "meaning": "the spread of a city into the surrounding countryside",
+        "example": "Urban sprawl has swallowed many villages around the capital."
+      },
+      {
+        "term": "the cost of living",
+        "meaning": "how much money you need for basic expenses",
+        "example": "The cost of living in big cities has risen sharply."
+      },
+      {
+        "term": "infrastructure",
+        "meaning": "basic systems such as roads, transport and power",
+        "example": "Good infrastructure makes city life much easier."
+      },
+      {
+        "term": "green spaces",
+        "meaning": "parks and areas with grass and trees",
+        "example": "Cities need more green spaces where people can relax."
+      },
+      {
+        "term": "a commercial hub",
+        "meaning": "a centre for business and trade",
+        "example": "The city has become a commercial hub for the whole region."
+      },
+      {
+        "term": "to be overcrowded",
+        "meaning": "to have too many people",
+        "example": "The city centre is overcrowded during the holiday season."
+      },
+      {
+        "term": "rush hour",
+        "meaning": "the busiest time for traffic",
+        "example": "I avoid driving during rush hour because the roads are jammed."
+      },
+      {
+        "term": "a vibrant nightlife",
+        "meaning": "lots of evening entertainment",
+        "example": "Young people love the city for its vibrant nightlife."
+      },
+      {
+        "term": "residential area",
+        "meaning": "a part of a city where people live",
+        "example": "I live in a quiet residential area away from the centre."
+      },
+      {
+        "term": "high-rise buildings",
+        "meaning": "very tall apartment or office blocks",
+        "example": "The skyline is now full of high-rise buildings."
+      },
+      {
+        "term": "to move to the city",
+        "meaning": "to relocate from a rural area",
+        "example": "Many young people move to the city to find work."
+      }
+    ]
+  },
+  {
+    "topic": "Travelling",
+    "aliases": [
+      "Traveling",
+      "Travelling, rest",
+      "Travel",
+      "Place you'd like to visit in your free time",
+      "Place you've travelled to that you'd like to recommend to others",
+      "Working abroad, travelling",
+      "Trip by bike, car or motorbike you want to have",
+      "Holidays"
+    ],
+    "words": [
+      {
+        "term": "to get away from it all",
+        "meaning": "to take a holiday to escape a busy routine",
+        "example": "Every summer we go to the mountains to get away from it all."
+      },
+      {
+        "term": "to recharge one's batteries",
+        "meaning": "to regain energy after hard work",
+        "example": "A week by the sea is the best way to recharge my batteries."
+      },
+      {
+        "term": "a hidden gem",
+        "meaning": "a beautiful place that few people know about",
+        "example": "The village is a hidden gem that most tourists never find."
+      },
+      {
+        "term": "breathtaking views",
+        "meaning": "extremely beautiful sights",
+        "example": "The hotel had breathtaking views over the lake."
+      },
+      {
+        "term": "to broaden one's horizons",
+        "meaning": "to expand your knowledge and experience",
+        "example": "Travelling abroad really broadens your horizons."
+      },
+      {
+        "term": "picturesque scenery",
+        "meaning": "very attractive natural views",
+        "example": "The drive along the coast has picturesque scenery the whole way."
+      },
+      {
+        "term": "to escape the hustle and bustle",
+        "meaning": "to get away from noisy, busy life",
+        "example": "People go to the countryside to escape the hustle and bustle of the city."
+      },
+      {
+        "term": "to wander around",
+        "meaning": "to walk slowly with no fixed direction",
+        "example": "I love wandering around old towns without a map."
+      },
+      {
+        "term": "a tourist trap",
+        "meaning": "a place full of tourists, overpriced and not authentic",
+        "example": "The main square is a bit of a tourist trap, so we ate in a side street."
+      },
+      {
+        "term": "off the beaten track",
+        "meaning": "far from popular tourist areas",
+        "example": "I prefer places off the beaten track."
+      },
+      {
+        "term": "domestic travel",
+        "meaning": "travelling within your own country",
+        "example": "Domestic travel is cheaper and avoids visa problems."
+      },
+      {
+        "term": "to travel light",
+        "meaning": "to travel with very little luggage",
+        "example": "I always travel light, just one backpack."
+      },
+      {
+        "term": "jet lag",
+        "meaning": "tiredness after a long flight across time zones",
+        "example": "I had terrible jet lag for three days after the trip."
+      }
+    ]
+  },
+  {
+    "topic": "Getting up early",
+    "aliases": [
+      "Topic 3 - Getting up early",
+      "Morning routines",
+      "Morning time",
+      "An occasion when you got up extremely early"
+    ],
+    "words": [
+      {
+        "term": "sustained energy",
+        "meaning": "Long-lasting power and stamina that doesn't drop quickly",
+        "example": "Eating a wholesome breakfast provides the essential nutrients and sustained energy needed to fuel my brain and body for the morning ahead."
+      },
+      {
+        "term": "leisurely brunch",
+        "meaning": "A late morning meal eaten in a slow, unhurried way",
+        "example": "Conversely, Saturday and Sunday mornings are dedicated to relaxation, allowing me to sleep in late, indulge in a leisurely brunch, and read a book."
+      },
+      {
+        "term": "stretching exercises",
+        "meaning": "Physical movements designed to elongate muscles and wake up the body",
+        "example": "As soon as my alarm rings, I kickstart my morning by hydrating with a tall glass of water and doing some light stretching exercises."
+      },
+      {
+        "term": "mentally organized",
+        "meaning": "Feeling clear-headed and structured in thoughts",
+        "example": "I find that when I manage to get a head start on the day, I feel significantly less rushed and much more mentally organized."
+      },
+      {
+        "term": "morning person",
+        "meaning": "Someone functioning best during early day hours",
+        "example": "I am constantly trying to adjust my sleep schedule to become a more consistent morning person."
+      },
+      {
+        "term": "at the crack of dawn",
+        "meaning": "at the very first light of day",
+        "example": "We had to leave at the crack of dawn to catch the first flight."
+      },
+      {
+        "term": "an early riser",
+        "meaning": "a person who enjoys waking up early",
+        "example": "My father is an early riser; he's up at five every day."
+      },
+      {
+        "term": "a night owl",
+        "meaning": "someone who prefers staying up late",
+        "example": "I'm a night owl, so getting up early is a real struggle."
+      },
+      {
+        "term": "to hit the snooze button",
+        "meaning": "to delay the alarm for a few more minutes",
+        "example": "I hit the snooze button three times this morning."
+      },
+      {
+        "term": "bright and early",
+        "meaning": "very early in the morning, feeling fresh",
+        "example": "We set off bright and early to avoid the traffic."
+      },
+      {
+        "term": "productive window",
+        "meaning": "a time with high focus",
+        "example": "The first two hours of the morning are my most productive window."
+      },
+      {
+        "term": "lethargic",
+        "meaning": "lacking energy, sluggish",
+        "example": "If I sleep less than six hours, I feel lethargic all day."
+      },
+      {
+        "term": "rejuvenated",
+        "meaning": "completely refreshed",
+        "example": "After a good night's sleep I wake up feeling rejuvenated."
+      },
+      {
+        "term": "the early bird catches the worm",
+        "meaning": "those who start early succeed",
+        "example": "My grandmother always says the early bird catches the worm."
+      }
+    ]
+  },
+  {
+    "topic": "Intelligence",
+    "aliases": [
+      "AI, talents",
+      "Clever people",
+      "Being smart"
+    ],
+    "words": [
+      {
+        "term": "quick-witted",
+        "meaning": "able to think and respond quickly",
+        "example": "My best friend is very quick-witted and always has a clever reply."
+      },
+      {
+        "term": "emotional intelligence",
+        "meaning": "the ability to understand your own and other people's feelings",
+        "example": "Good leaders need emotional intelligence, not just knowledge."
+      },
+      {
+        "term": "street-smart",
+        "meaning": "good at dealing with real-life situations",
+        "example": "My cousin isn't academic, but he's very street-smart."
+      },
+      {
+        "term": "a natural talent",
+        "meaning": "an ability you are born with",
+        "example": "She has a natural talent for languages."
+      },
+      {
+        "term": "IQ",
+        "meaning": "a score measuring intelligence",
+        "example": "I don't think an IQ score shows how successful someone will be."
+      },
+      {
+        "term": "to think outside the box",
+        "meaning": "to think creatively and differently",
+        "example": "Intelligent people often think outside the box."
+      },
+      {
+        "term": "problem-solving skills",
+        "meaning": "the ability to find solutions",
+        "example": "Chess is great for developing problem-solving skills."
+      },
+      {
+        "term": "nature versus nurture",
+        "meaning": "whether ability comes from genes or upbringing",
+        "example": "The nature versus nurture debate is still open."
+      },
+      {
+        "term": "gifted",
+        "meaning": "having exceptional ability",
+        "example": "Gifted children sometimes get bored at school."
+      },
+      {
+        "term": "common sense",
+        "meaning": "practical good judgement",
+        "example": "Book knowledge is useless without common sense."
+      },
+      {
+        "term": "to pick things up quickly",
+        "meaning": "to learn fast",
+        "example": "Some kids just pick things up quickly."
+      },
+      {
+        "term": "a know-it-all",
+        "meaning": "someone who acts as if they know everything",
+        "example": "Nobody likes a know-it-all in a team."
+      }
+    ]
+  },
+  {
+    "topic": "Hometown and Countryside",
+    "aliases": [
+      "Hometown, area you live in",
+      "Hometown",
+      "Countryside",
+      "Where you live"
+    ],
+    "words": [
+      {
+        "term": "coastal city",
+        "meaning": "A city located next to the ocean",
+        "example": "My hometown is a lively coastal city in the south of my country, famous for its big port and beautiful beaches."
+      },
+      {
+        "term": "medium-sized city",
+        "meaning": "A city that is not tiny but not huge",
+        "example": "I would say it is a medium-sized city that is growing very fast because of new businesses."
+      },
+      {
+        "term": "commercial hub",
+        "meaning": "A center for business, trade, and shopping",
+        "example": "Watching the city change from a quiet town into a busy commercial hub has been very interesting."
+      },
+      {
+        "term": "childhood memories",
+        "meaning": "Things you remember from when you were a child",
+        "example": "Absolutely, I love my hometown because it is where I grew up and made my best childhood memories."
+      },
+      {
+        "term": "city convenience",
+        "meaning": "The ease of living near stores, transport, and services",
+        "example": "I really like the balance it offers between city convenience and natural beauty."
+      },
+      {
+        "term": "natural beauty",
+        "meaning": "The beautiful scenery of nature (trees, water, hills)",
+        "example": "I really like the balance it offers between city convenience and natural beauty."
+      },
+      {
+        "term": "settle permanently",
+        "meaning": "To move to a place to live there for the rest of your life",
+        "example": "However, I am pretty sure I will come back here to settle permanently in the future."
+      },
+      {
+        "term": "peace and quiet",
+        "meaning": "A calm and silent environment",
+        "example": "Later in life, though, the peace and quiet of a village would be a great change."
+      },
+      {
+        "term": "slow pace",
+        "meaning": "A gentle or unhurried speed of life",
+        "example": "Cities are full of fast-moving traffic, noise, and modern facilities, while the countryside offers a slow pace and clean air."
+      },
+      {
+        "term": "fresh produce",
+        "meaning": "Freshly harvested fruits, vegetables, and grains",
+        "example": "I also really enjoy buying fresh produce like fruits and vegetables directly from local farmers."
+      },
+      {
+        "term": "noisy city life",
+        "meaning": "The loud and hectic environment of an urban area",
+        "example": "Yes, I make an effort to visit countryside villages whenever I need a break from the noisy city life."
+      },
+      {
+        "term": "cultural festival",
+        "meaning": "A celebration focused on the traditions and arts of a place",
+        "example": "We are also well-known for hosting a big cultural festival every year with local music, art, and street food."
+      },
+      {
+        "term": "to put down roots",
+        "meaning": "to settle somewhere permanently",
+        "example": "My family put down roots here three generations ago."
+      },
+      {
+        "term": "rural / urban",
+        "meaning": "relating to the countryside / to cities",
+        "example": "Rural areas have cleaner air, but urban areas have more jobs."
+      }
+    ]
+  },
+  {
+    "topic": "Happiness",
+    "aliases": [
+      "Smiling",
+      "Happy person",
+      "Occasion when many people were smiling"
+    ],
+    "words": [
+      {
+        "term": "over the moon",
+        "meaning": "extremely happy",
+        "example": "I was over the moon when I got my exam results."
+      },
+      {
+        "term": "content",
+        "meaning": "quietly satisfied",
+        "example": "My grandparents seem content with a simple life."
+      },
+      {
+        "term": "peace of mind",
+        "meaning": "a feeling of calm and security",
+        "example": "Having savings gives me peace of mind."
+      },
+      {
+        "term": "a sense of fulfilment",
+        "meaning": "the feeling that you have achieved something worthwhile",
+        "example": "Volunteering gives me a real sense of fulfilment."
+      },
+      {
+        "term": "to put a smile on someone's face",
+        "meaning": "to make someone happy",
+        "example": "My niece always puts a smile on my face."
+      },
+      {
+        "term": "well-being",
+        "meaning": "health and happiness",
+        "example": "Spending time outdoors is good for your well-being."
+      },
+      {
+        "term": "to look on the bright side",
+        "meaning": "to be positive in a bad situation",
+        "example": "My mum always tries to look on the bright side."
+      },
+      {
+        "term": "money can't buy happiness",
+        "meaning": "wealth does not guarantee happiness",
+        "example": "I agree that money can't buy happiness, but it helps."
+      },
+      {
+        "term": "cheerful",
+        "meaning": "noticeably happy and positive",
+        "example": "She's the most cheerful person I know."
+      },
+      {
+        "term": "to share a laugh",
+        "meaning": "to laugh together",
+        "example": "We shared a laugh about our old school photos."
+      },
+      {
+        "term": "a contagious smile",
+        "meaning": "a smile that makes others smile too",
+        "example": "The baby had such a contagious smile."
+      },
+      {
+        "term": "life satisfaction",
+        "meaning": "how happy people are with their life overall",
+        "example": "Life satisfaction is often higher in countries with strong communities."
+      }
+    ]
+  },
+  {
+    "topic": "Home and Accommodation",
+    "aliases": [
+      "Home",
+      "Visiting others, accommodation",
+      "Home you like but don't want to live in",
+      "Place in your home where you can relax"
+    ],
+    "words": [
+      {
+        "term": "residential neighborhood",
+        "meaning": "An area of a town where people live, not where businesses are",
+        "example": "I live in a modern apartment located in a very safe and convenient residential neighborhood."
+      },
+      {
+        "term": "prime location",
+        "meaning": "An excellent, central, or highly valued location",
+        "example": "The thing I like most about my apartment is its prime location, which makes going to work very easy."
+      },
+      {
+        "term": "high-rise building",
+        "meaning": "A very tall apartment or office tower",
+        "example": "This type of high-rise building is very common here because city land is limited."
+      },
+      {
+        "term": "spacious house",
+        "meaning": "A home with plenty of room inside",
+        "example": "Personally, I prefer living in a spacious house rather than a small apartment."
+      },
+      {
+        "term": "storage space",
+        "meaning": "Room or closets used for keeping extra items",
+        "example": "The biggest problem with my current apartment is the lack of storage space for extra belongings."
+      },
+      {
+        "term": "plenty of sunlight",
+        "meaning": "A large amount of natural light from the sun",
+        "example": "The flat has an open design with big windows that let in plenty of sunlight during the day."
+      },
+      {
+        "term": "open design",
+        "meaning": "A layout with fewer walls separating rooms",
+        "example": "The flat has an open design with big windows that let in plenty of sunlight during the day."
+      },
+      {
+        "term": "family bonding",
+        "meaning": "The process of family members becoming closer by spending time together",
+        "example": "It has a big, comfortable couch and a television, making it the perfect spot for family bonding."
+      },
+      {
+        "term": "block out noise",
+        "meaning": "To stop sounds from entering a room",
+        "example": "The walls are also thick enough to block out noise from the busy city traffic outside."
+      },
+      {
+        "term": "remodel the kitchen",
+        "meaning": "To renovate or change the design of the kitchen",
+        "example": "If I had the chance, I would love to remodel the kitchen to make it bigger and more open."
+      },
+      {
+        "term": "to rent a flat",
+        "meaning": "to pay money to live in an apartment",
+        "example": "Most students in my city rent a flat with friends."
+      },
+      {
+        "term": "cosy",
+        "meaning": "warm, comfortable and relaxing",
+        "example": "My bedroom is small but really cosy."
+      },
+      {
+        "term": "to feel at home",
+        "meaning": "to feel relaxed and comfortable somewhere",
+        "example": "My aunt always makes guests feel at home."
+      }
+    ]
+  },
+  {
+    "topic": "Teachers",
+    "aliases": [
+      "Teaching, learning",
+      "Course that impressed you",
+      "Person who taught you a skill"
+    ],
+    "words": [
+      {
+        "term": "patience required",
+        "meaning": "The amount of calm endurance needed for a task",
+        "example": "To be completely honest, I don't think I have the patience required to be a teacher."
+      },
+      {
+        "term": "managing a classroom",
+        "meaning": "Controlling and organizing students in a lessons room",
+        "example": "While I respect the profession, managing a classroom full of noisy kids sounds very stressful to me."
+      },
+      {
+        "term": "complex concepts",
+        "meaning": "Difficult or advanced ideas",
+        "example": "If I really had to do it, I think I could teach well because I am good at explaining complex concepts simply."
+      },
+      {
+        "term": "infectious enthusiasm",
+        "meaning": "Excitement that quickly spreads to other people",
+        "example": "Her infectious enthusiasm for the subject completely changed the way I look at reading and writing."
+      },
+      {
+        "term": "provide guidance",
+        "meaning": "To give helpful advice or instruction to someone",
+        "example": "Whenever I had trouble writing essays, she would stay after class to provide guidance and fix my mistakes."
+      },
+      {
+        "term": "unique approach",
+        "meaning": "A special or distinct method of doing something",
+        "example": "She had a unique approach to making old classic books feel exciting and meaningful to teenagers."
+      },
+      {
+        "term": "emotional strength",
+        "meaning": "Mental resilience to handle stress and feelings",
+        "example": "Being a good teacher requires a lot of emotional strength that I don't have yet."
+      },
+      {
+        "term": "to inspire students",
+        "meaning": "to make students want to learn",
+        "example": "The best teachers inspire students rather than just give information."
+      },
+      {
+        "term": "a strict teacher",
+        "meaning": "a teacher who enforces rules firmly",
+        "example": "Our maths teacher was strict, but very fair."
+      },
+      {
+        "term": "rote learning",
+        "meaning": "learning by repeating, not understanding",
+        "example": "Our school relied too much on rote learning."
+      },
+      {
+        "term": "to bring a subject to life",
+        "meaning": "to make a subject interesting",
+        "example": "She brought history to life with stories."
+      },
+      {
+        "term": "a role model",
+        "meaning": "someone people admire and copy",
+        "example": "A good teacher can be a role model for life."
+      }
+    ]
+  },
+  {
+    "topic": "Tidiness",
+    "aliases": [
+      "Organising things, being organized",
+      "Being organised",
+      "Very organized person",
+      "Cleaning"
+    ],
+    "words": [
+      {
+        "term": "proper place",
+        "meaning": "The correct or designated spot for an item",
+        "example": "When everything is in its proper place, I don't waste time looking for lost keys or papers."
+      },
+      {
+        "term": "thorough cleaning",
+        "meaning": "A deep and complete tidy-up",
+        "example": "I also do a thorough cleaning session once a month to throw away or donate items I don't need anymore."
+      },
+      {
+        "term": "donate items",
+        "meaning": "To give belongings for free to help charities or poor people",
+        "example": "I also do a thorough cleaning session once a month to throw away or donate items I don't need anymore."
+      },
+      {
+        "term": "storage boxes",
+        "meaning": "Containers used for organizing goods",
+        "example": "Using plastic storage boxes also helps keep the mess away."
+      },
+      {
+        "term": "clear mind",
+        "meaning": "A peaceful mental state free of worry",
+        "example": "Yes, keeping my room organized gives me a clear mind and helps me feel in control."
+      },
+      {
+        "term": "random objects",
+        "meaning": "Unspecified, mixed items cluttering a space",
+        "example": "I find it hard to focus or relax when my desk or room is messy and full of random objects."
+      },
+      {
+        "term": "low priority",
+        "meaning": "Something that is not urgent or highly important",
+        "example": "When people are dealing with heavy workloads or family emergencies, cleaning a room becomes a low priority."
+      },
+      {
+        "term": "clutter",
+        "meaning": "untidy things lying around",
+        "example": "I can't concentrate when there's clutter on my desk."
+      },
+      {
+        "term": "to declutter",
+        "meaning": "to remove things you don't need",
+        "example": "I declutter my wardrobe every spring."
+      },
+      {
+        "term": "neat and tidy",
+        "meaning": "well organised and clean",
+        "example": "I like to keep my room neat and tidy."
+      },
+      {
+        "term": "a neat freak",
+        "meaning": "someone obsessed with tidiness",
+        "example": "My flatmate is a bit of a neat freak."
+      },
+      {
+        "term": "messy",
+        "meaning": "untidy",
+        "example": "My brother's room is always messy."
+      },
+      {
+        "term": "to tidy up",
+        "meaning": "to put things in order",
+        "example": "I tidy up before guests arrive."
+      }
+    ]
+  },
+  {
+    "topic": "Shopping",
+    "aliases": [
+      "Service, shopping",
+      "Street markets",
+      "Shopping mall",
+      "Item on which you spent more than expected",
+      "Good service"
+    ],
+    "words": [
+      {
+        "term": "physical stores",
+        "meaning": "Brick-and-mortar retail shops you can physically walk into",
+        "example": "However, I prefer online shopping over going to physical stores because it helps me avoid crowded places and long lines."
+      },
+      {
+        "term": "budget-conscious",
+        "meaning": "Careful with spending money",
+        "example": "Yes, I am a very budget-conscious shopper, so I always check prices across different stores before buying."
+      },
+      {
+        "term": "best value",
+        "meaning": "The most optimal benefit or quality for the price paid",
+        "example": "Doing this extra research ensures that I always get the best value for my money."
+      },
+      {
+        "term": "positive reviews",
+        "meaning": "Good comments or star-ratings left by previous buyers",
+        "example": "When I see dozens of items that look the same and have positive reviews, picking just one is very hard."
+      },
+      {
+        "term": "household items",
+        "meaning": "Goods used inside a home (like cleaning spray or soap)",
+        "example": "I usually go on a big shopping trip about once a month, mostly to buy clothes or household items."
+      },
+      {
+        "term": "basic groceries",
+        "meaning": "Essential food items needed for cooking (like milk, bread, or eggs)",
+        "example": "For basic groceries and fresh food, I make quick visits to the local supermarket every week."
+      },
+      {
+        "term": "too many options",
+        "meaning": "An overwhelming variety of choices",
+        "example": "I have to admit that I often find it hard to choose because stores offer too many options available."
+      },
+      {
+        "term": "impulse buying",
+        "meaning": "buying things without planning",
+        "example": "Sales encourage impulse buying."
+      },
+      {
+        "term": "to shop around",
+        "meaning": "to compare prices in different shops",
+        "example": "I always shop around before buying electronics."
+      },
+      {
+        "term": "a bargain",
+        "meaning": "something bought cheaply",
+        "example": "I got this jacket for half price; it was a real bargain."
+      },
+      {
+        "term": "window shopping",
+        "meaning": "looking in shops without buying",
+        "example": "On Sundays we sometimes go window shopping."
+      },
+      {
+        "term": "customer service",
+        "meaning": "the help a shop gives buyers",
+        "example": "Good customer service makes me return to a shop."
+      },
+      {
+        "term": "to haggle",
+        "meaning": "to argue about a price",
+        "example": "In street markets it's normal to haggle."
+      }
+    ]
+  },
+  {
+    "topic": "Cars",
+    "aliases": [
+      "Driving",
+      "Car"
+    ],
+    "words": [
+      {
+        "term": "heavy traffic",
+        "meaning": "A massive number of cars moving very slowly on a road",
+        "example": "Whenever I get stuck in heavy traffic, I pass the time by listening to interesting podcasts or audiobooks."
+      },
+      {
+        "term": "prevent accidents",
+        "meaning": "To stop vehicle crashes or mishaps from happening",
+        "example": "From a safety perspective, bright colors are much easier to see on the road at night, which can help prevent accidents."
+      },
+      {
+        "term": "safety perspective",
+        "meaning": "Looking at a situation from a viewpoint of avoiding danger",
+        "example": "From a safety perspective, bright colors are much easier to see on the road at night, which can help prevent accidents."
+      },
+      {
+        "term": "advanced technology",
+        "meaning": "Highly modern, cutting-edge engineering or electronic tools",
+        "example": "I like electric vehicles because they protect the environment, run quietly, and have advanced technology."
+      },
+      {
+        "term": "protect the environment",
+        "meaning": "To act in ways that keep nature clean and safe",
+        "example": "I like electric vehicles because they protect the environment, run quietly, and have advanced technology."
+      },
+      {
+        "term": "passenger seat",
+        "meaning": "The car seat where you ride without driving",
+        "example": "I much prefer sitting in the passenger seat because I can relax without the stress of driving through busy traffic."
+      },
+      {
+        "term": "neutral colors",
+        "meaning": "Non-vivid colors like white, black, or gray",
+        "example": "Plus, neutral colors are usually easier to sell later on."
+      },
+      {
+        "term": "pass the time",
+        "meaning": "To do something to make waiting hours go faster",
+        "example": "Whenever I get stuck in heavy traffic, I pass the time by listening to interesting podcasts or audiobooks."
+      },
+      {
+        "term": "to get a driving licence",
+        "meaning": "to pass the test that allows you to drive",
+        "example": "I got my driving licence when I was eighteen."
+      },
+      {
+        "term": "fuel-efficient",
+        "meaning": "using little petrol",
+        "example": "I'd choose a small, fuel-efficient car for the city."
+      },
+      {
+        "term": "an electric vehicle (EV)",
+        "meaning": "a car powered by a battery",
+        "example": "Electric vehicles are becoming popular in my country."
+      },
+      {
+        "term": "to give someone a lift",
+        "meaning": "to drive someone somewhere",
+        "example": "My neighbour gives me a lift to work when it rains."
+      },
+      {
+        "term": "a road trip",
+        "meaning": "a long journey by car for pleasure",
+        "example": "My dream is a road trip along the coast."
+      }
+    ]
+  },
+  {
+    "topic": "Music",
+    "aliases": [
+      "Singing",
+      "Headphones",
+      "Music events",
+      "Music event you didn't like"
+    ],
+    "words": [
+      {
+        "term": "overall mood",
+        "meaning": "The general emotional state of a person",
+        "example": "Yes, fast and cheerful songs have an immediate positive effect on my overall mood."
+      },
+      {
+        "term": "emotional state",
+        "meaning": "A person's mood or feelings at a specific time",
+        "example": "My choice in music changes a lot depending on my emotional state and the time of day."
+      },
+      {
+        "term": "alleviate stress",
+        "meaning": "to reduce stress",
+        "example": "Singing in the car really helps me alleviate stress."
+      },
+      {
+        "term": "noise-canceling earbuds",
+        "meaning": "small headphones that block outside noise",
+        "example": "My noise-cancelling earbuds are perfect for the metro."
+      },
+      {
+        "term": "drown out",
+        "meaning": "to cover one sound with a louder one",
+        "example": "I use music to drown out the noise of the city."
+      },
+      {
+        "term": "to be tone-deaf",
+        "meaning": "unable to sing in tune",
+        "example": "I love singing, but honestly I'm a bit tone-deaf."
+      },
+      {
+        "term": "a catchy tune",
+        "meaning": "a melody that is easy to remember",
+        "example": "That song has such a catchy tune that I can't get it out of my head."
+      },
+      {
+        "term": "a live performance",
+        "meaning": "music played in front of an audience",
+        "example": "Nothing beats a live performance for atmosphere."
+      },
+      {
+        "term": "to have an eclectic taste",
+        "meaning": "to like many different styles",
+        "example": "I have quite an eclectic taste, from jazz to rap."
+      },
+      {
+        "term": "a playlist",
+        "meaning": "a list of songs you put together",
+        "example": "I have a special playlist for the gym."
+      },
+      {
+        "term": "to sing along",
+        "meaning": "to sing with a song that is playing",
+        "example": "Everyone sang along at the concert."
+      },
+      {
+        "term": "background music",
+        "meaning": "quiet music played while doing something",
+        "example": "I need background music when I study."
+      }
+    ]
+  },
+  {
+    "topic": "Old buildings",
+    "aliases": [
+      "Buildings",
+      "Tall building",
+      "Tall buildings",
+      "Buildings, architecture",
+      "Interesting building you'd like to visit",
+      "Public building you enjoy visiting"
+    ],
+    "words": [
+      {
+        "term": "cultural heritage",
+        "meaning": "History and structures passed down through generations",
+        "example": "I strongly advocate for the preservation of historic buildings because they are irreplaceable pieces of a city's cultural heritage."
+      },
+      {
+        "term": "architectural character",
+        "meaning": "Unique style and historic design elements of a building",
+        "example": "While I deeply appreciate the unique charm and architectural character of historic buildings, the constant upkeep and outdated plumbing would be a hassle."
+      },
+      {
+        "term": "adaptive reuse",
+        "meaning": "Converting an old building for a new purpose while preserving its exterior",
+        "example": "Finding ways to repurpose them through adaptive reuse is a much more sustainable and respectful approach."
+      },
+      {
+        "term": "visual contrast",
+        "meaning": "A clear, striking difference between styles side-by-side",
+        "example": "Old buildings add an incredible amount of depth, charm, and visual contrast to a city’s overall landscape."
+      },
+      {
+        "term": "aesthetically appealing",
+        "meaning": "Beautiful, attractive, or pleasant to the eyes",
+        "example": "It makes a place feel lived-in, storied, and highly aesthetically appealing."
+      },
+      {
+        "term": "a soaring skyscraper",
+        "meaning": "a very tall, impressive building",
+        "example": "A soaring skyscraper now dominates the skyline."
+      },
+      {
+        "term": "an architectural marvel",
+        "meaning": "a masterpiece of design and engineering",
+        "example": "The old bridge is an architectural marvel."
+      },
+      {
+        "term": "to tower over",
+        "meaning": "to be much taller than what is around",
+        "example": "The new tower towers over the old town."
+      },
+      {
+        "term": "to stand out from the crowd",
+        "meaning": "to be very different and noticeable",
+        "example": "The building stands out from the crowd because of its glass facade."
+      },
+      {
+        "term": "a dilapidated structure",
+        "meaning": "an old building in very poor condition",
+        "example": "Many dilapidated structures in the old district need restoring."
+      },
+      {
+        "term": "to pull down / tear down",
+        "meaning": "to demolish",
+        "example": "They pulled down the old cinema to build a mall."
+      },
+      {
+        "term": "a landmark",
+        "meaning": "a famous building that helps people recognise a place",
+        "example": "The Maiden Tower is the best-known landmark in the city."
+      },
+      {
+        "term": "to restore",
+        "meaning": "to repair an old building to its original state",
+        "example": "The government restored the old caravanserai."
+      }
+    ]
+  },
+  {
+    "topic": "Animals",
+    "aliases": [
+      "Animals and pets",
+      "Pets",
+      "Wildlife"
+    ],
+    "words": [
+      {
+        "term": "a pet owner",
+        "meaning": "a person who keeps a pet",
+        "example": "Pet owners often walk their dogs in the park in the morning."
+      },
+      {
+        "term": "endangered species",
+        "meaning": "animals at risk of disappearing",
+        "example": "Many endangered species are losing their habitats."
+      },
+      {
+        "term": "natural habitat",
+        "meaning": "the place where an animal naturally lives",
+        "example": "I'd rather see animals in their natural habitat than in a zoo."
+      },
+      {
+        "term": "to adopt a pet",
+        "meaning": "to take an animal from a shelter",
+        "example": "We adopted our cat from an animal shelter."
+      },
+      {
+        "term": "a stray dog/cat",
+        "meaning": "an animal without a home",
+        "example": "There are a lot of stray cats in my neighbourhood."
+      },
+      {
+        "term": "animal welfare",
+        "meaning": "the health and wellbeing of animals",
+        "example": "Animal welfare laws are getting stricter."
+      },
+      {
+        "term": "companionship",
+        "meaning": "friendship and company",
+        "example": "Pets give elderly people a lot of companionship."
+      },
+      {
+        "term": "loyal",
+        "meaning": "faithful and devoted",
+        "example": "Dogs are incredibly loyal animals."
+      },
+      {
+        "term": "low-maintenance",
+        "meaning": "not needing much care",
+        "example": "Fish are low-maintenance pets for busy people."
+      },
+      {
+        "term": "wildlife conservation",
+        "meaning": "protecting wild animals",
+        "example": "Wildlife conservation should be taught at school."
+      },
+      {
+        "term": "to be cooped up",
+        "meaning": "to be kept in a small space",
+        "example": "I feel sorry for big dogs cooped up in flats."
+      },
+      {
+        "term": "a nature documentary",
+        "meaning": "a film about animals and nature",
+        "example": "I love watching nature documentaries in the evening."
+      }
+    ]
+  },
+  {
+    "topic": "Foreign languages",
+    "aliases": [
+      "Learning languages",
+      "18 Learning languages (May - December 2026)",
+      "Thing you did to learn a language",
+      "Person who is good at learning new languages"
+    ],
+    "words": [
+      {
+        "term": "fluent in",
+        "meaning": "able to speak a language easily",
+        "example": "My cousin is fluent in three languages."
+      },
+      {
+        "term": "a native speaker",
+        "meaning": "someone who learned a language from birth",
+        "example": "Talking to native speakers is the best practice."
+      },
+      {
+        "term": "to pick up a language",
+        "meaning": "to learn a language naturally",
+        "example": "Children pick up languages much faster than adults."
+      },
+      {
+        "term": "to brush up on",
+        "meaning": "to improve a skill you have neglected",
+        "example": "I need to brush up on my German before the trip."
+      },
+      {
+        "term": "a language barrier",
+        "meaning": "difficulty communicating because of different languages",
+        "example": "The language barrier made shopping difficult."
+      },
+      {
+        "term": "a working knowledge of",
+        "meaning": "enough knowledge to use something practically",
+        "example": "I have a working knowledge of Russian."
+      },
+      {
+        "term": "immersion",
+        "meaning": "learning by living in the language environment",
+        "example": "Immersion is the fastest way to learn."
+      },
+      {
+        "term": "to get by in",
+        "meaning": "to manage with basic language",
+        "example": "I can get by in Turkish but I'm not fluent."
+      },
+      {
+        "term": "a language exchange",
+        "meaning": "practising with a partner who learns your language",
+        "example": "I do a language exchange with a student from Spain."
+      },
+      {
+        "term": "an accent",
+        "meaning": "the way a person pronounces words",
+        "example": "Having an accent is fine as long as you are clear."
+      },
+      {
+        "term": "a bilingual",
+        "meaning": "able to speak two languages well",
+        "example": "Bilingual children often find it easier to learn a third language."
+      },
+      {
+        "term": "job prospects",
+        "meaning": "chances of getting a good job",
+        "example": "Speaking English improves your job prospects."
+      }
+    ]
+  },
+  {
+    "topic": "Popularity",
+    "aliases": [
+      "Fame and children",
+      "Famous person you'd like to meet",
+      "Person famous in your local area",
+      "Famous person being interviewed"
+    ],
+    "words": [
+      {
+        "term": "a celebrity",
+        "meaning": "a famous person",
+        "example": "Many teenagers dream of becoming a celebrity."
+      },
+      {
+        "term": "to go viral",
+        "meaning": "to spread quickly online",
+        "example": "One video can go viral overnight."
+      },
+      {
+        "term": "an influencer",
+        "meaning": "someone who affects followers' choices on social media",
+        "example": "Influencers now earn more than some actors."
+      },
+      {
+        "term": "a household name",
+        "meaning": "someone everybody knows",
+        "example": "He became a household name after the TV show."
+      },
+      {
+        "term": "in the public eye",
+        "meaning": "known and watched by the public",
+        "example": "Living in the public eye must be stressful."
+      },
+      {
+        "term": "a role model",
+        "meaning": "someone people admire and copy",
+        "example": "Famous athletes should be role models for kids."
+      },
+      {
+        "term": "to rise to fame",
+        "meaning": "to become famous",
+        "example": "She rose to fame after winning a singing contest."
+      },
+      {
+        "term": "privacy",
+        "meaning": "being free from attention",
+        "example": "Celebrities lose their privacy."
+      },
+      {
+        "term": "peer pressure",
+        "meaning": "influence from people of your age",
+        "example": "Peer pressure makes teens want popular brands."
+      },
+      {
+        "term": "to fit in",
+        "meaning": "to be accepted by a group",
+        "example": "Many children just want to fit in at school."
+      },
+      {
+        "term": "short-lived",
+        "meaning": "lasting only a short time",
+        "example": "Online fame is often short-lived."
+      },
+      {
+        "term": "a fan base",
+        "meaning": "the group of people who support someone",
+        "example": "The band has a huge fan base in Asia."
+      }
+    ]
+  },
+  {
+    "topic": "Photos",
+    "aliases": [
+      "Person who likes taking photos",
+      "Photography",
+      "Pictures"
+    ],
+    "words": [
+      {
+        "term": "to take a snapshot",
+        "meaning": "to take a quick photo",
+        "example": "I took a quick snapshot of the sunset."
+      },
+      {
+        "term": "a selfie",
+        "meaning": "a photo you take of yourself",
+        "example": "Young people take selfies everywhere."
+      },
+      {
+        "term": "to capture the moment",
+        "meaning": "to record something special in a photo",
+        "example": "I like photos that capture the moment naturally."
+      },
+      {
+        "term": "a photo album",
+        "meaning": "a book for keeping photos",
+        "example": "My grandmother keeps old photo albums."
+      },
+      {
+        "term": "to edit / filter photos",
+        "meaning": "to change photos using software",
+        "example": "Many people filter their photos before posting."
+      },
+      {
+        "term": "to print photos",
+        "meaning": "to make paper copies of digital photos",
+        "example": "Hardly anyone prints photos these days."
+      },
+      {
+        "term": "a professional photographer",
+        "meaning": "someone paid to take photos",
+        "example": "We hired a professional photographer for the wedding."
+      },
+      {
+        "term": "photogenic",
+        "meaning": "looking good in photos",
+        "example": "I'm not very photogenic."
+      },
+      {
+        "term": "to frame a photo",
+        "meaning": "to put a photo in a frame",
+        "example": "I framed a photo of my family."
+      },
+      {
+        "term": "storage",
+        "meaning": "space on a device",
+        "example": "My phone is always running out of storage because of photos."
+      },
+      {
+        "term": "a candid shot",
+        "meaning": "a natural, unposed photo",
+        "example": "Candid shots are my favourite."
+      },
+      {
+        "term": "a keepsake",
+        "meaning": "something kept to remember a person or event",
+        "example": "Old photos are precious keepsakes."
+      }
+    ]
+  },
+  {
+    "topic": "Crowded places",
+    "aliases": [
+      "Crowded place",
+      "Quiet places",
+      "Quiet place",
+      "Noisy place",
+      "Making noise",
+      "Boring place"
+    ],
+    "words": [
+      {
+        "term": "packed",
+        "meaning": "completely full of people",
+        "example": "The metro is packed during rush hour."
+      },
+      {
+        "term": "to be jam-packed",
+        "meaning": "extremely crowded",
+        "example": "The beach was jam-packed in August."
+      },
+      {
+        "term": "claustrophobic",
+        "meaning": "feeling uncomfortable in small or crowded spaces",
+        "example": "Crowded lifts make me feel claustrophobic."
+      },
+      {
+        "term": "a tranquil atmosphere",
+        "meaning": "a calm, peaceful mood",
+        "example": "The library has a tranquil atmosphere."
+      },
+      {
+        "term": "peace and quiet",
+        "meaning": "calm and silence",
+        "example": "I go to the park for some peace and quiet."
+      },
+      {
+        "term": "to avoid the crowds",
+        "meaning": "to stay away from busy places",
+        "example": "We went early to avoid the crowds."
+      },
+      {
+        "term": "a hive of activity",
+        "meaning": "a very busy place",
+        "example": "The market is a hive of activity on Saturdays."
+      },
+      {
+        "term": "noise pollution",
+        "meaning": "harmful or annoying noise",
+        "example": "Noise pollution is a big problem in my city."
+      },
+      {
+        "term": "deafening",
+        "meaning": "extremely loud",
+        "example": "The music at the concert was deafening."
+      },
+      {
+        "term": "to get some fresh air",
+        "meaning": "to go outside",
+        "example": "I needed to get some fresh air."
+      },
+      {
+        "term": "an urban oasis",
+        "meaning": "a peaceful green area inside a busy city",
+        "example": "That garden is an urban oasis."
+      },
+      {
+        "term": "to queue",
+        "meaning": "to wait in line",
+        "example": "We had to queue for an hour."
+      }
+    ]
+  },
+  {
+    "topic": "Money",
+    "aliases": [
+      "Spending and saving money",
+      "Something you saved for",
+      "Special day out that didn't cost a lot"
+    ],
+    "words": [
+      {
+        "term": "to save up for",
+        "meaning": "to keep money for something",
+        "example": "I'm saving up for a new laptop."
+      },
+      {
+        "term": "to live within your means",
+        "meaning": "to spend only what you can afford",
+        "example": "My parents taught me to live within my means."
+      },
+      {
+        "term": "to be on a tight budget",
+        "meaning": "to have little money to spend",
+        "example": "As a student, I'm always on a tight budget."
+      },
+      {
+        "term": "to make ends meet",
+        "meaning": "to have enough money for basic needs",
+        "example": "Many families struggle to make ends meet."
+      },
+      {
+        "term": "to cost an arm and a leg",
+        "meaning": "to be very expensive",
+        "example": "Rent in the centre costs an arm and a leg."
+      },
+      {
+        "term": "pocket money",
+        "meaning": "money parents give children",
+        "example": "I got pocket money every week as a kid."
+      },
+      {
+        "term": "financial independence",
+        "meaning": "not needing money from others",
+        "example": "I want financial independence before I'm 25."
+      },
+      {
+        "term": "a rainy day fund",
+        "meaning": "savings for emergencies",
+        "example": "It's smart to have a rainy day fund."
+      },
+      {
+        "term": "to splurge on",
+        "meaning": "to spend a lot on something enjoyable",
+        "example": "I splurged on concert tickets."
+      },
+      {
+        "term": "to go cashless",
+        "meaning": "to pay only by card or phone",
+        "example": "Many shops are going cashless."
+      },
+      {
+        "term": "a good deal",
+        "meaning": "a fair or cheap price",
+        "example": "I found a good deal on flights."
+      },
+      {
+        "term": "money-conscious",
+        "meaning": "careful with money",
+        "example": "Young people are more money-conscious than before."
+      }
+    ]
+  },
+  {
+    "topic": "Work or Studies",
+    "aliases": [
+      "Work and studies, schools and workplaces",
+      "Jobs",
+      "Perfect job",
+      "Short-term job in a foreign country",
+      "Work",
+      "Studies"
+    ],
+    "words": [
+      {
+        "term": "steady job",
+        "meaning": "A permanent and dependable job",
+        "example": "Currently, I am balancing my schedule as a part-time student while holding a steady job at a local company."
+      },
+      {
+        "term": "gain practical experience",
+        "meaning": "To get real-world skills by doing a job",
+        "example": "It is quite a busy routine, but I think it is the best way to gain practical experience while getting my university degree."
+      },
+      {
+        "term": "tight deadlines",
+        "meaning": "Short time limits to finish work",
+        "example": "If I had to pick one downside, it would be the tight deadlines that sometimes cause a lot of stress."
+      },
+      {
+        "term": "solve actual problems",
+        "meaning": "To find answers to genuine difficulties",
+        "example": "Instead of just reading textbooks, we are encouraged to solve actual problems that businesses face."
+      },
+      {
+        "term": "handle the pressure",
+        "meaning": "To deal successfully with stress or difficulty",
+        "example": "However, I have learned to manage my time better to handle the pressure."
+      },
+      {
+        "term": "supportive team",
+        "meaning": "A group of coworkers who help and encourage you",
+        "example": "Working with a very supportive team makes the whole experience even better."
+      },
+      {
+        "term": "secure employment",
+        "meaning": "To successfully get or find a job",
+        "example": "I wanted a qualification that would help me secure employment and give me many choices after I graduate."
+      },
+      {
+        "term": "hands-on style",
+        "meaning": "A practical way of doing things",
+        "example": "This hands-on style of learning makes my time at university very interesting."
+      },
+      {
+        "term": "creative thinking",
+        "meaning": "The ability to think of new and original ideas",
+        "example": "My role requires a mix of creative thinking and organization to help our company brand stand out."
+      },
+      {
+        "term": "work closely",
+        "meaning": "To work together with someone with a lot of contact",
+        "example": "On a normal day, I work closely with graphic designers to make interesting content for our online audience."
+      },
+      {
+        "term": "work-life balance",
+        "meaning": "time split well between work and personal life",
+        "example": "A good work-life balance matters more to me than a high salary."
+      },
+      {
+        "term": "to major in",
+        "meaning": "to study as your main subject at university",
+        "example": "I'm majoring in computer science."
+      },
+      {
+        "term": "career prospects",
+        "meaning": "chances of progress in a job",
+        "example": "IT has excellent career prospects in my country."
+      }
+    ]
+  },
+  {
+    "topic": "Websites",
+    "aliases": [
+      "Apps or programs",
+      "App or program",
+      "Internet"
+    ],
+    "words": [
+      {
+        "term": "daily basis",
+        "meaning": "Every day",
+        "example": "On a daily basis, I visit learning websites, news portals, and professional networking platforms like LinkedIn."
+      },
+      {
+        "term": "online banking",
+        "meaning": "Managing your bank accounts over the internet",
+        "example": "Also, news websites and online banking are widely used by almost everyone."
+      },
+      {
+        "term": "online marketplaces",
+        "meaning": "Websites where multiple merchants sell products",
+        "example": "In my country, social media platforms and large online marketplaces are definitely the most popular."
+      },
+      {
+        "term": "educational content",
+        "meaning": "Videos, text, or audio that teaches you something useful",
+        "example": "If I had to choose only one, my absolute favorite site would be YouTube because of its endless educational content."
+      },
+      {
+        "term": "customized content",
+        "meaning": "Content tailored to your specific history",
+        "example": "Yes, I have noticed that the sites I use are starting to add AI features to show customized content."
+      },
+      {
+        "term": "networking platforms",
+        "meaning": "Websites designed to connect people professionally or socially",
+        "example": "On a daily basis, I visit learning websites, news portals, and professional networking platforms like LinkedIn."
+      },
+      {
+        "term": "user-friendly",
+        "meaning": "easy to use",
+        "example": "The app is really user-friendly, even for my grandparents."
+      },
+      {
+        "term": "to browse",
+        "meaning": "to look through websites casually",
+        "example": "I browse news websites on my way to work."
+      },
+      {
+        "term": "to download",
+        "meaning": "to copy a file or app to your device",
+        "example": "I downloaded a language-learning app last month."
+      },
+      {
+        "term": "pop-up ads",
+        "meaning": "adverts that suddenly appear on screen",
+        "example": "Pop-up ads drive me crazy."
+      },
+      {
+        "term": "to bookmark",
+        "meaning": "to save a web page link",
+        "example": "I bookmark useful websites for later."
+      },
+      {
+        "term": "a subscription",
+        "meaning": "regular payment for a service",
+        "example": "I pay a monthly subscription for a music app."
+      }
+    ]
+  },
+  {
+    "topic": "Technology, communication",
+    "aliases": [
+      "Mobile phones",
+      "Computers and tablets",
+      "Technological problem",
+      "A time when you had a problem with using an electronic device",
+      "Piece of technology you'd like to own",
+      "Not being allowed to use a mobile phone",
+      "AI",
+      "Messages",
+      "Message or email",
+      "Communication"
+    ],
+    "words": [
+      {
+        "term": "cutting-edge",
+        "meaning": "the most advanced",
+        "example": "The company uses cutting-edge technology."
+      },
+      {
+        "term": "tech-savvy",
+        "meaning": "good at using technology",
+        "example": "My younger sister is much more tech-savvy than me."
+      },
+      {
+        "term": "to be glued to your phone",
+        "meaning": "to look at your phone constantly",
+        "example": "Teenagers seem to be glued to their phones."
+      },
+      {
+        "term": "screen time",
+        "meaning": "time spent looking at screens",
+        "example": "I'm trying to reduce my screen time."
+      },
+      {
+        "term": "to crash / freeze",
+        "meaning": "to stop working suddenly",
+        "example": "My laptop crashed in the middle of my presentation."
+      },
+      {
+        "term": "a software update",
+        "meaning": "a new version of a program",
+        "example": "I lost my files after a software update."
+      },
+      {
+        "term": "artificial intelligence",
+        "meaning": "computer systems that can do human-like tasks",
+        "example": "Artificial intelligence is changing how people work."
+      },
+      {
+        "term": "to keep in touch",
+        "meaning": "to stay in contact",
+        "example": "Messaging apps help me keep in touch with friends abroad."
+      },
+      {
+        "term": "face-to-face communication",
+        "meaning": "talking to someone in person",
+        "example": "Nothing replaces face-to-face communication."
+      },
+      {
+        "term": "digital detox",
+        "meaning": "a period without using devices",
+        "example": "I did a digital detox for a weekend."
+      },
+      {
+        "term": "obsolete",
+        "meaning": "no longer used because something better exists",
+        "example": "Landline phones are almost obsolete."
+      },
+      {
+        "term": "to rely on",
+        "meaning": "to depend on",
+        "example": "We rely on our phones for almost everything."
+      }
+    ]
+  },
+  {
+    "topic": "Outer space and stars",
+    "aliases": [
+      "Space",
+      "Stars"
+    ],
+    "words": [
+      {
+        "term": "zero gravity",
+        "meaning": "A weightless state where gravity is not felt",
+        "example": "The idea of experiencing zero gravity and floating above the Earth sounds completely exhilarating."
+      },
+      {
+        "term": "astronomical costs",
+        "meaning": "Extremely high and massive prices",
+        "example": "However, I do have some reservations about the intense physical toll and the astronomical costs involved in space tourism."
+      },
+      {
+        "term": "vast expanse",
+        "meaning": "A huge, endless open area",
+        "example": "Ultimately, the thrill of witnessing the vast expanse of the universe firsthand would definitely outweigh my fears."
+      },
+      {
+        "term": "once-in-a-lifetime experience",
+        "meaning": "A very rare and special event",
+        "example": "It would truly be a once-in-a-lifetime experience that I would cherish forever."
+      },
+      {
+        "term": "extraterrestrial life",
+        "meaning": "Living organisms originating from outside Earth",
+        "example": "There is still so much that remains shrouded in mystery, such as dark matter and the existence of extraterrestrial life, which completely fascinates me."
+      },
+      {
+        "term": "constellations",
+        "meaning": "Groups of stars forming recognizable patterns",
+        "example": "I also love using stargazing apps on my smartphone to identify different constellations in the night sky."
+      },
+      {
+        "term": "educational documentaries",
+        "meaning": "Non-fiction films designed to teach a topic",
+        "example": "However, I frequently satisfy my curiosity by watching educational documentaries and reading articles online about astrophysics."
+      },
+      {
+        "term": "insatiable curiosity",
+        "meaning": "A desire to know things that cannot be satisfied",
+        "example": "I possess an insatiable curiosity when it comes to learning about the mysteries of the cosmos."
+      },
+      {
+        "term": "shrouded in mystery",
+        "meaning": "Completely hidden, secret, or unknown",
+        "example": "There is still so much that remains shrouded in mystery, such as dark matter and the existence of extraterrestrial life, which completely fascinates me."
+      },
+      {
+        "term": "captivating subject",
+        "meaning": "A highly interesting topic holding your full attention",
+        "example": "It is a captivating subject that never fails to blow my mind."
+      },
+      {
+        "term": "thought-provoking",
+        "meaning": "Making you think deeply about a topic",
+        "example": "They are not just visually spectacular but also thought-provoking."
+      },
+      {
+        "term": "uncharted territories",
+        "meaning": "Completely unknown and unexplored places",
+        "example": "Sending probes or astronauts to uncharted territories helps us understand the origins of our own solar system and search for potential signs of life."
+      },
+      {
+        "term": "light pollution",
+        "meaning": "artificial light that hides the stars",
+        "example": "Because of light pollution, you can't see many stars in the city."
+      }
+    ]
+  },
+  {
+    "topic": "Art",
+    "aliases": [
+      "Drawing, museums",
+      "Child who loves drawing or painting",
+      "Drawing",
+      "Painting"
+    ],
+    "words": [
+      {
+        "term": "creative outlet",
+        "meaning": "An activity allowing you to express imagination",
+        "example": "Being able to translate abstract thoughts and complex emotions into a tangible visual format must be a highly fulfilling creative outlet."
+      },
+      {
+        "term": "artistic flair",
+        "meaning": "A natural talent or style for creative activities",
+        "example": "While I think the lifestyle of a creative professional sounds incredibly liberating, I do not believe I possess the natural talent or artistic flair required to succeed."
+      },
+      {
+        "term": "thought-provoking exhibitions",
+        "meaning": "Shows of art that inspire deep thinking",
+        "example": "I distinctly remember wandering through a contemporary gallery a few months ago, which displayed a series of thought-provoking exhibitions."
+      },
+      {
+        "term": "classical oil paintings",
+        "meaning": "Traditional art pieces using pigment and drying oil",
+        "example": "Personally, I lean much more toward traditional art because I deeply admire the meticulous craftsmanship and realism found in classical oil paintings and sculptures."
+      },
+      {
+        "term": "original masterpiece",
+        "meaning": "The actual, authentic piece of outstanding art",
+        "example": "Standing directly in front of an original masterpiece allows me to appreciate the texture, scale, and intricate brushwork in a way that digital images can never replicate."
+      },
+      {
+        "term": "abstract",
+        "meaning": "Art that uses shapes and colors instead of realistic scenes",
+        "example": "While I appreciate the avant-garde concepts behind modern art, I sometimes find it a bit too abstract and difficult to interpret."
+      },
+      {
+        "term": "fresh perspective",
+        "meaning": "A new, clean way of looking at a situation",
+        "example": "Visiting a museum or looking at a beautiful design never fails to spark my creativity and give me a fresh perspective on life."
+      },
+      {
+        "term": "culturally stimulating",
+        "meaning": "Something that enriches your mind and interest in culture",
+        "example": "It is always a deeply enriching and culturally stimulating experience for me."
+      },
+      {
+        "term": "to be into art",
+        "meaning": "to be interested in art",
+        "example": "I've been into art since I was little."
+      },
+      {
+        "term": "a gallery",
+        "meaning": "a place where art is shown",
+        "example": "There's a small gallery near my house."
+      },
+      {
+        "term": "to express yourself",
+        "meaning": "to show your feelings or ideas",
+        "example": "Painting helps children express themselves."
+      },
+      {
+        "term": "a sketch",
+        "meaning": "a quick, rough drawing",
+        "example": "I sometimes make sketches in cafés."
+      }
+    ]
+  },
+  {
+    "topic": "Daily routine",
+    "aliases": [
+      "Time management, daily routine",
+      "Time management",
+      "Evening time",
+      "Something you do that saves your time",
+      "Waste of time"
+    ],
+    "words": [
+      {
+        "term": "a hectic schedule",
+        "meaning": "a very busy timetable",
+        "example": "I have a hectic schedule during the week."
+      },
+      {
+        "term": "to stick to a routine",
+        "meaning": "to follow the same plan every day",
+        "example": "I try to stick to a routine, even at weekends."
+      },
+      {
+        "term": "to prioritise",
+        "meaning": "to decide what is most important",
+        "example": "Good time management means learning to prioritise."
+      },
+      {
+        "term": "to procrastinate",
+        "meaning": "to delay doing something",
+        "example": "I tend to procrastinate when a task is boring."
+      },
+      {
+        "term": "a to-do list",
+        "meaning": "a list of tasks",
+        "example": "I write a to-do list every morning."
+      },
+      {
+        "term": "to unwind",
+        "meaning": "to relax after work",
+        "example": "In the evening I unwind with a book."
+      },
+      {
+        "term": "to run errands",
+        "meaning": "to do small tasks like shopping",
+        "example": "I run errands on Saturday mornings."
+      },
+      {
+        "term": "to multitask",
+        "meaning": "to do several things at once",
+        "example": "I'm not great at multitasking."
+      },
+      {
+        "term": "a time-saver",
+        "meaning": "something that saves time",
+        "example": "Online banking is a huge time-saver."
+      },
+      {
+        "term": "to waste time",
+        "meaning": "to use time badly",
+        "example": "I waste too much time scrolling on my phone."
+      },
+      {
+        "term": "a work-life balance",
+        "meaning": "balance between work and free time",
+        "example": "A good routine helps me keep a work-life balance."
+      },
+      {
+        "term": "self-care",
+        "meaning": "doing things to look after yourself",
+        "example": "Evenings are my time for self-care."
+      }
+    ]
+  },
+  {
+    "topic": "Rivers and lakes",
+    "aliases": [
+      "17 Rivers and lakes (May - December 2026)",
+      "Important river",
+      "Natural places",
+      "Natural place in your city",
+      "Scenery",
+      "Views",
+      "Nature"
+    ],
+    "words": [
+      {
+        "term": "a riverbank",
+        "meaning": "the land along a river",
+        "example": "We had a picnic on the riverbank."
+      },
+      {
+        "term": "a reservoir",
+        "meaning": "an artificial lake for storing water",
+        "example": "The city gets its water from a reservoir."
+      },
+      {
+        "term": "crystal-clear water",
+        "meaning": "very clean, transparent water",
+        "example": "The lake has crystal-clear water."
+      },
+      {
+        "term": "to go for a swim",
+        "meaning": "to swim for pleasure",
+        "example": "In summer we go for a swim in the lake."
+      },
+      {
+        "term": "water pollution",
+        "meaning": "dirty or poisoned water",
+        "example": "Water pollution has killed many fish."
+      },
+      {
+        "term": "breathtaking scenery",
+        "meaning": "very beautiful natural views",
+        "example": "The mountain lake has breathtaking scenery."
+      },
+      {
+        "term": "a source of drinking water",
+        "meaning": "where people get water to drink",
+        "example": "The river is the main source of drinking water."
+      },
+      {
+        "term": "a boat trip",
+        "meaning": "a short journey on a boat",
+        "example": "We took a boat trip along the river."
+      },
+      {
+        "term": "to flood",
+        "meaning": "to overflow onto land",
+        "example": "The river floods almost every spring."
+      },
+      {
+        "term": "a scenic spot",
+        "meaning": "a place with beautiful views",
+        "example": "The bridge is a popular scenic spot."
+      },
+      {
+        "term": "unspoilt",
+        "meaning": "not changed or damaged by people",
+        "example": "It's one of the few unspoilt lakes left."
+      },
+      {
+        "term": "to be surrounded by nature",
+        "meaning": "to have nature all around you",
+        "example": "I love being surrounded by nature."
+      }
+    ]
+  },
+  {
+    "topic": "Public transport, traffic jams",
+    "aliases": [
+      "Transportation, air pollution",
+      "Traffic jam",
+      "Public transport",
+      "Trip you often take but dislike"
+    ],
+    "words": [
+      {
+        "term": "to commute",
+        "meaning": "to travel regularly to work or school",
+        "example": "I commute by metro every day."
+      },
+      {
+        "term": "a traffic jam",
+        "meaning": "a line of cars that can't move",
+        "example": "I was stuck in a traffic jam for an hour."
+      },
+      {
+        "term": "bumper-to-bumper traffic",
+        "meaning": "very slow, crowded traffic",
+        "example": "The highway is bumper-to-bumper every morning."
+      },
+      {
+        "term": "peak hours / rush hour",
+        "meaning": "the busiest travel times",
+        "example": "Buses are full at peak hours."
+      },
+      {
+        "term": "a reliable service",
+        "meaning": "transport that runs on time",
+        "example": "The metro offers a reliable service."
+      },
+      {
+        "term": "to get stuck",
+        "meaning": "to be unable to move",
+        "example": "We got stuck behind a bus."
+      },
+      {
+        "term": "carbon emissions",
+        "meaning": "gases from vehicles that pollute",
+        "example": "Public transport reduces carbon emissions."
+      },
+      {
+        "term": "a cycle lane",
+        "meaning": "a part of a road for bicycles",
+        "example": "The city has built new cycle lanes."
+      },
+      {
+        "term": "car-pooling",
+        "meaning": "sharing a car with others going the same way",
+        "example": "Car-pooling saves money and fuel."
+      },
+      {
+        "term": "congestion",
+        "meaning": "overcrowding on roads",
+        "example": "Congestion is the city's biggest problem."
+      },
+      {
+        "term": "to be stranded",
+        "meaning": "to be left without transport",
+        "example": "We were stranded when the last bus left."
+      },
+      {
+        "term": "eco-friendly transport",
+        "meaning": "transport that doesn't harm the environment",
+        "example": "Electric buses are eco-friendly transport."
+      }
+    ]
+  },
+  {
+    "topic": "Opinions and ideas",
+    "aliases": [
+      "Changing an opinion",
+      "Advice",
+      "Advice you gave",
+      "Making decisions",
+      "13 Making decisions (May - December 2026)",
+      "Important decision you made"
+    ],
+    "words": [
+      {
+        "term": "to change your mind",
+        "meaning": "to form a new opinion",
+        "example": "I changed my mind about online classes."
+      },
+      {
+        "term": "an open-minded person",
+        "meaning": "someone willing to consider new ideas",
+        "example": "It's important to be open-minded."
+      },
+      {
+        "term": "to weigh up the pros and cons",
+        "meaning": "to consider good and bad sides",
+        "example": "I weighed up the pros and cons before choosing a university."
+      },
+      {
+        "term": "a tough decision",
+        "meaning": "a difficult choice",
+        "example": "Moving abroad was a tough decision."
+      },
+      {
+        "term": "to follow your gut",
+        "meaning": "to trust your instinct",
+        "example": "Sometimes you should just follow your gut."
+      },
+      {
+        "term": "to take someone's advice",
+        "meaning": "to do what someone recommends",
+        "example": "I took my teacher's advice and applied."
+      },
+      {
+        "term": "to seek advice",
+        "meaning": "to ask for advice",
+        "example": "Young people often seek advice online."
+      },
+      {
+        "term": "to make up your mind",
+        "meaning": "to decide",
+        "example": "I couldn't make up my mind which course to take."
+      },
+      {
+        "term": "on the spur of the moment",
+        "meaning": "suddenly, without planning",
+        "example": "I booked the trip on the spur of the moment."
+      },
+      {
+        "term": "a well-informed decision",
+        "meaning": "a choice based on good information",
+        "example": "Research helps you make a well-informed decision."
+      },
+      {
+        "term": "to have second thoughts",
+        "meaning": "to doubt a decision",
+        "example": "I had second thoughts about quitting my job."
+      },
+      {
+        "term": "to see things from a different perspective",
+        "meaning": "to understand another view",
+        "example": "Travelling helps you see things from a different perspective."
+      }
+    ]
+  },
+  {
+    "topic": "News, national identity",
+    "aliases": [
+      "Local news",
+      "News",
+      "National identity"
+    ],
+    "words": [
+      {
+        "term": "current affairs",
+        "meaning": "important events happening now",
+        "example": "I try to follow current affairs."
+      },
+      {
+        "term": "a news headline",
+        "meaning": "the title of a news story",
+        "example": "I usually just read the headlines."
+      },
+      {
+        "term": "fake news",
+        "meaning": "false information presented as news",
+        "example": "Fake news spreads quickly on social media."
+      },
+      {
+        "term": "a reliable source",
+        "meaning": "a trustworthy source of information",
+        "example": "I check reliable sources before sharing news."
+      },
+      {
+        "term": "to keep up to date",
+        "meaning": "to stay informed",
+        "example": "I keep up to date with news through an app."
+      },
+      {
+        "term": "breaking news",
+        "meaning": "news that is just happening",
+        "example": "Breaking news appears on my phone instantly."
+      },
+      {
+        "term": "national pride",
+        "meaning": "feeling proud of your country",
+        "example": "Sporting success boosts national pride."
+      },
+      {
+        "term": "cultural heritage",
+        "meaning": "traditions and history passed down",
+        "example": "Our cultural heritage is part of our identity."
+      },
+      {
+        "term": "traditions and customs",
+        "meaning": "long-established ways of doing things",
+        "example": "Young people still respect traditions and customs."
+      },
+      {
+        "term": "to be biased",
+        "meaning": "to support one side unfairly",
+        "example": "Some TV channels are very biased."
+      },
+      {
+        "term": "local news",
+        "meaning": "news about your area",
+        "example": "Local news covers things like road works."
+      },
+      {
+        "term": "a sense of belonging",
+        "meaning": "feeling part of a group",
+        "example": "National holidays give people a sense of belonging."
+      }
+    ]
+  },
+  {
+    "topic": "New and old things, toys (not confirmed)",
+    "aliases": [
+      "Old things, museums",
+      "Collecting things",
+      "Thing your family has kept for a long time",
+      "Toys",
+      "Childhood activities",
+      "Losing things",
+      "Losing something important"
+    ],
+    "words": [
+      {
+        "term": "a family heirloom",
+        "meaning": "a valuable object passed down in a family",
+        "example": "This ring is a family heirloom."
+      },
+      {
+        "term": "vintage",
+        "meaning": "old but of high quality",
+        "example": "I love vintage furniture."
+      },
+      {
+        "term": "a keepsake",
+        "meaning": "something kept to remember someone",
+        "example": "I keep my first passport as a keepsake."
+      },
+      {
+        "term": "brand new",
+        "meaning": "completely new",
+        "example": "I bought a brand new bike."
+      },
+      {
+        "term": "to collect",
+        "meaning": "to gather things as a hobby",
+        "example": "As a child I collected stamps."
+      },
+      {
+        "term": "a collector's item",
+        "meaning": "something valuable to collectors",
+        "example": "Some old toys are now collectors' items."
+      },
+      {
+        "term": "worn out",
+        "meaning": "old and damaged from use",
+        "example": "My favourite shoes are completely worn out."
+      },
+      {
+        "term": "nostalgic",
+        "meaning": "thinking fondly about the past",
+        "example": "Old toys make me feel nostalgic."
+      },
+      {
+        "term": "to throw away",
+        "meaning": "to get rid of",
+        "example": "My mum never throws anything away."
+      },
+      {
+        "term": "to misplace",
+        "meaning": "to lose something temporarily",
+        "example": "I'm always misplacing my keys."
+      },
+      {
+        "term": "a museum exhibit",
+        "meaning": "an object shown in a museum",
+        "example": "The oldest exhibit is 3,000 years old."
+      },
+      {
+        "term": "to be passed down",
+        "meaning": "to be given from older to younger generations",
+        "example": "The carpet was passed down from my grandmother."
+      }
+    ]
+  },
+  {
+    "topic": "Helping others",
+    "aliases": [
+      "Person who often helps others",
+      "Person who helped you solve a problem",
+      "Helping someone",
+      "Encouraging others",
+      "Encouraging someone to do what they didn't want to do"
+    ],
+    "words": [
+      {
+        "term": "to lend a hand",
+        "meaning": "to help",
+        "example": "My neighbour always lends a hand when we move furniture."
+      },
+      {
+        "term": "to volunteer",
+        "meaning": "to work for free to help others",
+        "example": "I volunteer at an animal shelter."
+      },
+      {
+        "term": "a charity",
+        "meaning": "an organisation that helps people in need",
+        "example": "I donate to a children's charity."
+      },
+      {
+        "term": "selfless / altruistic",
+        "meaning": "caring about others more than yourself",
+        "example": "My aunt is completely selfless."
+      },
+      {
+        "term": "to go out of your way",
+        "meaning": "to make a special effort",
+        "example": "She went out of her way to help me."
+      },
+      {
+        "term": "to give someone a pep talk",
+        "meaning": "to say encouraging words",
+        "example": "My coach gave me a pep talk before the match."
+      },
+      {
+        "term": "to boost someone's confidence",
+        "meaning": "to make someone more confident",
+        "example": "Praise really boosts children's confidence."
+      },
+      {
+        "term": "community spirit",
+        "meaning": "people helping each other locally",
+        "example": "There's strong community spirit in villages."
+      },
+      {
+        "term": "to step out of your comfort zone",
+        "meaning": "to try something unfamiliar",
+        "example": "My friend encouraged me to step out of my comfort zone."
+      },
+      {
+        "term": "to support someone emotionally",
+        "meaning": "to give comfort and care",
+        "example": "Friends support each other emotionally."
+      },
+      {
+        "term": "a good deed",
+        "meaning": "a kind action",
+        "example": "Doing a good deed makes me feel good too."
+      },
+      {
+        "term": "to rely on",
+        "meaning": "to depend on someone",
+        "example": "I know I can rely on my brother."
+      }
+    ]
+  },
+  {
+    "topic": "TV programs, videos",
+    "aliases": [
+      "Watching TV",
+      "Videos",
+      "Interesting video",
+      "Program you like to watch",
+      "Sports programs"
+    ],
+    "words": [
+      {
+        "term": "a reality show",
+        "meaning": "a TV programme about real people",
+        "example": "I find reality shows a bit fake."
+      },
+      {
+        "term": "a documentary",
+        "meaning": "a factual film",
+        "example": "I watched a fascinating documentary about the ocean."
+      },
+      {
+        "term": "a TV series",
+        "meaning": "a set of TV episodes",
+        "example": "I'm watching a Korean TV series now."
+      },
+      {
+        "term": "to stream",
+        "meaning": "to watch online without downloading",
+        "example": "Most people stream programmes now."
+      },
+      {
+        "term": "a couch potato",
+        "meaning": "someone who watches too much TV",
+        "example": "At weekends I turn into a couch potato."
+      },
+      {
+        "term": "prime time",
+        "meaning": "the evening hours with the most viewers",
+        "example": "News is broadcast at prime time."
+      },
+      {
+        "term": "educational content",
+        "meaning": "material that teaches something",
+        "example": "YouTube has great educational content."
+      },
+      {
+        "term": "to subscribe to a channel",
+        "meaning": "to follow a channel online",
+        "example": "I subscribe to several cooking channels."
+      },
+      {
+        "term": "to channel-surf",
+        "meaning": "to switch quickly between channels",
+        "example": "My dad loves channel-surfing."
+      },
+      {
+        "term": "a live broadcast",
+        "meaning": "a programme shown as it happens",
+        "example": "We watched the final as a live broadcast."
+      },
+      {
+        "term": "short-form videos",
+        "meaning": "very short online videos",
+        "example": "Short-form videos are addictive."
+      },
+      {
+        "term": "commercial breaks",
+        "meaning": "adverts during a programme",
+        "example": "I hate long commercial breaks."
+      }
+    ]
+  },
+  {
+    "topic": "Watches",
+    "aliases": [
+      "Watch",
+      "Clocks",
+      "Keys"
+    ],
+    "words": [
+      {
+        "term": "wristwatch",
+        "meaning": "A watch worn around the wrist",
+        "example": "Wearing a wristwatch feels much more professional than pulling out a phone just to check the time."
+      },
+      {
+        "term": "essential tool",
+        "meaning": "A highly necessary device or object",
+        "example": "Absolutely, a watch is an essential tool for me because it helps me manage my day well."
+      },
+      {
+        "term": "arrive on time",
+        "meaning": "To reach a destination exactly at the planned hour without being late",
+        "example": "It serves as a gentle reminder of the passing hours, which helps me arrive on time for meetings and appointments."
+      },
+      {
+        "term": "personal style",
+        "meaning": "An individual's unique taste in clothes and accessories",
+        "example": "Besides telling the time, it is also a way to show my personal style."
+      },
+      {
+        "term": "special milestone",
+        "meaning": "A highly significant or important event in life (like turning 20 or graduating)",
+        "example": "Because it was for a special milestone, I care about it a lot and only wear it for special events."
+      },
+      {
+        "term": "luxury watches",
+        "meaning": "High-end, expensive watches",
+        "example": "Many people buy luxury watches because they are seen as status symbols that show wealth and success."
+      },
+      {
+        "term": "status symbols",
+        "meaning": "Items that represent high social standing",
+        "example": "Many people buy luxury watches because they are seen as status symbols that show wealth and success."
+      },
+      {
+        "term": "excellent quality",
+        "meaning": "A very high standard of craftsmanship or value",
+        "example": "Also, these pricey watches are famous for their excellent quality, fine materials, and long durability."
+      },
+      {
+        "term": "a smartwatch",
+        "meaning": "a digital watch with phone functions",
+        "example": "My smartwatch tracks my steps and heart rate."
+      },
+      {
+        "term": "to keep track of time",
+        "meaning": "to stay aware of the time",
+        "example": "I wear a watch to keep track of time in exams."
+      },
+      {
+        "term": "punctual",
+        "meaning": "always on time",
+        "example": "My father is extremely punctual."
+      }
+    ]
+  },
+  {
+    "topic": "Parties",
+    "aliases": [
+      "Organizing a happy event",
+      "Party that impressed you",
+      "Enjoyable evening with friends",
+      "Special cake"
+    ],
+    "words": [
+      {
+        "term": "to throw a party",
+        "meaning": "to organise a party",
+        "example": "We threw a surprise party for my best friend."
+      },
+      {
+        "term": "a get-together",
+        "meaning": "an informal meeting of friends or family",
+        "example": "We have a family get-together every Sunday."
+      },
+      {
+        "term": "the life and soul of the party",
+        "meaning": "the most lively person at a party",
+        "example": "My uncle is always the life and soul of the party."
+      },
+      {
+        "term": "a festive atmosphere",
+        "meaning": "a happy, celebrating mood",
+        "example": "The decorations created a festive atmosphere."
+      },
+      {
+        "term": "to celebrate a milestone",
+        "meaning": "to mark an important event",
+        "example": "We celebrated my grandparents' 50th anniversary."
+      },
+      {
+        "term": "to have a blast",
+        "meaning": "to have a great time",
+        "example": "We had a blast at the wedding."
+      },
+      {
+        "term": "a guest list",
+        "meaning": "the list of people invited",
+        "example": "The guest list was over a hundred people."
+      },
+      {
+        "term": "a party animal",
+        "meaning": "someone who loves parties",
+        "example": "I'm definitely not a party animal."
+      },
+      {
+        "term": "to send out invitations",
+        "meaning": "to invite people formally",
+        "example": "We sent out invitations a month before."
+      },
+      {
+        "term": "a homemade cake",
+        "meaning": "a cake made at home",
+        "example": "My mother always makes a homemade cake for birthdays."
+      },
+      {
+        "term": "to let your hair down",
+        "meaning": "to relax and enjoy yourself",
+        "example": "Parties are a chance to let your hair down."
+      },
+      {
+        "term": "memorable",
+        "meaning": "worth remembering",
+        "example": "It was the most memorable evening of the year."
+      }
+    ]
+  },
+  {
+    "topic": "Food",
+    "aliases": [
+      "Food and cooking",
+      "Meals",
+      "Food for special occasions",
+      "Food (May - December 2026)",
+      "Cooking"
+    ],
+    "words": [
+      {
+        "term": "a home-cooked meal",
+        "meaning": "food prepared at home",
+        "example": "Nothing beats a home-cooked meal."
+      },
+      {
+        "term": "a balanced diet",
+        "meaning": "healthy mix of different foods",
+        "example": "I try to eat a balanced diet."
+      },
+      {
+        "term": "a sweet tooth",
+        "meaning": "love for sweet food",
+        "example": "I have a terrible sweet tooth."
+      },
+      {
+        "term": "processed food",
+        "meaning": "factory-made food with additives",
+        "example": "Processed food is cheap but unhealthy."
+      },
+      {
+        "term": "a signature dish",
+        "meaning": "a dish someone is famous for",
+        "example": "My grandmother's signature dish is plov."
+      },
+      {
+        "term": "to eat out",
+        "meaning": "to eat at a restaurant",
+        "example": "We eat out once a week."
+      },
+      {
+        "term": "a takeaway",
+        "meaning": "food bought to eat elsewhere",
+        "example": "On busy days we order a takeaway."
+      },
+      {
+        "term": "mouth-watering",
+        "meaning": "looking or smelling delicious",
+        "example": "The bakery smells mouth-watering."
+      },
+      {
+        "term": "a traditional dish",
+        "meaning": "food typical of a country or region",
+        "example": "Dolma is a traditional dish in my country."
+      },
+      {
+        "term": "to follow a recipe",
+        "meaning": "to cook using instructions",
+        "example": "I can only cook if I follow a recipe."
+      },
+      {
+        "term": "fresh produce",
+        "meaning": "freshly harvested fruit and vegetables",
+        "example": "I buy fresh produce at the market."
+      },
+      {
+        "term": "a feast",
+        "meaning": "a large, special meal",
+        "example": "We prepare a huge feast for New Year."
+      },
+      {
+        "term": "fussy eater",
+        "meaning": "someone who refuses many foods",
+        "example": "My little brother is a fussy eater."
+      }
+    ]
+  },
+  {
+    "topic": "Person who loves to grow plants",
+    "aliases": [
+      "Topic 4 - Person who loves to grow plants",
+      "Growing plants",
+      "Growing a plant",
+      "Gardening",
+      "Parks"
+    ],
+    "words": [
+      {
+        "term": "public parks",
+        "meaning": "Green park areas owned by the city for everyone to use",
+        "example": "Yes, I really love going to public parks because they offer a beautiful green space away from concrete city streets."
+      },
+      {
+        "term": "gathering places",
+        "meaning": "Locations where people meet up in groups",
+        "example": "Absolutely, public parks are popular gathering places for people of all ages in my country."
+      },
+      {
+        "term": "senior citizens",
+        "meaning": "Elderly or older people, usually retired",
+        "example": "In the morning, you will see senior citizens doing light exercises, while the evenings attract joggers and families."
+      },
+      {
+        "term": "a green thumb",
+        "meaning": "a natural talent for growing plants",
+        "example": "My aunt has a real green thumb; everything she plants grows."
+      },
+      {
+        "term": "to bear fruit",
+        "meaning": "to produce fruit or good results",
+        "example": "After years of hard work, her garden finally bore fruit."
+      },
+      {
+        "term": "fertile soil",
+        "meaning": "rich soil that helps plants grow",
+        "example": "Our village is known for its fertile soil."
+      },
+      {
+        "term": "a bountiful harvest",
+        "meaning": "a large, successful crop",
+        "example": "Last year we had a bountiful harvest of tomatoes."
+      },
+      {
+        "term": "to cultivate",
+        "meaning": "to prepare land and grow plants",
+        "example": "My grandfather cultivates vegetables behind the house."
+      },
+      {
+        "term": "to germinate",
+        "meaning": "when a seed starts to grow",
+        "example": "It's exciting to watch the seeds germinate."
+      },
+      {
+        "term": "a nurturing environment",
+        "meaning": "a place with the right conditions to grow",
+        "example": "She created a nurturing environment on her balcony."
+      },
+      {
+        "term": "to water the plants",
+        "meaning": "to give plants water",
+        "example": "Watering the plants is part of my morning ritual."
+      },
+      {
+        "term": "therapeutic",
+        "meaning": "having a calming, healing effect",
+        "example": "Gardening is very therapeutic for older people."
+      }
+    ]
+  },
+  {
+    "topic": "Childhood friend",
+    "aliases": [
+      "Topic 5 - Childhood friend",
+      "Making friends, meeting people",
+      "Friendship, social media",
+      "Friends",
+      "Friend who learned something new",
+      "Person you met and want to know more about"
+    ],
+    "words": [
+      {
+        "term": "to hit it off",
+        "meaning": "to become friends immediately",
+        "example": "We hit it off on the first day of school."
+      },
+      {
+        "term": "to get on like a house on fire",
+        "meaning": "to become close friends very quickly",
+        "example": "My cousin and I got on like a house on fire."
+      },
+      {
+        "term": "a kindred spirit",
+        "meaning": "someone with the same values and interests",
+        "example": "She's a real kindred spirit."
+      },
+      {
+        "term": "a shoulder to cry on",
+        "meaning": "someone who listens and comforts you",
+        "example": "He was always a shoulder to cry on."
+      },
+      {
+        "term": "a fair-weather friend",
+        "meaning": "a friend only in good times",
+        "example": "Fair-weather friends disappear when you have problems."
+      },
+      {
+        "term": "to see eye to eye",
+        "meaning": "to agree completely",
+        "example": "We don't always see eye to eye, but we respect each other."
+      },
+      {
+        "term": "an unshakeable bond",
+        "meaning": "a very strong connection",
+        "example": "We have an unshakeable bond."
+      },
+      {
+        "term": "to drift apart",
+        "meaning": "to slowly become less close",
+        "example": "We drifted apart after we moved to different cities."
+      },
+      {
+        "term": "to keep in touch",
+        "meaning": "to stay in contact",
+        "example": "We still keep in touch through messages."
+      },
+      {
+        "term": "a mutual friend",
+        "meaning": "a friend you both know",
+        "example": "We met through a mutual friend."
+      },
+      {
+        "term": "to cross paths",
+        "meaning": "to meet by chance",
+        "example": "We crossed paths again at university."
+      },
+      {
+        "term": "shared history",
+        "meaning": "a common past",
+        "example": "Our shared history makes the friendship special."
+      },
+      {
+        "term": "to make friends",
+        "meaning": "to start friendships",
+        "example": "It's harder to make friends as an adult."
+      }
+    ]
+  },
+  {
+    "topic": "Success in business",
+    "aliases": [
+      "15 Success in business (May - December 2026)",
+      "Success",
+      "Successful business person you know",
+      "Person who works in a successful company",
+      "Companies, customer satisfaction",
+      "Person who faced difficulties but succeeded"
+    ],
+    "words": [
+      {
+        "term": "to start up a business",
+        "meaning": "to begin a new company",
+        "example": "My cousin started up a business selling furniture."
+      },
+      {
+        "term": "an entrepreneur",
+        "meaning": "someone who starts businesses",
+        "example": "She's a successful young entrepreneur."
+      },
+      {
+        "term": "to take risks",
+        "meaning": "to do something with a chance of failure",
+        "example": "Successful people aren't afraid to take risks."
+      },
+      {
+        "term": "a self-made man/woman",
+        "meaning": "someone who became rich through their own effort",
+        "example": "My uncle is a self-made man."
+      },
+      {
+        "term": "to climb the career ladder",
+        "meaning": "to get promoted step by step",
+        "example": "He climbed the career ladder quickly."
+      },
+      {
+        "term": "customer satisfaction",
+        "meaning": "how happy customers are",
+        "example": "Customer satisfaction is key to success."
+      },
+      {
+        "term": "a competitive market",
+        "meaning": "a market with many rivals",
+        "example": "Fashion is a very competitive market."
+      },
+      {
+        "term": "to make a profit",
+        "meaning": "to earn more than you spend",
+        "example": "The café made a profit in its first year."
+      },
+      {
+        "term": "determination",
+        "meaning": "refusing to give up",
+        "example": "Success needs determination more than talent."
+      },
+      {
+        "term": "to overcome obstacles",
+        "meaning": "to deal with difficulties successfully",
+        "example": "She overcame many obstacles to open her shop."
+      },
+      {
+        "term": "a breakthrough",
+        "meaning": "an important achievement after effort",
+        "example": "Their breakthrough came with a mobile app."
+      },
+      {
+        "term": "word of mouth",
+        "meaning": "recommendations from person to person",
+        "example": "The restaurant grew through word of mouth."
+      }
+    ]
+  },
+  {
+    "topic": "Rules and punishment",
+    "aliases": [
+      "Rules and laws",
+      "Rules and laws (May - December 2026)",
+      "New law",
+      "New law (May - December 2026)",
+      "Environmental law"
+    ],
+    "words": [
+      {
+        "term": "to obey the rules",
+        "meaning": "to follow the rules",
+        "example": "Most people obey the rules out of habit."
+      },
+      {
+        "term": "to break the law",
+        "meaning": "to do something illegal",
+        "example": "He broke the law by driving without a licence."
+      },
+      {
+        "term": "to impose a fine",
+        "meaning": "to make someone pay money as punishment",
+        "example": "The city imposes heavy fines for littering."
+      },
+      {
+        "term": "strict regulations",
+        "meaning": "firm official rules",
+        "example": "There are strict regulations on smoking in public."
+      },
+      {
+        "term": "to enforce a law",
+        "meaning": "to make sure people obey it",
+        "example": "The police enforce speed limits with cameras."
+      },
+      {
+        "term": "a deterrent",
+        "meaning": "something that stops people doing wrong",
+        "example": "Heavy fines act as a deterrent."
+      },
+      {
+        "term": "to be banned",
+        "meaning": "to be officially forbidden",
+        "example": "Plastic bags are banned in some shops."
+      },
+      {
+        "term": "law-abiding",
+        "meaning": "obeying the law",
+        "example": "Most citizens are law-abiding."
+      },
+      {
+        "term": "discipline",
+        "meaning": "control of behaviour",
+        "example": "Children need discipline but also freedom."
+      },
+      {
+        "term": "a loophole",
+        "meaning": "a weakness in a law",
+        "example": "Companies use loopholes to avoid tax."
+      },
+      {
+        "term": "to crack down on",
+        "meaning": "to deal with something more strictly",
+        "example": "The government is cracking down on noisy cars."
+      },
+      {
+        "term": "to introduce a law",
+        "meaning": "to bring in a new law",
+        "example": "They introduced a law to protect forests."
+      }
+    ]
+  },
+  {
+    "topic": "Advertising",
+    "aliases": [
+      "Ad with a famous person in it",
+      "Adverts",
+      "Ads"
+    ],
+    "words": [
+      {
+        "term": "a catchy slogan",
+        "meaning": "a short memorable phrase in an ad",
+        "example": "The brand is known for its catchy slogan."
+      },
+      {
+        "term": "targeted ads",
+        "meaning": "adverts based on your online activity",
+        "example": "Targeted ads know exactly what I searched for."
+      },
+      {
+        "term": "a celebrity endorsement",
+        "meaning": "a famous person promoting a product",
+        "example": "Celebrity endorsements make teenagers buy products."
+      },
+      {
+        "term": "misleading",
+        "meaning": "giving a wrong idea",
+        "example": "Some food ads are very misleading."
+      },
+      {
+        "term": "a billboard",
+        "meaning": "a large outdoor advertisement",
+        "example": "The highway is full of billboards."
+      },
+      {
+        "term": "to promote a product",
+        "meaning": "to advertise and encourage sales",
+        "example": "Influencers promote products on Instagram."
+      },
+      {
+        "term": "consumerism",
+        "meaning": "focus on buying things",
+        "example": "Advertising encourages consumerism."
+      },
+      {
+        "term": "brand loyalty",
+        "meaning": "always buying the same brand",
+        "example": "Ads help build brand loyalty."
+      },
+      {
+        "term": "to fall for",
+        "meaning": "to be tricked by",
+        "example": "I fell for an ad and bought a useless gadget."
+      },
+      {
+        "term": "sponsored content",
+        "meaning": "paid posts that look like normal content",
+        "example": "Sponsored content is everywhere online."
+      },
+      {
+        "term": "to skip an ad",
+        "meaning": "to jump past an advert",
+        "example": "I always skip ads on YouTube."
+      },
+      {
+        "term": "a marketing campaign",
+        "meaning": "an organised advertising effort",
+        "example": "The campaign was a huge success."
+      }
+    ]
+  },
+  {
+    "topic": "Boredom",
+    "aliases": [
+      "Being bored",
+      "Something you weren't interested in"
+    ],
+    "words": [
+      {
+        "term": "bored to tears / bored stiff",
+        "meaning": "extremely bored",
+        "example": "I was bored stiff during the lecture."
+      },
+      {
+        "term": "monotonous",
+        "meaning": "boring because it never changes",
+        "example": "Data entry is monotonous work."
+      },
+      {
+        "term": "to kill time",
+        "meaning": "to do something while waiting",
+        "example": "I play games on my phone to kill time."
+      },
+      {
+        "term": "tedious",
+        "meaning": "long and boring",
+        "example": "Filling in forms is tedious."
+      },
+      {
+        "term": "to drag on",
+        "meaning": "to continue for too long",
+        "example": "The meeting dragged on for hours."
+      },
+      {
+        "term": "restless",
+        "meaning": "unable to relax",
+        "example": "Kids get restless on long journeys."
+      },
+      {
+        "term": "to scroll mindlessly",
+        "meaning": "to look at your phone without purpose",
+        "example": "When I'm bored I scroll mindlessly."
+      },
+      {
+        "term": "a change of scenery",
+        "meaning": "being in a different place",
+        "example": "When I'm bored, I need a change of scenery."
+      },
+      {
+        "term": "to spark creativity",
+        "meaning": "to cause new ideas",
+        "example": "Some say boredom can spark creativity."
+      },
+      {
+        "term": "dull",
+        "meaning": "not interesting",
+        "example": "The film was rather dull."
+      },
+      {
+        "term": "to keep yourself occupied",
+        "meaning": "to stay busy",
+        "example": "I keep myself occupied with podcasts."
+      },
+      {
+        "term": "repetitive",
+        "meaning": "doing the same thing again and again",
+        "example": "Repetitive tasks make me lose focus."
+      }
+    ]
+  },
+  {
+    "topic": "Being proud",
+    "aliases": [
+      "Family member that made you feel proud",
+      "Pride"
+    ],
+    "words": [
+      {
+        "term": "to take pride in",
+        "meaning": "to feel satisfied with your work",
+        "example": "She takes pride in her cooking."
+      },
+      {
+        "term": "a sense of achievement",
+        "meaning": "a feeling of success",
+        "example": "Finishing a marathon gave me a sense of achievement."
+      },
+      {
+        "term": "a proud moment",
+        "meaning": "a moment when you feel proud",
+        "example": "Graduation was a proud moment for my family."
+      },
+      {
+        "term": "to be beaming with pride",
+        "meaning": "to smile because you are very proud",
+        "example": "My dad was beaming with pride."
+      },
+      {
+        "term": "a milestone",
+        "meaning": "an important stage",
+        "example": "Getting my first job was a big milestone."
+      },
+      {
+        "term": "to live up to expectations",
+        "meaning": "to be as good as expected",
+        "example": "I wanted to live up to my parents' expectations."
+      },
+      {
+        "term": "to overcome a challenge",
+        "meaning": "to succeed despite difficulty",
+        "example": "He overcame a serious illness."
+      },
+      {
+        "term": "humble",
+        "meaning": "not boasting",
+        "example": "She's successful but very humble."
+      },
+      {
+        "term": "to show off",
+        "meaning": "to boast",
+        "example": "There's a difference between pride and showing off."
+      },
+      {
+        "term": "self-esteem",
+        "meaning": "confidence in your own worth",
+        "example": "Praise builds children's self-esteem."
+      },
+      {
+        "term": "to be recognised for",
+        "meaning": "to receive credit for",
+        "example": "She was recognised for her volunteer work."
+      },
+      {
+        "term": "hard-earned",
+        "meaning": "achieved through great effort",
+        "example": "It was a hard-earned victory."
+      }
+    ]
+  },
+  {
+    "topic": "Making plans",
+    "aliases": [
+      "Topic 6 - Plan to change",
+      "Plan to change",
+      "Plan you had to change",
+      "Planning",
+      "Person who makes plans a lot",
+      "Long-term goal",
+      "Goals"
+    ],
+    "words": [
+      {
+        "term": "to play it by ear",
+        "meaning": "to decide as things develop",
+        "example": "We didn't plan the weekend; we played it by ear."
+      },
+      {
+        "term": "at the eleventh hour",
+        "meaning": "at the last possible moment",
+        "example": "The trip was cancelled at the eleventh hour."
+      },
+      {
+        "term": "to call a rain check",
+        "meaning": "to postpone a plan",
+        "example": "Can we call a rain check on dinner?"
+      },
+      {
+        "term": "up in the air",
+        "meaning": "uncertain, not decided",
+        "example": "My summer plans are still up in the air."
+      },
+      {
+        "term": "a change of heart",
+        "meaning": "a change of decision",
+        "example": "I had a change of heart and stayed home."
+      },
+      {
+        "term": "a contingency plan",
+        "meaning": "a backup plan",
+        "example": "Always have a contingency plan for travel."
+      },
+      {
+        "term": "a schedule conflict",
+        "meaning": "two events at the same time",
+        "example": "I had a schedule conflict with an exam."
+      },
+      {
+        "term": "a last-minute alteration",
+        "meaning": "a change just before an event",
+        "example": "There was a last-minute alteration to the venue."
+      },
+      {
+        "term": "to reschedule",
+        "meaning": "to change the date or time",
+        "example": "We rescheduled the meeting for Friday."
+      },
+      {
+        "term": "spontaneous",
+        "meaning": "done without planning",
+        "example": "Young people are more spontaneous."
+      },
+      {
+        "term": "a long-term goal",
+        "meaning": "something you want to achieve in years",
+        "example": "My long-term goal is to run my own company."
+      },
+      {
+        "term": "to stick to a plan",
+        "meaning": "to follow a plan",
+        "example": "I find it hard to stick to a plan."
+      }
+    ]
+  },
+  {
+    "topic": "Health, stress",
+    "aliases": [
+      "Having a rest, doing exercise (not confirmed)",
+      "Doctors, biology, medical research",
+      "Person who has healthy habits",
+      "Person who wants to work in the medical field",
+      "Health",
+      "Stress"
+    ],
+    "words": [
+      {
+        "term": "to keep fit",
+        "meaning": "to stay healthy through exercise",
+        "example": "I go jogging to keep fit."
+      },
+      {
+        "term": "a sedentary lifestyle",
+        "meaning": "a life with little physical activity",
+        "example": "Office workers often have a sedentary lifestyle."
+      },
+      {
+        "term": "to burn out",
+        "meaning": "to become exhausted from overwork",
+        "example": "Many students burn out before exams."
+      },
+      {
+        "term": "to let off steam",
+        "meaning": "to release stress or energy",
+        "example": "I play football to let off steam."
+      },
+      {
+        "term": "to recharge one's batteries",
+        "meaning": "to regain energy",
+        "example": "A short holiday helps me recharge my batteries."
+      },
+      {
+        "term": "a healthy habit",
+        "meaning": "a good regular behaviour",
+        "example": "Drinking water is my healthiest habit."
+      },
+      {
+        "term": "mental health",
+        "meaning": "emotional and psychological wellbeing",
+        "example": "Mental health is as important as physical health."
+      },
+      {
+        "term": "to work out",
+        "meaning": "to exercise",
+        "example": "I work out three times a week."
+      },
+      {
+        "term": "to be under pressure",
+        "meaning": "to feel stressed by demands",
+        "example": "I'm under a lot of pressure at work."
+      },
+      {
+        "term": "medical research",
+        "meaning": "scientific study to improve health",
+        "example": "Medical research has extended our lives."
+      },
+      {
+        "term": "to get a check-up",
+        "meaning": "to have a routine medical examination",
+        "example": "I get a check-up once a year."
+      },
+      {
+        "term": "to burn the candle at both ends",
+        "meaning": "to work too hard, sleeping too little",
+        "example": "Students often burn the candle at both ends."
+      }
+    ]
+  },
+  {
+    "topic": "Sports",
+    "aliases": [
+      "Sports teams",
+      "Sports events, competition",
+      "11 Sports events, competition (May - December 2026)",
+      "Live sports event you watched",
+      "Sports person you admire",
+      "Teamwork, leadership",
+      "Teamwork"
+    ],
+    "words": [
+      {
+        "term": "sense of camaraderie",
+        "meaning": "A warm feeling of friendship and mutual team spirit",
+        "example": "Cheering for our favorite team, high-fiving during big plays, and playfully bantering with opposing fans creates a wonderful sense of camaraderie."
+      },
+      {
+        "term": "olympic Games",
+        "meaning": "A leading international sports event featuring thousands of global athletes",
+        "example": "However, I do make a major exception for massive, high-stakes international tournaments like the FIFA World Cup or the Olympic Games."
+      },
+      {
+        "term": "a team player",
+        "meaning": "someone who works well in a group",
+        "example": "A good footballer has to be a team player."
+      },
+      {
+        "term": "to work out",
+        "meaning": "to exercise",
+        "example": "I work out at the gym after work."
+      },
+      {
+        "term": "a die-hard fan",
+        "meaning": "a very loyal supporter",
+        "example": "My dad is a die-hard fan of our local club."
+      },
+      {
+        "term": "a nail-biting finish",
+        "meaning": "a very exciting, close ending",
+        "example": "The match had a nail-biting finish."
+      },
+      {
+        "term": "to compete",
+        "meaning": "to try to win against others",
+        "example": "I used to compete in swimming competitions."
+      },
+      {
+        "term": "team spirit",
+        "meaning": "loyalty and cooperation in a group",
+        "example": "Team sports build team spirit."
+      },
+      {
+        "term": "healthy competition",
+        "meaning": "competition that motivates without harm",
+        "example": "Healthy competition makes students try harder."
+      },
+      {
+        "term": "to take up a sport",
+        "meaning": "to start doing a sport",
+        "example": "I took up tennis last year."
+      },
+      {
+        "term": "a leader",
+        "meaning": "someone who guides a group",
+        "example": "A good leader listens to the team."
+      },
+      {
+        "term": "the atmosphere in the stadium",
+        "meaning": "the mood of the crowd",
+        "example": "The atmosphere in the stadium was electric."
+      }
+    ]
+  },
+  {
+    "topic": "Social media",
+    "aliases": [],
+    "words": [
+      {
+        "term": "bad habit",
+        "meaning": "A negative routine that is difficult to stop",
+        "example": "It has become a bad habit, so I am trying to set daily screen time limits now."
+      },
+      {
+        "term": "time limits",
+        "meaning": "Set boundaries on how long you can do an activity",
+        "example": "It has become a bad habit, so I am trying to set daily screen time limits now."
+      },
+      {
+        "term": "news source",
+        "meaning": "A place or platform where people get information about recent events",
+        "example": "It also acts as a major news source where people find out about world events and pop culture."
+      },
+      {
+        "term": "personal lives",
+        "meaning": "The private everyday experiences of individuals",
+        "example": "Mostly, people use social media to share updates about their personal lives using photos and videos."
+      },
+      {
+        "term": "pop culture",
+        "meaning": "Modern entertainment, fashion, and trends",
+        "example": "It also acts as a major news source where people find out about world events and pop culture."
+      },
+      {
+        "term": "to scroll through",
+        "meaning": "to look quickly through content",
+        "example": "I scroll through Instagram before bed."
+      },
+      {
+        "term": "to post / share",
+        "meaning": "to put content online",
+        "example": "I rarely post anything; I mostly watch."
+      },
+      {
+        "term": "followers",
+        "meaning": "people who follow your account",
+        "example": "She has thousands of followers."
+      },
+      {
+        "term": "addictive",
+        "meaning": "hard to stop using",
+        "example": "These apps are designed to be addictive."
+      },
+      {
+        "term": "online presence",
+        "meaning": "how visible you are online",
+        "example": "Businesses need a strong online presence."
+      },
+      {
+        "term": "cyberbullying",
+        "meaning": "bullying through the internet",
+        "example": "Cyberbullying is a serious problem for teenagers."
+      },
+      {
+        "term": "a highlight reel",
+        "meaning": "showing only the best moments",
+        "example": "Social media is just a highlight reel of people's lives."
+      }
+    ]
+  },
+  {
+    "topic": "History",
+    "aliases": [
+      "Learning history",
+      "Memory, history",
+      "Person who loves history"
+    ],
+    "words": [
+      {
+        "term": "historical mistakes",
+        "meaning": "Bad decisions, errors, or conflicts occurring in past history",
+        "example": "Analyzing past events, conflicts, and triumphs allows us to discover valuable lessons and avoid repeating historical mistakes."
+      },
+      {
+        "term": "credible sources",
+        "meaning": "Trustworthy, accurate, and reliable origins of information",
+        "example": "It is absolutely crucial for learners to verify facts using credible sources, peer-reviewed journals, and reputable educational platforms."
+      },
+      {
+        "term": "intellectual curiosity",
+        "meaning": "A strong desire to learn and think deeply",
+        "example": "It is a subject that always sparks my imagination and satisfies my intellectual curiosity."
+      },
+      {
+        "term": "double-edged sword",
+        "meaning": "Something carrying both high advantages and disadvantages",
+        "example": "However, it can also be a double-edged sword due to the widespread presence of inaccurate information and biased perspectives."
+      },
+      {
+        "term": "a history buff",
+        "meaning": "someone who knows a lot about history",
+        "example": "My brother is a real history buff."
+      },
+      {
+        "term": "historical sites",
+        "meaning": "places important in history",
+        "example": "Our city is full of historical sites."
+      },
+      {
+        "term": "ancient civilisations",
+        "meaning": "very old cultures",
+        "example": "I'm fascinated by ancient civilisations."
+      },
+      {
+        "term": "to learn from the past",
+        "meaning": "to avoid repeating mistakes",
+        "example": "We study history to learn from the past."
+      },
+      {
+        "term": "to take a stroll down memory lane",
+        "meaning": "to remember the past",
+        "example": "Old photos let you take a stroll down memory lane."
+      },
+      {
+        "term": "a turning point",
+        "meaning": "a moment of important change",
+        "example": "Independence was a turning point for my country."
+      },
+      {
+        "term": "to bring history to life",
+        "meaning": "to make history interesting",
+        "example": "Good museums bring history to life."
+      },
+      {
+        "term": "to memorise dates",
+        "meaning": "to learn dates by heart",
+        "example": "At school, history was mostly memorising dates."
+      }
+    ]
+  },
+  {
+    "topic": "Environment",
+    "aliases": [
+      "Recycling and rubbish",
+      "Recycling and rubbish (duplicate of earlier photo)",
+      "Environmental protection",
+      "Person who likes to protect the nature",
+      "Paper"
+    ],
+    "words": [
+      {
+        "term": "to recycle",
+        "meaning": "to process used materials for reuse",
+        "example": "We recycle paper and plastic at home."
+      },
+      {
+        "term": "single-use plastic",
+        "meaning": "plastic used once then thrown away",
+        "example": "Single-use plastic is a major problem."
+      },
+      {
+        "term": "to reduce waste",
+        "meaning": "to produce less rubbish",
+        "example": "Buying in bulk helps reduce waste."
+      },
+      {
+        "term": "eco-friendly",
+        "meaning": "not harmful to the environment",
+        "example": "I try to buy eco-friendly products."
+      },
+      {
+        "term": "carbon footprint",
+        "meaning": "the CO2 a person produces",
+        "example": "Flying increases your carbon footprint."
+      },
+      {
+        "term": "landfill",
+        "meaning": "a place where rubbish is buried",
+        "example": "Most rubbish still ends up in landfill."
+      },
+      {
+        "term": "to litter",
+        "meaning": "to drop rubbish in public",
+        "example": "People who litter should be fined."
+      },
+      {
+        "term": "climate change",
+        "meaning": "long-term change in global temperatures",
+        "example": "Climate change is affecting our summers."
+      },
+      {
+        "term": "renewable energy",
+        "meaning": "energy from sources like sun and wind",
+        "example": "My country is investing in renewable energy."
+      },
+      {
+        "term": "to go paperless",
+        "meaning": "to stop using paper",
+        "example": "Our office has gone paperless."
+      },
+      {
+        "term": "environmentally conscious",
+        "meaning": "aware of environmental issues",
+        "example": "Young people are more environmentally conscious."
+      },
+      {
+        "term": "to protect natural habitats",
+        "meaning": "to keep animals' homes safe",
+        "example": "We must protect natural habitats."
+      }
+    ]
+  },
+  {
+    "topic": "Jokes",
+    "aliases": [
+      "Humour",
+      "Funny things"
+    ],
+    "words": [
+      {
+        "term": "sense of humor",
+        "meaning": "Artistic ability to appreciate and express funny things",
+        "example": "Having friends with a great sense of humor is something I deeply value."
+      },
+      {
+        "term": "punchline",
+        "meaning": "The final phrase or sentence of a joke providing the humor",
+        "example": "I always seem to mess up the punchline or laugh prematurely before I even finish telling the story, which completely ruins the comedic effect."
+      },
+      {
+        "term": "comedic timing",
+        "meaning": "Knowing exactly when to say a line to maximize laughter",
+        "example": "I definitely leave the humor to my friends who possess a natural comedic timing."
+      },
+      {
+        "term": "hilarious anecdotes",
+        "meaning": "Short, funny, entertaining real-life stories",
+        "example": "Yes, my friend circle is absolutely full of witty individuals who love to crack jokes and share hilarious anecdotes."
+      },
+      {
+        "term": "sidesplitting",
+        "meaning": "Extremely funny, making you laugh until your stomach hurts",
+        "example": "There is one particular friend in our group who is practically a comedian and can turn even the most boring situation into something sidesplitting."
+      },
+      {
+        "term": "alleviate tension",
+        "meaning": "To ease or completely remove physical or mental stress",
+        "example": "It is a fantastic way to instantly boost my mood and alleviate tension."
+      },
+      {
+        "term": "to crack a joke",
+        "meaning": "to tell a joke",
+        "example": "My uncle cracks jokes at every family dinner."
+      },
+      {
+        "term": "to burst out laughing",
+        "meaning": "to suddenly start laughing",
+        "example": "We burst out laughing at the same moment."
+      },
+      {
+        "term": "an inside joke",
+        "meaning": "a joke only a group understands",
+        "example": "We have lots of inside jokes from school."
+      },
+      {
+        "term": "a stand-up comedian",
+        "meaning": "someone who tells jokes on stage",
+        "example": "I love watching stand-up comedians online."
+      },
+      {
+        "term": "to have a dry sense of humour",
+        "meaning": "to joke in a serious-sounding way",
+        "example": "My dad has a very dry sense of humour."
+      },
+      {
+        "term": "to laugh your head off",
+        "meaning": "to laugh a lot",
+        "example": "We laughed our heads off at the film."
+      }
+    ]
+  },
+  {
+    "topic": "Dreams and ambitions",
+    "aliases": [
+      "Dreams",
+      "Opportunities",
+      "Stages in life"
+    ],
+    "words": [
+      {
+        "term": "ultimate goal",
+        "meaning": "Final or most important objective",
+        "example": "My ultimate goal is to become a creative director for a large international advertising company."
+      },
+      {
+        "term": "ambitious person",
+        "meaning": "Someone with a strong desire to succeed",
+        "example": "Yes, I would definitely describe myself as an ambitious person who always wants to improve."
+      },
+      {
+        "term": "high goals",
+        "meaning": "Ambitious targets or milestones",
+        "example": "I am never happy with just staying in one place, so I always set high goals for my career and personal growth."
+      },
+      {
+        "term": "internal motivation",
+        "meaning": "Personal drive or desire to achieve something from within yourself",
+        "example": "This internal motivation forces me to try new things and take smart risks."
+      },
+      {
+        "term": "sustained focus",
+        "meaning": "Continuous concentration on a goal over a long period",
+        "example": "I believe that reaching a big dream requires patience, effort, and sustained focus."
+      },
+      {
+        "term": "hardworking person",
+        "meaning": "Someone who puts a lot of effort into tasks",
+        "example": "Generally speaking, I am a hardworking person who stays focused on my goals even when situations become difficult."
+      },
+      {
+        "term": "as I grew up",
+        "meaning": "Over the course of childhood into adulthood",
+        "example": "As I grew up, my interests changed to business, but I still love space."
+      },
+      {
+        "term": "a dream come true",
+        "meaning": "something you wanted very much that happened",
+        "example": "Studying abroad would be a dream come true."
+      },
+      {
+        "term": "to achieve a goal",
+        "meaning": "to succeed in doing what you planned",
+        "example": "I finally achieved my goal of running 10 km."
+      },
+      {
+        "term": "to seize an opportunity",
+        "meaning": "to take a chance when it comes",
+        "example": "You have to seize opportunities when they appear."
+      },
+      {
+        "term": "a stage of life",
+        "meaning": "a period such as childhood or old age",
+        "example": "Every stage of life has its own challenges."
+      },
+      {
+        "term": "to settle down",
+        "meaning": "to start a stable life, often with a family",
+        "example": "My parents want me to settle down soon."
+      }
+    ]
+  },
+  {
+    "topic": "Leisure time",
+    "aliases": [
+      "Spare time",
+      "Days off",
+      "Hobby",
+      "Walking",
+      "Free time"
+    ],
+    "words": [
+      {
+        "term": "to unwind",
+        "meaning": "to relax",
+        "example": "On days off I unwind by walking along the seafront."
+      },
+      {
+        "term": "to put one's feet up",
+        "meaning": "to relax completely",
+        "example": "After a long week I just want to put my feet up."
+      },
+      {
+        "term": "a hobby",
+        "meaning": "an activity you do for pleasure",
+        "example": "My main hobby is photography."
+      },
+      {
+        "term": "to take up",
+        "meaning": "to start a new activity",
+        "example": "I took up yoga last year."
+      },
+      {
+        "term": "to go for a stroll",
+        "meaning": "to take a slow, relaxed walk",
+        "example": "We often go for a stroll after dinner."
+      },
+      {
+        "term": "leisure activities",
+        "meaning": "things you do for fun",
+        "example": "Leisure activities are important for mental health."
+      },
+      {
+        "term": "to have a lie-in",
+        "meaning": "to stay in bed later than usual",
+        "example": "On Sundays I love having a lie-in."
+      },
+      {
+        "term": "to recharge",
+        "meaning": "to regain energy",
+        "example": "I need my weekends to recharge."
+      },
+      {
+        "term": "a day off",
+        "meaning": "a day without work",
+        "example": "I spend my day off with my family."
+      },
+      {
+        "term": "to hang out",
+        "meaning": "to spend time casually",
+        "example": "I hang out with friends at the weekend."
+      },
+      {
+        "term": "to lose track of time",
+        "meaning": "to forget the time because you are absorbed",
+        "example": "When I'm painting, I lose track of time."
+      },
+      {
+        "term": "to be into something",
+        "meaning": "to be interested in",
+        "example": "I'm really into hiking at the moment."
+      }
+    ]
+  },
+  {
+    "topic": "Old people",
+    "aliases": [
+      "Old person",
+      "Elderly people"
+    ],
+    "words": [
+      {
+        "term": "senior citizens",
+        "meaning": "elderly people",
+        "example": "Senior citizens get free public transport."
+      },
+      {
+        "term": "the elderly",
+        "meaning": "old people in general",
+        "example": "The elderly deserve more respect."
+      },
+      {
+        "term": "life experience",
+        "meaning": "knowledge from living",
+        "example": "Older people have lots of life experience."
+      },
+      {
+        "term": "wisdom",
+        "meaning": "knowledge and good judgement",
+        "example": "My grandmother is full of wisdom."
+      },
+      {
+        "term": "retirement",
+        "meaning": "the time after you stop working",
+        "example": "My father is enjoying his retirement."
+      },
+      {
+        "term": "to look after",
+        "meaning": "to take care of",
+        "example": "I help look after my grandparents."
+      },
+      {
+        "term": "the generation gap",
+        "meaning": "differences between old and young",
+        "example": "There's a big generation gap in technology use."
+      },
+      {
+        "term": "a nursing home",
+        "meaning": "a place where old people receive care",
+        "example": "Nursing homes are less common in my country."
+      },
+      {
+        "term": "to pass down",
+        "meaning": "to give to the next generation",
+        "example": "They pass down family traditions."
+      },
+      {
+        "term": "to be young at heart",
+        "meaning": "to feel and act young",
+        "example": "My grandfather is still young at heart."
+      },
+      {
+        "term": "an extended family",
+        "meaning": "grandparents, aunts and cousins together",
+        "example": "I grew up in an extended family."
+      },
+      {
+        "term": "to respect your elders",
+        "meaning": "to treat old people with respect",
+        "example": "Children are taught to respect their elders."
+      }
+    ]
+  },
+  {
+    "topic": "Science",
+    "aliases": [
+      "Science subjects",
+      "Scientific discoveries"
+    ],
+    "words": [
+      {
+        "term": "recent discoveries",
+        "meaning": "New findings or inventions made by scientists short ago",
+        "example": "I am especially interested in recent discoveries in medicine and space travel, which are changing our future."
+      },
+      {
+        "term": "scientific experiments",
+        "meaning": "Practical tests done in a laboratory to prove scientific theories",
+        "example": "My mind changed in high school when we started doing scientific experiments in the lab."
+      },
+      {
+        "term": "logical answers",
+        "meaning": "Explanations based on clear reasoning and facts",
+        "example": "Yes, I really appreciate science because it gives clear, logical answers for how the universe works."
+      },
+      {
+        "term": "chemical reactions",
+        "meaning": "The process where substances mix and transform into new forms",
+        "example": "Seeing real chemical reactions made the lessons exciting and made me very curious."
+      },
+      {
+        "term": "space travel",
+        "meaning": "Traveling outside of planet Earth into the universe",
+        "example": "I am especially interested in recent discoveries in medicine and space travel, which are changing our future."
+      },
+      {
+        "term": "a breakthrough",
+        "meaning": "an important discovery",
+        "example": "There's been a breakthrough in cancer research."
+      },
+      {
+        "term": "hands-on experiments",
+        "meaning": "practical activities in a lab",
+        "example": "I loved hands-on experiments at school."
+      },
+      {
+        "term": "to conduct research",
+        "meaning": "to do scientific study",
+        "example": "Universities conduct research on climate change."
+      },
+      {
+        "term": "evidence-based",
+        "meaning": "supported by scientific proof",
+        "example": "We need evidence-based decisions."
+      },
+      {
+        "term": "a lab",
+        "meaning": "a laboratory",
+        "example": "We had chemistry classes in a small lab."
+      },
+      {
+        "term": "a scientific mind",
+        "meaning": "a logical way of thinking",
+        "example": "My sister has a very scientific mind."
+      },
+      {
+        "term": "to make a discovery",
+        "meaning": "to find something new",
+        "example": "Scientists made a discovery about the deep ocean."
+      }
+    ]
+  }
+]
