@@ -1,6 +1,7 @@
 // Full-screen writing editor used for single-task practice and the mock exam (task 1 + task 2).
 import { mediaUrl } from '../api.js';
 import { h, esc, icon, toast, fmtClock, wordCount, store, confirmDialog, essayTypeLabel, modal } from '../ui.js';
+import { assistButton, setAssistContext } from './assist.js';
 
 /**
  * opts: {
@@ -33,7 +34,7 @@ export function writerView(opts) {
   const hideBtn = h('button', { class: 'icon-btn', type: 'button', title: 'Hide / show timer', 'aria-label': 'Hide or show timer', html: icon('eye') });
   el.append(h('header', { class: 'pl-top' },
     h('div', { class: 'pl-title' }, opts.title, h('small', null, opts.subtitle || '')),
-    tabs, h('div', { class: 'pl-actions' }, timerEl, hideBtn, exitBtn)));
+    tabs, h('div', { class: 'pl-actions' }, timerEl, hideBtn, assistButton({ compact: true, mock: !!opts.strictTime }), exitBtn)));
 
   const left = h('div', { class: 'writer-left' });
   const ta = h('textarea', { class: 'essay-input', spellcheck: 'false', autocomplete: 'off', 'aria-label': 'Your essay', placeholder: 'Start writing your answer here…' });
@@ -49,6 +50,7 @@ export function writerView(opts) {
     const t = tasks[idx];
     const p = t.prompt;
     const task = Number(p.task) === 1 ? 1 : 2;
+    setAssistContext({ section: task === 1 ? 'writing1' : 'writing2', essayType: p.essay_type, mock: !!opts.strictTime });
     left.innerHTML = `
       <div class="row" style="margin-bottom:10px">
         <span class="badge accent">Task ${task}</span>

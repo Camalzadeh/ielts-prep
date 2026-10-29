@@ -3,6 +3,7 @@ import { api, uploadUrl } from '../api.js';
 import { h, esc, icon, toast, withStates, emptyState, fmtDate, fmtBand, fmtClock, asList, store, debounce, confirmDialog, parseMaybeJSON } from '../ui.js';
 import { analysisPanel } from '../components/analysis.js';
 import { navigate, nav, setTitle } from '../app.js';
+import { assistButton, setAssistContext, setAssistDetail } from '../components/assist.js';
 
 const MODES = {
   part1: { title: 'Part 1', sub: 'Introduction & interview · 4–5 min', session: 'practice_part1', icon: 'speaking' },
@@ -101,7 +102,8 @@ export async function speakingRunner(root, opts) {
   const autoToggle = h('label', { class: 'switch', title: 'Read each question aloud and start recording automatically' },
     h('input', { type: 'checkbox', checked: S.autoExaminer }), 'Examiner mode');
   autoToggle.querySelector('input').addEventListener('change', (e) => { S.autoExaminer = e.target.checked; store.set('speakAuto', S.autoExaminer); });
-  head.querySelector('.page-actions').append(autoToggle);
+  setAssistContext({ section: 'speaking', mock: !!opts.mockId, part: steps[0]?.part || null, topic: steps[0]?.q?.topic || '' });
+  head.querySelector('.page-actions').append(autoToggle, assistButton());
   const progress = h('div', { class: 'row small muted', style: { marginBottom: '12px' } });
   const stage = h('div', { class: 'grid', style: { gridTemplateColumns: 'minmax(0,1.3fr) minmax(0,1fr)', alignItems: 'start' } });
   const left = h('div', { class: 'stack' });
@@ -298,6 +300,7 @@ export async function speakingRunner(root, opts) {
     clearInterval(timerId);
     drawProgress();
     const step = steps[S.idx];
+    setAssistDetail({ part: step.part, topic: step.q?.topic || '' });
     left.replaceChildren(cueCard(step));
     if (step.part === 2 && !step.prepDone) return showPrep(step);
     showRecorder(step);

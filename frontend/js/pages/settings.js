@@ -3,12 +3,25 @@ import { api } from '../api.js';
 import { h, esc, icon, toast, asList } from '../ui.js';
 import { state, setProvider, onStateChange, setTheme, themePref } from '../state.js';
 import { setTitle } from '../app.js';
+import { loadAssistSettings } from '../components/assist.js';
 
 export async function render(root) {
   setTitle('Settings');
   root.replaceChildren(h('div', { class: 'page-head' }, h('div', null, h('h1', null, 'Settings'), h('p', null, 'AI tutor, content and appearance.'))));
   const col = h('div', { class: 'stack', style: { maxWidth: '900px' } });
   root.append(col);
+
+  // ------------------------------------------------ study assistant
+  const mockToggle = h('input', { type: 'checkbox' });
+  api.get('/api/settings').then((s) => { mockToggle.checked = s.assist_in_mock === '1'; }).catch(() => {});
+  mockToggle.addEventListener('change', async () => {
+    try { await api.put('/api/settings', { assist_in_mock: mockToggle.checked ? '1' : '0' }); await loadAssistSettings(); toast('Saved.', 'good'); }
+    catch (e) { toast(e.message, 'error'); }
+  });
+  col.append(h('section', { class: 'card card-pad' },
+    h('h2', { style: { margin: 0 } }, 'Study assistant'),
+    h('p', { class: 'small muted' }, 'The Help button (Alt+H) opens the course rules for the section you are practising, the vocabulary list and a translator; selecting any text offers a translation (Google Translate, free). In mock exams it is off, like in the real exam, unless you allow it here.'),
+    h('label', { class: 'switch', style: { marginTop: '8px' } }, mockToggle, 'Allow the assistant during mock exams')));
 
   // ------------------------------------------------ profile
   const nameInput = h('input', { class: 'input', type: 'text', id: 'user_name', placeholder: 'e.g. Aysel' });

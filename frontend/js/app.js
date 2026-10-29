@@ -1,6 +1,7 @@
 // App shell + hash router.
 import { icon, esc, h, errorState, loading } from './ui.js';
 import { state, loadSettings, setProvider, onStateChange, currentTheme, setTheme } from './state.js';
+import { assistButton, installSelectionTranslator, loadAssistSettings, clearAssistContext } from './components/assist.js';
 
 const NAV = [
   { section: 'Overview' },
@@ -109,7 +110,7 @@ function renderTopbar(title) {
     drawTheme();
     tb.append(
       h('div', { class: 'crumb', id: 'crumb' }),
-      h('div', { class: 'topbar-right' }, providerSwitch(), themeBtn),
+      h('div', { class: 'topbar-right' }, assistButton(), providerSwitch(), themeBtn),
     );
     tb.dataset.built = '1';
   }
@@ -133,6 +134,7 @@ async function route() {
   }
   nav.guard = null;
   nav.lastHash = hash;
+  clearAssistContext();
 
   let match = null, def = null;
   for (const r of ROUTES) {
@@ -190,4 +192,6 @@ window.addEventListener('beforeunload', (e) => {
 });
 
 loadSettings();
+loadAssistSettings();
+installSelectionTranslator();
 route();

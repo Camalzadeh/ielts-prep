@@ -1,5 +1,6 @@
 // Text highlighting stored as character offsets into a container's textContent.
 import { h, icon } from '../ui.js';
+import { translatePopover } from './assist.js';
 
 function textNodes(root) {
   const out = [];
@@ -103,9 +104,11 @@ export function attachHighlighter(root, { getRanges, setRanges, rerender }) {
       const off = selectionOffsets(root);
       if (off) {
         const rect = window.getSelection().getRangeAt(0).getBoundingClientRect();
+        const selText = window.getSelection().toString().trim();
         showPop(rect.left + rect.width / 2, rect.top, [
           { icon: 'highlight', label: 'Highlight', run: () => { setRanges(mergeRanges([...getRanges(), off])); window.getSelection().removeAllRanges(); redraw(); } },
           { icon: 'eraser', label: 'Clear', run: () => { setRanges(subtract(getRanges(), off)); window.getSelection().removeAllRanges(); redraw(); } },
+          { icon: 'translate', label: 'Translate', run: () => translatePopover(selText, rect) },
         ]);
         return;
       }
@@ -124,6 +127,7 @@ export function attachHighlighter(root, { getRanges, setRanges, rerender }) {
   };
   const onDocDown = (e) => { if (pop && !pop.contains(e.target)) closePop(); };
   const onKey = (e) => { if (e.key === 'Escape') closePop(); };
+  root.dataset.hlRoot = '1';
   root.addEventListener('mouseup', onUp);
   root.addEventListener('keyup', (e) => { if (e.shiftKey) onUp(e); });
   document.addEventListener('mousedown', onDocDown);

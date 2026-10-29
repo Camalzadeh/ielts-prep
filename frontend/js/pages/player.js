@@ -4,6 +4,7 @@ import { h, esc, icon, toast, modal, confirmDialog, fmtClock, store, sanitizeCon
 import { renderGroup, partQuestionNumbers } from '../components/questions.js';
 import { attachHighlighter } from '../components/highlight.js';
 import { navigate, nav, setTitle } from '../app.js';
+import { assistButton, setAssistContext, setAssistQType } from '../components/assist.js';
 
 const AUTOSAVE_MS = 5000;
 
@@ -29,7 +30,7 @@ export async function render(root, params, query) {
     current: allNums[0] || 1, started: false, submitted: false, dirty: false,
     audio: { part: 0, time: 0, finished: false }, timerHidden: store.get('timerHidden', false),
   };
-  const resuming = !!S.attemptId;
+  let resuming = !!S.attemptId;
   const localKey = () => `attempt.${S.attemptId}`;
 
   function loadLocal() {
@@ -67,9 +68,11 @@ export async function render(root, params, query) {
         S.highlights = parseMaybeJSON(a.highlights_json, null) || a.highlights || {};
       }
     } catch (e) {
-      if (e.status === 404) {
+      if (e.status === 404) {  // the attempt was deleted: start fresh instead of "resuming" nothing
         store.remove(activeKey);
+        store.remove(localKey());
         S.attemptId = null;
+        resuming = false;
       } else {
         loadLocal();
       }
@@ -77,6 +80,8 @@ export async function render(root, params, query) {
   }
 
   // ------------------------------------------------------------------ layout
+  setAssistContext({ section: type, mock: mode === 'mock' });
+  const qTypeOf = (n) => { for (const p of test.parts || []) for (const g of p.groups || []) if (g.range && n >= g.range[0] && n <= g.range[1]) return g.type; return null; };
   const player = h('div', { class: `player ${type} fs-${store.get('fontSize', 'm')}` });
   const timerEl = h('div', { class: `timer${S.timerHidden ? ' hidden-time' : ''}`, role: 'timer', 'aria-live': 'off', html: `${icon('clock')}<span class="t-val">--:--</span>` });
   const tabs = h('div', { class: 'pl-tabs', role: 'tablist', 'aria-label': type === 'reading' ? 'Passages' : 'Parts' });
@@ -87,7 +92,7 @@ export async function render(root, params, query) {
     h('div', { class: 'pl-title', title: test.title || '' }, test.title || testId,
       h('small', null, `${type === 'listening' ? 'Listening' : 'Reading'} · ${mode === 'mock' ? 'Mock exam' : 'Practice mode'}`)),
     tabs,
-    h('div', { class: 'pl-actions' }, timerEl, hideBtn, fontBtn, exitBtn),
+    h('div', { class: 'pl-actions' }, timerEl, hideBtn, fontBtn, assistButton({ compact: true }), exitBtn),
   );
   player.append(top);
 
@@ -258,6 +263,7 @@ export async function render(root, params, query) {
     if (!numToPart.has(n)) return;
     document.querySelectorAll('.player .current').forEach((e) => { if (!e.classList.contains('pal-num')) e.classList.remove('current'); });
     S.current = n;
+    setAssistQType(qTypeOf(n));
     let el = qElement(n);
     if (el && el.classList.contains('anchor')) el = el.parentElement;
     if (el) {
