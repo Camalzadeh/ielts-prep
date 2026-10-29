@@ -1,0 +1,50 @@
+IELTS Prep - Proprietary License
+
+Copyright (c) 2026 Humbat Jamalov. All rights reserved.
+
+1. Ownership
+   This repository and everything in it that was created for it - the source code, the frontend
+   design, the documentation, the curated knowledge base, the phrase banks, tactics, word tables
+   and other data files (together, "the Software") - is the exclusive property of the copyright
+   holder. It is protected by copyright law and international treaties.
+
+2. No permission without written consent
+   No licence or right is granted to anyone, by implication or otherwise, unless the copyright
+   holder gives it explicitly and in writing (a message from the copyright holder counts).
+   Without that prior written permission you may NOT, in whole or in part:
+     a) use, run, install or host the Software;
+     b) copy, clone, fork (other than GitHub's own view of a repository you were invited to),
+        download or reproduce it;
+     c) modify it, translate it or create derivative works based on it;
+     d) publish, distribute, share, sublicense or otherwise make it available to anyone;
+     e) sell, rent, lease or lend it, or offer it as a paid or free service;
+     f) use it for any commercial purpose, including teaching or tutoring services;
+     g) use it, or any part of it, to train or evaluate machine-learning models;
+     h) remove or change this licence or any copyright notice.
+
+3. Permission given to individuals
+   If the copyright holder lets a person use the Software, that permission is personal,
+   non-exclusive, non-transferable and revocable at any time, and - unless the written permission
+   says otherwise - covers only that person's own, non-commercial IELTS study on their own computer.
+   It does not allow sharing the Software, or access to it, with anyone else.
+
+4. Third-party material
+   Some material is not owned by the copyright holder and is NOT covered by this licence:
+     - bundled libraries in frontend/vendor/ (Chart.js - MIT; marked - MIT; DOMPurify - Apache-2.0
+       or MPL-2.0; the Inter font - SIL Open Font License 1.1), which stay under their own licences;
+     - IELTS practice tests and audio that users download themselves with the included tools, and
+       course and exam material referred to in the knowledge base, which remain the property of
+       their respective owners and may be used for personal study only.
+   Nothing in this licence grants any right in that third-party material.
+
+5. Termination
+   Any use outside the permission given ends that permission automatically. The person must then
+   stop using the Software and delete every copy of it.
+
+6. No warranty
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+   BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+   NON-INFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR
+   OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR ITS USE.
+
+To ask for permission, contact the copyright holder through GitHub (github.com/Camalzadeh).

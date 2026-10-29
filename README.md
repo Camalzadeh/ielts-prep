@@ -55,6 +55,11 @@ http://127.0.0.1:8765. To stop the server: `launcher\stop.bat` / `launcher/stop.
 
 First time: open **Settings → Your name**.
 
+**Study assistant** — the **Help** button (or Alt+H) on every practice screen opens a side panel with:
+tactics for the current question/task type, the course's word tables and phrase bank (click a word to
+insert it into your essay), the course rules, vocabulary and a free translator (select any text →
+*Translate*). It is off during mock exams unless you allow it in Settings.
+
 ## AI feedback (optional)
 "Explain my mistakes" / "Analyse with AI" uses a coding-agent CLI installed and logged in on your
 computer — pick one in the header:
@@ -83,6 +88,11 @@ predicted speaking topics, real-exam writing prompts with Task-1 charts, vocabul
 **Not shared** (see `.gitignore`): anyone's personal data — databases, recordings, essays, scores, names,
 the Telegram chat exports — and the downloaded test files (each user fetches them with
 `tools/fetch_content.py`; the test material is for personal study only).
+
+## License
+Proprietary - all rights reserved (see `LICENSE`). You may use this app only with the author's
+written permission, for your own non-commercial study; copying, sharing, modifying or selling it
+is not allowed. Bundled libraries and downloaded test material keep their own owners and licences.
 
 ## For developers
 - Architecture & API contract: `ARCHITECTURE.md`. Backend `backend/app` (FastAPI, stdlib sqlite3),
