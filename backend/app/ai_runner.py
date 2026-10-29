@@ -22,7 +22,7 @@ from . import context, db
 
 log = logging.getLogger("ielts.ai")
 
-TIMEOUT_SEC = 15 * 60
+TIMEOUT_SEC = 5 * 60   # normal runs take ~1 min; fail fast if a CLI hangs
 INLINE_PROMPT_MAX = 24000      # agy has no stdin in print mode; longer prompts go via a file reference
 SKILL_PATH = ".claude/skills/ielts-analysis/SKILL.md"
 
@@ -233,10 +233,13 @@ def run_analysis(analysis_id: int) -> None:
         json.dumps([a if a is not instruction else "<instruction>" for a in args], indent=1), encoding="utf-8")
 
     started = time.time()
-    proc = subprocess.Popen(args, cwd=str(db.ROOT), stdin=subprocess.PIPE, stdout=subprocess.PIPE,
-                            stderr=subprocess.PIPE, env=_child_env(), creationflags=_NO_WINDOW)
+    # Claude reads the prompt from stdin. Antigravity gets it as an argument and must get NO stdin:
+    # with a pipe attached it can block forever waiting on it (seen in practice, 0 CPU, no output).
+    uses_stdin = "{instruction}" not in tpl
+    proc = subprocess.Popen(args, cwd=str(db.ROOT), stdin=subprocess.PIPE if uses_stdin else subprocess.DEVNULL,
+                            stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=_child_env(), creationflags=_NO_WINDOW)
     try:
-        out, err = proc.communicate(input=prompt.encode("utf-8"), timeout=TIMEOUT_SEC)
+        out, err = proc.communicate(input=prompt.encode("utf-8") if uses_stdin else None, timeout=TIMEOUT_SEC)
     except subprocess.TimeoutExpired:
         _kill_tree(proc)
         out, err = proc.communicate()
