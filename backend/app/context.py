@@ -363,7 +363,7 @@ def speaking_context(conn: sqlite3.Connection, session_id: int, exclude_analysis
     for r in rows:
         m = db.loads(r["metrics_json"], {}) or {}
         src = "whisper" if r["transcribe_status"] == "done" else "browser speech recognition"
-        out.append(f"\n## Part {r['part']} — {r['question_text']}\n"
+        out.append(f"\n## Response {r['id']} · Part {r['part']} — {r['question_text']}\n"
                    f"duration {r['duration_sec']}s | transcript source: {src} ({r['transcribe_status']})\n"
                    f"{_metrics_line(m)}\nTranscript: {r['transcript'] or r['browser_transcript'] or '(empty)'}")
         tot_words += m.get("words") or 0

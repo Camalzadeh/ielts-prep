@@ -2,6 +2,7 @@
 import { api, uploadUrl } from '../api.js';
 import { h, esc, icon, toast, withStates, emptyState, fmtDate, fmtBand, fmtClock, asList, store, debounce, confirmDialog, parseMaybeJSON } from '../ui.js';
 import { analysisPanel } from '../components/analysis.js';
+import { annotatedText, speakingAnswers, mistakeCorrections } from '../components/inline-fix.js';
 import { navigate, nav, setTitle } from '../app.js';
 import { assistButton, setAssistContext, setAssistDetail } from '../components/assist.js';
 
@@ -91,7 +92,7 @@ export async function speakingRunner(root, opts) {
     root.append(emptyState('No questions available', 'The speaking question bank is empty. Reimport content from Settings.', 'speaking'));
     return;
   }
-  const S = { idx: 0, sessionId: null, uploads: [], recording: false, prepDone: false, autoExaminer: store.get('speakAuto', true) };
+  const S = { idx: 0, sessionId: null, uploads: [], deletes: [], recording: false, prepDone: false, autoExaminer: store.get('speakAuto', true) };
   let stream = null, audioCtx = null, analyser = null, rafId = 0, recorder = null, chunks = [], recStart = 0, recog = null;
   let finalText = '', interimText = '';
   let timerId = 0;
@@ -103,7 +104,14 @@ export async function speakingRunner(root, opts) {
     h('input', { type: 'checkbox', checked: S.autoExaminer }), 'Examiner mode');
   autoToggle.querySelector('input').addEventListener('change', (e) => { S.autoExaminer = e.target.checked; store.set('speakAuto', S.autoExaminer); });
   setAssistContext({ section: 'speaking', mock: !!opts.mockId, part: steps[0]?.part || null, topic: steps[0]?.q?.topic || '' });
-  head.querySelector('.page-actions').append(autoToggle, assistButton());
+  const finishNow = h('button', { class: 'btn', type: 'button', html: `${icon('check')} Finish now`, title: 'End the session here; the remaining questions are skipped' });
+  finishNow.addEventListener('click', async () => {
+    const n = S.uploads.length + (S.recording ? 1 : 0);
+    if (!(await confirmDialog('Finish now?', `${n} answer${n === 1 ? '' : 's'} recorded. The remaining questions are skipped.`, 'Finish'))) return;
+    if (S.recording) await stopRecording(steps[S.idx]);
+    finish();
+  });
+  head.querySelector('.page-actions').append(autoToggle, finishNow, assistButton());
   const progress = h('div', { class: 'row small muted', style: { marginBottom: '12px' } });
   const stage = h('div', { class: 'grid', style: { gridTemplateColumns: 'minmax(0,1.3fr) minmax(0,1fr)', alignItems: 'start' } });
   const left = h('div', { class: 'stack' });
@@ -253,8 +261,24 @@ export async function speakingRunner(root, opts) {
     });
   }
 
+  /** Remove an answer from the session (side list button, or replaced by a re-recording). */
+  function removeUpload(entry) {
+    S.uploads = S.uploads.filter((u) => u !== entry);
+    drawUploads();
+    const p = (async () => {
+      await entry.promise;
+      if (entry.id) {
+        try { await api.del(`/api/speaking/responses/${entry.id}`); } catch (e) { toast(`Could not delete the answer: ${e.message}`, 'error'); }
+      }
+    })();
+    S.deletes.push(p);
+    return p;
+  }
+
   function upload(step, blob, dur, transcript) {
     const entry = { step, status: 'uploading', dur, transcript, url: URL.createObjectURL(blob) };
+    // A re-recording replaces the earlier take of the same question.
+    S.uploads.filter((u) => u.step === step).forEach(removeUpload);
     S.uploads.push(entry);
     drawUploads();
     const fd = new FormData();
@@ -274,10 +298,12 @@ export async function speakingRunner(root, opts) {
 
   function drawUploads() {
     const box = uploadsCard.querySelector('.uploads');
-    if (!S.uploads.length) return;
+    if (!S.uploads.length) { box.replaceChildren(h('span', { class: 'muted' }, 'Recorded answers appear here.')); return; }
     box.replaceChildren(...S.uploads.map((u, i) => h('div', { style: { padding: '8px 0', borderBottom: '1px solid var(--border)' } },
       h('div', { class: 'row between' }, h('b', null, `${i + 1}. Part ${u.step.part}`),
-        h('span', { class: `badge ${u.status === 'saved' ? 'good' : u.status === 'error' ? 'bad' : 'warn'}` }, u.status === 'saved' ? `Saved · ${fmtClock(u.dur)}` : u.status === 'error' ? 'Upload failed' : 'Uploading…')),
+        h('span', { class: 'row', style: { gap: '6px' } },
+          h('span', { class: `badge ${u.status === 'saved' ? 'good' : u.status === 'error' ? 'bad' : 'warn'}` }, u.status === 'saved' ? `Saved · ${fmtClock(u.dur)}` : u.status === 'error' ? 'Upload failed' : 'Uploading…'),
+          h('button', { class: 'btn sm ghost', type: 'button', title: 'Delete this answer', 'aria-label': 'Delete this answer', html: icon('x'), onclick: () => removeUpload(u) }))),
       h('div', { class: 'muted', style: { whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' } }, u.step.q.question),
       h('audio', { controls: true, src: u.url, preload: 'none', style: { width: '100%', height: '32px', marginTop: '4px' } }))));
   }
@@ -397,7 +423,7 @@ export async function speakingRunner(root, opts) {
 
   async function finish() {
     left.replaceChildren(h('div', { class: 'card card-pad' }, h('div', { class: 'loading-block' }, h('span', { class: 'spinner' }), ' Saving your answers…')));
-    await Promise.all(S.uploads.map((u) => u.promise).filter(Boolean));
+    await Promise.all([...S.uploads.map((u) => u.promise), ...S.deletes].filter(Boolean));
     cleanup();
     if (!S.sessionId) { toast('No answers were recorded.'); navigate(opts.mockId ? `#/mock/${opts.mockId}` : '#/speaking'); return; }
     try { await api.post(`/api/speaking/sessions/${S.sessionId}/finish`); } catch (e) { console.warn(e); }
@@ -455,23 +481,27 @@ async function renderSession(root, id) {
     clearTimeout(pollT);
     if (pending && root.isConnected) pollT = setTimeout(() => load().catch(() => {}), 4000);
   };
-  let respBox = null;
+  let respBox = null, countEl = null, lastS = null;
+  let aiAnswers = new Map(), aiLoose = [];
   function draw(s) {
+    lastS = s;
     const responses = asList(s.responses);
     if (!respBox) {
       root.replaceChildren(h('div', { class: 'page-head' },
         h('div', null,
           h('div', { class: 'small' }, h('a', { href: s.mock_id ? `#/mock/${s.mock_id}` : '#/speaking' }, s.mock_id ? '← Mock exam' : '← Speaking')),
           h('h1', null, `Speaking session · ${modeLabel(s.mode)}`),
-          h('p', null, `${fmtDate(s.created_at)} · ${responses.length} answer${responses.length === 1 ? '' : 's'}`)),
+          countEl = h('p')),
         h('div', { class: 'page-actions' }, h('a', { class: 'btn', href: '#/speaking', html: `${icon('mic')} New practice` }))));
       respBox = h('div', { class: 'stack', style: { marginBottom: '22px' } });
       root.append(respBox);
       root.append(analysisPanel({
         target_type: 'speaking_session', target_id: id, title: 'Analyse with AI',
         subtitle: 'Band estimate for Fluency & Coherence, Lexical Resource, Grammar and Pronunciation (from transcript + metrics).',
+        onResult: (j) => { aiAnswers = speakingAnswers(j); aiLoose = aiAnswers.size ? [] : mistakeCorrections(j); if (lastS) draw(lastS); },
       }));
     }
+    countEl.textContent = `${fmtDate(s.created_at)} · ${responses.length} answer${responses.length === 1 ? '' : 's'}`;
     if (!responses.length && s.teacher_band != null) {
       respBox.replaceChildren(h('div', { class: 'card', html: `<p><b>Teacher-assessed band ${esc(fmtBand(s.teacher_band))}</b> — ${esc(s.notes || '')}</p>
         <p class="muted">Imported from your records (no recordings). Practise these questions again here to get recordings, transcripts and AI feedback.</p>` }));
@@ -503,11 +533,19 @@ async function renderSession(root, id) {
     if (metrics.childNodes.length) card.append(metrics);
     const transcript = r.transcript || r.browser_transcript || '';
     const low = new Set(asList(m.low_confidence_words).map((w) => String(typeof w === 'object' ? w.word : w).toLowerCase().replace(/[^a-z']/g, '')));
+    const lowWrap = (str) => esc(str).split(/(\s+)/).map((w) => low.has(w.toLowerCase().replace(/[^a-z']/g, '')) && w.trim() ? `<span class="lowconf" title="Low confidence — check pronunciation">${w}</span>` : w).join('');
+    const ai = aiAnswers.get(Number(r.id));
     const tDiv = h('div', { style: { marginTop: '10px', lineHeight: '1.65' } });
-    if (transcript) {
-      tDiv.innerHTML = esc(transcript).split(/(\s+)/).map((w) => low.has(w.toLowerCase().replace(/[^a-z']/g, '')) && w.trim() ? `<span class="lowconf" title="Low confidence — check pronunciation">${w}</span>` : w).join('');
-    } else tDiv.innerHTML = `<span class="muted">${st === 'pending' ? 'Transcript is being generated…' : 'No transcript.'}</span>`;
+    const fixes = ai ? ai.corrections : aiLoose;
+    if (transcript && fixes.length) tDiv.append(annotatedText(transcript, fixes, { plain: lowWrap }));
+    else if (transcript) tDiv.innerHTML = lowWrap(transcript);
+    else tDiv.innerHTML = `<span class="muted">${st === 'pending' ? 'Transcript is being generated…' : 'No transcript.'}</span>`;
     card.append(tDiv);
+    if (ai && (ai.feedback || ai.better)) {
+      card.append(h('div', { class: 'resp-ai' },
+        ai.feedback ? h('div', { class: 'ai-note', style: { marginLeft: '0' } }, h('span', { class: 'ai-tag' }, 'AI'), ' ', ai.feedback) : null,
+        ai.better ? h('div', { class: 'better' }, h('span', { class: 'muted' }, 'Better: '), ai.better) : null));
+    }
     const extra = h('div', { class: 'row', style: { marginTop: '8px' } });
     if (whisperDone && r.browser_transcript && r.browser_transcript !== r.transcript) {
       const d = h('details', { dataset: { id: `b${r.id}` } }, h('summary', { class: 'small', style: { cursor: 'pointer', color: 'var(--accent)' } }, 'Browser transcript'), h('div', { class: 'small muted' }, r.browser_transcript));
@@ -515,11 +553,16 @@ async function renderSession(root, id) {
       extra.append(d);
     }
     if (low.size) extra.append(h('span', { class: 'small muted' }, `${low.size} low-confidence word${low.size > 1 ? 's' : ''} highlighted`));
+    extra.append(h('span', { class: 'spacer' }));
     if (r.audio_url || r.audio_path) {
-      extra.append(h('span', { class: 'spacer' }), h('button', { class: 'btn sm ghost', type: 'button', html: `${icon('refresh')} Re-transcribe`, onclick: async () => {
+      extra.append(h('button', { class: 'btn sm ghost', type: 'button', html: `${icon('refresh')} Re-transcribe`, onclick: async () => {
         try { await api.post(`/api/speaking/responses/${r.id}/retranscribe`); toast('Re-transcribing…'); load(); } catch (e) { toast(e.message, 'error'); }
       } }));
     }
+    extra.append(h('button', { class: 'btn sm ghost', type: 'button', html: `${icon('x')} Delete`, onclick: async () => {
+      if (!(await confirmDialog('Delete this answer?', 'The recording and its transcript are removed from this session.', 'Delete'))) return;
+      try { await api.del(`/api/speaking/responses/${r.id}`); toast('Answer deleted.'); load(); } catch (e) { toast(e.message, 'error'); }
+    } }));
     if (r.transcribe_error) extra.append(h('div', { class: 'small', style: { color: 'var(--bad)', width: '100%' } }, r.transcribe_error));
     card.append(extra);
     return card;

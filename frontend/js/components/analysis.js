@@ -6,7 +6,9 @@ import { state, providerName, onStateChange } from '../state.js';
 const POLL_MS = 2000;
 
 /**
- * opts: { target_type, target_id, title, subtitle, buttonLabel }
+ * opts: { target_type, target_id, title, subtitle, buttonLabel, onResult(json|null) }
+ * onResult gets the JSON of the analysis on screen (null while none is done), so the page can show
+ * the feedback next to the questions / sentences it belongs to.
  * Returns a DOM element. Polling stops automatically when the element is detached.
  */
 export function analysisPanel(opts) {
@@ -122,6 +124,10 @@ export function analysisPanel(opts) {
   function show(row) {
     shownId = row.id;
     drawHistory();
+    if (opts.onResult) {
+      const j = row.status === 'done' ? parseMaybeJSON(row.result_json, null) : null;
+      try { opts.onResult(j && typeof j === 'object' ? j : null); } catch (e) { console.warn(e); }
+    }
     if (row.status === 'queued' || row.status === 'running') {
       bodyEl.replaceChildren(progressView(row));
       return;

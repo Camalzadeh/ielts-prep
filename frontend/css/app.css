@@ -671,3 +671,21 @@ table.table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
 .phr-cat .phr-item { border-left: 3px solid color-mix(in srgb, var(--cs) 45%, transparent); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
 .cs-chip.phr-main { font-weight: 700; font-size: 13.5px; }
 
+
+/* AI feedback next to the item it belongs to (components/inline-fix.js) */
+.ai-slot:empty { display: none; }
+.ai-note { margin: 2px 0 8px 62px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--surface-2); border-radius: 6px; font-size: 13.5px; line-height: 1.55; }
+.ai-note + .ai-note { margin-top: 0; }
+.ai-note-head { display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; }
+.ai-note-line { margin-top: 3px; }
+.ai-tag { font-size: 11px; font-weight: 700; color: var(--accent); border: 1px solid var(--accent); border-radius: 4px; padding: 0 4px; }
+.annotated { font-size: 15px; line-height: 1.75; }
+.annotated .an-para { margin-bottom: 12px; }
+.annotated .an-sent { margin: 2px 0; }
+.fix-mark { background: color-mix(in srgb, var(--bad) 18%, transparent); color: inherit; border-bottom: 2px solid var(--bad); padding: 0 1px; border-radius: 2px; }
+.fix-note { margin: 4px 0 10px; padding: 6px 12px; border-left: 3px solid var(--good); background: var(--surface-2); border-radius: 6px; font-size: 13.5px; line-height: 1.55; }
+.fix-line + .fix-line { margin-top: 3px; }
+.fix-note .m-fix { color: var(--good); font-weight: 560; }
+.fix-note .m-orig { color: var(--bad); text-decoration: line-through; text-decoration-thickness: 1px; }
+.resp-ai { margin-top: 10px; }
+.resp-ai .better { margin-top: 6px; padding: 6px 12px; border-left: 3px solid var(--accent); background: var(--surface-2); border-radius: 6px; font-size: 13.5px; }

@@ -3,6 +3,7 @@ import { api, mediaUrl } from '../api.js';
 import { h, esc, icon, fmtBand, fmtDuration, fmtDate, sanitizeContent, qtypeLabel, emptyState, parseMaybeJSON } from '../ui.js';
 import { renderGroup, partQuestionNumbers } from '../components/questions.js';
 import { analysisPanel } from '../components/analysis.js';
+import { mistakesByQuestion, questionNote } from '../components/inline-fix.js';
 import { applyHighlights } from '../components/highlight.js';
 import { setTitle } from '../app.js';
 
@@ -126,12 +127,18 @@ export async function render(root, params) {
   root.append(h('div', { class: 'grid', style: { gridTemplateColumns: 'minmax(0,1.5fr) minmax(0,1fr)', marginBottom: '22px' } }, hero, typeCard));
 
   // ------------------------------------------------ review
+  // AI notes go under each wrong question of the review (filled when an analysis is on screen).
+  let aiByQ = new Map();
+  const paintAi = () => root.querySelectorAll('[data-aiq]').forEach((slot) => {
+    const list = aiByQ.get(Number(slot.dataset.aiq));
+    slot.replaceChildren(...(list ? [questionNote(list)] : []));
+  });
   root.append(h('h2', { style: { marginTop: '8px' } }, 'Answer review'));
   if (!test) {
     root.append(h('div', { class: 'error-box' }, `Could not load the test for review: ${testErr?.message || 'unknown error'}`));
     root.append(detailsTable(details));
   } else {
-    root.append(reviewView(test, type, byNum, highlights));
+    root.append(reviewView(test, type, byNum, highlights, paintAi));
   }
 
   // ------------------------------------------------ AI
@@ -139,6 +146,7 @@ export async function render(root, params) {
     target_type: 'attempt', target_id: id, title: 'Explain my mistakes with AI',
     subtitle: 'Why each answer was wrong, what the evidence was, and what to practise next.',
     buttonLabel: 'Explain my mistakes',
+    onResult: (j) => { aiByQ = mistakesByQuestion(j); paintAi(); },
   });
   ai.id = 'ai';
   ai.style.marginTop = '26px';
@@ -154,7 +162,7 @@ function normaliseDetail(d) {
 function cls(r) { return r >= 0.75 ? 'high' : r >= 0.5 ? 'mid' : 'low'; }
 function frag2(s) { const t = document.createElement('template'); t.innerHTML = s.trim(); return t.content.firstElementChild; }
 
-function reviewView(test, type, byNum, highlights) {
+function reviewView(test, type, byNum, highlights, afterShow = () => {}) {
   const parts = (test.parts || []).slice().sort((a, b) => a.number - b.number);
   const wrap = h('div');
   const tabs = h('div', { class: 'tabs', role: 'tablist' });
@@ -200,6 +208,7 @@ function reviewView(test, type, byNum, highlights) {
       top.append(h('div', { class: 'row', style: { marginTop: src ? '10px' : '0' } }, tBtn, part.transcript_html ? null : h('span', { class: 'small muted' }, 'No transcript available')));
       content.replaceChildren(top, tBox, h('div', { class: 'review-layout single' }, qPane));
     }
+    afterShow();
   };
   parts.forEach((p, i) => {
     const nums = partQuestionNumbers(p);

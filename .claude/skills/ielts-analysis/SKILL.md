@@ -47,6 +47,23 @@ Final JSON block (keys always present; use null when not applicable):
 listening/reading `null`; mock `{"L":..,"R":..,"W":..,"S":..}`; progress `{"listening":..,"reading":..,"writing":..,"speaking":..}`.
 Bands are in 0.5 steps.
 
+**Inline feedback keys** — the app shows these right under the item they belong to (next to the wrong
+question, under the sentence the learner wrote or said), so fill them for every target below:
+
+- attempt: `mistakes` has **one entry per wrong or blank question** (never grouped; a "choose TWO" pair
+  gets one entry per question number), `"ref": "Q{n}"`, plus `"correct"` (the right answer) and
+  `"evidence"` (the short quote that contains it). Keep `what` / `why` / `fix` to one sentence each.
+- writing: add `"corrections": [{"original": "...", "corrected": "...", "why": "..."}]` for **every**
+  error in the essay (up to ~40), in essay order. `original` must be copied **verbatim** from the
+  essay (3–25 words, enough to be unique) so the app can find it; `corrected` is the same stretch fixed.
+  For a weak sentence that has no single error (vague, off-task, missing comparison) use the whole
+  sentence as `original` and the better sentence as `corrected`.
+- speaking_session: add `"answers": [{"response": <Response id from the context>, "feedback": "...",
+  "corrections": [{"original": "...", "corrected": "...", "why": "..."}], "better": "..."}]`, one per
+  response: `feedback` = what worked and what was missing (1–2 sentences); `corrections` = the
+  grammar/word-choice errors in what they said, `original` verbatim from the transcript (skip obvious
+  speech-recognition artefacts); `better` = the 1–3 sentence model upgrade in the learner's voice.
+
 ## target_type = attempt (listening / reading)
 
 - The band comes from the raw score (already computed — repeat it, don't recompute).

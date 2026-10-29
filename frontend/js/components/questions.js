@@ -320,6 +320,7 @@ function renderGroupReview(group, questions, ctx) {
       h('span', { class: 'rv-correct' }, h('span', { class: 'muted small' }, 'Correct: '), h('b', null, correctText(d) || (Array.isArray(q.answer) ? q.answer.join(' / ') : q.answer || '—'))),
     );
     box.append(row);
+    if (!ok) box.append(h('div', { class: 'ai-slot', dataset: { aiq: String(q.number) } }));
     if (expl) {
       const det = h('details', { class: 'rv-expl' }, h('summary', null, 'Explanation'), h('div', { html: sanitizeContent(expl) }));
       box.append(det);
