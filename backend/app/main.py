@@ -14,7 +14,7 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from . import ai_runner, db, importer, transcribe
-from .routers import admin, ai, kb, mock, speaking, stats, tests, writing
+from .routers import admin, ai, kb, mock, speaking, stats, tests, translate, writing
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
 log = logging.getLogger("ielts")
@@ -36,7 +36,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="IELTS Prep", version="1.0", lifespan=lifespan)
 
-for r in (admin, tests, writing, speaking, mock, ai, kb, stats):
+for r in (admin, tests, writing, speaking, mock, ai, kb, stats, translate):
     app.include_router(r.router)
 
 

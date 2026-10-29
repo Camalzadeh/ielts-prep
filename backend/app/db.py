@@ -29,6 +29,8 @@ ARCHIVES = ("IELTS_PREP_ARCHIVE", "LATEST_EXAMS_ARCHIVE")
 DEFAULT_SETTINGS: dict[str, str] = {
     "ai_provider": "claude",
     "user_name": "",          # the learner's name: dashboard greeting + which archive results are theirs
+    "translate_to": "az",     # study assistant: target language of the translator
+    "assist_in_mock": "0",    # "1" = study assistant also available during mock exams
 }
 
 _init_lock = threading.Lock()
@@ -89,6 +91,8 @@ MIGRATIONS: list[tuple[int, list[str]]] = [
     # v3: band-only speaking results from the learner's own records (tools/import_my_results.py)
     (3, ["ALTER TABLE speaking_sessions ADD COLUMN teacher_band REAL",
          "ALTER TABLE speaking_sessions ADD COLUMN notes TEXT"]),
+    # v4: cache for the study-assistant translator
+    (4, ["CREATE TABLE IF NOT EXISTS translations (key TEXT PRIMARY KEY, json TEXT NOT NULL, created_at TEXT)"]),
 ]
 
 
