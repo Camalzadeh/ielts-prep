@@ -1,0 +1,31 @@
+{
+  "id": "fixture-reading-1", "type": "reading", "module": "academic",
+  "title": "Fixture Reading Test 1", "series": "Fixtures", "book": null, "test_no": 1,
+  "source": "fixture", "duration_minutes": 60,
+  "parts": [
+    {
+      "number": 1, "title": "The history of glass",
+      "passage_html": "<p><b>A</b> Glass was first made in Mesopotamia around 3500 BC. Early glass was opaque and used for beads.</p><p><b>B</b> The invention of glassblowing in the first century BC made glass vessels cheap. Roman households used them widely.</p><p><b>C</b> Modern float glass was developed by Alastair Pilkington in the 1950s, transforming window production.</p>",
+      "groups": [
+        {"range": [1, 3], "type": "tfng", "instructions_html": "<p>Do the following statements agree with the information?</p>",
+          "questions": [
+            {"number": 1, "prompt_html": "<p>The first glass was transparent.</p>", "answer": ["FALSE"]},
+            {"number": 2, "prompt_html": "<p>Glassblowing reduced the cost of glass vessels.</p>", "answer": ["TRUE"]},
+            {"number": 3, "prompt_html": "<p>Pilkington worked alone.</p>", "answer": ["NOT GIVEN"]}
+          ]},
+        {"range": [4, 5], "type": "matching_headings", "instructions_html": "<p>Choose the correct heading.</p>",
+          "options": [{"key": "i", "text": "Ancient origins"}, {"key": "ii", "text": "A modern breakthrough"}, {"key": "iii", "text": "Mass use in Rome"}],
+          "questions": [
+            {"number": 4, "prompt_html": "<p>Paragraph A</p>", "answer": ["i"]},
+            {"number": 5, "prompt_html": "<p>Paragraph B</p>", "answer": ["iii"]}
+          ]},
+        {"range": [6, 7], "type": "summary_completion", "instructions_html": "<p>Complete the summary. Write ONE WORD ONLY.</p>",
+          "content_html": "<p>Early glass was used to make {{6}}. Float glass changed the production of {{7}}.</p>",
+          "questions": [
+            {"number": 6, "prompt_html": "", "answer": ["beads"]},
+            {"number": 7, "prompt_html": "", "answer": ["windows", "window"]}
+          ]}
+      ]
+    }
+  ]
+}

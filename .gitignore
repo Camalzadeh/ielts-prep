@@ -1,0 +1,32 @@
+# --- Environment / caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# --- Your own data: database, recordings, AI runs, whisper models, browser profile (never shared)
+data/
+My Results.docx
+
+# --- Downloaded practice tests: each user fetches them with tools/fetch_content.py
+#     (copyrighted Cambridge material + ~1.2 GB audio). Task-1 chart images in content/media/writing are shared.
+content/tests/
+content/media/listening/
+content/media/reading/
+content/_cache/
+
+# --- Private course chat exports and everything derived from them that contains people's
+#     names, essays or scores. Only the anonymous curated banks in knowledge/data + knowledge/kb are shared.
+IELTS_PREP_ARCHIVE/
+LATEST_EXAMS_ARCHIVE/
+knowledge/raw/
+knowledge/data/my_essays.json
+knowledge/data/peer_essays.json
+knowledge/data/photo_essays.json
+knowledge/data/test_results.json
+tools/seed_history.py
+tools/kb_build_essays.py
+
+# --- Local editor / agent settings
+.claude/settings.local.json
+.vscode/

@@ -1,0 +1,67 @@
+{
+  "id": "fixture-listening-1", "type": "listening", "module": "academic",
+  "title": "Fixture Listening Test 1", "series": "Fixtures", "book": null, "test_no": 1,
+  "source": "fixture", "source_url": null, "duration_minutes": 30,
+  "parts": [
+    {
+      "number": 1, "title": "Part 1", "audio": "media/listening/fixture-listening-1/part1.mp3",
+      "audio_remote": "https://example.invalid/part1.mp3",
+      "transcript_html": "<p>MAN: Can I have your surname? WOMAN: Yes, it's Jamieson, J-A-M-I-E-S-O-N.</p><p>MAN: Is there parking? WOMAN: Yes, there is free parking behind the hall.</p><p>MAN: How much is the deposit? WOMAN: It's 1,500 dollars, paid in advance.</p><p>MAN: Where is it exactly? WOMAN: Next to the river, you can't miss it.</p>",
+      "passage_html": null,
+      "groups": [
+        {
+          "range": [1, 4], "type": "note_completion",
+          "instructions_html": "<p>Complete the notes below. Write <b>ONE WORD AND/OR A NUMBER</b> for each answer.</p>",
+          "content_html": "<h4>Booking notes</h4><p>Name: Mrs {{1}}</p><p>Facilities: {{2}} behind the hall</p><p>Deposit: ${{3}}</p><table><tr><td>Location</td><td>next to the {{4}}</td></tr></table>",
+          "questions": [
+            {"number": 1, "prompt_html": "", "answer": ["Jamieson"], "explanation_html": null},
+            {"number": 2, "prompt_html": "", "answer": ["(free) parking"], "explanation_html": null},
+            {"number": 3, "prompt_html": "", "answer": ["1500"], "explanation_html": null},
+            {"number": 4, "prompt_html": "", "answer": ["river"], "explanation_html": "<p>\"Next to the river\"</p>"}
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2, "title": "Part 2", "audio": "media/listening/fixture-listening-1/part2.mp3",
+      "transcript_html": "<p>The museum opens at nine. Visitors particularly enjoy the gardens and the cafe. The tour guide recommends the east wing.</p>",
+      "groups": [
+        {
+          "range": [5, 5], "type": "mcq",
+          "instructions_html": "<p>Choose the correct letter, <b>A, B or C</b>.</p>",
+          "questions": [
+            {"number": 5, "prompt_html": "<p>When does the museum open?</p>",
+              "options": [{"key": "A", "text": "8 am"}, {"key": "B", "text": "9 am"}, {"key": "C", "text": "10 am"}],
+              "answer": ["B"]}
+          ]
+        },
+        {
+          "range": [6, 7], "type": "multi_select",
+          "instructions_html": "<p>Choose <b>TWO</b> letters, A-E.</p><p>Which TWO things do visitors enjoy?</p>",
+          "options": [{"key": "A", "text": "the shop"}, {"key": "B", "text": "the gardens"}, {"key": "C", "text": "the films"},
+                      {"key": "D", "text": "the cafe"}, {"key": "E", "text": "the library"}],
+          "questions": [
+            {"number": 6, "prompt_html": "", "answer": ["B", "D"]},
+            {"number": 7, "prompt_html": "", "answer": ["B", "D"]}
+          ]
+        },
+        {
+          "range": [8, 9], "type": "matching",
+          "instructions_html": "<p>What does the guide say about each area? Choose A-C.</p>",
+          "options": [{"key": "A", "text": "recommended"}, {"key": "B", "text": "closed"}, {"key": "C", "text": "crowded"}],
+          "questions": [
+            {"number": 8, "prompt_html": "<p>east wing</p>", "answer": ["A"]},
+            {"number": 9, "prompt_html": "<p>west wing</p>", "answer": ["B"]}
+          ]
+        },
+        {
+          "range": [10, 10], "type": "sentence_completion",
+          "instructions_html": "<p>Write <b>NO MORE THAN TWO WORDS</b>.</p>",
+          "questions": [
+            {"number": 10, "prompt_html": "<p>Visitors should buy a {{10}} ticket.</p>", "answer": ["full-time", "family"]}
+          ]
+        }
+      ]
+    }
+  ]
+}
