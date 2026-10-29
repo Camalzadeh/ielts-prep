@@ -51,7 +51,7 @@ def run_import() -> dict[str, Any]:
                              ("speaking_questions", import_speaking_questions),
                              ("vocab", import_vocab), ("my_essays", import_my_essays),
                              ("photo_essays", import_photo_essays), ("test_results", import_test_results),
-                             ("kb", import_kb),
+                             ("kb", import_kb), ("phrase_vocab", import_phrase_vocab),
                              ("my_results", import_my_results)):  # last: the learner's own records win
                 try:
                     result[name] = fn(conn, errors)
@@ -255,6 +255,40 @@ def import_vocab(conn: sqlite3.Connection, errors: list[str]) -> int:
                 (term, _str(item.get("meaning") or item.get("definition")), _str(item.get("example")),
                  _str(item.get("topic")) or "", _str(item.get("source"))))
             n += 1
+    return n
+
+
+PHRASE_TOPIC = {"writing1": "Writing Task 1", "writing2": "Writing Task 2", "speaking": "Speaking"}
+
+
+def import_phrase_vocab(conn: sqlite3.Connection, errors: list[str]) -> int:
+    """Phrase banks and speaking topic vocabulary -> flashcards, so they are searchable and learnable too."""
+    n = 0
+    rows: list[tuple[str, str | None, str | None, str]] = []
+    for skill, label in PHRASE_TOPIC.items():
+        path = db.KNOWLEDGE_DIR / "data" / f"phrases.{skill}.json"
+        if not path.is_file():
+            continue
+        for cat in _items(_read_json(path, errors)):
+            topic = f"{label} — {_str(cat.get('category')) or 'Phrases'}"
+            for it in cat.get("items") or []:
+                term = _str(it.get("phrase"))
+                if term:
+                    meaning = " · ".join(x for x in (_str(it.get("pattern")), _str(it.get("note")), _str(cat.get("when"))) if x)
+                    rows.append((term, meaning or None, _str(it.get("example")), topic))
+    path = db.KNOWLEDGE_DIR / "data" / "speaking_topic_vocab.json"
+    if path.is_file():
+        for entry in _items(_read_json(path, errors)):
+            topic = f"Speaking topic — {_str(entry.get('topic')) or 'General'}"
+            for w in entry.get("words") or []:
+                if _str(w.get("term")):
+                    rows.append((_str(w.get("term")), _str(w.get("meaning")), _str(w.get("example")), topic))
+    for term, meaning, example, topic in rows:
+        conn.execute(
+            """INSERT INTO vocab(term, meaning, example, topic, source) VALUES (?,?,?,?, 'phrase bank')
+               ON CONFLICT(term, topic) DO UPDATE SET meaning=excluded.meaning, example=excluded.example""",
+            (term, meaning, example, topic))
+        n += 1
     return n
 
 

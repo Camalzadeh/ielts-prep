@@ -91,3 +91,77 @@ def review_vocab(vocab_id: int, body: Review, conn: sqlite3.Connection = Depends
     conn.execute("UPDATE vocab SET ease=?, interval_days=?, reps=?, due_at=? WHERE id=?",
                  (ease, interval, reps, due, vocab_id))
     return dict(conn.execute("SELECT * FROM vocab WHERE id=?", (vocab_id,)).fetchone())
+
+
+class NewTerm(BaseModel):
+    term: str = Field(..., min_length=1, max_length=200)
+    meaning: str = Field("", max_length=2000)
+    example: str = Field("", max_length=2000)
+    topic: str = Field("My words", max_length=100)
+
+
+@router.post("/vocab")
+def add_vocab(body: NewTerm, conn: sqlite3.Connection = Depends(db.get_db)) -> dict:
+    """Add a word to the flashcards (e.g. from the translator); due immediately."""
+    conn.execute("INSERT INTO vocab(term, meaning, example, topic, source) VALUES (?,?,?,?, 'translator') "
+                 "ON CONFLICT(term, topic) DO UPDATE SET meaning=excluded.meaning, example=excluded.example",
+                 (body.term.strip(), body.meaning.strip(), body.example.strip(), body.topic.strip() or "My words"))
+    return dict(conn.execute("SELECT * FROM vocab WHERE term=? AND topic=?",
+                             (body.term.strip(), body.topic.strip() or "My words")).fetchone())
+
+
+# --------------------------------------------------------------------------- phrase bank & tactics
+_json_cache: dict[str, tuple[float, Any]] = {}
+
+
+def _data_file(name: str) -> Any:
+    """Read knowledge/data/<name> (cached until the file changes); [] if missing."""
+    path = db.KNOWLEDGE_DIR / "data" / name
+    if not path.is_file():
+        return []
+    mtime = path.stat().st_mtime
+    hit = _json_cache.get(name)
+    if not hit or hit[0] != mtime:
+        import json
+        _json_cache[name] = (mtime, json.loads(path.read_text(encoding="utf-8-sig")))
+    return _json_cache[name][1]
+
+
+@router.get("/phrases")
+def phrases(skill: str) -> list[dict]:
+    """Useful language for writing1 | writing2 | speaking."""
+    if skill not in ("writing1", "writing2", "speaking"):
+        raise HTTPException(422, "skill must be writing1, writing2 or speaking")
+    return _data_file(f"phrases.{skill}.json")
+
+
+@router.get("/cheatsheets")
+def cheatsheets(skill: str) -> list[dict]:
+    """The teacher's word tables (verb/noun, adjective/adverb, linkers...) for one skill."""
+    if skill not in ("writing1", "writing2", "speaking", "listening", "reading"):
+        raise HTTPException(422, "skill must be writing1, writing2, speaking, listening or reading")
+    return [t for t in _data_file("cheatsheets.json") if t.get("skill") == skill]
+
+
+@router.get("/tactics")
+def tactics(skill: str, type: Optional[str] = None) -> list[dict]:
+    """How to approach each question/task type for reading | listening | speaking | writing."""
+    if skill not in ("reading", "listening", "speaking", "writing"):
+        raise HTTPException(422, "skill must be reading, listening, speaking or writing")
+    cards = _data_file(f"tactics.{skill}.json")
+    return [c for c in cards if c.get("type") == type] if type else cards
+
+
+@router.get("/speaking/topic-vocab")
+def topic_vocab(topic: str) -> dict:
+    """Vocabulary for a speaking topic (matched on topic name or aliases, loosely)."""
+    want = {w for w in topic.lower().replace("/", " ").replace(",", " ").split() if len(w) > 2}
+    best, score = None, 0
+    for entry in _data_file("speaking_topic_vocab.json"):
+        names = [entry.get("topic", "")] + list(entry.get("aliases") or [])
+        for name in names:
+            words = {w for w in name.lower().replace("/", " ").replace(",", " ").split() if len(w) > 2}
+            s = len(want & words) / (len(words) or 1) + (1 if name.lower() == topic.lower() else 0)
+            if s > score:
+                best, score = entry, s
+    return best if best and score >= 0.5 else {"topic": topic, "words": []}
