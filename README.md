@@ -26,6 +26,30 @@ Setup creates a Python environment, **downloads the practice tests** (about 1.2 
 while; you can stop it and re-run later — it resumes), creates an **IELTS Prep** shortcut on the desktop
 and in the app menu, and opens the app.
 
+## Getting the practice tests
+The tests are **not** in this repo (copyrighted Cambridge material, ~1.2 GB of audio). Every user
+downloads their own copy from engnovate.com for personal study. `setup` does this automatically. To run
+it yourself (e.g. to finish an interrupted download), use:
+
+| | Windows | Ubuntu |
+|---|---|---|
+| Everything (tests + audio, ~1.2 GB) | double-click `get_tests.bat` | `./get_tests.sh` |
+| Tests only, audio streamed online | `get_tests.bat --no-audio` | `./get_tests.sh --no-audio` |
+| A single test | `get_tests.bat --only cam18-listening-2` | `./get_tests.sh --only cam18-listening-2` |
+
+- **Where from:** https://engnovate.com/ielts-reading-tests/ and https://engnovate.com/ielts-listening-tests/
+  (free Cambridge IELTS 1–21 tests; premium tests are skipped). Answer keys come from engnovate's own
+  checker, transcripts from the test pages.
+- **Where to:** `content/tests/reading/*.json`, `content/tests/listening/*.json` (passages, questions, answers),
+  `content/media/listening/<test>/part1-4.mp3` (audio), `content/_cache/` (raw pages, speeds up re-runs).
+- **How long:** reading ~10 min, listening 20–60 min depending on your connection. You can stop it (Ctrl+C)
+  any time; running it again skips finished tests and retries failed downloads.
+- **Check:** the script validates every test at the end and prints how many tests and audio files you have.
+  The app picks up new tests automatically (or Settings → *Reimport content*).
+- **Problems:** "Cannot reach engnovate.com" means there's no internet connection, or the site is down; try
+  later. If audio is missing, run the script again; meanwhile those parts stream from engnovate.
+
+## Using the app
 Afterwards just click the **IELTS Prep** shortcut. It starts the local server when needed and opens
 http://127.0.0.1:8765. To stop the server: `launcher\stop.bat` / `launcher/stop.sh`.
 
