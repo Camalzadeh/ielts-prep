@@ -1,0 +1,542 @@
+[
+ {
+  "task": 1,
+  "prompt": "The charts below show the percentage of time working adults spent on different activities in a particular country in 1958 and 2008.",
+  "source_date": "2026-07-15",
+  "source": "real_exam",
+  "image": "media/writing/latest_photo_182@15-07-2026_10-33-41.jpg",
+  "image_description": "Two pie charts (1958 on top, 2008 below), categories: Working, Sleeping, Relaxing at home, Travel to work, Going out (with friends/family), Other interests or playing sports. 1958: Working 33%, Sleeping 32%, Other interests or playing sports 6%, Travel to work 2%; Going out and Relaxing at home have no readable percentage labels in the image (the two together must be about 27% since the rest sums to 73%; visually Going out is the larger slice, roughly 20%, and Relaxing at home the small slice, roughly 7%). 2008: Working 42%, Relaxing at home 13%, Other interests or playing sports 8%, Travel to work 8%, Going out (with friends/family) 6%; the Sleeping slice label/percentage is missing in the image (by subtraction about 23%). Overall: working time and travel time up, going out down, sleeping down, relaxing at home roughly up. Note the 1958 'Going out' and 'Relaxing at home' values and the 2008 'Sleeping' value were not readable; the teacher later commented about missing 1958 percentages (see later photo). CORRECTION from the complete version of this chart (a later photo): 1958 Going out (with friends/family) 19%, Relaxing at home 8%; 2008 Sleeping 25%.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_182@15-07-2026_10-33-41.jpg",
+  "essay_type": "pie"
+ },
+ {
+  "task": 2,
+  "prompt": "In some countries, the cost of using public transport is rising rapidly. What might be the case? What might be the solution?",
+  "source_date": "2026-07-15",
+  "source": "real_exam",
+  "image": null,
+  "image_description": null,
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_183@15-07-2026_10-33-41.jpg",
+  "essay_type": "problem_solution"
+ },
+ {
+  "task": 1,
+  "prompt": "Over a barrel - Forecast increase in world oil production (task wording not shown in the image)",
+  "source_date": "2026-07-15",
+  "source": "real_exam",
+  "image": "media/writing/latest_photo_184@15-07-2026_10-33-41.jpg",
+  "image_description": "Stacked bar chart, y axis million barrels/day 0-20, three periods. Series: OPEC Middle East (bottom, teal), Other OPEC (yellow), Non-OPEC (top, red). 1980-2000: total about 11; OPEC Middle East about 2, Other OPEC about 0, Non-OPEC about 9. 2000-10: total about 18.5; OPEC Middle East about 8, Other OPEC about 5 (8 to 13), Non-OPEC about 5.5 (13 to 18.5). 2010-20: total about 18; OPEC Middle East about 16, Other OPEC about 1 (16 to 17), Non-OPEC about 1 (17 to 18). Trend: total rises sharply then levels off; OPEC Middle East share grows hugely, Non-OPEC share falls.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_184@15-07-2026_10-33-41.jpg",
+  "essay_type": "bar"
+ },
+ {
+  "task": 1,
+  "prompt": "The plan below shows the town of Oxton 30 years ago and now. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. (Note: text says Oxton/30 years but map is titled Pebbleton 20 years ago / Pebbleton now; added note 'for example: buna cox benzeyirdi' = 'something like this' in Azerbaijani)",
+  "source_date": "2026-07-15",
+  "source": "teacher",
+  "image": "media/writing/latest_photo_185@15-07-2026_10-33-41.jpg",
+  "image_description": "Two maps of Pebbleton (sea to the west/left, compass N up). THEN: Lighthouse at northwest tip; Old Fort just below/east of lighthouse; Film Studio building on west shore below the fort; row of houses (about 4-5) along the north shore east of the fort near 'Lighthouse land'; Old Fort Road runs west-east below the houses to a roundabout near Roadbridge in the east; Playing field south of the Lighthouse land road; River flows west-east below the playing field to the sea; Coast Road along the south-west; School south of the river; trees scattered in the south and east. NOW: Lighthouse stays; Old Fort replaced by a Children's playground; Film Studio replaced by Flats; a Community centre added at the top near Lighthouse land; Tennis courts added along Lighthouse land; Footpaths added (one by the flats going south towards the Coast Road, one by the playground); more houses (about 7-8) built along the north shore; playing field, river, school, roads (Coast Road, Old Fort Road, Roadbridge) unchanged.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_185@15-07-2026_10-33-41.jpg",
+  "essay_type": "map"
+ },
+ {
+  "task": 2,
+  "prompt": "Some individuals believe that children should focus on learning about important historical figures in their history lessons at school. Others think that they should learn more about the everyday lives of ordinary people from the past. Discuss both views and give your opinion.",
+  "source_date": "2026-07-15",
+  "source": "teacher",
+  "image": null,
+  "image_description": null,
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_186@15-07-2026_10-33-41.jpg",
+  "essay_type": "discussion"
+ },
+ {
+  "task": 2,
+  "prompt": "Studying the English language in an English-speaking country is the best but not the only way. Do you agree or disagree?",
+  "source_date": "2026-07-15",
+  "source": "real_exam",
+  "image": null,
+  "image_description": null,
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_187@15-07-2026_10-33-41.jpg",
+  "essay_type": "opinion"
+ },
+ {
+  "task": 1,
+  "prompt": "Frequency of eating at fast food restaurants among people in the USA (2003-2013) (task wording not shown)",
+  "source_date": "2026-07-15",
+  "source": "real_exam",
+  "image": "media/writing/latest_photo_188@15-07-2026_10-33-44.jpg",
+  "image_description": "Grouped bar chart, y axis % of people, three bars per category (2003 black, 2006 grey, 2013 hatched). Every day: 2003 about 4%, 2006 about 3%, 2013 about 3%. Several times a week: 2003 about 17%, 2006 20%, 2013 16%. Once a week: 2003 31%, 2006 33%, 2013 28%. Once or twice a month: 2003 30%, 2006 25%, 2013 33%. A few times a year: 2003 about 13%, 2006 15%, 2013 15%. Never: 2003 about 5%, 2006 about 4%, 2013 about 4%. Highest categories are once a week and once or twice a month; every day and never are lowest.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_188@15-07-2026_10-33-44.jpg",
+  "essay_type": "bar"
+ },
+ {
+  "task": 1,
+  "prompt": "The maps below show changes to the ground floor plan of a university department in 1980 and 2010. Summarize the information by selecting and reporting the main features and make comparisons where relevant.",
+  "source_date": "2026-07-15",
+  "source": "real_exam",
+  "image": "media/writing/latest_photo_189@15-07-2026_10-33-44.jpg",
+  "image_description": "1980: A main entrance corridor (hatched) runs north from the road into the building. To its west are rooms S2 (upper) and S1 (lower); to its east are S3 (upper), with Library and Office as small rooms below S3 (library above office). Five trees stand in the open space to the east of the building. A road runs along the bottom with a branch road. 2010: The building is larger: rooms S4 and S5 added on the top row, S2 and S3 in the middle row, S1 bottom left, Office retained beside the entrance. The Library has moved out to a separate small building (labelled Library, vertical) next to a new IT Centre in the top right. The trees have been removed and replaced by a dashed car park to the east/south-east of the entrance. Main entrance corridor remains in the same place. Legend (cut off): S1 = room, hatched = corridor/entrance.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_189@15-07-2026_10-33-44.jpg",
+  "essay_type": "map"
+ },
+ {
+  "task": 1,
+  "prompt": "Students from USA, UK and Australia studying in other countries, 2002-2008 (task wording not shown)",
+  "source_date": "2026-07-15",
+  "source": "teacher",
+  "image": "media/writing/latest_photo_190@15-07-2026_10-33-44.jpg",
+  "image_description": "Line graph, y axis number of students 0-60,000, years 2002-2008. UK: 2002 10,000; 2003 20,000; 2004 about 22,000; 2005 30,000; 2006 40,000; 2007 45,000; 2008 50,000 (steady rise). USA: 2002 30,000; 2003 35,000; 2004 peak about 58,000; 2005 45,000; 2006 35,000; 2007 40,000; 2008 45,000. Australia: 2002 50,000; 2003 peak 60,000; 2004 40,000; 2005 40,000; 2006 45,000; 2007 50,000; 2008 55,000. UK starts lowest and ends near Australia and above USA by 2008.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_190@15-07-2026_10-33-44.jpg",
+  "essay_type": "line"
+ },
+ {
+  "task": 1,
+  "prompt": "The maps below show a bookstore in 2000 and now. Summarize the information by selecting and reporting the main features and make comparisons where relevant. (labelled Band 7+)",
+  "source_date": "2026-07-15",
+  "source": "real_exam",
+  "image": "media/writing/latest_photo_191@15-07-2026_10-33-44.jpg",
+  "image_description": "2000 layout: Entrance on the left. Travel shelf upper left, New Books island below it, Service desk bottom left. Fiction runs along the top wall and on the right side. In the centre-right three small shelves stacked: Hobbies, Cookery, Art. Non-fiction at the bottom right. Now: Entrance still on the left. Art, Cookery and Fiction now run along the top wall (left to right); Non-fiction is a vertical section on the right side. Travel, New Books and Service desk unchanged on the left. In the middle-right a round Table with chairs has been added, and a Cafe added at the bottom centre-right (where Non-fiction was). In this (small) version the Hobbies section is not shown in the 'Now' map (a clearer version of the same task in a later photo shows Hobbies on the top wall); Fiction is no longer on the right wall.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_191@15-07-2026_10-33-44.jpg",
+  "essay_type": "map"
+ },
+ {
+  "task": 2,
+  "prompt": "Some people think that good health is very important to every person, so medical services should not be run by profit-making companies. Do the advantages of private health care outweigh the disadvantages?",
+  "source_date": "2026-07-15",
+  "source": "real_exam",
+  "image": null,
+  "image_description": null,
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_192@15-07-2026_10-33-44.jpg",
+  "essay_type": "outweigh"
+ },
+ {
+  "task": 1,
+  "prompt": "The table below gives information about the amount of tax collected (as % of GDP) in five countries for 4 years between 1975 and 2005. Summarise the information by selecting and reporting the main features and make comparisons where relevant.",
+  "source_date": "2026-07-15",
+  "source": "real_exam",
+  "image": "media/writing/latest_photo_193@15-07-2026_10-33-44.jpg",
+  "image_description": "Table, tax collected as % of GDP. Sweden: 1975 46%, 1985 47%, 1995 51%, 2005 70.1%. USA: 25.1%, 25.4%, 27.1%, 27.4%. Korea: 15.1%, 27%, 26%, 27.3%. Japan: 15%, 16%, 23%, 32.1%. Turkey: 16.4%, 15%, 24%, 27.4%. Sweden highest throughout and rises most; USA almost flat; Korea jumps between 1975 and 1985; Japan and Turkey rise strongly from 1985 onwards; Turkey falls slightly 1975-1985.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_193@15-07-2026_10-33-44.jpg",
+  "essay_type": "table"
+ },
+ {
+  "task": 2,
+  "prompt": "Some people think it is better for one single legal system throughout the world. Other say countries should have their own law. Discuss both view and give your opinion.",
+  "source_date": "2026-07-15",
+  "source": "teacher",
+  "image": null,
+  "image_description": null,
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_194@15-07-2026_10-33-44.jpg",
+  "essay_type": "discussion"
+ },
+ {
+  "task": 1,
+  "prompt": "The graph below shows the percentage of workers from five different European countries that were absent for a day or more due to illness from 1991 to 2001.",
+  "source_date": "2026-07-15",
+  "source": "teacher",
+  "image": "media/writing/latest_photo_195@15-07-2026_10-33-44.jpg",
+  "image_description": "Line graph, y axis % of workers (0-6), x axis 1991-2001. Netherlands: about 4.8 in 1991, peaks about 5.5 in 1992, falls to about 4.2 in 1996, then rises to about 5.4 in 2001. France: about 5.0 in 1991, about 5.1 in 1992, drops to about 4.1 in 1993, 4.0 in 1994, about 3.6 in 1995, about 3.2 in 1996, then flat at about 3.1-3.0 to 2001. Sweden: about 3.0 in 1991, 3.2 in 1992, about 3.0-3.1 through 1995, 3.2 in 1996, then rises steadily to about 4.4 in 1999, 4.5 in 2000, 4.6 in 2001. UK: stable around 2.1-2.4 throughout. Germany: lowest, around 1.7-1.9 throughout, slightly declining.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_195@15-07-2026_10-33-44.jpg",
+  "essay_type": "line"
+ },
+ {
+  "task": 1,
+  "prompt": "The charts show the proportion of holidaymakers of one region staying in different types of accommodation in three different years.",
+  "source_date": "2026-07-15",
+  "source": "teacher",
+  "image": "media/writing/latest_photo_197@15-07-2026_10-33-44.jpg",
+  "image_description": "Three pie charts. 1965: staying with friends/relatives 55%, hotel 16%, camping 15%, caravans 14%. 1985: friends/relatives 35%, hotel 37%, camping 18%, caravans 10%. 2005: friends/relatives 30%, hotel 38%, camping 12%, caravans 20%. Trends: friends/relatives fell sharply (55 to 30); hotels more than doubled (16 to 38) and became most popular; caravans fell then doubled to 20; camping fluctuated (15, 18, 12).",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_197@15-07-2026_10-33-44.jpg",
+  "essay_type": "pie"
+ },
+ {
+  "task": 1,
+  "prompt": "The bar chart below shows the types of music bought in the USA in 2010, by age group. (24th May PBI TEST)",
+  "source_date": "2026-07-15",
+  "source": "real_exam",
+  "image": "media/writing/latest_photo_198@15-07-2026_10-33-44.jpg",
+  "image_description": "Grouped bars, y axis sales of recordings in millions (0-5). 16-22: Rock about 3.8, Pop about 4.8, Jazz about 2.0, Classical about 1.8. 23-31: Rock about 4.2, Pop about 3.5, Jazz about 2.8, Classical about 2.2. 32-45: Rock about 3.2, Pop about 1.5, Jazz about 3.0, Classical about 2.8. 46-57: Rock about 3.8, Pop about 1.5, Jazz about 2.5, Classical about 2.7. 58+: Rock about 3.1, Pop about 3.0, Jazz about 2.9, Classical about 4.5. Pop highest among youngest and declines sharply with age then recovers at 58+; Classical lowest for young and highest for 58+; Rock fairly steady 3-4; Jazz peaks at 32-45.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_198@15-07-2026_10-33-44.jpg",
+  "essay_type": "bar"
+ },
+ {
+  "task": 2,
+  "prompt": "In some countries more and more shops are open longer hours every day. What are the positive and negative developments of this? (labelled band 8)",
+  "source_date": "2026-07-15",
+  "source": "real_exam",
+  "image": null,
+  "image_description": null,
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_199@15-07-2026_10-33-44.jpg",
+  "essay_type": "positive_negative"
+ },
+ {
+  "task": 1,
+  "prompt": "The maps below show a bookstore in 2000 and now. Summarize the information by selecting and reporting the main features and make comparisons where relevant. (task wording not shown in this image)",
+  "source_date": "2026-07-15",
+  "source": "teacher",
+  "image": "media/writing/latest_photo_200@15-07-2026_10-33-44.jpg",
+  "image_description": "2000: rectangular store, entrance on the left wall. Fiction along the whole top wall plus a Fiction block at the top right corner. Travel shelf (large) upper left; New Books island below/right of it; Service Desk at the bottom left corner. Three vertical shelves in the centre-right labelled Art, Hobbies, Cookery (left to right). Non-fiction block at the bottom centre-right. Now: entrance unchanged on the left; Travel, New Books and Service Desk stay in the same positions. The top wall is now divided into Art, Hobbies, Cookery and Fiction (left to right). Non-Fiction moved to the right side (top right block, where the right-hand Fiction was). The three vertical shelves in the middle are removed and replaced by three round tables each with four chairs. A Cafe occupies the bottom centre-right (where Non-fiction was). Summary: shelving reorganised along walls, central space converted to a seating/cafe area.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_200@15-07-2026_10-33-44.jpg",
+  "essay_type": "map"
+ },
+ {
+  "task": 1,
+  "prompt": "The maps below show the changes in area after the construction of a hydroelectric power dam. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+  "source_date": "2026-07-15",
+  "source": "teacher",
+  "image": "media/writing/latest_photo_201@15-07-2026_10-33-44.jpg",
+  "image_description": "Area in 1980: a river flows north to south through the middle of the map. West of the river: forest and ancient structures in the north, rare plants and animals (trees) in the west/middle, mountains on the west side. East of the river: mountains in the north-east, irrigated farmland on both banks in the middle (a large block of crops east of river in the upper part and another block in the lower part), a village to the east, mountains in the south-east, more mountains south-west. Area in 2000: a hydroelectric dam built across the river in the south (between mountains); the river upstream has become a large lake covering the middle/north of the map (flooding the forest, ancient structures, rare plants and animals and irrigated farmland); the lake is used for fishing (fish symbols) and boating (sailing boat); a hotel has been built on the east shore of the lake; mountains remain on both sides; below the dam the river continues south; electricity pylons/power lines run from the dam to the village in the south; the village is in the south-east near the river. Compass shown.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_201@15-07-2026_10-33-44.jpg",
+  "essay_type": "map"
+ },
+ {
+  "task": 1,
+  "prompt": "The bar chart below shows the number of research students studying different subjects in 2005",
+  "source_date": "2026-07-15",
+  "source": "real_exam",
+  "image": "media/writing/latest_photo_202@15-07-2026_10-33-44.jpg",
+  "image_description": "Horizontal grouped bar chart, number of research students (0-200). Linguistics: female about 110, male about 85. Psychology: female about 175, male 200. Natural sciences: female 200, male 200. Engineering: female about 90, male 150. Programming: female about 75, male 150. Mathematics: female about 40, male 200. Women lead only in linguistics, equal in natural sciences; men lead in the other four, biggest gap in mathematics.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_202@15-07-2026_10-33-44.jpg",
+  "essay_type": "bar"
+ },
+ {
+  "task": 2,
+  "prompt": "It is a natural process for animal species to become extinct (e.g. Dinosaurs, dodos ...) There is no reason why people should try to prevent this from happening. Do you agree or disagree?",
+  "source_date": "2026-07-15",
+  "source": "teacher",
+  "image": null,
+  "image_description": null,
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_203@15-07-2026_10-33-45.jpg",
+  "essay_type": "opinion"
+ },
+ {
+  "task": 1,
+  "prompt": "Expenditure on Fast Foods by Income Groups, UK 1990 (bar chart) together with a line graph of fast food consumption/expenditure 1970-1990 (task wording not shown)",
+  "source_date": "2026-08-08",
+  "source": "teacher",
+  "image": "media/writing/latest_photo_204@08-08-2026_10-41-56.jpg",
+  "image_description": "Bar chart (1990, y axis 0-45, units not labelled): High income: Hamburger about 42, Fish & Chips about 17, Pizza about 19. Average income: Hamburger about 32, Fish & Chips about 25, Pizza about 12. Low income: Hamburger about 14, Fish & Chips about 17, Pizza about 7. Line graph (y axis 0-600, no label/units shown), 1970/1975/1980/1985/1990: Hamburger about 30, 50, 80, 120, 280; Fish & Chips about 75, 100, 150, 300, 500; Pizza about 310, 280, 220, 200, 220. Hamburger and fish & chips rise steadily with sharp rise after 1985; pizza falls from 310 to 200 by 1985 then edges up to 220.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_204@08-08-2026_10-41-56.jpg",
+  "essay_type": "mixed"
+ },
+ {
+  "task": 1,
+  "prompt": "The bar charts below give information about the railway system in six cities in Europe. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+  "source_date": "2026-08-08",
+  "source": "teacher",
+  "image": "media/writing/latest_photo_205@08-08-2026_10-48-20.jpg",
+  "image_description": "Two bar charts for six cities with opening years under each city name. Kilometers of route: Paris (1863) 394, Stockholm (1900) 199, Lisbon (1927) 155, Rome (1976) 126, Madrid (1981) 11, Berlin (2001) 28. Passengers per year (in millions): Paris 775, Stockholm 1191, Lisbon 1927, Rome 144, Madrid 45, Berlin 50. Paris has the longest network but Lisbon carries the most passengers; newer systems (Madrid, Berlin) are very small in both measures.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_205@08-08-2026_10-48-20.jpg",
+  "essay_type": "bar"
+ },
+ {
+  "task": 1,
+  "prompt": "The number of overseas visitor come to th UK for 3 purposes (sic; task wording otherwise not shown)",
+  "source_date": "2026-08-11",
+  "source": "teacher",
+  "image": "media/writing/latest_photo_206@11-08-2026_10-55-18.jpg",
+  "image_description": "Line graph, y axis visitors in millions 0-10, x axis from 1989 to about 2012 (ticks every 5 years; data points about every 2-3 years, values approximate). Holiday (solid): about 6.5 in 1989, 6.5 about 1991, 8 in 1994, peak 9 about 1996-97, falls to about 7 about 2001-02, low about 6.5 in 2004, rises to about 7 in 2006, about 8 in 2009 and 9 at the end (about 2011-12). Business (dashed): about 5 in 1989, dips to 4 about 1991, 4.5 in 1994, 6 about 1996, 6.5 about 1998-2001, 7 in 2004, 7.5 about 2006, peak 8 in 2009, then falls to about 7 at the end. Meeting friends and relatives (dotted): about 3.5 in 1989, rises steadily (4 about 1991, about 4.3 in 1994, 5 in 1999, 6 in 2004, 6.5 about 2007) to peak about 7 in 2009, then falls to about 6.2 at the end. Holiday is generally the highest; all three end 6-9 million.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_206@11-08-2026_10-55-18.jpg",
+  "essay_type": "line"
+ },
+ {
+  "task": 1,
+  "prompt": "The plans below show the South Wing of Walton Museum in 2008 and in 2012 after it was redeveloped.",
+  "source_date": "2026-09-18",
+  "source": "real_exam",
+  "image": "media/writing/latest_photo_364@18-09-2026_08-19-33.jpg",
+  "image_description": "Two plans of the south wing of Walton Museum (website screenshot labelled 'Band 9' sample). 2008: single-storey building on a slope, with a PATH leading uphill to the ENTRANCE on the left (arrow pointing right into the building). Top row, left to right: entrance area, RECEPTION, READING ROOM. Bottom row, left to right: SPECIAL EXHIBITION ROOM, SHOP, CLOAKS ROOM. STAIRS (ladder-like symbol) located between the shop and cloaks room, right of centre. 2012 (after redevelopment): the building has become multi-storey (about four levels) with a pitched/triangular roof over the right part and a LIFT (vertical strip labelled L-I-F-T) running through the middle replacing the stairs. Left column from top: TERRACE (top-left, open), ENTRANCE HALL (middle level, at path level), SPECIAL EXHIBITION ROOM (bottom level). Middle column from top: RESTAURANT (labelled 'REASTAURANT') on the upper level, RECEPTION + CLOAKS ROOM at the entrance level, SHOP at the bottom level. Right column (right of the lift) from top: EXHIBITION ROOM (top, under roof), SELF-SERVICE ROOM, READING ROOM, CHILDREN PLAY AREA (bottom, labelled 'CHHILDREN'). PATH on the left leads to the entrance hall. Summary of changes: building extended upwards to several floors; lift installed instead of stairs; new facilities added (terrace, restaurant, self-service room, children play area, upper exhibition room); reception and cloakroom merged; reading room moved to a middle level; shop and special exhibition room remain at lower levels; entrance moved to an entrance hall.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_364@18-09-2026_08-19-33.jpg",
+  "essay_type": "map"
+ },
+ {
+  "task": 1,
+  "prompt": "[Task wording not shown in image] Bar chart titled 'Amount spent on consumer goods'.",
+  "source_date": "2026-09-18",
+  "source": "real_exam",
+  "image": "media/writing/latest_photo_365@18-09-2026_09-19-36.jpg",
+  "image_description": "Grouped bar chart, title 'Amount spent on consumer goods'. Y-axis: 'Thousand pounds string' (sic), scale 125 to 175 in steps of 5. X-axis categories: console games, outdoor game accessories, cosmetics, books, toys, cameras. Series (legend spelled Belguim, Spain, Austria, Britain), approximate values in thousand pounds: Belgium: console games 147, outdoor game accessories 150, cosmetics 147, books 144, toys 147, cameras 145. Spain: console games 150, outdoor accessories 154, cosmetics 154, books 154, toys 158, cameras 156. Austria: console games 146, outdoor accessories 142, cosmetics 144, books 158, toys 158, cameras 166. Britain: console games 156, outdoor accessories 157, cosmetics 160, books 162, toys 168, cameras 170. Britain is highest in every category; Belgium is lowest in books, toys and cameras; Austria is lowest in outdoor accessories and cosmetics but second highest in cameras (166). All values lie between about 142 and 170 thousand pounds.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_365@18-09-2026_09-19-36.jpg",
+  "essay_type": "bar"
+ },
+ {
+  "task": 2,
+  "prompt": "Some people think that newspaper are the best way to get news. However, others believe that they can get new better from other media platforms. Discuss both views and give your opinion",
+  "source_date": "2026-09-23",
+  "source": "real_exam",
+  "image": null,
+  "image_description": null,
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_366@23-09-2026_09-35-26.jpg",
+  "essay_type": "discussion"
+ },
+ {
+  "task": 1,
+  "prompt": "The graph below gives information about the total oil use of 4 major consumers from 2009 to 2030. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "source_date": "2026-09-27",
+  "source": "real_exam",
+  "image": "media/writing/latest_photo_367@27-09-2026_19-41-14.jpg",
+  "image_description": "Line graph 'Oil use of major consumers'. Y-axis: Millions of barrels per day, 0 to 10 (gridlines every 2). X-axis: 2009, 2015, 2025, 2030. US (dashed grey): about 10 in 2009, roughly 9.7-10 until 2015, then falls sharply to about 6.5 in 2025 and about 4 in 2030 (biggest consumer at first, ends only slightly above the others). China (grey solid with triangle markers): about 1.7 in 2009, rises to about 3.3 in 2015, about 3.7 in 2025, about 3.5 in 2030. Western Europe and Japan (solid black): about 4 in 2009, declines steadily to about 3.2 in 2015, 2.8 in 2025 and about 2.2 in 2030. Middle East (dash-dot with markers): about 1.6 in 2009, about 2.3 in 2015, 2.7 in 2025, about 3 in 2030, rising steadily. By 2030 the four are close (US ~4, China ~3.5, Middle East ~3, W Europe & Japan ~2.2).",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_367@27-09-2026_19-41-14.jpg",
+  "essay_type": "line"
+ },
+ {
+  "task": 1,
+  "prompt": "The table and the chart below provide a breakdown of the total expenditure and the average amount of money spent by students per week while studying abroad in 4 countries. Summarize the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "source_date": "2026-09-29",
+  "source": "real_exam",
+  "image": "media/writing/latest_photo_368@29-09-2026_08-24-39.jpg",
+  "image_description": "Table 'Expenditure of studying abroad', Country vs US($): A 875, B 735, C 540, D 435 (total expenditure). Grouped bar chart (y-axis 0-500, step 50) with three series per country: Accommodation (yellow), Tuition (black), Living cost (orange). Country A: accommodation 220, tuition 358, living cost 430. Country B: accommodation 280, tuition 320, living cost 350. Country C: accommodation 240, tuition 250, living cost 275. Country D: accommodation 200, tuition 235, living cost 225. Country A has the highest total and the highest tuition and living cost; D has the lowest total; living cost is the highest category in A, B and C, while tuition is highest in D.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_368@29-09-2026_08-24-39.jpg",
+  "essay_type": "mixed"
+ },
+ {
+  "task": 1,
+  "prompt": "Smoked foods are popular worldwide because of their special flavour and their long life. The diagram below shows the structure of a home smokery and how it is used.",
+  "source_date": "2026-10-07",
+  "source": "real_exam",
+  "image": "media/writing/latest_photo_395@07-10-2026_17-52-34.jpg",
+  "image_description": "Cross-section diagram titled 'A home smokery' showing three connected underground chambers below ground level. Stage 1 (left chamber): a hinged lid on the surface, propped open, lets air in (blue wavy arrows labelled 'air' enter from outside and flow down the chamber); air passes along the bottom of the chamber into a horizontal pipe. Stage 2 (middle chamber, with its own lid at the top): stack of logs (wood) burning on a fire at the bottom; the air from chamber 1 flows via the pipe to feed the fire; smoke produced. A 'pipe' runs diagonally upward from the fire chamber to the right chamber. Stage 3 (right chamber, larger and taller, with a box on top): bricks at the bottom where the pipe enters; the smoke rises through the chamber (white smoke clouds) into the box above ground level at the top, where food (fish and cuts of meat) is hung on a rack/rail inside the box to be smoked. Sequence: air enters through lid (1) -> flows through pipe to burning logs (2) -> smoke travels through pipe, passes bricks and rises into the box (3) where fish and meat hang and are smoked. Parts labelled: box, lid (x2), air (x2), logs, bricks, pipe, ground level.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_395@07-10-2026_17-52-34.jpg",
+  "essay_type": "process"
+ },
+ {
+  "task": 2,
+  "prompt": "People living in the 21st century have a better quality of life than the previous centuries. To what extent do you agree or disagree?",
+  "source_date": "2026-10-07",
+  "source": "real_exam",
+  "image": null,
+  "image_description": null,
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_396@07-10-2026_18-37-17.jpg",
+  "essay_type": "opinion"
+ },
+ {
+  "task": 1,
+  "prompt": "The first graph shows the number of train passengers from 2000 to 2009. The second graph shows the percentage of trains running on time. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "source_date": "2026-10-07",
+  "source": "real_exam",
+  "image": "media/writing/latest_photo_397@07-10-2026_18-37-17.jpg",
+  "image_description": "Two line graphs. Graph 1: 'Number of train passengers from 2000 to 2009 (in millions)', y-axis 0-50 (step 5), x-axis 2000-2009. Approximate values: 2000 about 36; 2001 about 40; 2002 about 41; 2003 about 36 (dip); 2004 about 41; 2005 about 45 (peak); 2006 about 41.5; 2007 about 41; 2008 about 39; 2009 about 41. Passenger numbers fluctuated between roughly 36 and 45 million with no strong overall trend, ending slightly higher than 2000. Graph 2: 'Percentage of trains running on time compared with the target', y-axis % from 89.00 to 98.00 (step 1), x-axis 2000-2009. A horizontal yellow line marks the target at 95%. Blue line (actual percentage on time) approximate values: 2000 about 92; 2001 about 93.5; 2002 95 (reaches target); 2003 about 95.5; 2004 about 96 (peak before drop); 2005 about 94.8 (falls just below target); 2006 about 92 (lowest, tied with 2000); 2007 about 93; 2008 about 97; 2009 about 97. The legend labels appear swapped: blue line labelled 'Standard line, Target' and yellow line labelled 'Percentage of trains running on time'. The on-time percentage was below target in 2000-2001, met/above target 2002-2004, dipped below in 2005-2007, then exceeded it in 2008-2009.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_397@07-10-2026_18-37-17.jpg",
+  "essay_type": "line"
+ },
+ {
+  "task": 1,
+  "prompt": "The table below shows information about the population of New Zealand from 2011 to 2012 by age group.",
+  "source_date": "2026-10-23",
+  "source": "teacher",
+  "image": "media/writing/latest_photo_584@23-10-2026_09-06-18.jpg",
+  "image_description": "Table with columns Group, 2011, 2012, Percentage of change. All ages: 4,381,269 (2011), 4,410,284 (2012), +0.6%. Under 15: 898,160 -> 896,364, -0.2%. 15-39: 1,577,256 -> 1,574,102, -0.2%. 40-64: 1,331,907 -> 1,339,898, +0.6%. 65+: 573,946 -> 596,903, +4.0% (largest increase). Only the 65+ and 40-64 groups grew (40-64 about in line with overall growth); the two younger groups declined slightly.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_584@23-10-2026_09-06-18.jpg",
+  "essay_type": "table"
+ },
+ {
+  "task": 1,
+  "prompt": "The graphs show the changes in the UK industry steel between 1970 and 2000. (million tonnes vs thousand)",
+  "source_date": "2026-10-23",
+  "source": "real_exam",
+  "image": "media/writing/latest_photo_585@23-10-2026_11-57-26.jpg",
+  "image_description": "Two graphs, years 1970, 1980, 1990, 2000. Graph 1 line graph 'Value changes in UK steel industry 1970-2000' (y-axis 0-200000), three series (approx. values): Total UK demand ~200000 (1970), ~175000 (1980), ~105000 (1990), ~100000 (2000) - falls steadily, sharpest 1980-1990. UK production ~165000 (1970), ~125000 (1980), ~87000 (1990), ~82000 (2000) - falls steadily. Import ~10000 (1970), ~42000 (1980), ~50000 (1990), ~75000 (2000) - rises steadily; by 2000 import is close to production. Graph 2 area chart 'Employment status in UK steel industry' (y-axis 0-50000): ~50000 (1970), ~40000 (1980), ~21000 (1990), ~17000 (2000) - falls throughout, steepest 1980-1990.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_585@23-10-2026_11-57-26.jpg",
+  "essay_type": "mixed"
+ },
+ {
+  "task": 2,
+  "prompt": "Some say that the most important thing about being rich is that one has the opportunity to help others. To what extend do you agree or disagree?",
+  "source_date": "2026-10-23",
+  "source": "real_exam",
+  "image": null,
+  "image_description": null,
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_586@23-10-2026_11-57-26.jpg",
+  "essay_type": "opinion"
+ },
+ {
+  "task": 1,
+  "prompt": "The two pie charts below show how an average household in Australia used energy for different purposes in 1995 and 2015. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+  "source_date": "2026-10-26",
+  "source": "real_exam",
+  "image": "media/writing/latest_photo_587@26-10-2026_12-37-35.jpg",
+  "image_description": "Two pie charts, 'Household Energy Use in Australia (1995 vs 2015)'. 1995: Heating 40%, Water Heating 30%, Other Appliances 10%, Lighting 10%, Refrigeration 10%. 2015: Heating 30%, Water Heating 25%, Other Appliances 20%, Refrigeration 15%, Lighting 10%. Changes: Heating -10 points, Water Heating -5, Other Appliances +10 (doubled), Refrigeration +5, Lighting unchanged. Heating remains the largest category in both years.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_587@26-10-2026_12-37-35.jpg",
+  "essay_type": "pie"
+ },
+ {
+  "task": 1,
+  "prompt": "The graphs below show the numbers of male and female workers in 1975 and 1995 in several employment sectors of the Republic of Freedonia. Write a report for a university teacher describing the information shown. You should write at least 150 words.",
+  "source_date": "2026-10-28",
+  "source": "real_exam",
+  "image": "media/writing/latest_photo_588@28-10-2026_17-06-12.jpg",
+  "image_description": "Two dot plots (1975 and 1995), x-axis number of employees (1000) 0-1000, 6 sectors, red=Women, black=Men. Approximate values (blurry image) 1975 (women/men, thousands): Manufacturing ~300/~620; Communications ~230/~270; Finance/banking ~140/~420; Wholesale & retail ~550/~690; Public sector non-defence ~650/~850; Public sector defence ~20/~210. 1995 (women/men): Manufacturing ~300/~640; Communications ~590/~300 (women now exceed men); Finance/banking ~440/~460 (nearly equal); Wholesale & retail ~790/~690 (women now exceed men); Public sector non-defence ~650/~850; Public sector defence ~120/~200. Men outnumber women in most sectors in 1975; by 1995 women overtake men in communications and wholesale/retail and nearly equal men in finance.",
+  "origin_photo": "LATEST_EXAMS_ARCHIVE/photos/photo_588@28-10-2026_17-06-12.jpg",
+  "essay_type": "mixed"
+ },
+ {
+  "task": 1,
+  "prompt": "The chart below shows the type of transports young people in four countries prefer to use. Summarize the information by selecting and reporting the main features, and make comparisons where relevant. You should write at least 150 words.",
+  "source_date": "2026-07-29",
+  "source": "teacher",
+  "image": "media/writing/ielts_photo_33@29-07-2026_17-09-41.jpg",
+  "image_description": "Title: Transport preferences among young people from different countries. Grouped bar chart, y-axis percentage 0%-80%, legend Car (blue), Motorcycle (red), Bicycle (green). Great Britain: Car 60%, Motorcycle 10%, Bicycle ~29% (just under 30%). USA: Car 60%, Motorcycle 30%, Bicycle 10%. Germany: Car 40%, Motorcycle 15%, Bicycle 45% (only country where bicycle beats car). France: Car 75% (highest of all), Motorcycle 10%, Bicycle 15%. Car is the most popular in GB, USA and France; motorcycle is lowest in GB, Germany and France but second in the USA.",
+  "origin_photo": "IELTS_PREP_ARCHIVE/photos/photo_33@29-07-2026_17-09-41.jpg",
+  "essay_type": "bar"
+ },
+ {
+  "task": 1,
+  "prompt": "The bar chart illustrates the percentage of businesses in the UK who had a social media presence from 2012 to 2016. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "source_date": "2026-07-29",
+  "source": "teacher",
+  "image": "media/writing/ielts_photo_34@29-07-2026_17-09-41.jpg",
+  "image_description": "Title: Percentage of Businesses with a Social Media Presence. Grouped bars for three business sizes, five years each (2012 blue, 2013 red, 2014 green, 2015 purple, 2016 teal); y-axis 0-90 (percent). Approximate values: Small businesses: 2012 28, 2013 30, 2014 35, 2015 30, 2016 49. Medium: 2012 31, 2013 48, 2014 49, 2015 30, 2016 52. Large: 2012 78, 2013 78, 2014 77, 2015 52, 2016 79. Large businesses far higher than small/medium in every year; 2015 shows a dip for all three sizes (largest drop for large businesses, from 77 to 52), and 2016 is the highest year for all sizes.",
+  "origin_photo": "IELTS_PREP_ARCHIVE/photos/photo_34@29-07-2026_17-09-41.jpg",
+  "essay_type": "bar"
+ },
+ {
+  "task": 1,
+  "prompt": "The graph below shows the demand for electricity in England during typical days in winter and summer. The pie chart shows how electricity is used in an average English home. Summarise the information by selecting and reporting the main features and make comparisons where relevant. You should write at least 150 words.",
+  "source_date": "2026-08-03",
+  "source": "teacher",
+  "image": "media/writing/ielts_photo_74@03-08-2026_17-14-06.jpg",
+  "image_description": "Mixed chart: line graph + pie chart. LINE GRAPH 'Typical daily demand for electricity': x-axis hours of day 0 to 24 (ticks 0,3,6,9,12,15,18,21,24); y-axis 'Units of electricity' 0 to 50,000 (gridlines every 10,000). Winter line (blue) starts ~34,000 at hour 0, rises to a first peak ~39,500 at ~hour 2-3, falls to a minimum ~31,000 at ~hour 7-8, then rises steadily to ~38,000 at hour 12, ~40,000 at hour 15, ~41,000 at hour 18, ~43,000 at hour 20, a sharp overall peak ~48,000 at ~hour 22, then drops quickly to ~34,000 at hour 24. Summer line (yellow) starts ~17,000 at hour 0, gently falls to ~14,000 at hour 6-8, ~14,500 at hour 9, rises to a peak ~20,000 at ~hour 14, falls to ~16,000 at hour 16-18, ~16,500 at hour 21, small peak ~19,500 at ~hour 23, ending ~17,000 at hour 24. Winter demand is always about 2-2.5 times summer demand. PIE CHART 'What the electricity is used for' (average English home): Heating rooms and heating water 52.5%; Ovens, kettles, washing machines 17.5%; Lighting, TV, radio 15.0%; Vacuum cleaners, food mixers, electric tools 15.0%.",
+  "origin_photo": "IELTS_PREP_ARCHIVE/photos/photo_74@03-08-2026_17-14-06.jpg",
+  "essay_type": "mixed"
+ },
+ {
+  "task": 2,
+  "prompt": "Nowadays many people have access to computers on a wide basis and a large number of children play computer games. What are the negative impacts of children playing computer games? What can be done to minimize the bad effects of children playing computer games?",
+  "source_date": "2026-08-03",
+  "source": "teacher",
+  "image": null,
+  "image_description": null,
+  "origin_photo": "IELTS_PREP_ARCHIVE/photos/photo_75@03-08-2026_17-14-06.jpg",
+  "essay_type": "problem_solution"
+ },
+ {
+  "task": 1,
+  "prompt": "The pie charts below show the devices people in the 18 to 25 age group use to watch television in Canada in two different years. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+  "source_date": "2026-08-07",
+  "source": "teacher",
+  "image": "media/writing/ielts_photo_81@07-08-2026_17-01-46.jpg",
+  "image_description": "Two pie charts (2009 and 2019), share of devices used by 18-25 year-olds in Canada to watch TV. 2009: Mobile phone 15%, Laptop 20%, Tablet 5%, Desktop computer 18%, Flat-screen TV 8%, Conventional TV 34% (largest). 2019: Mobile phone 26%, Laptop 12%, Tablet 19%, Desktop computer 12%, Flat-screen TV 27% (largest), Conventional TV 4% (smallest). Changes: conventional TV fell 34->4; flat-screen TV rose 8->27; mobile phone rose 15->26; tablet rose 5->19; laptop fell 20->12; desktop fell 18->12.",
+  "origin_photo": "IELTS_PREP_ARCHIVE/photos/photo_81@07-08-2026_17-01-46.jpg",
+  "essay_type": "pie"
+ },
+ {
+  "task": 1,
+  "prompt": "The pie charts below show the average household expenditures in Japan and Malaysia in the year 2010. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+  "source_date": "2026-08-07",
+  "source": "teacher",
+  "image": "media/writing/ielts_photo_82@07-08-2026_17-01-46.jpg",
+  "image_description": "Two pie charts, average household expenditure 2010. Categories: Housing, Transport, Food, Health care, Other goods and services. Japan: Housing 21%, Transport 20%, Food 24%, Health care 6%, Other goods and services 29% (largest). Malaysia: Housing 34% (largest), Transport 10%, Food 27%, Health care 3% (smallest), Other goods and services 26%. Japan spends more on transport (20 vs 10) and health care (6 vs 3) and other goods; Malaysia more on housing (34 vs 21) and food (27 vs 24).",
+  "origin_photo": "IELTS_PREP_ARCHIVE/photos/photo_82@07-08-2026_17-01-46.jpg",
+  "essay_type": "pie"
+ },
+ {
+  "task": 2,
+  "prompt": "Many students around the world don't choose science subjects at university. Give the reasons for this and describe the impacts on the community.",
+  "source_date": "2026-08-07",
+  "source": "teacher",
+  "image": null,
+  "image_description": null,
+  "origin_photo": "IELTS_PREP_ARCHIVE/photos/photo_83@07-08-2026_17-01-46.jpg",
+  "essay_type": "cause_effect"
+ },
+ {
+  "task": 1,
+  "prompt": "The table compares the international tourist arrivals in the top eight countries in 2009 and 2010 and the change (in percentage)",
+  "source_date": "2026-08-19",
+  "source": "teacher",
+  "image": "media/writing/ielts_photo_221@19-08-2026_16-51-55.jpg",
+  "image_description": "Table with 4 columns: Country, In 2009 (millions), In 2010 (millions), Change (%). Nine rows: France 76 -> 76 (+0); US 66 -> 67 (+1.5%); Spain 55 -> 56 (+1.8%); UK 55 -> 57 (+3.6%); Italy 44 -> 45 (+2.3%); Turkey 33 -> 45 (+33%); China 22 -> 34 (+55%); Germany 11 -> 23 (+109%); Hong Kong 10 -> 9 (-11%). Largest absolute total: France in both years (76m). Largest percentage rise: Germany (+109%), then China (+55%) and Turkey (+33%). Only Hong Kong fell (-11%); France was unchanged.",
+  "origin_photo": "IELTS_PREP_ARCHIVE/photos/photo_221@19-08-2026_16-51-55.jpg",
+  "essay_type": "table"
+ },
+ {
+  "task": 1,
+  "prompt": "The table below gives information on consumer spending on different items in five different countries in 2002. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "source_date": "2026-08-19",
+  "source": "teacher",
+  "image": "media/writing/ielts_photo_222@19-08-2026_16-51-55.jpg",
+  "image_description": "Table of percentage of consumer spending in 2002 on three categories. Food/Drink/Tobacco: Ireland 28.91%, Italy 16.36%, Spain 18.80%, Sweden 15.77%, Turkey 32.14%. Clothing/Footwear: Ireland 6.43%, Italy 9.00%, Spain 6.51%, Sweden 5.40%, Turkey 6.63%. Leisure/Education: Ireland 2.21%, Italy 3.20%, Spain 1.98%, Sweden 3.22%, Turkey 4.35%. Turkey highest in food (32.14%) and leisure/education (4.35%); Italy highest in clothing (9.00%); Sweden lowest in food (15.77%) and clothing (5.40%); Spain lowest in leisure/education (1.98%).",
+  "origin_photo": "IELTS_PREP_ARCHIVE/photos/photo_222@19-08-2026_16-51-55.jpg",
+  "essay_type": "table"
+ },
+ {
+  "task": 1,
+  "prompt": "The charts show projections for global production by sector in 2040 and 2060. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+  "source_date": "2026-08-24",
+  "source": "teacher",
+  "image": "media/writing/ielts_photo_234@24-08-2026_16-56-03.jpg",
+  "image_description": "Two pie charts titled 'WORLD, PROJECTED PRODUCTION BY SECTOR' for 2040 and 2060, six sectors (legend: Services, Manufacturing, Materials, Energy, Agriculture, Info-Com Tech). 2040: Services 40%, Manufacturing 31%, Info-Com Tech 15%, Energy 7%, Agriculture 4%, Materials 3%. 2060: Services 41%, Manufacturing 33%, Info-Com Tech 16%, Energy 5%, Materials 4%, Agriculture 1%. Changes 2040->2060: Services +1, Manufacturing +2, Info-Com Tech +1, Materials +1, Energy -2, Agriculture -3 (percentage points). Services is the largest sector in both years, followed by manufacturing.",
+  "origin_photo": "IELTS_PREP_ARCHIVE/photos/photo_234@24-08-2026_16-56-03.jpg",
+  "essay_type": "pie"
+ },
+ {
+  "task": 2,
+  "prompt": "In many cities, problems related to overpopulation are becoming more common. Some governments are now encouraging businesses and individuals to move out of cities to rural areas.\n\nDo the advantages of this trend outweigh the disadvantages?",
+  "source_date": "2026-08-24",
+  "source": "teacher",
+  "image": null,
+  "image_description": null,
+  "origin_photo": "IELTS_PREP_ARCHIVE/photos/photo_235@24-08-2026_16-56-03.jpg",
+  "essay_type": "outweigh"
+ },
+ {
+  "task": 2,
+  "prompt": "Today, many people use the internet and smartphones to transfer money to friends, family, and businesses.\n\nIs this a positive or negative development?",
+  "source_date": "2026-08-24",
+  "source": "teacher",
+  "image": null,
+  "image_description": null,
+  "origin_photo": "IELTS_PREP_ARCHIVE/photos/photo_237@24-08-2026_16-56-03.jpg",
+  "essay_type": "positive_negative"
+ },
+ {
+  "task": 2,
+  "prompt": "If people go to live in another country, they should follow the local customs and traditions.\n\nTo what extent do you agree or disagree?",
+  "source_date": "2026-08-24",
+  "source": "teacher",
+  "image": null,
+  "image_description": null,
+  "origin_photo": "IELTS_PREP_ARCHIVE/photos/photo_238@24-08-2026_16-56-03.jpg",
+  "essay_type": "opinion"
+ },
+ {
+  "task": 1,
+  "prompt": "The diagram below shows how fabric is manufactured from bamboo. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+  "source_date": "2026-08-24",
+  "source": "teacher",
+  "image": "media/writing/ielts_photo_239@24-08-2026_16-56-03.jpg",
+  "image_description": "Linear 9-step process diagram 'How bamboo fabric is made' (arrows left to right across the first row, then right to left, then left to right): (1) Plant bamboo plants - in Spring (picture of bamboo shoots); (2) Harvest - in Autumn (farmer with knife cutting bamboo); (3) Cut into strips (circular saw); (4) Crush strips to make liquid pulp (pieces of bamboo strips); (5) Filter - separate long fibres from liquid (funnel with drops); (6) Soften fibres - add water and amine oxide (cloud with drops); (7) Spin (ball of yarn/thread); (8) Weave to make fabric (woven fabric piece); (9) final products: clothing items, a T-shirt and a pair of socks. Only steps 1 and 2 carry seasons (Spring planting, Autumn harvest); no quantities given.",
+  "origin_photo": "IELTS_PREP_ARCHIVE/photos/photo_239@24-08-2026_16-56-03.jpg",
+  "essay_type": "process"
+ },
+ {
+  "task": 2,
+  "prompt": "Some children spend hours every day on smartphones. Why is this the case? Do you think this is a positive or negative development?",
+  "source_date": "2026-08-28",
+  "source": "teacher",
+  "image": null,
+  "image_description": null,
+  "origin_photo": "IELTS_PREP_ARCHIVE/photos/photo_261@28-08-2026_16-56-16.jpg",
+  "essay_type": "direct_question"
+ },
+ {
+  "task": 2,
+  "prompt": "Many university students want to learn about different subjects in addition to their main subjects. Others feel it is more important to give all their time and attention to studying for their qualification. Discuss both views and give your opinion.",
+  "source_date": "2026-08-28",
+  "source": "teacher",
+  "image": null,
+  "image_description": null,
+  "origin_photo": "IELTS_PREP_ARCHIVE/photos/photo_262@28-08-2026_16-56-16.jpg",
+  "essay_type": "discussion"
+ },
+ {
+  "task": 1,
+  "prompt": "The maps below show the village of Stokeford in 1930 and 2010. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+  "source_date": "2026-08-31",
+  "source": "teacher",
+  "image": "media/writing/ielts_photo_322@31-08-2026_17-03-16.jpg",
+  "image_description": "Two side-by-side maps with compass (N at top), river on the west/left side flowing north-south and bridge at top (north) where the road crosses the river. STOKEFORD 1930: River Stoke curves along the west/left. A road runs from the bridge in the north southwards along the east bank of the river. Along the west side of this road, near the river, are a post office and two small shops (labelled 'Shops' and 'Post office') with a few houses (a short row of small house symbols) beside them; further north along the road, a row of houses runs along the east side of the road near the bridge (a long line of small houses on the road's east/upper side). A dotted path/track runs from the bridge area south through farmland to the primary school. The primary school stands east of the road, midway. Farmland (cow symbols) covers most of the area east of the road in the north and east, and also the land south-west between the road and the river (farmland with cows at left/bottom, labelled 'Farmland'). In the south-east is a large house (E-shaped building) set in gardens (trees, a fenced/outlined garden area) connected by a dotted path westward to the road; a tree/hedge mark near gardens. Very few houses overall. STOKEFORD 2010: Same river and bridge. The road from the bridge continues south but with a new network of residential roads: a new road branches west near the top with curved rows of houses (crescents/cul-de-sac) between the road and the river in the north-west, and a row of houses (two short terraces) in the north-east near the bridge/east of the road. The post office remains (west side), but the shops have gone (no shops shown). A new loop/ring road with houses along it and in the centre of the village in the west/south-west (a rectangular road loop with houses around it). A long line of houses now runs along the main road south (many small house symbols down the east and west sides of the road toward the bottom). The primary school remains in the same place but is larger/extended (building expanded with additional wings). The large house with gardens in the south-east has been converted/extended into a 'Retirement home' (larger building with several wings, still with trees/gardens). Farmland has largely disappeared and been replaced by housing; there are no cow symbols. The dotted path through farmland no longer appears. Key: house symbol = Houses. Overall: village changed from a small rural farming community with few houses to a much larger residential village with many new houses and roads; shops and farmland lost; school expanded; large house became a retirement home.",
+  "origin_photo": "IELTS_PREP_ARCHIVE/photos/photo_322@31-08-2026_17-03-16.jpg",
+  "essay_type": "map"
+ }
+]

@@ -1,0 +1,13 @@
+[{"part":1,"topic":"Hometown","question":"Where is your hometown?","season":"Sep-Dec 2026","source":"fixture"},
+ {"part":1,"topic":"Hometown","question":"What do you like about it?"},
+ {"part":1,"topic":"Hometown","question":"Has it changed much?"},
+ {"part":1,"topic":"Music","question":"Do you like music?"},
+ {"part":1,"topic":"Music","question":"What music do you listen to?"},
+ {"part":1,"topic":"Music","question":"Did you learn an instrument?"},
+ {"part":1,"topic":"Weather","question":"What is the weather like today?"},
+ {"part":1,"topic":"Weather","question":"Do you prefer hot or cold weather?"},
+ {"part":1,"topic":"Weather","question":"Does the weather affect your mood?"},
+ {"part":2,"topic":"A film you watched and enjoyed","question":"Describe a film you watched and enjoyed","cue_points":["what the film was about","when and where you watched it","why you liked it"],"season":"Jan-Aug 2026"},
+ {"part":3,"topic":"Films","question":"Why do people like watching films at the cinema?"},
+ {"part":3,"topic":"Films","question":"Are films a good way to learn about other cultures?"},
+ {"part":3,"topic":"Shopping","question":"Do people shop online more now?"}]

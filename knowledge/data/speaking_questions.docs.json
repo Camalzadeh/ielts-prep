@@ -1,0 +1,4047 @@
+[
+  {
+    "part": 1,
+    "topic": "Work or Studies",
+    "question": "Do you work or are you a student?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Currently, I am balancing my schedule as a part-time student while holding a steady job at a local company. It is quite a busy routine, but I think it is the best way to gain practical experience while getting my university degree. This lifestyle allows me to learn the theory in class and apply it directly to my daily work.",
+    "vocabulary": [
+      {
+        "term": "Steady job",
+        "meaning": "A permanent and dependable job."
+      },
+      {
+        "term": "Gain practical experience",
+        "meaning": "To get real-world skills by doing a job.",
+        "type": "collocation"
+      },
+      {
+        "term": "Daily work",
+        "meaning": "Regular everyday work tasks."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Work or Studies",
+    "question": "What work do you do?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I work as a marketing assistant, which means I handle social media and analyze customer trends. My role requires a mix of creative thinking and organization to help our company brand stand out. On a normal day, I work closely with graphic designers to make interesting content for our online audience.",
+    "vocabulary": [
+      {
+        "term": "Analyze customer trends",
+        "meaning": "To study what products or styles buyers like."
+      },
+      {
+        "term": "Creative thinking",
+        "meaning": "The ability to think of new and original ideas.",
+        "type": "collocation"
+      },
+      {
+        "term": "Work closely",
+        "meaning": "To work together with someone with a lot of contact.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Work or Studies",
+    "question": "What subjects are you studying?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I am currently studying Business Administration, focusing mostly on digital marketing and business strategy. My classes cover everything from basic accounting to customer behavior. I find the lessons on psychology especially interesting because they explain why people buy certain things.",
+    "vocabulary": [
+      {
+        "term": "Business strategy",
+        "meaning": "A plan for achieving success in a business."
+      },
+      {
+        "term": "Customer behavior",
+        "meaning": "How and why people buy and use products.",
+        "type": "collocation"
+      },
+      {
+        "term": "Basic accounting",
+        "meaning": "Simple financial record-keeping."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Work or Studies",
+    "question": "Why did you choose that job?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I chose this career path because I have always been interested in how good communication can change public opinion. On top of that, the marketing world changes so fast that there is always something new to learn. It really fits my creative personality and my love for solving problems.",
+    "vocabulary": [
+      {
+        "term": "Public opinion",
+        "meaning": "The general view or belief of the public.",
+        "type": "collocation"
+      },
+      {
+        "term": "Top of that",
+        "meaning": "In addition to that."
+      },
+      {
+        "term": "Solving problems",
+        "meaning": "Finding answers to difficult situations.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Work or Studies",
+    "question": "Why did you choose to study that subject?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I picked this major because it teaches useful skills that you can use in almost any industry. I wanted a qualification that would help me secure employment and give me many choices after I graduate. Plus, the fast pace of modern business genuinely excites me.",
+    "vocabulary": [
+      {
+        "term": "Picked this major",
+        "meaning": "Chose this main subject at university."
+      },
+      {
+        "term": "Secure employment",
+        "meaning": "To successfully get or find a job.",
+        "type": "collocation"
+      },
+      {
+        "term": "Fast pace",
+        "meaning": "Quick speed of movement or change."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Work or Studies",
+    "question": "Do you like your job?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, I really enjoy my job because it gives me the freedom to express my ideas. Every day is different, which keeps me excited and stops my routine from becoming boring. Working with a very supportive team makes the whole experience even better.",
+    "vocabulary": [
+      {
+        "term": "Express my ideas",
+        "meaning": "To show or say what I am thinking."
+      },
+      {
+        "term": "Every day is different",
+        "meaning": "A situation where tasks change daily."
+      },
+      {
+        "term": "Supportive team",
+        "meaning": "A group of coworkers who help and encourage you.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Work or Studies",
+    "question": "Is there anything you dislike about your job?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "If I had to pick one downside, it would be the tight deadlines that sometimes cause a lot of stress. When we have to launch multiple projects at the same time, the workload can become very heavy. However, I have learned to manage my time better to handle the pressure.",
+    "vocabulary": [
+      {
+        "term": "Tight deadlines",
+        "meaning": "Short time limits to finish work."
+      },
+      {
+        "term": "Heavy workload",
+        "meaning": "A large amount of work to do."
+      },
+      {
+        "term": "Handle the pressure",
+        "meaning": "To deal successfully with stress or difficulty.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Work or Studies",
+    "question": "What do you like about your studies?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "What I like most about my course is that we learn by looking at real examples of big companies. Instead of just reading textbooks, we are encouraged to solve actual problems that businesses face. This hands-on style of learning makes my time at university very interesting.",
+    "vocabulary": [
+      {
+        "term": "Real examples",
+        "meaning": "True cases or stories."
+      },
+      {
+        "term": "Solve actual problems",
+        "meaning": "To find answers to genuine difficulties.",
+        "type": "collocation"
+      },
+      {
+        "term": "Hands-on style",
+        "meaning": "A practical way of doing things."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Work or Studies",
+    "question": "What do you dislike about your studies?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "The main thing I dislike is the large amount of boring theoretical homework we have to do. Sometimes, what we learn in class feels a bit old-fashioned and disconnected from the real world. I would definitely prefer more practical workshops instead of writing long essays.",
+    "vocabulary": [
+      {
+        "term": "Theoretical homework",
+        "meaning": "Assignments based on ideas rather than practice."
+      },
+      {
+        "term": "Old-fashioned",
+        "meaning": "Outdated."
+      },
+      {
+        "term": "Real world",
+        "meaning": "The actual life and business market outside of school.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Hometown and Countryside",
+    "question": "Please describe your hometown a little.",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "My hometown is a lively coastal city in the south of my country, famous for its big port and beautiful beaches. It easily mixes old buildings with modern skyscrapers, creating a very unique look. The atmosphere is usually pretty relaxed, but there is always something fun to do.",
+    "vocabulary": [
+      {
+        "term": "Coastal city",
+        "meaning": "A city located next to the ocean."
+      },
+      {
+        "term": "Unique look",
+        "meaning": "A distinct or special appearance.",
+        "type": "collocation"
+      },
+      {
+        "term": "Relaxed atmosphere",
+        "meaning": "A calm and comfortable feeling in a place."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Hometown and Countryside",
+    "question": "What is your town well-known for?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "The city is famous for its fresh seafood, which brings in food lovers from many different places. We are also well-known for hosting a big cultural festival every year with local music, art, and street food. Visitors always talk about how friendly the local people are.",
+    "vocabulary": [
+      {
+        "term": "Fresh seafood",
+        "meaning": "Food from the sea that was caught recently."
+      },
+      {
+        "term": "Cultural festival",
+        "meaning": "A celebration focused on the traditions and arts of a place.",
+        "type": "collocation"
+      },
+      {
+        "term": "Local people",
+        "meaning": "The people who live in that specific area."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Hometown and Countryside",
+    "question": "Do you like your home town?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Absolutely, I love my hometown because it is where I grew up and made my best childhood memories. I really like the balance it offers between city convenience and natural beauty. It has a warm feeling of home that always makes me feel comfortable.",
+    "vocabulary": [
+      {
+        "term": "Childhood memories",
+        "meaning": "Things you remember from when you were a child.",
+        "type": "collocation"
+      },
+      {
+        "term": "City convenience",
+        "meaning": "The ease of living near stores, transport, and services."
+      },
+      {
+        "term": "Natural beauty",
+        "meaning": "The beautiful scenery of nature (trees, water, hills).",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Hometown and Countryside",
+    "question": "Is that a big city or a small place?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I would say it is a medium-sized city that is growing very fast because of new businesses. While it does not feel as crowded as a massive capital city, it still has everything you need like big malls and efficient public transport. It gives you the advantages of city life without the terrible traffic.",
+    "vocabulary": [
+      {
+        "term": "Medium-sized city",
+        "meaning": "A city that is not tiny but not huge."
+      },
+      {
+        "term": "Public transport",
+        "meaning": "Buses, trains, and subways used by the public.",
+        "type": "collocation"
+      },
+      {
+        "term": "Terrible traffic",
+        "meaning": "Heavy and slow vehicle movement on roads."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Hometown and Countryside",
+    "question": "How long have you been living there?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I have lived in this city for my whole life, which is a bit more than twenty years now. Watching the city change from a quiet town into a busy commercial hub has been very interesting. My family has lived in the same neighborhood for a long time, so my roots are here.",
+    "vocabulary": [
+      {
+        "term": "Whole life",
+        "meaning": "Entire life."
+      },
+      {
+        "term": "Commercial hub",
+        "meaning": "A center for business, trade, and shopping.",
+        "type": "collocation"
+      },
+      {
+        "term": "Same neighborhood",
+        "meaning": "The exact same area of a city."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Hometown and Countryside",
+    "question": "Do you think you will continue living there for a long time?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Even though I love my city, I plan to move abroad soon for my studies and career. I believe leaving my comfortable routine will help me grow up and learn about the world. However, I am pretty sure I will come back here to settle permanently in the future.",
+    "vocabulary": [
+      {
+        "term": "Move abroad",
+        "meaning": "To go to a foreign country."
+      },
+      {
+        "term": "Comfortable routine",
+        "meaning": "A regular pattern of life that feels safe and easy."
+      },
+      {
+        "term": "Settle permanently",
+        "meaning": "To move to a place to live there for the rest of your life.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Hometown and Countryside",
+    "question": "Would you like to live in the countryside in the future?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "The idea of moving to the countryside sounds nice, but maybe only when I am much older. Right now, I rely too much on the fast pace and job opportunities that only a big city can offer. Later in life, though, the peace and quiet of a village would be a great change.",
+    "vocabulary": [
+      {
+        "term": "Country life / Countryside",
+        "meaning": "Rural areas away from cities."
+      },
+      {
+        "term": "Job opportunities",
+        "meaning": "Chances to find employment or advance your career.",
+        "type": "collocation"
+      },
+      {
+        "term": "Peace and quiet",
+        "meaning": "A calm and silent environment.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Hometown and Countryside",
+    "question": "Have you ever lived in the countryside?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "No, I have spent my entire life living in the city, so I have never experienced country life firsthand. My time in the countryside has been limited to short weekend trips or summer holidays with my family. Because of this, living in a village feels a bit foreign to me.",
+    "vocabulary": [
+      {
+        "term": "Entire life",
+        "meaning": "All of my life."
+      },
+      {
+        "term": "Experienced firsthand",
+        "meaning": "Directly lived through or saw something yourself."
+      },
+      {
+        "term": "Summer holidays",
+        "meaning": "School or work vacations during the summer months.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Hometown and Countryside",
+    "question": "Do you ever spend time in the countryside?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, I make an effort to visit countryside villages whenever I need a break from the noisy city life. These short weekend trips are the perfect chance to disconnect from my phone and enjoy nature. I find that spending a few days around green fields helps me get my energy back.",
+    "vocabulary": [
+      {
+        "term": "Make an effort",
+        "meaning": "To try hard to do something."
+      },
+      {
+        "term": "Noisy city life",
+        "meaning": "The loud and hectic environment of an urban area."
+      },
+      {
+        "term": "Enjoy nature",
+        "meaning": "To appreciate and spend time in outdoor environments.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Hometown and Countryside",
+    "question": "What is the difference between living in the countryside and the city?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "The main difference is how fast life moves and the amount of environmental pollution. Cities are full of fast-moving traffic, noise, and modern facilities, while the countryside offers a slow pace and clean air. Also, people in small villages usually know each other much better than people in cities.",
+    "vocabulary": [
+      {
+        "term": "Environmental pollution",
+        "meaning": "Damage caused to water, air, or land by harmful things."
+      },
+      {
+        "term": "Modern facilities",
+        "meaning": "Up-to-date buildings and services like hospitals and transport.",
+        "type": "collocation"
+      },
+      {
+        "term": "Slow pace",
+        "meaning": "A gentle or unhurried speed of life.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Hometown and Countryside",
+    "question": "What do people living in the countryside like to do?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "From what I have seen, country people love outdoor activities like gardening, farming, and walking in nature. They also spend a lot of time together at local events and neighborhood gatherings. Life there is mostly about enjoying a simple and relaxed lifestyle.",
+    "vocabulary": [
+      {
+        "term": "Outdoor activities",
+        "meaning": "Things you do outside for fun or exercise (like hiking).",
+        "type": "collocation"
+      },
+      {
+        "term": "Neighborhood gatherings",
+        "meaning": "Meetings or parties where local neighbors come together.",
+        "type": "collocation"
+      },
+      {
+        "term": "Relaxed lifestyle",
+        "meaning": "A way of living that is calm and free of stress."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Hometown and Countryside",
+    "question": "What do you like to do in the countryside?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Whenever I visit rural areas, my absolute favorite thing to do is go for long walks on nature trails. I also really enjoy buying fresh produce like fruits and vegetables directly from local farmers. Just sitting outside with a good book while listening to the birds is something I love.",
+    "vocabulary": [
+      {
+        "term": "Nature trails",
+        "meaning": "Walking paths through forests or fields."
+      },
+      {
+        "term": "Fresh produce",
+        "meaning": "Freshly harvested fruits, vegetables, and grains.",
+        "type": "collocation"
+      },
+      {
+        "term": "Local farmers",
+        "meaning": "People who own or work on farms in that specific area."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Home and Accommodation",
+    "question": "What colour would you choose to paint the walls of your room?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I would definitely choose a soft, simple color like off-white or a very light blue. These bright shades reflect natural light well, making a small room feel much bigger and brighter. Also, calm colors help me rest and relax after a very long and tiring day.",
+    "vocabulary": [
+      {
+        "term": "Soft color",
+        "meaning": "A gentle, non-aggressive color shade."
+      },
+      {
+        "term": "Reflect natural light",
+        "meaning": "To bounce sunlight around a room to make it brighter.",
+        "type": "collocation"
+      },
+      {
+        "term": "Tiring day",
+        "meaning": "A day that makes you feel exhausted."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Home and Accommodation",
+    "question": "What colour would you never use in your home?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I would completely avoid using very dark colors like pitch black or aggressive bright shades. These intense colors absorb too much light, which can make a room feel tiny, dark, and stressful. I truly believe a home should be a peaceful environment, not an annoying or distracting space.",
+    "vocabulary": [
+      {
+        "term": "Pitch black",
+        "meaning": "Completely dark black."
+      },
+      {
+        "term": "Intense colors",
+        "meaning": "Very strong or vivid colors."
+      },
+      {
+        "term": "Peaceful environment",
+        "meaning": "A calm and quiet setting.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Home and Accommodation",
+    "question": "Can you describe the place where you live?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I live in a modern apartment located in a very safe and convenient residential neighborhood. The flat has an open design with big windows that let in plenty of sunlight during the day. It is decorated with simple furniture to keep the space clean and organized.",
+    "vocabulary": [
+      {
+        "term": "Residential neighborhood",
+        "meaning": "An area of a town where people live, not where businesses are.",
+        "type": "collocation"
+      },
+      {
+        "term": "Open design",
+        "meaning": "A layout with fewer walls separating rooms."
+      },
+      {
+        "term": "Plenty of sunlight",
+        "meaning": "A large amount of natural light from the sun.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Home and Accommodation",
+    "question": "What kind of housing accommodation do you live in?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I currently live in a multi-story apartment building right in the center of the city. It is a modern block that includes helpful features like 24-hour security and an underground parking lot. This type of high-rise building is very common here because city land is limited.",
+    "vocabulary": [
+      {
+        "term": "Multi-story",
+        "meaning": "Having many floors or levels."
+      },
+      {
+        "term": "24-hour security",
+        "meaning": "Protection and safety monitoring that never stops.",
+        "type": "collocation"
+      },
+      {
+        "term": "High-rise building",
+        "meaning": "A very tall apartment or office tower.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Home and Accommodation",
+    "question": "What do you like about your flat?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "The thing I like most about my apartment is its prime location, which makes going to work very easy. Also, the flat has a nice balcony where I can sit and enjoy my morning coffee. The walls are also thick enough to block out noise from the busy city traffic outside.",
+    "vocabulary": [
+      {
+        "term": "Prime location",
+        "meaning": "An excellent, central, or highly valued location.",
+        "type": "collocation"
+      },
+      {
+        "term": "Morning coffee",
+        "meaning": "The first coffee of the day."
+      },
+      {
+        "term": "Block out noise",
+        "meaning": "To stop sounds from entering a room.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Home and Accommodation",
+    "question": "Which room does your family spend most of the time in?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Without a doubt, the living room is the main place where my family gathers every single evening. It has a big, comfortable couch and a television, making it the perfect spot for family bonding. We use this room to talk about our day, watch movies, and just have fun together.",
+    "vocabulary": [
+      {
+        "term": "Without a doubt",
+        "meaning": "Certainly; 100% true."
+      },
+      {
+        "term": "Living room",
+        "meaning": "The main relaxation room in a home."
+      },
+      {
+        "term": "Family bonding",
+        "meaning": "The process of family members becoming closer by spending time together.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Home and Accommodation",
+    "question": "What can you see from the windows where you live?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "When I look out of my living room window, I can see the busy city skyline and a nice local park. It is a beautiful view that shows modern architecture on one side and green trees on the other. At night, the view gets even better when all the city lights turn on.",
+    "vocabulary": [
+      {
+        "term": "City skyline",
+        "meaning": "The outline of buildings against the sky."
+      },
+      {
+        "term": "Modern architecture",
+        "meaning": "Contemporary styles and designs of buildings.",
+        "type": "collocation"
+      },
+      {
+        "term": "City lights",
+        "meaning": "The lights of a city visible at night."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Home and Accommodation",
+    "question": "Do you prefer living in a house or a flat?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Personally, I prefer living in a spacious house rather than a small apartment. A house usually gives you more privacy, a backyard garden, and the freedom to change things without strict rules. However, I do admit that apartments are easier to clean and offer better security.",
+    "vocabulary": [
+      {
+        "term": "Spacious house",
+        "meaning": "A home with plenty of room inside."
+      },
+      {
+        "term": "Backyard garden",
+        "meaning": "A private green area at the back of a house.",
+        "type": "collocation"
+      },
+      {
+        "term": "Better security",
+        "meaning": "Higher level of safety from theft or danger."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Home and Accommodation",
+    "question": "What would you like to change in your flat?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "If I had the chance, I would love to remodel the kitchen to make it bigger and more open. The current setup feels a bit tight and does not have enough counter space for cooking big meals. I would also love to upgrade to newer, smarter kitchen appliances.",
+    "vocabulary": [
+      {
+        "term": "Remodel the kitchen",
+        "meaning": "To renovate or change the design of the kitchen."
+      },
+      {
+        "term": "Counter space",
+        "meaning": "The flat working surfaces in a kitchen.",
+        "type": "collocation"
+      },
+      {
+        "term": "Kitchen appliances",
+        "meaning": "Equipment like fridges, ovens, and blenders."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Home and Accommodation",
+    "question": "What do you dislike about your flat?",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "The biggest problem with my current apartment is the lack of storage space for extra belongings. Because the flat is a bit small, it takes a lot of effort to keep the rooms tidy and avoid physical clutter. Plus, the monthly building management fees are a bit too expensive.",
+    "vocabulary": [
+      {
+        "term": "Storage space",
+        "meaning": "Room or closets used for keeping extra items.",
+        "type": "collocation"
+      },
+      {
+        "term": "Physical clutter",
+        "meaning": "A messy collection of objects taking up space.",
+        "type": "collocation"
+      },
+      {
+        "term": "Management fees",
+        "meaning": "Money paid for the upkeep of a building."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Teachers",
+    "question": "Would you like to be a teacher?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "To be completely honest, I don't think I have the patience required to be a teacher. While I respect the profession, managing a classroom full of noisy kids sounds very stressful to me. I prefer working in an office environment where I only have to deal with adults.",
+    "vocabulary": [
+      {
+        "term": "Patience required",
+        "meaning": "The amount of calm endurance needed for a task."
+      },
+      {
+        "term": "Managing a classroom",
+        "meaning": "Controlling and organizing students in a lessons room.",
+        "type": "collocation"
+      },
+      {
+        "term": "Office environment",
+        "meaning": "A professional workplace setting."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Teachers",
+    "question": "Do you think you could be a teacher?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "If I really had to do it, I think I could teach well because I am good at explaining complex concepts simply. However, my lack of patience might make it difficult to handle bad behavior in class. Being a good teacher requires a lot of emotional strength that I don't have yet.",
+    "vocabulary": [
+      {
+        "term": "Complex concepts",
+        "meaning": "Difficult or advanced ideas.",
+        "type": "collocation"
+      },
+      {
+        "term": "Bad behavior",
+        "meaning": "Actions that are disruptive or naughty."
+      },
+      {
+        "term": "Emotional strength",
+        "meaning": "Mental resilience to handle stress and feelings.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Teachers",
+    "question": "Did (Do) you have a favourite teacher?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, back in high school, my English teacher, Mrs. Smith, was someone I really respected. She had a unique approach to making old classic books feel exciting and meaningful to teenagers. Her infectious enthusiasm for the subject completely changed the way I look at reading and writing.",
+    "vocabulary": [
+      {
+        "term": "Unique approach",
+        "meaning": "A special or distinct method of doing something.",
+        "type": "collocation"
+      },
+      {
+        "term": "Classic books",
+        "meaning": "Famous historical literature."
+      },
+      {
+        "term": "Infectious enthusiasm",
+        "meaning": "Excitement that quickly spreads to other people.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Teachers",
+    "question": "How does this teacher help you?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "She went beyond her normal duty by teaching me how to think clearly and express my ideas well. Whenever I had trouble writing essays, she would stay after class to provide guidance and fix my mistakes. Her belief in me gave me the confidence to start writing my own stories.",
+    "vocabulary": [
+      {
+        "term": "Express my ideas",
+        "meaning": "To communicate thoughts effectively."
+      },
+      {
+        "term": "Provide guidance",
+        "meaning": "To give helpful advice or instruction to someone.",
+        "type": "collocation"
+      },
+      {
+        "term": "Confidence",
+        "meaning": "Trust in your own abilities."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Teachers",
+    "question": "How has your favourite teacher helped you?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "She went beyond her normal duty by teaching me how to think clearly and express my ideas well. Whenever I had trouble writing essays, she would stay after class to provide guidance and fix my mistakes. Her belief in me gave me the confidence to start writing my own stories.",
+    "vocabulary": [
+      {
+        "term": "Express my ideas",
+        "meaning": "To communicate thoughts effectively."
+      },
+      {
+        "term": "Provide guidance",
+        "meaning": "To give helpful advice or instruction to someone.",
+        "type": "collocation"
+      },
+      {
+        "term": "Confidence",
+        "meaning": "Trust in your own abilities."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Social Media",
+    "question": "Do you think you spend too much time on social media?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Sadly, I have to admit that I often spend too much time scrolling through these apps. I usually open my phone just to check a quick message, but end up wasting an hour without realizing it. It has become a bad habit, so I am trying to set daily screen time limits now.",
+    "vocabulary": [
+      {
+        "term": "Scrolling through apps",
+        "meaning": "Moving down a phone screen to read content."
+      },
+      {
+        "term": "Bad habit",
+        "meaning": "A negative routine that is difficult to stop.",
+        "type": "collocation"
+      },
+      {
+        "term": "Time limits",
+        "meaning": "Set boundaries on how long you can do an activity."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Social Media",
+    "question": "What do people often do on social media?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Mostly, people use social media to share updates about their personal lives using photos and videos. It also acts as a major news source where people find out about world events and pop culture. Additionally, many people use it just for fun to watch funny videos or text friends.",
+    "vocabulary": [
+      {
+        "term": "Personal lives",
+        "meaning": "The private everyday experiences of individuals.",
+        "type": "collocation"
+      },
+      {
+        "term": "News source",
+        "meaning": "A place or platform where people get information about recent events.",
+        "type": "collocation"
+      },
+      {
+        "term": "Pop culture",
+        "meaning": "Modern entertainment, fashion, and trends."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Dreams and Ambitions",
+    "question": "What is your dream job?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "My ultimate goal is to become a creative director for a large international advertising company. In this dream role, I would lead big design projects and provide mentorship to talented young artists from different countries. It would perfectly combine my love for art with my business skills.",
+    "vocabulary": [
+      {
+        "term": "Ultimate goal",
+        "meaning": "Final or most important objective."
+      },
+      {
+        "term": "Provide mentorship",
+        "meaning": "To offer guidance and training to younger or less experienced people.",
+        "type": "collocation"
+      },
+      {
+        "term": "Business skills",
+        "meaning": "Abilities related to commerce and management."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Dreams and Ambitions",
+    "question": "What was your dream when you were a child?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "When I was a little kid, I was amazed by space and wanted to be an astronaut. I used to spend hours reading books about planets and looking through a toy telescope from my window. As I grew up, my interests changed to business, but I still love space.",
+    "vocabulary": [
+      {
+        "term": "Little kid",
+        "meaning": "A young child."
+      },
+      {
+        "term": "Toy telescope",
+        "meaning": "A small, basic plastic magnifier used by children to look at stars.",
+        "type": "collocation"
+      },
+      {
+        "term": "As I grew up",
+        "meaning": "Over the course of childhood into adulthood."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Dreams and Ambitions",
+    "question": "Are you the kind of person who sticks to dreams?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Generally speaking, I am a hardworking person who stays focused on my goals even when situations become difficult. I believe that reaching a big dream requires patience, effort, and sustained focus. However, I am also realistic enough to change my goals if my life changes completely.",
+    "vocabulary": [
+      {
+        "term": "Hardworking person",
+        "meaning": "Someone who puts a lot of effort into tasks."
+      },
+      {
+        "term": "Sustained focus",
+        "meaning": "Continuous concentration on a goal over a long period.",
+        "type": "collocation"
+      },
+      {
+        "term": "Realistic",
+        "meaning": "Sensible and practical about what can be achieved."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Dreams and Ambitions",
+    "question": "Do you think you are an ambitious person?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, I would definitely describe myself as an ambitious person who always wants to improve. I am never happy with just staying in one place, so I always set high goals for my career and personal growth. This internal motivation forces me to try new things and take smart risks.",
+    "vocabulary": [
+      {
+        "term": "Ambitious person",
+        "meaning": "Someone with a strong desire to succeed."
+      },
+      {
+        "term": "High goals",
+        "meaning": "Ambitious targets or milestones.",
+        "type": "collocation"
+      },
+      {
+        "term": "Internal motivation",
+        "meaning": "Personal drive or desire to achieve something from within yourself.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Dreams and Ambitions",
+    "question": "Are you an ambitious person?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, I would definitely describe myself as an ambitious person who always wants to improve. I am never happy with just staying in one place, so I always set high goals for my career and personal growth. This internal motivation forces me to try new things and take smart risks.",
+    "vocabulary": [
+      {
+        "term": "Ambitious person",
+        "meaning": "Someone with a strong desire to succeed."
+      },
+      {
+        "term": "High goals",
+        "meaning": "Ambitious targets or milestones.",
+        "type": "collocation"
+      },
+      {
+        "term": "Internal motivation",
+        "meaning": "Personal drive or desire to achieve something from within yourself.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Mirrors",
+    "question": "Would you use mirrors to decorate your room?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, I really like using mirrors as decorations to make a room look nicer. When you put them opposite a window, they reflect the light and make a small space look much bigger. Plus, a mirror with a pretty frame adds a stylish touch to an empty wall.",
+    "vocabulary": [
+      {
+        "term": "Decorations",
+        "meaning": "Items used to make a room look attractive."
+      },
+      {
+        "term": "Reflect the light",
+        "meaning": "To bounce light back from a surface.",
+        "type": "collocation"
+      },
+      {
+        "term": "Stylish touch",
+        "meaning": "A small elegant or fashionable detail.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Mirrors",
+    "question": "Do you usually take a mirror with you?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "No, I rarely carry a pocket mirror with me when I go out. Since modern smartphones have front-facing cameras that work perfectly for checking how I look, a real mirror is not necessary. I prefer to pack light and keep my bag as empty as possible.",
+    "vocabulary": [
+      {
+        "term": "Pocket mirror",
+        "meaning": "A tiny mirror you carry in your clothes or bag."
+      },
+      {
+        "term": "Front-facing camera",
+        "meaning": "The camera on a phone that points toward the user.",
+        "type": "collocation"
+      },
+      {
+        "term": "Not necessary",
+        "meaning": "Not needed."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Mirrors",
+    "question": "How often do you use a mirror?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Like most people, I use a mirror several times a day, mostly during my morning routine. I look at my reflection when brushing my teeth, doing my hair, and checking my outfit before leaving the house. Throughout the day, I might quickly glance at one to make sure I look presentable.",
+    "vocabulary": [
+      {
+        "term": "Morning routine",
+        "meaning": "The regular sequence of actions you do each morning to get ready.",
+        "type": "collocation"
+      },
+      {
+        "term": "Look presentable",
+        "meaning": "To appear clean, neat, and nice enough for other people to see you.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Mirrors",
+    "question": "Do you like looking at yourself in a mirror?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I wouldn't say I am obsessed with my appearance, but I use mirrors out of practical necessity. It is mostly to make sure my hair isn't messy and my clothes look neat before I meet clients or coworkers. I see it as a basic part of staying clean and polite.",
+    "vocabulary": [
+      {
+        "term": "Practical necessity",
+        "meaning": "Something done because it is useful and required, not for vanity.",
+        "type": "collocation"
+      },
+      {
+        "term": "Meet clients",
+        "meaning": "To have professional appointments with business customers.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Mirrors",
+    "question": "Have you ever bought a mirror?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, I recently bought a big, full-length mirror for my bedroom during a home renovation. I spent a lot of time looking for one with a simple metal frame that matches my modern room style. It was a very useful purchase that makes getting dressed much easier.",
+    "vocabulary": [
+      {
+        "term": "Full-length mirror",
+        "meaning": "A tall mirror that shows your entire body.",
+        "type": "collocation"
+      },
+      {
+        "term": "Home renovation",
+        "meaning": "Improving or repairing a house/apartment."
+      },
+      {
+        "term": "Useful purchase",
+        "meaning": "A helpful item that you bought.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Mirrors",
+    "question": "Do you use a mirror before buying clothing?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Absolutely, I would never buy clothes without checking how they look in a fitting room mirror first. Mirrors help me see the fit, length, and style from different angles so I know it looks good on me. It helps me avoid buying things that I will regret later.",
+    "vocabulary": [
+      {
+        "term": "Fitting room",
+        "meaning": "A small private cubicle in a clothing store."
+      },
+      {
+        "term": "Different angles",
+        "meaning": "Multiple viewpoints or directions.",
+        "type": "collocation"
+      },
+      {
+        "term": "Regret later",
+        "meaning": "To feel sorry about an action in the future."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Mirrors",
+    "question": "What functions does a mirror have?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Besides its main use for personal grooming and checking your look, a mirror has a few design functions too. In home decoration, it is a great tool to spread natural light and make tiny rooms feel more spacious. Historically, special mirrors have also been essential components of science tools like telescopes.",
+    "vocabulary": [
+      {
+        "term": "Personal grooming",
+        "meaning": "The practice of cleaning and making your physical appearance neat.",
+        "type": "collocation"
+      },
+      {
+        "term": "Natural light",
+        "meaning": "Light that comes from the sun."
+      },
+      {
+        "term": "Essential components",
+        "meaning": "Absolutely necessary parts of a machine or system.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Mirrors",
+    "question": "Do you think a mirror is a good decoration?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Without a doubt, mirrors make great decorations because they look nice and have practical value. Unlike normal paintings, a mirror changes depending on the room and fits into any color scheme by reflecting the space. It is a cheap but effective way to make a home look more elegant.",
+    "vocabulary": [
+      {
+        "term": "Practical value",
+        "meaning": "Useful benefit or utility.",
+        "type": "collocation"
+      },
+      {
+        "term": "Color scheme",
+        "meaning": "A planned combination of colors chosen for a room's design.",
+        "type": "collocation"
+      },
+      {
+        "term": "Effective way",
+        "meaning": "A successful method of doing something."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Music",
+    "question": "Do you prefer sad or happy music?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "My choice in music changes a lot depending on my emotional state and the time of day. When I need to study or relax at night, I prefer slow, sad songs because they are peaceful and calm. On the other hand, when I am doing physical exercise, I always play happy, fast songs to get moving.",
+    "vocabulary": [
+      {
+        "term": "Emotional state",
+        "meaning": "A person's mood or feelings at a specific time.",
+        "type": "collocation"
+      },
+      {
+        "term": "Physical exercise",
+        "meaning": "Workouts, running, or sports done to stay healthy.",
+        "type": "collocation"
+      },
+      {
+        "term": "Fast songs",
+        "meaning": "Upbeat music tracks."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Music",
+    "question": "Does happy music make you feel more excited?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, fast and cheerful songs have an immediate positive effect on my overall mood. The energetic beat gives me a strong feeling of motivation, making me ready to handle difficult tasks. It works as a quick energy lift whenever I am feeling tired or lazy.",
+    "vocabulary": [
+      {
+        "term": "Positive effect",
+        "meaning": "An optimistic or beneficial result."
+      },
+      {
+        "term": "Overall mood",
+        "meaning": "The general emotional state of a person.",
+        "type": "collocation"
+      },
+      {
+        "term": "Strong feeling",
+        "meaning": "An intense emotion or sensation.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Tidiness",
+    "question": "Would you say you are a tidy person?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I would definitely say I am an organized person who cares a lot about cleanliness. I find it hard to focus or relax when my desk or room is messy and full of random objects. Because of this, I spend a few minutes every night cleaning up my workspace.",
+    "vocabulary": [
+      {
+        "term": "Cleanliness",
+        "meaning": "The state of being clean and free from dirt."
+      },
+      {
+        "term": "Random objects",
+        "meaning": "Unspecified, mixed items cluttering a space.",
+        "type": "collocation"
+      },
+      {
+        "term": "Cleaning up",
+        "meaning": "Tidying an area."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Tidiness",
+    "question": "Do you like to keep things tidy?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, keeping my room organized gives me a clear mind and helps me feel in control. When everything is in its proper place, I don't waste time looking for lost keys or papers. For me, tidiness is an important part of a stress-free life.",
+    "vocabulary": [
+      {
+        "term": "Clear mind",
+        "meaning": "A peaceful mental state free of worry."
+      },
+      {
+        "term": "Proper place",
+        "meaning": "The correct or designated spot for an item.",
+        "type": "collocation"
+      },
+      {
+        "term": "Waste time",
+        "meaning": "To spend time uselessly.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Tidiness",
+    "question": "Did you use to keep your room tidy as a child?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "To be completely honest, I was pretty messy and untidy when I was a little kid. My bedroom floor was always covered in toys, books, and drawing markers, which made my parents highly critical of my mess. It was only when I became a teenager that I realized the importance of being clean.",
+    "vocabulary": [
+      {
+        "term": "Little kid",
+        "meaning": "A young child."
+      },
+      {
+        "term": "Highly critical",
+        "meaning": "Extremely disapproving or quick to find fault.",
+        "type": "collocation"
+      },
+      {
+        "term": "Importance of being clean",
+        "meaning": "The value of maintaining neatness."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Tidiness",
+    "question": "How do you keep things tidy?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I stay organized by following a simple rule: putting things back where they belong right after using them. I also do a thorough cleaning session once a month to throw away or donate items I don't need anymore. Using plastic storage boxes also helps keep the mess away.",
+    "vocabulary": [
+      {
+        "term": "Thorough cleaning",
+        "meaning": "A deep and complete tidy-up."
+      },
+      {
+        "term": "Donate items",
+        "meaning": "To give belongings for free to help charities or poor people.",
+        "type": "collocation"
+      },
+      {
+        "term": "Storage boxes",
+        "meaning": "Containers used for organizing goods."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Tidiness",
+    "question": "Do you think it is possible for people to be tidy all the time?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "No, I think expecting people to be perfectly neat all the time is not realistic given how busy life is. When people are dealing with heavy workloads or family emergencies, cleaning a room becomes a low priority. It is much healthier to try to be clean most of the time instead of perfect.",
+    "vocabulary": [
+      {
+        "term": "Heavy workloads",
+        "meaning": "A massive, stressful amount of work to complete.",
+        "type": "collocation"
+      },
+      {
+        "term": "Family emergencies",
+        "meaning": "Sudden, serious unexpected events involving family members.",
+        "type": "collocation"
+      },
+      {
+        "term": "Low priority",
+        "meaning": "Something that is not urgent or highly important."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Websites",
+    "question": "What kinds of websites do you often visit?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "On a daily basis, I visit learning websites, news portals, and professional networking platforms like LinkedIn. I use these sites to stay updated on global news and to learn new skills for my job. Sometimes, I also visit streaming sites or online shops for fun.",
+    "vocabulary": [
+      {
+        "term": "Daily basis",
+        "meaning": "Every day."
+      },
+      {
+        "term": "Networking platforms",
+        "meaning": "Websites designed to connect people professionally or socially."
+      },
+      {
+        "term": "Global news",
+        "meaning": "News events happening all around the world.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Websites",
+    "question": "What kinds of websites are popular in your country?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "In my country, social media platforms and large online marketplaces are definitely the most popular. Sites like Instagram and local e-commerce stores get millions of visitors every single day. Also, news websites and online banking are widely used by almost everyone.",
+    "vocabulary": [
+      {
+        "term": "Online marketplaces",
+        "meaning": "Websites where multiple merchants sell products."
+      },
+      {
+        "term": "E-commerce stores",
+        "meaning": "Websites designed for buying and selling retail products online.",
+        "type": "collocation"
+      },
+      {
+        "term": "Online banking",
+        "meaning": "Managing your bank accounts over the internet."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Websites",
+    "question": "What is your favourite website?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "If I had to choose only one, my absolute favorite site would be YouTube because of its endless educational content. Whether I want to learn a computer language or try a new recipe, there is always a free guide available. It is a great site that combines entertainment with learning.",
+    "vocabulary": [
+      {
+        "term": "Educational content",
+        "meaning": "Videos, text, or audio that teaches you something useful.",
+        "type": "collocation"
+      },
+      {
+        "term": "Computer language",
+        "meaning": "Coding scripts like Python or Java."
+      },
+      {
+        "term": "New recipe",
+        "meaning": "A new set of instructions for cooking a specific dish.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Websites",
+    "question": "Are there any changes to the websites you often visit?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, I have noticed that the sites I use are starting to add AI features to show customized content. The layouts are also becoming simpler, with popular options like dark mode to protect your eyes. While some updates are easy to use, others take a bit of time to learn.",
+    "vocabulary": [
+      {
+        "term": "AI features",
+        "meaning": "Artificial intelligence tools."
+      },
+      {
+        "term": "Customized content",
+        "meaning": "Content tailored to your specific history."
+      },
+      {
+        "term": "Dark mode",
+        "meaning": "A computer screen setting that displays light text on a dark background.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Watches",
+    "question": "Do you like to wear watches?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, I am a big fan of watches and consider them an important accessory for my outfits. Wearing a wristwatch feels much more professional than pulling out a phone just to check the time. It adds a nice, neat touch to both casual clothes and business suits.",
+    "vocabulary": [
+      {
+        "term": "Big fan",
+        "meaning": "Someone who likes or admires something very much."
+      },
+      {
+        "term": "Wristwatch",
+        "meaning": "A watch worn around the wrist."
+      },
+      {
+        "term": "Casual clothes",
+        "meaning": "Comfortable, informal everyday clothing.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Watches",
+    "question": "Do you think a watch is important for you?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Absolutely, a watch is an essential tool for me because it helps me manage my day well. It serves as a gentle reminder of the passing hours, which helps me arrive on time for meetings and appointments. Besides telling the time, it is also a way to show my personal style.",
+    "vocabulary": [
+      {
+        "term": "Essential tool",
+        "meaning": "A highly necessary device or object."
+      },
+      {
+        "term": "Arrive on time",
+        "meaning": "To reach a destination exactly at the planned hour without being late.",
+        "type": "collocation"
+      },
+      {
+        "term": "Personal style",
+        "meaning": "An individual's unique taste in clothes and accessories.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Watches",
+    "question": "Have you ever received a watch as a gift?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, on my twentieth birthday, my parents gave me a beautiful leather-strap watch. It is a very elegant piece that has my name engraved on the back of it. Because it was for a special milestone, I care about it a lot and only wear it for special events.",
+    "vocabulary": [
+      {
+        "term": "Leather-strap watch",
+        "meaning": "A watch with a band made of leather material."
+      },
+      {
+        "term": "Special milestone",
+        "meaning": "A highly significant or important event in life (like turning 20 or graduating).",
+        "type": "collocation"
+      },
+      {
+        "term": "Special events",
+        "meaning": "Celebrations like weddings or parties."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Watches",
+    "question": "Why do people like expensive watches?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Many people buy luxury watches because they are seen as status symbols that show wealth and success. Also, these pricey watches are famous for their excellent quality, fine materials, and long durability. For some collectors, they are even seen as smart investments that gain value over time.",
+    "vocabulary": [
+      {
+        "term": "Luxury watches",
+        "meaning": "High-end, expensive watches."
+      },
+      {
+        "term": "Status symbols",
+        "meaning": "Items that represent high social standing."
+      },
+      {
+        "term": "Excellent quality",
+        "meaning": "A very high standard of craftsmanship or value.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Shopping",
+    "question": "Do you like shopping?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Generally, I find shopping to be a fun activity, especially when I am looking for new clothes or books. However, I prefer online shopping over going to physical stores because it helps me avoid crowded places and long lines. It can be a very relaxing experience if I don't spend too much money.",
+    "vocabulary": [
+      {
+        "term": "Fun activity",
+        "meaning": "An enjoyable pastime."
+      },
+      {
+        "term": "Physical stores",
+        "meaning": "Brick-and-mortar retail shops you can physically walk into.",
+        "type": "collocation"
+      },
+      {
+        "term": "Long lines",
+        "meaning": "Queues of waiting people."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Shopping",
+    "question": "How often do you go shopping?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I usually go on a big shopping trip about once a month, mostly to buy clothes or household items. For basic groceries and fresh food, I make quick visits to the local supermarket every week. I try to avoid frequent shopping trips to save money and stop unplanned buying.",
+    "vocabulary": [
+      {
+        "term": "Shopping trip",
+        "meaning": "A planned journey to buy goods."
+      },
+      {
+        "term": "Household items",
+        "meaning": "Goods used inside a home (like cleaning spray or soap)."
+      },
+      {
+        "term": "Basic groceries",
+        "meaning": "Essential food items needed for cooking (like milk, bread, or eggs).",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Shopping",
+    "question": "Do you compare prices when you shop?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, I am a very budget-conscious shopper, so I always check prices across different stores before buying. Thanks to mobile apps, comparing costs online has become incredibly quick and easy. Doing this extra research ensures that I always get the best value for my money.",
+    "vocabulary": [
+      {
+        "term": "Budget-conscious",
+        "meaning": "Careful with spending money."
+      },
+      {
+        "term": "Mobile apps",
+        "meaning": "Software on smart phones."
+      },
+      {
+        "term": "Best value",
+        "meaning": "The most optimal benefit or quality for the price paid.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Shopping",
+    "question": "Is it difficult for you to make choices when you shop?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I have to admit that I often find it hard to choose because stores offer too many options available. When I see dozens of items that look the same and have positive reviews, picking just one is very hard. I often have to watch online videos to help me make a decision.",
+    "vocabulary": [
+      {
+        "term": "Too many options",
+        "meaning": "An overwhelming variety of choices."
+      },
+      {
+        "term": "Positive reviews",
+        "meaning": "Good comments or star-ratings left by previous buyers.",
+        "type": "collocation"
+      },
+      {
+        "term": "Make a decision",
+        "meaning": "To choose a final option after thinking about it.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Cars",
+    "question": "What type of car do you like?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I am really interested in modern electric cars and compact SUVs. I like electric vehicles because they protect the environment, run quietly, and have advanced technology. Compact SUVs are also great because they are strong and practical for city streets.",
+    "vocabulary": [
+      {
+        "term": "Protect the environment",
+        "meaning": "To act in ways that keep nature clean and safe."
+      },
+      {
+        "term": "Advanced technology",
+        "meaning": "Highly modern, cutting-edge engineering or electronic tools.",
+        "type": "collocation"
+      },
+      {
+        "term": "City streets",
+        "meaning": "Roads inside an urban area."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Cars",
+    "question": "What colour car would you choose to buy?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "If I were to buy a car tomorrow, I would definitely choose a cool metallic gray or a classic black. These colors look very professional, timeless, and don't show dirt or scratches too easily. Plus, neutral colors are usually easier to sell later on.",
+    "vocabulary": [
+      {
+        "term": "Metallic gray",
+        "meaning": "A shiny gray color that looks like polished steel."
+      },
+      {
+        "term": "Timeless",
+        "meaning": "Always fashionable; never getting old."
+      },
+      {
+        "term": "Neutral colors",
+        "meaning": "Non-vivid colors like white, black, or gray.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Cars",
+    "question": "Do you think car colours are important?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, I think a car's color matters because it shows a bit of the owner's style and personality. From a safety perspective, bright colors are much easier to see on the road at night, which can help prevent accidents. Also, dark cars absorb heat, making them hotter in sunny weather.",
+    "vocabulary": [
+      {
+        "term": "Matters",
+        "meaning": "Is important."
+      },
+      {
+        "term": "Safety perspective",
+        "meaning": "Looking at a situation from a viewpoint of avoiding danger.",
+        "type": "collocation"
+      },
+      {
+        "term": "Prevent accidents",
+        "meaning": "To stop vehicle crashes or mishaps from happening."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Cars",
+    "question": "What do you usually do when there's a traffic jam?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Whenever I get stuck in heavy traffic, I pass the time by listening to interesting podcasts or audiobooks. It really helps distract me from feeling angry about the delay and turns boring waiting time into a learning experience. If I am with friends, we just play music and talk to stay happy.",
+    "vocabulary": [
+      {
+        "term": "Heavy traffic",
+        "meaning": "A massive number of cars moving very slowly on a road.",
+        "type": "collocation"
+      },
+      {
+        "term": "Pass the time",
+        "meaning": "To do something to make waiting hours go faster."
+      },
+      {
+        "term": "Learning experience",
+        "meaning": "An event or activity where you acquire new knowledge.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Cars",
+    "question": "Do you prefer to be a driver or a passenger?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I much prefer sitting in the passenger seat because I can relax without the stress of driving through busy traffic. As a passenger, I can look at the view, reply to text messages, or even take a nap. Driving requires continuous focus, which I find quite tiring.",
+    "vocabulary": [
+      {
+        "term": "Passenger seat",
+        "meaning": "The car seat where you ride without driving."
+      },
+      {
+        "term": "Take a nap",
+        "meaning": "To sleep for a short period of time during the day.",
+        "type": "collocation"
+      },
+      {
+        "term": "Continuous focus",
+        "meaning": "Non-stop concentration on a task."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Parks",
+    "question": "Do you like to go to parks?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, I really love going to public parks because they offer a beautiful green space away from concrete city streets. I like to go there to escape the loud traffic noise and get some fresh air under the trees. It is the perfect place to clear my mind and relax on a nice afternoon.",
+    "vocabulary": [
+      {
+        "term": "Public parks",
+        "meaning": "Green park areas owned by the city for everyone to use."
+      },
+      {
+        "term": "Traffic noise",
+        "meaning": "The loud sounds made by cars, trucks, and horns on roads.",
+        "type": "collocation"
+      },
+      {
+        "term": "Clear my mind",
+        "meaning": "To remove stress and think clearly by relaxing."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Parks",
+    "question": "When was the last time you went to the park?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "The last time I went to a park was just this past Saturday morning for an early jog with a friend. The weather conditions were very nice and sunny, which brought out a lot of families and people walking their dogs. We exercised for an hour and then sat on a bench to talk.",
+    "vocabulary": [
+      {
+        "term": "Early jog",
+        "meaning": "A slow, steady run done early in the morning."
+      },
+      {
+        "term": "Weather conditions",
+        "meaning": "The state of the atmosphere (rainy, sunny, windy, cold) at a specific time.",
+        "type": "collocation"
+      },
+      {
+        "term": "Walk their dogs",
+        "meaning": "To take dogs outside for exercise."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Parks",
+    "question": "Do people in your country often go to parks?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Absolutely, public parks are popular gathering places for people of all ages in my country. In the morning, you will see senior citizens doing light exercises, while the evenings attract joggers and families. They are important spots for relaxing, especially for people who live in small flats.",
+    "vocabulary": [
+      {
+        "term": "Gathering places",
+        "meaning": "Locations where people meet up in groups."
+      },
+      {
+        "term": "All ages",
+        "meaning": "People of any generation (young and old)."
+      },
+      {
+        "term": "Senior citizens",
+        "meaning": "Elderly or older people, usually retired.",
+        "type": "collocation"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Science",
+    "question": "Do you like science?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, I really appreciate science because it gives clear, logical answers for how the universe works. I am especially interested in recent discoveries in medicine and space travel, which are changing our future. It is an amazing subject that always helps humans learn and grow.",
+    "vocabulary": [
+      {
+        "term": "Logical answers",
+        "meaning": "Explanations based on clear reasoning and facts."
+      },
+      {
+        "term": "Recent discoveries",
+        "meaning": "New findings or inventions made by scientists short ago.",
+        "type": "collocation"
+      },
+      {
+        "term": "Space travel",
+        "meaning": "Traveling outside of planet Earth into the universe."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Science",
+    "question": "Did you like science classes when you were young?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "To be honest, I found science classes a bit boring in primary school because we just had to memorize facts. My mind changed in high school when we started doing scientific experiments in the lab. Seeing real chemical reactions made the lessons exciting and made me very curious.",
+    "vocabulary": [
+      {
+        "term": "Primary school",
+        "meaning": "Elementary school for young children."
+      },
+      {
+        "term": "Scientific experiments",
+        "meaning": "Practical tests done in a laboratory to prove scientific theories.",
+        "type": "collocation"
+      },
+      {
+        "term": "Chemical reactions",
+        "meaning": "The process where substances mix and transform into new forms."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Outer Space and Stars",
+    "question": "Do you want to travel in the outer space?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I would absolutely jump at the chance to travel into the cosmos if the opportunity arose. The idea of experiencing zero gravity and floating above the Earth sounds completely exhilarating. However, I do have some reservations about the intense physical toll and the astronomical costs involved in space tourism. Ultimately, the thrill of witnessing the vast expanse of the universe firsthand would definitely outweigh my fears.",
+    "vocabulary": [
+      {
+        "term": "Zero gravity",
+        "meaning": "A weightless state where gravity is not felt."
+      },
+      {
+        "term": "Exhilarating",
+        "meaning": "Incredibly exciting and thrilling."
+      },
+      {
+        "term": "Astronomical costs",
+        "meaning": "Extremely high and massive prices."
+      },
+      {
+        "term": "Vast expanse",
+        "meaning": "A huge, endless open area."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Outer Space and Stars",
+    "question": "What would you do if you had an opportunity?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "If I were given the chance to venture into space, my absolute priority would be to look out the window and marvel at the panoramic view of Earth. I would definitely want to document the entire experience by capturing breathtaking photos of distant galaxies and nebulae. Additionally, I would love to try standard activities like eating or moving around to see how they feel in a weightless environment. It would truly be a once-in-a-lifetime experience that I would cherish forever.",
+    "vocabulary": [
+      {
+        "term": "Panoramic view",
+        "meaning": "A wide, uninterrupted view of an entire area."
+      },
+      {
+        "term": "Breathtaking photos",
+        "meaning": "Beautiful and astonishing pictures."
+      },
+      {
+        "term": "Weightless environment",
+        "meaning": "A setting where things float freely."
+      },
+      {
+        "term": "Once-in-a-lifetime experience",
+        "meaning": "A very rare and special event."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Outer Space and Stars",
+    "question": "Do you think it's necessary to see other planets?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, I believe exploring other planets is highly beneficial for the advancement of human knowledge. Sending probes or astronauts to uncharted territories helps us understand the origins of our own solar system and search for potential signs of life. Furthermore, studying the atmospheric conditions of neighboring planets can provide invaluable insights into how we can better preserve Earth. It expands our horizons and ensures the long-term survival of our species.",
+    "vocabulary": [
+      {
+        "term": "Uncharted territories",
+        "meaning": "Completely unknown and unexplored places."
+      },
+      {
+        "term": "Potential signs of life",
+        "meaning": "Clues suggesting living things exist."
+      },
+      {
+        "term": "Invaluable insights",
+        "meaning": "Extremely useful and precious knowledge."
+      },
+      {
+        "term": "Long-term survival",
+        "meaning": "Continuing to exist safely over time."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Outer Space and Stars",
+    "question": "Are you interested in films about outer space and stars?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I am incredibly captivated by films that feature interstellar travel and cosmic phenomena. Movies that depict the sheer scale of the universe always fill me with a deep sense of wonder and awe. I especially appreciate when filmmakers rely on scientific accuracy to create realistic depictions of black holes or distant worlds. They are not just visually spectacular but also thought-provoking.",
+    "vocabulary": [
+      {
+        "term": "Sheer scale",
+        "meaning": "The massive size or immense magnitude."
+      },
+      {
+        "term": "Cosmic phenomena",
+        "meaning": "Natural events happening in outer space."
+      },
+      {
+        "term": "Scientific accuracy",
+        "meaning": "Being completely correct according to science."
+      },
+      {
+        "term": "Thought-provoking",
+        "meaning": "Making you think deeply about a topic."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Outer Space and Stars",
+    "question": "Do you like science fiction movies?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Sci-fi is actually one of my absolute favorite film genres to watch. I find it fascinating how these movies explore futuristic technologies and alternative realities that stretch the boundaries of our imagination. They often serve as a social commentary, raising important questions about where our current scientific advancements might lead us. It is the perfect blend of mind-bending concepts and thrilling entertainment.",
+    "vocabulary": [
+      {
+        "term": "Futuristic technologies",
+        "meaning": "Highly advanced tools of the future."
+      },
+      {
+        "term": "Social commentary",
+        "meaning": "Artwork that critiques issues in society."
+      },
+      {
+        "term": "Scientific advancements",
+        "meaning": "Modern breakthroughs and developments in science."
+      },
+      {
+        "term": "Mind-bending concepts",
+        "meaning": "Ideas that are surreal or complex."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Outer Space and Stars",
+    "question": "Have you ever taken a course about stars?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I have never enrolled in a formal academic course on astronomy, which is something I somewhat regret. However, I frequently satisfy my curiosity by watching educational documentaries and reading articles online about astrophysics. I also love using stargazing apps on my smartphone to identify different constellations in the night sky. I would certainly love to take a structured class on the subject in the near future to deepen my understanding.",
+    "vocabulary": [
+      {
+        "term": "Enrolled in a formal course",
+        "meaning": "Officially signed up for a structured class."
+      },
+      {
+        "term": "Educational documentaries",
+        "meaning": "Non-fiction films designed to teach a topic."
+      },
+      {
+        "term": "Constellations",
+        "meaning": "Groups of stars forming recognizable patterns."
+      },
+      {
+        "term": "Deepen my understanding",
+        "meaning": "To learn much more thoroughly about a topic."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Outer Space and Stars",
+    "question": "Is it important to study stars?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Studying the stars is absolutely crucial because they are the fundamental building blocks of our universe. By analyzing stellar evolution, scientists can unlock mysteries about how time, matter, and galaxies were originally formed. Furthermore, tracking stars and celestial bodies has practical benefits, such as helping us navigate and predict cosmic hazards like solar flares. It truly puts our place in the universe into a clear perspective.",
+    "vocabulary": [
+      {
+        "term": "Stellar evolution",
+        "meaning": "The lifecycle and changing process of a star."
+      },
+      {
+        "term": "Fundamental building blocks",
+        "meaning": "Basic, essential pieces needed to make something."
+      },
+      {
+        "term": "Cosmic hazards",
+        "meaning": "Dangerous threats originating from space."
+      },
+      {
+        "term": "Clear perspective",
+        "meaning": "A sensible and realistic way of looking at things."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Outer Space and Stars",
+    "question": "Do you want to know more about outer space?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I possess an insatiable curiosity when it comes to learning about the mysteries of the cosmos. There is still so much that remains shrouded in mystery, such as dark matter and the existence of extraterrestrial life, which completely fascinates me. I try to stay updated with the latest discoveries made by space agencies like NASA through news articles and podcasts. It is a captivating subject that never fails to blow my mind.",
+    "vocabulary": [
+      {
+        "term": "Insatiable curiosity",
+        "meaning": "A desire to know things that cannot be satisfied."
+      },
+      {
+        "term": "Shrouded in mystery",
+        "meaning": "Completely hidden, secret, or unknown."
+      },
+      {
+        "term": "Extraterrestrial life",
+        "meaning": "Living organisms originating from outside Earth."
+      },
+      {
+        "term": "Captivating subject",
+        "meaning": "A highly interesting topic holding your full attention."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Headphones",
+    "question": "Do you use headphones?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, I rely on headphones on a daily basis and consider them an indispensable accessory. I use them primarily to listen to music, catch up on podcasts, or take hands- free phone calls while on the move. They allow me to create my own personal sanctuary even when I am surrounded by a noisy crowd. I rarely leave my house without making sure they are packed in my bag.",
+    "vocabulary": [
+      {
+        "term": "Indispensable accessory",
+        "meaning": "An absolutely necessary item you cannot do without."
+      },
+      {
+        "term": "On the move",
+        "meaning": "Traveling or walking from place to place."
+      },
+      {
+        "term": "Personal sanctuary",
+        "meaning": "A private, safe, and peaceful place."
+      },
+      {
+        "term": "Packed in my bag",
+        "meaning": "Placed securely inside a backpack or handbag."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Headphones",
+    "question": "In what situations would you use headphones?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Headphones are my go-to choice during my daily commute on public transit, as they help drown out the background noise. I also find them incredibly useful when I need to block out distractions and laser-focus on my tasks at work or study. Additionally, blasting an energetic playlist through my earbuds provides me with the perfect boost of motivation during intense gym workouts. They are perfect whenever I want an immersive audio experience.",
+    "vocabulary": [
+      {
+        "term": "Public transit",
+        "meaning": "Public transport systems like buses and trains."
+      },
+      {
+        "term": "Drown out",
+        "meaning": "Making a sound loud enough to block other noises."
+      },
+      {
+        "term": "Boost of motivation",
+        "meaning": "An increase in enthusiasm or energy."
+      },
+      {
+        "term": "Immersive audio experience",
+        "meaning": "Highly realistic sound that makes you feel surrounded."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Headphones",
+    "question": "What type of headphones do you use?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I primarily use wireless, noise-canceling earbuds because they offer unmatched convenience and portability. The absence of tangled cords makes them incredibly hassle- free to use while walking or exercising. For long study sessions at home, however, I prefer over-ear headphones because they provide superior sound quality and better comfort for extended wear. It really depends on whether I prioritize mobility or audio fidelity at that moment.",
+    "vocabulary": [
+      {
+        "term": "Noise-canceling earbuds",
+        "meaning": "Small earphones that electronically block background sound."
+      },
+      {
+        "term": "Over-ear headphones",
+        "meaning": "Large headphones with padded cups covering the ears."
+      },
+      {
+        "term": "Extended wear",
+        "meaning": "Wearing or using something for a long time."
+      },
+      {
+        "term": "Audio fidelity",
+        "meaning": "How accurately and clearly sound is reproduced."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Headphones",
+    "question": "In what situations would you NOT use headphones?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I strictly avoid wearing headphones while walking along busy streets or crossing roads because it poses a major safety hazard. It is vital to remain fully aware of my surroundings and hear oncoming traffic or pedestrian warning signals. I also think it is incredibly rude to keep them on during social gatherings or face-to-face conversations, as it signals a lack of engagement. In those moments, practicing situational awareness and courtesy is my top priority.",
+    "vocabulary": [
+      {
+        "term": "Safety hazard",
+        "meaning": "A dangerous situation that could cause an accident."
+      },
+      {
+        "term": "Social gatherings",
+        "meaning": "Events where people meet up to talk."
+      },
+      {
+        "term": "Engagement",
+        "meaning": "Showing active interest and involvement with others."
+      },
+      {
+        "term": "Situational awareness",
+        "meaning": "Understanding your environment to notice dangers."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Singing",
+    "question": "Do you think singing can bring happiness to people?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Without a doubt, singing has an incredible capacity to lift people's spirits and bring immense joy. From a scientific standpoint, belted-out tunes release endorphins and oxytocin, which are known to alleviate stress and boost mood. It also serves as an amazing form of self-expression, allowing individuals to release bottled-up emotions in a healthy way. Whether it is singing solo in the shower or joining in a choir, it creates a powerful sense of emotional release.",
+    "vocabulary": [
+      {
+        "term": "Alleviate stress",
+        "meaning": "To reduce or ease feelings of tension."
+      },
+      {
+        "term": "Form of self-expression",
+        "meaning": "A way to show your unique thoughts or emotions."
+      },
+      {
+        "term": "Emotional release",
+        "meaning": "The healthy letting go of intense, hidden feelings."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Art",
+    "question": "Do you like modern art or traditional art?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Personally, I lean much more toward traditional art because I deeply admire the meticulous craftsmanship and realism found in classical oil paintings and sculptures. I feel that historic artworks often tell a very clear, captivating story that is easy to connect with. While I appreciate the avant-garde concepts behind modern art, I sometimes find it a bit too abstract and difficult to interpret. Traditional pieces simply resonate with my aesthetic preferences on a much deeper level.",
+    "vocabulary": [
+      {
+        "term": "Meticulous craftsmanship",
+        "meaning": "Extremely careful, detailed, skilled work by hand."
+      },
+      {
+        "term": "Classical oil paintings",
+        "meaning": "Traditional art pieces using pigment and drying oil."
+      },
+      {
+        "term": "Avant-garde concepts",
+        "meaning": "Ultra-modern, experimental, and unusual ideas."
+      },
+      {
+        "term": "Abstract",
+        "meaning": "Art that uses shapes and colors instead of realistic scenes."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Art",
+    "question": "Do you like art?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, I am a huge admirer of art in all its diverse forms, ranging from painting and photography to literature and architecture. For me, art is an essential medium through which human beings can express complex emotions, cultural values, and historical narratives. Visiting a museum or looking at a beautiful design never fails to spark my creativity and give me a fresh perspective on life. It truly adds immense color, depth, and meaning to our everyday mundane existence.",
+    "vocabulary": [
+      {
+        "term": "Essential medium",
+        "meaning": "A necessary tool or method used to express something."
+      },
+      {
+        "term": "Fresh perspective",
+        "meaning": "A new, clean way of looking at a situation."
+      },
+      {
+        "term": "Mundane existence",
+        "meaning": "A normal, boring, or unexciting everyday life."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Art",
+    "question": "Have you ever visited an art gallery?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, I have visited quite a few art galleries both locally and when traveling abroad to new cities. I distinctly remember wandering through a contemporary gallery a few months ago, which displayed a series of thought-provoking exhibitions. Standing directly in front of an original masterpiece allows me to appreciate the texture, scale, and intricate brushwork in a way that digital images can never replicate. It is always a deeply enriching and culturally stimulating experience for me.",
+    "vocabulary": [
+      {
+        "term": "Thought-provoking exhibitions",
+        "meaning": "Shows of art that inspire deep thinking."
+      },
+      {
+        "term": "Original masterpiece",
+        "meaning": "The actual, authentic piece of outstanding art."
+      },
+      {
+        "term": "Intricate brushwork",
+        "meaning": "Detailed, complex strokes made with a paintbrush."
+      },
+      {
+        "term": "Culturally stimulating",
+        "meaning": "Something that enriches your mind and interest in culture."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Art",
+    "question": "Do you think it would be interesting for you to be an artist?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "While I think the lifestyle of a creative professional sounds incredibly liberating, I do not believe I possess the natural talent or artistic flair required to succeed. Being able to translate abstract thoughts and complex emotions into a tangible visual format must be a highly fulfilling creative outlet. However, I suspect that dealing with the financial instability and constant pressure to produce original ideas could be quite nerve-wracking. I am perfectly content with simply being an appreciative observer rather than a creator.",
+    "vocabulary": [
+      {
+        "term": "Artistic flair",
+        "meaning": "A natural talent or style for creative activities."
+      },
+      {
+        "term": "Creative outlet",
+        "meaning": "An activity allowing you to express imagination."
+      },
+      {
+        "term": "Nerve-wracking",
+        "meaning": "Making you feel incredibly anxious or worried."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Clothes",
+    "question": "Do you usually wear T-shirts?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, T-shirts are an absolute staple in my wardrobe, and I wear them almost every single day. They are my ultimate go-to option because they offer unbeatable comfort and are incredibly easy to style. Whether I am lounging at home, running quick errands, or meeting up with close friends, a simple tee is always appropriate. I love how they combine effortless practicality with a relaxed, casual aesthetic.",
+    "vocabulary": [
+      {
+        "term": "Absolute staple",
+        "meaning": "A basic, essential item always present in daily life."
+      },
+      {
+        "term": "Go-to option",
+        "meaning": "Your first and most reliable choice for a quick decision."
+      },
+      {
+        "term": "Running quick errands",
+        "meaning": "Going out to do short, necessary daily tasks."
+      },
+      {
+        "term": "Casual aesthetic",
+        "meaning": "A relaxed, informal, and comfortable style."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Clothes",
+    "question": "Do you like wearing T-shirts?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I genuinely love wearing T-shirts, primarily because of the unmatched versatility they bring to daily fashion. They can be effortlessly dressed down with a pair of distressed jeans or dressed up under a sleek blazer for a smart-casual appearance. The soft, breathable fabric makes them perfect for staying comfortable throughout hot summer days. For me, they represent the ultimate balance between comfort and understated style.",
+    "vocabulary": [
+      {
+        "term": "Unmatched versatility",
+        "meaning": "Being incredibly adaptable for many situations."
+      },
+      {
+        "term": "Understated style",
+        "meaning": "An elegant fashion style that is subtle and not flashy."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Clothes",
+    "question": "Do you like T-shirts with pictures and prints?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I generally prefer a minimalist style, so I tend to gravitate toward plain, solid-colored tees rather than those with bold graphic prints. However, I occasionally enjoy wearing shirts featuring subtle vintage designs or artistic illustrations that reflect my personality. I think graphic tees can serve as an excellent conversation starter and add a fun, playful element to an outfit. I just make sure the print is not too loud.",
+    "vocabulary": [
+      {
+        "term": "Bold graphic prints",
+        "meaning": "Large, bright, highly noticeable drawings on clothing."
+      },
+      {
+        "term": "Conversation starter",
+        "meaning": "An interesting item that easily starts a conversation."
+      },
+      {
+        "term": "Loud",
+        "meaning": "Flashy, bright, and designed to grab attention."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Clothes",
+    "question": "What colour clothes do you like to wear?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "My wardrobe consists mostly of neutral tones and earthy palettes, such as navy blue, charcoal gray, olive green, and classic black. I find these shades to be incredibly flattering, sophisticated, and easy to mix and match seamlessly. Occasionally, I might incorporate a vibrant pop of color, like a pastel pink or a deep crimson, to brighten up my look depending on my mood. Overall, muted colors dominate my daily fashion choices because they offer a timeless appeal.",
+    "vocabulary": [
+      {
+        "term": "Earthy palettes",
+        "meaning": "A group of colors inspired by nature (browns, greens, grays)."
+      },
+      {
+        "term": "Timeless appeal",
+        "meaning": "Staying attractive and popular forever, despite changing trends."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Clothes",
+    "question": "What are the differences between men and women's preference in colour?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Traditionally, societal norms have steered men toward darker, more subdued colors like blue, gray, and black, while women have embraced a wider spectrum, including pastels and vibrant shades. However, these rigid boundaries have blurred significantly in recent years, with modern fashion becoming much more gender-neutral. Today, color preferences are dictated far more by individual personality, unique style, and current runway trends rather than gender. Ultimately, fashion has become a tool for personal expression free from old-fashioned stereotypes.",
+    "vocabulary": [
+      {
+        "term": "Subdued colors",
+        "meaning": "Soft, quiet, or dark colors that do not grab attention."
+      },
+      {
+        "term": "Gender-neutral",
+        "meaning": "Suitable for or common to both men and women."
+      },
+      {
+        "term": "Runway trends",
+        "meaning": "Latest fashion ideas showcased by models at designer shows."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Clothes",
+    "question": "What kind of clothes do you like to wear?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I am a huge advocate for smart-casual attire that seamlessly blends comfort with a polished appearance. My daily outfits usually involve well-fitted trousers, crisp button-down shirts, and comfortable loafers or clean sneakers. I always prioritize high-quality, breathable fabrics like cotton and linen because they feel amazing on the skin. Looking presentable while feeling completely at ease in my own clothes is my ultimate fashion philosophy.",
+    "vocabulary": [
+      {
+        "term": "Smart-casual attire",
+        "meaning": "Neat clothing blending professional and casual items."
+      },
+      {
+        "term": "Ultimate fashion philosophy",
+        "meaning": "A core, guiding belief rule regarding personal style."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Clothes",
+    "question": "What kind of clothes do you never wear?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "You would never catch me wearing overly formal, restrictive clothing like full three-piece suits or stiff tuxedos unless it is an absolute requirement for an event. I also completely steer clear of flashy garments covered in massive designer logos, as I find that style to be a bit too pretentious. Extremely tight or uncomfortable clothing is another absolute no-go for me. I firmly believe that fashion should never come at the expense of personal physical comfort.",
+    "vocabulary": [
+      {
+        "term": "Restrictive clothing",
+        "meaning": "Tight or stiff clothes limiting physical movement."
+      },
+      {
+        "term": "Pretentious",
+        "meaning": "Trying to appear more valuable or important to impress others."
+      },
+      {
+        "term": "Personal physical comfort",
+        "meaning": "The state of feeling physically at ease and free of pain."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Clothes",
+    "question": "Do you wear the same style of clothes on weekdays and weekends?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "There is actually a distinct contrast between my clothing choices for the workweek and the weekend. During weekdays, I adhere to a more structured, professional dress code to maintain a business-ready appearance for meetings and office tasks. On the weekends, however, I completely ditch the formal shirts and opt for ultra-casual loungewear, oversized hoodies, and sweatpants. This stylistic shift helps me mentally transition away from work and fully embrace a relaxed mindset.",
+    "vocabulary": [
+      {
+        "term": "Professional dress code",
+        "meaning": "Formal workplace rules dictating smart clothing."
+      },
+      {
+        "term": "Relaxed mindset",
+        "meaning": "A state of mind that is calm and stress-free."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Jokes",
+    "question": "Are you good at telling jokes?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "To be perfectly honest, I am quite terrible at delivering jokes and rarely manage to get a laugh. I always seem to mess up the punchline or laugh prematurely before I even finish telling the story, which completely ruins the comedic effect. Instead of being a joker, I am much better suited to being an appreciative audience member who laughs at others. I definitely leave the humor to my friends who possess a natural comedic timing.",
+    "vocabulary": [
+      {
+        "term": "Punchline",
+        "meaning": "The final phrase or sentence of a joke providing the humor."
+      },
+      {
+        "term": "Comedic timing",
+        "meaning": "Knowing exactly when to say a line to maximize laughter."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Jokes",
+    "question": "Do your friends like to tell jokes?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, my friend circle is absolutely full of witty individuals who love to crack jokes and share hilarious anecdotes. There is one particular friend in our group who is practically a comedian and can turn even the most boring situation into something sidesplitting. Their sharp wit keeps our social gatherings lively, energetic, and incredibly entertaining. Having friends with a great sense of humor is something I deeply value.",
+    "vocabulary": [
+      {
+        "term": "Hilarious anecdotes",
+        "meaning": "Short, funny, entertaining real-life stories."
+      },
+      {
+        "term": "Sidesplitting",
+        "meaning": "Extremely funny, making you laugh until your stomach hurts."
+      },
+      {
+        "term": "Sense of humor",
+        "meaning": "Artistic ability to appreciate and express funny things."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Jokes",
+    "question": "Do you like to watch comedies?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I am incredibly fond of watching comedy films and sitcoms, especially after an exhausting and stressful day. Comedies serve as the perfect form of escapism, allowing me to unwind, switch off my brain, and just have a good laugh. I particularly enjoy sharp satire and witty situational humor rather than cheap slapstick comedy. It is a fantastic way to instantly boost my mood and alleviate tension.",
+    "vocabulary": [
+      {
+        "term": "Escapism",
+        "meaning": "Avoiding boring real-life responsibilities through entertainment."
+      },
+      {
+        "term": "Alleviate tension",
+        "meaning": "To ease or completely remove physical or mental stress."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Morning routines",
+    "question": "What is your morning routine?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "My morning routine is quite structured and revolves around setting a positive, productive tone for the rest of the day. As soon as my alarm rings, I kickstart my morning by hydrating with a tall glass of water and doing some light stretching exercises. After that, I hop in the shower to wake myself up, prepare a quick, nutritious breakfast, and review my daily to- do list. This predictable ritual helps me feel organized, grounded, and fully prepared to tackle whatever challenges come my way.",
+    "vocabulary": [
+      {
+        "term": "Stretching exercises",
+        "meaning": "Physical movements designed to elongate muscles and wake up the body."
+      },
+      {
+        "term": "Daily to-do list",
+        "meaning": "A written schedule of tasks to complete during the day."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Morning routines",
+    "question": "Do you spend your mornings doing the same things on both weekends and weekdays?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "No, my weekend mornings look completely different from my highly structured weekday routine. On weekdays, I operate on a strict schedule, waking up early to beat the rush- hour commute and head to work. Conversely, Saturday and Sunday mornings are dedicated to relaxation, allowing me to sleep in late, indulge in a leisurely brunch, and read a book. It provides a much-needed break from the rigid hustle and bustle of the workweek.",
+    "vocabulary": [
+      {
+        "term": "Rush-hour commute",
+        "meaning": "The busy journey to work when transport systems are packed."
+      },
+      {
+        "term": "Leisurely brunch",
+        "meaning": "A late morning meal eaten in a slow, unhurried way."
+      },
+      {
+        "term": "Hustle and bustle",
+        "meaning": "Busy, noisy, fast-paced activity typical of cities."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Morning routines",
+    "question": "Is breakfast important?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I firmly subscribe to the belief that breakfast is the most critical meal of the day. Eating a wholesome breakfast provides the essential nutrients and sustained energy needed to fuel my brain and body for the morning ahead. Skipping it usually leaves me feeling sluggish, irritable, and unable to maintain focus during my daily tasks. It essentially jumpstarts my metabolism and keeps unhealthy mid-morning cravings completely at bay.",
+    "vocabulary": [
+      {
+        "term": "Sustained energy",
+        "meaning": "Long-lasting power and stamina that doesn't drop quickly."
+      },
+      {
+        "term": "Metabolism",
+        "meaning": "Internal chemical processes turning food into energy."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Morning routines",
+    "question": "Do you like to get up early?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Admittedly, I am not a natural early bird and often find it quite challenging to drag myself out of bed at dawn. However, I highly appreciate the quiet peace and productivity that comes with waking up early before the rest of the world is awake. I find that when I manage to get a head start on the day, I feel significantly less rushed and much more mentally organized. I am constantly trying to adjust my sleep schedule to become a more consistent morning person.",
+    "vocabulary": [
+      {
+        "term": "Early bird",
+        "meaning": "A person who naturally wakes up early and feels energetic."
+      },
+      {
+        "term": "Mentally organized",
+        "meaning": "Feeling clear-headed and structured in thoughts."
+      },
+      {
+        "term": "Morning person",
+        "meaning": "Someone functioning best during early day hours."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Evening time",
+    "question": "Do you like the morning or the evening?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I am unquestionably an evening person through and through, as that is the time of day when I feel most relaxed and creative. Mornings always feel too rushed and chaotic with work responsibilities, whereas evenings offer a peaceful window to wind down. It is the time when I can finally focus on my personal hobbies, enjoy a nice dinner, and spend quality time with family. The quiet atmosphere of the night provides me with a deep sense of tranquility.",
+    "vocabulary": [
+      {
+        "term": "Evening person",
+        "meaning": "Someone most energetic and active during night hours."
+      },
+      {
+        "term": "Tranquility",
+        "meaning": "A state of complete peace, quietness, and calm."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Evening time",
+    "question": "What do you usually do in the evening?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "My evening routine typically centers around winding down after a busy day and preparing my mind for a restful sleep. I usually start by cooking a fresh dinner, followed by catching up on a few episodes of my favorite TV show or reading a chapter of a book. To avoid digital eye strain, I try to disconnect from all electronic devices and practice a bit of mindfulness or light stretching before heading to bed. It is my dedicated time for self-care and decompressing.",
+    "vocabulary": [
+      {
+        "term": "Self-care",
+        "meaning": "Taking deliberate actions to preserve or improve one's health."
+      },
+      {
+        "term": "Decompressing",
+        "meaning": "Unwinding and releasing built-up stress or pressure."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "History",
+    "question": "Do you think history is important?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I believe that studying history is absolutely vital because it serves as a roadmap for understanding our present world. Analyzing past events, conflicts, and triumphs allows us to discover valuable lessons and avoid repeating historical mistakes. It also provides deep context on how our current laws, cultures, traditions, and societal structures were shaped over time. Without history, we would lose our collective identity and lack a sense of direction.",
+    "vocabulary": [
+      {
+        "term": "Historical mistakes",
+        "meaning": "Bad decisions, errors, or conflicts occurring in past history."
+      },
+      {
+        "term": "Sense of direction",
+        "meaning": "A clear feeling of baseline goals or where you are going."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "History",
+    "question": "Do you like to learn about history?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I am deeply fascinated by history, particularly when it comes to ancient civilizations and major geopolitical shifts. Reading historical biographies and watching documentaries allows me to step back in time and view the world through a completely different lens. I find it fascinating to discover how ordinary people lived, survived, and innovated hundreds of years ago. It is a subject that always sparks my imagination and satisfies my intellectual curiosity.",
+    "vocabulary": [
+      {
+        "term": "Geopolitical shifts",
+        "meaning": "Changes in political power and borders between countries."
+      },
+      {
+        "term": "Intellectual curiosity",
+        "meaning": "A strong desire to learn and think deeply."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "History",
+    "question": "Do you think the internet is a good place to learn about history?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "The internet is a fantastic and highly accessible archive for historical knowledge, offering an endless supply of articles, virtual museum tours, and educational videos. However, it can also be a double-edged sword due to the widespread presence of inaccurate information and biased perspectives. It is absolutely crucial for learners to verify facts using credible sources, peer-reviewed journals, and reputable educational platforms. When used responsibly, it is an invaluable tool for democratizing education.",
+    "vocabulary": [
+      {
+        "term": "Double-edged sword",
+        "meaning": "Something carrying both high advantages and disadvantages."
+      },
+      {
+        "term": "Credible sources",
+        "meaning": "Trustworthy, accurate, and reliable origins of information."
+      },
+      {
+        "term": "Democratizing education",
+        "meaning": "Making learning accessible and free to absolutely everyone."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Old buildings",
+    "question": "Do you prefer living in an old building or a modern house?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Personally, I would choose to live in a modern house because I highly value contemporary amenities, energy efficiency, and functional layouts. Modern homes are built with updated materials that require far less maintenance and offer better insulation against extreme weather. While I deeply appreciate the unique charm and architectural character of historic buildings, the constant upkeep and outdated plumbing would be a hassle. For a living space, comfort and practical utility are my top priorities.",
+    "vocabulary": [
+      {
+        "term": "Functional layouts",
+        "meaning": "Practical, well-designed floor plans maximizing space."
+      },
+      {
+        "term": "Architectural character",
+        "meaning": "Unique style and historic design elements of a building."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Old buildings",
+    "question": "Should old buildings be preserved?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I strongly advocate for the preservation of historic buildings because they are irreplaceable pieces of a city's cultural heritage. They act as physical anchors to the past, telling stories of craftsmanship, art, and community identity that modern skyscrapers simply cannot replicate. Demolishing these structures to build generic modern complexes strips a city of its unique soul and character. Finding ways to repurpose them through adaptive reuse is a much more sustainable and respectful approach.",
+    "vocabulary": [
+      {
+        "term": "Cultural heritage",
+        "meaning": "History and structures passed down through generations."
+      },
+      {
+        "term": "Adaptive reuse",
+        "meaning": "Converting an old building for a new purpose while preserving its exterior."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Old buildings",
+    "question": "Are there any old buildings you want to see in the future?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I have always harbored a dream of visiting the ancient city of Rome to see the iconic Colosseum in person. I am absolutely fascinated by the engineering genius required to construct such a massive, enduring structure thousands of years ago. Walking through its ancient corridors would feel like stepping directly into a history textbook. It is right at the very top of my travel bucket list.",
+    "vocabulary": [
+      {
+        "term": "Colosseum",
+        "meaning": "A massive, historic amphitheater located in Rome, Italy."
+      },
+      {
+        "term": "Travel bucket list",
+        "meaning": "A personal list of places you deeply desire to visit before dying."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Old buildings",
+    "question": "What aspect of culture do old buildings reflect?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Old buildings serve as a striking visual reflection of the architectural trends, societal hierarchies, and artistic values of a specific historical era. For instance, grand cathedrals and palaces reveal the deep religious devotion and wealth distribution of past societies. The materials used, whether locally sourced stone or imported timber, also showcase the trading networks and technological capabilities of that time. They are essentially a physical manifestation of a community's history and lifestyle.",
+    "vocabulary": [
+      {
+        "term": "Artistic values",
+        "meaning": "Style and creative preferences of a group or era."
+      },
+      {
+        "term": "Technological capabilities",
+        "meaning": "The level of technical skill and tools available in an era."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Old buildings",
+    "question": "How do old buildings affect the appearance of a place?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Old buildings add an incredible amount of depth, charm, and visual contrast to a city’s overall landscape. They break up the monotony of sleek, glass-and-steel modern high- rises by introducing intricate textures, historic colors, and classic designs. This blend of old and new creates a unique, picturesque atmosphere that gives a neighborhood a sense of permanence and identity. It makes a place feel lived-in, storied, and highly aesthetically appealing.",
+    "vocabulary": [
+      {
+        "term": "Visual contrast",
+        "meaning": "A clear, striking difference between styles side-by-side."
+      },
+      {
+        "term": "Aesthetically appealing",
+        "meaning": "Beautiful, attractive, or pleasant to the eyes."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Films",
+    "question": "What kinds of movies do you like best?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I am most drawn to psychological thrillers and mystery movies that feature complex, convoluted plots and unexpected twists. I love films that challenge the audience to piece together clues and keep me guessing until the very final scene. These movies engage my mind completely and leave a lasting impression long after the credits roll. For me, a movie is best when it delivers suspense, deep intrigue, and intellectual stimulation.",
+    "vocabulary": [
+      {
+        "term": "Convoluted plots",
+        "meaning": "Storylines that are incredibly complicated and hard to follow."
+      },
+      {
+        "term": "Intellectual stimulation",
+        "meaning": "An activity exercising your brain to make you think deeply."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Films",
+    "question": "How often do you go to a cinema to watch a movie?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Nowadays, I only visit the cinema occasionally, perhaps once every couple of months, to watch major cinematic blockbusters. With the massive rise of convenient streaming platforms like Netflix, I find myself preferring the comfort of watching movies on my couch at home. However, for films that feature spectacular special effects or an epic sound design, nothing can beat the immersive experience of a theater screen. It has become a special treat reserved for highly anticipated film releases.",
+    "vocabulary": [
+      {
+        "term": "Cinematic blockbusters",
+        "meaning": "Highly popular, expensive, and successful commercial"
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Films",
+    "question": "Did you usually go to the cinema when you were a kid?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Looking back, going to the theater was a rare and highly exciting treat during my childhood, usually reserved for special occasions like birthdays. My parents would take my siblings and me to see the latest animated Disney or Pixar movies during the summer holidays. I vividly remember the intense excitement of walking into the dark room and the delicious smell of fresh buttered popcorn. Those outings hold a very special, nostalgic place in my heart.",
+    "vocabulary": [
+      {
+        "term": "Buttered popcorn",
+        "meaning": "Puffed corn kernels coated in melted butter."
+      },
+      {
+        "term": "Nostalgic place",
+        "meaning": "A memory bringing back warm feelings about your past."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Films",
+    "question": "What was the first film that you watched?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "While my memory is a bit hazy, I am fairly certain that the very first movie I ever watched in a theater was the original Lion King. I remember being completely captivated by the vibrant colors, the iconic soundtrack, and the heart-wrenching storyline. It was a magical experience that sparked my lifelong love for cinema and storytelling. Even today, watching that movie instantly triggers a wave of fond childhood memories.",
+    "vocabulary": [
+      {
+        "term": "Heart-wrenching storyline",
+        "meaning": "A movie plot that is terribly sad and emotional."
+      },
+      {
+        "term": "Fond childhood memories",
+        "meaning": "Happy, warm memories from growing up."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Films",
+    "question": "Do you like to watch movies alone or with your friends?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "It really depends on the specific genre of the movie I am planning to watch. If it is a complex, deep drama or a thriller, I prefer watching it completely solo so I can fully concentrate on the plot without any outside distractions. On the flip side, watching horror movies or hilarious comedies is infinitely better with a group of close friends. Sharing the collective screams, gasps, and laughter makes it a much more interactive and enjoyable social experience.",
+    "vocabulary": [
+      {
+        "term": "Outside distractions",
+        "meaning": "Background noises or movements breaking your focus."
+      },
+      {
+        "term": "Enjoyable social experience",
+        "meaning": "Fun activity done with others that is highly interactive."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Films",
+    "question": "Do you like to go to the cinema with your friends?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "Yes, I always look forward to going to the movie theater with my friends because it turns a simple activity into a fun social outing. We love meeting up beforehand to grab a bite to eat, argue over which movie to watch, and buy snacks together. The best part is always hanging out afterward to dissect the plot, critique the acting, and share our overall reviews. It is a fantastic way to bond and create lasting memories together.",
+    "vocabulary": [
+      {
+        "term": "Social outing",
+        "meaning": "A fun trip taken with friends outside the house."
+      },
+      {
+        "term": "Lasting memories",
+        "meaning": "Special moments you will remember clearly for years."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Films",
+    "question": "Do you prefer foreign films or films made in your country?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "I generally gravitate toward foreign films because they offer a much wider variety of genres, larger production budgets, and top-tier acting. Watching international cinema allows me to immerse myself in different cultures, languages, and unique storytelling perspectives that I wouldn't normally encounter. However, I still enjoy supporting local filmmakers who produce stories that deeply resonate with my own cultural background. Ultimately, a compelling story matters far more to me than the movie's country of origin.",
+    "vocabulary": [
+      {
+        "term": "Top-tier acting",
+        "meaning": "High-quality dramatic performance of the highest standard."
+      },
+      {
+        "term": "Cultural background",
+        "meaning": "Traditions and beliefs shaping a person's life context."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Sports programs",
+    "question": "Do you like watching sports programs on TV?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "To be completely honest, I am not a big sports enthusiast and rarely tune in to sports channels on television. I find sitting through an entire match to be a bit tedious, especially if the game is slow-paced or low-scoring. However, I do make a major exception for massive, high-stakes international tournaments like the FIFA World Cup or the Olympic Games. During those events, the electric atmosphere and intense national pride make it impossible not to get caught up in the excitement.",
+    "vocabulary": [
+      {
+        "term": "FIFA World Cup",
+        "meaning": "A massive international football tournament held every four years."
+      },
+      {
+        "term": "Olympic Games",
+        "meaning": "A leading international sports event featuring thousands of global athletes."
+      }
+    ]
+  },
+  {
+    "part": 1,
+    "topic": "Sports programs",
+    "question": "Who do you like to watch live sports games with?",
+    "season": "May-Dec 2026",
+    "source": "course_material:MODEL ANSWERS AND VOCABULARY (ALL).pdf",
+    "model_answer": "When I do watch a live sports match, I absolutely love doing so surrounded by my closest friends or family members. We usually gather at someone's house or head to a local sports bar to watch the game on a big screen. Cheering for our favorite team, high-fiving during big plays, and playfully bantering with opposing fans creates a wonderful sense of camaraderie. It is the shared excitement and collective energy of the group that makes the entire experience truly memorable and fun.",
+    "vocabulary": [
+      {
+        "term": "Sense of camaraderie",
+        "meaning": "A warm feeling of friendship and mutual team spirit."
+      },
+      {
+        "term": "Memorable and fun",
+        "meaning": "Easy to remember because it was highly enjoyable."
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "topic": "Place you'd like to visit in your free time",
+    "question": "Describe a place you'd like to visit in your free time",
+    "cue_points": [
+      "where it is",
+      "what you will do there",
+      "how long you will stay there",
+      "why you'd like to visit it"
+    ],
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 1 - Travel - P2_3 vocabulary.pdf",
+    "vocabulary": [
+      {
+        "term": "To escape the hustle and bustle",
+        "meaning": "To get away from the noisy, busy pace of daily life.",
+        "group": "Idioms"
+      },
+      {
+        "term": "To recharge one's batteries",
+        "meaning": "To regain energy after a period of hard work.",
+        "group": "Idioms"
+      },
+      {
+        "term": "To watch the world go by",
+        "meaning": "To sit and observe people as they move around.",
+        "group": "Idioms"
+      },
+      {
+        "term": "To lose track of time",
+        "meaning": "To forget what time it is because you are fully focused.",
+        "group": "Idioms"
+      },
+      {
+        "term": "To feast one's eyes on",
+        "meaning": "To look at something with great pleasure or delight.",
+        "group": "Idioms"
+      },
+      {
+        "term": "To clear one's mind",
+        "meaning": "To stop worrying and think clearly.",
+        "group": "Idioms"
+      },
+      {
+        "term": "To put one's feet up",
+        "meaning": "To relax completely and take a break.",
+        "group": "Idioms"
+      },
+      {
+        "term": "To take a stroll down memory lane",
+        "meaning": "To look back at past memories or history.",
+        "group": "Idioms"
+      },
+      {
+        "term": "To get away from it all",
+        "meaning": "To take a holiday to escape a busy routine.",
+        "group": "Idioms"
+      },
+      {
+        "term": "An urban oasis",
+        "meaning": "A peaceful green area inside a busy city.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Picturesque scenery",
+        "meaning": "Very beautiful, visually attractive natural views.",
+        "group": "Collocations"
+      },
+      {
+        "term": "To broaden one's horizons",
+        "meaning": "To expand your knowledge and experiences.",
+        "group": "Collocations"
+      },
+      {
+        "term": "To steep oneself in history",
+        "meaning": "To completely immerse oneself in a historical setting.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Breathtaking views",
+        "meaning": "Extremely striking, beautiful, or surprising sights.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Leisure activities",
+        "meaning": "Things you do for enjoyment when you are not working.",
+        "group": "Collocations"
+      },
+      {
+        "term": "A tranquil atmosphere",
+        "meaning": "A very calm, quiet, and peaceful mood or environment.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Vibrant nightlife",
+        "meaning": "Active, and exciting entertainment options in the evening.",
+        "group": "Collocations"
+      },
+      {
+        "term": "A hidden gem",
+        "meaning": "A beautiful or special place that few people know about.",
+        "group": "Collocations"
+      },
+      {
+        "term": "To unwind and de-stress",
+        "meaning": "To relax and let go of mental tension.",
+        "group": "Collocations"
+      },
+      {
+        "term": "To head down",
+        "meaning": "To travel or walk towards a specific destination.",
+        "group": "Essential Everyday Phrasal Verbs"
+      },
+      {
+        "term": "To meet up",
+        "meaning": "To gather or assemble with friends at a designated location.",
+        "group": "Essential Everyday Phrasal Verbs"
+      },
+      {
+        "term": "To chill out",
+        "meaning": "To thoroughly relax and do nothing stressful.",
+        "group": "Essential Everyday Phrasal Verbs"
+      },
+      {
+        "term": "To look around",
+        "meaning": "To walk through a place to see what is there.",
+        "group": "Essential Everyday Phrasal Verbs"
+      },
+      {
+        "term": "To drop by / in",
+        "meaning": "To pay a brief, casual, or unplanned visit to a place.",
+        "group": "Essential Everyday Phrasal Verbs"
+      },
+      {
+        "term": "To sit back",
+        "meaning": "To relax in a chair and comfortably watch something happen.",
+        "group": "Essential Everyday Phrasal Verbs"
+      },
+      {
+        "term": "To wind down",
+        "meaning": "To gradually relax after a period of stress or hard work.",
+        "group": "Essential Everyday Phrasal Verbs"
+      },
+      {
+        "term": "To clear out",
+        "meaning": "To leave a place completely, or to empty a space out.",
+        "group": "Essential Everyday Phrasal Verbs"
+      },
+      {
+        "term": "To wander around",
+        "meaning": "To walk slowly through an area without a fixed direction.",
+        "group": "Essential Everyday Phrasal Verbs"
+      },
+      {
+        "term": "To stroll along",
+        "meaning": "To walk in a slow, relaxed, and leisurely way.",
+        "group": "Essential Everyday Phrasal Verbs"
+      },
+      {
+        "term": "Architectural",
+        "meaning": "Relating to the stunning design and structure of buildings.",
+        "group": "High-Level Vocabulary"
+      },
+      {
+        "term": "Geothermal",
+        "meaning": "Relating to the natural internal heat of the earth.",
+        "group": "High-Level Vocabulary"
+      },
+      {
+        "term": "Awe-inspiring",
+        "meaning": "Causing an overwhelming feeling of deep respect, or wonder.",
+        "group": "High-Level Vocabulary"
+      },
+      {
+        "term": "Metropolitan",
+        "meaning": "Relating to a very large, dense, and busy city.",
+        "group": "High-Level Vocabulary"
+      },
+      {
+        "term": "Panoramic",
+        "meaning": "Offering a wide and spectacular view of an entire surrounding area.",
+        "group": "High-Level Vocabulary"
+      },
+      {
+        "term": "Rustic",
+        "meaning": "Having a charming, simple, and rough beauty typical of the countryside.",
+        "group": "High-Level Vocabulary"
+      },
+      {
+        "term": "Facade",
+        "meaning": "The principal front face of a building that looks onto a street.",
+        "group": "High-Level Vocabulary"
+      },
+      {
+        "term": "Topography",
+        "meaning": "The physical arrangement of natural and artificial features of an area.",
+        "group": "High-Level Vocabulary"
+      },
+      {
+        "term": "To captivate",
+        "meaning": "To attract and hold the intense interest and attention of someone.",
+        "group": "High-Level Vocabulary"
+      },
+      {
+        "term": "To replicate",
+        "meaning": "To make an exact copy, reproduce, or mimic a specific feeling.",
+        "group": "High-Level Vocabulary"
+      },
+      {
+        "term": "To alleviate",
+        "meaning": "To make physical or mental stress less severe or more bearable.",
+        "group": "High-Level Vocabulary"
+      },
+      {
+        "term": "To illuminate",
+        "meaning": "To light up a space or make something highly visible.",
+        "group": "High-Level Vocabulary"
+      },
+      {
+        "term": "To elevate",
+        "meaning": "To raise something to a much higher or more impressive level.",
+        "group": "High-Level Vocabulary"
+      },
+      {
+        "term": "To encapsulate",
+        "meaning": "To express the essential features of something in a brief way.",
+        "group": "High-Level Vocabulary"
+      },
+      {
+        "term": "To navigate",
+        "meaning": "To find your way through a complex or unfamiliar area.",
+        "group": "High-Level Vocabulary"
+      },
+      {
+        "term": "To indulge",
+        "meaning": "To allow yourself to freely enjoy a particular pleasure.",
+        "group": "High-Level Vocabulary"
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "topic": "Traveling",
+    "question": "Why do some people prefer to travel in their own country rather than going abroad?",
+    "related_part2": "Place you'd like to visit in your free time",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 1 - Travel - P2_3 vocabulary.pdf",
+    "model_answer": "For many people, domestic travel is the easiest way to relax and de-stress without any travel stress. Going to another country means dealing with passports, visas, and long flights, which can be very tiring. By staying in their own country, travelers can get away from it all with just a short drive or a quick train ride. This makes it much easier to clear one's mind and enjoy a peaceful break. Also, traveling locally eliminates language problems, so people can enjoy beautiful scenery while feeling safe and comfortable. Finally, local trips are usually cheaper because you do not have to buy expensive international plane tickets."
+  },
+  {
+    "part": 3,
+    "topic": "Traveling",
+    "question": "Some people don't like to travel abroad. Why?",
+    "related_part2": "Place you'd like to visit in your free time",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 1 - Travel - P2_3 vocabulary.pdf",
+    "model_answer": "The main reason some people dislike international travel is the stress of being in an unfamiliar place. It can be hard to feel safe and enjoy a quiet atmosphere when you do not speak the local language. Many people also hate long journeys and do not want to spend their free time waiting in busy airports. On top of that, the cost of going overseas can become too expensive very quickly. Safety worries and confusing border rules can also scare people who just want to put their feet up and relax. In the end, they prefer familiar places where they can enjoy their holiday to their heart's content."
+  },
+  {
+    "part": 3,
+    "topic": "Traveling",
+    "question": "Why do people choose to travel or live abroad?",
+    "related_part2": "Place you'd like to visit in your free time",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 1 - Travel - P2_3 vocabulary.pdf",
+    "model_answer": "Moving or traveling to another country is a wonderful way for people to learn new things and grow. Many people want to explore local history and look at breathtaking views that they cannot see at home. Living abroad also gives people a great chance to change their daily routine, practice a new language, and experience a lively lifestyle. From a work perspective, big international cities often have excellent job opportunities to build a good career. Others are simply following a long-held dream to see the world with their own eyes. Ultimately, living in a new country helps people become more independent and look at life in a fresh way."
+  },
+  {
+    "part": 2,
+    "topic": "Tall building",
+    "question": "Describe a tall building in your town that you like or dislike",
+    "cue_points": [
+      "where this building is",
+      "what it looks like",
+      "what it is used for",
+      "explain why you like or dislike it"
+    ],
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 2 - Tall building - P2_3 vocabulary.pdf",
+    "vocabulary": [
+      {
+        "term": "To reach for the sky",
+        "meaning": "To be exceptionally tall or ambitious in design.",
+        "group": "Idioms"
+      },
+      {
+        "term": "To break the bank",
+        "meaning": "To be incredibly expensive to construct.",
+        "group": "Idioms"
+      },
+      {
+        "term": "To have your head in the clouds",
+        "meaning": "To be so tall that the top floors are often surrounded by fog or mist.",
+        "group": "Idioms"
+      },
+      {
+        "term": "To be a sight for sore eyes",
+        "meaning": "A building that is exceptionally beautiful or pleasant to look at.",
+        "group": "Idioms"
+      },
+      {
+        "term": "To be history in the making",
+        "meaning": "A new building that will become an important historic landmark in the future.",
+        "group": "Idioms"
+      },
+      {
+        "term": "To be a hard pill to swallow",
+        "meaning": "A building project that citizens dislike but have to accept.",
+        "group": "Idioms"
+      },
+      {
+        "term": "To stand out from the crowd",
+        "meaning": "To be vastly different and more noticeable than surrounding structures.",
+        "group": "Idioms"
+      },
+      {
+        "term": "To hold its own",
+        "meaning": "To look good and maintain its dignity next to much newer, bigger buildings.",
+        "group": "Idioms"
+      },
+      {
+        "term": "A soaring skyscraper",
+        "meaning": "A very tall, impressive modern building.",
+        "group": "Collocations"
+      },
+      {
+        "term": "A dominant feature",
+        "meaning": "A structure that instantly catches your eye in the city skyline.",
+        "group": "Collocations"
+      },
+      {
+        "term": "State-of-the-art architecture",
+        "meaning": "Extremely modern, high-tech building design.",
+        "group": "Collocations"
+      },
+      {
+        "term": "An architectural marvel",
+        "meaning": "A building that is a masterpiece of engineering and design.",
+        "group": "Collocations"
+      },
+      {
+        "term": "A sprawling complex",
+        "meaning": "A very large building that covers a massive ground area.",
+        "group": "Collocations"
+      },
+      {
+        "term": "A striking contrast",
+        "meaning": "A building that looks completely different from the structures next to it.",
+        "group": "Collocations"
+      },
+      {
+        "term": "A multi-purpose facility",
+        "meaning": "A building used for many different things like shopping, offices, and living.",
+        "group": "Collocations"
+      },
+      {
+        "term": "A dilapidated structure",
+        "meaning": "A building that is old, broken, and in very poor condition.",
+        "group": "Collocations"
+      },
+      {
+        "term": "An eco-friendly design",
+        "meaning": "A building made to protect the environment using green technology.",
+        "group": "Collocations"
+      },
+      {
+        "term": "The focal point",
+        "meaning": "The center of interest or attention in a neighborhood.",
+        "group": "Collocations"
+      },
+      {
+        "term": "To tower above / over",
+        "meaning": "To stand much taller than the surrounding buildings or trees.",
+        "group": "High-Level Phrasal Verbs"
+      },
+      {
+        "term": "To pull down / tear down",
+        "meaning": "To completely demolish an old or unwanted building.",
+        "group": "High-Level Phrasal Verbs"
+      },
+      {
+        "term": "To block out",
+        "meaning": "To stop natural sunlight from reaching the streets below.",
+        "group": "High-Level Phrasal Verbs"
+      },
+      {
+        "term": "To blend in with",
+        "meaning": "To match the style and appearance of the surrounding neighborhood perfectly.",
+        "group": "High-Level Phrasal Verbs"
+      },
+      {
+        "term": "To stand out against",
+        "meaning": "To be easily seen because of a contrasting background like the sky.",
+        "group": "High-Level Phrasal Verbs"
+      },
+      {
+        "term": "To fit out",
+        "meaning": "To decorate and provide a building with necessary furniture and equipment.",
+        "group": "High-Level Phrasal Verbs"
+      },
+      {
+        "term": "To check out",
+        "meaning": "To visit a building to look at its design or features.",
+        "group": "High-Level Phrasal Verbs"
+      },
+      {
+        "term": "Monolithic",
+        "meaning": "Massive, solid, and uniform in structure.",
+        "group": "Adjectives"
+      },
+      {
+        "term": "Futuristic",
+        "meaning": "Looking like it belongs to a time far in the future.",
+        "group": "Adjectives"
+      },
+      {
+        "term": "Intimidating",
+        "meaning": "Looking cold, scary, or too powerful.",
+        "group": "Adjectives"
+      },
+      {
+        "term": "Ornate",
+        "meaning": "Highly decorated with complex, beautiful carvings or patterns.",
+        "group": "Adjectives"
+      },
+      {
+        "term": "Aesthetically pleasing",
+        "meaning": "Beautiful and very satisfying to look at.",
+        "group": "Adjectives"
+      },
+      {
+        "term": "Sleek",
+        "meaning": "Smooth, shiny, elegant, and modern.",
+        "group": "Adjectives"
+      },
+      {
+        "term": "Ostentatious",
+        "meaning": "Too expensive and showy, built just to impress people.",
+        "group": "Adjectives"
+      },
+      {
+        "term": "Quaint",
+        "meaning": "Charmingly old-fashioned or unusual in a nice way.",
+        "group": "Adjectives"
+      },
+      {
+        "term": "Imposing",
+        "meaning": "Very large and impressive in appearance.",
+        "group": "Adjectives"
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "topic": "Tall building",
+    "question": "What do you think buildings will be like in the future?",
+    "related_part2": "Tall building",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 2 - Tall building - P2_3 vocabulary.pdf",
+    "model_answer": "Future buildings will likely be eco-friendly designs that focus heavily on green technology. We will see more soaring skyscrapers covered in trees and plants to help clean the city air. These structures will use solar panels and rain collection systems, making them highly sustainable. Inside, state-of-the-art technology will automatically control the lights and temperature to save energy. I think future construction will also rely on smart materials that can repair their own cracks over time. Ultimately, these futuristic towers will act like small, self-contained cities where people can live, work, and grow food all in one place."
+  },
+  {
+    "part": 3,
+    "topic": "Tall building",
+    "question": "Which do most people prefer, living in a bungalow or in a tall building?",
+    "related_part2": "Tall building",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 2 - Tall building - P2_3 vocabulary.pdf",
+    "model_answer": "Preferences usually depend on a person's age and lifestyle, but many families lean toward a bungalow. A single-story house offers a quiet, tranquil atmosphere and a private garden where children can play safely. In contrast, younger professionals often prefer high-rise apartments because they love the vibrant lifestyle of the city center. Living on a high floor provides breathtaking views and keeps you close to offices, shops, and restaurants. However, skyscrapers can feel crowded, and the lack of privacy is a hard pill to swallow for some. Ultimately, bungalows offer a sense of freedom, while tall buildings provide unmatched urban convenience."
+  },
+  {
+    "part": 3,
+    "topic": "Tall building",
+    "question": "Why are taller and taller buildings being constructed nowadays?",
+    "related_part2": "Tall building",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 2 - Tall building - P2_3 vocabulary.pdf",
+    "model_answer": "The main reason for this trend is the rapid growth of the population in major metropolitan areas. Land downtown is extremely scarce and expensive, so developers must build upward to maximize limited space. Constructing a sprawling complex horizontally is no longer practical or affordable in big cities. These modern towers serve as multi-purpose facilities, packing offices, malls, and apartments into one vertical footprint. Furthermore, advanced engineering now allows cities to safely construct structures that literally reach for the sky. Finally, having a massive skyscraper acts as a powerful symbol of economic success and global status for a country."
+  },
+  {
+    "part": 2,
+    "topic": "Getting up early",
+    "question": "Describe an occasion when you got up extremely early",
+    "cue_points": [
+      "when this happened",
+      "what you needed to do on that day",
+      "who you were with",
+      "how you felt about getting up early on that day"
+    ],
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 3 - Getting up early Vocabulary.pdf",
+    "vocabulary": [
+      {
+        "term": "At the crack of dawn",
+        "meaning": "At the very first light of daybreak.",
+        "group": "Idioms"
+      },
+      {
+        "term": "The early bird catches the worm",
+        "meaning": "Success comes to those who start early.",
+        "group": "Idioms"
+      },
+      {
+        "term": "Bright and early",
+        "meaning": "Very early in the morning, feeling fresh.",
+        "group": "Idioms"
+      },
+      {
+        "term": "An early riser",
+        "meaning": "A person who consistently enjoys waking up early.",
+        "group": "Idioms"
+      },
+      {
+        "term": "A night owl",
+        "meaning": "Someone who prefers staying up late over waking up early.",
+        "group": "Idioms"
+      },
+      {
+        "term": "Morning ritual",
+        "meaning": "A set of habits practiced right after waking up.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Productive window",
+        "meaning": "A timeframe in the morning with high focus.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Snooze button",
+        "meaning": "The alarm feature used to delay waking up.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Peaceful atmosphere",
+        "meaning": "The quiet environment of the world at dawn.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Strict discipline",
+        "meaning": "The willpower needed to wake up early consistently.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Tranquility",
+        "meaning": "The quality or state of being calm and peaceful.",
+        "group": "Advanced Words"
+      },
+      {
+        "term": "Lethargic",
+        "meaning": "Feeling sluggish, lazy, and completely lacking energy.",
+        "group": "Advanced Words"
+      },
+      {
+        "term": "Rejuvenated",
+        "meaning": "Feeling completely refreshed and energized after sleep.",
+        "group": "Advanced Words"
+      },
+      {
+        "term": "Solitude",
+        "meaning": "The state of being completely alone in the quiet morning.",
+        "group": "Advanced Words"
+      },
+      {
+        "term": "Regimen",
+        "meaning": "A strict daily routine of habits or exercise.",
+        "group": "Advanced Words"
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "topic": "Getting up early",
+    "question": "Why do people get up early?",
+    "related_part2": "Getting up early",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 3 - Getting up early Vocabulary.pdf",
+    "model_answer": "Many individuals choose to wake up at the crack of dawn to boost their daily productivity. Being an early riser allows people to utilize a highly productive window before the rest of the world wakes up and creates distractions. This quiet time offers a beautiful sense of solitude that is perfect for reading, studying, or exercising. Additionally, professionals often wake up bright and early to beat the morning rush hour traffic and get a head start on their work. Embracing this habit is also a fantastic way to enjoy a peaceful morning ritual, like drinking coffee without feeling rushed. Ultimately, they believe that the early bird catches the worm when it comes to achieving success."
+  },
+  {
+    "part": 3,
+    "topic": "Getting up early",
+    "question": "Are there any situations when it's not good to arrive early?",
+    "related_part2": "Getting up early",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 3 - Getting up early Vocabulary.pdf",
+    "model_answer": "Yes, showing up ahead of schedule is not always ideal, especially when attending casual social gatherings like dinner parties. Arriving bright and early to a friend's house might accidentally put pressure on the host who is still preparing. It can disrupt their kitchen regimen or home setup, creating an awkward situation for everyone involved. Similarly, showing up too early for a job interview might make an applicant look overly anxious or desperate. In professional settings, arriving more than fifteen minutes early can disrupt the interviewer's tight schedule. Therefore, being too early can sometimes ruin the peaceful atmosphere or professional boundary you want to establish."
+  },
+  {
+    "part": 3,
+    "topic": "Getting up early",
+    "question": "Is it good to arrive early in any situation?",
+    "related_part2": "Getting up early",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 3 - Getting up early Vocabulary.pdf",
+    "model_answer": "Generally speaking, arriving early is highly beneficial for formal, high- stakes appointments and travel schedules. For instance, reaching the airport or train station well ahead of time ensures you can handle unexpected queues without stress. It allows you to check in calmly, clear security, and avoid a last-minute alteration to your travel plans. Being early also shows strict discipline and respect for other people's time during professional business meetings. It gives you a moment to shake off the cobwebs, collect your thoughts, and feel rejuvenated before a presentation. Consequently, punctuality is almost always viewed as a positive trait that builds strong mutual trust."
+  },
+  {
+    "part": 3,
+    "topic": "Getting up early",
+    "question": "Why do some people stay up late at night?",
+    "related_part2": "Getting up early",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 3 - Getting up early Vocabulary.pdf",
+    "model_answer": "A large number of individuals are naturally a night owl and find that their brains function best during late hours. For these people, the quietness of midnight provides a unique tranquility that helps them focus on creative projects or heavy studying. Others stay up late due to demanding work schedules or because they are burning the candle at both ends. Additionally, modern technology and entertainment streaming apps tempt people to look at screens long after they should be asleep. This digital habit makes it very easy to ignore bedtime and push back their natural sleep cycle. As a result, they trade their morning energy for a highly active, late-night routine."
+  },
+  {
+    "part": 3,
+    "topic": "Getting up early",
+    "question": "Is it easy to get up early?",
+    "related_part2": "Getting up early",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 3 - Getting up early Vocabulary.pdf",
+    "model_answer": "For the vast majority of people, waking up early requires an immense amount of strict discipline and effort. It is incredibly tempting to hit the snooze button multiple times when the alarm goes off in the dark. If you do not get enough uninterrupted sleep, you will inevitably feel incredibly lethargic and sluggish in the morning. However, if you maintain a consistent sleeping regimen, your body clock will eventually adapt to the early hours. When you successfully form this habit, you actually wake up feeling completely rejuvenated and ready for the day. Therefore, while it is quite difficult at first, it becomes much easier with time and consistency."
+  },
+  {
+    "part": 2,
+    "topic": "Person who loves to grow plants",
+    "question": "Describe a person you know who loves to grow plants (vegetables, fruits, flowers)",
+    "cue_points": [
+      "who this person is",
+      "what this person grows",
+      "where this person grows them",
+      "why this person loves to grow plants"
+    ],
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 4 - Planting Vocabulary.pdf",
+    "vocabulary": [
+      {
+        "term": "Green thumb",
+        "meaning": "A natural talent for growing plants successfully.",
+        "group": "Idioms"
+      },
+      {
+        "term": "Bear fruit",
+        "meaning": "To produce good results or actual fruits/vegetables.",
+        "group": "Idioms"
+      },
+      {
+        "term": "Nip it in the bud",
+        "meaning": "To stop a problem at the very beginning.",
+        "group": "Idioms"
+      },
+      {
+        "term": "Late bloomer",
+        "meaning": "A plant (or person) that grows or succeeds later than others.",
+        "group": "Idioms"
+      },
+      {
+        "term": "No bed of roses",
+        "meaning": "A difficult situation that requires a lot of hard work.",
+        "group": "Idioms"
+      },
+      {
+        "term": "Fertile soil",
+        "meaning": "Rich, healthy dirt that helps plants grow well.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Bountiful harvest",
+        "meaning": "A large, successful crop of fruits or vegetables.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Hardy species",
+        "meaning": "Strong plants that can survive tough weather.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Morning ritual",
+        "meaning": "A daily routine, like watering plants early in the day.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Nurturing environment",
+        "meaning": "A space with the perfect amount of sun and water.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Cultivate",
+        "meaning": "To prepare land and care for plants as they grow.",
+        "group": "Advanced Words"
+      },
+      {
+        "term": "Germinate",
+        "meaning": "The moment a tiny seed starts to sprout into a plant.",
+        "group": "Advanced Words"
+      },
+      {
+        "term": "Flora",
+        "meaning": "A formal or scientific word for plant life.",
+        "group": "Advanced Words"
+      },
+      {
+        "term": "Tranquility",
+        "meaning": "A deep sense of peace and quiet found in a garden.",
+        "group": "Advanced Words"
+      },
+      {
+        "term": "Solitude",
+        "meaning": "The state of being peacefully alone outdoors with nature.",
+        "group": "Advanced Words"
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "topic": "Growing a plant",
+    "question": "Do people in your country like to grow plants?",
+    "related_part2": "Person who loves to grow plants",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 4 - Planting Vocabulary.pdf",
+    "model_answer": "Yes, gardening is an incredibly popular hobby among many generations in my country. A large number of households take great pride in their indoor and outdoor flora. Many elderly citizens view watering their flowers as a therapeutic morning ritual to start the day. Even in crowded urban areas, citizens try to cultivate small green spaces on their balconies. People love the feeling of transforming a plain concrete balcony into a nurturing environment filled with color. Ultimately, having a green thumb is highly respected, and local communities frequently share plant clippings with one another."
+  },
+  {
+    "part": 3,
+    "topic": "Growing a plant",
+    "question": "What are the advantages of growing plants at home?",
+    "related_part2": "Person who loves to grow plants",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 4 - Planting Vocabulary.pdf",
+    "model_answer": "Bringing plant life into your living space offers a wide range of mental and physical benefits. Firstly, tending to indoor greenery provides a wonderful sense of tranquility after a stressful workday. Working with soil and pots gives city dwellers a peaceful moment of solitude away from digital screens. Furthermore, keeping house plants can drastically improve the air quality inside a modern apartment. It is also highly satisfying to watch a tiny seed finally germinate and grow into a healthy leaf. Therefore, domestic gardening is a fantastic, low-cost method to boost your overall well-being."
+  },
+  {
+    "part": 3,
+    "topic": "Growing a plant",
+    "question": "Do people like to grow vegetables in your country?",
+    "related_part2": "Person who loves to grow plants",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 4 - Planting Vocabulary.pdf",
+    "model_answer": "Absolutely, cultivating edible crops is a traditional practice that remains very popular today. Many families own small countryside plots or allotments specifically dedicated to producing fresh food. They love to prepare the fertile soil every spring to ensure their crops grow strong. Even younger individuals are now trying to grow easy tomatoes or herbs in small pots. People prefer this because store-bought produce often lacks flavor and contains unwanted chemicals. Consequently, the desire for organic, homegrown food has made vegetable gardening a major trend."
+  },
+  {
+    "part": 3,
+    "topic": "Growing a plant",
+    "question": "What are the advantages of growing vegetables at home?",
+    "related_part2": "Person who loves to grow plants",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 4 - Planting Vocabulary.pdf",
+    "model_answer": "The primary benefit of domestic food production is having instant access to organic, chemical-free nutrition. When you manage your own garden, you can ensure that the crops grow in completely fertile soil. It is also a highly economical habit that can save a family a lot of money on groceries. Managing a vegetable patch teaches children how nature works and encourages them to eat healthier foods. Additionally, learning how to care for a hardy species of vegetable builds great patience and life skills. In short, it is a rewarding practice that benefits both your health and your wallet."
+  },
+  {
+    "part": 3,
+    "topic": "Growing a plant",
+    "question": "How do people feel when they eat vegetables that they grew on their own?",
+    "related_part2": "Person who loves to grow plants",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 4 - Planting Vocabulary.pdf",
+    "model_answer": "Eating a meal made from your own garden brings an immense sense of pride and personal satisfaction. After months of hard work, seeing your efforts finally bear fruit feels incredibly rewarding. The food always tastes significantly fresher and more delicious because of the time invested. Gathering a bountiful harvest from your backyard makes you feel self-sufficient and connected to the earth. It turns a simple, everyday dinner into a special celebration of your dedication and care. Ultimately, it is a joyful experience that cannot be replicated by simply buying food at a supermarket."
+  },
+  {
+    "part": 2,
+    "topic": "Childhood friend",
+    "question": "Describe a friend from your childhood",
+    "cue_points": [
+      "who this person is",
+      "how you met each other",
+      "what you did together",
+      "explain why you liked him or her"
+    ],
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 5 - Friend Vocabulary.pdf",
+    "vocabulary": [
+      {
+        "term": "Chalk and cheese",
+        "meaning": "Completely different people.",
+        "group": "Idioms (Band 8+)"
+      },
+      {
+        "term": "Hit it off",
+        "meaning": "Formed an immediate bond.",
+        "group": "Idioms (Band 8+)"
+      },
+      {
+        "term": "Thicker than water",
+        "meaning": "Stronger than other relationships.",
+        "group": "Idioms (Band 8+)"
+      },
+      {
+        "term": "A kindred spirit",
+        "meaning": "Someone with identical values.",
+        "group": "Idioms (Band 8+)"
+      },
+      {
+        "term": "A shoulder to cry on",
+        "meaning": "A sympathetic listener.",
+        "group": "Idioms (Band 8+)"
+      },
+      {
+        "term": "Fair-weather friend",
+        "meaning": "A friend only in success.",
+        "group": "Idioms (Band 8+)"
+      },
+      {
+        "term": "Speak the same language",
+        "meaning": "Having identical understandings.",
+        "group": "Idioms (Band 8+)"
+      },
+      {
+        "term": "See eye to eye",
+        "meaning": "Agreeing completely with someone.",
+        "group": "Idioms (Band 8+)"
+      },
+      {
+        "term": "Cross paths",
+        "meaning": "To meet by chance.",
+        "group": "Idioms (Band 8+)"
+      },
+      {
+        "term": "Clear the air",
+        "meaning": "Resolving a past misunderstanding.",
+        "group": "Idioms (Band 8+)"
+      },
+      {
+        "term": "A lifelong confidant",
+        "meaning": "A trusted secret keeper.",
+        "group": "Idioms (Band 8+)"
+      },
+      {
+        "term": "Get on like a house on fire",
+        "meaning": "Becoming friends incredibly fast.",
+        "group": "Idioms (Band 8+)"
+      },
+      {
+        "term": "Unshakeable bond",
+        "meaning": "An unbreakable emotional connection.",
+        "group": "Collocations (Band 8+)"
+      },
+      {
+        "term": "Indelible impression",
+        "meaning": "A permanent impact on mind.",
+        "group": "Collocations (Band 8+)"
+      },
+      {
+        "term": "Shared history",
+        "meaning": "A common past together.",
+        "group": "Collocations (Band 8+)"
+      },
+      {
+        "term": "Unwavering loyalty",
+        "meaning": "Constant, unchanging support over time.",
+        "group": "Collocations (Band 8+)"
+      },
+      {
+        "term": "Childhood camaraderie",
+        "meaning": "Trust built during youth.",
+        "group": "Collocations (Band 8+)"
+      },
+      {
+        "term": "Nostalgic reflection",
+        "meaning": "Thinking fondly about the past.",
+        "group": "Collocations (Band 8+)"
+      },
+      {
+        "term": "Deep-seated affection",
+        "meaning": "A profound, long-lasting love.",
+        "group": "Collocations (Band 8+)"
+      },
+      {
+        "term": "Fostered friendship",
+        "meaning": "A relationship nurtured over time.",
+        "group": "Collocations (Band 8+)"
+      },
+      {
+        "term": "Boyhood/Girlhood companion",
+        "meaning": "A friend from early youth.",
+        "group": "Collocations (Band 8+)"
+      },
+      {
+        "term": "Emotional anchor",
+        "meaning": "Someone providing stability and support.",
+        "group": "Collocations (Band 8+)"
+      },
+      {
+        "term": "Enduring attachment",
+        "meaning": "A long-lasting emotional connection.",
+        "group": "Collocations (Band 8+)"
+      },
+      {
+        "term": "Harmonious relationship",
+        "meaning": "A peaceful, conflict-free bond.",
+        "group": "Collocations (Band 8+)"
+      },
+      {
+        "term": "Unprecedented",
+        "meaning": "Never done or known before.",
+        "group": "High-Advanced Words (Band 8+)"
+      },
+      {
+        "term": "Inextricable",
+        "meaning": "Impossible to separate or untangle.",
+        "group": "High-Advanced Words (Band 8+)"
+      },
+      {
+        "term": "Affinity",
+        "meaning": "A natural liking or sympathy.",
+        "group": "High-Advanced Words (Band 8+)"
+      },
+      {
+        "term": "Convivial",
+        "meaning": "Cheerful, friendly, and lively atmosphere.",
+        "group": "High-Advanced Words (Band 8+)"
+      },
+      {
+        "term": "Altruistic",
+        "meaning": "Showing unselfish concern for others.",
+        "group": "High-Advanced Words (Band 8+)"
+      },
+      {
+        "term": "Evanescent",
+        "meaning": "Soon passing out of sight.",
+        "group": "High-Advanced Words (Band 8+)"
+      },
+      {
+        "term": "Perennial",
+        "meaning": "Lasting for an indefinitely long time.",
+        "group": "High-Advanced Words (Band 8+)"
+      },
+      {
+        "term": "Immutable",
+        "meaning": "Unchanging over a long period.",
+        "group": "High-Advanced Words (Band 8+)"
+      },
+      {
+        "term": "Equanimity",
+        "meaning": "Mental calmness in difficult situations.",
+        "group": "High-Advanced Words (Band 8+)"
+      },
+      {
+        "term": "Anecdote",
+        "meaning": "A short, amusing real story.",
+        "group": "High-Advanced Words (Band 8+)"
+      },
+      {
+        "term": "Propinquity",
+        "meaning": "State of being close to someone.",
+        "group": "High-Advanced Words (Band 8+)"
+      },
+      {
+        "term": "Veritable",
+        "meaning": "Used to highlight a metaphor.",
+        "group": "High-Advanced Words (Band 8+)"
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "topic": "Childhood friend",
+    "question": "What's the difference between having younger friends and older friends?",
+    "related_part2": "Childhood friend",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 5 - Friend Vocabulary.pdf",
+    "model_answer": "Having younger friends usually brings a lot of high energy into your life because they love trying new trends. On the other hand, older friends have a lot of life experience and can give you great advice when you are confused. When I hang out with older people, we usually talk about deep life lessons and career goals. But when I am with younger friends, they keep me updated on popular music and modern culture. Ultimately, younger friends keep your spirit active, while older friends give you a strong sense of stability. It is definitely good to have both because they balance each other out perfectly. Therefore, a mix of young and old companions makes your social life much richer."
+  },
+  {
+    "part": 3,
+    "topic": "Childhood friend",
+    "question": "Has technology changed people's friendships? How?",
+    "related_part2": "Childhood friend",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 5 - Friend Vocabulary.pdf",
+    "model_answer": "Yes, technology has completely changed how people connect with each other today. In the past, you had to live near someone to stay close and build a lifelong friendship. Nowadays, social media apps allow people to stay best friends even if they live in different countries. However, this big change has both good and bad sides. Even though we text all the time, these online chats can feel a bit empty and superficial. It is easy for busy people to drift apart if they never meet up in person to talk. Consequently, technology gives us more casual friends but makes it harder to build mutual trust."
+  },
+  {
+    "part": 3,
+    "topic": "Childhood friend",
+    "question": "What do you think of communicating via social media?",
+    "related_part2": "Childhood friend",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 5 - Friend Vocabulary.pdf",
+    "model_answer": "Talking through social media is very convenient, but it lacks the warmth of real human contact. On the positive side, it is a fast way to share fun stories and daily updates with many people at once. It helps us keep in touch with old classmates when we are too busy to meet for coffee. However, text messages can easily be misunderstood, which sometimes causes unnecessary arguments. Relying only on likes and comments can make a close friendship feel distant over time. Therefore, social networks are great for quick updates but should not replace real conversations."
+  },
+  {
+    "part": 3,
+    "topic": "Childhood friend",
+    "question": "Will online social media replace face-to-face communication?",
+    "related_part2": "Childhood friend",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 5 - Friend Vocabulary.pdf",
+    "model_answer": "I do not think online platforms will ever fully replace talking in person. Humans have a natural need to be physically close to the people they care about. While video calls are helpful, they cannot replace real eye contact, hugs, or body language. True friendships are built when people sit together, share food, and look each other in the eye. If we only talk through screens, people will start to feel very lonely and isolated. A smartphone screen can never act as a real shoulder to cry on when you are going through a hard time. Because of this, face-to-face talking will always be the most important way we connect."
+  },
+  {
+    "part": 3,
+    "topic": "Childhood friend",
+    "question": "Is it necessary for kids to have some close friends?",
+    "related_part2": "Childhood friend",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 5 - Friend Vocabulary.pdf",
+    "model_answer": "Yes, having close playmates is incredibly important for a child's growth. These early friendships happen during their formative years when they are learning how the world works. By playing with close friends, children learn how to share, cooperate, and solve arguments nicely. These bonds teach them that good relationships require equal effort from both sides. Having a best friend also gives kids a safe space to talk about their school worries and fears. Without these early connections, children might struggle to trust others when they grow up. In short, childhood friends leave beautiful memories that shape a person's character forever."
+  },
+  {
+    "part": 2,
+    "topic": "Plan you had to change",
+    "question": "Describe a plan you had to change",
+    "cue_points": [
+      "what the plan was",
+      "why you had to change it",
+      "what the new plan was",
+      "how you felt about the change"
+    ],
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 6 - Plan Vocabulary.pdf",
+    "vocabulary": [
+      {
+        "term": "Play it by ear",
+        "meaning": "Decide as the situation develops.",
+        "group": "Idioms"
+      },
+      {
+        "term": "At the eleventh hour",
+        "meaning": "At the last possible moment.",
+        "group": "Idioms"
+      },
+      {
+        "term": "Call a rain check",
+        "meaning": "Postpone a plan for later.",
+        "group": "Idioms"
+      },
+      {
+        "term": "Up in the air",
+        "meaning": "Uncertain or not decided yet.",
+        "group": "Idioms"
+      },
+      {
+        "term": "Change of heart",
+        "meaning": "A shift in your decision.",
+        "group": "Idioms"
+      },
+      {
+        "term": "Last-minute alteration",
+        "meaning": "A small change right before an event.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Contingency plan",
+        "meaning": "A backup plan if things fail.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Schedule conflict",
+        "meaning": "A clash between two timed events.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Spontaneous decision",
+        "meaning": "A choice made with no preparation.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Sudden detour",
+        "meaning": "An abrupt change in your route.",
+        "group": "Collocations"
+      },
+      {
+        "term": "Reschedule",
+        "meaning": "To change the date or time.",
+        "group": "Advanced Words"
+      },
+      {
+        "term": "Improvise",
+        "meaning": "To make do without prior preparation.",
+        "group": "Advanced Words"
+      },
+      {
+        "term": "Spontaneous",
+        "meaning": "Done naturally without planning ahead.",
+        "group": "Advanced Words"
+      },
+      {
+        "term": "Pragmatic",
+        "meaning": "Being realistic about necessary changes.",
+        "group": "Advanced Words"
+      },
+      {
+        "term": "Haphazard",
+        "meaning": "Messy and completely lacking any organization.",
+        "group": "Advanced Words"
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "topic": "Plan to change",
+    "question": "Do old people often change plans?",
+    "related_part2": "Plan you had to change",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 6 - Plan Vocabulary.pdf",
+    "model_answer": "Generally speaking, older generations do not like to alter their schedules and prefer to avoid making a spontaneous decision. They are usually very disciplined and appreciate routine, so they rarely change their minds at the eleventh hour. When they do make arrangements, they usually stick to them unless something serious happens. If a problem does pop up, they prefer to be pragmatic and fix it quietly rather than causing chaos. For instance, my grandparents always plan their days meticulously weeks in advance. Therefore, it is quite rare for seniors to leave their daily routines up in the air."
+  },
+  {
+    "part": 3,
+    "topic": "Plan to change",
+    "question": "Do young people like to change plans?",
+    "related_part2": "Plan you had to change",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 6 - Plan Vocabulary.pdf",
+    "model_answer": "Yes, younger people are often much more flexible and actually enjoy making a spontaneous choice. They do not mind leaving their weekend schedules up in the air until the very last minute. If a better opportunity comes along, they are happy to experience a sudden change of heart and try something new. They are highly comfortable adjusting things on the fly because they can easily update their friends via smartphone apps. For them, life is fast-moving, so they prefer to play it by ear rather than sticking to rigid timetables. Consequently, altering arrangements is just a normal, everyday part of youth culture."
+  },
+  {
+    "part": 3,
+    "topic": "Plan to change",
+    "question": "What are the common reasons when people need to change plans?",
+    "related_part2": "Plan you had to change",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 6 - Plan Vocabulary.pdf",
+    "model_answer": "In most cases, unexpected life events are the primary reason people have to reorganize their days. For example, a sudden schedule conflict at work or school can easily ruin your weekend arrangements. Bad weather can also force people to make a sudden detour if they are traveling or hosting an outdoor event. Health emergencies or catching a cold can also force an individual to call a rain check with their friends. Additionally, unexpected transport delays or flight cancellations happen all the time. When these situations arise, people must adjust quickly and rely on a contingency plan to save their day."
+  },
+  {
+    "part": 3,
+    "topic": "Plan to change",
+    "question": "How would you tell your friends if you had to change your plans?",
+    "related_part2": "Plan you had to change",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 6 - Plan Vocabulary.pdf",
+    "model_answer": "If I absolutely had to make a last-minute alteration, I would call or text my friends immediately to explain the situation honestly. I believe it is best to be direct so they do not waste their time waiting around for me. I would apologize sincerely for the inconvenience, especially if the change happens at the eleventh hour. After explaining the reason, I would instantly suggest a new date to reschedule our meetup. For example, I might say, \"I am so sorry, but I have a work emergency, so can we call a rain check for next Sunday?\" Being polite and proactive helps prevent any hard feelings or misunderstandings."
+  },
+  {
+    "part": 3,
+    "topic": "Plan to change",
+    "question": "How does technology help people make plans?",
+    "related_part2": "Plan you had to change",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 6 - Plan Vocabulary.pdf",
+    "model_answer": "Technology has made organizing our lives incredibly easy and highly efficient compared to the past. Shared digital calendars allow groups of friends to see each other's free time and avoid a schedule conflict. Messaging apps mean we can coordinate group events instantly without making dozens of separate phone calls. If a problem arises, we can improvise new arrangements in seconds via group chats. Navigation apps also help us avoid traffic by finding a quick sudden detour in real-time. In short, smartphones ensure that our schedules are never left haphazard or disorganized."
+  },
+  {
+    "part": 3,
+    "topic": "Plan to change",
+    "question": "Why do parents still make plans for their children nowadays?",
+    "related_part2": "Plan you had to change",
+    "season": "May-Dec 2026",
+    "source": "course_material:Topic 6 - Plan Vocabulary.pdf",
+    "model_answer": "Parents continue to manage their children's schedules because young kids lack the life experience to make pragmatic decisions. Left to themselves, children would live a very haphazard life focused only on playtime and sweets. Parents need to establish a structured routine during a child's formative years to ensure they balance school, hobbies, and rest. They manage the daily logistics because kids cannot handle a sudden schedule conflict on their own. Even though the world has changed, children still need their parents to act as a guide and an emotional anchor. Ultimately, this parental planning sets children up for a successful and organized adult life."
+  },
+  {
+    "part": 2,
+    "topic": "A good compliment made by a person you appreciate",
+    "question": "A good compliment made by a person you appreciate",
+    "cue_points": [],
+    "source": "telegram:LATEST_EXAMS_ARCHIVE",
+    "source_date": "2026-09-18"
+  }
+]

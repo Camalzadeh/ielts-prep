@@ -5,8 +5,8 @@ __pycache__/
 .pytest_cache/
 
 # --- Your own data: database, recordings, AI runs, whisper models, browser profile (never shared)
-data/
-My Results.docx
+/data/
+/My Results.docx
 
 # --- Downloaded practice tests: each user fetches them with tools/fetch_content.py
 #     (copyrighted Cambridge material + ~1.2 GB audio). Task-1 chart images in content/media/writing are shared.
