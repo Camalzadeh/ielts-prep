@@ -270,3 +270,19 @@ def retranscribe(response_id: int, conn: sqlite3.Connection = Depends(db.get_db)
     conn.commit()
     transcribe.enqueue(response_id)
     return {"id": response_id, "transcribe_status": "pending"}
+
+
+@router.delete("/responses/{response_id}")
+def delete_response(response_id: int, conn: sqlite3.Connection = Depends(db.get_db)) -> dict:
+    """Delete one recorded answer (a re-recorded or unwanted take) and its audio file."""
+    r = conn.execute("SELECT audio_path FROM speaking_responses WHERE id=?", (response_id,)).fetchone()
+    if not r:
+        raise HTTPException(404, "response not found")
+    conn.execute("DELETE FROM speaking_responses WHERE id=?", (response_id,))
+    conn.commit()
+    if r["audio_path"]:
+        try:
+            (db.UPLOADS_DIR / r["audio_path"]).unlink(missing_ok=True)
+        except OSError:
+            pass  # file still locked (e.g. being transcribed); the row is gone, which is what the app shows
+    return {"ok": True, "id": response_id}

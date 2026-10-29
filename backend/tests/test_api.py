@@ -150,3 +150,16 @@ def test_ai_helpers():
             ai_runner.validate_command(["x", flag])
     ai_runner.validate_command(ai_runner.DEFAULT_COMMANDS["claude"])
     ai_runner.validate_command(["agy", "--model", "x"])
+
+
+def test_speaking_delete_response(client):
+    sid = client.post("/api/speaking/sessions", json={"mode": "practice_part1", "plan": {}}).json()["id"]
+    keep, drop = (client.post("/api/speaking/responses", files={"audio": ("a.webm", b"x", "audio/webm")},
+                              data={"session_id": sid, "part": 1, "question_text": q}).json()["id"]
+                  for q in ("Q1", "Q2"))
+    with db.session() as conn:
+        path = db.UPLOADS_DIR / conn.execute("SELECT audio_path FROM speaking_responses WHERE id=?", (drop,)).fetchone()[0]
+    assert client.delete(f"/api/speaking/responses/{drop}").json()["ok"]
+    assert [r["id"] for r in client.get(f"/api/speaking/sessions/{sid}").json()["responses"]] == [keep]
+    assert not path.exists()
+    assert client.delete(f"/api/speaking/responses/{drop}").status_code == 404
