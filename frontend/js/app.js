@@ -187,6 +187,11 @@ async function route() {
 }
 
 window.addEventListener('hashchange', route);
+// No browser find (Ctrl+F / Cmd+F / F3 / Ctrl+G): the real exam has none, so answers can't be searched for.
+window.addEventListener('keydown', (e) => {
+  const k = e.key.toLowerCase();
+  if (k === 'f3' || ((e.ctrlKey || e.metaKey) && !e.altKey && (k === 'f' || k === 'g'))) e.preventDefault();
+}, true);
 window.addEventListener('beforeunload', (e) => {
   if (nav.beforeUnload && nav.beforeUnload()) { e.preventDefault(); e.returnValue = ''; }
 });
