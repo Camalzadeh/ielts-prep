@@ -209,3 +209,44 @@ def test_speaking_delete_response(client):
     assert [r["id"] for r in client.get(f"/api/speaking/sessions/{sid}").json()["responses"]] == [keep]
     assert not path.exists()
     assert client.delete(f"/api/speaking/responses/{drop}").status_code == 404
+
+
+def test_delete_attempt_and_transcript(client):
+    from backend.app.routers.tests import transcript_excerpt
+    assert transcript_excerpt('<p><b>From the transcript:</b> “usually about eight people but no more than ten”</p>'
+                              '<p>other</p>') == "usually about eight people but no more than ten"
+    assert transcript_excerpt("<p>no quote</p>") is None and transcript_excerpt(None) is None
+
+    aid = client.post("/api/attempts", json={"test_id": "fixture-listening-1", "mode": "practice"}).json()["id"]
+    t = client.get(f"/api/attempts/{aid}/transcript?part=1").json()
+    assert "Jamieson" in t["transcript_html"] and t["part"] == 1
+    assert client.get(f"/api/attempts/{aid}/transcript?part=9").status_code == 404
+    client.post(f"/api/attempts/{aid}/submit", json={"answers": {"1": "Jamieson"}})
+    assert "excerpt" in client.get(f"/api/attempts/{aid}").json()["details"][0]
+    with db.session() as conn:
+        conn.execute("INSERT INTO ai_analyses(target_type, target_id, provider, status) VALUES ('attempt', ?, 'claude', 'done')", (aid,))
+    assert client.delete(f"/api/attempts/{aid}").json() == {"ok": True, "id": aid}
+    assert client.get(f"/api/attempts/{aid}").status_code == 404
+    assert client.delete(f"/api/attempts/{aid}").status_code == 404
+    with db.session(readonly=True) as conn:
+        assert not conn.execute("SELECT 1 FROM attempt_answers WHERE attempt_id=?", (aid,)).fetchone()
+        assert not conn.execute("SELECT 1 FROM ai_analyses WHERE target_type='attempt' AND target_id=?", (aid,)).fetchone()
+
+    # exam mode: no transcript; deleting a mock section clears the mock's stored bands
+    m = client.post("/api/mock", json={"sections": ["listening"]}).json()
+    mid = client.post("/api/attempts", json={"test_id": "fixture-listening-1", "mode": "mock", "mock_id": m["id"]}).json()["id"]
+    assert client.get(f"/api/attempts/{mid}/transcript?part=1").status_code == 403
+    client.post(f"/api/attempts/{mid}/submit", json={"answers": {"1": "Jamieson"}})
+    client.post(f"/api/mock/{m['id']}/finish")
+    client.delete(f"/api/attempts/{mid}")
+    mk = client.get(f"/api/mock/{m['id']}").json()
+    assert mk["listening_band"] is None and mk["overall_band"] is None
+
+    # reading has no transcript; imported results are managed in My Results.docx
+    rid = client.post("/api/attempts", json={"test_id": "fixture-reading-1"}).json()["id"]
+    assert client.get(f"/api/attempts/{rid}/transcript?part=1").status_code == 422
+    with db.session() as conn:
+        conn.execute("UPDATE attempts SET mode='imported' WHERE id=?", (rid,))
+    assert client.delete(f"/api/attempts/{rid}").status_code == 409
+    with db.session() as conn:
+        conn.execute("DELETE FROM attempts WHERE id=?", (rid,))

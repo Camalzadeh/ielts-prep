@@ -1,6 +1,8 @@
 """Listening / reading tests and attempts."""
 from __future__ import annotations
 
+import html
+import re
 import sqlite3
 from typing import Any, Literal, Optional
 
@@ -161,6 +163,51 @@ def list_attempts(type: Optional[str] = None, limit: int = 50, status: Optional[
     return db.rows_to_dicts(conn.execute(q, args).fetchall())
 
 
+@router.delete("/attempts/{attempt_id}")
+def delete_attempt(attempt_id: int, conn: sqlite3.Connection = Depends(db.get_db)) -> dict:
+    """Delete a result (or an unfinished attempt) with its answers and AI analyses."""
+    a = _get_attempt(conn, attempt_id)
+    if a["mode"] == "imported":
+        raise HTTPException(409, "this result comes from My Results.docx; remove its row there instead")
+    conn.execute("DELETE FROM ai_analyses WHERE target_type='attempt' AND target_id=?", (attempt_id,))
+    conn.execute("DELETE FROM attempt_answers WHERE attempt_id=?", (attempt_id,))
+    conn.execute("DELETE FROM attempts WHERE id=?", (attempt_id,))
+    if a["mock_id"] and a["type"] in ("listening", "reading"):
+        # the mock loses this section: its stored band (and so the overall band) no longer holds
+        conn.execute(f"UPDATE mock_exams SET {a['type']}_band=NULL, overall_band=NULL WHERE id=?", (a["mock_id"],))
+    return {"ok": True, "id": attempt_id}
+
+
+_EXCERPT = re.compile(r"From the transcript:\s*</b>(.*?)</p>", re.IGNORECASE | re.DOTALL)
+
+
+def transcript_excerpt(explanation_html: str | None) -> str | None:
+    """The transcript line an explanation quotes as evidence ("From the transcript: '...'")."""
+    m = _EXCERPT.search(explanation_html or "")
+    if not m:
+        return None
+    text = html.unescape(re.sub(r"<[^>]+>", "", m.group(1))).strip()
+    return text.strip("\"'“”‘’ ").strip() or None
+
+
+@router.get("/attempts/{attempt_id}/transcript")
+def attempt_transcript(attempt_id: int, part: int, conn: sqlite3.Connection = Depends(db.get_db)) -> dict:
+    """Listening transcript of one part for the study assistant. Practice only: never in a mock exam."""
+    a = _get_attempt(conn, attempt_id)
+    if a["type"] != "listening":
+        raise HTTPException(422, "transcripts exist for listening tests only")
+    if a["mode"] == "mock" or a["mock_id"]:
+        raise HTTPException(403, "the transcript is not available in exam mode")
+    _, test = _load_test(conn, a["test_id"])
+    p = next((p for p in test.get("parts") or [] if p.get("number") == part), None)
+    if not p:
+        raise HTTPException(404, f"part {part} not found")
+    anchors = {q["number"]: transcript_excerpt(q.get("explanation_html"))
+               for g in p.get("groups") or [] for q in g.get("questions") or [] if q.get("number") is not None}
+    return {"part": part, "transcript_html": p.get("transcript_html") or "",
+            "anchors": {n: t for n, t in anchors.items() if t}}
+
+
 @router.get("/attempts/{attempt_id}")
 def get_attempt(attempt_id: int, conn: sqlite3.Connection = Depends(db.get_db)) -> dict:
     a = _get_attempt(conn, attempt_id)
@@ -171,7 +218,8 @@ def get_attempt(attempt_id: int, conn: sqlite3.Connection = Depends(db.get_db)) 
     details = [{"number": r["question_number"], "part": r["part"], "type": r["question_type"],
                 "user_answer": r["user_answer"], "correct_answers": db.loads(r["correct_answers"], []),
                 "is_correct": bool(r["is_correct"]), "question_text": r["question_text"],
-                "explanation_html": explanations.get(r["question_number"])}
+                "explanation_html": explanations.get(r["question_number"]),
+                "excerpt": transcript_excerpt(explanations.get(r["question_number"]))}
                for r in conn.execute("SELECT * FROM attempt_answers WHERE attempt_id=? ORDER BY question_number",
                                      (attempt_id,))]
     out = dict(a)
