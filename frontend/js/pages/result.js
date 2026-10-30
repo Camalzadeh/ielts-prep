@@ -1,12 +1,13 @@
 // Results + review page for a submitted listening/reading attempt.
-import { api, mediaUrl } from '../api.js';
-import { h, esc, icon, fmtBand, fmtDuration, fmtDate, sanitizeContent, qtypeLabel, emptyState, parseMaybeJSON } from '../ui.js';
+import { api } from '../api.js';
+import { h, esc, icon, toast, confirmDialog, store, fmtBand, fmtDuration, fmtDate, sanitizeContent, qtypeLabel, emptyState, parseMaybeJSON } from '../ui.js';
 import { renderGroup, partQuestionNumbers } from '../components/questions.js';
 import { analysisPanel } from '../components/analysis.js';
 import { mistakesByQuestion, questionNote } from '../components/inline-fix.js';
 import { applyHighlights } from '../components/highlight.js';
 import { splitPane } from '../components/split.js';
-import { setTitle } from '../app.js';
+import { listeningPartReview } from '../components/listening-review.js';
+import { navigate, setTitle } from '../app.js';
 
 export function bandRing(band, size = 120, label = 'Band') {
   const r = (size / 2) - 8, c = 2 * Math.PI * r;
@@ -49,6 +50,7 @@ export async function render(root, params) {
   if (attempt.status && attempt.status !== 'submitted') {
     root.replaceChildren(emptyState('This attempt is still in progress', '', 'clock',
       `<a class="btn primary" href="#/test/${encodeURIComponent(attempt.test_id)}/${id}">Resume test</a>`));
+    root.querySelector('.empty .btn')?.after(' ', deleteResultButton({ ...attempt, id }, `#/${attempt.type || 'reading'}`));
     return;
   }
   const testId = attempt.test_id || attempt.test?.id;
@@ -75,6 +77,7 @@ export async function render(root, params) {
       h('p', null, `${type === 'listening' ? 'Listening' : 'Reading'} · ${attempt.mode === 'mock' ? 'Mock exam' : 'Practice'} · ${fmtDate(attempt.finished_at || attempt.started_at)}`)),
     h('div', { class: 'page-actions' },
       h('a', { class: 'btn', href: '#ai', onclick: (e) => { e.preventDefault(); document.getElementById('ai')?.scrollIntoView({ behavior: 'smooth' }); }, html: `${icon('sparkles')} Explain my mistakes with AI` }),
+      deleteResultButton(attempt, backHref),
       h('a', { class: 'btn primary', href: `#/test/${encodeURIComponent(testId)}`, html: `${icon('refresh')} Retake` }))));
 
   // ------------------------------------------------ summary
@@ -139,7 +142,7 @@ export async function render(root, params) {
     root.append(h('div', { class: 'error-box' }, `Could not load the test for review: ${testErr?.message || 'unknown error'}`));
     root.append(detailsTable(details));
   } else {
-    root.append(reviewView(test, type, byNum, highlights, paintAi));
+    root.append(reviewView(test, type, byNum, highlights, paintAi, id));
   }
 
   // ------------------------------------------------ AI
@@ -163,7 +166,31 @@ function normaliseDetail(d) {
 function cls(r) { return r >= 0.75 ? 'high' : r >= 0.5 ? 'mid' : 'low'; }
 function frag2(s) { const t = document.createElement('template'); t.innerHTML = s.trim(); return t.content.firstElementChild; }
 
-function reviewView(test, type, byNum, highlights, afterShow = () => {}) {
+/** Delete a result after confirmation (self-assessment attempts the learner does not want to keep). */
+export function deleteResultButton(attempt, after) {
+  return h('button', { class: 'btn danger', type: 'button', html: `${icon('trash')} Delete`, onclick: async () => {
+    if (!(await confirmDeleteAttempt(attempt))) return;
+    navigate(after);
+  } });
+}
+
+/** Ask, then delete; true when deleted. Shared with the history page. */
+export async function confirmDeleteAttempt(a) {
+  const what = a.status === 'submitted' ? 'this result' : 'this unfinished attempt';
+  const ok = await confirmDialog(`Delete ${what}?`,
+    `<p>${esc(a.title || a.test_title || a.test?.title || a.test_id)}${a.band != null ? ` — band ${esc(fmtBand(a.band))}` : ''}</p>
+     <p>Your answers and any AI analyses of it are removed for good.${a.mock_id ? ' It also leaves its mock exam without this section.' : ''} This cannot be undone.</p>`,
+    'Delete', 'danger');
+  if (!ok) return false;
+  try {
+    await api.del(`/api/attempts/${a.id}`);
+  } catch (e) { toast(`Could not delete: ${e.message}`, 'error'); return false; }
+  store.remove(`attempt.${a.id}`);   // the player's local copy of an unfinished attempt
+  toast('Deleted.', 'good');
+  return true;
+}
+
+function reviewView(test, type, byNum, highlights, afterShow = () => {}, attemptId = 0) {
   const parts = (test.parts || []).slice().sort((a, b) => a.number - b.number);
   const wrap = h('div');
   const tabs = h('div', { class: 'tabs', role: 'tablist' });
@@ -175,48 +202,32 @@ function reviewView(test, type, byNum, highlights, afterShow = () => {}) {
     setAnswer: () => {},
     detail: (n) => byNum.get(n),
   };
-  let audioEl = null;
+  let stopAudio = () => {};
+  const partKey = `review.part.${attemptId}`;   // reopen on the part the learner was looking at
   const show = (i) => {
-    if (audioEl) audioEl.pause();
+    stopAudio();
+    store.set(partKey, i);
     tabs.querySelectorAll('button').forEach((b, k) => b.setAttribute('aria-selected', String(k === i)));
     const part = parts[i];
     const nums = partQuestionNumbers(part);
     const ok = nums.filter((n) => byNum.get(n)?.is_correct).length;
-    const qPane = h('div', { class: 'pane questions' });
-    qPane.append(h('div', { class: 'part-banner', html: `<b>${type === 'reading' ? 'Passage' : 'Part'} ${part.number}</b> · ${ok}/${nums.length} correct` }));
-    for (const g of part.groups || []) qPane.append(renderGroup(g, ctx));
-    if (type === 'reading') {
-      const pPane = h('div', { class: 'pane passage' });
-      if (part.title && !/^passage\s*\d+$/i.test(part.title)) pPane.append(h('div', { class: 'passage-title' }, part.title));
-      const pb = h('div', { class: 'passage-body', html: sanitizeContent(part.passage_html || '') });
-      pPane.append(pb);
-      try { applyHighlights(pb, highlights[part.number] || highlights[String(part.number)] || []); } catch { /* ignore */ }
-      content.replaceChildren(h('div', { class: 'review-layout' }, splitPane(pPane, qPane, { key: 'review', label: 'Resize passage and questions' })));
-    } else {
-      const top = h('div', { class: 'card card-pad', style: { marginBottom: '14px' } });
-      const src = part.audio_url || (part.audio ? mediaUrl(part.audio) : (part.audio_remote || ''));
-      if (src) {
-        audioEl = h('audio', { controls: true, preload: 'none', src, style: { width: '100%' } });
-        if (part.audio && part.audio_remote) audioEl.addEventListener('error', () => { if (audioEl.src !== part.audio_remote) audioEl.src = part.audio_remote; }, { once: true });
-        top.append(h('div', { class: 'small muted', style: { marginBottom: '6px' } }, `Part ${part.number} recording`), audioEl);
-      }
-      // The transcript opens beside the questions (resizable), so the answer and its evidence are both in view.
-      const tBtn = h('button', { class: 'btn sm', type: 'button', html: `${icon('doc')} Show transcript`, disabled: !part.transcript_html });
-      const tPane = h('div', { class: 'pane passage transcript' }, h('div', { class: 'transcript-title' }, `Part ${part.number} transcript`),
-        h('div', { html: sanitizeContent(part.transcript_html || '') }));
-      const layout = h('div', { class: 'review-layout single' }, qPane);
-      const drawLayout = (withT) => {
-        qPane.remove();
-        layout.className = withT ? 'review-layout' : 'review-layout single';
-        layout.replaceChildren(withT ? splitPane(tPane, qPane, { key: 'transcript', initial: 45, label: 'Resize transcript and questions' }) : qPane);
-        tBtn.innerHTML = `${icon('doc')} ${withT ? 'Hide' : 'Show'} transcript`;
-        showT = withT;
-      };
-      let showT = false;
-      tBtn.addEventListener('click', () => drawLayout(!showT));
-      top.append(h('div', { class: 'row', style: { marginTop: src ? '10px' : '0' } }, tBtn, part.transcript_html ? null : h('span', { class: 'small muted' }, 'No transcript available')));
-      content.replaceChildren(top, layout);
+    if (type === 'listening') {
+      const paper = () => h('div', null, ...(part.groups || []).map((g) => renderGroup(g, ctx)));
+      const r = listeningPartReview(part, byNum, { questionPaper: paper, onDraw: afterShow });
+      stopAudio = r.stop;
+      content.replaceChildren(r.el);
+      return;
     }
+    // reading: the passage (with the learner's highlights) beside the questions
+    const qPane = h('div', { class: 'pane questions' });
+    qPane.append(h('div', { class: 'part-banner', html: `<b>Passage ${part.number}</b> · ${ok}/${nums.length} correct` }));
+    for (const g of part.groups || []) qPane.append(renderGroup(g, ctx));
+    const pPane = h('div', { class: 'pane passage' });
+    if (part.title && !/^passage\s*\d+$/i.test(part.title)) pPane.append(h('div', { class: 'passage-title' }, part.title));
+    const pb = h('div', { class: 'passage-body', html: sanitizeContent(part.passage_html || '') });
+    pPane.append(pb);
+    try { applyHighlights(pb, highlights[part.number] || highlights[String(part.number)] || []); } catch { /* ignore */ }
+    content.replaceChildren(h('div', { class: 'review-layout' }, splitPane(pPane, qPane, { key: 'review', label: 'Resize passage and questions' })));
     afterShow();
   };
   parts.forEach((p, i) => {
@@ -224,7 +235,7 @@ function reviewView(test, type, byNum, highlights, afterShow = () => {}) {
     const ok = nums.filter((n) => byNum.get(n)?.is_correct).length;
     tabs.append(h('button', { type: 'button', role: 'tab', onclick: () => show(i) }, `${type === 'reading' ? 'Passage' : 'Part'} ${p.number} · ${ok}/${nums.length}`));
   });
-  if (parts.length) show(0);
+  if (parts.length) show(Math.min(parts.length - 1, Math.max(0, Number(store.get(partKey, 0)) || 0)));
   else content.append(emptyState('No parts in this test'));
   return wrap;
 }

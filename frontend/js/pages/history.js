@@ -3,6 +3,7 @@ import { api } from '../api.js';
 import { h, esc, icon, withStates, emptyState, fmtDate, fmtBand, fmtDuration, asList, store, debounce, parseDate } from '../ui.js';
 import { providerName, providerBadge } from '../state.js';
 import { modeLabel } from './speaking.js';
+import { confirmDeleteAttempt } from './result.js';
 import { setTitle } from '../app.js';
 
 const KINDS = [
@@ -35,6 +36,7 @@ export async function render(root) {
         detail: a.mode === 'imported' ? 'Imported · band only'
           : a.status === 'submitted' ? `${a.raw_score ?? '?'}/${a.total ?? 40} · ${fmtDuration(a.duration_sec)}` : '',
         band: a.band, status: a.status === 'submitted' ? '' : 'In progress', mode: a.mode,
+        attempt: a.mode === 'imported' ? null : a,   // deletable here (imported bands live in My Results.docx)
         href: a.status === 'submitted' ? `#/result/${a.id}` : `#/test/${encodeURIComponent(a.test_id)}/${a.id}${a.mock_id ? `?mode=mock&mock=${a.mock_id}` : ''}`,
       });
     }
@@ -84,9 +86,17 @@ export async function render(root) {
           <td style="max-width:420px"><a href="${r.href}" style="color:inherit;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(r.title)}</a></td>
           <td class="small muted">${r.provider ? `<span class="prov-badge ${esc(r.provider)}">${esc(providerBadge(r.provider))}</span> ` : ''}${esc(r.detail || '')}${r.status ? ` <span class="badge warn">${esc(r.status)}</span>` : ''}</td>
           <td>${r.band != null ? `<span class="band-pill">${fmtBand(r.band)}</span>` : '<span class="muted small">–</span>'}</td>
-          <td><a class="btn sm ghost" href="${r.href}">Open</a></td></tr>`).join('')}</tbody></table>
+          <td class="nowrap"><a class="btn sm ghost" href="${r.href}">Open</a>${r.attempt ? `<button class="icon-btn sm-del" type="button" data-del="${r.attempt.id}" title="Delete this result" aria-label="Delete this result">${icon('trash')}</button>` : ''}</td></tr>`).join('')}</tbody></table>
         ${shown.length > 500 ? '<p class="small muted" style="padding:10px 14px">Showing the latest 500.</p>' : ''}`;
     }
+    table.addEventListener('click', async (e) => {
+      const b = e.target.closest('[data-del]');
+      if (!b) return;
+      const i = rows.findIndex((r) => r.attempt && String(r.attempt.id) === b.dataset.del);
+      if (i < 0 || !(await confirmDeleteAttempt(rows[i].attempt))) return;
+      rows.splice(i, 1);
+      draw();
+    });
     draw();
   });
 }
