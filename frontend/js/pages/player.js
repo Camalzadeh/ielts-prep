@@ -3,6 +3,7 @@ import { api, mediaUrl } from '../api.js';
 import { h, esc, icon, toast, modal, confirmDialog, fmtClock, store, sanitizeContent, parseMaybeJSON } from '../ui.js';
 import { renderGroup, partQuestionNumbers } from '../components/questions.js';
 import { attachHighlighter } from '../components/highlight.js';
+import { splitPane } from '../components/split.js';
 import { navigate, nav, setTitle } from '../app.js';
 import { assistButton, setAssistContext, setAssistQType } from '../components/assist.js';
 
@@ -109,11 +110,7 @@ export async function render(root, params, query) {
   const passagePane = h('div', { class: 'pane passage', tabindex: '0', 'aria-label': 'Reading passage' });
   const questionsPane = h('div', { class: `pane questions${type === 'listening' ? ' full' : ''}`, 'aria-label': 'Questions' });
   if (type === 'reading') {
-    const split = h('div', { class: 'split' });
-    const divider = h('div', { class: 'divider', role: 'separator', tabindex: '0', 'aria-orientation': 'vertical', 'aria-label': 'Resize panes', title: 'Drag to resize' });
-    split.append(passagePane, divider, questionsPane);
-    body.append(split);
-    setupDivider(divider, passagePane, split);
+    body.append(splitPane(passagePane, questionsPane, { key: 'reading', initial: store.get('splitPct', 50), label: 'Resize passage and questions' }));
   } else {
     body.append(questionsPane);
   }
@@ -646,35 +643,4 @@ export async function render(root, params, query) {
     if (!S.submitted) { saveLocal(); autosave(true); }
     cleanupAll();
   };
-}
-
-function setupDivider(divider, left, container) {
-  const saved = store.get('splitPct', 50);
-  left.style.flexBasis = `${saved}%`;
-  let dragging = false;
-  const setPct = (pct) => {
-    pct = Math.max(25, Math.min(75, pct));
-    left.style.flexBasis = `${pct}%`;
-    store.set('splitPct', Math.round(pct));
-  };
-  divider.addEventListener('pointerdown', (e) => {
-    dragging = true;
-    divider.classList.add('drag');
-    divider.setPointerCapture(e.pointerId);
-    document.body.style.userSelect = 'none';
-  });
-  divider.addEventListener('pointermove', (e) => {
-    if (!dragging) return;
-    const r = container.getBoundingClientRect();
-    setPct(((e.clientX - r.left) / r.width) * 100);
-  });
-  const end = () => { dragging = false; divider.classList.remove('drag'); document.body.style.userSelect = ''; };
-  divider.addEventListener('pointerup', end);
-  divider.addEventListener('pointercancel', end);
-  divider.addEventListener('keydown', (e) => {
-    const cur = parseFloat(left.style.flexBasis) || 50;
-    if (e.key === 'ArrowLeft') { e.preventDefault(); setPct(cur - 3); }
-    if (e.key === 'ArrowRight') { e.preventDefault(); setPct(cur + 3); }
-  });
-  divider.addEventListener('dblclick', () => setPct(50));
 }

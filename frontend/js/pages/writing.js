@@ -3,7 +3,8 @@ import { api, mediaUrl } from '../api.js';
 import { h, esc, icon, toast, modal, withStates, emptyState, debounce, fmtDate, fmtDuration, essayTypeLabel, ESSAY_TYPES, asList, store, wordCount } from '../ui.js';
 import { writerView } from '../components/writer.js';
 import { analysisPanel } from '../components/analysis.js';
-import { annotatedText, writingCorrections } from '../components/inline-fix.js';
+import { annotatedText, writingCorrections, fixesToggle } from '../components/inline-fix.js';
+import { splitPane } from '../components/split.js';
 import { navigate, nav, setTitle } from '../app.js';
 
 export async function render(root, params, query) {
@@ -215,13 +216,13 @@ async function renderSubmission(root, id) {
       ${p.essay_type ? `<span class="badge">${esc(essayTypeLabel(p.essay_type))}</span>` : ''}
       ${p.source ? `<span class="badge">${esc(String(p.source).replace(/_/g, ' '))}</span>` : ''}</div>
     <div style="white-space:pre-wrap;line-height:1.65">${esc(p.prompt || '(prompt not available)')}</div>
-    ${p.image_path ? `<img src="${esc(mediaUrl(p.image_path))}" alt="Task visual" style="margin-top:12px;border:1px solid var(--border);border-radius:8px;background:#fff">` : ''}`;
+    ${p.image_path ? `<img class="zoomable" src="${esc(mediaUrl(p.image_path))}" alt="Task visual" title="Click to enlarge" style="margin-top:12px;border:1px solid var(--border);border-radius:8px;background:#fff">` : ''}`;
   const essayCard = h('div', { class: 'card card-pad' });
   essayCard.innerHTML = `<div class="row between" style="margin-bottom:10px"><h2 style="margin:0">Your answer</h2>
-      <div class="row small"><span class="badge ${wc >= min ? 'good' : 'bad'}">${wc} words</span>
+      <div class="row small"><span class="fix-toggle-slot"></span><span class="badge ${wc >= min ? 'good' : 'bad'}">${wc} words</span>
       ${s.time_spent_sec ? `<span class="badge">${esc(fmtDuration(s.time_spent_sec))}</span>` : ''}</div></div>
     <div class="essay-text">${esc(s.text || '')}</div>
-    <div class="small muted essay-ai-hint hidden" style="margin-top:8px">AI corrections are shown under each sentence; the full report is below.</div>`;
+    <div class="small muted essay-ai-hint hidden" style="margin-top:8px">AI corrections are shown under each sentence (switch to Compact to see only the marks — click one to open it); the full report is below.</div>`;
   // Under each sentence: the AI's corrections for it (when an analysis is on screen).
   const showCorrections = (j) => {
     const fixes = writingCorrections(j);
@@ -229,8 +230,11 @@ async function renderSubmission(root, id) {
     const next = fixes.length ? annotatedText(s.text || '', fixes) : h('div', { class: 'essay-text' }, s.text || '');
     old.replaceWith(next);
     essayCard.querySelector('.essay-ai-hint').classList.toggle('hidden', !fixes.length);
+    essayCard.querySelector('.fix-toggle-slot').replaceChildren(fixes.length ? fixesToggle(essayCard) : '');
   };
-  root.append(h('div', { class: 'grid grid-2', style: { marginBottom: '20px', alignItems: 'start' } }, promptCard, essayCard));
+  const split = splitPane(promptCard, essayCard, { key: 'essay', initial: 38, min: 22, max: 60, page: true, stackBelow: 820, label: 'Resize task and essay' });
+  split.classList.add('essay-split');
+  root.append(split);
   root.append(analysisPanel({
     target_type: 'writing', target_id: id, title: 'Analyse with AI',
     subtitle: `Band per criterion (${task === 1 ? 'TA' : 'TR'}, CC, LR, GRA), corrected sentences and a higher-band rewrite.`,

@@ -5,6 +5,7 @@ import { renderGroup, partQuestionNumbers } from '../components/questions.js';
 import { analysisPanel } from '../components/analysis.js';
 import { mistakesByQuestion, questionNote } from '../components/inline-fix.js';
 import { applyHighlights } from '../components/highlight.js';
+import { splitPane } from '../components/split.js';
 import { setTitle } from '../app.js';
 
 export function bandRing(band, size = 120, label = 'Band') {
@@ -119,12 +120,12 @@ export async function render(root, params) {
     h('div', { class: 'card-head' }, h('h3', null, 'Accuracy by question type')),
     h('div', { class: 'card-body' }, ...(types.length ? types.map((x) => {
       const r = x.ok / x.n;
-      return frag2(`<div class="qtype-row" style="grid-template-columns:minmax(120px,1.4fr) 1.4fr 48px">
+      return frag2(`<div class="qtype-row compact">
         <span>${esc(qtypeLabel(x.t))}</span>
         <div class="bar-track"><div class="bar-fill ${cls(r)}" style="width:${r * 100}%"></div></div>
         <span class="num small">${x.ok}/${x.n}</span></div>`);
     }) : [h('p', { class: 'muted' }, 'No details.')])));
-  root.append(h('div', { class: 'grid', style: { gridTemplateColumns: 'minmax(0,1.5fr) minmax(0,1fr)', marginBottom: '22px' } }, hero, typeCard));
+  root.append(h('div', { class: 'result-top' }, hero, typeCard));
 
   // ------------------------------------------------ review
   // AI notes go under each wrong question of the review (filled when an analysis is on screen).
@@ -190,7 +191,7 @@ function reviewView(test, type, byNum, highlights, afterShow = () => {}) {
       const pb = h('div', { class: 'passage-body', html: sanitizeContent(part.passage_html || '') });
       pPane.append(pb);
       try { applyHighlights(pb, highlights[part.number] || highlights[String(part.number)] || []); } catch { /* ignore */ }
-      content.replaceChildren(h('div', { class: 'review-layout' }, pPane, qPane));
+      content.replaceChildren(h('div', { class: 'review-layout' }, splitPane(pPane, qPane, { key: 'review', label: 'Resize passage and questions' })));
     } else {
       const top = h('div', { class: 'card card-pad', style: { marginBottom: '14px' } });
       const src = part.audio_url || (part.audio ? mediaUrl(part.audio) : (part.audio_remote || ''));
@@ -199,14 +200,22 @@ function reviewView(test, type, byNum, highlights, afterShow = () => {}) {
         if (part.audio && part.audio_remote) audioEl.addEventListener('error', () => { if (audioEl.src !== part.audio_remote) audioEl.src = part.audio_remote; }, { once: true });
         top.append(h('div', { class: 'small muted', style: { marginBottom: '6px' } }, `Part ${part.number} recording`), audioEl);
       }
+      // The transcript opens beside the questions (resizable), so the answer and its evidence are both in view.
       const tBtn = h('button', { class: 'btn sm', type: 'button', html: `${icon('doc')} Show transcript`, disabled: !part.transcript_html });
-      const tBox = h('div', { class: 'transcript hidden', html: sanitizeContent(part.transcript_html || '') });
-      tBtn.addEventListener('click', () => {
-        tBox.classList.toggle('hidden');
-        tBtn.innerHTML = `${icon('doc')} ${tBox.classList.contains('hidden') ? 'Show' : 'Hide'} transcript`;
-      });
+      const tPane = h('div', { class: 'pane passage transcript' }, h('div', { class: 'transcript-title' }, `Part ${part.number} transcript`),
+        h('div', { html: sanitizeContent(part.transcript_html || '') }));
+      const layout = h('div', { class: 'review-layout single' }, qPane);
+      const drawLayout = (withT) => {
+        qPane.remove();
+        layout.className = withT ? 'review-layout' : 'review-layout single';
+        layout.replaceChildren(withT ? splitPane(tPane, qPane, { key: 'transcript', initial: 45, label: 'Resize transcript and questions' }) : qPane);
+        tBtn.innerHTML = `${icon('doc')} ${withT ? 'Hide' : 'Show'} transcript`;
+        showT = withT;
+      };
+      let showT = false;
+      tBtn.addEventListener('click', () => drawLayout(!showT));
       top.append(h('div', { class: 'row', style: { marginTop: src ? '10px' : '0' } }, tBtn, part.transcript_html ? null : h('span', { class: 'small muted' }, 'No transcript available')));
-      content.replaceChildren(top, tBox, h('div', { class: 'review-layout single' }, qPane));
+      content.replaceChildren(top, layout);
     }
     afterShow();
   };

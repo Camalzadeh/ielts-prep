@@ -2,7 +2,7 @@
 import { api, uploadUrl } from '../api.js';
 import { h, esc, icon, toast, withStates, emptyState, fmtDate, fmtBand, fmtClock, asList, store, debounce, confirmDialog, parseMaybeJSON } from '../ui.js';
 import { analysisPanel } from '../components/analysis.js';
-import { annotatedText, speakingAnswers, mistakeCorrections } from '../components/inline-fix.js';
+import { annotatedText, speakingAnswers, mistakeCorrections, fixesToggle } from '../components/inline-fix.js';
 import { navigate, nav, setTitle } from '../app.js';
 import { assistButton, setAssistContext, setAssistDetail } from '../components/assist.js';
 
@@ -113,7 +113,7 @@ export async function speakingRunner(root, opts) {
   });
   head.querySelector('.page-actions').append(autoToggle, finishNow, assistButton());
   const progress = h('div', { class: 'row small muted', style: { marginBottom: '12px' } });
-  const stage = h('div', { class: 'grid', style: { gridTemplateColumns: 'minmax(0,1.3fr) minmax(0,1fr)', alignItems: 'start' } });
+  const stage = h('div', { class: 'grid speak-stage' });
   const left = h('div', { class: 'stack' });
   const right = h('div', { class: 'stack' });
   stage.append(left, right);
@@ -509,7 +509,10 @@ async function renderSession(root, id) {
     }
     if (!responses.length) { respBox.replaceChildren(emptyState('No answers recorded in this session')); return; }
     const open = new Set([...respBox.querySelectorAll('details[open]')].map((d) => d.dataset.id));
-    respBox.replaceChildren(...responses.map((r, i) => responseCard(r, i, open)));
+    const hasFixes = [...aiAnswers.values()].some((a) => a.corrections.length) || aiLoose.length;
+    respBox.replaceChildren(...(hasFixes ? [h('div', { class: 'row between' },
+      h('span', { class: 'small muted' }, 'Corrections are marked in each transcript.'), fixesToggle(respBox))] : []),
+    ...responses.map((r, i) => responseCard(r, i, open)));
   }
   function responseCard(r, i, open) {
     const m = parseMaybeJSON(r.metrics, null) || {};

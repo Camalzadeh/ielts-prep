@@ -1,5 +1,5 @@
 // App shell + hash router.
-import { icon, esc, h, errorState, loading } from './ui.js';
+import { icon, esc, h, errorState, loading, zoomImage } from './ui.js';
 import { state, loadSettings, setProvider, onStateChange, currentTheme, setTheme } from './state.js';
 import { assistButton, installSelectionTranslator, loadAssistSettings, clearAssistContext } from './components/assist.js';
 
@@ -187,6 +187,12 @@ async function route() {
 }
 
 window.addEventListener('hashchange', route);
+// Task charts, question diagrams and article pictures open full-screen on click.
+const ZOOMABLE = 'img.zoomable, .q-image img, .passage-body img, .kb-article img, .assist-doc img';
+document.addEventListener('click', (e) => {
+  const img = e.target.closest?.(ZOOMABLE);
+  if (img && img.naturalWidth && !img.closest('a')) zoomImage(img.currentSrc || img.src, img.alt);
+});
 // No browser find (Ctrl+F / Cmd+F / F3 / Ctrl+G): the real exam has none, so answers can't be searched for.
 window.addEventListener('keydown', (e) => {
   const k = e.key.toLowerCase();

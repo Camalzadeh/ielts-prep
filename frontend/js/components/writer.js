@@ -2,6 +2,7 @@
 import { mediaUrl } from '../api.js';
 import { h, esc, icon, toast, fmtClock, wordCount, store, confirmDialog, essayTypeLabel, modal } from '../ui.js';
 import { assistButton, setAssistContext } from './assist.js';
+import { splitPane } from './split.js';
 
 /**
  * opts: {
@@ -43,7 +44,9 @@ export function writerView(opts) {
   const submitBtn = h('button', { class: 'btn primary', type: 'button', html: `${icon('check')} ${tasks.length > 1 ? 'Submit both tasks' : 'Submit essay'}` });
   const right = h('div', { class: 'writer-right' }, ta,
     h('div', { class: 'writer-foot' }, wcEl, h('span', { class: 'spacer' }), saveEl, submitBtn));
-  el.append(h('div', { class: 'writer', style: { flex: '1', height: 'auto', minHeight: '0' } }, left, right));
+  const split = splitPane(left, right, { key: 'writer', initial: 44, min: 20, max: 70, label: 'Resize task and essay' });
+  split.classList.add('writer');
+  el.append(split);
 
   function minWords(t) { return Number(t.prompt.task) === 1 ? 150 : 250; }
   function drawLeft() {
@@ -61,7 +64,7 @@ export function writerView(opts) {
         ? 'You should spend about 20 minutes on this task. Write at least 150 words.'
         : 'You should spend about 40 minutes on this task. Write at least 250 words.'}</p>
       <div class="prompt-text">${esc(p.prompt)}</div>
-      ${p.image_path || p.image ? `<img src="${esc(mediaUrl(p.image_path || p.image))}" alt="Task 1 visual">` : ''}
+      ${p.image_path || p.image ? `<img class="zoomable" src="${esc(mediaUrl(p.image_path || p.image))}" alt="Task 1 visual" title="Click to enlarge">` : ''}
       ${task === 2 ? '<p class="muted small" style="margin-top:14px">Give reasons for your answer and include any relevant examples from your own knowledge or experience.</p>' : ''}`;
     const img = left.querySelector('img');
     if (img) img.addEventListener('error', () => { img.replaceWith(h('div', { class: 'error-box small' }, 'Image not found: ' + (p.image_path || p.image))); });

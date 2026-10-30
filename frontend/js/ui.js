@@ -205,6 +205,27 @@ export function confirmDialog(title, message, okLabel = 'OK', kind = 'primary') 
   }).then((v) => !!v);
 }
 
+/** Full-screen view of an image: fitted to the screen, click (or "Actual size") for full resolution. */
+export function zoomImage(src, alt = '') {
+  const prevFocus = document.activeElement;
+  const img = h('img', { src, alt });
+  const stage = h('div', { class: 'zoom-stage' }, img);
+  const sizeBtn = h('button', { type: 'button' }, 'Actual size');
+  const closeBtn = h('button', { type: 'button', 'aria-label': 'Close' }, 'Close ✕');
+  const back = h('div', { class: 'zoom-backdrop', role: 'dialog', 'aria-modal': 'true', 'aria-label': alt || 'Image' },
+    h('div', { class: 'zoom-bar' }, h('span', null, alt || ''), h('span', { class: 'spacer' }), sizeBtn, closeBtn), stage);
+  const toggle = () => { stage.classList.toggle('full'); sizeBtn.textContent = stage.classList.contains('full') ? 'Fit to screen' : 'Actual size'; };
+  const close = () => { back.remove(); document.removeEventListener('keydown', onKey, true); prevFocus?.focus?.(); };
+  const onKey = (e) => { if (e.key === 'Escape') { e.stopPropagation(); e.preventDefault(); close(); } };
+  img.addEventListener('click', toggle);
+  sizeBtn.addEventListener('click', toggle);
+  closeBtn.addEventListener('click', close);
+  stage.addEventListener('click', (e) => { if (e.target === stage) close(); });
+  document.addEventListener('keydown', onKey, true);
+  document.body.append(back);
+  closeBtn.focus();
+}
+
 // ---------------------------------------------------------------- states
 export function loading(text = 'Loading…') {
   return frag(`<div class="loading-block"><span class="spinner"></span> ${esc(text)}</div>`);
