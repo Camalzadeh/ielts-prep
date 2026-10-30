@@ -806,3 +806,10 @@ img.zoomable, .q-image img, .passage-body img, .kb-article img, .assist-doc img 
   .toasts { left: 12px; right: 12px; }
   .toast { max-width: none; }
 }
+
+/* help drawer: listening transcript (practice only) */
+.transcript-text { font-family: var(--font-reading); line-height: 1.75; }
+.transcript-text p { margin: 0 0 .7em; padding: 2px 4px; border-radius: 4px; }
+.icon-btn.sm-del { width: 30px; height: 30px; margin-left: 4px; vertical-align: middle; color: var(--text-3); }
+.icon-btn.sm-del:hover { color: var(--bad); border-color: color-mix(in srgb, var(--bad) 40%, var(--border)); }
+.icon-btn.sm-del svg { width: 15px; height: 15px; }

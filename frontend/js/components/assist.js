@@ -3,7 +3,8 @@
 // plus "select text -> translate" anywhere in the app. Pages say what they are about with setAssistContext();
 // in mock exams the assistant is off unless the `assist_in_mock` setting is on (a real exam has no help).
 import { api } from '../api.js';
-import { h, esc, icon, toast, renderMarkdown, qtypeLabel, debounce, store } from '../ui.js';
+import { h, esc, icon, toast, renderMarkdown, qtypeLabel, debounce, store, sanitizeContent } from '../ui.js';
+import { excerptBlock, flash } from './transcript.js';
 
 // Which knowledge-base categories belong to which section.
 const SECTION_CATEGORIES = {
@@ -38,22 +39,25 @@ const TYPE_KEYWORDS = {
   diagram_labelling: ['diagram', 'label'],
 };
 
-const EMPTY = { section: null, qtype: null, essayType: null, mock: false, part: null, topic: '' };
+// transcript (listening practice only): { attemptId(), part(), question() } from the player
+const EMPTY = { section: null, qtype: null, essayType: null, mock: false, part: null, topic: '', transcript: null };
 const ctx = { ...EMPTY };
 
 // Tabs per section, in the order they are offered (the first one opens by default).
 const TABS = {
   tactics: ['target', 'Tactics'], phrases: ['writing', 'Phrases'], rules: ['rules', 'Rules'],
-  vocab: ['book', 'Words'], translate: ['translate', 'Translate'],
+  vocab: ['book', 'Words'], translate: ['translate', 'Translate'], transcript: ['listening', 'Transcript'],
 };
 const SECTION_TABS = {
   reading: ['tactics', 'rules', 'vocab', 'translate'],
-  listening: ['tactics', 'rules', 'vocab', 'translate'],
+  listening: ['tactics', 'transcript', 'rules', 'vocab', 'translate'],
   writing1: ['phrases', 'tactics', 'rules', 'vocab', 'translate'],
   writing2: ['phrases', 'tactics', 'rules', 'vocab', 'translate'],
   speaking: ['tactics', 'phrases', 'vocab', 'rules', 'translate'],
 };
-const tabsFor = () => SECTION_TABS[ctx.section] || ['rules', 'vocab', 'translate'];
+// The transcript is a practice aid: never offered in exam mode (the server refuses it there too).
+const tabsFor = () => (SECTION_TABS[ctx.section] || ['rules', 'vocab', 'translate'])
+  .filter((t) => t !== 'transcript' || (ctx.transcript && !ctx.mock));
 let lastTextarea = null;   // the essay box phrases are inserted into
 let settings = { translate_to: 'az', assist_in_mock: '0' };
 let kbList = null;
@@ -64,6 +68,11 @@ export const LANGS = { az: 'Azərbaycan', ru: 'Русский', tr: 'Türkçe', 
 export function setAssistContext(next) {
   Object.assign(ctx, EMPTY, next);
   if (drawer && drawer.isConnected) openDrawer(tabsFor().includes(drawer.dataset.tab) ? drawer.dataset.tab : undefined);
+  else if (store.get('assist.open', false) && enabled()) openDrawer();  // it was open on the previous screen
+}
+/** Listening: the part on screen changed (the transcript tab follows it). */
+export function assistPartChanged() {
+  if (drawer && drawer.isConnected && drawer.dataset.tab === 'transcript') openDrawer('transcript');
 }
 /** Speaking: the part / topic of the question on screen. */
 export function setAssistDetail(detail) {
@@ -75,7 +84,7 @@ export function setAssistQType(qtype) {
   if (ctx.qtype === qtype) return;
   ctx.qtype = qtype;
 }
-export function clearAssistContext() { Object.assign(ctx, EMPTY); closeDrawer(); }
+export function clearAssistContext() { Object.assign(ctx, EMPTY); closeDrawer(false); }
 
 function enabled() { return !ctx.mock || settings.assist_in_mock === '1'; }
 
@@ -87,13 +96,32 @@ export async function loadAssistSettings() {
 export function assistButton({ compact = false, mock = ctx.mock } = {}) {
   const b = h('button', { class: compact ? 'icon-btn' : 'btn sm', type: 'button', title: 'Tactics, phrases, rules, vocabulary & translator (Alt+H)',
     'aria-label': 'Open study assistant', html: compact ? icon('rules') : `${icon('rules')} Help` });
-  b.addEventListener('click', () => openDrawer());
+  b.addEventListener('click', () => (drawer?.isConnected ? closeDrawer() : openDrawer()));
   if (mock && settings.assist_in_mock !== '1') b.hidden = true;
   return b;
 }
 
+// ------------------------------------------------------------------ remembered state
+// The drawer keeps what the learner set up: whether it is open, the last tab per section and, per section and
+// tab, their choices (guide, card, view, search text) and scroll position. Plain localStorage via `store`.
+const scopeKey = (tab) => `assist.${ctx.section || 'any'}.${tab}`;
+const memory = (tab) => store.get(scopeKey(tab), {}) || {};
+const remember = (tab, patch) => store.set(scopeKey(tab), { ...memory(tab), ...patch });
+
+/** Restore the body's scroll for `tab` (optionally under a sub-key) and keep saving it. */
+function keepScroll(body, tab, key = 'scroll') {
+  const y = memory(tab)[key];
+  if (y) body.scrollTop = y;
+  body.onscroll = debounce(() => { if (drawer?.dataset.tab === tab) remember(tab, { [key]: body.scrollTop }); }, 150);
+}
+
 // ------------------------------------------------------------------ drawer
-function closeDrawer() { if (drawer) { drawer.remove(); drawer = null; } dock(); }
+/** `byUser`: the learner closed it (stay closed); otherwise the page went away (reopen on the next one). */
+function closeDrawer(byUser = true) {
+  if (drawer) { drawer.remove(); drawer = null; }
+  if (byUser) store.set('assist.open', false);
+  dock();
+}
 
 // Width: drag the drawer's left edge (or focus it and use the arrow keys; double-click resets). On a wide
 // screen the page moves aside (docked) so the drawer never covers the essay or the questions.
@@ -149,7 +177,10 @@ function tabStrip(tabs, active) {
 
 export function openDrawer(tab, { text } = {}) {
   const tabs = tabsFor();
-  if (!tab || !TABS[tab]) tab = tabs[0];
+  if (!tab || !TABS[tab]) {
+    const last = store.get(`assist.${ctx.section || 'any'}.tab`);
+    tab = tabs.includes(last) ? last : tabs[0];
+  }
   if (!tabs.includes(tab)) tabs.push(tab);
   if (!enabled()) { toast('The study assistant is off during mock exams (Settings → Study assistant).'); return; }
   if (!drawer || !drawer.isConnected) {
@@ -157,18 +188,21 @@ export function openDrawer(tab, { text } = {}) {
     document.body.append(drawer);
   }
   drawer.dataset.tab = tab;
+  store.set(`assist.${ctx.section || 'any'}.tab`, tab);
+  store.set('assist.open', true);
   drawer.replaceChildren(
     drawerGrip(),
     h('div', { class: 'assist-head' },
       tabStrip(tabs, tab),
-      h('button', { class: 'icon-btn', type: 'button', 'aria-label': 'Close', title: 'Close (Esc)', html: icon('close'), onclick: closeDrawer })),
+      h('button', { class: 'icon-btn', type: 'button', 'aria-label': 'Close', title: 'Close (Esc)', html: icon('close'), onclick: () => closeDrawer() })),
     h('div', { class: 'assist-body' }));
   setDrawerW(drawerW, false);
   if (tab === 'rules') renderRules();
   else if (tab === 'tactics') renderTactics();
   else if (tab === 'phrases') renderPhrases();
   else if (tab === 'vocab') renderVocab();
-  else renderTranslate(text || '');
+  else if (tab === 'transcript') renderTranscript();
+  else renderTranslate(text);
 }
 
 async function renderRules() {
@@ -181,7 +215,9 @@ async function renderRules() {
   if (!docs.length) { body.replaceChildren(h('p', { class: 'muted' }, 'No guides for this section yet.')); return; }
   // pick the guide that best fits what is on screen
   const want = (ctx.essayType || '').replace(/_/g, ' ').toLowerCase();
-  const pick = (want && docs.find((d) => `${d.title} ${d.tags || ''}`.toLowerCase().includes(want.split(' ')[0])))
+  const mem = memory('rules');
+  const pick = docs.find((d) => d.slug === mem.slug)
+    || (want && docs.find((d) => `${d.title} ${d.tags || ''}`.toLowerCase().includes(want.split(' ')[0])))
     || docs.find((d) => d.category === (cats || [])[0]) || docs[0];
   const select = h('select', { class: 'input', 'aria-label': 'Guide' },
     ...docs.map((d) => h('option', { value: d.slug, selected: d.slug === pick.slug ? '' : null }, d.title)));
@@ -193,20 +229,23 @@ async function renderRules() {
         ctx.section ? `Guides for ${SECTION_LABEL[ctx.section]}` : 'All guides'),
       select, hint),
     content);
-  const show = async (slug) => {
+  // the same guide for the same question type reopens where it was left; otherwise jump to the type's tips
+  const show = async (slug, restore) => {
     content.replaceChildren(h('p', { class: 'muted small' }, 'Loading…'));
     try {
       const d = await api.get(`/api/kb/${encodeURIComponent(slug)}`);
       content.innerHTML = renderMarkdown((d.content_md || '').replace(/^﻿?---\r?\n[\s\S]*?\r?\n---\r?\n?/, ''), { base: '/media/kb/' });
-      jumpToType(content, hint);
+      jumpToType(content, hint, !restore);
+      if (!restore) remember('rules', { slug, qtype: ctx.qtype, scroll: 0 });
+      keepScroll(body, 'rules');
     } catch (e) { content.replaceChildren(h('p', { class: 'muted' }, e.message)); }
   };
-  select.addEventListener('change', () => show(select.value));
-  show(pick.slug);
+  select.addEventListener('change', () => show(select.value, false));
+  show(pick.slug, pick.slug === mem.slug && mem.qtype === ctx.qtype);
 }
 
 /** Scroll to the part of the guide about the current question type and mark it. */
-function jumpToType(content, hint) {
+function jumpToType(content, hint, scroll = true) {
   hint.replaceChildren();
   const words = TYPE_KEYWORDS[ctx.qtype] || (ctx.qtype ? [qtypeLabel(ctx.qtype).toLowerCase()] : []);
   if (!words.length) return;
@@ -217,7 +256,7 @@ function jumpToType(content, hint) {
   target.style.scrollMarginTop = `${(content.parentElement.querySelector('.assist-sticky')?.offsetHeight || 0) + 24}px`;
   hint.append(h('button', { class: 'btn sm', type: 'button', html: `${icon('target')} Tips for this question type: ${esc(qtypeLabel(ctx.qtype))}`,
     onclick: () => target.scrollIntoView({ block: 'start', behavior: 'smooth' }) }));
-  setTimeout(() => target.scrollIntoView({ block: 'start' }), 50);
+  if (scroll) setTimeout(() => target.scrollIntoView({ block: 'start' }), 50);
 }
 
 // ------------------------------------------------------------------ tactics
@@ -269,15 +308,21 @@ async function renderTactics() {
   // writing: only the cards of the task being written (task1_* or task2_*)
   const prefix = ctx.section === 'writing1' ? 'task1_' : ctx.section === 'writing2' ? 'task2_' : '';
   const all = cards.filter((c) => !prefix || c.type.startsWith(prefix) || c.type === 'general');
-  let shown = current || general || all[0];
+  // a card picked by hand stays picked while the question type on screen is the same
+  const mem = memory('tactics');
+  let shown = (mem.for === (target.type || null) && all.find((c) => c.type === mem.shown)) || current || general || all[0];
   const slot = h('div');
   const chips = h('div', { class: 'tq-types' });
   const draw = () => {
+    const card = tacticCard(shown, shown === current);
+    const full = card.querySelector('.tq-full');
+    full.open = !!memory('tactics').full;
+    full.addEventListener('toggle', () => remember('tactics', { full: full.open }));
     slot.replaceChildren(
       !current && target.type ? h('p', { class: 'small muted' }, `No card for "${qtypeLabel(target.type)}" yet.`) : '',
-      tacticCard(shown, shown === current));
+      card);
     chips.replaceChildren(...all.map((c) => h('button', { type: 'button', class: `tq-type${c === shown ? ' active' : ''}${c === current ? ' now' : ''}`,
-      onclick: () => { shown = c; draw(); body.scrollTop = 0; } }, tacticTitle(c))));
+      onclick: () => { shown = c; remember('tactics', { shown: c.type, for: target.type || null, scroll: 0 }); draw(); body.scrollTop = 0; } }, tacticTitle(c))));
   };
   draw();
   const fits = (tb) => !(tb.applies_to || []).length || (target.type && tb.applies_to.includes(target.type));
@@ -286,6 +331,8 @@ async function renderTactics() {
     h('h4', { class: 'tq-heading' }, 'Other question types'), chips,
     useful.length ? h('h4', { class: 'tq-heading' }, 'Word tables') : '',
     ...useful.map((tb) => cheatTable(tb, { canInsert: false })));
+  if (mem.for === (target.type || null)) keepScroll(body, 'tactics');
+  else { remember('tactics', { for: target.type || null, shown: shown.type, scroll: 0 }); keepScroll(body, 'tactics'); }
 }
 
 // ------------------------------------------------------------------ phrase bank
@@ -327,8 +374,6 @@ function cheatTable(tb, { canInsert, forTask = false, query = '' }) {
     tb.example ? h('div', { class: 'cs-example' }, tb.example) : '');
 }
 
-const PHRASE_VIEW_KEY = 'ielts.assist.phraseView';
-function phraseView() { try { return localStorage.getItem(PHRASE_VIEW_KEY) || 'tables'; } catch { return 'tables'; } }
 
 // Category colour by its group ("Trends: ...", "Overview: ...") so related lists look alike.
 const CAT_COLORS = ['blue', 'green', 'purple', 'amber', 'teal', 'pink', 'red'];
@@ -353,16 +398,25 @@ async function renderPhrases() {
   const orderedCats = [...cats.filter(fits), ...cats.filter((c) => !fits(c))];
   const orderedTables = [...tables.filter(fits), ...tables.filter((tb) => !fits(tb))];
   const canInsert = skill !== 'speaking';
-  let view = tables.length ? phraseView() : 'list';
+  const mem = memory('phrases');
+  let view = tables.length ? (mem.view || 'tables') : 'list';
+  const openCats = new Set(mem.open || []);   // categories the learner opened or closed by hand
+  const closedCats = new Set(mem.closed || []);
 
-  const search = h('input', { class: 'input', type: 'search', placeholder: 'Search (e.g. increase, however, in my opinion)', 'aria-label': 'Search phrases' });
+  const search = h('input', { class: 'input', type: 'search', value: mem.q || '', placeholder: 'Search (e.g. increase, however, in my opinion)', 'aria-label': 'Search phrases' });
   const seg = h('div', { class: 'provider-switch', role: 'group', 'aria-label': 'Phrase view' });
   const list = h('div', { class: 'phr-list' });
   const drawSeg = () => seg.replaceChildren(...[['tables', 'Tables'], ['list', 'All phrases']].map(([k, l]) =>
     h('button', { type: 'button', 'aria-pressed': String(view === k), onclick: () => {
-      view = k; try { localStorage.setItem(PHRASE_VIEW_KEY, k); } catch { /* private mode */ }
+      view = k; remember('phrases', { view: k, scroll: 0 });
       drawSeg(); draw();
     } }, l)));
+  const trackCat = (el, name) => el.addEventListener('toggle', () => {
+    if (search.value.trim()) return;  // opened by a search, not by hand
+    (el.open ? openCats : closedCats).add(name);
+    (el.open ? closedCats : openCats).delete(name);
+    remember('phrases', { open: [...openCats], closed: [...closedCats] });
+  });
 
   const item = (it) => h('div', { class: `phr-item${it.level === 'advanced' ? ' adv' : ''}` },
     h('div', { class: 'row between', style: { gap: '6px', alignItems: 'flex-start' } },
@@ -377,12 +431,17 @@ async function renderPhrases() {
     const shown = orderedCats
       .map((c) => ({ c, items: (c.items || []).filter((it) => !q || `${c.category} ${it.phrase} ${it.pattern || ''} ${it.example || ''}`.toLowerCase().includes(q)) }))
       .filter((x) => x.items.length);
-    return shown.length ? shown.map(({ c, items }) => h('details', { class: `phr-cat cs-${catColor(c.category)}`, open: (q || fits(c)) ? '' : null },
-      h('summary', null, h('span', { class: 'phr-dot' }), c.category,
-        fits(c) ? h('span', { class: 'cs-tag' }, 'for this task') : '',
-        h('span', { class: 'muted small', style: { marginLeft: 'auto' } }, `${items.length}`)),
-      c.when ? h('div', { class: 'small muted', style: { margin: '2px 0 6px' } }, c.when) : '',
-      ...items.map(item))) : [h('p', { class: 'muted small' }, 'No phrase matches.')];
+    return shown.length ? shown.map(({ c, items }) => {
+      const open = q || openCats.has(c.category) || (fits(c) && !closedCats.has(c.category));
+      const el = h('details', { class: `phr-cat cs-${catColor(c.category)}`, open: open ? '' : null },
+        h('summary', null, h('span', { class: 'phr-dot' }), c.category,
+          fits(c) ? h('span', { class: 'cs-tag' }, 'for this task') : '',
+          h('span', { class: 'muted small', style: { marginLeft: 'auto' } }, `${items.length}`)),
+        c.when ? h('div', { class: 'small muted', style: { margin: '2px 0 6px' } }, c.when) : '',
+        ...items.map(item));
+      trackCat(el, c.category);
+      return el;
+    }) : [h('p', { class: 'muted small' }, 'No phrase matches.')];
   };
   const drawTables = (q) => {
     const out = orderedTables.map((tb) => cheatTable(tb, { canInsert, forTask: fits(tb), query: q })).filter(Boolean);
@@ -392,18 +451,20 @@ async function renderPhrases() {
     const q = search.value.trim().toLowerCase();
     list.replaceChildren(...(view === 'tables' ? drawTables(q) : drawList(q)));
   };
-  search.addEventListener('input', debounce(draw, 120));
+  search.addEventListener('input', debounce(() => { remember('phrases', { q: search.value }); draw(); }, 120));
   drawSeg();
   body.replaceChildren(h('div', { class: 'assist-sticky' },
     tables.length ? h('div', { class: 'row between', style: { marginBottom: '8px', gap: '8px' } }, seg,
       h('span', { class: 'small muted' }, canInsert ? 'Click a word to insert it' : 'Click a word to copy it')) : '',
     search), list);
   draw();
+  keepScroll(body, 'phrases');
 }
 
 async function renderVocab() {
   const body = drawer.querySelector('.assist-body');
-  const input = h('input', { class: 'input', type: 'search', placeholder: 'Search course words & phrases', 'aria-label': 'Search vocabulary' });
+  const input = h('input', { class: 'input', type: 'search', value: memory('vocab').q || '', placeholder: 'Search course words & phrases', 'aria-label': 'Search vocabulary' });
+  let restored = false;
   const list = h('div', { class: 'assist-vocab' });
   const topicBox = h('div');
   body.replaceChildren(topicBox, input, list);
@@ -425,21 +486,62 @@ async function renderVocab() {
         v.meaning ? h('div', { class: 'small' }, v.meaning) : '',
         v.example ? h('div', { class: 'small muted' }, `“${v.example}”`) : ''))
         : [h('p', { class: 'muted small' }, 'No match. Try the Translate tab.')]));
+      if (!restored) { restored = true; keepScroll(body, 'vocab'); }   // back where it was, once the list is there
     } catch (e) { list.replaceChildren(h('p', { class: 'muted' }, e.message)); }
   }, 200);
-  input.addEventListener('input', run);
+  input.addEventListener('input', () => { remember('vocab', { q: input.value, scroll: 0 }); run(); });
   run();
-  setTimeout(() => input.focus(), 0);
+  setTimeout(() => input.focus({ preventScroll: true }), 0);
 }
 
+// ------------------------------------------------------------------ transcript (listening practice only)
+const transcripts = new Map();   // `${attemptId}.${part}` -> { transcript_html, anchors }
+
+async function renderTranscript() {
+  const body = drawer.querySelector('.assist-body');
+  const t = ctx.transcript;
+  if (!t || ctx.mock) { body.replaceChildren(h('p', { class: 'muted' }, 'The transcript is only available in practice mode.')); return; }
+  const id = t.attemptId(), part = t.part();
+  if (!id) { body.replaceChildren(h('p', { class: 'muted' }, 'Start the test to read along with the part you are listening to.')); return; }
+  const key = `${id}.${part}`;
+  let data = transcripts.get(key);
+  if (!data) {
+    body.replaceChildren(h('p', { class: 'muted small' }, 'Loading…'));
+    try { data = await api.get(`/api/attempts/${id}/transcript`, { part }); transcripts.set(key, data); }
+    catch (e) { body.replaceChildren(h('p', { class: 'muted' }, e.message)); return; }
+    if (drawer?.dataset.tab !== 'transcript' || t.part() !== part) return;  // moved on while loading
+  }
+  const text = h('div', { class: 'assist-doc transcript-text',
+    html: sanitizeContent(data.transcript_html || '<p class="muted">No transcript for this part.</p>') });
+  // shows the line around the question on screen, without marking the answer itself
+  const find = h('button', { class: 'btn sm', type: 'button', html: `${icon('target')} Find my question`, onclick: () => {
+    const n = t.question();
+    const block = data.anchors?.[n] && excerptBlock(text, data.anchors[n]);
+    if (block) flash(block); else toast(`No transcript location for question ${n}.`);
+  } });
+  body.replaceChildren(
+    h('div', { class: 'assist-sticky' },
+      h('div', { class: 'row between' }, h('b', null, `Part ${part} transcript`), find),
+      h('div', { class: 'small muted', style: { marginTop: '4px' } }, 'Practice aid: read along when the audio is hard to follow. Off in exam mode.')),
+    text);
+  keepScroll(body, 'transcript', `scroll.${key}`);
+}
+
+/** `text` comes from "open in the assistant"; otherwise the last text is shown again with its translation. */
 function renderTranslate(text) {
   const body = drawer.querySelector('.assist-body');
   const area = h('textarea', { class: 'input', rows: '4', placeholder: 'Type or paste English (or Azerbaijani) text…', 'aria-label': 'Text to translate' });
+  if (text === undefined) text = memory('translate').text || '';
   area.value = text;
   const out = h('div', { class: 'assist-result' });
-  const go = async () => { if (area.value.trim()) out.replaceChildren(await translationView(area.value.trim(), langSelect.value)); };
+  const go = async () => {
+    if (!area.value.trim()) return;
+    remember('translate', { text: area.value });
+    out.replaceChildren(await translationView(area.value.trim(), langSelect.value));
+  };
   const langSelect = langPicker(go);
   area.addEventListener('keydown', (e) => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) go(); });
+  area.addEventListener('input', debounce(() => remember('translate', { text: area.value }), 300));
   body.replaceChildren(area,
     h('div', { class: 'row', style: { gap: '8px', margin: '8px 0' } },
       h('button', { class: 'btn primary sm', type: 'button', html: `${icon('translate')} Translate`, onclick: go }),

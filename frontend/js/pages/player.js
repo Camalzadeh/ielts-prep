@@ -5,7 +5,7 @@ import { renderGroup, partQuestionNumbers } from '../components/questions.js';
 import { attachHighlighter } from '../components/highlight.js';
 import { splitPane } from '../components/split.js';
 import { navigate, nav, setTitle } from '../app.js';
-import { assistButton, setAssistContext, setAssistQType } from '../components/assist.js';
+import { assistButton, setAssistContext, setAssistQType, assistPartChanged } from '../components/assist.js';
 
 const AUTOSAVE_MS = 5000;
 
@@ -83,7 +83,10 @@ export async function render(root, params, query) {
   }
 
   // ------------------------------------------------------------------ layout
-  setAssistContext({ section: type, mock: mode === 'mock' });
+  // listening practice: the help drawer can show the transcript of the part on screen (never in a mock)
+  const transcript = type === 'listening' && mode === 'practice'
+    ? { attemptId: () => S.attemptId, part: () => parts[S.partIdx]?.number, question: () => S.current } : null;
+  setAssistContext({ section: type, mock: mode === 'mock', transcript });
   const qTypeOf = (n) => { for (const p of test.parts || []) for (const g of p.groups || []) if (g.range && n >= g.range[0] && n <= g.range[1]) return g.type; return null; };
   const player = h('div', { class: `player ${type} fs-${store.get('fontSize', 'm')}` });
   const timerEl = h('div', { class: `timer${S.timerHidden ? ' hidden-time' : ''}`, role: 'timer', 'aria-live': 'off', html: `${icon('clock')}<span class="t-val">--:--</span>` });
@@ -199,6 +202,7 @@ export async function render(root, params, query) {
     drawPalette();
     if (audio && mode === 'practice') loadAudioForPart(i, false);
     saveLocal();
+    assistPartChanged();
   }
 
   // ------------------------------------------------------------------ palette
@@ -582,6 +586,7 @@ export async function render(root, params, query) {
     }
     S.started = true;
     saveLocal();
+    assistPartChanged();   // the transcript tab can load now that there is an attempt
     startTimer();
     if (audio) {
       if (mode === 'mock') {

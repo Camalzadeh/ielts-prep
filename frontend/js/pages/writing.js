@@ -134,6 +134,11 @@ async function addPrompt(done) {
     <div class="field"><label for="np-task">Task</label><select id="np-task" class="select"><option value="2">Task 2 (essay)</option><option value="1">Task 1 (report)</option></select></div>
     <div class="field"><label for="np-type">Type</label><select id="np-type" class="select">${Object.entries(ESSAY_TYPES).map(([k, v]) => `<option value="${k}">${esc(v)}</option>`).join('')}</select></div>
     <div class="field"><label for="np-text">Prompt</label><textarea id="np-text" class="textarea" rows="6" placeholder="Paste the question…"></textarea></div>`;
+  // a half-filled form survives closing the dialog; it is cleared once the prompt is added
+  const fields = { task: body.querySelector('#np-task'), essay_type: body.querySelector('#np-type'), prompt: body.querySelector('#np-text') };
+  const draft = store.get('writing.newPrompt', {});
+  for (const [k, el] of Object.entries(fields)) if (draft[k] != null) el.value = draft[k];
+  body.addEventListener('input', () => store.set('writing.newPrompt', Object.fromEntries(Object.entries(fields).map(([k, el]) => [k, el.value]))));
   const v = await modal({
     title: 'Add your own prompt', body,
     actions: [{ label: 'Cancel', value: null }, { label: 'Add prompt', kind: 'primary', value: (b) => ({
@@ -142,7 +147,7 @@ async function addPrompt(done) {
   });
   if (!v) return;
   if (!v.prompt) { toast('The prompt text is empty.', 'error'); return; }
-  try { await api.post('/api/writing/prompts', v); toast('Prompt added.', 'good'); done(); }
+  try { await api.post('/api/writing/prompts', v); store.remove('writing.newPrompt'); toast('Prompt added.', 'good'); done(); }
   catch (e) { toast(`Could not add: ${e.message}`, 'error'); }
 }
 
