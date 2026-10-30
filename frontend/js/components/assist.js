@@ -3,7 +3,7 @@
 // plus "select text -> translate" anywhere in the app. Pages say what they are about with setAssistContext();
 // in mock exams the assistant is off unless the `assist_in_mock` setting is on (a real exam has no help).
 import { api } from '../api.js';
-import { h, esc, icon, toast, renderMarkdown, qtypeLabel, debounce } from '../ui.js';
+import { h, esc, icon, toast, renderMarkdown, qtypeLabel, debounce, store } from '../ui.js';
 
 // Which knowledge-base categories belong to which section.
 const SECTION_CATEGORIES = {
@@ -93,7 +93,45 @@ export function assistButton({ compact = false, mock = ctx.mock } = {}) {
 }
 
 // ------------------------------------------------------------------ drawer
-function closeDrawer() { if (drawer) { drawer.remove(); drawer = null; } }
+function closeDrawer() { if (drawer) { drawer.remove(); drawer = null; } dock(); }
+
+// Width: drag the drawer's left edge (or focus it and use the arrow keys; double-click resets). On a wide
+// screen the page moves aside (docked) so the drawer never covers the essay or the questions.
+const DRAWER_W = 480;
+let drawerW = store.get('assistW', DRAWER_W);
+const maxDrawerW = () => Math.max(320, Math.min(900, Math.round(window.innerWidth * 0.7)));
+function setDrawerW(w, save = true) {
+  drawerW = Math.round(Math.max(320, Math.min(maxDrawerW(), w)));
+  document.documentElement.style.setProperty('--assist-w', `${drawerW}px`);
+  if (save) store.set('assistW', drawerW);
+  dock();
+}
+function dock() {
+  const on = !!(drawer && drawer.isConnected) && window.innerWidth >= 1180 && window.innerWidth - drawerW >= 780;
+  document.documentElement.classList.toggle('assist-docked', on);
+}
+window.addEventListener('resize', () => { if (drawer) setDrawerW(drawerW, false); });
+function drawerGrip() {
+  const grip = h('div', { class: 'assist-grip', role: 'separator', tabindex: '0', 'aria-orientation': 'vertical',
+    'aria-label': 'Resize the study assistant', title: 'Drag to resize · double-click to reset' });
+  let dragging = false;
+  grip.addEventListener('pointerdown', (e) => {
+    if (e.button !== 0) return;
+    dragging = true; grip.classList.add('drag'); grip.setPointerCapture(e.pointerId);
+    document.body.classList.add('resizing-col'); e.preventDefault();
+  });
+  grip.addEventListener('pointermove', (e) => { if (dragging) setDrawerW(window.innerWidth - e.clientX); });
+  const end = () => { dragging = false; grip.classList.remove('drag'); document.body.classList.remove('resizing-col'); };
+  grip.addEventListener('pointerup', end);
+  grip.addEventListener('pointercancel', end);
+  grip.addEventListener('dblclick', () => setDrawerW(DRAWER_W));
+  grip.addEventListener('keydown', (e) => {
+    const step = e.shiftKey ? 80 : 24;
+    if (e.key === 'ArrowLeft') { e.preventDefault(); setDrawerW(drawerW + step); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); setDrawerW(drawerW - step); }
+  });
+  return grip;
+}
 
 /** The tab row scrolls sideways when it does not fit (mouse wheel works too); the active tab is kept in view. */
 function tabStrip(tabs, active) {
@@ -120,10 +158,12 @@ export function openDrawer(tab, { text } = {}) {
   }
   drawer.dataset.tab = tab;
   drawer.replaceChildren(
+    drawerGrip(),
     h('div', { class: 'assist-head' },
       tabStrip(tabs, tab),
       h('button', { class: 'icon-btn', type: 'button', 'aria-label': 'Close', title: 'Close (Esc)', html: icon('close'), onclick: closeDrawer })),
     h('div', { class: 'assist-body' }));
+  setDrawerW(drawerW, false);
   if (tab === 'rules') renderRules();
   else if (tab === 'tactics') renderTactics();
   else if (tab === 'phrases') renderPhrases();
