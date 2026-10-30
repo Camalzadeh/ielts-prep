@@ -1,6 +1,6 @@
 // AI feedback shown next to the item it belongs to: under a wrong question, under the sentence
 // the learner wrote or said. Reads the analysis JSON keys described in the ielts-analysis skill.
-import { h, esc } from '../ui.js';
+import { h, esc, store } from '../ui.js';
 
 /** Question numbers a mistake refers to ("Q14", "Q21-22", "Q21, Q22", or a number field). */
 function mistakeNumbers(m) {
@@ -129,7 +129,7 @@ export function annotatedText(text, corrections, { plain = esc } = {}) {
       if (!inside.length) { p.append(h('span', { html: plain(sm[0]) })); continue; }
       let html = '', at = sStart;
       for (const c of inside) {
-        html += plain(text.slice(at, c.s)) + `<mark class="fix-mark">${esc(text.slice(c.s, c.e))}</mark>`;
+        html += plain(text.slice(at, c.s)) + `<mark class="fix-mark" title="${esc(`→ ${c.corrected}`)}">${esc(text.slice(c.s, c.e))}</mark>`;
         at = Math.max(at, c.e);
       }
       html += plain(text.slice(at, Math.max(at, sEnd)));
@@ -147,6 +147,30 @@ export function annotatedText(text, corrections, { plain = esc } = {}) {
     wrap.append(note);
   }
   return wrap;
+}
+
+/**
+ * "Full / Compact" switch for a block that holds corrections. Compact hides the notes under the sentences (the
+ * marks stay; clicking a mark opens just that note). The choice is remembered.
+ */
+export function fixesToggle(scope) {
+  let compact = store.get('fixesCompact', false);
+  const btns = ['Full', 'Compact'].map((label, i) => h('button', { type: 'button', onclick: () => set(i === 1) }, label));
+  const set = (v) => {
+    compact = v;
+    store.set('fixesCompact', v);
+    scope.classList.toggle('fixes-compact', v);
+    btns.forEach((b, i) => b.setAttribute('aria-pressed', String((i === 1) === v)));
+  };
+  if (!scope.dataset.fixClicks) {
+    scope.dataset.fixClicks = '1';
+    scope.addEventListener('click', (e) => {
+      if (!scope.classList.contains('fixes-compact')) return;
+      e.target.closest('.fix-mark')?.closest('.an-sent')?.classList.toggle('open');
+    });
+  }
+  set(compact);
+  return h('div', { class: 'view-toggle', role: 'group', 'aria-label': 'Corrections view', title: 'Full: every note under its sentence · Compact: only the marks (click one to open it)' }, ...btns);
 }
 
 function fixLine(c) {
