@@ -181,3 +181,12 @@ def media_url(rel_path: str | None) -> str | None:
     if p.startswith("media/"):
         p = p[len("media/"):]
     return "/media/content/" + p
+
+
+def forget_result(conn: sqlite3.Connection, target_type: str, target_id: int, mock_id: int | None,
+                  section: str) -> None:
+    """Before a result row is deleted: drop its AI analyses and, if it belonged to a mock exam, that mock's stored
+    band for the section and the overall band (the overall band is only defined while every section has one)."""
+    conn.execute("DELETE FROM ai_analyses WHERE target_type=? AND target_id=?", (target_type, target_id))
+    if mock_id and section in ("listening", "reading", "writing", "speaking"):
+        conn.execute(f"UPDATE mock_exams SET {section}_band=NULL, overall_band=NULL WHERE id=?", (mock_id,))

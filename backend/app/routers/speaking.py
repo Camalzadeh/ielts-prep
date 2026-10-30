@@ -179,6 +179,28 @@ def list_sessions(limit: int = 100, conn: sqlite3.Connection = Depends(db.get_db
     return out
 
 
+@router.delete("/sessions/{session_id}")
+def delete_session(session_id: int, conn: sqlite3.Connection = Depends(db.get_db)) -> dict:
+    """Delete a speaking session: its recordings (files too), transcripts and AI analyses."""
+    s = conn.execute("SELECT mode, mock_id FROM speaking_sessions WHERE id=?", (session_id,)).fetchone()
+    if not s:
+        raise HTTPException(404, "session not found")
+    if s["mode"] == "imported":
+        raise HTTPException(409, "this result comes from My Results.docx; remove its row there instead")
+    audio = [r[0] for r in conn.execute("SELECT audio_path FROM speaking_responses WHERE session_id=? "
+                                        "AND audio_path IS NOT NULL", (session_id,))]
+    db.forget_result(conn, "speaking_session", session_id, s["mock_id"], "speaking")
+    conn.execute("DELETE FROM speaking_responses WHERE session_id=?", (session_id,))
+    conn.execute("DELETE FROM speaking_sessions WHERE id=?", (session_id,))
+    conn.commit()
+    for path in audio:
+        try:
+            (db.UPLOADS_DIR / path).unlink(missing_ok=True)
+        except OSError:
+            pass  # still locked (e.g. being transcribed); the rows are gone, which is what the app shows
+    return {"ok": True, "id": session_id}
+
+
 def response_dict(row: sqlite3.Row, full: bool = False) -> dict:
     d = dict(row)
     d["audio_url"] = "/media/uploads/" + d["audio_path"] if d.get("audio_path") else None

@@ -130,6 +130,19 @@ def create_submission(body: SubmissionCreate, conn: sqlite3.Connection = Depends
     return {"id": cur.lastrowid, "word_count": wc}
 
 
+@router.delete("/submissions/{submission_id}")
+def delete_submission(submission_id: int, conn: sqlite3.Connection = Depends(db.get_db)) -> dict:
+    """Delete an essay written in the app, with its AI analyses."""
+    s = conn.execute("SELECT origin, mock_id FROM writing_submissions WHERE id=?", (submission_id,)).fetchone()
+    if not s:
+        raise HTTPException(404, "submission not found")
+    if s["origin"] == "telegram_import":
+        raise HTTPException(409, "this essay was imported from the course chat and would come back on the next import")
+    db.forget_result(conn, "writing", submission_id, s["mock_id"], "writing")
+    conn.execute("DELETE FROM writing_submissions WHERE id=?", (submission_id,))
+    return {"ok": True, "id": submission_id}
+
+
 @router.get("/submissions")
 def list_submissions(task: Optional[int] = None, origin: Optional[str] = None, limit: int = 200,
                      conn: sqlite3.Connection = Depends(db.get_db)) -> list[dict]:

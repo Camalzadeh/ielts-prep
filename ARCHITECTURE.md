@@ -223,6 +223,9 @@ Tests / practice
   `details[].excerpt` = the transcript/passage line the explanation quotes, used to mark the evidence in the review)
 - `DELETE /api/attempts/{id}` -> `{ok, id}`: removes the attempt, its answers and its AI analyses (a mock's
   stored section + overall band are cleared); 409 for imported results (they come from My Results.docx)
+- `DELETE /api/writing/submissions/{id}` and `DELETE /api/speaking/sessions/{id}` (recordings and their files
+  too): same rules: AI analyses go with them, a mock's section + overall band are cleared, and imported items
+  are refused with 409 (course-chat essays, `My Results.docx` sessions; the next import would restore them)
 - `GET  /api/attempts/{id}/transcript?part=N` -> `{part, transcript_html, anchors:{q: excerpt}}`: listening
   practice only (403 in mock / exam mode); feeds the study assistant's Transcript tab
 - `GET  /api/tests/{id}/review` -> full test JSON **with** answers (only allowed if a submitted attempt exists)

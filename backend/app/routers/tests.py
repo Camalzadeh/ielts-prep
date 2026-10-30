@@ -169,12 +169,9 @@ def delete_attempt(attempt_id: int, conn: sqlite3.Connection = Depends(db.get_db
     a = _get_attempt(conn, attempt_id)
     if a["mode"] == "imported":
         raise HTTPException(409, "this result comes from My Results.docx; remove its row there instead")
-    conn.execute("DELETE FROM ai_analyses WHERE target_type='attempt' AND target_id=?", (attempt_id,))
+    db.forget_result(conn, "attempt", attempt_id, a["mock_id"], a["type"])
     conn.execute("DELETE FROM attempt_answers WHERE attempt_id=?", (attempt_id,))
     conn.execute("DELETE FROM attempts WHERE id=?", (attempt_id,))
-    if a["mock_id"] and a["type"] in ("listening", "reading"):
-        # the mock loses this section: its stored band (and so the overall band) no longer holds
-        conn.execute(f"UPDATE mock_exams SET {a['type']}_band=NULL, overall_band=NULL WHERE id=?", (a["mock_id"],))
     return {"ok": True, "id": attempt_id}
 
 

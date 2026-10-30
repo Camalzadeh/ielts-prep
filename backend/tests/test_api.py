@@ -250,3 +250,42 @@ def test_delete_attempt_and_transcript(client):
     assert client.delete(f"/api/attempts/{rid}").status_code == 409
     with db.session() as conn:
         conn.execute("DELETE FROM attempts WHERE id=?", (rid,))
+
+
+def test_delete_writing_and_speaking(client):
+    # essay written in the app: deleted with its analyses; its mock loses the writing band
+    p = client.get("/api/writing/prompts/random?task=2").json()
+    m = client.post("/api/mock", json={"sections": ["writing"]}).json()
+    sub = client.post("/api/writing/submissions", json={"prompt_id": p["id"], "text": "Some essay text.", "mock_id": m["id"]}).json()["id"]
+    with db.session() as conn:
+        conn.execute("INSERT INTO ai_analyses(target_type, target_id, provider, status) VALUES ('writing', ?, 'claude', 'done')", (sub,))
+        conn.execute("UPDATE mock_exams SET writing_band=6, overall_band=6 WHERE id=?", (m["id"],))
+    assert client.delete(f"/api/writing/submissions/{sub}").json() == {"ok": True, "id": sub}
+    assert client.get(f"/api/writing/submissions/{sub}").status_code == 404
+    assert client.delete(f"/api/writing/submissions/{sub}").status_code == 404
+    with db.session(readonly=True) as conn:
+        assert not conn.execute("SELECT 1 FROM ai_analyses WHERE target_type='writing' AND target_id=?", (sub,)).fetchone()
+        assert tuple(conn.execute("SELECT writing_band, overall_band FROM mock_exams WHERE id=?", (m["id"],)).fetchone()) == (None, None)
+    # essays imported from the course chat stay (the next import would bring them back)
+    imported = client.get("/api/writing/submissions?origin=telegram_import").json()[0]["id"]
+    assert client.delete(f"/api/writing/submissions/{imported}").status_code == 409
+
+    # speaking session: recordings, their files and analyses go too
+    sid = client.post("/api/speaking/sessions", json={"mode": "practice_part1", "plan": {}}).json()["id"]
+    rid = client.post("/api/speaking/responses", files={"audio": ("a.webm", b"x", "audio/webm")},
+                      data={"session_id": sid, "part": 1, "question_text": "Q1"}).json()["id"]
+    with db.session() as conn:
+        audio = conn.execute("SELECT audio_path FROM speaking_responses WHERE id=?", (rid,)).fetchone()[0]
+        conn.execute("INSERT INTO ai_analyses(target_type, target_id, provider, status) VALUES ('speaking_session', ?, 'claude', 'done')", (sid,))
+    assert (db.UPLOADS_DIR / audio).exists()
+    assert client.delete(f"/api/speaking/sessions/{sid}").json() == {"ok": True, "id": sid}
+    assert client.get(f"/api/speaking/sessions/{sid}").status_code == 404
+    assert not (db.UPLOADS_DIR / audio).exists()
+    with db.session(readonly=True) as conn:
+        assert not conn.execute("SELECT 1 FROM speaking_responses WHERE session_id=?", (sid,)).fetchone()
+        assert not conn.execute("SELECT 1 FROM ai_analyses WHERE target_type='speaking_session' AND target_id=?", (sid,)).fetchone()
+    with db.session() as conn:
+        imp = conn.execute("INSERT INTO speaking_sessions(created_at, mode, teacher_band) VALUES ('2026-08-01', 'imported', 6)").lastrowid
+    assert client.delete(f"/api/speaking/sessions/{imp}").status_code == 409
+    with db.session() as conn:
+        conn.execute("DELETE FROM speaking_sessions WHERE id=?", (imp,))
