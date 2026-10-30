@@ -152,6 +152,52 @@ def test_ai_helpers():
     ai_runner.validate_command(["agy", "--model", "x"])
 
 
+def test_codex_provider(client, tmp_path, monkeypatch):
+    for pid, tpl in ai_runner.DEFAULT_COMMANDS.items():
+        ai_runner.validate_command(tpl)
+        assert pid in ai_runner.PROVIDERS and ai_runner.PROVIDERS[pid]["install"]
+    assert "{output_file}" in ai_runner.DEFAULT_COMMANDS["codex"] and "{instruction}" not in ai_runner.DEFAULT_COMMANDS["codex"]
+    for flag in ("--full-auto", "danger-full-access", "workspace-write", 'sandbox_mode="danger-full-access"', "approval_policy=never"):
+        with pytest.raises(ValueError):
+            ai_runner.validate_command(["codex", "exec", flag])
+    assert client.put("/api/settings", json={"ai_cmd_codex": ["{exe}", "exec", "--full-auto", "-"]}).status_code == 422
+    assert client.put("/api/settings", json={"ai_provider": "codex"}).json()["ai_provider"] == "codex"
+    client.put("/api/settings", json={"ai_provider": "claude"})
+    # the answer comes from {output_file}; stdout only has progress logs
+    tpl, out = ai_runner.DEFAULT_COMMANDS["codex"], tmp_path / "last_message.md"
+    with pytest.raises(RuntimeError, match="wrote no answer"):
+        ai_runner.read_answer("codex", tpl, out, 1, "codex: thinking…", "not logged in")
+    out.write_text("# Report\nok\n", encoding="utf-8")
+    assert ai_runner.read_answer("codex", tpl, out, 0, "progress log", "") == "# Report\nok"
+    assert ai_runner.read_answer("claude", ai_runner.DEFAULT_COMMANDS["claude"], out, 0, '{"result":"hi"}', "") == "hi"
+    # end to end with a stand-in CLI: prompt on stdin, answer written to --output-last-message
+    fake = tmp_path / "fake_codex.py"
+    fake.write_text(
+        "import sys\n"
+        "args = sys.argv[1:]\n"
+        "assert args[:3] == ['exec', '--sandbox', 'read-only'] and args[-1] == '-', args\n"
+        "prompt = sys.stdin.read()\n"
+        "assert '<skill>' in prompt and '<context' in prompt\n"
+        "print('codex progress log')\n"
+        "out = args[args.index('--output-last-message') + 1]\n"
+        "open(out, 'w', encoding='utf-8').write('# Progress\\nfine\\n```json\\n{\"band\": 6.5}\\n```\\n')\n",
+        encoding="utf-8")
+    import sys
+    client.put("/api/settings", json={"ai_exe_codex": sys.executable,
+                                      "ai_cmd_codex": ["{exe}", str(fake)] + ai_runner.DEFAULT_COMMANDS["codex"][1:]})
+    with db.session() as conn:
+        aid = ai_runner.enqueue(conn, "progress", 0, "codex")
+    ai_runner.run_analysis(aid)
+    row = client.get(f"/api/ai/analyses/{aid}").json()
+    assert row["status"] == "done" and row["result"]["band"] == 6.5 and "fine" in row["result_md"]
+    client.put("/api/settings", json={"ai_exe_codex": None, "ai_cmd_codex": None})
+    # not installed -> listed as unavailable with an install hint
+    monkeypatch.setattr(ai_runner, "resolve_exe", lambda p, conn=None: None)
+    listed = {p["id"]: p for p in client.get("/api/ai/providers?refresh=true").json()}
+    assert listed["codex"]["available"] is False and "npm install -g @openai/codex" in listed["codex"]["install"]
+    ai_runner.invalidate_provider_cache()
+
+
 def test_speaking_delete_response(client):
     sid = client.post("/api/speaking/sessions", json={"mode": "practice_part1", "plan": {}}).json()["id"]
     keep, drop = (client.post("/api/speaking/responses", files={"audio": ("a.webm", b"x", "audio/webm")},

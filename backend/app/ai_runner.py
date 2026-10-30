@@ -27,15 +27,22 @@ INLINE_PROMPT_MAX = 24000      # agy has no stdin in print mode; longer prompts 
 SKILL_PATH = ".claude/skills/ielts-analysis/SKILL.md"
 
 PROVIDERS = {
-    "claude": {"name": "Claude Code"},
-    "antigravity": {"name": "Antigravity"},
+    "claude": {"name": "Claude Code", "install": "Install Claude Code (https://claude.com/claude-code) and sign in once by running `claude`."},
+    "antigravity": {"name": "Antigravity", "install": "Install Antigravity; its `agy` CLI is found in ~/.gemini/bin."},
+    "codex": {"name": "Codex", "install": "Run `npm install -g @openai/codex`, then sign in once with `codex login`."},
 }
+# Placeholders: {exe}; {instruction} = the prompt as an argument (without it the prompt goes to stdin);
+# {prompt_file} = the prompt saved in data/ai_runs/<id>/; {output_file} = where the CLI writes its final answer.
 DEFAULT_COMMANDS: dict[str, list[str]] = {
     "claude": ["{exe}", "-p", "--output-format", "json", "--allowedTools", "Read Grep Glob"],
     "antigravity": ["{exe}", "-p", "{instruction}", "--output-format", "json", "--sandbox"],
+    # prompt on stdin ("-"), read-only sandbox; stdout carries progress logs, so the answer is taken from the file
+    "codex": ["{exe}", "exec", "--sandbox", "read-only", "--skip-git-repo-check", "--color", "never",
+              "--output-last-message", "{output_file}", "-"],
 }
 FORBIDDEN_ARG_PATTERNS = re.compile(
-    r"dangerously|bypass|skip-permissions|yolo|accept-?edits|--mode\b|--permission-mode|auto-?approve",
+    r"dangerously|bypass|skip-permissions|yolo|accept-?edits|--mode\b|--permission-mode|auto-?approve"
+    r"|full-auto|danger-full-access|workspace-write|sandbox_mode|approval_policy",
     re.IGNORECASE)
 
 _wake = threading.Event()
@@ -54,6 +61,8 @@ def resolve_exe(provider: str, conn=None) -> str | None:
     if provider == "antigravity":
         p = Path.home() / ".gemini" / "bin" / ("agy.exe" if os.name == "nt" else "agy")
         return str(p) if p.exists() else shutil.which("agy")
+    if provider == "codex":
+        return shutil.which("codex")
     return None
 
 
@@ -106,7 +115,8 @@ def providers(force: bool = False) -> list[dict[str, Any]]:
         out = []
         for pid, meta in PROVIDERS.items():
             exe = exes[pid]
-            item = {"id": pid, "name": meta["name"], "available": False, "version": None, "path": exe}
+            item = {"id": pid, "name": meta["name"], "available": False, "version": None, "path": exe,
+                    "install": meta.get("install")}
             if exe:
                 code, text = _run_quick([exe, "--version"])
                 item["available"] = code == 0
@@ -189,6 +199,21 @@ def parse_cli_output(provider: str, stdout: str) -> str:
     raise RuntimeError("no result text in CLI output: " + s[:500])
 
 
+def read_answer(provider: str, tpl: list[str], out_file: Path, returncode: int, stdout: str, stderr: str) -> str:
+    """The model's final text: from {output_file} when the command writes one (Codex), else from stdout."""
+    if any("{output_file}" in a for a in tpl):
+        written = out_file.read_text(encoding="utf-8", errors="replace").strip() if out_file.is_file() else ""
+        if returncode == 0 and written:
+            return written
+        detail = (stderr.strip() or stdout.strip())[-800:]
+        raise RuntimeError(f"{PROVIDERS.get(provider, {}).get('name', provider)} wrote no answer "
+                           f"(exit {returncode}): {detail}")
+    try:
+        return parse_cli_output(provider, stdout)
+    except RuntimeError as exc:
+        raise RuntimeError(f"{exc} (exit {returncode}; stderr: {stderr.strip()[-800:]})")
+
+
 # --------------------------------------------------------------------------- execution
 def _kill_tree(proc: subprocess.Popen) -> None:
     try:
@@ -226,14 +251,16 @@ def run_analysis(analysis_id: int) -> None:
     else:
         instruction = (f"Read the file {rel_prompt} (relative to the current directory) and follow the "
                        "instructions in it exactly. Respond ONLY with the report.")
-    args = [a.replace("{exe}", exe).replace("{prompt_file}", rel_prompt) if a != "{instruction}" else instruction
-            for a in tpl]
+    out_file = run_dir / "last_message.md"
+    args = [a.replace("{exe}", exe).replace("{prompt_file}", rel_prompt).replace("{output_file}", str(out_file))
+            if a != "{instruction}" else instruction for a in tpl]
     validate_command([a for a in args if a is not instruction])
     (run_dir / "command.json").write_text(
         json.dumps([a if a is not instruction else "<instruction>" for a in args], indent=1), encoding="utf-8")
 
     started = time.time()
-    # Claude reads the prompt from stdin. Antigravity gets it as an argument and must get NO stdin:
+    out_file.unlink(missing_ok=True)
+    # Claude and Codex read the prompt from stdin. Antigravity gets it as an argument and must get NO stdin:
     # with a pipe attached it can block forever waiting on it (seen in practice, 0 CPU, no output).
     uses_stdin = "{instruction}" not in tpl
     proc = subprocess.Popen(args, cwd=str(db.ROOT), stdin=subprocess.PIPE if uses_stdin else subprocess.DEVNULL,
@@ -251,10 +278,7 @@ def run_analysis(analysis_id: int) -> None:
     stdout = (out or b"").decode("utf-8", "replace")
     stderr = (err or b"").decode("utf-8", "replace")
     log.info("analysis %s: %s exited %s in %.0fs", analysis_id, provider, proc.returncode, time.time() - started)
-    try:
-        text = parse_cli_output(provider, stdout)
-    except RuntimeError as exc:
-        raise RuntimeError(f"{exc} (exit {proc.returncode}; stderr: {stderr.strip()[-800:]})")
+    text = read_answer(provider, tpl, out_file, proc.returncode, stdout, stderr)
     if proc.returncode != 0 and not text.strip():
         raise RuntimeError(f"exit code {proc.returncode}: {stderr.strip()[-800:]}")
     md, data = split_report(text)
