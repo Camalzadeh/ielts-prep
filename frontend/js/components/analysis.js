@@ -1,7 +1,7 @@
 // "Analyse with AI" panel: enqueue, poll, render markdown + JSON highlights, history with re-analyse.
 import { api } from '../api.js';
 import { h, esc, icon, toast, renderMarkdown, parseMaybeJSON, fmtDate, fmtBand, asList, sanitize } from '../ui.js';
-import { state, providerName, onStateChange } from '../state.js';
+import { state, providerName, providerBadge, onStateChange } from '../state.js';
 
 const POLL_MS = 2000;
 
@@ -183,7 +183,7 @@ export function analysisPanel(opts) {
     for (const a of history) {
       const st = a.status === 'done' ? '' : a.status === 'error' ? ' · failed' : ` · ${a.status}`;
       list.append(h('button', { type: 'button', 'aria-current': String(a.id === shownId), onclick: () => { show(a); if (a.status === 'queued' || a.status === 'running') poll(a.id); else if (a.result_md === undefined && a.status === 'done') api.get(`/api/ai/analyses/${a.id}`).then((r) => { upsert(r); show(r); }).catch(() => {}); } },
-        h('span', { class: `prov-badge ${esc(a.provider || '')}` }, a.provider === 'antigravity' ? 'AGY' : (a.provider || '?')),
+        h('span', { class: `prov-badge ${esc(a.provider || '')}` }, providerBadge(a.provider)),
         `#${a.id} · ${fmtDate(a.created_at)}${st}`));
     }
     histEl.replaceChildren(h('div', { class: 'small muted' }, `Analysis history (${history.length})`), list);

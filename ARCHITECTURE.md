@@ -1,8 +1,8 @@
 # IELTS Prep — Architecture & Contracts
 
 Local IELTS preparation web app. FastAPI + SQLite backend, no-build vanilla-JS frontend,
-AI feedback produced by spawning the **Claude Code CLI** (`claude`) or the **Antigravity CLI**
-(`agy`) as a subprocess in this folder. Everything the user does is stored in SQLite.
+AI feedback produced by spawning the **Claude Code CLI** (`claude`), the **Codex CLI** (`codex`) or the
+**Antigravity CLI** (`agy`) as a subprocess in this folder. Everything the user does is stored in SQLite.
 
 Python: always use the project venv `.venv\Scripts\python.exe` (has fastapi, uvicorn,
 python-multipart, httpx, lxml, bs4, pymupdf, python-docx, pillow, faster-whisper).
@@ -162,7 +162,7 @@ speaking_responses(id INTEGER PK, session_id FK, question_id FK NULL, part INT, 
       transcribe_status TEXT /* pending|done|error|unavailable */, created_at)
 
 ai_analyses(id INTEGER PK, target_type TEXT /* attempt|writing|speaking_session|mock|progress */,
-      target_id INT, provider TEXT /* claude|antigravity */, status TEXT /* queued|running|done|error */,
+      target_id INT, provider TEXT /* claude|codex|antigravity */, status TEXT /* queued|running|done|error */,
       prompt TEXT, result_md TEXT, result_json TEXT /* {"band":..,"criteria":{..},"mistakes":[..],"tips":[..]} */,
       error TEXT, log_path TEXT, created_at, started_at, finished_at)
 
@@ -244,7 +244,8 @@ Mock exam
 - `GET  /api/mock`
 
 AI
-- `GET  /api/ai/providers` -> `[{id:"claude", name:"Claude Code", available:true, version}, {id:"antigravity", name:"Antigravity", available:bool}]`
+- `GET  /api/ai/providers` -> `[{id:"claude", name:"Claude Code", available:true, version, path, install}, {id:"antigravity", ...}, {id:"codex", name:"Codex", available:bool, install}]`
+  (`install` = how to add it; the header switch shows only the available providers plus the selected one)
 - `POST /api/ai/analyze` `{target_type, target_id, provider, force:false}` -> if a `done` analysis exists for the
   target and `force` is false, return it; else enqueue -> `{id, status}`
 - `GET  /api/ai/analyses/{id}` -> row (poll every 2s while queued/running)
@@ -268,8 +269,8 @@ Backend additions (non-breaking, implemented)
 - `GET /api/mock/{id}` adds `live_bands` (computed now) and `missing`. Overall band is `null` until every planned
   section has a band (mean, IELTS rounding). Writing band = (T1 + 2*T2)/3 when both tasks have AI bands.
 - `/media/content/<path>` serves `content/media/<path>` and also tolerates a leading `media/` (i.e. `content/<path>`).
-- Settings keys `ai_cmd_claude` / `ai_cmd_antigravity` (JSON arg list with `{exe}`, `{instruction}`, `{prompt_file}`)
-  and `ai_exe_claude` / `ai_exe_antigravity`; permission-bypass flags are rejected (422).
+- Settings keys `ai_cmd_<provider>` (JSON arg list with `{exe}`, `{instruction}`, `{prompt_file}`, `{output_file}`)
+  and `ai_exe_<provider>` for claude / codex / antigravity; permission-bypass flags are rejected (422).
 
 ## 5. AI analysis runner (`backend/app/ai_runner.py`)
 
@@ -287,6 +288,10 @@ You are analysing an IELTS candidate's work. Follow the rules in .claude/skills/
 and runs, with `cwd` = project root, a timeout of 15 min, stdout/stderr captured to `data/ai_runs/<id>/`:
 - Claude: `claude -p --output-format json --allowedTools "Read Grep Glob"` (default permission mode, so
   anything else is denied; it may read the skill, knowledge/kb and content files) -> parse JSON, take `result`.
+- Codex: `codex exec --sandbox read-only --skip-git-repo-check --color never --output-last-message
+  data/ai_runs/<id>/last_message.md -` (prompt on stdin; stdout only carries progress logs, so the answer is
+  read from that file; a non-zero exit or an empty file is an error). `--full-auto`, `workspace-write`,
+  `danger-full-access` and `-c sandbox_mode/approval_policy` overrides are rejected. Codex reads `AGENTS.md`.
 - Antigravity: `%USERPROFILE%\.gemini\bin\agy.exe -p <prompt> --output-format json --sandbox` (no
   permission bypass; the context is already in the prompt) -> parse JSON (fallback: raw text).
   agy ignores stdin in print mode (tested, v1.4.10), so prompts up to 24k chars are passed inline as the `-p`

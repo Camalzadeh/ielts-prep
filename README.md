@@ -3,7 +3,7 @@
 A local IELTS practice app that runs on your own computer: exam-style **Listening** and **Reading**
 tests (Cambridge IELTS 1–21), a **Writing** prompt bank with a timed editor, **Speaking** practice with
 recording and automatic transcription, random **Mock exams**, a **Learn** section built from our course
-materials, and an **AI tutor** (Claude Code or Antigravity) that explains your mistakes.
+materials, and an **AI tutor** (Claude Code, Codex or Antigravity) that explains your mistakes.
 
 Everything you do is stored locally in `data/ielts.db`. Nothing is uploaded anywhere.
 
@@ -62,9 +62,12 @@ insert it into your essay), the course rules, vocabulary and a free translator (
 
 ## AI feedback (optional)
 "Explain my mistakes" / "Analyse with AI" uses a coding-agent CLI installed and logged in on your
-computer — pick one in the header:
+computer. The header offers the ones it finds; **Settings → AI provider** lists all of them with install steps.
 - **Claude Code** — https://claude.com/claude-code (`claude` on PATH)
+- **Codex** (OpenAI) — `npm install -g @openai/codex`, then `codex login` once (`codex` on PATH)
 - **Antigravity** — the `agy` CLI (`~/.gemini/bin/agy`)
+
+After installing one, press **Re-check** in Settings (or restart the app) and it appears in the header.
 
 The app builds the context from your local database (your answers vs. the correct ones, the passage or
 transcript, your essay, speaking transcript + fluency metrics) and runs the CLI with read-only access.

@@ -1,7 +1,7 @@
 // History: every attempt, essay, speaking session, mock and AI analysis in one filterable table.
 import { api } from '../api.js';
 import { h, esc, icon, withStates, emptyState, fmtDate, fmtBand, fmtDuration, asList, store, debounce, parseDate } from '../ui.js';
-import { providerName } from '../state.js';
+import { providerName, providerBadge } from '../state.js';
 import { modeLabel } from './speaking.js';
 import { setTitle } from '../app.js';
 
@@ -82,7 +82,7 @@ export async function render(root) {
           <td class="nowrap">${esc(fmtDate(r.date))}</td>
           <td><span class="badge ${r.kind === 'analysis' ? 'accent' : ''}">${esc(KINDS.find((k) => k[0] === r.kind)?.[1] || r.kind)}</span>${r.mode === 'mock' ? ' <span class="badge">mock</span>' : ''}</td>
           <td style="max-width:420px"><a href="${r.href}" style="color:inherit;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(r.title)}</a></td>
-          <td class="small muted">${r.provider ? `<span class="prov-badge ${esc(r.provider)}">${r.provider === 'antigravity' ? 'AGY' : esc(r.provider)}</span> ` : ''}${esc(r.detail || '')}${r.status ? ` <span class="badge warn">${esc(r.status)}</span>` : ''}</td>
+          <td class="small muted">${r.provider ? `<span class="prov-badge ${esc(r.provider)}">${esc(providerBadge(r.provider))}</span> ` : ''}${esc(r.detail || '')}${r.status ? ` <span class="badge warn">${esc(r.status)}</span>` : ''}</td>
           <td>${r.band != null ? `<span class="band-pill">${fmtBand(r.band)}</span>` : '<span class="muted small">–</span>'}</td>
           <td><a class="btn sm ghost" href="${r.href}">Open</a></td></tr>`).join('')}</tbody></table>
         ${shown.length > 500 ? '<p class="small muted" style="padding:10px 14px">Showing the latest 500.</p>' : ''}`;

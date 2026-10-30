@@ -44,10 +44,21 @@ export async function setProvider(id) {
   }
 }
 
+const SHORT = { claude: 'Claude', antigravity: 'Antigravity', codex: 'Codex' };
+const BADGE = { claude: 'Claude', antigravity: 'AGY', codex: 'Codex' };
+
 export function providerName(id) {
   const p = state.providers.find((x) => x.id === id);
   if (p) return p.name || id;
-  return id === 'antigravity' ? 'Antigravity' : id === 'claude' ? 'Claude' : (id || '?');
+  return SHORT[id] || id || '?';
+}
+/** Short label for the header switch; tiny label for analysis badges. */
+export function providerShort(id) { return SHORT[id] || providerName(id); }
+export function providerBadge(id) { return BADGE[id] || id || '?'; }
+
+/** Providers offered in the header: the ones installed here, plus the current choice. */
+export function switchProviders() {
+  return state.providers.filter((p) => p.available !== false || p.id === state.provider);
 }
 
 // ---------------------------------------------------------------- theme

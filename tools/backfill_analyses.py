@@ -5,7 +5,7 @@ results; finally one overall progress analysis. Analyses are queued through the 
 (sequential worker) with the provider chosen in Settings unless --provider is given. When all are done,
 each analysis is dated to its item's date (= when the teacher posted the task).
 
-Usage: .venv\\Scripts\\python.exe tools\\backfill_analyses.py [--provider claude|antigravity]
+Usage: .venv\\Scripts\\python.exe tools\\backfill_analyses.py [--provider claude|codex|antigravity]
 """
 import argparse
 import sqlite3

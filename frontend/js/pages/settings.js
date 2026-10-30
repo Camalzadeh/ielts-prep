@@ -42,7 +42,7 @@ export async function render(root) {
   const drawAi = () => {
     aiCard.replaceChildren(
       h('div', { class: 'row between' }, h('div', null, h('h2', { style: { margin: 0 } }, 'AI provider'),
-        h('p', { class: 'small muted', style: { margin: '2px 0 0' } }, 'Used for every “Analyse with AI” request. Also switchable from the header.')),
+        h('p', { class: 'small muted', style: { margin: '2px 0 0' } }, 'Used for every “Analyse with AI” request. The header offers the ones installed on this computer.')),
         h('button', { class: 'btn sm', type: 'button', html: `${icon('refresh')} Re-check`, onclick: refresh })),
     );
     const grid = h('div', { class: 'grid grid-2', style: { marginTop: '14px' }, role: 'radiogroup', 'aria-label': 'Default AI provider' });
@@ -53,7 +53,8 @@ export async function render(root) {
           <b>${esc(p.name || p.id)}</b></div>
           ${p.available === true ? '<span class="badge good">Available</span>' : p.available === false ? '<span class="badge bad">Not found</span>' : '<span class="badge">Unknown</span>'}</div>
         <div class="small muted" style="margin-top:8px">${p.version ? `Version: <span class="mono">${esc(p.version)}</span><br>` : ''}${p.path ? `Path: <span class="mono" style="word-break:break-all">${esc(p.path)}</span>` : 'Executable not found on PATH.'}</div>
-        ${p.error ? `<div class="small" style="color:var(--bad);margin-top:6px;white-space:pre-wrap">${esc(p.error)}</div>` : ''}`;
+        ${p.error ? `<div class="small" style="color:var(--bad);margin-top:6px;white-space:pre-wrap">${esc(p.error)}</div>` : ''}
+        ${p.available === false && p.install ? `<div class="small" style="margin-top:8px"><b>To add it:</b> ${esc(p.install)} Then press Re-check — it appears in the header once found.</div>` : ''}`;
       card.querySelector('input').addEventListener('change', () => { setProvider(p.id); });
       grid.append(card);
     }
@@ -76,7 +77,7 @@ export async function render(root) {
   try {
     const s = await api.get('/api/settings');
     cliCard.append(h('h2', null, 'Advanced: CLI overrides'),
-      h('p', { class: 'small muted' }, 'Optional. Executable path and command template (JSON list of arguments; use {exe} and {instruction} placeholders) for each provider. Leave empty to use the defaults. Permission-bypassing flags are rejected by the server.'));
+      h('p', { class: 'small muted' }, 'Optional. Executable path and command template (JSON list of arguments; placeholders {exe}, {instruction} = prompt as an argument, otherwise it is sent on stdin, {prompt_file}, {output_file} = file the CLI writes its answer to) for each provider. Leave empty to use the defaults. Permission-bypassing flags are rejected by the server.'));
     for (const p of state.providers) {
       const exeKey = `ai_exe_${p.id}`, cmdKey = `ai_cmd_${p.id}`;
       const exe = h('input', { class: 'input mono', type: 'text', value: s[exeKey] || '', placeholder: p.path || 'auto-detect', id: exeKey });

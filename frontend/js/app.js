@@ -1,6 +1,6 @@
 // App shell + hash router.
 import { icon, esc, h, errorState, loading, zoomImage } from './ui.js';
-import { state, loadSettings, setProvider, onStateChange, currentTheme, setTheme } from './state.js';
+import { state, loadSettings, setProvider, onStateChange, currentTheme, setTheme, switchProviders, providerShort } from './state.js';
 import { assistButton, installSelectionTranslator, loadAssistSettings, clearAssistContext } from './components/assist.js';
 
 const NAV = [
@@ -79,10 +79,11 @@ export function providerSwitch() {
   const label = h('span', { class: 'provider-label' }, 'AI');
   const sw = h('div', { class: 'provider-switch', role: 'group', 'aria-label': 'AI provider' });
   const draw = () => {
-    sw.replaceChildren(...state.providers.map((p) => {
+    // Only the AI tools installed on this computer are offered here (Settings lists them all).
+    sw.replaceChildren(...switchProviders().map((p) => {
       const avail = p.available === true ? 'on' : p.available === false ? 'off' : '';
       const title = p.available === false ? `${p.name || p.id} — not available on this machine` : `${p.name || p.id}${p.version ? ' ' + p.version : ''}`;
-      const short = p.id === 'claude' ? 'Claude' : p.id === 'antigravity' ? 'Antigravity' : (p.name || p.id);
+      const short = providerShort(p.id);
       return h('button', {
         type: 'button', 'aria-pressed': String(state.provider === p.id), title,
         onclick: () => setProvider(p.id),
