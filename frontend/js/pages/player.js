@@ -29,7 +29,7 @@ export async function render(root, params, query) {
     attemptId: attemptParam ? Number(attemptParam) : (store.get(activeKey) || null),
     answers: {}, flags: new Set(), highlights: {}, elapsed: 0, partIdx: 0,
     current: allNums[0] || 1, started: false, submitted: false, dirty: false,
-    audio: { part: 0, time: 0, finished: false }, timerHidden: store.get('timerHidden', false),
+    audio: { part: 0, pos: {}, finished: false }, timerHidden: store.get('timerHidden', false),
   };
   let resuming = !!S.attemptId;
   const localKey = () => `attempt.${S.attemptId}`;
@@ -44,6 +44,8 @@ export async function render(root, params, query) {
     S.partIdx = Math.min(l.partIdx || 0, parts.length - 1);
     S.current = l.current || S.current;
     S.audio = { ...S.audio, ...(l.audio || {}) };
+    S.audio.pos = S.audio.pos || {};
+    if (S.audio.time) { S.audio.pos[S.audio.part] = S.audio.time; delete S.audio.time; }  // older saves: one shared position
     return true;
   }
   function saveLocal() {
@@ -395,13 +397,14 @@ export async function render(root, params, query) {
       if (mode === 'mock' && S.started) setTimeout(() => onAudioEnded(), 1500);
     });
     audio.addEventListener('loadedmetadata', () => {
-      if (S.audio.time && Number(audio.dataset.part) === S.audio.part && S.audio.time < audio.duration) {
-        try { audio.currentTime = S.audio.time; } catch { /* ignore */ }
+      const t = S.audio.pos[Number(audio.dataset.part)];  // each part resumes where it was left
+      if (t && t < audio.duration) {
+        try { audio.currentTime = t; } catch { /* ignore */ }
       }
       drawAudio();
     });
     audio.addEventListener('timeupdate', () => {
-      S.audio.time = audio.currentTime;
+      if (!audio.ended) S.audio.pos[Number(audio.dataset.part)] = audio.currentTime;
       updateAudioProgress();
     });
     audio.addEventListener('play', drawAudio);
@@ -411,8 +414,10 @@ export async function render(root, params, query) {
     audio.playbackRate = 1;
   }
   function onAudioEnded() {
-    S.audio.time = 0;
-    if (mode !== 'mock') { drawAudio(); return; }
+    // a finished part starts again from 0:00: reset its position and the counter
+    S.audio.pos[Number(audio.dataset.part)] = 0;
+    try { audio.currentTime = 0; } catch { /* no source */ }
+    if (mode !== 'mock') { drawAudio(); saveLocal(); return; }
     const next = S.audio.part + 1;
     if (next < parts.length) {
       toast(`Part ${parts[next].number} is starting.`);
@@ -617,7 +622,7 @@ export async function render(root, params, query) {
       if (!(await confirmDialog('Start over?', 'This discards the answers of the unfinished attempt.', 'Start over', 'danger'))) return;
       store.remove(localKey());
       store.remove(activeKey);
-      S.attemptId = null; S.answers = {}; S.flags = new Set(); S.highlights = {}; S.elapsed = 0; S.audio = { part: 0, time: 0, finished: false };
+      S.attemptId = null; S.answers = {}; S.flags = new Set(); S.highlights = {}; S.elapsed = 0; S.audio = { part: 0, pos: {}, finished: false };
       nav.guard = null;
       cleanupAll();
       navigate(`#/test/${encodeURIComponent(testId)}${mode === 'mock' ? `?mode=mock${mockId ? `&mock=${mockId}` : ''}` : ''}`, { replace: true });
