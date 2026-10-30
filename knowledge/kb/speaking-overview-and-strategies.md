@@ -7,7 +7,7 @@ sources: ["IELTS_PREP_ARCHIVE/files/SPEAKING PART 1 QUESTIONS (ALL).pdf", "IELTS
 
 # Speaking Test Overview and Strategies
 
-This page brings together three things: the format of the test, what the teacher (Elvira Malikova) told the group about preparing for Speaking, and general strategies for each part. The general strategies are standard public IELTS advice and are labelled that way. They are not quotes from the course.
+This page brings together three things: the format of the test, what the teacher told the group about preparing for Speaking, and general strategies for each part. The general strategies are standard public IELTS advice and are labelled that way. They are not quotes from the course.
 
 ## 1. The test at a glance (standard IELTS format)
 

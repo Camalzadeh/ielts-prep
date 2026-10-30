@@ -8,7 +8,7 @@ sources: ["IELTS_PREP_ARCHIVE/messages.json", "LATEST_EXAMS_ARCHIVE/messages.jso
 # Course timeline & resources
 
 The course ran in the Telegram group **"July - 1.3.5 - 17.00"** (lessons on Mondays, Wednesdays and
-Fridays at 17:00) from **20 July to 13 September 2026**, taught by **Elvira Malikova**. This page lists,
+Fridays at 17:00) from **20 July to 13 September 2026**, taught by **our teacher**. This page lists,
 lesson by lesson, every handout she shared and every practice link she assigned, so you can redo the
 course in order. Handouts are summarised in the other Learn pages (links in the last column).
 

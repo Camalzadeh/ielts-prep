@@ -21,7 +21,22 @@ from . import db
 
 DOC = db.ROOT / "My Results.docx"
 RAW = db.KNOWLEDGE_DIR / "raw"
-TEACHER = "elvira"
+# The teacher's name as it appears as message author in the course chat archive. Kept out of the repo:
+# one line in data/teacher_name.txt (private). Without it, results are dated without the teacher's posts.
+TEACHER_FILE = db.ROOT / "data" / "teacher_name.txt"
+
+
+@lru_cache(maxsize=1)
+def _teacher() -> str:
+    try:
+        return TEACHER_FILE.read_text(encoding="utf-8").strip().lower()
+    except OSError:
+        return ""
+
+
+def _is_teacher(author: str | None) -> bool:
+    t = _teacher()
+    return bool(t) and t in (author or "").lower()
 
 
 def _iso(telegram_date: str | None) -> str | None:
@@ -50,14 +65,14 @@ def _messages() -> tuple[dict, ...]:
 def _teacher_writing_posts() -> tuple[dict, ...]:
     """Writing tasks the teacher posted: text messages plus transcribed task photos."""
     posts = [{"date": _iso(m["date"]), "text": m["text"]} for m in _messages()
-             if TEACHER in (m.get("author") or "").lower() and m.get("text")]
+             if _is_teacher(m.get("author")) and m.get("text")]
     authors = {(m["archive"], m["id"]): m.get("author") or "" for m in _messages()}
     dates = {(m["archive"], m["id"]): m.get("date") for m in _messages()}
     for path in sorted((RAW / "photo_batches").glob("*.out.jsonl")):
         for line in path.read_text(encoding="utf-8").splitlines():
             r = json.loads(line) if line.strip() else {}
             key = ((r.get("path") or "").split("/")[0], r.get("message"))
-            if r.get("category") in ("writing_task1", "writing_task2_prompt") and TEACHER in authors.get(key, "").lower():
+            if r.get("category") in ("writing_task1", "writing_task2_prompt") and _is_teacher(authors.get(key)):
                 s = r.get("structured") or {}
                 posts.append({"date": _iso(dates.get(key)),
                               "text": " ".join(str(x) for x in (r.get("title"), s.get("prompt"), s.get("data_description")) if x)})
@@ -75,7 +90,7 @@ def _speaking_date(part: int, description: str) -> str | None:
     """Part 1 -> when the full Part 1 question list was posted; Part 2 (TopicN) -> when topic N was posted."""
     topic = re.search(r"topic\s*(\d+)", description, re.I)
     for m in sorted(_messages(), key=lambda m: _iso(m["date"]) or ""):
-        if TEACHER not in (m.get("author") or "").lower():
+        if not _is_teacher(m.get("author")):
             continue
         titles = " ".join(a.get("title") or a.get("path") or "" for a in m.get("attachments", []))
         if part == 1 and re.search(r"speaking part 1 questions \(all\)", titles, re.I):

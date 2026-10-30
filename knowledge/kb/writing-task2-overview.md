@@ -7,7 +7,7 @@ sources: ["LATEST_EXAMS_ARCHIVE/files/Writing Task 2 Essays - STRUCTURE.pdf", "I
 
 # Writing Task 2 Overview
 
-Task 2 is the essay. This page covers how to **identify the essay type from the question**, the **paragraph plan** the teacher (Elvira Malikova) uses for every type, and a **bank of introduction, body and conclusion frames** taken word for word from her model essays. Each essay type has its own page with full model essays:
+Task 2 is the essay. This page covers how to **identify the essay type from the question**, the **paragraph plan** the teacher uses for every type, and a **bank of introduction, body and conclusion frames** taken word for word from her model essays. Each essay type has its own page with full model essays:
 
 | Essay type | Page |
 |---|---|
@@ -181,7 +181,7 @@ The course handouts never use a 5-paragraph plan. If you have **three** clear po
 
 ## 8. Real exam questions shared by the teacher (for practice)
 
-These Task 2 questions came up in real or trial exams that Elvira's students sat in 2026:
+These Task 2 questions came up in real or trial exams that the course's students sat in 2026:
 
 | Question | Type |
 |---|---|

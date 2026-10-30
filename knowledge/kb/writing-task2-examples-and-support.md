@@ -7,7 +7,7 @@ sources: ["IELTS_PREP_ARCHIVE/files/General examples.pdf", "IELTS_PREP_ARCHIVE/f
 
 # Supporting Ideas with General and Statistical Examples
 
-Every body paragraph in the teacher's plan ends with a **real-world example** (*"Provide a short, specific example (mentioning a country or organization) that proves your point"*). Elvira shared two "idea banks" so that students always have an example ready:
+Every body paragraph in the teacher's plan ends with a **real-world example** (*"Provide a short, specific example (mentioning a country or organization) that proves your point"*). The teacher shared two "idea banks" so that students always have an example ready:
 
 - **General examples**: a specific situation in a named country, for example *"Norway's prison system focuses heavily on rehabilitation rather than punishment."*
 - **Statistical examples**: a number or percentage, for example *"Recidivism (reoffending) rates in many countries of released prisoners hover around 60-70%."*

@@ -22,7 +22,7 @@ In Academic Task 1 you describe **visual information**: a graph, chart, table, m
 
 ## 1. The 4-paragraph structure (teacher's board notes)
 
-Elvira's notes from the first Task 1 lesson:
+The teacher's notes from the first Task 1 lesson:
 
 > **MIN 150 WORDS**
 >

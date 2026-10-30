@@ -7,7 +7,7 @@ sources: ["IELTS_PREP_ARCHIVE", "LATEST_EXAMS_ARCHIVE"]
 
 # IELTS knowledge base: start here
 
-These pages are curated from Elvira Malikova's IELTS course (Telegram group, 20 Jul – 13 Sep 2026)
+These pages are curated from our teacher's IELTS course (Telegram group, 20 Jul – 13 Sep 2026)
 and her **LATEST_EXAMS** channel (Jun–Oct 2026). Templates, sentence frames and model essays are
 quoted from her handouts. Where a page adds general IELTS guidance, it says so.
 
