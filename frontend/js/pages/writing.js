@@ -5,6 +5,7 @@ import { writerView } from '../components/writer.js';
 import { analysisPanel } from '../components/analysis.js';
 import { annotatedText, writingCorrections, fixesToggle } from '../components/inline-fix.js';
 import { splitPane } from '../components/split.js';
+import { deleteButton, canDelete, rowDeleteHtml, onRowDelete } from '../components/delete.js';
 import { navigate, nav, setTitle } from '../app.js';
 
 export async function render(root, params, query) {
@@ -158,7 +159,7 @@ function submissionsView(body) {
     const subs = asList(data, 'submissions').sort((a, b) => String(b.created_at).localeCompare(String(a.created_at)));
     if (!subs.length) { list.append(emptyState('No essays yet', 'Your submitted essays (and essays imported from Telegram) appear here.', 'writing')); return; }
     const wrap = h('div', { class: 'card table-wrap' });
-    wrap.innerHTML = `<table class="table"><thead><tr><th>Date</th><th>Task</th><th>Prompt</th><th class="num">Words</th><th class="num">Time</th><th>Origin</th><th>AI band</th></tr></thead><tbody>
+    wrap.innerHTML = `<table class="table"><thead><tr><th>Date</th><th>Task</th><th>Prompt</th><th class="num">Words</th><th class="num">Time</th><th>Origin</th><th>AI band</th><th></th></tr></thead><tbody>
       ${subs.map((s) => `<tr>
         <td class="nowrap">${esc(fmtDate(s.created_at, false))}</td>
         <td><span class="badge accent">T${esc(s.task ?? s.prompt?.task ?? '?')}</span></td>
@@ -166,12 +167,17 @@ function submissionsView(body) {
         <td class="num">${esc(s.word_count ?? '')}</td>
         <td class="num">${s.time_spent_sec ? esc(fmtDuration(s.time_spent_sec)) : '–'}</td>
         <td>${s.origin === 'telegram_import' ? '<span class="badge">Telegram</span>' : '<span class="badge">App</span>'}</td>
-        <td>${s.band != null ? `<span class="band-pill">${Number(s.band).toFixed(1)}</span>` : '<span class="muted small">–</span>'}</td></tr>`).join('')}
+        <td>${s.band != null ? `<span class="band-pill">${Number(s.band).toFixed(1)}</span>` : '<span class="muted small">–</span>'}</td>
+        <td>${canDelete('writing', s) ? rowDeleteHtml('writing', s.id) : ''}</td></tr>`).join('')}
       </tbody></table>`;
     wrap.querySelectorAll('tbody tr').forEach((tr, i) => {
       tr.style.cursor = 'pointer';
-      tr.addEventListener('click', (e) => { if (!e.target.closest('a')) navigate(`#/writing/submission/${subs[i].id}`); });
+      tr.addEventListener('click', (e) => { if (!e.target.closest('a, [data-del]')) navigate(`#/writing/submission/${subs[i].id}`); });
     });
+    onRowDelete(wrap, (_, id) => {
+      const s = subs.find((x) => String(x.id) === id);
+      return s && { ...s, title: `Task ${s.task ?? '?'} essay — ${s.prompt_excerpt || ''}`.slice(0, 120) };
+    }, () => submissionsView(body));
     list.append(wrap);
   });
 }
@@ -214,6 +220,7 @@ async function renderSubmission(root, id) {
       h('h1', null, `Task ${task} essay`),
       h('p', null, `${fmtDate(s.created_at)} · ${s.origin === 'telegram_import' ? 'Imported from Telegram' : 'Written in app'}`)),
     h('div', { class: 'page-actions' },
+      deleteButton('writing', { ...s, title: `Task ${task} essay · ${wc} words` }, () => navigate(s.mock_id ? `#/mock/${s.mock_id}` : '#/writing/submissions')),
       p.id ? h('a', { class: 'btn', href: `#/writing/write/${p.id}`, html: `${icon('writing')} Write again` }) : null)));
 
   const promptCard = h('div', { class: 'card card-pad' });

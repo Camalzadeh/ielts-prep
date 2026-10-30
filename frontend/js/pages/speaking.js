@@ -2,6 +2,7 @@
 import { api, uploadUrl } from '../api.js';
 import { h, esc, icon, toast, withStates, emptyState, fmtDate, fmtBand, fmtClock, asList, store, debounce, confirmDialog, parseMaybeJSON } from '../ui.js';
 import { analysisPanel } from '../components/analysis.js';
+import { deleteButton, canDelete, rowDeleteHtml, onRowDelete } from '../components/delete.js';
 import { annotatedText, speakingAnswers, mistakeCorrections, fixesToggle } from '../components/inline-fix.js';
 import { navigate, nav, setTitle } from '../app.js';
 import { assistButton, setAssistContext, setAssistDetail } from '../components/assist.js';
@@ -46,7 +47,11 @@ function renderHome(root) {
     wrap.innerHTML = `<table class="table"><thead><tr><th>Date</th><th>Mode</th><th class="num">Answers</th><th>Band</th><th></th></tr></thead><tbody>
       ${rows.map((s) => `<tr><td>${esc(fmtDate(s.created_at))}</td><td>${esc(s.notes || modeLabel(s.mode))}${s.mock_id ? ' <span class="badge">mock</span>' : ''}${s.teacher_band != null ? ' <span class="badge">teacher</span>' : ''}</td>
         <td class="num">${esc(s.teacher_band != null ? '–' : (s.responses ?? ''))}</td><td>${band(s) != null ? `<span class="band-pill">${Number(band(s)).toFixed(1)}</span>` : '<span class="muted small">–</span>'}</td>
-        <td><a class="btn sm" href="#/speaking/session/${s.id}">Open</a></td></tr>`).join('')}</tbody></table>`;
+        <td class="nowrap"><a class="btn sm" href="#/speaking/session/${s.id}">Open</a>${canDelete('speaking', s) ? rowDeleteHtml('speaking', s.id) : ''}</td></tr>`).join('')}</tbody></table>`;
+    onRowDelete(wrap, (_, id) => {
+      const s = rows.find((x) => String(x.id) === id);
+      return s && { ...s, title: `${modeLabel(s.mode)} · ${fmtDate(s.created_at)} · ${s.responses ?? 0} answers`, band: band(s) };
+    }, (_, id) => { wrap.querySelector(`[data-del="${id}"]`)?.closest('tr')?.remove(); });
     list.append(wrap);
   });
 }
@@ -492,7 +497,10 @@ async function renderSession(root, id) {
           h('div', { class: 'small' }, h('a', { href: s.mock_id ? `#/mock/${s.mock_id}` : '#/speaking' }, s.mock_id ? '← Mock exam' : '← Speaking')),
           h('h1', null, `Speaking session · ${modeLabel(s.mode)}`),
           countEl = h('p')),
-        h('div', { class: 'page-actions' }, h('a', { class: 'btn', href: '#/speaking', html: `${icon('mic')} New practice` }))));
+        h('div', { class: 'page-actions' },
+          deleteButton('speaking', { ...s, title: `${modeLabel(s.mode)} · ${fmtDate(s.created_at)} · ${responses.length} answers` },
+            () => navigate(s.mock_id ? `#/mock/${s.mock_id}` : '#/speaking')),
+          h('a', { class: 'btn', href: '#/speaking', html: `${icon('mic')} New practice` }))));
       respBox = h('div', { class: 'stack', style: { marginBottom: '22px' } });
       root.append(respBox);
       root.append(analysisPanel({

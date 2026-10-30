@@ -1,12 +1,13 @@
 // Results + review page for a submitted listening/reading attempt.
 import { api } from '../api.js';
-import { h, esc, icon, toast, confirmDialog, store, fmtBand, fmtDuration, fmtDate, sanitizeContent, qtypeLabel, emptyState, parseMaybeJSON } from '../ui.js';
+import { h, esc, icon, store, fmtBand, fmtDuration, fmtDate, sanitizeContent, qtypeLabel, emptyState, parseMaybeJSON } from '../ui.js';
 import { renderGroup, partQuestionNumbers } from '../components/questions.js';
 import { analysisPanel } from '../components/analysis.js';
 import { mistakesByQuestion, questionNote } from '../components/inline-fix.js';
 import { applyHighlights } from '../components/highlight.js';
 import { splitPane } from '../components/split.js';
 import { listeningPartReview } from '../components/listening-review.js';
+import { deleteButton } from '../components/delete.js';
 import { navigate, setTitle } from '../app.js';
 
 export function bandRing(band, size = 120, label = 'Band') {
@@ -166,28 +167,10 @@ function normaliseDetail(d) {
 function cls(r) { return r >= 0.75 ? 'high' : r >= 0.5 ? 'mid' : 'low'; }
 function frag2(s) { const t = document.createElement('template'); t.innerHTML = s.trim(); return t.content.firstElementChild; }
 
-/** Delete a result after confirmation (self-assessment attempts the learner does not want to keep). */
-export function deleteResultButton(attempt, after) {
-  return h('button', { class: 'btn danger', type: 'button', html: `${icon('trash')} Delete`, onclick: async () => {
-    if (!(await confirmDeleteAttempt(attempt))) return;
-    navigate(after);
-  } });
-}
-
-/** Ask, then delete; true when deleted. Shared with the history page. */
-export async function confirmDeleteAttempt(a) {
-  const what = a.status === 'submitted' ? 'this result' : 'this unfinished attempt';
-  const ok = await confirmDialog(`Delete ${what}?`,
-    `<p>${esc(a.title || a.test_title || a.test?.title || a.test_id)}${a.band != null ? ` — band ${esc(fmtBand(a.band))}` : ''}</p>
-     <p>Your answers and any AI analyses of it are removed for good.${a.mock_id ? ' It also leaves its mock exam without this section.' : ''} This cannot be undone.</p>`,
-    'Delete', 'danger');
-  if (!ok) return false;
-  try {
-    await api.del(`/api/attempts/${a.id}`);
-  } catch (e) { toast(`Could not delete: ${e.message}`, 'error'); return false; }
-  store.remove(`attempt.${a.id}`);   // the player's local copy of an unfinished attempt
-  toast('Deleted.', 'good');
-  return true;
+/** Delete (after confirmation), then go to `after`. */
+function deleteResultButton(attempt, after) {
+  const title = attempt.title || attempt.test_title || attempt.test?.title || attempt.test_id;
+  return deleteButton('attempt', { ...attempt, title }, () => navigate(after));
 }
 
 function reviewView(test, type, byNum, highlights, afterShow = () => {}, attemptId = 0) {
