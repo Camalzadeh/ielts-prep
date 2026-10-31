@@ -279,6 +279,9 @@ Backend additions (non-breaking, implemented)
 - `/media/content/<path>` serves `content/media/<path>` and also tolerates a leading `media/` (i.e. `content/<path>`).
 - Settings keys `ai_cmd_<provider>` (JSON arg list with `{exe}`, `{instruction}`, `{prompt_file}`, `{output_file}`)
   and `ai_exe_<provider>` for claude / codex / antigravity; permission-bypass flags are rejected (422).
+- Setting `show_general_training` (`"0"` by default): `GET /api/tests` leaves out General Training tests the
+  learner never started (any attempt keeps a test listed; `module=` lists one module regardless). Mocks pick
+  reading tests of the exam's own module only (Academic by default).
 
 ## 5. AI analysis runner (`backend/app/ai_runner.py`)
 

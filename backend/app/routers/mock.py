@@ -31,9 +31,9 @@ def pick_test(conn: sqlite3.Connection, ttype: str, module: str | None) -> str |
     rows = conn.execute(
         "SELECT t.id, t.module, (SELECT COUNT(*) FROM attempts a WHERE a.test_id=t.id) AS n FROM tests t WHERE t.type=?",
         (ttype,)).fetchall()
-    if ttype == "reading" and module:
-        same = [r for r in rows if (r["module"] or "academic") == module]
-        rows = same or rows
+    if ttype == "reading":
+        # only the exam's own module: an Academic mock never gets a General Training passage
+        rows = [r for r in rows if (r["module"] or "academic") == (module or "academic")]
     if not rows:
         return None
     fresh = [r for r in rows if not r["n"]]

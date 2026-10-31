@@ -289,3 +289,28 @@ def test_delete_writing_and_speaking(client):
     assert client.delete(f"/api/speaking/sessions/{imp}").status_code == 409
     with db.session() as conn:
         conn.execute("DELETE FROM speaking_sessions WHERE id=?", (imp,))
+
+
+def test_general_training_hidden_by_default(client):
+    from backend.app.routers.mock import pick_test
+    with db.session() as conn:
+        conn.execute("INSERT INTO tests(id, type, module, title, data_json) VALUES "
+                     "('gt-reading-x', 'reading', 'general', 'GT test', '{\"parts\": []}')")
+    ids = lambda **q: {t["id"] for t in client.get("/api/tests", params={"type": "reading", **q}).json()}
+    assert client.get("/api/settings").json()["show_general_training"] == "0"
+    assert "gt-reading-x" not in ids() and "fixture-reading-1" in ids()
+    assert "gt-reading-x" in ids(module="general")
+    # a test already started (or submitted) stays in the library
+    aid = client.post("/api/attempts", json={"test_id": "gt-reading-x"}).json()["id"]
+    assert "gt-reading-x" in ids()
+    client.delete(f"/api/attempts/{aid}")
+    assert "gt-reading-x" not in ids()
+    client.put("/api/settings", json={"show_general_training": "1"})
+    assert "gt-reading-x" in ids()
+    client.put("/api/settings", json={"show_general_training": "0"})
+    # mocks: Academic only, whatever the setting
+    with db.session(readonly=True) as conn:
+        assert {pick_test(conn, "reading", "academic") for _ in range(20)} == {"fixture-reading-1"}
+        assert pick_test(conn, "reading", "general") == "gt-reading-x"
+    with db.session() as conn:
+        conn.execute("DELETE FROM tests WHERE id='gt-reading-x'")

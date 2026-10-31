@@ -58,6 +58,9 @@ def list_tests(type: Optional[str] = None, module: Optional[str] = None,
     if module:
         q += " AND t.module = ?"
         args.append(module)
+    elif db.get_setting(conn, "show_general_training") != "1":
+        # hidden unless switched on in Settings; tests already started or submitted always stay
+        q += " AND (COALESCE(t.module, 'academic') != 'general' OR EXISTS (SELECT 1 FROM attempts a WHERE a.test_id = t.id))"
     q += " ORDER BY t.series IS NULL, t.book DESC, t.series, t.test_no, t.title"
     return db.rows_to_dicts(conn.execute(q, args).fetchall())
 

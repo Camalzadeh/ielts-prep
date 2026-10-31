@@ -119,7 +119,7 @@ function testCard(t, type) {
       <div class="t-band">Last<span class="band-pill ${t.last_band == null ? 'none' : ''}">${fmtBand(t.last_band)}</span></div>
       <div class="t-band">Attempts<b style="font-size:15px;color:var(--text)">${t.attempts || 0}</b></div>
     </div>
-    <div class="t-meta"><span>${t.question_count || 40} questions</span>${active ? '<span class="badge warn">In progress</span>' : ''}</div>`;
+    <div class="t-meta"><span>${t.question_count || 40} questions</span>${t.module === 'general' ? '<span class="badge">General Training</span>' : ''}${active ? '<span class="badge warn">In progress</span>' : ''}</div>`;
   const actions = h('div', { class: 't-actions' });
   if (active) {
     actions.append(h('a', { class: 'btn primary sm', href: `#/test/${encodeURIComponent(t.id)}/${active}` }, 'Resume'));

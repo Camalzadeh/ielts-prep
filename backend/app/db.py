@@ -31,6 +31,7 @@ DEFAULT_SETTINGS: dict[str, str] = {
     "user_name": "",          # the learner's name: dashboard greeting + which archive results are theirs
     "translate_to": "az",     # study assistant: target language of the translator
     "assist_in_mock": "0",    # "1" = study assistant also available during mock exams
+    "show_general_training": "0",  # "1" = General Training reading tests in the library (mocks never use them)
 }
 
 _init_lock = threading.Lock()

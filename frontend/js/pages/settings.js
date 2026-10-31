@@ -23,6 +23,18 @@ export async function render(root) {
     h('p', { class: 'small muted' }, 'The Help button (Alt+H) opens the course rules for the section you are practising, the vocabulary list and a translator; selecting any text offers a translation (Google Translate, free). In mock exams it is off, like in the real exam, unless you allow it here.'),
     h('label', { class: 'switch', style: { marginTop: '8px' } }, mockToggle, 'Allow the assistant during mock exams')));
 
+  // ------------------------------------------------ test module
+  const gtToggle = h('input', { type: 'checkbox' });
+  api.get('/api/settings').then((s) => { gtToggle.checked = s.show_general_training === '1'; }).catch(() => {});
+  gtToggle.addEventListener('change', async () => {
+    try { await api.put('/api/settings', { show_general_training: gtToggle.checked ? '1' : '0' }); toast('Saved.', 'good'); }
+    catch (e) { toast(e.message, 'error'); }
+  });
+  col.append(h('section', { class: 'card card-pad' },
+    h('h2', { style: { margin: 0 } }, 'General Training reading'),
+    h('p', { class: 'small muted' }, 'The library has Academic and General Training reading tests. General Training is hidden unless you switch it on here; tests you already started or submitted always stay, with their results. Mock exams always use Academic tests.'),
+    h('label', { class: 'switch', style: { marginTop: '8px' } }, gtToggle, 'Show General Training reading tests')));
+
   // ------------------------------------------------ profile
   const nameInput = h('input', { class: 'input', type: 'text', id: 'user_name', placeholder: 'e.g. Aysel' });
   api.get('/api/settings').then((s) => { nameInput.value = s.user_name || ''; }).catch(() => {});
