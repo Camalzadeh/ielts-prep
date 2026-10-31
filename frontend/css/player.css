@@ -230,13 +230,14 @@ mark.hl { background: var(--hl); color: var(--hl-ink); border-radius: 2px; paddi
 
 body.player-open .toasts { bottom: 76px; }
 
-/* listening review (components/listening-review.js): recording, transcript with evidence | answer sheet */
+/* answer review (components/answer-review.js): [recording,] transcript or passage with evidence | answer sheet */
 .lr-audio { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 10px 14px; margin-bottom: 12px;
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); position: sticky; top: calc(var(--topbar-h) + 8px); z-index: 5; box-shadow: var(--shadow-sm); }
 .lr-audio audio { flex: 1; min-width: 220px; height: 36px; }
 .lr-audio-label { display: inline-flex; align-items: center; gap: 6px; font-weight: 650; white-space: nowrap; }
 .lr-audio-label svg { width: 17px; height: 17px; color: var(--accent); }
 .lr .review-layout { height: calc(100vh - var(--topbar-h) - 96px); }
+.lr-reading .review-layout { height: calc(100vh - var(--topbar-h) - 32px); }
 .lr-text { font-family: var(--font-reading); line-height: 1.75; font-size: 15.5px; }
 .lr-text p { margin: 0 0 .7em; }
 mark.ev { color: inherit; border-radius: 3px; padding: 1px 0; cursor: pointer; transition: box-shadow .15s; }

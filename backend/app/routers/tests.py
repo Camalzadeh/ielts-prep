@@ -178,15 +178,25 @@ def delete_attempt(attempt_id: int, conn: sqlite3.Connection = Depends(db.get_db
     return {"ok": True, "id": attempt_id}
 
 
-_EXCERPT = re.compile(r"From the transcript:\s*</b>(.*?)</p>", re.IGNORECASE | re.DOTALL)
+# listening: <p><b>From the transcript:</b> “...” … “...”</p>
+# reading:   <p><strong>Evidence from the passage:</strong></p><blockquote><p>...</p><p>...</p></blockquote>
+_TRANSCRIPT_QUOTE = re.compile(r"From the transcript:\s*</b>(.*?)</p>", re.IGNORECASE | re.DOTALL)
+_PASSAGE_QUOTE = re.compile(r"Evidence from the passage:\s*</strong>\s*</p>\s*<blockquote>(.*?)</blockquote>",
+                            re.IGNORECASE | re.DOTALL)
 
 
-def transcript_excerpt(explanation_html: str | None) -> str | None:
-    """The transcript line an explanation quotes as evidence ("From the transcript: '...'")."""
-    m = _EXCERPT.search(explanation_html or "")
-    if not m:
-        return None
-    text = html.unescape(re.sub(r"<[^>]+>", "", m.group(1))).strip()
+def evidence_excerpt(explanation_html: str | None) -> str | None:
+    """The transcript / passage text an explanation quotes as evidence; several quotes are joined with " … "."""
+    src = explanation_html or ""
+    m = _TRANSCRIPT_QUOTE.search(src)
+    if m:
+        pieces = [m.group(1)]
+    else:
+        m = _PASSAGE_QUOTE.search(src)
+        if not m:
+            return None
+        pieces = re.findall(r"<p>(.*?)</p>", m.group(1), re.DOTALL) or [m.group(1)]
+    text = " … ".join(html.unescape(re.sub(r"<[^>]+>", "", p)).strip() for p in pieces)
     return text.strip("\"'“”‘’ ").strip() or None
 
 
@@ -202,7 +212,7 @@ def attempt_transcript(attempt_id: int, part: int, conn: sqlite3.Connection = De
     p = next((p for p in test.get("parts") or [] if p.get("number") == part), None)
     if not p:
         raise HTTPException(404, f"part {part} not found")
-    anchors = {q["number"]: transcript_excerpt(q.get("explanation_html"))
+    anchors = {q["number"]: evidence_excerpt(q.get("explanation_html"))
                for g in p.get("groups") or [] for q in g.get("questions") or [] if q.get("number") is not None}
     return {"part": part, "transcript_html": p.get("transcript_html") or "",
             "anchors": {n: t for n, t in anchors.items() if t}}
@@ -219,7 +229,7 @@ def get_attempt(attempt_id: int, conn: sqlite3.Connection = Depends(db.get_db)) 
                 "user_answer": r["user_answer"], "correct_answers": db.loads(r["correct_answers"], []),
                 "is_correct": bool(r["is_correct"]), "question_text": r["question_text"],
                 "explanation_html": explanations.get(r["question_number"]),
-                "excerpt": transcript_excerpt(explanations.get(r["question_number"]))}
+                "excerpt": evidence_excerpt(explanations.get(r["question_number"]))}
                for r in conn.execute("SELECT * FROM attempt_answers WHERE attempt_id=? ORDER BY question_number",
                                      (attempt_id,))]
     out = dict(a)

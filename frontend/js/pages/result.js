@@ -1,12 +1,10 @@
 // Results + review page for a submitted listening/reading attempt.
 import { api } from '../api.js';
-import { h, esc, icon, store, fmtBand, fmtDuration, fmtDate, sanitizeContent, qtypeLabel, emptyState, parseMaybeJSON } from '../ui.js';
+import { h, esc, icon, store, fmtBand, fmtDuration, fmtDate, qtypeLabel, emptyState, parseMaybeJSON } from '../ui.js';
 import { renderGroup, partQuestionNumbers } from '../components/questions.js';
 import { analysisPanel } from '../components/analysis.js';
 import { mistakesByQuestion, questionNote } from '../components/inline-fix.js';
-import { applyHighlights } from '../components/highlight.js';
-import { splitPane } from '../components/split.js';
-import { listeningPartReview } from '../components/listening-review.js';
+import { partReview } from '../components/answer-review.js';
 import { deleteButton } from '../components/delete.js';
 import { navigate, setTitle } from '../app.js';
 
@@ -192,26 +190,12 @@ function reviewView(test, type, byNum, highlights, afterShow = () => {}, attempt
     store.set(partKey, i);
     tabs.querySelectorAll('button').forEach((b, k) => b.setAttribute('aria-selected', String(k === i)));
     const part = parts[i];
-    const nums = partQuestionNumbers(part);
-    const ok = nums.filter((n) => byNum.get(n)?.is_correct).length;
-    if (type === 'listening') {
-      const paper = () => h('div', null, ...(part.groups || []).map((g) => renderGroup(g, ctx)));
-      const r = listeningPartReview(part, byNum, { questionPaper: paper, onDraw: afterShow });
-      stopAudio = r.stop;
-      content.replaceChildren(r.el);
-      return;
-    }
-    // reading: the passage (with the learner's highlights) beside the questions
-    const qPane = h('div', { class: 'pane questions' });
-    qPane.append(h('div', { class: 'part-banner', html: `<b>Passage ${part.number}</b> · ${ok}/${nums.length} correct` }));
-    for (const g of part.groups || []) qPane.append(renderGroup(g, ctx));
-    const pPane = h('div', { class: 'pane passage' });
-    if (part.title && !/^passage\s*\d+$/i.test(part.title)) pPane.append(h('div', { class: 'passage-title' }, part.title));
-    const pb = h('div', { class: 'passage-body', html: sanitizeContent(part.passage_html || '') });
-    pPane.append(pb);
-    try { applyHighlights(pb, highlights[part.number] || highlights[String(part.number)] || []); } catch { /* ignore */ }
-    content.replaceChildren(h('div', { class: 'review-layout' }, splitPane(pPane, qPane, { key: 'review', label: 'Resize passage and questions' })));
-    afterShow();
+    const paper = () => h('div', null, ...(part.groups || []).map((g) => renderGroup(g, ctx)));
+    const r = partReview(part, byNum, {
+      type, highlights: highlights[part.number] || highlights[String(part.number)] || [], questionPaper: paper, onDraw: afterShow,
+    });
+    stopAudio = r.stop;
+    content.replaceChildren(r.el);
   };
   parts.forEach((p, i) => {
     const nums = partQuestionNumbers(p);

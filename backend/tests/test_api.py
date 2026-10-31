@@ -212,10 +212,14 @@ def test_speaking_delete_response(client):
 
 
 def test_delete_attempt_and_transcript(client):
-    from backend.app.routers.tests import transcript_excerpt
-    assert transcript_excerpt('<p><b>From the transcript:</b> “usually about eight people but no more than ten”</p>'
-                              '<p>other</p>') == "usually about eight people but no more than ten"
-    assert transcript_excerpt("<p>no quote</p>") is None and transcript_excerpt(None) is None
+    from backend.app.routers.tests import evidence_excerpt
+    assert evidence_excerpt('<p><b>From the transcript:</b> “usually about eight people but no more than ten”</p>'
+                            '<p>other</p>') == "usually about eight people but no more than ten"
+    # reading: the passage quote, several sentences joined
+    assert evidence_excerpt('<p>Why…</p><p><strong>Evidence from the passage:</strong></p><blockquote>'
+                            '<p>a Welshman who amassed a fortune</p><p>in the shipping &amp; mining industries</p></blockquote>'
+                            ) == "a Welshman who amassed a fortune … in the shipping & mining industries"
+    assert evidence_excerpt("<p>no quote</p>") is None and evidence_excerpt(None) is None
 
     aid = client.post("/api/attempts", json={"test_id": "fixture-listening-1", "mode": "practice"}).json()["id"]
     t = client.get(f"/api/attempts/{aid}/transcript?part=1").json()

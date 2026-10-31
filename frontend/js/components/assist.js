@@ -4,7 +4,7 @@
 // in mock exams the assistant is off unless the `assist_in_mock` setting is on (a real exam has no help).
 import { api } from '../api.js';
 import { h, esc, icon, toast, renderMarkdown, qtypeLabel, debounce, store, sanitizeContent } from '../ui.js';
-import { excerptBlock, flash } from './transcript.js';
+import { excerptBlock, excerptPieces, flash } from './transcript.js';
 
 // Which knowledge-base categories belong to which section.
 const SECTION_CATEGORIES = {
@@ -516,7 +516,7 @@ async function renderTranscript() {
   // shows the line around the question on screen, without marking the answer itself
   const find = h('button', { class: 'btn sm', type: 'button', html: `${icon('target')} Find my question`, onclick: () => {
     const n = t.question();
-    const block = data.anchors?.[n] && excerptBlock(text, data.anchors[n]);
+    const block = data.anchors?.[n] && excerptBlock(text, excerptPieces(data.anchors[n])[0]);
     if (block) flash(block); else toast(`No transcript location for question ${n}.`);
   } });
   body.replaceChildren(

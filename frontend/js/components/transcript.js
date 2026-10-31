@@ -21,6 +21,12 @@ function search(text, words) {
   return m ? [m.index, m.index + m[0].length] : null;
 }
 
+/** An evidence quote can hold several sentences joined with " … ": each one is located on its own. */
+export function excerptPieces(excerpt) {
+  return String(excerpt || '').split(/\s*…\s*/).map((s) => s.replace(/^["'“”‘’\s]+|["'“”‘’\s]+$/g, ''))
+    .filter((s) => s.split(/\s+/).length >= 2);
+}
+
 /** [start, end] of `excerpt` in the text of `root`; falls back to its first or last words. */
 export function locate(root, excerpt, index = textIndex(root)) {
   const words = fold(excerpt || '').split(/[^a-z0-9£$%]+/).filter(Boolean);
