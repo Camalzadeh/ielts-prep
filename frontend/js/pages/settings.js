@@ -35,6 +35,18 @@ export async function render(root) {
     h('p', { class: 'small muted' }, 'The library has Academic and General Training reading tests. General Training is hidden unless you switch it on here; tests you already started or submitted always stay, with their results. Mock exams always use Academic tests.'),
     h('label', { class: 'switch', style: { marginTop: '8px' } }, gtToggle, 'Show General Training reading tests')));
 
+  // ------------------------------------------------ History essays
+  const histToggle = h('input', { type: 'checkbox' });
+  api.get('/api/settings').then((s) => { histToggle.checked = s.show_history_prompts !== '0'; }).catch(() => {});
+  histToggle.addEventListener('change', async () => {
+    try { await api.put('/api/settings', { show_history_prompts: histToggle.checked ? '1' : '0' }); toast('Saved.', 'good'); }
+    catch (e) { toast(e.message, 'error'); }
+  });
+  col.append(h('section', { class: 'card card-pad' },
+    h('h2', { style: { margin: 0 } }, 'History essays'),
+    h('p', { class: 'small muted' }, 'IELTS-style Task 1 and Task 2 prompts on the history topics (Q13–Q20), with your notes in the Help drawer (short, medium or detailed; English or Azərbaycanca). They are a separate class in the writing filter and are never used in mock exams or random picks.'),
+    h('label', { class: 'switch', style: { marginTop: '8px' } }, histToggle, 'Show History prompts in Writing')));
+
   // ------------------------------------------------ profile
   const nameInput = h('input', { class: 'input', type: 'text', id: 'user_name', placeholder: 'e.g. Aysel' });
   api.get('/api/settings').then((s) => { nameInput.value = s.user_name || ''; }).catch(() => {});

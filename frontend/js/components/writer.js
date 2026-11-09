@@ -53,12 +53,13 @@ export function writerView(opts) {
     const t = tasks[idx];
     const p = t.prompt;
     const task = Number(p.task) === 1 ? 1 : 2;
-    setAssistContext({ section: task === 1 ? 'writing1' : 'writing2', essayType: p.essay_type, mock: !!opts.strictTime });
+    const history = p.source === 'history' ? (String(p.tags || '').match(/\bQ\d+\b/) || [])[0] || null : null;
+    setAssistContext({ section: task === 1 ? 'writing1' : 'writing2', essayType: p.essay_type, mock: !!opts.strictTime, history });
     left.innerHTML = `
       <div class="row" style="margin-bottom:10px">
         <span class="badge accent">Task ${task}</span>
         ${p.essay_type ? `<span class="badge">${esc(essayTypeLabel(p.essay_type))}</span>` : ''}
-        ${p.source ? `<span class="badge">${esc(String(p.source).replace(/_/g, ' '))}</span>` : ''}
+        ${p.source === 'history' ? '<span class="badge history-badge">History</span>' : p.source ? `<span class="badge">${esc(String(p.source).replace(/_/g, ' '))}</span>` : ''}
       </div>
       <p class="muted small" style="margin-bottom:12px">${task === 1
         ? 'You should spend about 20 minutes on this task. Write at least 150 words.'

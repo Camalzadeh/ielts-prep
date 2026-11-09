@@ -285,6 +285,13 @@ Backend additions (non-breaking, implemented)
   learner never started (any attempt keeps a test listed; `module=` lists one module regardless). Mocks pick
   reading tests of the exam's own module only (Academic by default).
 
+History essays (branch `history-essays`)
+- `GET /api/history` -> `[{id:"Q13", title, question}]` ; `GET /api/history/{id}` -> `{id, title, question,
+  levels:{short|medium|detailed:{en, az}}, sources}`, parsed from `knowledge/history/Q*.md` at request time.
+- Prompts with `source:"history"` and `tags:"history,Q13"`. Setting `show_history_prompts` (`"1"` by default)
+  hides them from `GET /api/writing/prompts`; `pick_random_prompt` (Random Task 1/2 and mocks) never picks them.
+- `writing_context` adds the topic's medium English notes, so the AI marker can check facts.
+
 ## 5. AI analysis runner (`backend/app/ai_runner.py`)
 
 One worker thread processes queued `ai_analyses` rows sequentially. **Least privilege:** the backend

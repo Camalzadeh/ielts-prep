@@ -92,6 +92,19 @@ predicted speaking topics, real-exam writing prompts with Task-1 charts, vocabul
 the Telegram chat exports — and the downloaded test files (each user fetches them with
 `tools/fetch_content.py`; the test material is for personal study only).
 
+## History essays (branch `history-essays` only)
+This branch adds IELTS writing practice on Azerbaijani history topics Q13–Q20:
+- `knowledge/history/Q*.md` — the notes for each topic: short, medium and detailed answers in English and
+  Azərbaycanca, with sources.
+- `knowledge/data/writing_prompts.history.json` — 16 Task 2 prompts (2 per topic, real IELTS essay types) and
+  5 Task 1 prompts whose charts use figures quoted from the notes. The charts are drawn by
+  `tools/history_charts.py` into `content/media/writing/history/`.
+- **Writing:** the prompts are a separate class, **Source → History (Azerbaijan)**. **Settings → History essays**
+  shows or hides them. They are never used in mock exams or by Random Task 1/2.
+- **Help → Notes:** shows your notes for the topic of the prompt on screen (Short / Medium / Detailed,
+  English / Azərbaycanca). When an essay is analysed, the AI also gets the medium notes so it can check the
+  facts.
+
 ## License
 Proprietary - all rights reserved (see `LICENSE`). You may use this app only with the author's
 written permission, for your own non-commercial study; copying, sharing, modifying or selling it

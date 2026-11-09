@@ -8,6 +8,14 @@ import { splitPane } from '../components/split.js';
 import { deleteButton, canDelete, rowDeleteHtml, onRowDelete } from '../components/delete.js';
 import { navigate, nav, setTitle } from '../app.js';
 
+// History essay prompts (this branch): their own class in the filter, notes in the Help drawer.
+export const isHistory = (p) => p?.source === 'history';
+export const historyTopic = (p) => (String(p?.tags || '').match(/\bQ\d+\b/) || [])[0] || null;
+const sourceLabel = (s) => (s === 'history' ? 'History (Azerbaijan)' : String(s).replace(/_/g, ' '));
+const sourceBadge = (p) => (isHistory(p)
+  ? `<span class="badge history-badge">History${historyTopic(p) ? ` · ${esc(historyTopic(p))}` : ''}</span>`
+  : (p.source ? `<span class="badge">${esc(sourceLabel(p.source))}</span>` : ''));
+
 export async function render(root, params, query) {
   const [sub, id] = params;
   if (sub === 'write') return renderWrite(root, Number(id));
@@ -88,7 +96,7 @@ function bankView(body) {
       all = asList(data, 'prompts');
       const sources = [...new Set(all.map((p) => p.source).filter(Boolean))].sort();
       const cur = f.source;
-      srcSel.replaceChildren(h('option', { value: '' }, 'All sources'), ...sources.map((s) => h('option', { value: s, selected: s === cur }, s.replace(/_/g, ' '))));
+      srcSel.replaceChildren(h('option', { value: '' }, 'All sources'), ...sources.map((s) => h('option', { value: s, selected: s === cur }, sourceLabel(s))));
       drawList();
     });
   };
@@ -116,7 +124,7 @@ function promptItem(p) {
       <div class="p-meta">
         <span class="badge accent">Task ${esc(p.task)}</span>
         ${p.essay_type ? `<span class="badge">${esc(essayTypeLabel(p.essay_type))}</span>` : ''}
-        ${p.source ? `<span class="badge">${esc(String(p.source).replace(/_/g, ' '))}</span>` : ''}
+        ${sourceBadge(p)}
         ${p.source_date ? `<span class="badge">${esc(p.source_date)}</span>` : ''}
         ${p.image_path ? `<span class="badge">${icon('dashboard')} visual</span>` : ''}
         ${done ? `<span class="badge good">${done} submitted</span>` : ''}
@@ -226,7 +234,7 @@ async function renderSubmission(root, id) {
   const promptCard = h('div', { class: 'card card-pad' });
   promptCard.innerHTML = `<div class="row" style="margin-bottom:8px"><span class="badge accent">Task ${task}</span>
       ${p.essay_type ? `<span class="badge">${esc(essayTypeLabel(p.essay_type))}</span>` : ''}
-      ${p.source ? `<span class="badge">${esc(String(p.source).replace(/_/g, ' '))}</span>` : ''}</div>
+      ${sourceBadge(p)}</div>
     <div style="white-space:pre-wrap;line-height:1.65">${esc(p.prompt || '(prompt not available)')}</div>
     ${p.image_path ? `<img class="zoomable" src="${esc(mediaUrl(p.image_path))}" alt="Task visual" title="Click to enlarge" style="margin-top:12px;border:1px solid var(--border);border-radius:8px;background:#fff">` : ''}`;
   const essayCard = h('div', { class: 'card card-pad' });

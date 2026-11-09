@@ -40,24 +40,28 @@ const TYPE_KEYWORDS = {
 };
 
 // transcript (listening practice only): { attemptId(), part(), question() } from the player
-const EMPTY = { section: null, qtype: null, essayType: null, mock: false, part: null, topic: '', transcript: null };
+// history (this branch): the History topic ('Q13'...) of the essay prompt on screen; its notes get their own tab
+const EMPTY = { section: null, qtype: null, essayType: null, mock: false, part: null, topic: '', transcript: null, history: null };
 const ctx = { ...EMPTY };
 
 // Tabs per section, in the order they are offered (the first one opens by default).
 const TABS = {
   tactics: ['target', 'Tactics'], phrases: ['writing', 'Phrases'], rules: ['rules', 'Rules'],
   vocab: ['book', 'Words'], translate: ['translate', 'Translate'], transcript: ['listening', 'Transcript'],
+  notes: ['learn', 'Notes'],
 };
 const SECTION_TABS = {
   reading: ['tactics', 'rules', 'vocab', 'translate'],
   listening: ['tactics', 'transcript', 'rules', 'vocab', 'translate'],
-  writing1: ['phrases', 'tactics', 'rules', 'vocab', 'translate'],
-  writing2: ['phrases', 'tactics', 'rules', 'vocab', 'translate'],
+  writing1: ['notes', 'phrases', 'tactics', 'rules', 'vocab', 'translate'],
+  writing2: ['notes', 'phrases', 'tactics', 'rules', 'vocab', 'translate'],
   speaking: ['tactics', 'phrases', 'vocab', 'rules', 'translate'],
 };
 // The transcript is a practice aid: never offered in exam mode (the server refuses it there too).
 const tabsFor = () => (SECTION_TABS[ctx.section] || ['rules', 'vocab', 'translate'])
-  .filter((t) => t !== 'transcript' || (ctx.transcript && !ctx.mock));
+  .filter((t) => (t !== 'transcript' || (ctx.transcript && !ctx.mock)) && (t !== 'notes' || ctx.history));
+// History prompts keep their own drawer memory (they open on Notes; normal essays keep theirs)
+const scopeName = () => `${ctx.section || 'any'}${ctx.history ? '.history' : ''}`;
 let lastTextarea = null;   // the essay box phrases are inserted into
 let settings = { translate_to: 'az', assist_in_mock: '0' };
 let kbList = null;
@@ -104,7 +108,7 @@ export function assistButton({ compact = false, mock = ctx.mock } = {}) {
 // ------------------------------------------------------------------ remembered state
 // The drawer keeps what the learner set up: whether it is open, the last tab per section and, per section and
 // tab, their choices (guide, card, view, search text) and scroll position. Plain localStorage via `store`.
-const scopeKey = (tab) => `assist.${ctx.section || 'any'}.${tab}`;
+const scopeKey = (tab) => `assist.${scopeName()}.${tab}`;
 const memory = (tab) => store.get(scopeKey(tab), {}) || {};
 const remember = (tab, patch) => store.set(scopeKey(tab), { ...memory(tab), ...patch });
 
@@ -178,7 +182,7 @@ function tabStrip(tabs, active) {
 export function openDrawer(tab, { text } = {}) {
   const tabs = tabsFor();
   if (!tab || !TABS[tab]) {
-    const last = store.get(`assist.${ctx.section || 'any'}.tab`);
+    const last = store.get(`assist.${scopeName()}.tab`);
     tab = tabs.includes(last) ? last : tabs[0];
   }
   if (!tabs.includes(tab)) tabs.push(tab);
@@ -188,7 +192,7 @@ export function openDrawer(tab, { text } = {}) {
     document.body.append(drawer);
   }
   drawer.dataset.tab = tab;
-  store.set(`assist.${ctx.section || 'any'}.tab`, tab);
+  store.set(`assist.${scopeName()}.tab`, tab);
   store.set('assist.open', true);
   drawer.replaceChildren(
     drawerGrip(),
@@ -202,6 +206,7 @@ export function openDrawer(tab, { text } = {}) {
   else if (tab === 'phrases') renderPhrases();
   else if (tab === 'vocab') renderVocab();
   else if (tab === 'transcript') renderTranscript();
+  else if (tab === 'notes') renderNotes();
   else renderTranslate(text);
 }
 
@@ -492,6 +497,51 @@ async function renderVocab() {
   input.addEventListener('input', () => { remember('vocab', { q: input.value, scroll: 0 }); run(); });
   run();
   setTimeout(() => input.focus({ preventScroll: true }), 0);
+}
+
+// ------------------------------------------------------------------ History notes (this branch)
+const notesCache = new Map();   // 'Q13' -> { title, question, levels: { short|medium|detailed: { en, az } }, sources }
+const NOTE_LEVELS = [['short', 'Short'], ['medium', 'Medium'], ['detailed', 'Detailed']];
+const NOTE_LANGS = [['en', 'English'], ['az', 'Azərbaycanca']];
+
+/** The learner's own answer for the History topic of the essay on screen: content to write the essay with. */
+async function renderNotes() {
+  const body = drawer.querySelector('.assist-body');
+  const qid = ctx.history;
+  if (!qid) { body.replaceChildren(h('p', { class: 'muted' }, 'Open a History essay prompt to see its notes.')); return; }
+  let n = notesCache.get(qid);
+  if (!n) {
+    body.replaceChildren(h('p', { class: 'muted small' }, 'Loading…'));
+    try { n = await api.get(`/api/history/${encodeURIComponent(qid)}`); notesCache.set(qid, n); }
+    catch (e) { body.replaceChildren(h('p', { class: 'muted' }, e.message)); return; }
+    if (drawer?.dataset.tab !== 'notes' || ctx.history !== qid) return;   // moved on while loading
+  }
+  const mem = memory('notes');
+  let level = mem.level || 'medium', lang = mem.lang || 'en';
+  const seg = (label, opts, get, set) => h('div', { class: 'view-toggle', role: 'group', 'aria-label': label }, ...opts.map(([v, l]) =>
+    h('button', { type: 'button', 'aria-pressed': String(get() === v), onclick: () => { set(v); draw(); } }, l)));
+  const bar = h('div', { class: 'row', style: { gap: '6px', marginTop: '8px' } });
+  const doc = h('div', { class: 'assist-doc md notes-doc' });
+  const draw = () => {
+    bar.replaceChildren(
+      seg('Length', NOTE_LEVELS, () => level, (v) => { level = v; remember('notes', { level }); }),
+      seg('Language', NOTE_LANGS, () => lang, (v) => { lang = v; remember('notes', { lang }); }));
+    const text = n.levels?.[level]?.[lang] || '';
+    doc.innerHTML = text ? renderMarkdown(text) : '<p class="muted">Not available in this language.</p>';
+    if (n.sources && level === 'detailed') {
+      doc.append(h('details', { class: 'tac-more', style: { marginTop: '14px' } }, h('summary', null, 'Sources'),
+        h('div', { class: 'small', html: renderMarkdown(n.sources) })));
+    }
+    keepScroll(body, 'notes', `scroll.${qid}.${level}.${lang}`);
+  };
+  body.replaceChildren(
+    h('div', { class: 'assist-sticky' },
+      h('div', { class: 'small muted' }, `${qid} · your notes for this essay`),
+      h('b', null, n.title.replace(/^Q\d+\.\s*/, '')),
+      n.question ? h('div', { class: 'small muted notes-question' }, n.question) : '',
+      bar),
+    doc);
+  draw();
 }
 
 // ------------------------------------------------------------------ transcript (listening practice only)

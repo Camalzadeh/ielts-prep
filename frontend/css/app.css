@@ -818,3 +818,8 @@ img.zoomable, .q-image img, .passage-body img, .kb-article img, .assist-doc img 
 .mock-step .skip-badge { display: none; margin-left: auto; }
 .mock-step.skipped, .card.skipped, .stat.skipped { opacity: .55; border-style: dashed; }
 .mock-step.skipped .skip-badge { display: inline-flex; }
+
+/* History essays (this branch) */
+.badge.history-badge { background: color-mix(in srgb, #8b5cf6 16%, var(--surface)); color: color-mix(in srgb, #8b5cf6 75%, var(--text)); }
+.notes-question { margin: 4px 0 2px; font-style: italic; }
+.notes-doc h4 { margin: 1em 0 .3em; font-size: 14px; }
