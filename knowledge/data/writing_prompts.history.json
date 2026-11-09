@@ -1,0 +1,438 @@
+[
+ {
+  "task": 1,
+  "essay_type": "line",
+  "prompt": "The line graph below shows the approximate amount of oil produced in Baku in four years between 1872 and 1913, measured in millions of poods. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "source": "history",
+  "tags": "history,Q13",
+  "title": "Baku oil output, 1872-1913",
+  "chart": {
+   "x_label": "Year",
+   "y_label": "Oil output (million poods)",
+   "categories": [
+    "1872",
+    "1880",
+    "1901",
+    "1913"
+   ],
+   "series": [
+    {
+     "name": "Baku oil output",
+     "values": [
+      1.5,
+      21.5,
+      671.5,
+      467
+     ]
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "file": "Q13_Tsarist_colonial_policy.md",
+    "quote": "| 1872 | ~1.5 million | ~25,000 | Year of the otkup abolition |"
+   },
+   {
+    "file": "Q13_Tsarist_colonial_policy.md",
+    "quote": "| 1880 | ~21.5 million | ~350,000 | Drilling and refineries (\"Black City\") |"
+   },
+   {
+    "file": "Q13_Tsarist_colonial_policy.md",
+    "quote": "| 1901 | ~671.5 million | ~11 million | Peak; about half of world output and about 95% of Russia's |"
+   },
+   {
+    "file": "Q13_Tsarist_colonial_policy.md",
+    "quote": "| 1913 | ~467 million | ~7.6 million | Decline after the 1903-05 strikes and fires |"
+   },
+   {
+    "file": "Q13_Tsarist_colonial_policy.md",
+    "quote": "Baku's output rose from about **1.5 million poods (1872)** to **671.5 million poods (1901)**, about **half of world production**."
+   }
+  ],
+  "image": "media/writing/history/q13-baku-oil-output-1872-1913.svg",
+  "image_description": "Line chart 'Baku oil output, 1872-1913' (Oil output (million poods)). Baku oil output: 1872 1.5, 1880 21.5, 1901 671.5, 1913 467."
+ },
+ {
+  "task": 1,
+  "essay_type": "bar",
+  "prompt": "The bar chart below shows the percentage of Azerbaijanis and Armenians in the populations of Elizavetpol and Baku provinces according to the 1897 census. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "source": "history",
+  "tags": "history,Q13",
+  "title": "Azerbaijanis and Armenians in two provinces, 1897",
+  "chart": {
+   "x_label": "Province",
+   "y_label": "Share of population (%)",
+   "categories": [
+    "Elizavetpol",
+    "Baku"
+   ],
+   "series": [
+    {
+     "name": "Azerbaijanis",
+     "values": [
+      61,
+      59
+     ]
+    },
+    {
+     "name": "Armenians",
+     "values": [
+      33,
+      6
+     ]
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "file": "Q13_Tsarist_colonial_policy.md",
+    "quote": "| Elizavetpol, 1897 | ~878,000 | ~534,000 (~61%) | ~292,000 (~33%) | small | 1897 census |"
+   },
+   {
+    "file": "Q13_Tsarist_colonial_policy.md",
+    "quote": "| Baku, 1897 | ~827,000 | ~485,000 (~59%) | ~53,000 (~6%) | ~78,000 (~9%) | 1897 census |"
+   }
+  ],
+  "image": "media/writing/history/q13-azerbaijanis-and-armenians-in-two-provinces-1897.svg",
+  "image_description": "Bar chart 'Azerbaijanis and Armenians in two provinces, 1897' (Share of population (%)). Azerbaijanis: Elizavetpol 61, Baku 59; Armenians: Elizavetpol 33, Baku 6."
+ },
+ {
+  "task": 2,
+  "essay_type": "discussion",
+  "prompt": "Some historians argue that Tsarist rule in Azerbaijan after the Treaty of Turkmenchay (1828) was purely colonial, built on conquest, the export of raw materials and legal discrimination against Muslims. Others believe it also brought benefits, such as uniting Azerbaijani lands in the Baku and Elizavetpol provinces and creating a modern oil industry. Discuss both views and give your own opinion.",
+  "source": "history",
+  "tags": "history,Q13",
+  "note": "Core of the original question (the nature of Tsarist policy): conquest, economic extraction, discrimination vs the 'paradox' of unintended modernisation (short answer, medium answer sections 1-5 and conclusion)."
+ },
+ {
+  "task": 2,
+  "essay_type": "cause_effect",
+  "prompt": "After 1872, when Russia abolished state tax-farming of the Baku oil wells, foreign firms such as the Nobel brothers and the Rothschilds came to dominate the industry, and the share of wells owned by Azerbaijanis fell from 88% to 13%. What were the main causes of this change, and what effects did it have on the people of Azerbaijan?",
+  "source": "history",
+  "tags": "history,Q13",
+  "note": "Economic policy: the 1872 otkup abolition, foreign capital, the 88% -> 13% fall, Muslims as unskilled labour, the raw-material colony argument (medium section 3; detailed 3.6 and Table 5)."
+ },
+ {
+  "task": 2,
+  "essay_type": "opinion",
+  "prompt": "Some historians claim that the nineteenth-century Azerbaijani intelligentsia, including figures such as Bakikhanov, Akhundov and Zardabi, was created by Russian colonial rule itself, through imperial service, Russian schools and oil wealth, rather than in spite of it. To what extent do you agree or disagree?",
+  "source": "history",
+  "tags": "history,Q14",
+  "note": "The central 'how/despite' question: imperial service, schools, oil money as channels vs discrimination as stimulus (short answer; medium sections 2-5 and conclusion)."
+ },
+ {
+  "task": 2,
+  "essay_type": "direct_question",
+  "prompt": "Between 1905 and 1917, 63 newspapers and periodicals appeared in Azerbaijan, and the satirical weekly Molla Nasreddin sold 5,000 copies. Why did the press become so important in shaping Azerbaijani national identity in this period? What other institutions helped educated Azerbaijanis to spread new ideas?",
+  "source": "history",
+  "tags": "history,Q14",
+  "note": "Press as the arena of identity (Akinchi, Kashkul, Molla Nasreddin; Muslim -> Turkic -> Azerbaijani), plus schools, theatre and patrons such as Taghiyev (medium sections 3-6; detailed 3.6-3.8)."
+ },
+ {
+  "task": 2,
+  "essay_type": "adv_disadv",
+  "prompt": "In 1857 Mirza Fatali Akhundov proposed reforming the Arabic script, which he blamed for mass illiteracy, and by about 1872 he was calling for the Latin alphabet instead. Azerbaijan and Turkey only made this change in the 1920s. What are the advantages and disadvantages of a country changing its alphabet?",
+  "source": "history",
+  "tags": "history,Q15",
+  "note": "The alphabet campaign (1857 project, 1863 Istanbul trip and the Ottoman Scientific Society's printing objections, Latin script c. 1872) and education as the key to modernisation (medium section 3; detailed 3.5)."
+ },
+ {
+  "task": 2,
+  "essay_type": "positive_negative",
+  "prompt": "In the 1860s Mirza Fatali Akhundov urged the Muslim world to follow European models: a constitution and parliament instead of despotism, reason instead of clerical authority, and equal rights for women. Critics such as Mehrdad Kia say he copied Europe without criticism. Was Akhundov's call for European-style modernisation a positive or negative development?",
+  "source": "history",
+  "tags": "history,Q15",
+  "note": "Akhundov's overall programme (Letters of Kamal ud-Dawla, secularism, women's rights), its influence on Iran and Azerbaijan, and Kia's criticisms (medium sections 4-5 and conclusion; detailed 3.6-3.8, 3.10)."
+ },
+ {
+  "task": 2,
+  "essay_type": "discussion",
+  "prompt": "Some historians argue that the first Azerbaijani political organisations, such as Qeyrat and Difai in Ganja in 1905, were mainly a reaction to the Armenian-Muslim clashes of 1905-1906. Others believe they were the result of wider causes, such as the 1905 revolution in Russia and the unequal position of Muslims under Tsarist rule. Discuss both views and give your own opinion.",
+  "source": "history",
+  "tags": "history,Q16",
+  "note": "Origins of the first stage: the 1905 revolution, the 'Tatar-Armenian war', liberal petitions and Muslim congresses, economic inequality (medium sections 1-4; detailed 3.2-3.5)."
+ },
+ {
+  "task": 2,
+  "essay_type": "opinion",
+  "prompt": "Some historians believe that the small secret organisations of 1905-1907, such as Qeyrat, Difai and Mudafia, achieved very little, and that the Azerbaijani national movement only became significant when Musavat, founded in Baku in 1911, gave it a clear ideology and a leader, Mahammad Amin Rasulzade. To what extent do you agree or disagree?",
+  "source": "history",
+  "tags": "history,Q16",
+  "note": "Comparing the organisations: Difai as the first proto-nationalist body, Mudafia's aims, Musavat's programme, Rasulzade and the road to 1918 (medium sections 3-7 and conclusion; detailed 3.6-3.8)."
+ },
+ {
+  "task": 2,
+  "essay_type": "discussion",
+  "prompt": "Between 1906 and 1907, Azerbaijani deputies such as Alimardan bey Topchubashov and Fatali khan Khoyski sat in the Muslim fraction of the First and Second State Dumas in Saint Petersburg. Some historians argue that these deputies achieved little, because none of their demands became law, while others believe the Dumas were a valuable school of parliamentarism for the future leaders of Azerbaijan. Discuss both views and give your own opinion.",
+  "source": "history",
+  "tags": "history,Q17",
+  "note": "Overall assessment of the Azerbaijani deputies in both Dumas: demands raised vs. results; dissolution, 3 June 1907 law, Vyborg Appeal, later ADR leadership (medium-answer conclusion, 3.6)."
+ },
+ {
+  "task": 2,
+  "essay_type": "opinion",
+  "prompt": "The land question, including the demand to stop the resettlement of Russian peasants in the Caucasus, was the most important issue that Azerbaijani deputies raised in the First and Second Dumas (1906-1907), far more important than education, native-language courts or equal rights for Muslims. To what extent do you agree or disagree?",
+  "source": "history",
+  "tags": "history,Q17",
+  "note": "The issues raised by Azerbaijani intellectuals in the Dumas: agrarian position of 24 June 1906, Ziyadkhanov's and Khoyski's speeches, Zeynalov's free-land position, versus field courts-martial, the 173-signature equality bill, schools and courts in native languages."
+ },
+ {
+  "task": 1,
+  "essay_type": "bar",
+  "prompt": "The bar chart below shows the percentage rise in the prices of seven basic food products between January 1916 and January 1917, during the First World War. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "source": "history",
+  "tags": "history,Q18",
+  "title": "Food price rises, 1916-1917",
+  "chart": {
+   "x_label": "Food product",
+   "y_label": "Price rise (%)",
+   "categories": [
+    "Bread",
+    "Meat",
+    "Milk",
+    "Eggs",
+    "Butter",
+    "Potatoes",
+    "Vegetable oils"
+   ],
+   "series": [
+    {
+     "name": "Price rise Jan 1916 - Jan 1917",
+     "values": [
+      54,
+      142,
+      123,
+      110,
+      152,
+      47,
+      154
+     ]
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "file": "Q18_After_the_February_Revolution.md",
+    "quote": "| Product | Price rise Jan 1916 - Jan 1917 |"
+   },
+   {
+    "file": "Q18_After_the_February_Revolution.md",
+    "quote": "| Bread | 54% |"
+   },
+   {
+    "file": "Q18_After_the_February_Revolution.md",
+    "quote": "| Meat | 142% |"
+   },
+   {
+    "file": "Q18_After_the_February_Revolution.md",
+    "quote": "| Milk | 123% |"
+   },
+   {
+    "file": "Q18_After_the_February_Revolution.md",
+    "quote": "| Eggs | 110% |"
+   },
+   {
+    "file": "Q18_After_the_February_Revolution.md",
+    "quote": "| Butter | 152% |"
+   },
+   {
+    "file": "Q18_After_the_February_Revolution.md",
+    "quote": "| Potatoes | 47% |"
+   },
+   {
+    "file": "Q18_After_the_February_Revolution.md",
+    "quote": "| Vegetable oils | 154% |"
+   },
+   {
+    "file": "Q18_After_the_February_Revolution.md",
+    "quote": "| Cabbage | 13.9% |"
+   },
+   {
+    "file": "Q18_After_the_February_Revolution.md",
+    "quote": "Between the beginning of the war and January 1917 prices rose about **350%**, wages only about **200%**; in 1916 alone meat rose **142%**, butter **152%**, bread **54%** (Kazemzadeh)."
+   }
+  ],
+  "image": "media/writing/history/q18-food-price-rises-1916-1917.svg",
+  "image_description": "Bar chart 'Food price rises, 1916-1917' (Price rise (%)). Price rise Jan 1916 - Jan 1917: Bread 54, Meat 142, Milk 123, Eggs 110, Butter 152, Potatoes 47, Vegetable oils 154."
+ },
+ {
+  "task": 1,
+  "essay_type": "pie",
+  "prompt": "The pie chart below shows the approximate make-up of the population of the city of Baku by national group in 1913. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "source": "history",
+  "tags": "history,Q18",
+  "title": "Population of Baku by group, 1913",
+  "chart": {
+   "x_label": "",
+   "y_label": "Share of city population (%)",
+   "categories": [
+    "Russians (incl. Ukrainians etc.)",
+    "Azerbaijanis",
+    "Armenians",
+    "Iranian subjects",
+    "Others"
+   ],
+   "series": [
+    {
+     "name": "Baku, 1913 (total about 215,000)",
+     "values": [
+      35,
+      21,
+      19,
+      12,
+      13
+     ]
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "file": "Q18_After_the_February_Revolution.md",
+    "quote": "**Baku population (1913 city census, as cited in Western studies such as Suny's *The Baku Commune* and Altstadt's *The Azerbaijani Turks*; figures rounded):**"
+   },
+   {
+    "file": "Q18_After_the_February_Revolution.md",
+    "quote": "| Russians (incl. Ukrainians etc.) | about 76,000 | about 35% |"
+   },
+   {
+    "file": "Q18_After_the_February_Revolution.md",
+    "quote": "| Azerbaijanis (\"Tatars\") | about 46,000 | about 21% |"
+   },
+   {
+    "file": "Q18_After_the_February_Revolution.md",
+    "quote": "| Armenians | about 42,000 | about 19% |"
+   },
+   {
+    "file": "Q18_After_the_February_Revolution.md",
+    "quote": "| Iranian subjects (mostly South Azerbaijanis) | about 25,000 | about 12% |"
+   },
+   {
+    "file": "Q18_After_the_February_Revolution.md",
+    "quote": "| Others (Jews, Germans, Georgians, Lezgins...) | rest | about 13% |"
+   },
+   {
+    "file": "Q18_After_the_February_Revolution.md",
+    "quote": "| **Total (city)** | **about 215,000** | 100% |"
+   }
+  ],
+  "image": "media/writing/history/q18-population-of-baku-by-group-1913.svg",
+  "image_description": "Pie chart 'Population of Baku by group, 1913' (Share of city population (%)). Baku, 1913 (total about 215,000): Russians (incl. Ukrainians etc.) 35, Azerbaijanis 21, Armenians 19, Iranian subjects 12, Others 13."
+ },
+ {
+  "task": 2,
+  "essay_type": "direct_question",
+  "prompt": "Between March and October 1917, after the February Revolution, the idea of national unity spread rapidly among Azerbaijanis through the Muslim National Councils, the Muslim congresses in Baku and Moscow, and the party Musavat. Why did this idea reach the majority of the people so quickly? What obstacles did the national movement still face by October 1917?",
+  "source": "history",
+  "tags": "history,Q18",
+  "note": "The spread of national unity ideas: councils, congresses (446 to 271 vote), Musavat merger, election results; limits (autonomy not independence, Ittihad/Hummat, no armed force, leaving the Baku Soviet) - sections 3.3-3.9."
+ },
+ {
+  "task": 2,
+  "essay_type": "adv_disadv",
+  "prompt": "In 1917 Azerbaijani leaders such as Mammad Amin Rasulzade asked for territorial autonomy for Azerbaijan inside a democratic federal Russian republic, rather than full independence. What were the advantages and disadvantages of this goal for the Azerbaijani national movement?",
+  "source": "history",
+  "tags": "history,Q18",
+  "note": "The national programme of 1917 (Moscow congress, Musavat programme of October 1917), Swietochowski's point about doubts over the viability of full independence; the later shift to independence in 1918."
+ },
+ {
+  "task": 2,
+  "essay_type": "cause_effect",
+  "prompt": "In spring 1918 the Bolshevik-led Baku Soviet under Stepan Shaumyan, relying on armed Dashnak units, crushed its rival Musavat, and the March events of 1918 cost the lives of thousands of Azerbaijanis in Baku and the provinces. What were the main causes of this violence, and what effects did it have on the Azerbaijani national movement?",
+  "source": "history",
+  "tags": "history,Q19",
+  "note": "Causes and consequences of the 1918 massacre policy: oil, Bolshevik weakness, Musavat factor, Dashnak aims, military imbalance; consequences - turn to independence, Ottoman orientation, Extraordinary Investigation Commission, 31 March memorial day (sections 3.9-3.10)."
+ },
+ {
+  "task": 2,
+  "essay_type": "discussion",
+  "prompt": "Some historians describe the fighting in Baku on 30 March - 2 April 1918 as a political civil war between the Baku Soviet and the Musavat party, while others argue that it became a massacre of Azerbaijani civilians on ethnic grounds. Discuss both views and give your own opinion.",
+  "source": "history",
+  "tags": "history,Q19",
+  "note": "The anti-Azerbaijani policy of the Baku Commune and the historiography of the March events: Soviet 'civil war' view vs. Kazemzadeh's 'degenerated into a massacre', Efendiyev, Popov, Azerbaijani view (sections 3.5, 3.11)."
+ },
+ {
+  "task": 1,
+  "essay_type": "bar",
+  "prompt": "The bar chart below shows the number of seats held by six parties in the Transcaucasian Seym, the regional parliament that opened in Tiflis in February 1918. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "source": "history",
+  "tags": "history,Q20",
+  "title": "Seats in the Transcaucasian Seym, 1918",
+  "chart": {
+   "x_label": "Party",
+   "y_label": "Number of seats",
+   "categories": [
+    "Georgian Mensheviks",
+    "Musavat and non-party democrats",
+    "Dashnaktsutyun",
+    "Socialist Revolutionaries",
+    "Hummat",
+    "Kadets"
+   ],
+   "series": [
+    {
+     "name": "Seats (Kazemzadeh)",
+     "values": [
+      30,
+      30,
+      27,
+      6,
+      3,
+      1
+     ]
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "file": "Q20_Seym_Trabzon_Batum.md",
+    "quote": "| Faction | Seats (Kazemzadeh) | Seats (Azerbaijani historiography, midterm guide) |"
+   },
+   {
+    "file": "Q20_Seym_Trabzon_Batum.md",
+    "quote": "| Georgian Mensheviks (Social Democrats) | 30 | 30-32 (figures vary) |"
+   },
+   {
+    "file": "Q20_Seym_Trabzon_Batum.md",
+    "quote": "| Musavat and non-party democrats | 30 | 30 |"
+   },
+   {
+    "file": "Q20_Seym_Trabzon_Batum.md",
+    "quote": "| Dashnaktsutyun (Armenian) | 27 | 27 |"
+   },
+   {
+    "file": "Q20_Seym_Trabzon_Batum.md",
+    "quote": "| Hummat (Muslim Mensheviks) | 3 | 4 |"
+   },
+   {
+    "file": "Q20_Seym_Trabzon_Batum.md",
+    "quote": "| Socialist Revolutionaries (SRs) | 6 | 5-6 |"
+   },
+   {
+    "file": "Q20_Seym_Trabzon_Batum.md",
+    "quote": "| Kadets | 1 (Iu. Semenov) | 1 |"
+   },
+   {
+    "file": "Q19_Baku_Commune_and_March_1918.md",
+    "quote": "Kazemzadeh gives: Mensheviks 30 seats, **Musavat 30**, Dashnaks 27, SRs 6, Hummat 3, Kadets 1."
+   }
+  ],
+  "image": "media/writing/history/q20-seats-in-the-transcaucasian-seym-1918.svg",
+  "image_description": "Bar chart 'Seats in the Transcaucasian Seym, 1918' (Number of seats). Seats (Kazemzadeh): Georgian Mensheviks 30, Musavat and non-party democrats 30, Dashnaktsutyun 27, Socialist Revolutionaries 6, Hummat 3, Kadets 1."
+ },
+ {
+  "task": 2,
+  "essay_type": "outweigh",
+  "prompt": "At the Trabzon and Batum conferences of 1918, Muslim deputies of the Transcaucasian Seym such as Mammad Amin Rasulzade and Mammad Hasan Hajinski consistently supported peace with the Ottoman Empire, and on 4 June 1918 Azerbaijan signed the Treaty of Batum, which promised Ottoman military help. Do the advantages of this pro-Ottoman policy outweigh its disadvantages?",
+  "source": "history",
+  "tags": "history,Q20",
+  "note": "The role of the Muslim members at Trabzon and Batum: peace line, Hajinski's contacts with the Ottomans, Article 4 and the Caucasian Islamic Army vs. accusations of disloyalty and the break-up of the federation (sections 3.6, 3.8, 3.10, 3.12)."
+ },
+ {
+  "task": 2,
+  "essay_type": "positive_negative",
+  "prompt": "The Transcaucasian Democratic Federative Republic, proclaimed by the Seym on 22 April 1918, lasted only about a month: on 26 May Georgia declared independence and the Seym dissolved itself, and the next day its Muslim deputies formed the Azerbaijani National Council. Was the collapse of the Transcaucasian federation a positive or negative development for Azerbaijan?",
+  "source": "history",
+  "tags": "history,Q20",
+  "note": "Activity of the Muslim faction in the Seym and its transformation into the National Council: 22 April federation, Chkhenkeli cabinet, 'dual state' proposal of 21 May, 26-28 May 1918 (sections 3.7-3.9)."
+ }
+]
