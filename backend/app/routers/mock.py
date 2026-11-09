@@ -116,6 +116,43 @@ def get_mock(mock_id: int, conn: sqlite3.Connection = Depends(db.get_db)) -> dic
     return d
 
 
+class SectionsBody(BaseModel):
+    sections: list[str]
+
+
+@router.put("/{mock_id}/sections")
+def set_sections(mock_id: int, body: SectionsBody, conn: sqlite3.Connection = Depends(db.get_db)) -> dict:
+    """Change which sections an unfinished mock includes (e.g. skip Speaking, or add it back).
+    A section that already has results cannot be dropped; a section added back gets its materials."""
+    row = conn.execute("SELECT * FROM mock_exams WHERE id=?", (mock_id,)).fetchone()
+    if not row:
+        raise HTTPException(404, "mock not found")
+    if row["status"] == "finished":
+        raise HTTPException(409, "a finished mock cannot change its sections")
+    want = [s for s in SECTIONS if s in body.sections]
+    if not want:
+        raise HTTPException(422, f"choose at least one of {list(SECTIONS)}")
+    plan = db.loads(row["plan_json"], {}) or {}
+    links = mock_links(conn, mock_id)
+    kept = [s for s in (plan.get("sections") or SECTIONS) if s not in want and links.get(s)]
+    if kept:
+        raise HTTPException(409, f"{', '.join(kept)} already has results in this mock")
+    module = plan.get("module") or "academic"
+    for s in want:
+        if plan.get(s):
+            continue
+        if s in ("listening", "reading"):
+            plan[s] = pick_test(conn, s, module if s == "reading" else None)
+        elif s == "writing":
+            t1, t2 = pick_random_prompt(conn, 1, module), pick_random_prompt(conn, 2, module)
+            plan[s] = {"task1": t1["id"] if t1 else None, "task2": t2["id"] if t2 else None}
+        else:
+            plan[s] = build_random_set(conn, "full")
+    plan["sections"] = want
+    conn.execute("UPDATE mock_exams SET plan_json=? WHERE id=?", (db.dumps(plan), mock_id))
+    return {"ok": True, "plan": plan}
+
+
 class LinkBody(BaseModel):
     section: str
     ref_id: int

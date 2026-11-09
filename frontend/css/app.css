@@ -813,3 +813,8 @@ img.zoomable, .q-image img, .passage-body img, .kb-article img, .assist-doc img 
 .icon-btn.sm-del { width: 30px; height: 30px; margin-left: 4px; vertical-align: middle; color: var(--text-3); }
 .icon-btn.sm-del:hover { color: var(--bad); border-color: color-mix(in srgb, var(--bad) 40%, var(--border)); }
 .icon-btn.sm-del svg { width: 15px; height: 15px; }
+
+/* mock exam: a section left out (Speaking) */
+.mock-step .skip-badge { display: none; margin-left: auto; }
+.mock-step.skipped, .card.skipped, .stat.skipped { opacity: .55; border-style: dashed; }
+.mock-step.skipped .skip-badge { display: inline-flex; }

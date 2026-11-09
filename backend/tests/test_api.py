@@ -318,3 +318,24 @@ def test_general_training_hidden_by_default(client):
         assert pick_test(conn, "reading", "general") == "gt-reading-x"
     with db.session() as conn:
         conn.execute("DELETE FROM tests WHERE id='gt-reading-x'")
+
+
+def test_mock_without_speaking(client):
+    # started without Speaking: the overall band comes from the other sections
+    m = client.post("/api/mock", json={"sections": ["listening", "reading", "writing"]}).json()
+    assert m["plan"]["sections"] == ["listening", "reading", "writing"] and "speaking" not in m["plan"]
+    # add it back (gets a speaking set), then skip it again
+    r = client.put(f"/api/mock/{m['id']}/sections", json={"sections": ["listening", "reading", "writing", "speaking"]}).json()
+    assert r["plan"]["speaking"]["part1"]
+    r = client.put(f"/api/mock/{m['id']}/sections", json={"sections": ["listening", "reading", "writing"]}).json()
+    assert r["plan"]["sections"] == ["listening", "reading", "writing"]
+    assert client.get(f"/api/mock/{m['id']}").json()["missing"] == ["listening", "reading", "writing"]
+    # a section with results cannot be dropped; nothing at all is refused
+    aid = client.post("/api/attempts", json={"test_id": "fixture-reading-1", "mode": "mock", "mock_id": m["id"]}).json()["id"]
+    client.post(f"/api/attempts/{aid}/submit", json={"answers": {"1": "FALSE"}})
+    assert client.put(f"/api/mock/{m['id']}/sections", json={"sections": ["listening"]}).status_code == 409
+    assert client.put(f"/api/mock/{m['id']}/sections", json={"sections": []}).status_code == 422
+    # finished: fixed
+    client.post(f"/api/mock/{m['id']}/finish")
+    assert client.put(f"/api/mock/{m['id']}/sections", json={"sections": ["reading"]}).status_code == 409
+    client.delete(f"/api/attempts/{aid}")

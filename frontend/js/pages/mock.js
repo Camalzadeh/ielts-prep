@@ -23,20 +23,36 @@ export async function render(root, params) {
   return renderMock(root, Number(id));
 }
 
+// Speaking can be left out (e.g. no microphone or no quiet room); the choice is remembered.
+const includeSpeaking = () => store.get('mock.includeSpeaking', true) !== false;
+
 async function startNew() {
   try {
-    const res = await api.post('/api/mock', { sections: SECTIONS.map((s) => s.key), random: true });
+    const sections = SECTIONS.map((s) => s.key).filter((k) => k !== 'speaking' || includeSpeaking());
+    const res = await api.post('/api/mock', { sections, random: true });
     navigate(`#/mock/${res.id}`);
   } catch (e) { toast(`Could not create mock: ${e.message}`, 'error'); }
 }
 
 function renderList(root) {
   setTitle('Mock Exam');
+  const startBtn = h('button', { class: 'btn primary lg', type: 'button', onclick: startNew });
+  const speakToggle = h('input', { type: 'checkbox', checked: includeSpeaking() });
+  const how = h('div', { class: 'grid grid-4', style: { marginBottom: '26px' } });
+  const drawStart = () => {
+    const on = includeSpeaking();
+    startBtn.innerHTML = `${icon('play')} ${on ? 'Start a full mock' : 'Start mock without Speaking'}`;
+    how.querySelectorAll('[data-sec="speaking"]').forEach((c) => c.classList.toggle('skipped', !on));
+  };
+  speakToggle.addEventListener('change', () => { store.set('mock.includeSpeaking', speakToggle.checked); drawStart(); });
   root.replaceChildren(h('div', { class: 'page-head' },
     h('div', null, h('h1', null, 'Mock exam'), h('p', null, 'A full IELTS exam with random unseen materials: Listening → Reading → Writing → Speaking.')),
-    h('div', { class: 'page-actions' }, h('button', { class: 'btn primary lg', type: 'button', html: `${icon('play')} Start a full mock`, onclick: startNew }))));
-  const how = h('div', { class: 'grid grid-4', style: { marginBottom: '26px' } }, ...SECTIONS.map((s, i) => h('div', { class: 'card card-pad' },
-    h('div', { class: 'row' }, h('span', { class: 'badge accent' }, `Step ${i + 1}`), h('span', { class: 'muted small' }, s.time)),
+    h('div', { class: 'page-actions', style: { alignItems: 'center' } },
+      h('label', { class: 'switch', title: 'Leave Speaking out of new mocks (you can also skip or add it inside a mock)' }, speakToggle, 'Include Speaking'),
+      startBtn)));
+  how.append(...SECTIONS.map((s, i) => h('div', { class: 'card card-pad mock-step', dataset: { sec: s.key } },
+    h('div', { class: 'row' }, h('span', { class: 'badge accent' }, `Step ${i + 1}`), h('span', { class: 'muted small' }, s.time),
+      s.key === 'speaking' ? h('span', { class: 'badge skip-badge' }, 'Skipped') : ''),
     h('h3', { style: { marginTop: '10px' } }, s.label),
     h('p', { class: 'small muted', style: { margin: 0 } }, {
       listening: 'Recording plays once; parts advance automatically.',
@@ -44,6 +60,7 @@ function renderList(root) {
       writing: 'Task 1 + Task 2 with one shared 60-minute timer.',
       speaking: 'Parts 1–3 recorded with examiner prompts.',
     }[s.key]))));
+  drawStart();
   root.append(how, h('h2', null, 'Your mock exams'));
   const list = h('div');
   root.append(list);
@@ -54,7 +71,7 @@ function renderList(root) {
     wrap.innerHTML = `<table class="table"><thead><tr><th>#</th><th>Started</th><th>Status</th><th class="num">L</th><th class="num">R</th><th class="num">W</th><th class="num">S</th><th>Overall</th><th></th></tr></thead><tbody>
       ${rows.map((m) => `<tr><td>${m.id}</td><td>${esc(fmtDate(m.created_at))}</td>
         <td>${m.status === 'finished' ? '<span class="badge good">Finished</span>' : '<span class="badge warn">In progress</span>'}</td>
-        <td class="num">${fmtBand(m.listening_band)}</td><td class="num">${fmtBand(m.reading_band)}</td><td class="num">${fmtBand(m.writing_band)}</td><td class="num">${fmtBand(m.speaking_band)}</td>
+        <td class="num">${fmtBand(m.listening_band)}</td><td class="num">${fmtBand(m.reading_band)}</td><td class="num">${fmtBand(m.writing_band)}</td><td class="num">${m.plan?.sections && !m.plan.sections.includes('speaking') ? '<span class="muted small">skipped</span>' : fmtBand(m.speaking_band)}</td>
         <td>${m.overall_band != null ? `<span class="band-pill">${fmtBand(m.overall_band)}</span>` : '<span class="muted small">–</span>'}</td>
         <td><a class="btn sm" href="#/mock/${m.id}">${m.status === 'finished' ? 'View' : 'Continue'}</a></td></tr>`).join('')}</tbody></table>`;
     list.append(wrap);
@@ -84,7 +101,8 @@ async function renderMock(root, id) {
     overall: mock.overall_band ?? live.overall,
   };
   // Only show an overall band once every planned section has a band.
-  const complete = SECTIONS.filter((s) => !plan.sections || plan.sections.includes(s.key)).every((s) => bands[s.key] != null);
+  const complete = sections.every((s) => bands[s.key] != null);
+  const noSpeaking = !sections.some((s) => s.key === 'speaking');
   if (!complete && mock.overall_band == null) bands.overall = null;
   const states = Object.fromEntries(sections.map((s) => [s.key, sectionState(mock, s.key)]));
   const currentIdx = sections.findIndex((s) => !states[s.key].done);
@@ -111,14 +129,15 @@ async function renderMock(root, id) {
   // section cards
   const grid = h('div', { class: 'grid grid-2', style: { marginBottom: '22px' } });
   for (const [i, s] of sections.entries()) grid.append(sectionCard(mock, s, states[s.key], bands[s.key], i === currentIdx, id));
+  if (noSpeaking) grid.append(skippedSpeakingCard(mock, id, finished));
   root.append(grid);
 
   // final
   const final = h('div', { class: 'card card-pad', style: { marginBottom: '22px' } });
-  const tiles = SECTIONS.map((s) => `<div class="card stat" style="text-align:center"><div class="stat-label" style="justify-content:center">${s.label}</div>
-      <div class="stat-value">${fmtBand(bands[s.key])}</div></div>`).join('');
+  const tiles = SECTIONS.map((s) => `<div class="card stat${sections.includes(s) ? '' : ' skipped'}" style="text-align:center"><div class="stat-label" style="justify-content:center">${s.label}</div>
+      <div class="stat-value">${sections.includes(s) ? fmtBand(bands[s.key]) : '<span class="small muted">skipped</span>'}</div></div>`).join('');
   final.innerHTML = `<div class="row" style="gap:26px;align-items:center">
-      ${bandRing(bands.overall, 130, 'Overall')}
+      ${bandRing(bands.overall, 130, noSpeaking ? 'Overall · no S' : 'Overall')}
       <div style="flex:1;min-width:280px"><h2>${allDone ? (finished ? 'Final result' : 'All sections complete') : 'Results so far'}</h2>
       <p class="muted small">${allDone ? 'Writing and speaking bands come from AI analysis — run “Analyse with AI” on each, then finish the mock to lock in the overall band.' : 'Complete each section in order. Writing and speaking bands appear after AI analysis.'}</p>
       <div class="grid grid-4" style="gap:10px">${tiles}</div></div></div>`;
@@ -177,9 +196,34 @@ function sectionCard(mock, s, st, band, isCurrent, id) {
     body.append(h('div', { class: 'muted' }, `${asList(sp.part1).length} Part 1 questions · ${sp.part2 ? 'cue card: ' + sp.part2.question : 'no cue card'} · ${asList(sp.part3).length} Part 3 questions`));
     st.ids.forEach((sid) => btns.append(h('a', { class: 'btn sm', href: `#/speaking/session/${sid}` }, 'Open session — analyse')));
     if (!st.done) btns.append(h('a', { class: `btn ${isCurrent ? 'primary' : ''}`, href: `#/mock/${id}/speaking` }, 'Start Speaking'));
+    if (!st.done && mock.status !== 'finished') {
+      btns.append(h('button', { class: 'btn ghost', type: 'button', html: `${icon('close')} Skip Speaking`, onclick: async () => {
+        if (!(await confirmDialog('Skip Speaking?', '<p>This mock will be scored on the other sections only, and its overall band is marked “without Speaking”. You can add Speaking back until the mock is finished.</p>', 'Skip Speaking'))) return;
+        setSections(id, (plan.sections || SECTIONS.map((x) => x.key)).filter((k) => k !== 'speaking'));
+      } }));
+    }
     if (st.done && band == null) body.append(h('div', { style: { color: 'var(--warn)', marginTop: '6px' } }, 'Run AI analysis on the session to get the speaking band.'));
   }
   return card;
+}
+
+async function setSections(id, sections) {
+  try { await api.put(`/api/mock/${id}/sections`, { sections }); navigate(`#/mock/${id}`); }
+  catch (e) { toast(e.message, 'error'); }
+}
+
+/** Shown in place of the Speaking card when the mock leaves it out. */
+function skippedSpeakingCard(mock, id, finished) {
+  const plan = mock.plan || {};
+  return h('div', { class: 'card card-pad skipped' },
+    h('div', { class: 'row between' },
+      h('div', { class: 'row' }, h('span', { class: 'm-icon', html: icon('speaking'), style: { width: '34px', height: '34px', borderRadius: '9px', background: 'var(--surface-3)', color: 'var(--text-3)', display: 'grid', placeItems: 'center' } }),
+        h('h3', { style: { margin: 0 } }, 'Speaking')),
+      h('span', { class: 'badge' }, 'Skipped')),
+    h('p', { class: 'small muted', style: { margin: '10px 0 0' } }, 'Not part of this mock: the overall band is calculated without Speaking.'),
+    finished ? '' : h('div', { class: 'row', style: { marginTop: '12px' } },
+      h('button', { class: 'btn', type: 'button', html: `${icon('plus')} Add Speaking back`,
+        onclick: () => setSections(id, [...(plan.sections || []), 'speaking']) })));
 }
 
 async function renderWriting(root, id) {
