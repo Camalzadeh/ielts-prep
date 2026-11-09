@@ -32,6 +32,7 @@ DEFAULT_SETTINGS: dict[str, str] = {
     "translate_to": "az",     # study assistant: target language of the translator
     "assist_in_mock": "0",    # "1" = study assistant also available during mock exams
     "show_general_training": "0",  # "1" = General Training reading tests in the library (mocks never use them)
+    "show_history_prompts": "1",   # "1" = History essay prompts in the writing bank (never in mocks / random picks)
 }
 
 _init_lock = threading.Lock()

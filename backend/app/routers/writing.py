@@ -14,6 +14,9 @@ from ..importer import word_count
 
 router = APIRouter(prefix="/api/writing", tags=["writing"])
 
+HISTORY = "history"   # source of the History essay prompts (knowledge/data/writing_prompts.history.json)
+NOT_HISTORY = f" AND COALESCE(p.source, '') != '{HISTORY}'"
+
 PROMPT_COLS = ("p.id, p.task, p.module, p.essay_type, p.prompt, p.image_path, p.image_description, p.source, "
                "p.source_date, p.tags, (SELECT COUNT(*) FROM writing_submissions s WHERE s.prompt_id=p.id) AS submissions")
 
@@ -44,13 +47,16 @@ def list_prompts(task: Optional[int] = None, essay_type: Optional[str] = None, q
     if q:
         sql += " AND (p.prompt LIKE ? OR p.tags LIKE ?)"
         args += [f"%{q}%", f"%{q}%"]
+    if db.get_setting(conn, "show_history_prompts") != "1":
+        sql += NOT_HISTORY
     sql += " ORDER BY p.source_date IS NULL, p.source_date DESC, p.id DESC LIMIT ?"
     args.append(max(1, min(limit, 5000)))
     return [prompt_dict(r) for r in conn.execute(sql, args)]
 
 
 def pick_random_prompt(conn: sqlite3.Connection, task: int | None, module: str | None = None) -> dict | None:
-    sql = f"SELECT {PROMPT_COLS} FROM writing_prompts p WHERE 1=1"
+    """Random prompt for 'Random Task 1/2' and mock exams: History prompts are practice material, never picked."""
+    sql = f"SELECT {PROMPT_COLS} FROM writing_prompts p WHERE 1=1{NOT_HISTORY}"
     args: list[Any] = []
     if task:
         sql += " AND p.task = ?"

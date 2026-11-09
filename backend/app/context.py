@@ -294,9 +294,23 @@ def attempt_context(conn: sqlite3.Connection, attempt_id: int, exclude_analysis:
 
 
 # --------------------------------------------------------------------------- writing
+def _history_reference(tags: str | None) -> str:
+    """History essay prompts (this branch): the learner's own notes on the topic, so the marker can check facts."""
+    from .routers.history import _file, parse_notes
+    m = re.search(r"\bQ\d+\b", tags or "")
+    f = _file(m.group(0)) if m else None
+    if not f:
+        return ""
+    notes = parse_notes(f.read_text(encoding="utf-8"))
+    text = (notes["levels"].get("medium") or {}).get("en", "")
+    return ("\n## Reference notes (History practice prompt)\nThe essay is on a history topic the learner studies. "
+            "Use these notes only to check that historical facts in the essay are accurate (Task Response); "
+            "mark the essay as an IELTS essay, not as a history exam.\n" + text)
+
+
 def writing_context(conn: sqlite3.Connection, submission_id: int, exclude_analysis: int | None = None) -> str:
     s = conn.execute(
-        "SELECT s.*, p.task, p.module, p.essay_type, p.prompt, p.image_path, p.image_description, p.source "
+        "SELECT s.*, p.task, p.module, p.essay_type, p.prompt, p.image_path, p.image_description, p.source, p.tags "
         "FROM writing_submissions s LEFT JOIN writing_prompts p ON p.id = s.prompt_id WHERE s.id = ?",
         (submission_id,)).fetchone()
     if not s:
@@ -315,6 +329,8 @@ def writing_context(conn: sqlite3.Connection, submission_id: int, exclude_analys
         out.append("Image description (data shown in the visual):\n" + s["image_description"])
     elif s["task"] == 1:
         out.append("(No image description available — judge data accuracy cautiously.)")
+    if s["source"] == "history":
+        out.append(_history_reference(s["tags"]))
     out += ["\n## Candidate's essay", s["text"] or ""]
     keys = s.keys()
     if "teacher_band" in keys and (s["teacher_band"] is not None or s["teacher_comments"]):

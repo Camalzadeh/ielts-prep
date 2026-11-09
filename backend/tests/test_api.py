@@ -339,3 +339,38 @@ def test_mock_without_speaking(client):
     client.post(f"/api/mock/{m['id']}/finish")
     assert client.put(f"/api/mock/{m['id']}/sections", json={"sections": ["reading"]}).status_code == 409
     client.delete(f"/api/attempts/{aid}")
+
+
+def test_history_prompts_and_notes(client):
+    from backend.app.routers.writing import pick_random_prompt
+    assert client.get("/api/history").json() == [{"id": "Q1", "title": "Q1. A test topic", "question": "Describe the test topic."}]
+    n = client.get("/api/history/Q1").json()
+    assert n["levels"]["short"] == {"en": "Short English answer.", "az": "Qısa cavab."}
+    assert n["levels"]["detailed"]["en"].startswith("#### 3.1 Part") and n["sources"] == "- A book."
+    assert client.get("/api/history/Q9").status_code == 404 and client.get("/api/history/..%2Fx").status_code == 404
+    with db.session() as conn:
+        conn.execute("INSERT INTO writing_prompts(task, module, essay_type, prompt, source, tags) VALUES "
+                     "(2, 'academic', 'opinion', 'History prompt for the test.', 'history', 'history,Q1')")
+    listed = lambda: [p["prompt"] for p in client.get("/api/writing/prompts").json()]
+    assert "History prompt for the test." in listed()          # shown by default on this branch
+    client.put("/api/settings", json={"show_history_prompts": "0"})
+    assert "History prompt for the test." not in listed()
+    client.put("/api/settings", json={"show_history_prompts": "1"})
+    # never picked at random, so never in a mock
+    with db.session(readonly=True) as conn:
+        assert all(pick_random_prompt(conn, 2)["prompt"] != "History prompt for the test." for _ in range(30))
+    with db.session() as conn:
+        conn.execute("DELETE FROM writing_prompts WHERE source='history'")
+
+
+def test_history_essay_context_has_notes(client):
+    with db.session() as conn:
+        pid = conn.execute("INSERT INTO writing_prompts(task, module, essay_type, prompt, source, tags) VALUES "
+                           "(2, 'academic', 'opinion', 'History context prompt.', 'history', 'history,Q1')").lastrowid
+    sid = client.post("/api/writing/submissions", json={"prompt_id": pid, "text": "An essay."}).json()["id"]
+    with db.session(readonly=True) as conn:
+        ctx = context.writing_context(conn, sid)
+    assert "Reference notes (History practice prompt)" in ctx and "Medium English answer." in ctx
+    client.delete(f"/api/writing/submissions/{sid}")
+    with db.session() as conn:
+        conn.execute("DELETE FROM writing_prompts WHERE id=?", (pid,))
