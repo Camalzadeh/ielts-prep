@@ -47,9 +47,11 @@ export async function render(root, params) {
   const id = Number(params[0]);
   const attempt = await api.get(`/api/attempts/${id}`);
   if (attempt.status && attempt.status !== 'submitted') {
-    root.replaceChildren(emptyState('This attempt is still in progress', '', 'clock',
-      `<a class="btn primary" href="#/test/${encodeURIComponent(attempt.test_id)}/${id}">Resume test</a>`));
-    root.querySelector('.empty .btn')?.after(' ', deleteResultButton({ ...attempt, id }, `#/${attempt.type || 'reading'}`));
+    const inMock = attempt.mock_id ? `?mode=mock&mock=${attempt.mock_id}` : '';
+    root.replaceChildren(emptyState('This attempt is still in progress', inMock ? 'It is a section of a mock exam.' : '', 'clock',
+      `<a class="btn primary" href="#/test/${encodeURIComponent(attempt.test_id)}/${id}${inMock}">Resume test</a>`
+      + (attempt.mock_id ? ` <a class="btn" href="#/mock/${attempt.mock_id}">Open the mock exam</a>` : '')));
+    if (!attempt.mock_id) root.querySelector('.empty .btn')?.after(' ', deleteResultButton({ ...attempt, id }, `#/${attempt.type || 'reading'}`));
     return;
   }
   const testId = attempt.test_id || attempt.test?.id;

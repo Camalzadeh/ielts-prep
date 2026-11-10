@@ -831,3 +831,8 @@ html.is-fullscreen .main-col { padding-bottom: 0; }
 
 /* essay page: marking by the teacher or an official examiner */
 .teacher-comments { margin-top: 10px; white-space: pre-wrap; line-height: 1.65; color: var(--text-2); }
+
+/* mock exam: a section stopped part-way */
+.step.in-progress { background: var(--warn-soft); }
+.step.in-progress .s-num { background: var(--warn); color: #fff; }
+.step.in-progress .s-sub { color: var(--warn); font-weight: 600; }
