@@ -48,7 +48,7 @@ def run_import() -> dict[str, Any]:
         conn = db.connect()
         try:
             for name, fn in (("tests", import_tests), ("writing_prompts", import_writing_prompts),
-                             ("retired_prompts", retire_prompts),
+                             ("retired_prompts", retire_prompts), ("stale_prompts", prune_stale_prompts),
                              ("speaking_questions", import_speaking_questions),
                              ("vocab", import_vocab), ("my_essays", import_my_essays),
                              ("photo_essays", import_photo_essays), ("test_results", import_test_results),
@@ -281,6 +281,22 @@ def retire_prompts(conn: sqlite3.Connection, errors: list[str]) -> dict[str, int
         conn.execute("DELETE FROM writing_prompts WHERE id = ?", (pid,))
         stats["deleted"] += 1
     return stats
+
+
+def prune_stale_prompts(conn: sqlite3.Connection, errors: list[str]) -> int:
+    """Drop prompts that no data file provides any more (e.g. prompts of another branch's data, or an earlier
+    wording), unless the learner added them, wrote an essay on them or a mock exam uses them."""
+    current = {_str(item.get("prompt")) for path in _data_files("writing_prompts*.json")
+               for item in _items(_read_json(path, []))}
+    in_mocks = _mock_prompt_ids(conn)
+    n = 0
+    for pid, prompt in conn.execute(
+            "SELECT p.id, p.prompt FROM writing_prompts p WHERE COALESCE(p.source, '') != 'user' "
+            "AND NOT EXISTS (SELECT 1 FROM writing_submissions s WHERE s.prompt_id = p.id)").fetchall():
+        if prompt not in current and pid not in in_mocks:
+            conn.execute("DELETE FROM writing_prompts WHERE id = ?", (pid,))
+            n += 1
+    return n
 
 
 # --------------------------------------------------------------------------- speaking

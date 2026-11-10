@@ -339,3 +339,53 @@ def test_mock_without_speaking(client):
     client.post(f"/api/mock/{m['id']}/finish")
     assert client.put(f"/api/mock/{m['id']}/sections", json={"sections": ["reading"]}).status_code == 409
     client.delete(f"/api/attempts/{aid}")
+
+
+def test_cancel_mock_and_external_tests(client):
+    # cancel: finished sections stay as results, unfinished attempts go
+    m = client.post("/api/mock", json={"sections": ["listening", "reading"]}).json()
+    done = client.post("/api/attempts", json={"test_id": "fixture-reading-1", "mode": "mock", "mock_id": m["id"]}).json()["id"]
+    client.post(f"/api/attempts/{done}/submit", json={"answers": {"1": "FALSE"}})
+    open_ = client.post("/api/attempts", json={"test_id": "fixture-listening-1", "mode": "mock", "mock_id": m["id"]}).json()["id"]
+    r = client.delete(f"/api/mock/{m['id']}").json()
+    assert r["ok"] and r["discarded_attempts"] == [open_] and r["kept_results"] == 1
+    assert client.get(f"/api/mock/{m['id']}").status_code == 404
+    assert client.get(f"/api/attempts/{open_}").status_code == 404
+    kept = client.get(f"/api/attempts/{done}").json()
+    assert kept["status"] == "submitted" and kept["mock_id"] is None
+    assert client.delete(f"/api/mock/{m['id']}").status_code == 404
+    client.delete(f"/api/attempts/{done}")
+    # external (results-only) tests are never listed or picked
+    with db.session() as conn:
+        conn.execute("INSERT INTO tests(id, type, module, title, source, data_json) VALUES "
+                     "('ext-x-reading', 'reading', 'academic', 'External', 'external', '{\"parts\": []}')")
+    assert "ext-x-reading" not in {t["id"] for t in client.get("/api/tests?type=reading").json()}
+    from backend.app.routers.mock import pick_test
+    with db.session(readonly=True) as conn:
+        assert all(pick_test(conn, "reading", "academic") != "ext-x-reading" for _ in range(20))
+    # an examiner's band counts for a mock's writing when there is no AI band
+    m2 = client.post("/api/mock", json={"sections": ["writing"]}).json()
+    p = client.get("/api/writing/prompts/random?task=2").json()
+    sid = client.post("/api/writing/submissions", json={"prompt_id": p["id"], "text": "x", "mock_id": m2["id"]}).json()["id"]
+    with db.session() as conn:
+        conn.execute("UPDATE writing_submissions SET teacher_band=5.5 WHERE id=?", (sid,))
+        conn.execute("DELETE FROM tests WHERE id='ext-x-reading'")
+    assert client.get(f"/api/mock/{m2['id']}").json()["live_bands"]["writing"] == 5.5
+    client.delete(f"/api/mock/{m2['id']}")
+    client.delete(f"/api/writing/submissions/{sid}")
+
+
+def test_stale_prompts_are_pruned(client):
+    with db.session() as conn:
+        conn.execute("INSERT INTO writing_prompts(task, prompt, source) VALUES (2, 'Stale prompt from elsewhere.', 'history')")
+        conn.execute("INSERT INTO writing_prompts(task, prompt, source) VALUES (2, 'My own prompt.', 'user')")
+        used = conn.execute("INSERT INTO writing_prompts(task, prompt, source) VALUES (2, 'Stale but written on.', 'teacher')").lastrowid
+        conn.execute("INSERT INTO writing_submissions(prompt_id, text, created_at, origin) VALUES (?, 'x', '2026-01-01', 'app')", (used,))
+    r = client.post("/api/admin/reimport?wait=1").json()
+    assert r["result"]["stale_prompts"] == 1
+    with db.session(readonly=True) as conn:
+        left = {row[0] for row in conn.execute("SELECT prompt FROM writing_prompts")}
+    assert "Stale prompt from elsewhere." not in left and {"My own prompt.", "Stale but written on."} <= left
+    with db.session() as conn:
+        conn.execute("DELETE FROM writing_submissions WHERE prompt_id=?", (used,))
+        conn.execute("DELETE FROM writing_prompts WHERE prompt IN ('My own prompt.', 'Stale but written on.')")

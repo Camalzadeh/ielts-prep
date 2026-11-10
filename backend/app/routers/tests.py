@@ -43,6 +43,7 @@ def _has_submitted(conn: sqlite3.Connection, test_id: str) -> bool:
 @router.get("/tests")
 def list_tests(type: Optional[str] = None, module: Optional[str] = None,
                conn: sqlite3.Connection = Depends(db.get_db)) -> list[dict]:
+    # tests from external mocks (source 'external') only hold a result's answer key: they are not playable
     q = """SELECT t.id, t.type, t.module, t.title, t.series, t.book, t.test_no, t.question_count, t.source,
              (SELECT MAX(band) FROM attempts a WHERE a.test_id=t.id AND a.status='submitted') AS best_band,
              (SELECT band FROM attempts a WHERE a.test_id=t.id AND a.status='submitted'
@@ -50,7 +51,7 @@ def list_tests(type: Optional[str] = None, module: Optional[str] = None,
              (SELECT COUNT(*) FROM attempts a WHERE a.test_id=t.id AND a.status='submitted') AS attempts,
              (SELECT id FROM attempts a WHERE a.test_id=t.id AND a.status='in_progress'
                 ORDER BY a.id DESC LIMIT 1) AS in_progress_attempt
-           FROM tests t WHERE 1=1"""
+           FROM tests t WHERE COALESCE(t.source, '') != 'external'"""
     args: list[Any] = []
     if type:
         q += " AND t.type = ?"

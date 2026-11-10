@@ -29,7 +29,8 @@ class MockCreate(BaseModel):
 
 def pick_test(conn: sqlite3.Connection, ttype: str, module: str | None) -> str | None:
     rows = conn.execute(
-        "SELECT t.id, t.module, (SELECT COUNT(*) FROM attempts a WHERE a.test_id=t.id) AS n FROM tests t WHERE t.type=?",
+        "SELECT t.id, t.module, (SELECT COUNT(*) FROM attempts a WHERE a.test_id=t.id) AS n FROM tests t "
+        "WHERE t.type=? AND COALESCE(t.source, '') != 'external'",
         (ttype,)).fetchall()
     if ttype == "reading":
         # only the exam's own module: an Academic mock never gets a General Training passage
@@ -69,9 +70,10 @@ def compute_bands(conn: sqlite3.Connection, mock_id: int) -> dict[str, Any]:
     # writing: Task 2 counts double (official weighting); single task -> its own band
     task_bands: dict[int, float] = {}
     for sid in links["writing"]:
-        task = conn.execute("SELECT p.task FROM writing_submissions s JOIN writing_prompts p ON p.id=s.prompt_id "
-                            "WHERE s.id=?", (sid,)).fetchone()
-        b = latest_ai_band(conn, "writing", sid)
+        task = conn.execute("SELECT p.task, s.teacher_band FROM writing_submissions s JOIN writing_prompts p "
+                            "ON p.id=s.prompt_id WHERE s.id=?", (sid,)).fetchone()
+        # an examiner's band (e.g. an official external mock) counts before the AI estimate
+        b = task[1] if task and task[1] is not None else latest_ai_band(conn, "writing", sid)
         if b is not None and task:
             task_bands[task[0]] = b
     if 1 in task_bands and 2 in task_bands:
@@ -114,6 +116,24 @@ def get_mock(mock_id: int, conn: sqlite3.Connection = Depends(db.get_db)) -> dic
     d["live_bands"] = {**live, "overall": overall_if_complete(live, sections)}
     d["missing"] = [s for s in sections if live.get(s) is None]
     return d
+
+
+@router.delete("/{mock_id}")
+def delete_mock(mock_id: int, conn: sqlite3.Connection = Depends(db.get_db)) -> dict:
+    """Cancel (or delete) a mock exam. Sections already completed stay as ordinary results in History;
+    unfinished attempts of the mock are discarded."""
+    if not conn.execute("SELECT 1 FROM mock_exams WHERE id=?", (mock_id,)).fetchone():
+        raise HTTPException(404, "mock not found")
+    unfinished = [r[0] for r in conn.execute(
+        "SELECT id FROM attempts WHERE mock_id=? AND status != 'submitted'", (mock_id,))]
+    for aid in unfinished:
+        db.forget_result(conn, "attempt", aid, None, "")
+        conn.execute("DELETE FROM attempts WHERE id=?", (aid,))
+    kept = sum(conn.execute(f"UPDATE {t} SET mock_id=NULL WHERE mock_id=?", (mock_id,)).rowcount
+               for t in ("attempts", "writing_submissions", "speaking_sessions"))
+    conn.execute("DELETE FROM ai_analyses WHERE target_type='mock' AND target_id=?", (mock_id,))
+    conn.execute("DELETE FROM mock_exams WHERE id=?", (mock_id,))
+    return {"ok": True, "id": mock_id, "kept_results": kept, "discarded_attempts": unfinished}
 
 
 class SectionsBody(BaseModel):
