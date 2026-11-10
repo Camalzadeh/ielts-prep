@@ -1,6 +1,6 @@
 // Full mock exam: create plan, stepper L -> R -> W -> S, final bands + AI analysis.
 import { api } from '../api.js';
-import { h, esc, icon, toast, withStates, emptyState, fmtDate, fmtBand, asList, store, confirmDialog } from '../ui.js';
+import { h, esc, icon, toast, withStates, emptyState, fmtDate, fmtBand, asList, store, confirmDialog, wordCount } from '../ui.js';
 import { analysisPanel } from '../components/analysis.js';
 import { writerView } from '../components/writer.js';
 import { speakingRunner } from './speaking.js';
@@ -79,15 +79,27 @@ function renderList(root) {
   });
 }
 
+/**
+ * A section is done (results to review), in progress (`open`: something to resume) or not started.
+ * Listening/Reading: a linked attempt counts as done only once submitted. Writing: drafts of the mock's essays.
+ * Speaking: a session stopped before the end. (`mock.progress` comes from the server; without it, as before.)
+ */
 function sectionState(mock, key) {
   const links = mock.links || {};
   const plan = mock.plan || {};
+  const prog = mock.progress || null;
   const ids = asList(links[key]);
   if (key === 'writing') {
     const need = [plan.writing?.task1, plan.writing?.task2].filter(Boolean).length || 2;
-    return { done: ids.length >= need, ids };
+    const done = ids.length >= need;
+    const words = done ? 0 : [plan.writing?.task1, plan.writing?.task2].filter(Boolean)
+      .reduce((n, pid) => n + wordCount(store.get(`draft.mock.${mock.id}.writing.${pid}`)?.text || ''), 0);
+    return { done, ids, open: words ? { words } : null };
   }
-  return { done: ids.length > 0, ids };
+  const table = key === 'speaking' ? prog?.speaking : prog?.attempts;
+  const finished = (x) => !table || ['submitted', 'finished'].includes(table[String(x)]);
+  const done = ids.filter(finished), open = ids.filter((x) => !finished(x));
+  return { done: done.length > 0, ids: done, open: done.length ? null : open[open.length - 1] || null };
 }
 
 async function renderMock(root, id) {
@@ -120,10 +132,10 @@ async function renderMock(root, id) {
   const stepper = h('div', { class: 'stepper', role: 'list' });
   sections.forEach((s, i) => {
     const st = states[s.key];
-    const cls = st.done ? 'done' : i === currentIdx ? 'current' : '';
+    const cls = st.done ? 'done' : st.open ? 'current in-progress' : i === currentIdx ? 'current' : '';
     stepper.append(h('div', { class: `step ${cls}`, role: 'listitem', 'aria-current': i === currentIdx ? 'step' : undefined },
       h('span', { class: 's-num', html: st.done ? icon('check') : String(i + 1) }),
-      h('div', null, h('div', { class: 's-title' }, s.label), h('div', { class: 's-sub' }, st.done ? (bands[s.key] != null ? `Band ${fmtBand(bands[s.key])}` : 'Completed') : s.time))));
+      h('div', null, h('div', { class: 's-title' }, s.label), h('div', { class: 's-sub' }, st.done ? (bands[s.key] != null ? `Band ${fmtBand(bands[s.key])}` : 'Completed') : st.open ? 'In progress' : s.time))));
   });
   stepper.querySelectorAll('.s-num svg').forEach((s) => { s.style.width = '15px'; s.style.height = '15px'; });
   root.append(stepper);
@@ -169,7 +181,8 @@ function sectionCard(mock, s, st, band, isCurrent, id) {
   const card = h('div', { class: 'card card-pad' });
   const head = h('div', { class: 'row between' },
     h('div', { class: 'row' }, h('span', { class: 'm-icon', html: icon(s.icon), style: { width: '34px', height: '34px', borderRadius: '9px', background: 'var(--accent-soft)', color: 'var(--accent)', display: 'grid', placeItems: 'center' } }), h('h3', { style: { margin: 0 } }, s.label)),
-    st.done ? h('span', { class: 'band-pill' }, band != null ? fmtBand(band) : '✓') : h('span', { class: 'badge' }, s.time));
+    st.done ? h('span', { class: 'band-pill' }, band != null ? fmtBand(band) : '✓')
+      : st.open ? h('span', { class: 'badge warn' }, 'In progress') : h('span', { class: 'badge' }, s.time));
   card.append(head);
   const body = h('div', { class: 'small', style: { marginTop: '10px' } });
   card.append(body);
@@ -179,11 +192,23 @@ function sectionCard(mock, s, st, band, isCurrent, id) {
   if (s.key === 'listening' || s.key === 'reading') {
     const testId = plan[s.key];
     body.append(h('div', { class: 'muted' }, testId ? `Test: ${testId}` : 'No test available.'));
+    const start = `#/test/${encodeURIComponent(testId)}`;
     if (st.done) {
       st.ids.forEach((aid) => btns.append(h('a', { class: 'btn sm', href: `#/result/${aid}` }, 'Review answers')));
+    } else if (testId && st.open) {
+      // stopped part-way: resume it (answers, highlights and time are kept), or start the section again
+      body.append(h('div', { class: 'small', style: { marginTop: '6px', color: 'var(--warn)' } }, 'Stopped part-way: your answers and the time used are saved.'));
+      btns.append(h('a', { class: 'btn primary', href: `${start}/${st.open}?mode=mock&mock=${id}`, html: `${icon('play')} Resume ${s.label}` }),
+        h('button', { class: 'btn ghost', type: 'button', onclick: async () => {
+          if (!(await confirmDialog(`Start ${s.label} again?`, `<p>The stopped ${s.label.toLowerCase()} attempt and its answers are discarded, and the section starts again from the beginning.</p>`, 'Start again', 'danger'))) return;
+          try { await api.del(`/api/attempts/${st.open}`); } catch (e) { if (e.status !== 404) { toast(e.message, 'error'); return; } }
+          store.remove(`attempt.${st.open}`);
+          store.remove(`active.${testId}.mock.${id}`);
+          navigate(`${start}?mode=mock&mock=${id}`);
+        } }, 'Start again'));
     } else if (testId) {
       const active = store.get(`active.${testId}.mock.${id}`);
-      btns.append(h('a', { class: `btn ${isCurrent ? 'primary' : ''}`, href: `#/test/${encodeURIComponent(testId)}${active ? `/${active}` : ''}?mode=mock&mock=${id}` }, active ? 'Resume' : `Start ${s.label}`));
+      btns.append(h('a', { class: `btn ${isCurrent ? 'primary' : ''}`, href: `${start}${active ? `/${active}` : ''}?mode=mock&mock=${id}` }, active ? `Resume ${s.label}` : `Start ${s.label}`));
     }
   } else if (s.key === 'writing') {
     const w = plan.writing || {};
@@ -191,13 +216,25 @@ function sectionCard(mock, s, st, band, isCurrent, id) {
     if (st.ids.length) {
       st.ids.forEach((sid, i) => btns.append(h('a', { class: 'btn sm', href: `#/writing/submission/${sid}` }, `Essay ${i + 1} — analyse`)));
     }
-    if (!st.done && (w.task1 || w.task2)) btns.append(h('a', { class: `btn ${isCurrent ? 'primary' : ''}`, href: `#/mock/${id}/writing` }, 'Start Writing'));
+    if (st.open) body.append(h('div', { class: 'small', style: { marginTop: '6px', color: 'var(--warn)' } }, `Stopped part-way: your draft (${st.open.words} words) and the time used are saved.`));
+    if (!st.done && (w.task1 || w.task2)) btns.append(h('a', { class: `btn ${isCurrent || st.open ? 'primary' : ''}`, href: `#/mock/${id}/writing`, html: st.open ? `${icon('play')} Resume Writing` : 'Start Writing' }));
     if (st.done && band == null) body.append(h('div', { style: { color: 'var(--warn)', marginTop: '6px' } }, 'Run AI analysis on both essays to get the writing band.'));
   } else if (s.key === 'speaking') {
     const sp = plan.speaking || {};
     body.append(h('div', { class: 'muted' }, `${asList(sp.part1).length} Part 1 questions · ${sp.part2 ? 'cue card: ' + sp.part2.question : 'no cue card'} · ${asList(sp.part3).length} Part 3 questions`));
     st.ids.forEach((sid) => btns.append(h('a', { class: 'btn sm', href: `#/speaking/session/${sid}` }, 'Open session — analyse')));
-    if (!st.done) btns.append(h('a', { class: `btn ${isCurrent ? 'primary' : ''}`, href: `#/mock/${id}/speaking` }, 'Start Speaking'));
+    if (st.open) {
+      // a recording session cannot continue mid-way: keep what was recorded, or do Speaking again
+      body.append(h('div', { class: 'small', style: { marginTop: '6px', color: 'var(--warn)' } }, 'Stopped part-way. Keep the answers recorded so far, or start Speaking again.'));
+      btns.append(h('button', { class: 'btn primary', type: 'button', html: `${icon('check')} Keep these answers`, onclick: async () => {
+        try { await api.post(`/api/speaking/sessions/${st.open}/finish`); navigate(`#/mock/${id}`); } catch (e) { toast(e.message, 'error'); }
+      } }), h('a', { class: 'btn sm', href: `#/speaking/session/${st.open}` }, 'Listen'),
+      h('button', { class: 'btn ghost', type: 'button', onclick: async () => {
+        if (!(await confirmDialog('Start Speaking again?', '<p>The answers recorded in the stopped session are discarded.</p>', 'Start again', 'danger'))) return;
+        try { await api.del(`/api/speaking/sessions/${st.open}`); } catch (e) { if (e.status !== 404) { toast(e.message, 'error'); return; } }
+        navigate(`#/mock/${id}/speaking`);
+      } }, 'Start again'));
+    } else if (!st.done) btns.append(h('a', { class: `btn ${isCurrent ? 'primary' : ''}`, href: `#/mock/${id}/speaking` }, 'Start Speaking'));
     if (!st.done && mock.status !== 'finished') {
       btns.append(h('button', { class: 'btn ghost', type: 'button', html: `${icon('close')} Skip Speaking`, onclick: async () => {
         if (!(await confirmDialog('Skip Speaking?', '<p>This mock will be scored on the other sections only, and its overall band is marked “without Speaking”. You can add Speaking back until the mock is finished.</p>', 'Skip Speaking'))) return;

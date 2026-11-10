@@ -97,6 +97,14 @@ def _mock_dict(conn: sqlite3.Connection, row: sqlite3.Row) -> dict:
     d = dict(row)
     d["plan"] = db.loads(d.pop("plan_json"), {})
     d["links"] = mock_links(conn, row["id"])
+    # whether each linked test attempt / speaking session is finished, so the page can tell
+    # "in progress" (resume it) from "done" (review it)
+    d["progress"] = {
+        "attempts": {str(r[0]): r[1] for r in conn.execute(
+            "SELECT id, status FROM attempts WHERE mock_id=?", (row["id"],))},
+        "speaking": {str(r[0]): ("finished" if r[1] else "in_progress") for r in conn.execute(
+            "SELECT id, finished_at FROM speaking_sessions WHERE mock_id=?", (row["id"],))},
+    }
     return d
 
 
