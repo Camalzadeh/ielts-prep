@@ -7,6 +7,7 @@ import { speakingRunner } from './speaking.js';
 import { getPrompt } from './writing.js';
 import { bandRing } from './result.js';
 import { navigate, nav, setTitle } from '../app.js';
+import { deleteButton } from '../components/delete.js';
 
 const SECTIONS = [
   { key: 'listening', label: 'Listening', icon: 'listening', time: '30 min' },
@@ -112,7 +113,8 @@ async function renderMock(root, id) {
   root.replaceChildren(h('div', { class: 'page-head' },
     h('div', null, h('div', { class: 'small' }, h('a', { href: '#/mock' }, '← All mocks')), h('h1', null, `Mock exam #${id}`),
       h('p', null, `Started ${fmtDate(mock.created_at)}${finished ? ` · finished ${fmtDate(mock.finished_at)}` : ''}`)),
-    h('div', { class: 'page-actions' })));
+    h('div', { class: 'page-actions' },
+      deleteButton('mock', { ...mock, title: `Mock exam #${id}` }, () => navigate('#/mock'), finished ? 'Delete mock' : 'Cancel mock'))));
 
   // stepper
   const stepper = h('div', { class: 'stepper', role: 'list' });

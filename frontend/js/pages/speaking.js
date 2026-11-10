@@ -116,7 +116,20 @@ export async function speakingRunner(root, opts) {
     if (S.recording) await stopRecording(steps[S.idx]);
     finish();
   });
-  head.querySelector('.page-actions').append(autoToggle, finishNow, assistButton());
+  // Cancel: the session and every answer recorded in it are discarded.
+  const cancelBtn = h('button', { class: 'btn danger', type: 'button', html: `${icon('stop')} Cancel`, title: 'Cancel this session; recorded answers are discarded' });
+  cancelBtn.addEventListener('click', async () => {
+    const n = S.uploads.length + (S.recording ? 1 : 0);
+    if (!(await confirmDialog('Cancel this speaking session?', `<p>${n ? `The ${n} answer${n === 1 ? '' : 's'} recorded so far ${n === 1 ? 'is' : 'are'} discarded.` : 'Nothing has been recorded yet.'} This cannot be undone.</p><p>To keep your answers instead, use <b>Finish now</b>.</p>`, 'Cancel session', 'danger'))) return;
+    S.recording = false;
+    cleanup();
+    await Promise.all([...S.uploads.map((u) => u.promise), ...S.deletes].filter(Boolean)).catch(() => {});
+    if (S.sessionId) { try { await api.del(`/api/speaking/sessions/${S.sessionId}`); } catch (e) { if (e.status !== 404) { toast(`Could not cancel: ${e.message}`, 'error'); return; } } }
+    nav.guard = null;
+    toast('Session cancelled.', 'good');
+    navigate(opts.mockId ? `#/mock/${opts.mockId}` : '#/speaking');
+  });
+  head.querySelector('.page-actions').append(autoToggle, finishNow, cancelBtn, assistButton());
   const progress = h('div', { class: 'row small muted', style: { marginBottom: '12px' } });
   const stage = h('div', { class: 'grid speak-stage' });
   const left = h('div', { class: 'stack' });

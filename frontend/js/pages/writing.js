@@ -1,6 +1,6 @@
 // Writing: prompt bank, editor, submissions and submission detail with AI analysis.
 import { api, mediaUrl } from '../api.js';
-import { h, esc, icon, toast, modal, withStates, emptyState, debounce, fmtDate, fmtDuration, essayTypeLabel, ESSAY_TYPES, asList, store, wordCount } from '../ui.js';
+import { h, esc, icon, toast, modal, withStates, emptyState, debounce, fmtDate, fmtDuration, essayTypeLabel, ESSAY_TYPES, asList, store, wordCount, confirmDialog } from '../ui.js';
 import { writerView } from '../components/writer.js';
 import { analysisPanel } from '../components/analysis.js';
 import { annotatedText, writingCorrections, fixesToggle } from '../components/inline-fix.js';
@@ -20,7 +20,7 @@ export async function render(root, params, query) {
   const [sub, id] = params;
   if (sub === 'write') return renderWrite(root, Number(id));
   if (sub === 'submission') return renderSubmission(root, Number(id));
-  return renderBank(root, sub === 'submissions' ? 'subs' : (query.tab || 'bank'));
+  return renderBank(root, sub === 'submissions' ? 'subs' : sub === 'drafts' ? 'drafts' : (query.tab || 'bank'));
 }
 
 export async function getPrompt(id) {
@@ -47,11 +47,13 @@ function renderBank(root, tab) {
   const body = h('div');
   root.append(tabs, body);
   const draw = (t) => {
+    const n = listDrafts().length;
     tabs.replaceChildren(
       h('button', { role: 'tab', type: 'button', 'aria-selected': String(t === 'bank'), onclick: () => draw('bank') }, 'Prompt bank'),
+      h('button', { role: 'tab', type: 'button', 'aria-selected': String(t === 'drafts'), onclick: () => draw('drafts') }, `In progress${n ? ` · ${n}` : ''}`),
       h('button', { role: 'tab', type: 'button', 'aria-selected': String(t === 'subs'), onclick: () => draw('subs') }, 'My submissions'));
-    if (t === 'bank') bankView(body); else submissionsView(body);
-    history.replaceState(null, '', t === 'bank' ? '#/writing' : '#/writing/submissions');
+    if (t === 'bank') bankView(body); else if (t === 'drafts') draftsView(body, () => draw('drafts')); else submissionsView(body);
+    history.replaceState(null, '', { bank: '#/writing', drafts: '#/writing/drafts', subs: '#/writing/submissions' }[t]);
     nav.lastHash = location.hash;
   };
   draw(tab);
@@ -160,6 +162,60 @@ async function addPrompt(done) {
   catch (e) { toast(`Could not add: ${e.message}`, 'error'); }
 }
 
+// ------------------------------------------------------------------ in progress
+/** Unfinished essays: the drafts the editor keeps in this browser (practice prompts and mock exams). */
+function listDrafts() {
+  const out = [];
+  try {
+    for (const k of Object.keys(localStorage)) {
+      const key = k.replace(/^ielts\./, '');
+      const m = key.match(/^draft\.writing\.(\d+)$/) || key.match(/^draft\.mock\.(\d+)\.writing\.(\d+)$/);
+      if (!m) continue;
+      const d = store.get(key);
+      if (!d?.text?.trim()) continue;
+      out.push(m.length === 2 ? { key, promptId: Number(m[1]), ...d } : { key, mockId: Number(m[1]), promptId: Number(m[2]), ...d });
+    }
+  } catch { /* storage unavailable */ }
+  return out.sort((a, b) => (b.at || 0) - (a.at || 0));
+}
+
+function draftsView(body, redraw) {
+  const drafts = listDrafts();
+  if (!drafts.length) {
+    body.replaceChildren(emptyState('Nothing in progress', 'An essay you start and leave unfinished is kept here as a draft, so you can continue it later.', 'writing'));
+    return;
+  }
+  const list = h('div', { class: 'prompt-list' });
+  body.replaceChildren(h('div', { class: 'small muted', style: { marginBottom: '10px' } },
+    `${drafts.length} unfinished essay${drafts.length > 1 ? 's' : ''} · drafts are kept in this browser`), list);
+  for (const d of drafts) {
+    const card = h('article', { class: 'card prompt-item' });
+    const words = wordCount(d.text);
+    const href = d.mockId ? `#/mock/${d.mockId}/writing` : `#/writing/write/${d.promptId}`;
+    const info = h('div', { style: { minWidth: '0' } }, h('div', { class: 'p-meta' },
+      h('span', { class: 'badge warn' }, 'In progress'),
+      d.mockId ? h('span', { class: 'badge' }, `Mock exam #${d.mockId}`) : '',
+      h('span', { class: 'badge' }, `${words} word${words === 1 ? '' : 's'}`),
+      d.spent ? h('span', { class: 'badge' }, fmtDuration(d.spent)) : '',
+      d.at ? h('span', { class: 'small muted' }, `saved ${fmtDate(new Date(d.at).toISOString())}`) : ''),
+      h('div', { class: 'p-text muted' }, d.text.slice(0, 220)));
+    card.append(info, h('div', { class: 'row', style: { gap: '6px' } },
+      h('a', { class: 'btn primary sm', href }, 'Continue'),
+      h('button', { class: 'btn sm danger', type: 'button', onclick: async () => {
+        if (!(await confirmDialog('Discard this draft?', `<p>${words} word${words === 1 ? '' : 's'} you wrote are deleted. This cannot be undone.</p>`, 'Discard', 'danger'))) return;
+        store.remove(d.key);
+        if (!d.mockId) store.remove(`${d.key}.elapsed`);
+        toast('Draft discarded.', 'good');
+        redraw();
+      } }, 'Discard')));
+    list.append(card);
+    getPrompt(d.promptId).then((p) => {
+      info.querySelector('.p-meta').prepend(h('span', { class: 'badge accent' }, `Task ${p.task}`));
+      info.append(h('div', { class: 'small', style: { marginTop: '6px', color: 'var(--text-2)' } }, `Prompt: ${String(p.prompt).slice(0, 160)}${String(p.prompt).length > 160 ? '…' : ''}`));
+    }).catch(() => {});
+  }
+}
+
 function submissionsView(body) {
   const list = h('div');
   body.replaceChildren(list);
@@ -174,8 +230,8 @@ function submissionsView(body) {
         <td style="max-width:460px"><a href="#/writing/submission/${s.id}" style="color:inherit;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(s.prompt_excerpt || s.prompt_text || s.prompt?.prompt || '(prompt)')}</a></td>
         <td class="num">${esc(s.word_count ?? '')}</td>
         <td class="num">${s.time_spent_sec ? esc(fmtDuration(s.time_spent_sec)) : '–'}</td>
-        <td>${s.origin === 'telegram_import' ? '<span class="badge">Telegram</span>' : '<span class="badge">App</span>'}</td>
-        <td>${s.band != null ? `<span class="band-pill">${Number(s.band).toFixed(1)}</span>` : '<span class="muted small">–</span>'}</td>
+        <td>${s.origin === 'telegram_import' ? '<span class="badge">Telegram</span>' : s.origin === 'external' ? '<span class="badge accent">Official mock</span>' : '<span class="badge">App</span>'}</td>
+        <td>${s.band != null ? `<span class="band-pill">${Number(s.band).toFixed(1)}</span>` : s.teacher_band != null ? `<span class="band-pill" title="Examiner / teacher band">${Number(s.teacher_band).toFixed(1)}</span>` : '<span class="muted small">–</span>'}</td>
         <td>${canDelete('writing', s) ? rowDeleteHtml('writing', s.id) : ''}</td></tr>`).join('')}
       </tbody></table>`;
     wrap.querySelectorAll('tbody tr').forEach((tr, i) => {
@@ -226,7 +282,7 @@ async function renderSubmission(root, id) {
     h('div', null,
       h('div', { class: 'small' }, h('a', { href: s.mock_id ? `#/mock/${s.mock_id}` : '#/writing/submissions' }, s.mock_id ? '← Mock exam' : '← My submissions')),
       h('h1', null, `Task ${task} essay`),
-      h('p', null, `${fmtDate(s.created_at)} · ${s.origin === 'telegram_import' ? 'Imported from Telegram' : 'Written in app'}`)),
+      h('p', null, `${fmtDate(s.created_at)} · ${{ telegram_import: 'Imported from Telegram', external: 'Official mock exam' }[s.origin] || 'Written in app'}`)),
     h('div', { class: 'page-actions' },
       deleteButton('writing', { ...s, title: `Task ${task} essay · ${wc} words` }, () => navigate(s.mock_id ? `#/mock/${s.mock_id}` : '#/writing/submissions')),
       p.id ? h('a', { class: 'btn', href: `#/writing/write/${p.id}`, html: `${icon('writing')} Write again` }) : null)));
@@ -255,6 +311,15 @@ async function renderSubmission(root, id) {
   const split = splitPane(promptCard, essayCard, { key: 'essay', initial: 38, min: 22, max: 60, page: true, stackBelow: 820, label: 'Resize task and essay' });
   split.classList.add('essay-split');
   root.append(split);
+  // Marking by a person: the teacher (course chat) or an official mock exam's examiner.
+  if (s.teacher_band != null || s.teacher_comments) {
+    const official = s.origin === 'external';
+    root.append(h('section', { class: 'card card-pad teacher-card', style: { marginBottom: '20px' } },
+      h('div', { class: 'row between' },
+        h('h2', { style: { margin: 0 } }, official ? 'Examiner feedback' : 'Teacher feedback'),
+        s.teacher_band != null ? h('span', { class: 'band-pill', title: official ? 'Official band' : 'Teacher band' }, Number(s.teacher_band).toFixed(1)) : ''),
+      s.teacher_comments ? h('div', { class: 'teacher-comments' }, s.teacher_comments) : ''));
+  }
   root.append(analysisPanel({
     target_type: 'writing', target_id: id, title: 'Analyse with AI',
     subtitle: `Band per criterion (${task === 1 ? 'TA' : 'TR'}, CC, LR, GRA), corrected sentences and a higher-band rewrite.`,

@@ -1,5 +1,5 @@
 // App shell + hash router.
-import { icon, esc, h, errorState, loading, zoomImage } from './ui.js';
+import { icon, esc, h, errorState, loading, zoomImage, fullscreenButton, drawFullscreenButton, toggleFullscreen } from './ui.js';
 import { state, loadSettings, setProvider, onStateChange, currentTheme, setTheme, switchProviders, providerShort } from './state.js';
 import { assistButton, installSelectionTranslator, loadAssistSettings, clearAssistContext } from './components/assist.js';
 
@@ -29,6 +29,7 @@ const ROUTES = [
   [/^\/writing\/(write)\/(\d+)$/, 'writing', 'writing', 'Writing', true],
   [/^\/writing\/(submission)\/(\d+)$/, 'writing', 'writing', 'Writing submission'],
   [/^\/writing\/(submissions)$/, 'writing', 'writing', 'Writing'],
+  [/^\/writing\/(drafts)$/, 'writing', 'writing', 'Writing'],
   [/^\/speaking$/, 'speaking', 'speaking', 'Speaking'],
   [/^\/speaking\/(practice)\/(\w+)$/, 'speaking', 'speaking', 'Speaking practice'],
   [/^\/speaking\/(session)\/(\d+)$/, 'speaking', 'speaking', 'Speaking session'],
@@ -111,7 +112,7 @@ function renderTopbar(title) {
     drawTheme();
     tb.append(
       h('div', { class: 'crumb', id: 'crumb' }),
-      h('div', { class: 'topbar-right' }, assistButton(), providerSwitch(), themeBtn),
+      h('div', { class: 'topbar-right' }, assistButton(), providerSwitch(), fullscreenButton(), themeBtn),
     );
     tb.dataset.built = '1';
   }
@@ -188,6 +189,14 @@ async function route() {
 }
 
 window.addEventListener('hashchange', route);
+// Focus mode: keep every full-screen button and the page layout (no sidebar) in step with the browser state.
+document.addEventListener('fullscreenchange', () => {
+  document.documentElement.classList.toggle('is-fullscreen', !!document.fullscreenElement);
+  document.querySelectorAll('.fs-btn').forEach(drawFullscreenButton);
+});
+window.addEventListener('keydown', (e) => {
+  if (e.altKey && e.key === 'Enter') { e.preventDefault(); toggleFullscreen(); }
+});
 // Task charts, question diagrams and article pictures open full-screen on click.
 const ZOOMABLE = 'img.zoomable, .q-image img, .passage-body img, .kb-article img, .assist-doc img';
 document.addEventListener('click', (e) => {
