@@ -128,5 +128,10 @@
     "prompt": "Some people think university students should study only main subjects; others think they should also take additional subjects (inferred from essay)",
     "replaced_by": "Many university students want to learn about different subjects in addition to their main subjects. Others feel it is more important to give all their time and attention to studying for a qualification. Discuss both these views and give your own opinion.",
     "reason": "short summary of a task read from an essay photo"
+  },
+  {
+    "prompt": "Frequency of eating at fast food restaurants among people in the USA (2003-2013) (task wording not shown)",
+    "replaced_by": "The chart below shows how frequently people in the USA ate in fast food restaurants between 2003 and 2013. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "reason": "same chart; the mock exam of 9 Nov 2026 gave its full task wording"
   }
 ]

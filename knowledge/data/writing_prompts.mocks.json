@@ -1,0 +1,22 @@
+[
+ {
+  "task": 1,
+  "essay_type": "bar",
+  "prompt": "The chart below shows how frequently people in the USA ate in fast food restaurants between 2003 and 2013. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+  "source": "mock_exam",
+  "source_date": "2026-11-09",
+  "image": "media/writing/t1-usa-fast-food-frequency-2003-2013.svg",
+  "image_description": "Grouped bar chart titled 'Frequency of eating at fast food restaurants among people in the USA (2003-2013)', y axis % of people (0-40%), three bars per category for 2003, 2006 and 2013. Every day: 2003 4%, 2006 3%, 2013 3%. Several times a week: 2003 17%, 2006 20%, 2013 16%. Once a week: 2003 31%, 2006 33%, 2013 28%. Once or twice a month: 2003 30%, 2006 25%, 2013 33%. A few times a year: 2003 13%, 2006 15%, 2013 15%. Never: 2003 5%, 2006 4%, 2013 4%. Once a week and once or twice a month are the largest groups throughout (once a week highest in 2003 and 2006, once or twice a month highest in 2013); every day and never are the smallest (about 3-5%).",
+  "note": "Computer-delivered mock exam, Nov 2026; wording found online at https://scorefactory.io/writingai_archive/3493173 and https://www.ieltsbuddy.com/ielts-bar-chart-usa-fast-food-consumption.html; figures read from the original chart (course archive photo media/writing/latest_photo_188@15-07-2026_10-33-44.jpg) and matching the model answers on those pages; chart redrawn as SVG"
+ },
+ {
+  "task": 2,
+  "essay_type": "opinion",
+  "prompt": "Disruptive school students have a negative influence on others. Students who are noisy and disobedient should be grouped together and taught separately. Do you agree or disagree?",
+  "source": "mock_exam",
+  "source_date": "2026-11-09",
+  "image": null,
+  "image_description": null,
+  "note": "Computer-delivered mock exam, Nov 2026; wording found online at https://ieltspracticeonline.com/ielts-writing-task-2-sample-24-2 and https://writing9.com/text/6197153eb7076300198733bb-disruptive-school-students-have-a-negative-influence-on-others-students (closing instruction normalised to the standard IELTS form)"
+ }
+]
