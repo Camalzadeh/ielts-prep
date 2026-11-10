@@ -3,6 +3,7 @@
 Windows: run with pythonw (no console). Linux: run with the venv python (the .desktop file does this).
 Server output goes to data/server.log.
 """
+import json
 import os
 import shutil
 import subprocess
@@ -59,6 +60,30 @@ def find_browser():
     return None
 
 
+# Edge opens its own "mini menu" (Copy, Search, Copilot...) over selected text, on top of the app's popup
+# (Highlight / Clear / Translate). Pages cannot suppress it, so it is switched off in the app's own browser
+# profile (not in the user's normal Edge). Edge reads it at start; Chrome has no such menu.
+BROWSER_PREFS = {"edge_quick_search": {"show_mini_menu": False, "PDF_show_mini_menu": False}}
+
+
+def quiet_browser_menus(profile: Path) -> None:
+    prefs = profile / "Default" / "Preferences"
+    try:
+        data = json.loads(prefs.read_text(encoding="utf-8")) if prefs.is_file() else {}
+        changed = False
+        for section, values in BROWSER_PREFS.items():
+            cur = data.setdefault(section, {})
+            for k, v in values.items():
+                if cur.get(k) != v:
+                    cur[k] = v
+                    changed = True
+        if changed:
+            prefs.parent.mkdir(parents=True, exist_ok=True)
+            prefs.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+    except Exception:
+        pass  # never block opening the app over a preference
+
+
 def show_error(msg: str):
     if WINDOWS:
         import ctypes
@@ -83,6 +108,7 @@ def main():
     if browser:
         # a dedicated profile keeps the microphone permission and window size
         profile = ROOT / "data" / "browser-profile"
+        quiet_browser_menus(profile)
         args = [browser, f"--app={URL}", f"--user-data-dir={profile}", "--window-size=1440,900"]
         if WINDOWS:
             subprocess.Popen(args, creationflags=subprocess.DETACHED_PROCESS)

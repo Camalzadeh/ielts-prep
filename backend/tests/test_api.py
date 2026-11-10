@@ -389,3 +389,25 @@ def test_stale_prompts_are_pruned(client):
     with db.session() as conn:
         conn.execute("DELETE FROM writing_submissions WHERE prompt_id=?", (used,))
         conn.execute("DELETE FROM writing_prompts WHERE prompt IN ('My own prompt.', 'Stale but written on.')")
+
+
+def test_mock_progress_and_auth_env(client, monkeypatch):
+    # the mock tells "in progress" from "done" for each linked attempt / session
+    m = client.post("/api/mock", json={"sections": ["reading", "speaking"]}).json()
+    aid = client.post("/api/attempts", json={"test_id": "fixture-reading-1", "mode": "mock", "mock_id": m["id"]}).json()["id"]
+    sid = client.post("/api/speaking/sessions", json={"mode": "mock", "plan": {}, "mock_id": m["id"]}).json()["id"]
+    prog = client.get(f"/api/mock/{m['id']}").json()["progress"]
+    assert prog["attempts"][str(aid)] == "in_progress" and prog["speaking"][str(sid)] == "in_progress"
+    client.post(f"/api/attempts/{aid}/submit", json={"answers": {}})
+    client.post(f"/api/speaking/sessions/{sid}/finish")
+    prog = client.get(f"/api/mock/{m['id']}").json()["progress"]
+    assert prog["attempts"][str(aid)] == "submitted" and prog["speaking"][str(sid)] == "finished"
+    client.delete(f"/api/mock/{m['id']}")
+    client.delete(f"/api/attempts/{aid}")
+    client.delete(f"/api/speaking/sessions/{sid}")
+    # AI CLIs get a credential stored in the Windows environment when the server's own env lacks it
+    monkeypatch.delenv("CLAUDE_CODE_OAUTH_TOKEN", raising=False)
+    monkeypatch.setattr(ai_runner, "_windows_env_var", lambda name: "tok-123" if name == "CLAUDE_CODE_OAUTH_TOKEN" else None)
+    assert ai_runner._child_env()["CLAUDE_CODE_OAUTH_TOKEN"] == "tok-123"
+    monkeypatch.setenv("CLAUDE_CODE_OAUTH_TOKEN", "explicit")   # an explicit value always wins
+    assert ai_runner._child_env()["CLAUDE_CODE_OAUTH_TOKEN"] == "explicit"
