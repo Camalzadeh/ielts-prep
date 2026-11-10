@@ -250,6 +250,8 @@ Mock exam
 - `GET  /api/mock/{id}` -> plan + linked attempt/submission/session ids + bands
 - `POST /api/mock/{id}/link` `{section, ref_id}` ; `POST /api/mock/{id}/finish` -> computes overall band
 - `GET  /api/mock`
+- `DELETE /api/mock/{id}`: cancel/delete a mock; completed sections stay as ordinary results (unlinked), unfinished
+  attempts of it are discarded. A mock's writing band uses an examiner band (`teacher_band`) before the AI band.
 - `PUT  /api/mock/{id}/sections` `{sections:[...]}`: change an unfinished mock's sections (e.g. skip Speaking or add it
   back; an added section gets its materials). 409 if a dropped section already has results or the mock is finished.
 
