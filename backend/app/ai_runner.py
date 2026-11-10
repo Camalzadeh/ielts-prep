@@ -81,11 +81,39 @@ def validate_command(args: list[str]) -> None:
             raise ValueError(f"command argument {a!r} is not allowed (least-privilege policy)")
 
 
+# Credentials the AI CLIs read from the environment. A variable set in Windows after the server's parent process
+# started (e.g. CLAUDE_CODE_OAUTH_TOKEN stored at machine scope) is missing from os.environ; it is read from the
+# registry instead. Only used when the variable is absent, so an explicit value always wins.
+AUTH_ENV_VARS = ("CLAUDE_CODE_OAUTH_TOKEN", "ANTHROPIC_API_KEY")
+
+
+def _windows_env_var(name: str) -> str | None:
+    """A variable's current value from the user, then the machine environment (Windows only)."""
+    if os.name != "nt":
+        return None
+    import winreg
+    for hive, path in ((winreg.HKEY_CURRENT_USER, r"Environment"),
+                       (winreg.HKEY_LOCAL_MACHINE, r"SYSTEM\CurrentControlSet\Control\Session Manager\Environment")):
+        try:
+            with winreg.OpenKey(hive, path) as key:
+                value, _ = winreg.QueryValueEx(key, name)
+            if value:
+                return str(value)
+        except OSError:
+            continue
+    return None
+
+
 def _child_env() -> dict[str, str]:
     env = dict(os.environ)
     # allow running even when the server itself was started from inside a Claude Code session
     for k in ("CLAUDECODE", "CLAUDE_CODE_ENTRYPOINT", "CLAUDE_CODE_SSE_PORT"):
         env.pop(k, None)
+    for k in AUTH_ENV_VARS:
+        if not env.get(k):
+            value = _windows_env_var(k)
+            if value:
+                env[k] = value
     env.setdefault("PYTHONIOENCODING", "utf-8")
     return env
 
