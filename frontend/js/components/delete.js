@@ -17,6 +17,18 @@ const KINDS = {
     lost: 'The essay and its AI analyses are',
     can: (x) => x.origin !== 'telegram_import',
   },
+  mock: {
+    url: (id) => `/api/mock/${id}`,
+    what: (x) => (x.status === 'finished' ? 'this mock exam' : 'this unfinished mock exam'),
+    lost: 'Sections you already completed stay in your History as separate results; unfinished sections are discarded. The mock is',
+    can: () => true,
+    after: (x) => {   // the player's and the writer's local copies for this mock
+      try {
+        Object.keys(localStorage).filter((k) => k.includes(`.mock.${x.id}`) || k.startsWith(`ielts.draft.mock.${x.id}.`))
+          .forEach((k) => localStorage.removeItem(k));
+      } catch { /* storage unavailable */ }
+    },
+  },
   speaking: {
     url: (id) => `/api/speaking/sessions/${id}`,
     what: () => 'this speaking session',
@@ -40,14 +52,14 @@ export async function confirmDelete(kind, item) {
     await api.del(k.url(item.id));
   } catch (e) { toast(`Could not delete: ${e.message}`, 'error'); return false; }
   k.after?.(item);
-  toast('Deleted.', 'good');
+  toast(kind === 'mock' && item.status !== 'finished' ? 'Mock exam cancelled.' : 'Deleted.', 'good');
   return true;
 }
 
 /** "Delete" button for a detail page; `done()` runs after a successful delete (e.g. go back to the list). */
-export function deleteButton(kind, item, done) {
+export function deleteButton(kind, item, done, label = 'Delete') {
   if (!canDelete(kind, item)) return null;
-  return h('button', { class: 'btn danger', type: 'button', html: `${icon('trash')} Delete`,
+  return h('button', { class: 'btn danger', type: 'button', html: `${icon('trash')} ${label}`,
     onclick: async () => { if (await confirmDelete(kind, item)) done(); } });
 }
 

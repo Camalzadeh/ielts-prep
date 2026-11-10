@@ -818,3 +818,11 @@ img.zoomable, .q-image img, .passage-body img, .kb-article img, .assist-doc img 
 .mock-step .skip-badge { display: none; margin-left: auto; }
 .mock-step.skipped, .card.skipped, .stat.skipped { opacity: .55; border-style: dashed; }
 .mock-step.skipped .skip-badge { display: inline-flex; }
+
+/* focus mode: the app full screen, without the navigation (toggled by .fs-btn / Alt+Enter) */
+html.is-fullscreen .sidebar { display: none; }
+html.is-fullscreen .main-col { padding-bottom: 0; }
+.fs-btn[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
+
+/* essay page: marking by the teacher or an official examiner */
+.teacher-comments { margin-top: 10px; white-space: pre-wrap; line-height: 1.65; color: var(--text-2); }

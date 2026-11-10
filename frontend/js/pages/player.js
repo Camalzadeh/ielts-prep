@@ -1,6 +1,6 @@
 // Listening / Reading test player (computer-delivered IELTS style).
 import { api, mediaUrl } from '../api.js';
-import { h, esc, icon, toast, modal, confirmDialog, fmtClock, store, sanitizeContent, parseMaybeJSON } from '../ui.js';
+import { h, esc, icon, toast, modal, confirmDialog, fmtClock, store, sanitizeContent, parseMaybeJSON, fullscreenButton } from '../ui.js';
 import { renderGroup, partQuestionNumbers } from '../components/questions.js';
 import { attachHighlighter } from '../components/highlight.js';
 import { splitPane } from '../components/split.js';
@@ -93,12 +93,12 @@ export async function render(root, params, query) {
   const tabs = h('div', { class: 'pl-tabs', role: 'tablist', 'aria-label': type === 'reading' ? 'Passages' : 'Parts' });
   const hideBtn = h('button', { class: 'icon-btn', type: 'button', title: 'Hide / show timer', 'aria-label': 'Hide or show timer', html: icon(S.timerHidden ? 'eyeOff' : 'eye') });
   const fontBtn = h('button', { class: 'icon-btn', type: 'button', title: 'Text size', 'aria-label': 'Change text size', html: '<b style="font-size:13px">Aa</b>' });
-  const exitBtn = h('button', { class: 'btn sm ghost', type: 'button', html: `${icon('close')} Exit` });
+  const exitBtn = h('button', { class: 'btn sm ghost', type: 'button', html: `${icon('stop')} Stop`, title: 'Save and stop, or cancel this test' });
   const top = h('header', { class: 'pl-top' },
     h('div', { class: 'pl-title', title: test.title || '' }, test.title || testId,
       h('small', null, `${type === 'listening' ? 'Listening' : 'Reading'} · ${mode === 'mock' ? 'Mock exam' : 'Practice mode'}`)),
     tabs,
-    h('div', { class: 'pl-actions' }, timerEl, hideBtn, fontBtn, assistButton({ compact: true }), exitBtn),
+    h('div', { class: 'pl-actions' }, timerEl, hideBtn, fontBtn, assistButton({ compact: true }), fullscreenButton(), exitBtn),
   );
   player.append(top);
 
@@ -535,8 +535,32 @@ export async function render(root, params, query) {
     }
   }
   submitBtn.addEventListener('click', () => submit(false));
-  exitBtn.addEventListener('click', () => {
-    navigate(mockId ? `#/mock/${mockId}` : `#/${type}`);
+  // Stop: keep the attempt to resume later, or cancel it (the attempt and its answers are discarded).
+  exitBtn.addEventListener('click', async () => {
+    const back = mockId ? `#/mock/${mockId}` : `#/${type}`;
+    if (!S.started || !S.attemptId) { navigate(back); return; }
+    const answered = Object.keys(S.answers).length;
+    const v = await modal({
+      title: 'Stop this test?',
+      body: `<p><b>Save and stop</b>: your ${answered} answer${answered === 1 ? '' : 's'}${type === 'reading' ? ', highlights' : ''} and the time used are kept. Resume later from ${mockId ? 'the mock exam' : `the ${type} library`}.</p>
+        <p><b>Cancel test</b>: this attempt is discarded with its answers, as if it had never been started.</p>`,
+      actions: [{ label: 'Keep working', value: null }, { label: 'Cancel test', kind: 'danger', value: 'cancel' }, { label: 'Save and stop', kind: 'primary', value: 'save' }],
+    });
+    if (v === 'save') {
+      saveLocal();
+      await autosave();
+      nav.guard = null;
+      navigate(back);
+    } else if (v === 'cancel') {
+      try { await api.del(`/api/attempts/${S.attemptId}`); } catch (e) { if (e.status !== 404) { toast(`Could not cancel: ${e.message}`, 'error'); return; } }
+      S.submitted = true;   // nothing left to save
+      store.remove(localKey());
+      store.remove(activeKey);
+      cleanupAll();
+      nav.guard = null;
+      toast('Test cancelled.', 'good');
+      navigate(back);
+    }
   });
 
   // ------------------------------------------------------------------ keyboard

@@ -1,6 +1,6 @@
 // Full-screen writing editor used for single-task practice and the mock exam (task 1 + task 2).
 import { mediaUrl } from '../api.js';
-import { h, esc, icon, toast, fmtClock, wordCount, store, confirmDialog, essayTypeLabel, modal } from '../ui.js';
+import { h, esc, icon, toast, fmtClock, wordCount, store, confirmDialog, essayTypeLabel, modal, fullscreenButton } from '../ui.js';
 import { assistButton, setAssistContext } from './assist.js';
 import { splitPane } from './split.js';
 
@@ -31,11 +31,11 @@ export function writerView(opts) {
   const el = h('div', { class: 'player writing-player' });
   const timerEl = h('div', { class: 'timer', role: 'timer', html: `${icon('clock')}<span class="t-val"></span>` });
   const tabs = h('div', { class: 'pl-tabs', role: 'tablist' });
-  const exitBtn = h('button', { class: 'btn sm ghost', type: 'button', html: `${icon('close')} Exit` });
+  const exitBtn = h('button', { class: 'btn sm ghost', type: 'button', html: `${icon('stop')} Stop`, title: 'Save the draft and stop, or discard it' });
   const hideBtn = h('button', { class: 'icon-btn', type: 'button', title: 'Hide / show timer', 'aria-label': 'Hide or show timer', html: icon('eye') });
   el.append(h('header', { class: 'pl-top' },
     h('div', { class: 'pl-title' }, opts.title, h('small', null, opts.subtitle || '')),
-    tabs, h('div', { class: 'pl-actions' }, timerEl, hideBtn, assistButton({ compact: true, mock: !!opts.strictTime }), exitBtn)));
+    tabs, h('div', { class: 'pl-actions' }, timerEl, hideBtn, assistButton({ compact: true, mock: !!opts.strictTime }), fullscreenButton(), exitBtn)));
 
   const left = h('div', { class: 'writer-left' });
   const ta = h('textarea', { class: 'essay-input', spellcheck: 'false', autocomplete: 'off', 'aria-label': 'Your essay', placeholder: 'Start writing your answer here…' });
@@ -166,7 +166,27 @@ export function writerView(opts) {
     }
   }
   submitBtn.addEventListener('click', () => doSubmit(false));
-  exitBtn.addEventListener('click', () => opts.onExit());
+  // Stop: keep the draft (Writing → In progress) or discard it.
+  let discarded = false, stopped = false;
+  exitBtn.addEventListener('click', async () => {
+    tasks[idx].text = ta.value;
+    if (submitted || !tasks.some((t) => t.text.trim())) { opts.onExit(); return; }
+    const words = tasks.map((t) => wordCount(t.text)).reduce((a, b) => a + b, 0);
+    const v = await modal({
+      title: 'Stop writing?',
+      body: `<p><b>Save draft and stop</b>: your ${words} word${words === 1 ? '' : 's'} and the time used are kept; continue later from <b>Writing → In progress</b>${opts.strictTime ? ' or the mock exam' : ''}.</p>
+        <p><b>Discard draft</b>: what you wrote here is deleted.</p>`,
+      actions: [{ label: 'Keep writing', value: null }, { label: 'Discard draft', kind: 'danger', value: 'discard' }, { label: 'Save draft and stop', kind: 'primary', value: 'save' }],
+    });
+    if (v === 'save') { persist(); stopped = true; opts.onExit({ saved: true }); }
+    else if (v === 'discard') {
+      discarded = true;
+      for (const t of tasks) store.remove(t.draftKey);
+      store.remove(timeKey);
+      toast('Draft discarded.', 'good');
+      opts.onExit({ discarded: true });
+    }
+  });
 
   ta.value = tasks[0].text;
   drawLeft(); drawTabs(); drawWc(); drawTimer();
@@ -175,8 +195,8 @@ export function writerView(opts) {
 
   return {
     el,
-    isDirty: () => !submitted && tasks.some((t) => t.text.trim()),
-    destroy() { clearInterval(tick); clearTimeout(saveT); if (!submitted) { tasks[idx].text = ta.value; persist(); } },
+    isDirty: () => !submitted && !discarded && !stopped && tasks.some((t) => t.text.trim()),
+    destroy() { clearInterval(tick); clearTimeout(saveT); if (!submitted && !discarded) { tasks[idx].text = ta.value; persist(); } },
   };
 }
 

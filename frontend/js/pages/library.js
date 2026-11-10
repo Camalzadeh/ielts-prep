@@ -1,7 +1,8 @@
 // Listening / Reading test library grouped by series.
 import { api } from '../api.js';
 import { h, esc, icon, withStates, emptyState, fmtBand, store, asList, debounce } from '../ui.js';
-import { setTitle } from '../app.js';
+import { navigate, setTitle } from '../app.js';
+import { confirmDelete } from '../components/delete.js';
 
 export async function render(root, params) {
   const type = params[0] === 'reading' ? 'reading' : 'listening';
@@ -122,7 +123,12 @@ function testCard(t, type) {
     <div class="t-meta"><span>${t.question_count || 40} questions</span>${t.module === 'general' ? '<span class="badge">General Training</span>' : ''}${active ? '<span class="badge warn">In progress</span>' : ''}</div>`;
   const actions = h('div', { class: 't-actions' });
   if (active) {
-    actions.append(h('a', { class: 'btn primary sm', href: `#/test/${encodeURIComponent(t.id)}/${active}` }, 'Resume'));
+    actions.append(h('a', { class: 'btn primary sm', href: `#/test/${encodeURIComponent(t.id)}/${active}` }, 'Resume'),
+      h('button', { class: 'btn sm', type: 'button', title: 'Cancel this unfinished attempt', onclick: async () => {
+        if (!(await confirmDelete('attempt', { id: active, status: 'in_progress', title: t.title }))) return;
+        store.remove(`active.${t.id}.practice.`);
+        navigate(location.hash);
+      } }, 'Cancel'));
   } else {
     actions.append(h('a', { class: 'btn primary sm', href: `#/test/${encodeURIComponent(t.id)}` }, t.attempts ? 'Retake' : 'Start'));
   }
