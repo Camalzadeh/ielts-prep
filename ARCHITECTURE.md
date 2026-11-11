@@ -252,6 +252,9 @@ Mock exam
 - `GET  /api/mock`
 - `DELETE /api/mock/{id}`: cancel/delete a mock; completed sections stay as ordinary results (unlinked), unfinished
   attempts of it are discarded. A mock's writing band uses an examiner band (`teacher_band`) before the AI band.
+- Mock material (`mock_test_weights` / `mock_prompt_weights`, weighted random): Listening/Reading from Cambridge books
+  11+ (books 18+ weigh 4, others 1); Writing by source (teacher 1, trial exam 2, mock exam 3, real exam 4; course
+  material and other sources never). Anything already attempted/submitted weighs half.
 - `PUT  /api/mock/{id}/sections` `{sections:[...]}`: change an unfinished mock's sections (e.g. skip Speaking or add it
   back; an added section gets its materials). 409 if a dropped section already has results or the mock is finished.
 

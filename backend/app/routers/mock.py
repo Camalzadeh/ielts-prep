@@ -12,7 +12,6 @@ from .. import db
 from ..context import latest_ai_band, mock_links
 from ..grading import ielts_round, overall_band
 from .speaking import build_random_set
-from .writing import pick_random_prompt
 
 router = APIRouter(prefix="/api/mock", tags=["mock"])
 
@@ -27,18 +26,55 @@ class MockCreate(BaseModel):
     reading: Optional[str] = None
 
 
-def pick_test(conn: sqlite3.Connection, ttype: str, module: str | None) -> str | None:
+# ---------------------------------------------------------------------------- what a mock is made of
+# Listening / Reading: Cambridge books after 10 only; the newest books (after 17) weigh 4, the others 1.
+# Writing: by where the prompt comes from (sources not listed, e.g. course material, are never used).
+# Anything already attempted (submitted or still in progress) weighs half.
+MOCK_MIN_BOOK = 11
+RECENT_BOOK = 18
+WRITING_SOURCE_WEIGHTS = {"teacher": 1, "trial_exam": 2, "mock_exam": 3, "real_exam": 4}
+
+
+def test_weight(book: int | None, attempted: bool) -> float:
+    base = 4 if (book or 0) >= RECENT_BOOK else 1
+    return base / 2 if attempted else base
+
+
+def mock_test_weights(conn: sqlite3.Connection, ttype: str, module: str | None) -> list[tuple[str, float]]:
     rows = conn.execute(
-        "SELECT t.id, t.module, (SELECT COUNT(*) FROM attempts a WHERE a.test_id=t.id) AS n FROM tests t "
-        "WHERE t.type=? AND COALESCE(t.source, '') != 'external'",
+        "SELECT t.id, t.module, t.book, EXISTS (SELECT 1 FROM attempts a WHERE a.test_id=t.id) AS done FROM tests t "
+        "WHERE t.type=? AND COALESCE(t.source, '') NOT IN ('external', 'history')",
         (ttype,)).fetchall()
     if ttype == "reading":
         # only the exam's own module: an Academic mock never gets a General Training passage
         rows = [r for r in rows if (r["module"] or "academic") == (module or "academic")]
-    if not rows:
-        return None
-    fresh = [r for r in rows if not r["n"]]
-    return random.choice(fresh or rows)["id"]
+    recent = [r for r in rows if (r["book"] or 0) >= MOCK_MIN_BOOK]
+    return [(r["id"], test_weight(r["book"], bool(r["done"]))) for r in (recent or rows)]
+
+
+def mock_prompt_weights(conn: sqlite3.Connection, task: int, module: str | None) -> list[tuple[dict, float]]:
+    rows = conn.execute(
+        "SELECT p.id, p.source, EXISTS (SELECT 1 FROM writing_submissions s WHERE s.prompt_id=p.id) AS done "
+        "FROM writing_prompts p WHERE p.task=? AND (p.module=? OR p.module IS NULL)",
+        (task, module or "academic")).fetchall()
+    out = []
+    for r in rows:
+        w = WRITING_SOURCE_WEIGHTS.get(r["source"] or "", 0)
+        if w:
+            out.append(({"id": r["id"]}, w / 2 if r["done"] else w))
+    return out
+
+
+def _weighted(choices: list) -> object | None:
+    return random.choices([c for c, _ in choices], weights=[w for _, w in choices])[0] if choices else None
+
+
+def pick_test(conn: sqlite3.Connection, ttype: str, module: str | None) -> str | None:
+    return _weighted(mock_test_weights(conn, ttype, module))
+
+
+def pick_mock_prompt(conn: sqlite3.Connection, task: int, module: str | None) -> dict | None:
+    return _weighted(mock_prompt_weights(conn, task, module))
 
 
 @router.post("")
@@ -50,8 +86,8 @@ def create_mock(body: MockCreate, conn: sqlite3.Connection = Depends(db.get_db))
     if "reading" in sections:
         plan["reading"] = body.reading or pick_test(conn, "reading", body.module)
     if "writing" in sections:
-        t1 = pick_random_prompt(conn, 1, body.module)
-        t2 = pick_random_prompt(conn, 2, body.module)
+        t1 = pick_mock_prompt(conn, 1, body.module)
+        t2 = pick_mock_prompt(conn, 2, body.module)
         plan["writing"] = {"task1": t1["id"] if t1 else None, "task2": t2["id"] if t2 else None}
     if "speaking" in sections:
         plan["speaking"] = build_random_set(conn, "full")
@@ -172,7 +208,7 @@ def set_sections(mock_id: int, body: SectionsBody, conn: sqlite3.Connection = De
         if s in ("listening", "reading"):
             plan[s] = pick_test(conn, s, module if s == "reading" else None)
         elif s == "writing":
-            t1, t2 = pick_random_prompt(conn, 1, module), pick_random_prompt(conn, 2, module)
+            t1, t2 = pick_mock_prompt(conn, 1, module), pick_mock_prompt(conn, 2, module)
             plan[s] = {"task1": t1["id"] if t1 else None, "task2": t2["id"] if t2 else None}
         else:
             plan[s] = build_random_set(conn, "full")
