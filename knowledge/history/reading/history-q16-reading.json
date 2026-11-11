@@ -1,0 +1,265 @@
+{
+ "id": "history-q16-reading",
+ "type": "reading",
+ "module": "academic",
+ "title": "History Reading Q16 — The first national organisations",
+ "series": "History (Azerbaijan)",
+ "book": null,
+ "test_no": 16,
+ "source": "history",
+ "source_url": "",
+ "duration_minutes": 20,
+ "parts": [
+  {
+   "number": 1,
+   "title": "From Self-Defence to Party Politics: Azerbaijan's First National Organisations",
+   "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-13, which are based on the Reading Passage below.</em></p><p><strong>A</strong> Before 1905 the Muslims of Russian Azerbaijan had almost no political organisation. Their elite expressed itself through newspapers and petitions, and no periodical in a Turkic language was permitted at all until 1904. Within roughly twelve years, however, Azerbaijanis moved from spontaneous self-defence to clandestine organisations and, finally, to a modern national party. Azerbaijani historians call the period from the revolution of 1905 to the February Revolution of 1917 the first stage of the national liberation movement, and the historian Tadeusz Swietochowski describes 1905 as 'the great watershed date in the history of Azerbaijan'.</p><p><strong>B</strong> The community entered this period from a position of weakness. When oil-field leases were auctioned in 1872, 'Tatars', as Azerbaijanis were then called, won about 5% of the successful bids, while Armenians won almost ten times as much. In Baku, Muslims made up over 70% of the unskilled workforce, whereas Armenians, who accounted for 17.5% of all workers, held a quarter of the highly skilled jobs. Labour unrest was nonetheless growing: in December 1904 a general strike of the Baku oil workers ended with the first collective labour contract in Russia, which included a nine-hour day, a limit on night work and pay books kept also in the workers' native language. In the same year young Azerbaijani socialists founded Hummet, the first Muslim social-democratic group.</p><p><strong>C</strong> The decisive shock came in 1905. After troops fired on workers in St Petersburg on 9 January, revolution spread to the Caucasus, and on 6 February the so-called 'Tatar-Armenian war' broke out in Baku with three days of killing while police and troops stood by. Violence then spread to Erivan, Nakhchivan, Shusha, Ganja and Tiflis. Some 128 Armenian and 158 Muslim villages were pillaged or destroyed, and estimates of the dead range from 3,100 to 10,000. The Armenians were organised by the Dashnaktsutiun party, whereas the Azerbaijanis, in Firuz Kazemzadeh's phrase, 'fought without coordination or plan'. Whether the authorities deliberately provoked the clashes remains disputed: Kazemzadeh argues that they had the power to prevent bloodshed but chose to abstain, while Swietochowski stresses that no incontrovertible proof of official connivance has been found. He does, however, see one lasting consequence: the violence generated, for the first time, a solidarity among Muslims that transcended local and sectarian loyalties.</p><p><strong>D</strong> The Baku liberals, led by Alimardan bey Topchubashov, responded with petitions and took part in the All-Russian Muslim congresses of 1905 and 1906, but these were moderate projects aimed at equality within Russia. The more radical, regional line came from Ganja. In the summer of 1905 Shafi bey Rustambeyli set up Qeyrat ('Zeal'), whose leaflets called on Muslims, Georgians and Armenians to unite against Tsarism. Qeyrat was small and short-lived, and it is the least documented of the early organisations; its founder soon helped to create a far more significant body.</p><p><strong>E</strong> That body was Difai ('Defence'), a clandestine association formed in Ganja in the autumn of 1905 by local notables and joined by Ahmad bey Agaoglu from Baku. The Azerbaijani historian Seyid-zade, however, dates its formal founding as a party to August-September 1906. Its declared aim was to 'defend and enlighten' the people. It established branches in Shusha, Aghdam, Nakhchivan, Kars and elsewhere; the largest, the Karabakh Unity Assembly in Shusha, had a 51-point programme and around 400 armed volunteers. Difai blamed Russia for the bloodshed and assassinated Tsarist officials known to have encouraged anti-Muslim violence, yet Agaoglu also told crowds in a Ganja mosque that 'even wild animals do not devour their own kind', reminding them that Muslims and Armenians had lived in peace for centuries. In April 1908 its leaders were exiled to Astrakhan. Swietochowski calls Difai 'the first proto-nationalist Azerbaijani organization', one that broke a long tradition of passive acceptance of Russian rule, although he adds that it was little concerned with working out a positive programme.</p><p><strong>F</strong> Mudafia, whose name also means 'Defence', appeared in the spring of 1907 under Ismail khan Ziyadkhanov, a deputy in the First Duma. It operated in the western part of Elizavetpol province, and its seal, which showed scales, a book, a sheaf and two crossed sabres, symbolised justice, knowledge, the peasantry and armed protection. The provincial governor, however, reported that it had few members, and even its founding date is uncertain: Seyid-zade gives March in one place and May in another.</p><p><strong>G</strong> After the revolution ebbed, Stolypin's repression set in and many intellectuals left for Istanbul. In this climate a group of former Hummet members founded Musavat ('Equality') in Baku, in October 1911 according to Seyid-zade, or in 1912 according to Swietochowski. Its eight-point programme of 1912 was Pan-Islamic, calling for the unity of all Muslims and the restoration of the independence of Muslim countries, and members worked in secret three-man cells. Evidence of its early activity is so scarce that the Soviet historian Ratgauzer even doubted that the party existed before 1917. In 1913 Mahammad Amin Rasulzade returned under an amnesty marking 300 years of the Romanov dynasty. By separating the religious community from a nation based on language, culture and history, he led the party from Pan-Islamism towards Turkism.</p><p><strong>H</strong> After the February Revolution Musavat became a legal mass party. In June 1917 it merged with the Ganja-based Turkic Party of Decentralization, led by Nasib bey Yusifbeyli and regarded as the heir of Difai, and the new party demanded territorial autonomy in a federal Russia. In the elections of November 1917 it won 63% of the Muslim vote in Transcaucasia. Interpretations of the party differ: Kazemzadeh notes that its founders were former socialists who soon moved to the right, while post-Soviet Azerbaijani scholars emphasise an unbroken line of national struggle from 1905 to the Azerbaijan Democratic Republic of 28 May 1918.</p>",
+   "groups": [
+    {
+     "range": [
+      1,
+      5
+     ],
+     "type": "matching_features",
+     "instructions_html": "<p>Look at the following statements (Questions 1-5) and the list of historians below.</p><p>Match each statement with the correct historian, A-D.</p><p>NB You may use any letter more than once.</p>",
+     "content_html": "",
+     "image": null,
+     "options": [
+      {
+       "key": "A",
+       "text": "Tadeusz Swietochowski"
+      },
+      {
+       "key": "B",
+       "text": "Firuz Kazemzadeh"
+      },
+      {
+       "key": "C",
+       "text": "Seyid-zade"
+      },
+      {
+       "key": "D",
+       "text": "Ratgauzer"
+      }
+     ],
+     "questions": [
+      {
+       "number": 1,
+       "prompt_html": "The Muslim side in the violence of 1905 had no organised strategy.",
+       "options": null,
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Kazemzadeh says the Azerbaijanis 'fought without coordination or plan', i.e. with no organised strategy.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Armenians were organised by the Dashnaktsutiun party, whereas the Azerbaijanis, in Firuz Kazemzadeh's phrase, 'fought without coordination or plan'.</p></blockquote>"
+      },
+      {
+       "number": 2,
+       "prompt_html": "There is no conclusive evidence that the authorities were involved in starting the clashes.",
+       "options": null,
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Swietochowski stresses that no incontrovertible (conclusive) proof of official connivance has been found.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Whether the authorities deliberately provoked the clashes remains disputed: Kazemzadeh argues that they had the power to prevent bloodshed but chose to abstain, while Swietochowski stresses that no incontrovertible proof of official connivance has been found.</p></blockquote>"
+      },
+      {
+       "number": 3,
+       "prompt_html": "One organisation was only formally established as a party about a year after it first appeared.",
+       "options": null,
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Difai appeared in the autumn of 1905, but Seyid-zade dates its formal founding as a party to August-September 1906.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Azerbaijani historian Seyid-zade, however, dates its formal founding as a party to August-September 1906.</p></blockquote>"
+      },
+      {
+       "number": 4,
+       "prompt_html": "One party may not have been active as early as is usually claimed.",
+       "options": null,
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Ratgauzer doubted that Musavat (founded 1911/1912) existed before 1917.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Evidence of its early activity is so scarce that the Soviet historian Ratgauzer even doubted that the party existed before 1917.</p></blockquote>"
+      },
+      {
+       "number": 5,
+       "prompt_html": "The founders of a party quickly abandoned their left-wing origins.",
+       "options": null,
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Kazemzadeh notes that Musavat's founders were former socialists who soon moved to the right.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Interpretations of the party differ: Kazemzadeh notes that its founders were former socialists who soon moved to the right, while post-Soviet Azerbaijani scholars emphasise an unbroken line of national struggle from 1905 to the Azerbaijan Democratic Republic of 28 May 1918.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      6,
+      9
+     ],
+     "type": "mcq",
+     "instructions_html": "<p>Choose the correct letter, A, B, C or D.</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 6,
+       "prompt_html": "What does the writer say about the agreement that ended the strike of December 1904?",
+       "options": [
+        {
+         "key": "A",
+         "text": "It gave Muslim workers the same wages as Armenian workers."
+        },
+        {
+         "key": "B",
+         "text": "It was the first agreement of its kind in the Russian Empire."
+        },
+        {
+         "key": "C",
+         "text": "It was negotiated on the workers' behalf by Hummet."
+        },
+        {
+         "key": "D",
+         "text": "It brought an end to night work in the oil industry."
+        }
+       ],
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The strike ended with 'the first collective labour contract in Russia'. It limited night work rather than abolishing it (D), and the passage does not link it to Hummet (C) or to pay differences between groups (A).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Labour unrest was nonetheless growing: in December 1904 a general strike of the Baku oil workers ended with the first collective labour contract in Russia, which included a nine-hour day, a limit on night work and pay books kept also in the workers' native language.</p></blockquote>"
+      },
+      {
+       "number": 7,
+       "prompt_html": "According to Swietochowski, what was one long-term result of the violence of 1905-1906?",
+       "options": [
+        {
+         "key": "A",
+         "text": "It proved that the Russian authorities had planned the clashes."
+        },
+        {
+         "key": "B",
+         "text": "It led Azerbaijani liberals to abandon petitions altogether."
+        },
+        {
+         "key": "C",
+         "text": "It united Muslims across regional and religious divisions."
+        },
+        {
+         "key": "D",
+         "text": "It gave the Dashnaktsutiun control of the Baku oil fields."
+        }
+       ],
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Swietochowski sees the violence as creating, for the first time, Muslim solidarity beyond local and sectarian loyalties. The other options are not attributed to him (A is the opposite of his view on official involvement).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>He does, however, see one lasting consequence: the violence generated, for the first time, a solidarity among Muslims that transcended local and sectarian loyalties.</p></blockquote>"
+      },
+      {
+       "number": 8,
+       "prompt_html": "What was the main message of Qeyrat?",
+       "options": [
+        {
+         "key": "A",
+         "text": "The peoples of the Caucasus should join forces against Russian rule."
+        },
+        {
+         "key": "B",
+         "text": "Muslims should arm themselves against their Armenian neighbours."
+        },
+        {
+         "key": "C",
+         "text": "Azerbaijanis should seek equality through the All-Russian Muslim congresses."
+        },
+        {
+         "key": "D",
+         "text": "The Muslims of Ganja should form their own political party."
+        }
+       ],
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Qeyrat's leaflets called on Muslims, Georgians and Armenians to unite against Tsarism, i.e. cooperation between the Caucasian peoples against Russian rule.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In the summer of 1905 Shafi bey Rustambeyli set up Qeyrat ('Zeal'), whose leaflets called on Muslims, Georgians and Armenians to unite against Tsarism.</p></blockquote>"
+      },
+      {
+       "number": 9,
+       "prompt_html": "Why does the writer refer to Agaoglu's speech in a Ganja mosque?",
+       "options": [
+        {
+         "key": "A",
+         "text": "to show that Difai relied on religious leaders for support"
+        },
+        {
+         "key": "B",
+         "text": "to explain why the leaders of Difai were sent into exile"
+        },
+        {
+         "key": "C",
+         "text": "to illustrate the methods Difai used against Tsarist officials"
+        },
+        {
+         "key": "D",
+         "text": "to show that Difai also promoted reconciliation with the Armenians"
+        }
+       ],
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Although Difai used violence against Tsarist officials, Agaoglu's words about wild animals not devouring their own kind show that Difai also urged peace between Muslims and Armenians.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Difai blamed Russia for the bloodshed and assassinated Tsarist officials known to have encouraged anti-Muslim violence, yet Agaoglu also told crowds in a Ganja mosque that 'even wild animals do not devour their own kind', reminding them that Muslims and Armenians had lived in peace for centuries.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      10,
+      13
+     ],
+     "type": "sentence_completion",
+     "instructions_html": "<p>Complete the sentences below.</p><p>Choose NO MORE THAN TWO WORDS from the passage for each answer.</p>",
+     "content_html": "<p>Rasulzade was able to come back to Russia in 1913 because of an {{10}} connected with a royal anniversary.</p><p>Rasulzade's distinction between a religious community and a nation moved Musavat away from Pan-Islamism and towards {{11}}.</p><p>After merging with a Ganja party in 1917, Musavat called for {{12}} within a federal Russia.</p><p>In the elections held at the end of 1917, Musavat received nearly two-thirds of the {{13}} in Transcaucasia.</p>",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 10,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "amnesty",
+        "an amnesty"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Rasulzade returned in 1913 under an amnesty marking 300 years of the Romanov dynasty (the royal anniversary).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In 1913 Mahammad Amin Rasulzade returned under an amnesty marking 300 years of the Romanov dynasty.</p></blockquote>"
+      },
+      {
+       "number": 11,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Turkism"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>By separating the religious community from the nation, Rasulzade led the party from Pan-Islamism towards Turkism.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>By separating the religious community from a nation based on language, culture and history, he led the party from Pan-Islamism towards Turkism.</p></blockquote>"
+      },
+      {
+       "number": 12,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "territorial autonomy",
+        "autonomy"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>After the June 1917 merger the new party demanded territorial autonomy in a federal Russia.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In June 1917 it merged with the Ganja-based Turkic Party of Decentralization, led by Nasib bey Yusifbeyli and regarded as the heir of Difai, and the new party demanded territorial autonomy in a federal Russia.</p></blockquote>"
+      },
+      {
+       "number": 13,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Muslim vote",
+        "Muslim votes"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>In November 1917 Musavat won 63% (nearly two-thirds) of the Muslim vote in Transcaucasia.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In the elections of November 1917 it won 63% of the Muslim vote in Transcaucasia.</p></blockquote>"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,278 @@
+{
+ "id": "history-q14-reading",
+ "type": "reading",
+ "module": "academic",
+ "title": "History Reading Q14 — Colonial rule and the intelligentsia",
+ "series": "History (Azerbaijan)",
+ "book": null,
+ "test_no": 14,
+ "source": "history",
+ "source_url": "",
+ "duration_minutes": 20,
+ "parts": [
+  {
+   "number": 1,
+   "title": "The Paradox of Empire: Russian Rule and the Azerbaijani Intelligentsia",
+   "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-13, which are based on the Reading Passage below.</em></p><p><strong>A</strong> After the treaties of Gulistan in 1813 and Turkmenchay in 1828, northern Azerbaijan became part of the Russian Empire, while the south remained under Qajar Iran. Russian rule was, by most measures, colonial: the finance minister Kankrin described Transcaucasia as 'a colony producing the raw materials of a southern climate', and Muslims were treated as second-class subjects. Yet this rule had a paradoxical effect. The empire's own institutions, namely its civil service, schools, press, municipal government and oil economy, produced a secular, European-educated intelligentsia that turned these tools into instruments of national awakening. As the historian Swietochowski puts it, Russian rule 'prepared the Azerbaijani community in many ways for the rise of a national movement'. The intelligentsia, in other words, emerged both despite and because of colonial policy.</p><p><strong>B</strong> The first effects were territorial and religious. Within about fifteen years of the conquest Russia had abolished the khanates, and in 1867 the Azerbaijani lands were grouped into the Baku and Elizavetpol provinces, creating a territorial bloc that Azerbaijanis would later regard as the core of their homeland. The historian Shaffer stresses a second, less obvious change. Unlike Britain and France in the Arab world, Russia struck at the power of the clergy, confiscating much of their property, limiting the Sharia courts and closing many mosques and religious schools. This caused resentment, but it also released Azerbaijanis, earlier than most of the Muslim world, from the constraints of the traditional clerical establishment and made secular education possible.</p><p><strong>C</strong> The first generation of intellectuals were men who served the empire. Abbasgulu agha Bakikhanov, an army officer and translator, completed his history Gulistan-i Iram in 1841 and proposed a Russian-style school for Muslims. Mirza Fatali Akhundov, a translator in the viceroy's chancellery in Tiflis from 1834, wrote six comedies between 1850 and 1855, the first European-style plays in the Muslim world, campaigned for alphabet reform and attacked clerical power in his Letters of Kamal ud-Dawla (1865). Under Viceroy Vorontsov, sons of the landed gentry gained easy access to the civil service, so that, in Swietochowski's words, 'the 1840s witnessed the rise of an Azerbaijani class of professional bureaucrats'. Officials even encouraged writing in the local Turkic language in order to weaken Azerbaijani identification with Persia; Vorontsov himself called Akhundov the 'Tatar Moliere'.</p><p><strong>D</strong> Education became the main channel. From the 1830s Russo-Tatar state schools taught both Russian and Azerbaijani, and from 1879 the Azerbaijani section of the Gori Teachers' Seminary trained an entire generation of teachers, among them Mammadguluzadeh, Narimanov and Hajibeyli. For these men, Russian was not a means of assimilation but a gateway to European science, literature and political thought. The new schools, however, reached very few people. Overall literacy stayed at 4-5 per cent, and many parents boycotted Russian schools in the belief that they would lead to the Christianisation of their children.</p><p><strong>E</strong> The press and the stage gave the new elite a public voice. Hasan bey Zardabi, a graduate of Moscow University, staged Akhundov's comedy with school pupils in Baku in 1873, an event regarded as the birth of national theatre. Two years later he founded Akinchi, the first Turkic-language newspaper in Russia, which was written in plain spoken Azerbaijani rather than the Persian-influenced style of the literati. Shia clerics denounced it as an infidel invention, and it remained inaccessible to the mostly illiterate peasantry; the authorities closed it in 1877, during the Russo-Ottoman war. Yet after 1905 the press expanded rapidly: 63 newspapers and periodicals appeared between 1905 and 1917, and the satirical weekly Molla Nasreddin reached 5,000 copies.</p><p><strong>F</strong> Oil provided the money. The leasing reform of 1872 launched a boom that turned Baku from a town of 14,000 people in 1863 into a city of 206,000 by 1903, and in 1898 its oil output overtook that of the United States. Azerbaijanis lost most of their wells to Armenian, Russian and Western capital, but a handful of Muslim millionaires emerged and became patrons of national culture. The most generous, Haji Zeynalabdin Taghiyev, a former mason who was barely literate, built a theatre in 1883, opened the first Muslim girls' school in 1901 and owned several newspapers.</p><p><strong>G</strong> Discrimination, paradoxically, acted as a stimulus. Non-Christians were limited to half, and from 1892 to a third, of the seats on the Baku town council, no zemstvos were introduced, and Russian peasants were settled on the best land of the Mugan steppe. Because Muslims were denied full citizenship, Shaffer argues, cultural and political assimilation was unattainable, and the intelligentsia acquired a cause: equal rights, schooling in the mother tongue and self-government. Identity itself shifted in stages, from Muslim to Turkic to Azerbaijani. In 1891 an imaginary dialogue in the Tiflis journal Kashkul urged readers to call themselves 'Azerbaijani Turks', described by Swietochowski as the earliest recorded literary statement of a nascent national consciousness, while Ali bey Huseynzade later summed up his programme as 'Turkify, Islamize, Europeanize'.</p><p><strong>H</strong> The achievement should not be exaggerated. The intelligentsia was a tiny minority, the countryside remained attached to tradition, and many reformers accepted the Russian framework, seeking self-government within a liberalised empire rather than independence. Nevertheless, in May 1918 this elite founded the Azerbaijan Democratic Republic, the first republic in the Muslim East: a product of empire that had turned against empire.</p>",
+   "groups": [
+    {
+     "range": [
+      1,
+      5
+     ],
+     "type": "matching_features",
+     "instructions_html": "<p>Look at the following statements (Questions 1-5) and the list of people below.</p><p>Match each statement with the correct person, A-F.</p><p>NB You may use any letter more than once.</p>",
+     "content_html": "",
+     "image": null,
+     "options": [
+      {
+       "key": "A",
+       "text": "Abbasgulu agha Bakikhanov"
+      },
+      {
+       "key": "B",
+       "text": "Mirza Fatali Akhundov"
+      },
+      {
+       "key": "C",
+       "text": "Hasan bey Zardabi"
+      },
+      {
+       "key": "D",
+       "text": "Haji Zeynalabdin Taghiyev"
+      },
+      {
+       "key": "E",
+       "text": "Ali bey Huseynzade"
+      },
+      {
+       "key": "F",
+       "text": "Count Kankrin"
+      }
+     ],
+     "questions": [
+      {
+       "number": 1,
+       "prompt_html": "set up an educational institution for Muslim girls",
+       "options": null,
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Taghiyev 'opened the first Muslim girls' school in 1901'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The most generous, Haji Zeynalabdin Taghiyev, a former mason who was barely literate, built a theatre in 1883, opened the first Muslim girls' school in 1901 and owned several newspapers.</p></blockquote>"
+      },
+      {
+       "number": 2,
+       "prompt_html": "produced the earliest dramatic works of a Western type in the Muslim world",
+       "options": null,
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Akhundov wrote six comedies, 'the first European-style plays in the Muslim world'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Mirza Fatali Akhundov, a translator in the viceroy's chancellery in Tiflis from 1834, wrote six comedies between 1850 and 1855, the first European-style plays in the Muslim world, campaigned for alphabet reform and attacked clerical power in his Letters of Kamal ud-Dawla (1865).</p></blockquote>"
+      },
+      {
+       "number": 3,
+       "prompt_html": "wrote a historical work while serving the empire as a soldier",
+       "options": null,
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Bakikhanov was 'an army officer and translator' who completed his history Gulistan-i Iram in 1841.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Abbasgulu agha Bakikhanov, an army officer and translator, completed his history Gulistan-i Iram in 1841 and proposed a Russian-style school for Muslims.</p></blockquote>"
+      },
+      {
+       "number": 4,
+       "prompt_html": "launched a publication in the everyday language of ordinary people",
+       "options": null,
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Zardabi founded Akinchi, written 'in plain spoken Azerbaijani'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Two years later he founded Akinchi, the first Turkic-language newspaper in Russia, which was written in plain spoken Azerbaijani rather than the Persian-influenced style of the literati.</p></blockquote>"
+      },
+      {
+       "number": 5,
+       "prompt_html": "expressed his ideas in a three-part slogan",
+       "options": null,
+       "answer": [
+        "E"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Huseynzade summed up his programme as 'Turkify, Islamize, Europeanize', a three-part formula.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In 1891 an imaginary dialogue in the Tiflis journal Kashkul urged readers to call themselves 'Azerbaijani Turks', described by Swietochowski as the earliest recorded literary statement of a nascent national consciousness, while Ali bey Huseynzade later summed up his programme as 'Turkify, Islamize, Europeanize'.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      6,
+      9
+     ],
+     "type": "mcq",
+     "instructions_html": "<p>Choose the correct letter, A, B, C or D.</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 6,
+       "prompt_html": "According to Shaffer, Russia's policy towards the Muslim clergy",
+       "options": [
+        {
+         "key": "A",
+         "text": "followed the example set by Britain and France in the Arab world."
+        },
+        {
+         "key": "B",
+         "text": "was welcomed by most of the Muslim population."
+        },
+        {
+         "key": "C",
+         "text": "allowed secular schooling to develop sooner than in most Muslim societies."
+        },
+        {
+         "key": "D",
+         "text": "strengthened the role of traditional religious schools."
+        }
+       ],
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Shaffer says the policy freed Azerbaijanis from the clerical establishment 'earlier than most of the Muslim world' and made secular education possible. A is wrong (Russia acted unlike Britain and France), B is wrong (it caused resentment), D is wrong (religious schools were closed).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>This caused resentment, but it also released Azerbaijanis, earlier than most of the Muslim world, from the constraints of the traditional clerical establishment and made secular education possible.</p></blockquote>"
+      },
+      {
+       "number": 7,
+       "prompt_html": "Why did Tsarist officials encourage writing in the local Turkic language?",
+       "options": [
+        {
+         "key": "A",
+         "text": "to make it easier to teach Russian in schools"
+        },
+        {
+         "key": "B",
+         "text": "to reduce the population's sense of connection with Persia"
+        },
+        {
+         "key": "C",
+         "text": "to help Akhundov's comedies reach a wider audience"
+        },
+        {
+         "key": "D",
+         "text": "to win the support of the Muslim clergy"
+        }
+       ],
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The officials wanted to weaken the link Azerbaijanis felt with Persia.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Officials even encouraged writing in the local Turkic language in order to weaken Azerbaijani identification with Persia; Vorontsov himself called Akhundov the 'Tatar Moliere'.</p></blockquote>"
+      },
+      {
+       "number": 8,
+       "prompt_html": "What does the writer say about the newspaper Akinchi?",
+       "options": [
+        {
+         "key": "A",
+         "text": "It was condemned by religious leaders."
+        },
+        {
+         "key": "B",
+         "text": "It was widely read in rural areas."
+        },
+        {
+         "key": "C",
+         "text": "It imitated the literary style of Persian writers."
+        },
+        {
+         "key": "D",
+         "text": "It continued publishing until the revolution of 1905."
+        }
+       ],
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Shia clerics 'denounced it as an infidel invention', i.e. religious leaders condemned it. B is contradicted (it was inaccessible to illiterate peasants), C is wrong (it used plain Azerbaijani, not a Persian style), D is wrong (it was closed in 1877).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Shia clerics denounced it as an infidel invention, and it remained inaccessible to the mostly illiterate peasantry; the authorities closed it in 1877, during the Russo-Ottoman war.</p></blockquote>"
+      },
+      {
+       "number": 9,
+       "prompt_html": "What is the main point of paragraph G?",
+       "options": [
+        {
+         "key": "A",
+         "text": "Russian settlers took most of the land in Azerbaijan."
+        },
+        {
+         "key": "B",
+         "text": "Muslims eventually won equal representation on the Baku council."
+        },
+        {
+         "key": "C",
+         "text": "Educated Azerbaijanis gradually adopted a Russian identity."
+        },
+        {
+         "key": "D",
+         "text": "Unequal treatment gave educated Azerbaijanis political goals."
+        }
+       ],
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph G argues that discrimination made assimilation impossible and so gave the intelligentsia a political cause; the identity shift is presented as part of this process.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Because Muslims were denied full citizenship, Shaffer argues, cultural and political assimilation was unattainable, and the intelligentsia acquired a cause: equal rights, schooling in the mother tongue and self-government.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      10,
+      13
+     ],
+     "type": "sentence_completion",
+     "instructions_html": "<p>Complete the sentences below.</p><p>Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage for each answer.</p>",
+     "content_html": "<ul><li>A whole generation of teachers was trained in the Azerbaijani section of a seminary in {{10}}.</li><li>Some parents kept their children away from Russian schools because they feared {{11}}.</li><li>By the end of the 1890s, Baku was producing more oil than {{12}}.</li><li>In 1891 a journal suggested that its readers should describe themselves as {{13}}.</li></ul>",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 10,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Gori"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Azerbaijani section of the Gori Teachers' Seminary 'trained an entire generation of teachers'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>From the 1830s Russo-Tatar state schools taught both Russian and Azerbaijani, and from 1879 the Azerbaijani section of the Gori Teachers' Seminary trained an entire generation of teachers, among them Mammadguluzadeh, Narimanov and Hajibeyli.</p></blockquote>"
+      },
+      {
+       "number": 11,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Christianisation",
+        "Christianization",
+        "the Christianisation"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Parents boycotted Russian schools believing they would lead to the Christianisation of their children.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Overall literacy stayed at 4-5 per cent, and many parents boycotted Russian schools in the belief that they would lead to the Christianisation of their children.</p></blockquote>"
+      },
+      {
+       "number": 12,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "United States",
+        "the United States",
+        "USA",
+        "the USA",
+        "US",
+        "the US"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>In 1898 Baku's oil output 'overtook that of the United States'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The leasing reform of 1872 launched a boom that turned Baku from a town of 14,000 people in 1863 into a city of 206,000 by 1903, and in 1898 its oil output overtook that of the United States.</p></blockquote>"
+      },
+      {
+       "number": 13,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Azerbaijani Turks",
+        "Azerbaijani Turk"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Kashkul dialogue urged readers to call themselves 'Azerbaijani Turks'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In 1891 an imaginary dialogue in the Tiflis journal Kashkul urged readers to call themselves 'Azerbaijani Turks', described by Swietochowski as the earliest recorded literary statement of a nascent national consciousness, while Ali bey Huseynzade later summed up his programme as 'Turkify, Islamize, Europeanize'.</p></blockquote>"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

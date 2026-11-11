@@ -145,11 +145,13 @@ def _data_files(pattern: str) -> list[Path]:
 
 # --------------------------------------------------------------------------- tests
 def import_tests(conn: sqlite3.Connection, errors: list[str]) -> int:
-    base = db.CONTENT_DIR / "tests"
-    if not base.is_dir():
+    # downloaded Cambridge tests, plus (this branch) the History reading tests kept with the History notes
+    paths = [p for base in (db.CONTENT_DIR / "tests", db.KNOWLEDGE_DIR / "history" / "reading") if base.is_dir()
+             for p in sorted(base.rglob("*.json"))]
+    if not paths:
         return 0
     n = 0
-    for path in sorted(base.rglob("*.json")):
+    for path in paths:
         data = _read_json(path, errors)
         if not isinstance(data, dict) or not data.get("id") or not isinstance(data.get("parts"), list):
             if data is not None:

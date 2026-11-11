@@ -1,0 +1,216 @@
+{
+ "id": "history-q13-reading",
+ "type": "reading",
+ "module": "academic",
+ "title": "History Reading Q13 — Tsarist colonial policy",
+ "series": "History (Azerbaijan)",
+ "book": null,
+ "test_no": 13,
+ "source": "history",
+ "source_url": "",
+ "duration_minutes": 20,
+ "parts": [
+  {
+   "number": 1,
+   "title": "A Colony of the South: Tsarist Rule in Azerbaijan",
+   "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-13, which are based on the Reading Passage below.</em></p><p><strong>A</strong> Between 1801 and 1828 the Russian Empire extended its rule across the South Caucasus, and two treaties, Gulistan in 1813 and Turkmenchay in 1828, fixed a new frontier along the River Araz. About two-thirds of the Azerbaijani lands remained with Iran, while some half a million Azerbaijani-speaking Muslims passed for the first time under the rule of a European power. Whether the regime that followed deserves to be called colonial has long divided historians. Russia was a land empire, with no sea separating the centre from its possessions, and it was poorer than several of the territories it governed. Yet the word was used by Tsarist officials themselves. In an 1827 memorandum to Nicholas I, the finance minister Count Kankrin argued that Transcaucasia should be 'a colony producing the raw materials of a southern climate', and administrators studied French rule in Algeria as a model.</p><p><strong>B</strong> The conquest itself was violent. In January 1804 Russian troops stormed Ganja, killing its ruler, Javad khan, and renaming the city Elizavetpol. Other khanates, such as Karabakh, Shaki and Shirvan, at first accepted Russian protection through vassal treaties, but General Yermolov, commander in the Caucasus from 1816, distrusted the khans as pro-Iranian and removed them one by one: Shaki was absorbed in 1819, Shirvan in 1820 and Karabakh in 1822. In their place came the military-commandant system, under which Russian officers governed what were, in effect, 'khanates without khans', in which the commandant enjoyed almost the powers of a khan. Senators who inspected the region in 1834 reported that 'the rights, honour and property of hundreds of thousands of inhabitants depend on a commander's whim'.</p><p><strong>C</strong> Such conditions provoked a wave of uprisings: in Jar-Balakan in 1830, Talysh in 1831, Guba in 1837 and Shaki in 1838. The largest, in Guba, involved about 12,000 armed men inspired by Shamil, the imam of Dagestan. Although the revolts were local and uncoordinated, they pushed St Petersburg towards reform. The bureaucracy, however, was split between 'regionalists', who wanted slow change and respect for local customs, and 'integrationists', who demanded rapid centralisation. The integrationists won first. Baron Hahn's reform, in force from 1841, abolished the last traces of the khanates, introduced Russian law and dismissed native officials en masse. Because the new Russian officials did not know the language, they could not run the courts, and the experiment ended in chaos.</p><p><strong>D</strong> A different approach followed under Count Vorontsov, the first viceroy of the Caucasus, who arrived in 1845. Instead of Russification, he chose to co-opt the local elite. His rescript of December 1846 turned the beys and aghas into a hereditary landowning nobility, and their sons entered the civil service. The map was also redrawn: Shamakhi province, created in 1846, was renamed Baku province in 1859, when an earthquake led to the capital being moved, and Elizavetpol province followed in 1867. These borders did not follow ethnic lines, so many Azerbaijanis were left in the Irevan and Tiflis provinces. After Vorontsov retired in 1854, and especially under Alexander III, centralisation returned, and in 1882 the viceroyalty was abolished.</p><p><strong>E</strong> Economically, the region stagnated for decades, but the abolition in 1872 of the otkup, the state system of tax-farming oil wells, transformed Baku. Plots were now auctioned on long leases, and big capital arrived: the Nobel brothers in 1879, the Rothschilds in 1883 and several British firms. Output rose from about 1.5 million poods in 1872 to 671.5 million in 1901, roughly half of world production. Local people, however, gained little. In 1870 Azerbaijanis had owned 88 per cent of the wells; after 1872 their share was just 13 per cent, and they provided only 5 per cent of the money invested in the new leases.</p><p><strong>F</strong> The empire also reshaped the population. Article 15 of the Treaty of Turkmenchay allowed free migration, and Russia organised it: between 1828 and 1830 about 40,000 Armenians were resettled from Iran and some 84,000 from the Ottoman Empire, mainly into Irevan, Nakhchivan and Karabakh. From 1830 Russian religious dissenters, the Molokans and Dukhobors, were exiled to the region, German colonists had founded Helenendorf as early as 1819, and by 1913 Russian settlers held 44 villages and 20,000 desyatins of the best irrigated land in the Mugan steppe. The aim was a loyal Christian population on the borders with Iran and Turkey.</p><p><strong>G</strong> Legal and cultural discrimination completed the picture. Officially called 'Tatars', Muslims were regarded as unreliable. Under the City Statute of 1870 they could hold at most half of the seats on city councils, and from 1892 only one third, even in towns where they were the majority. No zemstvo, the elected rural assembly found in Russia, was ever introduced. The press was censored: the newspaper Akinchi was closed in 1877, and from 1891 to the early 1900s no Turkic periodical was permitted. Literacy remained at 4-5 per cent, and after the electoral law of 3 June 1907 Transcaucasian Muslims had a single deputy in the State Duma.</p><p><strong>H</strong> How historians interpret this record has shifted over time. Soviet scholars first called the conquest an absolute evil, then from the late 1930s a 'lesser evil', and from the 1950s stressed the 'progressive significance' of joining Russia. Post-Soviet Azerbaijani historians speak openly of colonial policy, while Western scholars such as Morrison and Kappeler argue that the term should be used carefully for the Caucasus. Swietochowski identifies 'the unmistakable features of colonialism', yet also points to a paradox. By abolishing the khanates and creating the Baku and Elizavetpol provinces, Russia unified Azerbaijani territory, and oil money and Russian schools produced the bourgeoisie and intelligentsia that founded the Azerbaijan Democratic Republic in 1918.</p>",
+   "groups": [
+    {
+     "range": [
+      1,
+      5
+     ],
+     "type": "matching_information",
+     "instructions_html": "<p>The Reading Passage has eight paragraphs, A-H.</p><p>Which paragraph contains the following information?</p><p>NB You may use any letter more than once.</p>",
+     "content_html": "",
+     "image": null,
+     "options": [
+      {
+       "key": "A",
+       "text": ""
+      },
+      {
+       "key": "B",
+       "text": ""
+      },
+      {
+       "key": "C",
+       "text": ""
+      },
+      {
+       "key": "D",
+       "text": ""
+      },
+      {
+       "key": "E",
+       "text": ""
+      },
+      {
+       "key": "F",
+       "text": ""
+      },
+      {
+       "key": "G",
+       "text": ""
+      },
+      {
+       "key": "H",
+       "text": ""
+      }
+     ],
+     "questions": [
+      {
+       "number": 1,
+       "prompt_html": "a reference to the overseas administration of another European state being examined as an example",
+       "options": null,
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph A says Russian administrators looked at how France ruled Algeria and used it as a model.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In an 1827 memorandum to Nicholas I, the finance minister Count Kankrin argued that Transcaucasia should be 'a colony producing the raw materials of a southern climate', and administrators studied French rule in Algeria as a model.</p></blockquote>"
+      },
+      {
+       "number": 2,
+       "prompt_html": "an explanation of why an attempt to impose a new legal system broke down",
+       "options": null,
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph C explains that Hahn's reform failed because the incoming Russian officials did not know the local language and so could not run the courts.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Because the new Russian officials did not know the language, they could not run the courts, and the experiment ended in chaos.</p></blockquote>"
+      },
+      {
+       "number": 3,
+       "prompt_html": "a contrast between the proportion of an industry held by local people before and after a reform",
+       "options": null,
+       "answer": [
+        "E"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph E compares the Azerbaijani share of oil wells in 1870 (88 per cent) with their share after the 1872 reform (13 per cent).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In 1870 Azerbaijanis had owned 88 per cent of the wells; after 1872 their share was just 13 per cent, and they provided only 5 per cent of the money invested in the new leases.</p></blockquote>"
+      },
+      {
+       "number": 4,
+       "prompt_html": "mention of a natural event that resulted in an administrative centre being relocated",
+       "options": null,
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph D says an earthquake led to the capital of Shamakhi province being moved, after which it was renamed Baku province.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The map was also redrawn: Shamakhi province, created in 1846, was renamed Baku province in 1859, when an earthquake led to the capital being moved, and Elizavetpol province followed in 1867.</p></blockquote>"
+      },
+      {
+       "number": 5,
+       "prompt_html": "a description of how one official interpretation of the past was replaced by another",
+       "options": null,
+       "answer": [
+        "H"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph H traces how Soviet historians moved from 'absolute evil' to 'lesser evil' and then to 'progressive significance'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Soviet scholars first called the conquest an absolute evil, then from the late 1930s a 'lesser evil', and from the 1950s stressed the 'progressive significance' of joining Russia.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      6,
+      10
+     ],
+     "type": "tfng",
+     "instructions_html": "<p>Do the following statements agree with the information given in the Reading Passage?</p><p>TRUE if the statement agrees with the information</p><p>FALSE if the statement contradicts the information</p><p>NOT GIVEN if there is no information on this</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 6,
+       "prompt_html": "Karabakh, Shaki and Shirvan were taken by military force before they had made any agreement with Russia.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage says these khanates first accepted Russian protection through vassal treaties and were only later abolished by Yermolov, so they did make agreements with Russia first.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Other khanates, such as Karabakh, Shaki and Shirvan, at first accepted Russian protection through vassal treaties, but General Yermolov, commander in the Caucasus from 1816, distrusted the khans as pro-Iranian and removed them one by one: Shaki was absorbed in 1819, Shirvan in 1820 and Karabakh in 1822.</p></blockquote>"
+      },
+      {
+       "number": 7,
+       "prompt_html": "The senators who inspected the region in 1834 recommended replacing the commandants with civilian governors.",
+       "options": null,
+       "answer": [
+        "NOT GIVEN"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage reports what the senators found (rule depended on a commander's whim), but it says nothing about any recommendation they made.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Senators who inspected the region in 1834 reported that 'the rights, honour and property of hundreds of thousands of inhabitants depend on a commander's whim'.</p></blockquote>"
+      },
+      {
+       "number": 8,
+       "prompt_html": "The rising in Guba was bigger than any of the other revolts of the 1830s.",
+       "options": null,
+       "answer": [
+        "TRUE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Guba uprising is described as 'the largest' of the four revolts, with about 12,000 armed men.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The largest, in Guba, involved about 12,000 armed men inspired by Shamil, the imam of Dagestan.</p></blockquote>"
+      },
+      {
+       "number": 9,
+       "prompt_html": "Vorontsov tried to make the local population adopt Russian culture.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage says Vorontsov chose co-optation of the local elite instead of Russification.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Instead of Russification, he chose to co-opt the local elite.</p></blockquote>"
+      },
+      {
+       "number": 10,
+       "prompt_html": "More Armenian settlers came from the Ottoman Empire than from Iran between 1828 and 1830.",
+       "options": null,
+       "answer": [
+        "TRUE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>About 84,000 Armenians came from the Ottoman Empire, compared with about 40,000 from Iran.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Article 15 of the Treaty of Turkmenchay allowed free migration, and Russia organised it: between 1828 and 1830 about 40,000 Armenians were resettled from Iran and some 84,000 from the Ottoman Empire, mainly into Irevan, Nakhchivan and Karabakh.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      11,
+      13
+     ],
+     "type": "summary_completion",
+     "instructions_html": "<p>Complete the summary below.</p><p>Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage for each answer.</p>",
+     "content_html": "<p><strong>Discrimination against Muslims</strong></p><p>In official usage, Muslims were referred to as {{11}} and were not trusted by the authorities. The City Statute of 1870 limited them to half of the seats on city councils, a proportion later reduced to a third. Unlike in Russia, no {{12}} was set up to give rural areas an elected body. Censorship was also strict: {{13}} was shut down in 1877, and for more than a decade from 1891 no Turkic periodical could appear.</p>",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 11,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Tatars",
+        "'Tatars'",
+        "the Tatars"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Muslims were 'officially called' Tatars; the summary paraphrases this as 'in official usage'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Officially called 'Tatars', Muslims were regarded as unreliable.</p></blockquote>"
+      },
+      {
+       "number": 12,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "zemstvo",
+        "a zemstvo",
+        "zemstvos"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>A zemstvo is defined in the passage as 'the elected rural assembly found in Russia', and it was never introduced.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>No zemstvo, the elected rural assembly found in Russia, was ever introduced.</p></blockquote>"
+      },
+      {
+       "number": 13,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Akinchi",
+        "the Akinchi",
+        "Akinchi newspaper"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The newspaper Akinchi was closed in 1877; 'shut down' paraphrases 'closed'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The press was censored: the newspaper Akinchi was closed in 1877, and from 1891 to the early 1900s no Turkic periodical was permitted.</p></blockquote>"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

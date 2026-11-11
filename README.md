@@ -101,6 +101,8 @@ This branch adds IELTS writing practice on Azerbaijani history topics Q13–Q20:
   `tools/history_charts.py` into `content/media/writing/history/`.
 - **Writing:** the prompts are a separate class, **Source → History (Azerbaijan)**. **Settings → History essays**
   shows or hides them. They are never used in mock exams or by Random Task 1/2.
+- **Reading:** one IELTS-style passage with 13 questions per topic (`knowledge/history/reading/`), in the Reading
+  library under "History (Azerbaijan)"; **Settings → History essays** has a switch for them too. Never in mocks.
 - **Help → Notes:** shows your notes for the topic of the prompt on screen (Short / Medium / Detailed,
   English / Azərbaycanca). When an essay is analysed, the AI also gets the medium notes so it can check the
   facts.

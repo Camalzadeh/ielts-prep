@@ -1,0 +1,214 @@
+{
+ "id": "history-q19-reading",
+ "type": "reading",
+ "module": "academic",
+ "title": "History Reading Q19 — Baku 1917-1918: the Commune and the March massacres",
+ "series": "History (Azerbaijan)",
+ "book": null,
+ "test_no": 19,
+ "source": "history",
+ "source_url": "",
+ "duration_minutes": 20,
+ "parts": [
+  {
+   "number": 1,
+   "title": "Oil, Power and Conflict: Baku after the October Revolution",
+   "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-13, which are based on the Reading Passage below.</em></p><p><strong>A</strong> When the Bolsheviks seized power in Petrograd on 25 October (7 November) 1917, Transcaucasia responded in two opposite ways. In Tiflis, the Georgian Mensheviks, the Azerbaijani Musavat party and the Armenian Dashnaktsutyun refused to recognise Lenin's government, and on 15 (28) November they created a provisional regional authority, the Transcaucasian Commissariat, chaired by Evgeni Gegechkori. The new body was fragile from the start: it had no army of its own and depended on the national councils for troops. Baku, however, took a different path. As the only large city in the region with a substantial Russian and Armenian industrial working class, it recognised the Soviet government.</p><p><strong>B</strong> The Bolsheviks' difficulty was that they enjoyed little popular support. In the elections to the All-Russian Constituent Assembly in November 1917, Musavat won roughly 616,000 votes in Transcaucasia, while the Bolsheviks received only about 4 per cent. Even in Baku the pattern was similar: in the October 1917 elections to the city's Soviet, Musavat took almost 40 per cent of some 25,000 votes, whereas the Bolsheviks attracted close to 4,000. The historian Kazemzadeh, writing in 1951, concluded that 'the national factor largely determined the way a person voted'. Musavat nevertheless declined to take up its seats, and when most other parties walked out, a rump Soviet dominated by Bolsheviks and Left Socialist Revolutionaries remained, with Stepan Shaumyan as its chairman.</p><p><strong>C</strong> Lacking votes, the Soviet needed force. In December 1917 Lenin appointed Shaumyan Extraordinary Commissar for the Caucasus, and a Red Guard was formed, yet the Soviet's own troops remained weak. The strongest armed body in the city belonged to the Dashnaks, whose units had bought weapons from Russian soldiers deserting the collapsing Caucasian front. The Azerbaijanis, by contrast, had arms but, in Kazemzadeh's words, 'no comparable organization or experience': under the Tsar, Muslims had been exempt from conscription, so the community had almost no trained officers. By late January 1918 a Bolshevik newspaper was describing Baku as divided into 'two large enemy camps', Musavat and Dashnaktsutyun, and warning that 'a clash is inevitable'.</p><p><strong>D</strong> The clash came at the end of March 1918. On 30 March the Soviet disarmed the Muslim crew of the ship Evelina, claiming that they were preparing a revolt, although Kazemzadeh states that this report 'lacked foundation'. When Muslims gathered to demand the return of the weapons, shooting broke out. On 31 March the Soviet issued an ultimatum requiring recognition of its authority, the withdrawal of the Muslim 'Savage Division' and the reopening of the railways. At this point the Armenian National Council, which had previously declared itself neutral, joined the Soviet, and ships of the Caspian fleet shelled the Muslim quarters. Although Musavat accepted the ultimatum on 1 April, the killing of civilians continued until the fighting ended on 2 April.</p><p><strong>E</strong> The scale of the losses remains disputed, and historians are careful to state whose figures they use. Shaumyan reported to Moscow that 'more than three thousand' people had died on both sides and described the results as 'brilliant'. The Azerbaijani delegation to the Paris Peace Conference in 1919, by contrast, put the number of victims at more than twelve thousand, many of them old men, women and children. The Ismailiyya building and the offices of the newspaper Kaspi were burned, the Taza Pir mosque was damaged by shells, and tens of thousands of Muslims fled the city. Kazemzadeh's interpretation is that the Soviet provoked a 'civil war' in order to break its most formidable rival, but that once it had called on the Dashnaks for help, the conflict 'degenerated into a massacre'.</p><p><strong>F</strong> On 25 April 1918 the Bolsheviks formalised their rule by creating the Baku Council of People's Commissars, known as the Baku Commune. It closed the City Duma, banned opposition newspapers and, in June, nationalised the oil industry. Lenin had already assigned 100 million roubles to pay Baku's workers and buy oil for Russia, which shows how much the city's fuel mattered to Moscow. Meanwhile, the Commune's detachments, largely Dashnak in composition, carried the violence into districts such as Shamakhi, Guba, Lankaran and Salyan. An Extraordinary Investigation Commission, set up by the government of the Azerbaijan Democratic Republic (ADR) on 15 July 1918, gathered 36 volumes of evidence. Azerbaijani historians draw heavily on this material, although its figures cover different periods and perpetrators, and the cases were eventually dropped under an amnesty in February 1920.</p><p><strong>G</strong> The Commune's decline was rapid. In June its army advanced on Ganja, the temporary capital of the newly independent ADR, but between 27 June and 1 July it was defeated at Goychay by the Caucasian Islamic Army of Nuri Pasha. The Commune resigned on 31 July, and the Centrocaspian Dictatorship that replaced it invited a British force of about 1,000 men. On 15 September 1918 the Islamic Army liberated Baku. Reprisals against Armenians followed, and a commission of the Armenian National Council counted 8,988 dead; the ADR government formally condemned these killings.</p><p><strong>H</strong> The events of 1918 had lasting political consequences, destroying Azerbaijani faith in autonomy within Russia and pushing the national movement towards independence, declared on 28 May 1918. Their interpretation, however, has varied. Soviet historians presented March as a struggle of the Baku proletariat against Musavat 'counter-revolution' and celebrated the 26 Baku Commissars as heroes. Since 1991 Azerbaijani historians have described the events as a planned genocide by the Bolshevik-Dashnak alliance, while the Western scholar Swietochowski regarded the March Days as the decisive turning point towards Azerbaijani independence. In 1998 a presidential decree established 31 March as the Day of Genocide of Azerbaijanis.</p>",
+   "groups": [
+    {
+     "range": [
+      1,
+      5
+     ],
+     "type": "matching_information",
+     "instructions_html": "<p>The Reading Passage has 8 paragraphs, A-H.</p><p>Which paragraph contains the following information?</p><p>NB You may use any letter more than once.</p>",
+     "content_html": "",
+     "image": null,
+     "options": [
+      {
+       "key": "A",
+       "text": ""
+      },
+      {
+       "key": "B",
+       "text": ""
+      },
+      {
+       "key": "C",
+       "text": ""
+      },
+      {
+       "key": "D",
+       "text": ""
+      },
+      {
+       "key": "E",
+       "text": ""
+      },
+      {
+       "key": "F",
+       "text": ""
+      },
+      {
+       "key": "G",
+       "text": ""
+      },
+      {
+       "key": "H",
+       "text": ""
+      }
+     ],
+     "questions": [
+      {
+       "number": 1,
+       "prompt_html": "the conditions the authorities demanded in order to end the fighting",
+       "options": null,
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph D lists the three demands of the Soviet's ultimatum of 31 March: recognition of its authority, withdrawal of the Savage Division and reopening of the railways.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>On 31 March the Soviet issued an ultimatum requiring recognition of its authority, the withdrawal of the Muslim 'Savage Division' and the reopening of the railways.</p></blockquote>"
+      },
+      {
+       "number": 2,
+       "prompt_html": "a reason why one community had few military leaders",
+       "options": null,
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph C explains that Muslims had been exempt from conscription under the Tsar, so they had almost no trained officers (= few military leaders).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Azerbaijanis, by contrast, had arms but, in Kazemzadeh's words, 'no comparable organization or experience': under the Tsar, Muslims had been exempt from conscription, so the community had almost no trained officers.</p></blockquote>"
+      },
+      {
+       "number": 3,
+       "prompt_html": "evidence of the economic importance of the city to the Soviet leadership",
+       "options": null,
+       "answer": [
+        "F"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F says Lenin assigned 100 million roubles to pay Baku's workers and buy oil, showing how much Baku's fuel mattered to Moscow.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Lenin had already assigned 100 million roubles to pay Baku's workers and buy oil for Russia, which shows how much the city's fuel mattered to Moscow.</p></blockquote>"
+      },
+      {
+       "number": 4,
+       "prompt_html": "a reference to damage to a place of worship",
+       "options": null,
+       "answer": [
+        "E"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph E mentions that the Taza Pir mosque (a place of worship) was damaged by shells.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Ismailiyya building and the offices of the newspaper Kaspi were burned, the Taza Pir mosque was damaged by shells, and tens of thousands of Muslims fled the city.</p></blockquote>"
+      },
+      {
+       "number": 5,
+       "prompt_html": "violence against a different community after control of the city changed hands",
+       "options": null,
+       "answer": [
+        "G"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph G describes reprisals against Armenians after the Islamic Army liberated Baku on 15 September 1918.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Reprisals against Armenians followed, and a commission of the Armenian National Council counted 8,988 dead; the ADR government formally condemned these killings.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      6,
+      9
+     ],
+     "type": "tfng",
+     "instructions_html": "<p>Do the following statements agree with the information given in the Reading Passage?</p><p>TRUE if the statement agrees with the information</p><p>FALSE if the statement contradicts the information</p><p>NOT GIVEN if there is no information on this</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 6,
+       "prompt_html": "The Transcaucasian Commissariat could rely on its own military forces.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage says the Commissariat had no army of its own and depended on the national councils for troops, which contradicts the statement.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The new body was fragile from the start: it had no army of its own and depended on the national councils for troops.</p></blockquote>"
+      },
+      {
+       "number": 7,
+       "prompt_html": "Kazemzadeh believed that ethnic identity largely shaped how people voted in Baku.",
+       "options": null,
+       "answer": [
+        "TRUE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>'The national factor largely determined the way a person voted' is a paraphrase of ethnic identity shaping voting.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The historian Kazemzadeh, writing in 1951, concluded that 'the national factor largely determined the way a person voted'.</p></blockquote>"
+      },
+      {
+       "number": 8,
+       "prompt_html": "The Armenian National Council supported the Soviet from the very beginning of the March crisis.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Council had previously declared itself neutral and joined the Soviet only after the ultimatum of 31 March, so it did not support the Soviet from the beginning.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>At this point the Armenian National Council, which had previously declared itself neutral, joined the Soviet, and ships of the Caspian fleet shelled the Muslim quarters.</p></blockquote>"
+      },
+      {
+       "number": 9,
+       "prompt_html": "Other governments at the Paris Peace Conference accepted the casualty figure given by the Azerbaijani delegation.",
+       "options": null,
+       "answer": [
+        "NOT GIVEN"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage gives the delegation's figure (more than twelve thousand) but says nothing about how other governments at the conference reacted to it.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Azerbaijani delegation to the Paris Peace Conference in 1919, by contrast, put the number of victims at more than twelve thousand, many of them old men, women and children.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      10,
+      13
+     ],
+     "type": "summary_completion",
+     "instructions_html": "<p>Complete the summary below.</p><p>Choose NO MORE THAN TWO WORDS from the passage for each answer.</p>",
+     "content_html": "<p><strong>Bolshevik rule in Baku and its end</strong></p><p>In April 1918 the Bolsheviks set up a council of commissars, which became known as the {{10}}. Besides closing the City Duma and silencing opposition newspapers, it placed the {{11}} under state ownership in June. Crimes committed in the districts were later investigated by a commission of the new Azerbaijani state, but the legal cases ended with an {{12}} in 1920. After a military defeat at Goychay, the council resigned, and the government that succeeded it asked a {{13}} of around a thousand soldiers for help.</p>",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 10,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Baku Commune",
+        "the Baku Commune"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Baku Council of People's Commissars, created on 25 April 1918, was 'known as the Baku Commune'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>On 25 April 1918 the Bolsheviks formalised their rule by creating the Baku Council of People's Commissars, known as the Baku Commune.</p></blockquote>"
+      },
+      {
+       "number": 11,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "oil industry",
+        "the oil industry"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>'Placed under state ownership' paraphrases 'nationalised'; what was nationalised in June was the oil industry.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>It closed the City Duma, banned opposition newspapers and, in June, nationalised the oil industry.</p></blockquote>"
+      },
+      {
+       "number": 12,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "amnesty",
+        "an amnesty"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Commission's cases were 'eventually dropped under an amnesty in February 1920'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Azerbaijani historians draw heavily on this material, although its figures cover different periods and perpetrators, and the cases were eventually dropped under an amnesty in February 1920.</p></blockquote>"
+      },
+      {
+       "number": 13,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "British force",
+        "a British force"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Centrocaspian Dictatorship, which replaced the Commune, invited 'a British force of about 1,000 men' (= around a thousand soldiers).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Commune resigned on 31 July, and the Centrocaspian Dictatorship that replaced it invited a British force of about 1,000 men.</p></blockquote>"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

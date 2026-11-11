@@ -1,0 +1,231 @@
+{
+ "id": "history-q17-reading",
+ "type": "reading",
+ "module": "academic",
+ "title": "History Reading Q17 — Azerbaijani deputies in the Dumas",
+ "series": "History (Azerbaijan)",
+ "book": null,
+ "test_no": 17,
+ "source": "history",
+ "source_url": "",
+ "duration_minutes": 20,
+ "parts": [
+  {
+   "number": 1,
+   "title": "Voices from the Periphery: Azerbaijan's First Parliamentarians",
+   "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-13, which are based on the Reading Passage below.</em></p><p><strong>A</strong> The revolution of 1905 compelled Nicholas II to make a concession that would have seemed unthinkable a few years earlier. The Manifesto of 17 October 1905 promised freedom of conscience, speech, assembly and association, together with a legislative State Duma whose approval would be required for every law. An electoral law followed on 11 December 1905. It opened the vote to part of the workers and only partially to the peasants, and the voting itself was indirect: citizens chose electors, who then met in provincial assemblies to select the deputies. Despite these limitations, Azerbaijanis could, for the first time, address the parliament of the empire from its own tribune.</p><p><strong>B</strong> In the Caucasus, however, the process was controlled by the viceroy, who was entitled to fix the dates of voting and to group districts as he saw fit. As a consequence, the Azerbaijani elections were held late: on 16 May 1906 in Elizavetpol province and on 31 May in Baku province, several weeks after the Duma had opened on 27 April. Even before the vote, the political direction of the future deputies had largely been settled. The Congress of Russian Muslims had resolved to support the platform of the Constitutional Democrats, or Cadets, who promised the 'equality of all nations', local autonomy and free education.</p><p><strong>C</strong> Five Azerbaijanis took their seats in the First Duma, and their backgrounds reveal a strikingly well-educated group. Alimardan bey Topchubashov was a lawyer, the editor of the newspaper Kaspiy and a member of the Baku town council; Ismail khan Ziyadkhanov was a lawyer from Elizavetpol; Asadulla bey Muradkhanov had trained at a teachers' seminary; Mammadtaghi Aliyev was a graduate of the Petrovsk Agricultural Academy; and Abdurrahim bey Haqverdiyev was a playwright. All five joined the Muslim fraction, which elected a seven-member bureau with Topchubashov as its chairman. Because many Muslim regions had not yet voted, the fraction initially had only 22 members, a genuine handicap at a time when a formal inquiry required 30 signatures.</p><p><strong>D</strong> The land question dominated the debates. On 24 June 1906 the fraction set out its own position: the waqf lands belonging to Muslim religious bodies must not be taken, peasants should receive land from crown, cabinet and monastery estates, private land could be acquired only at a fair price, and the resettlement of Russian peasants in the region had to stop. The most forceful speech came from Ziyadkhanov, who argued that the Caucasus suffered from a shortage of land just as central Russia did, and accused the administration of setting Armenians and Muslims against each other in the Erivan and Elizavetpol provinces. He also observed that a traveller could cover 100 versts in any direction without coming across a single school. Topchubashov, for his part, asked that the decisions of the Duma be published in the local languages.</p><p><strong>E</strong> The assembly survived for only 72 days. When it was dissolved on 8 July 1906, a large number of deputies gathered in Vyborg, in Finland, and signed an appeal urging the population to pay no taxes and to send no recruits to the army. Topchubashov and Ziyadkhanov were among the signatories, and they paid a heavy price. In December 1907 both men were sentenced to three months in prison and lost the right to be elected, and Topchubashov was also removed from his post as editor of Kaspiy.</p><p><strong>F</strong> The Second Duma, which sat for 103 days from 20 February 1907, brought a new group of Azerbaijani deputies: Fatali khan Khoyski and Khalil bey Khasmammadov, both lawyers trained in Moscow; Mahammad agha Shahtakhtinski, who had been educated in Leipzig and Paris; the teacher Mustafa Mahmudov; and Zeynal Zeynalov, an oil worker. A sixth man, Ismail Taghiyev, was elected for the city of Baku but never travelled to Saint Petersburg, so the city was left without a deputy. The fraction published an eleven-section programme calling for a constitutional monarchy, equal rights for Muslims and free compulsory schooling in the native language. Its unity, however, proved fragile. In March 1907 Zeynalov and several colleagues left to join the Trudoviks, complaining that the programme was 'only for the rich' and that the fraction was too slow on land reform.</p><p><strong>G</strong> Nowhere were the divisions clearer than on the subject of land. Speaking for the fraction, Khoyski called for large estates to be compulsorily alienated at a fair price and for the land to pass to a provincial fund run by local self-government rather than to a state fund. Zeynalov, by contrast, insisted that the peasants of Baku province were too poor to buy land and should be given it free of charge. On other matters the deputies were more united. Shahtakhtinski, Mahmudov and Khasmammadov campaigned against the field courts-martial, and Khoyski presented a bill, signed by 173 deputies, to abolish every restriction based on nationality and religion. The Speaker promised a debate, but the matter went no further.</p><p><strong>H</strong> Historians are divided over how these efforts should be judged. Dilara Seyid-zade is critical of the first fraction, describing it as 'not courageous' and noting that its bill on freedom of conscience was never debated. Certainly, neither Duma turned any of the deputies' demands into law, and the electoral law of 3 June 1907 cut the number of Caucasian deputies from 28 to 10, leaving the Muslims of three provinces with a single representative, Khasmammadov. Others, however, see the two Dumas as a school of parliamentarism. It is significant that Topchubashov, Khoyski and Khasmammadov later led the Azerbaijan Democratic Republic, the first parliamentary republic in the Muslim East.</p>",
+   "groups": [
+    {
+     "range": [
+      1,
+      4
+     ],
+     "type": "matching_information",
+     "instructions_html": "<p>The Reading Passage has eight paragraphs, A-H.</p><p>Which paragraph contains the following information?</p><p>NB You may use any letter more than once.</p>",
+     "content_html": "",
+     "image": null,
+     "options": [
+      {
+       "key": "A",
+       "text": ""
+      },
+      {
+       "key": "B",
+       "text": ""
+      },
+      {
+       "key": "C",
+       "text": ""
+      },
+      {
+       "key": "D",
+       "text": ""
+      },
+      {
+       "key": "E",
+       "text": ""
+      },
+      {
+       "key": "F",
+       "text": ""
+      },
+      {
+       "key": "G",
+       "text": ""
+      },
+      {
+       "key": "H",
+       "text": ""
+      }
+     ],
+     "questions": [
+      {
+       "number": 1,
+       "prompt_html": "a mention of a deputy who was elected but did not take up his seat",
+       "options": null,
+       "answer": [
+        "F"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F explains that Ismail Taghiyev won the Baku seat in the Second Duma but never went to the capital, so he never actually sat as a deputy.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>A sixth man, Ismail Taghiyev, was elected for the city of Baku but never travelled to Saint Petersburg, so the city was left without a deputy.</p></blockquote>"
+      },
+      {
+       "number": 2,
+       "prompt_html": "the reason why the Azerbaijani deputies arrived after parliament had started its work",
+       "options": null,
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph B says the viceroy controlled the timing of the elections, so voting in Azerbaijan took place weeks after the Duma opened.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>As a consequence, the Azerbaijani elections were held late: on 16 May 1906 in Elizavetpol province and on 31 May in Baku province, several weeks after the Duma had opened on 27 April.</p></blockquote>"
+      },
+      {
+       "number": 3,
+       "prompt_html": "a numerical problem that limited what the Muslim deputies could do",
+       "options": null,
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph C explains that the fraction had only 22 members while an inquiry needed 30 signatures, so its small size was a handicap.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Because many Muslim regions had not yet voted, the fraction initially had only 22 members, a genuine handicap at a time when a formal inquiry required 30 signatures.</p></blockquote>"
+      },
+      {
+       "number": 4,
+       "prompt_html": "the punishment of deputies for encouraging people to disobey the state",
+       "options": null,
+       "answer": [
+        "E"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph E describes the Vyborg appeal (refusing taxes and recruits) and the prison sentences and loss of electoral rights that followed.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In December 1907 both men were sentenced to three months in prison and lost the right to be elected, and Topchubashov was also removed from his post as editor of Kaspiy.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      5,
+      9
+     ],
+     "type": "tfng",
+     "instructions_html": "<p>Do the following statements agree with the information given in the Reading Passage?</p><p>TRUE if the statement agrees with the information</p><p>FALSE if the statement contradicts the information</p><p>NOT GIVEN if there is no information on this</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 5,
+       "prompt_html": "The electoral law of December 1905 gave every peasant the right to vote.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage says the law opened the vote 'only partially' to the peasants, which contradicts the idea that every peasant could vote.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>It opened the vote to part of the workers and only partially to the peasants, and the voting itself was indirect: citizens chose electors, who then met in provincial assemblies to select the deputies.</p></blockquote>"
+      },
+      {
+       "number": 6,
+       "prompt_html": "One of the Cadets' promises was that schooling would cost nothing.",
+       "options": null,
+       "answer": [
+        "TRUE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Cadets promised 'free education', which means schooling without charge.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Congress of Russian Muslims had resolved to support the platform of the Constitutional Democrats, or Cadets, who promised the 'equality of all nations', local autonomy and free education.</p></blockquote>"
+      },
+      {
+       "number": 7,
+       "prompt_html": "Haqverdiyev's plays were staged in Saint Petersburg while he was a deputy.",
+       "options": null,
+       "answer": [
+        "NOT GIVEN"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage only tells us that Haqverdiyev was a playwright. It says nothing about where or when his plays were performed.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Alimardan bey Topchubashov was a lawyer, the editor of the newspaper Kaspiy and a member of the Baku town council; Ismail khan Ziyadkhanov was a lawyer from Elizavetpol; Asadulla bey Muradkhanov had trained at a teachers' seminary; Mammadtaghi Aliyev was a graduate of the Petrovsk Agricultural Academy; and Abdurrahim bey Haqverdiyev was a playwright.</p></blockquote>"
+      },
+      {
+       "number": 8,
+       "prompt_html": "The Muslim fraction was prepared to see religious lands given to the peasants.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The fraction's position of 24 June 1906 stated that waqf lands belonging to Muslim religious bodies must not be taken, so it was not prepared to give them away.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>On 24 June 1906 the fraction set out its own position: the waqf lands belonging to Muslim religious bodies must not be taken, peasants should receive land from crown, cabinet and monastery estates, private land could be acquired only at a fair price, and the resettlement of Russian peasants in the region had to stop.</p></blockquote>"
+      },
+      {
+       "number": 9,
+       "prompt_html": "Baku had no representative in the Second Duma because the man it elected stayed away.",
+       "options": null,
+       "answer": [
+        "TRUE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Ismail Taghiyev was elected for Baku but never went to Saint Petersburg, so the city was left without a deputy.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>A sixth man, Ismail Taghiyev, was elected for the city of Baku but never travelled to Saint Petersburg, so the city was left without a deputy.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      10,
+      13
+     ],
+     "type": "matching_features",
+     "instructions_html": "<p>Look at the following statements (Questions 10-13) and the list of deputies below.</p><p>Match each statement with the correct deputy, A-E.</p><p>NB You may use any letter more than once.</p>",
+     "content_html": "",
+     "image": null,
+     "options": [
+      {
+       "key": "A",
+       "text": "Alimardan bey Topchubashov"
+      },
+      {
+       "key": "B",
+       "text": "Ismail khan Ziyadkhanov"
+      },
+      {
+       "key": "C",
+       "text": "Fatali khan Khoyski"
+      },
+      {
+       "key": "D",
+       "text": "Zeynal Zeynalov"
+      },
+      {
+       "key": "E",
+       "text": "Mahammad agha Shahtakhtinski"
+      }
+     ],
+     "questions": [
+      {
+       "number": 10,
+       "prompt_html": "wanted the Duma's decisions to be made available in the languages of the region",
+       "options": null,
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Topchubashov asked for the Duma's decisions to be published in the local languages.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Topchubashov, for his part, asked that the decisions of the Duma be published in the local languages.</p></blockquote>"
+      },
+      {
+       "number": 11,
+       "prompt_html": "claimed that the authorities had provoked conflict between two communities",
+       "options": null,
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Ziyadkhanov accused the administration of setting Armenians and Muslims against each other.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The most forceful speech came from Ziyadkhanov, who argued that the Caucasus suffered from a shortage of land just as central Russia did, and accused the administration of setting Armenians and Muslims against each other in the Erivan and Elizavetpol provinces.</p></blockquote>"
+      },
+      {
+       "number": 12,
+       "prompt_html": "believed that peasants should not have to pay for land",
+       "options": null,
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Zeynalov said the peasants of Baku province were too poor to buy land and should get it free of charge.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Zeynalov, by contrast, insisted that the peasants of Baku province were too poor to buy land and should be given it free of charge.</p></blockquote>"
+      },
+      {
+       "number": 13,
+       "prompt_html": "introduced a proposal that was supported by 173 members of parliament",
+       "options": null,
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Khoyski presented the bill on abolishing national and religious restrictions, which was signed by 173 deputies.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Shahtakhtinski, Mahmudov and Khasmammadov campaigned against the field courts-martial, and Khoyski presented a bill, signed by 173 deputies, to abolish every restriction based on nationality and religion.</p></blockquote>"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -471,3 +471,22 @@ def test_mock_material_weights(client):
         conn.execute("DELETE FROM writing_prompts WHERE task=9")
         conn.execute("DELETE FROM attempts WHERE test_id LIKE 'w-%'")
         conn.execute("DELETE FROM tests WHERE id LIKE 'w-%'")
+
+
+def test_history_reading_tests(client):
+    from backend.app.routers import mock as mockr
+    with db.session() as conn:
+        conn.execute("INSERT INTO tests(id, type, module, title, source, data_json) VALUES "
+                     "('history-qx-reading', 'reading', 'academic', 'History Reading QX', 'history', '{\"parts\": []}')")
+    ids = lambda: {t["id"] for t in client.get("/api/tests?type=reading").json()}
+    assert "history-qx-reading" in ids()                         # shown by default on this branch
+    client.put("/api/settings", json={"show_history_readings": "0"})
+    assert "history-qx-reading" not in ids()
+    aid = client.post("/api/attempts", json={"test_id": "history-qx-reading"}).json()["id"]
+    assert "history-qx-reading" in ids()                         # a started test stays
+    client.delete(f"/api/attempts/{aid}")
+    client.put("/api/settings", json={"show_history_readings": "1"})
+    with db.session(readonly=True) as conn:                      # never in a mock
+        assert "history-qx-reading" not in dict(mockr.mock_test_weights(conn, "reading", "academic"))
+    with db.session() as conn:
+        conn.execute("DELETE FROM tests WHERE id='history-qx-reading'")

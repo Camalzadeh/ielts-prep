@@ -1,0 +1,212 @@
+{
+ "id": "history-q15-reading",
+ "type": "reading",
+ "module": "academic",
+ "title": "History Reading Q15 — Akhundov and the call for modernisation",
+ "series": "History (Azerbaijan)",
+ "book": null,
+ "test_no": 15,
+ "source": "history",
+ "source_url": "",
+ "duration_minutes": 20,
+ "parts": [
+  {
+   "number": 1,
+   "title": "The 'Tatar Molière': Mirza Fatali Akhundov and the Modernisation of the Muslim World",
+   "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-13, which are based on the Reading Passage below.</em></p><p><strong>A</strong> In the nineteenth century the Muslim world found itself confronting the military, economic and technological power of Europe. The historian Mehrdad Kia draws a sharp contrast here: in Western Europe, nationalism and modernism grew out of internal social change, whereas in the Muslim Middle East they emerged as a response to an external threat. Most reformers of the age, such as the Ottoman Tanzimat statesmen or Jamal ad-Din al-Afghani, sought to modernise within the framework of Islam. Mirza Fatali Akhundov (1812-1878) went much further. In Kia's words, he made 'the first genuine attempt by a Muslim intellectual to articulate a systematic critique of Islamic culture and political traditions'.</p><p><strong>B</strong> Akhundov was born in Nukha (Shaki) and brought up by his mother's uncle, Akhund Hajji Alasgar, who taught him the Qur'an, Arabic and Persian and intended him for a career in the Shia clergy. That plan collapsed in Ganja in 1832-33, when the poet Mirza Shafi Vazeh asked the young student why he wished to become 'a hypocrite and a charlatan'. Akhundov later recalled that this encounter had lifted the curtain of ignorance from his eyes. In 1834 he moved to Tiflis and became a translator of Oriental languages in the viceroy's chancellery. He was promoted to chief translator in 1841 and eventually held the rank of colonel, although, as Kia points out, he never fought in any military campaign.</p><p><strong>C</strong> Tiflis, the administrative and intellectual capital of Transcaucasia, proved decisive for his development. There he mixed with exiled Russian Decembrists, the Georgian poet Aleksandr Chavchavadze, the Armenian writer Khachatur Abovyan and the playwright Giorgi Eristavi, whose comedies inspired his own. He also read widely in European thought, including Voltaire, Hume and John Stuart Mill, and by the mid-1840s, according to Kia, he had become 'philosophically a convinced materialist'. Brenda Shaffer adds that geography mattered too: because he lived in Tiflis, beyond the reach of the Iranian clergy, he could write more radically than anyone inside Iran.</p><p><strong>D</strong> His first instrument of reform was the stage. Between 1850 and 1855 he wrote six comedies in Azerbaijani Turkic, the first European-style plays in the Muslim East, which ridicule superstition, quackery, greed, corrupt officials and arbitrary khans. In one of them, the women of a family hire a dervish to destroy Paris by magic; when news of the 1848 revolution arrives, they are convinced that the spell has worked. The Russian viceroy Vorontsov, a patron of the theatre, called him the 'Tatar Molière'. For Akhundov, drama had an explicitly moral purpose: to educate a largely illiterate public through the spoken word.</p><p><strong>E</strong> Mass literacy, he believed, was blocked by the Arabic script, in which many letters differ only by dots and short vowels are not written. As a child he had needed three to four years simply to learn to read. In 1857 he proposed a reformed Arabic alphabet, and in 1863 he took the project to Istanbul, where he presented it to the Ottoman Scientific Society. The Society agreed that the script was defective and that reform did not contradict Islam, but it raised practical objections, the most important concerning printing. Tehran was even less receptive, replying that the Arabic script was 'the best and most beautiful' and needed no change. By about 1872 Akhundov had lost patience with half-measures and was calling for the complete replacement of the Arabic script with the Latin alphabet, a step that Azerbaijan and Turkey took only in the 1920s.</p><p><strong>F</strong> His political programme is set out most fully in the Letters of Kamal ud-Dawla, usually dated 1865. Composed in Persian, it takes the form of letters from a fictional Indian prince to a Persian prince, a device that allowed a tsarist official to criticise Iran and Islam without speaking in his own name. The Qajar shah appears as an ignorant despot and the Shia clergy as guardians of ignorance. The work condemns cruel punishments and the absence of a written legal code, insisting that the ruler must become the servant of the people under a constitution and a parliament. It also rejects the veil and polygamy, and calls for a 'Protestantism of Islam', a reformation comparable to the one Europe had experienced. Too dangerous to print, the treatise circulated in manuscript copies. The fact that the scholar E. G. Browne later attributed it to another writer, Mirza Aqa Khan Kermani, shows how widely it was read in Iran.</p><p><strong>G</strong> His influence was felt on both sides of the Araz. In Iran, friends and followers such as Malkum Khan, Kermani and Talibov spread his ideas, which, according to Shaffer, had an important impact on the Constitutional Revolution of 1905-1911. In Azerbaijan, students in Baku led by Hasan bey Zardabi and Najaf bey Vazirov staged The Vizier of the Lankaran Khan on 10 March 1873, the date now regarded as the birth of the national theatre. Swietochowski notes, however, that the plays were at first 'too radical' for their intended audience.</p><p><strong>H</strong> Historians have not been uncritical. Kia regards him as a revolutionary in his total rejection of tradition, yet calls him 'a thinker who lacked originality', faulting him for idealising pre-Islamic Iran, for his hostility towards Arabs and for assuming that European institutions could be copied mechanically. Soviet scholars portrayed him as a 'revolutionary democrat' and atheist, an image that is not false but which played down his Persian dimension and his loyalty to the tsarist state. Swietochowski, for his part, highlights the paradox of an official of 'impeccable loyalty' who described himself as 'almost Persian'. Whatever his limitations, much of his programme, including the Latin alphabet, secular schooling, women's rights and a national theatre, was realised in Azerbaijan in the twentieth century.</p>",
+   "groups": [
+    {
+     "range": [
+      1,
+      5
+     ],
+     "type": "matching_information",
+     "instructions_html": "<p>The Reading Passage has 8 paragraphs, A-H.</p><p>Which paragraph contains the following information?</p><p>NB You may use any letter more than once.</p>",
+     "content_html": "",
+     "image": null,
+     "options": [
+      {
+       "key": "A",
+       "text": ""
+      },
+      {
+       "key": "B",
+       "text": ""
+      },
+      {
+       "key": "C",
+       "text": ""
+      },
+      {
+       "key": "D",
+       "text": ""
+      },
+      {
+       "key": "E",
+       "text": ""
+      },
+      {
+       "key": "F",
+       "text": ""
+      },
+      {
+       "key": "G",
+       "text": ""
+      },
+      {
+       "key": "H",
+       "text": ""
+      }
+     ],
+     "questions": [
+      {
+       "number": 1,
+       "prompt_html": "an account of characters who mistake a coincidence for the success of a supernatural act",
+       "options": null,
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph D describes the comedy in which the women hire a dervish to destroy Paris by magic and then believe the news of the 1848 revolution proves the spell worked.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>when news of the 1848 revolution arrives, they are convinced that the spell has worked</p></blockquote>"
+      },
+      {
+       "number": 2,
+       "prompt_html": "a reference to how long it took Akhundov to acquire a basic skill",
+       "options": null,
+       "answer": [
+        "E"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph E states that as a child he needed three to four years to learn to read (the basic skill).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>As a child he had needed three to four years simply to learn to read.</p></blockquote>"
+      },
+      {
+       "number": 3,
+       "prompt_html": "an explanation of why Akhundov's place of residence gave him greater freedom of expression",
+       "options": null,
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph C reports Shaffer's view that living in Tiflis, outside the Iranian clergy's reach, let him write more radically.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>because he lived in Tiflis, beyond the reach of the Iranian clergy, he could write more radically than anyone inside Iran</p></blockquote>"
+      },
+      {
+       "number": 4,
+       "prompt_html": "evidence that a text reached a wide readership even though it was never printed",
+       "options": null,
+       "answer": [
+        "F"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F says the treatise circulated only in manuscript, yet Browne's misattribution shows it was widely read in Iran.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The fact that the scholar E. G. Browne later attributed it to another writer, Mirza Aqa Khan Kermani, shows how widely it was read in Iran.</p></blockquote>"
+      },
+      {
+       "number": 5,
+       "prompt_html": "a contrast between the ways two regions came to adopt new political ideas",
+       "options": null,
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph A gives Kia's contrast: in Western Europe nationalism and modernism grew from internal change, in the Muslim Middle East as a response to an external threat.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The historian Mehrdad Kia draws a sharp contrast here: in Western Europe, nationalism and modernism grew out of internal social change, whereas in the Muslim Middle East they emerged as a response to an external threat.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      6,
+      10
+     ],
+     "type": "tfng",
+     "instructions_html": "<p>Do the following statements agree with the information given in the Reading Passage?</p><p>TRUE if the statement agrees with the information</p><p>FALSE if the statement contradicts the information</p><p>NOT GIVEN if there is no information on this</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 6,
+       "prompt_html": "The relative who raised Akhundov wanted him to pursue a religious career.",
+       "options": null,
+       "answer": [
+        "TRUE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Hajji Alasgar, his mother's uncle, intended him for a career in the Shia clergy; this agrees with the statement.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Akhundov was born in Nukha (Shaki) and brought up by his mother's uncle, Akhund Hajji Alasgar, who taught him the Qur'an, Arabic and Persian and intended him for a career in the Shia clergy.</p></blockquote>"
+      },
+      {
+       "number": 7,
+       "prompt_html": "Akhundov's military rank reflected his experience in the field.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Although he reached the rank of colonel, the passage says he never fought in any military campaign, so the rank did not come from field experience.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>He was promoted to chief translator in 1841 and eventually held the rank of colonel, although, as Kia points out, he never fought in any military campaign.</p></blockquote>"
+      },
+      {
+       "number": 8,
+       "prompt_html": "Akhundov's comedies were performed in Istanbul during his visit in 1863.",
+       "options": null,
+       "answer": [
+        "NOT GIVEN"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage mentions the 1863 visit only in connection with the alphabet project presented to the Ottoman Scientific Society; it says nothing about any performance of his plays there.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In 1857 he proposed a reformed Arabic alphabet, and in 1863 he took the project to Istanbul, where he presented it to the Ottoman Scientific Society.</p></blockquote>"
+      },
+      {
+       "number": 9,
+       "prompt_html": "The Ottoman Scientific Society rejected Akhundov's proposal on religious grounds.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Society agreed that reform did not contradict Islam; its objections were practical (printing), not religious.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Society agreed that the script was defective and that reform did not contradict Islam, but it raised practical objections, the most important concerning printing.</p></blockquote>"
+      },
+      {
+       "number": 10,
+       "prompt_html": "Akhundov used an invented narrator so that he would not have to voice his criticisms openly.",
+       "options": null,
+       "answer": [
+        "TRUE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The letters are written by a fictional Indian prince, a device that let Akhundov criticise Iran and Islam without speaking in his own name.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Composed in Persian, it takes the form of letters from a fictional Indian prince to a Persian prince, a device that allowed a tsarist official to criticise Iran and Islam without speaking in his own name.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      11,
+      13
+     ],
+     "type": "summary_completion",
+     "instructions_html": "<p>Complete the summary below.</p><p>Choose NO MORE THAN TWO WORDS from the passage for each answer.</p>",
+     "content_html": "<p><strong>Akhundov's legacy and reputation</strong></p><p>Akhundov's ideas were carried into Iran by figures such as Malkum Khan and are said to have influenced the {{11}} that took place there early in the twentieth century. In Azerbaijan, a student production of one of his comedies in 1873 is seen as the beginning of the {{12}}, although his plays were initially considered too radical by audiences. Later judgements have been mixed. Kia praises his complete break with tradition but argues that he showed little {{13}}, pointing to his romantic view of pre-Islamic Iran and his belief that European institutions could simply be copied.</p>",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 11,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Constitutional Revolution",
+        "the Constitutional Revolution"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Shaffer says his ideas had an important impact on the Constitutional Revolution of 1905-1911, i.e. early in the twentieth century in Iran.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In Iran, friends and followers such as Malkum Khan, Kermani and Talibov spread his ideas, which, according to Shaffer, had an important impact on the Constitutional Revolution of 1905-1911.</p></blockquote>"
+      },
+      {
+       "number": 12,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "national theatre",
+        "national theater"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The 1873 Baku performance by students is regarded as the birth (beginning) of the national theatre.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In Azerbaijan, students in Baku led by Hasan bey Zardabi and Najaf bey Vazirov staged The Vizier of the Lankaran Khan on 10 March 1873, the date now regarded as the birth of the national theatre.</p></blockquote>"
+      },
+      {
+       "number": 13,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "originality"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Kia calls him 'a thinker who lacked originality'; 'showed little originality' paraphrases this.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Kia regards him as a revolutionary in his total rejection of tradition, yet calls him 'a thinker who lacked originality', faulting him for idealising pre-Islamic Iran, for his hostility towards Arabs and for assuming that European institutions could be copied mechanically.</p></blockquote>"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
