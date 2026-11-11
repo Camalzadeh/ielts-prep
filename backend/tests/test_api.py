@@ -411,3 +411,28 @@ def test_mock_progress_and_auth_env(client, monkeypatch):
     assert ai_runner._child_env()["CLAUDE_CODE_OAUTH_TOKEN"] == "tok-123"
     monkeypatch.setenv("CLAUDE_CODE_OAUTH_TOKEN", "explicit")   # an explicit value always wins
     assert ai_runner._child_env()["CLAUDE_CODE_OAUTH_TOKEN"] == "explicit"
+
+
+def test_mock_material_weights(client):
+    from backend.app.routers import mock as mockr
+    with db.session() as conn:
+        for tid, book in (("w-old", 9), ("w-mid", 15), ("w-new", 19), ("w-new-done", 20)):
+            conn.execute("INSERT INTO tests(id, type, module, title, book, data_json) VALUES (?, 'listening', 'academic', ?, ?, '{\"parts\": []}')",
+                         (tid, tid, book))
+        conn.execute("INSERT INTO attempts(test_id, type, status) VALUES ('w-new-done', 'listening', 'in_progress')")
+        for src, prompt in (("course_material", "W cm"), ("teacher", "W t"), ("trial_exam", "W tr"), ("mock_exam", "W m"),
+                            ("real_exam", "W r"), ("real_exam", "W r done")):
+            conn.execute("INSERT INTO writing_prompts(task, module, prompt, source) VALUES (9, 'academic', ?, ?)", (prompt, src))
+        conn.execute("INSERT INTO writing_submissions(prompt_id, text, created_at) SELECT id, 'x', '2026-01-01' FROM writing_prompts WHERE prompt='W r done'")
+    with db.session(readonly=True) as conn:
+        tw = dict(mockr.mock_test_weights(conn, "listening", "academic"))
+        pw = {conn.execute("SELECT prompt FROM writing_prompts WHERE id=?", (p["id"],)).fetchone()[0]: w
+              for p, w in mockr.mock_prompt_weights(conn, 9, "academic")}
+    # books after 10 only; after 17 weigh 4; anything already started or submitted weighs half
+    assert "w-old" not in tw and tw["w-mid"] == 1 and tw["w-new"] == 4 and tw["w-new-done"] == 2
+    assert pw == {"W t": 1, "W tr": 2, "W m": 3, "W r": 4, "W r done": 2}     # course material never
+    with db.session() as conn:
+        conn.execute("DELETE FROM writing_submissions WHERE prompt_id IN (SELECT id FROM writing_prompts WHERE task=9)")
+        conn.execute("DELETE FROM writing_prompts WHERE task=9")
+        conn.execute("DELETE FROM attempts WHERE test_id LIKE 'w-%'")
+        conn.execute("DELETE FROM tests WHERE id LIKE 'w-%'")
