@@ -7,7 +7,8 @@ questions numbered from 1 (13 questions; the third passage of a test has 14, end
 Output (imported with the Cambridge tests; do not edit by hand):
 - knowledge/history/reading/history-test-<n>.json for each group in GROUPS: 3 passages, 40 questions, 60 minutes,
   questions renumbered 1-13 / 14-26 / 27-40, "You should spend about 20 minutes on Questions ..." lines rewritten;
-- knowledge/history/reading/history-qNN-reading.json for a topic not in any group yet (one passage, 20 minutes).
+Every topic belongs to a full test; a passage may be reused in a second test so that every test has three
+(the third passage must be one with 14 questions).
 """
 from __future__ import annotations
 
@@ -19,7 +20,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 READING = ROOT / "knowledge" / "history" / "reading"
 PASSAGES = READING / "passages"
-GROUPS = [(1, [13, 14, 15]), (2, [16, 17, 18])]   # (test_no, topics); Q19, Q20 wait for a third passage
+GROUPS = [(1, [13, 14, 15]), (2, [16, 17, 18]), (3, [19, 20, 18])]   # (test_no, topics); Q18 reused in Test 3
 INTRO = re.compile(r"^\s*<p><em>You should spend.*?</em></p>", re.S)
 
 
@@ -67,6 +68,7 @@ def main() -> None:
     expected = set()
     grouped = set()
     for test_no, qs in GROUPS:
+        assert len(set(qs)) == 3, f"test {test_no}: needs three different passages, got {qs}"
         counts = [count(topics[q]) for q in qs]
         assert counts == [13, 13, 14], f"test {test_no}: {counts} questions, Cambridge format is [13, 13, 14]"
         parts, last = [], 0
@@ -78,17 +80,11 @@ def main() -> None:
         expected.add(name)
         write(READING / name, {
             "id": f"history-test-{test_no}", "type": "reading", "module": "academic",
-            "title": f"History Reading Test {test_no} (Q{qs[0]}–Q{qs[-1]})", "series": "History (Azerbaijan)",
+            "title": f"History Reading Test {test_no} ({', '.join(f'Q{q}' for q in qs)})", "series": "History (Azerbaijan)",
             "book": None, "test_no": test_no, "source": "history", "source_url": "",
             "duration_minutes": 60, "parts": parts})
-    for q, src in sorted(topics.items()):
-        if q in grouped:
-            continue
-        single = copy.deepcopy(src)
-        single.update(id=f"history-q{q}-reading", duration_minutes=20)
-        name = f"history-q{q}-reading.json"
-        expected.add(name)
-        write(READING / name, single)
+    missing = sorted(set(topics) - grouped)
+    assert not missing, f"topics not in any full test: {missing} (add them to GROUPS)"
     for old in READING.glob("*.json"):   # outputs of earlier builds that no longer exist
         if old.name not in expected:
             old.unlink()

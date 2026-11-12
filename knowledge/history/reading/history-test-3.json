@@ -1,0 +1,746 @@
+{
+ "id": "history-test-3",
+ "type": "reading",
+ "module": "academic",
+ "title": "History Reading Test 3 (Q19, Q20, Q18)",
+ "series": "History (Azerbaijan)",
+ "book": null,
+ "test_no": 3,
+ "source": "history",
+ "source_url": "",
+ "duration_minutes": 60,
+ "parts": [
+  {
+   "number": 1,
+   "title": "Oil, Power and Conflict: Baku after the October Revolution",
+   "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-13, which are based on Reading Passage 1 below.</em></p><p><strong>A</strong> When the Bolsheviks seized power in Petrograd on 25 October (7 November) 1917, Transcaucasia responded in two opposite ways. In Tiflis, the Georgian Mensheviks, the Azerbaijani Musavat party and the Armenian Dashnaktsutyun refused to recognise Lenin's government, and on 15 (28) November they created a provisional regional authority, the Transcaucasian Commissariat, chaired by Evgeni Gegechkori. The new body was fragile from the start: it had no army of its own and depended on the national councils for troops. Baku, however, took a different path. As the only large city in the region with a substantial Russian and Armenian industrial working class, it recognised the Soviet government.</p><p><strong>B</strong> The Bolsheviks' difficulty was that they enjoyed little popular support. In the elections to the All-Russian Constituent Assembly in November 1917, Musavat won roughly 616,000 votes in Transcaucasia, while the Bolsheviks received only about 4 per cent. Even in Baku the pattern was similar: in the October 1917 elections to the city's Soviet, Musavat took almost 40 per cent of some 25,000 votes, whereas the Bolsheviks attracted close to 4,000. The historian Kazemzadeh, writing in 1951, concluded that 'the national factor largely determined the way a person voted'. Musavat nevertheless declined to take up its seats, and when most other parties walked out, a rump Soviet dominated by Bolsheviks and Left Socialist Revolutionaries remained, with Stepan Shaumyan as its chairman.</p><p><strong>C</strong> Lacking votes, the Soviet needed force. In December 1917 Lenin appointed Shaumyan Extraordinary Commissar for the Caucasus, and a Red Guard was formed, yet the Soviet's own troops remained weak. The strongest armed body in the city belonged to the Dashnaks, whose units had bought weapons from Russian soldiers deserting the collapsing Caucasian front. The Azerbaijanis, by contrast, had arms but, in Kazemzadeh's words, 'no comparable organization or experience': under the Tsar, Muslims had been exempt from conscription, so the community had almost no trained officers. By late January 1918 a Bolshevik newspaper was describing Baku as divided into 'two large enemy camps', Musavat and Dashnaktsutyun, and warning that 'a clash is inevitable'.</p><p><strong>D</strong> The clash came at the end of March 1918. On 30 March the Soviet disarmed the Muslim crew of the ship Evelina, claiming that they were preparing a revolt, although Kazemzadeh states that this report 'lacked foundation'. When Muslims gathered to demand the return of the weapons, shooting broke out. On 31 March the Soviet issued an ultimatum requiring recognition of its authority, the withdrawal of the Muslim 'Savage Division' and the reopening of the railways. At this point the Armenian National Council, which had previously declared itself neutral, joined the Soviet, and ships of the Caspian fleet shelled the Muslim quarters. Although Musavat accepted the ultimatum on 1 April, the killing of civilians continued until the fighting ended on 2 April.</p><p><strong>E</strong> The scale of the losses remains disputed, and historians are careful to state whose figures they use. Shaumyan reported to Moscow that 'more than three thousand' people had died on both sides and described the results as 'brilliant'. The Azerbaijani delegation to the Paris Peace Conference in 1919, by contrast, put the number of victims at more than twelve thousand, many of them old men, women and children. The Ismailiyya building and the offices of the newspaper Kaspi were burned, the Taza Pir mosque was damaged by shells, and tens of thousands of Muslims fled the city. Kazemzadeh's interpretation is that the Soviet provoked a 'civil war' in order to break its most formidable rival, but that once it had called on the Dashnaks for help, the conflict 'degenerated into a massacre'.</p><p><strong>F</strong> On 25 April 1918 the Bolsheviks formalised their rule by creating the Baku Council of People's Commissars, known as the Baku Commune. It closed the City Duma, banned opposition newspapers and, in June, nationalised the oil industry. Lenin had already assigned 100 million roubles to pay Baku's workers and buy oil for Russia, which shows how much the city's fuel mattered to Moscow. Meanwhile, the Commune's detachments, largely Dashnak in composition, carried the violence into districts such as Shamakhi, Guba, Lankaran and Salyan. An Extraordinary Investigation Commission, set up by the government of the Azerbaijan Democratic Republic (ADR) on 15 July 1918, gathered 36 volumes of evidence. Azerbaijani historians draw heavily on this material, although its figures cover different periods and perpetrators, and the cases were eventually dropped under an amnesty in February 1920.</p><p><strong>G</strong> The Commune's decline was rapid. In June its army advanced on Ganja, the temporary capital of the newly independent ADR, but between 27 June and 1 July it was defeated at Goychay by the Caucasian Islamic Army of Nuri Pasha. The Commune resigned on 31 July, and the Centrocaspian Dictatorship that replaced it invited a British force of about 1,000 men. On 15 September 1918 the Islamic Army liberated Baku. Reprisals against Armenians followed, and a commission of the Armenian National Council counted 8,988 dead; the ADR government formally condemned these killings.</p><p><strong>H</strong> The events of 1918 had lasting political consequences, destroying Azerbaijani faith in autonomy within Russia and pushing the national movement towards independence, declared on 28 May 1918. Their interpretation, however, has varied. Soviet historians presented March as a struggle of the Baku proletariat against Musavat 'counter-revolution' and celebrated the 26 Baku Commissars as heroes. Since 1991 Azerbaijani historians have described the events as a planned genocide by the Bolshevik-Dashnak alliance, while the Western scholar Swietochowski regarded the March Days as the decisive turning point towards Azerbaijani independence. In 1998 a presidential decree established 31 March as the Day of Genocide of Azerbaijanis.</p>",
+   "groups": [
+    {
+     "range": [
+      1,
+      5
+     ],
+     "type": "matching_information",
+     "instructions_html": "<p>The Reading Passage has 8 paragraphs, A-H.</p><p>Which paragraph contains the following information?</p><p>NB You may use any letter more than once.</p>",
+     "content_html": "",
+     "image": null,
+     "options": [
+      {
+       "key": "A",
+       "text": ""
+      },
+      {
+       "key": "B",
+       "text": ""
+      },
+      {
+       "key": "C",
+       "text": ""
+      },
+      {
+       "key": "D",
+       "text": ""
+      },
+      {
+       "key": "E",
+       "text": ""
+      },
+      {
+       "key": "F",
+       "text": ""
+      },
+      {
+       "key": "G",
+       "text": ""
+      },
+      {
+       "key": "H",
+       "text": ""
+      }
+     ],
+     "questions": [
+      {
+       "number": 1,
+       "prompt_html": "the conditions the authorities demanded in order to end the fighting",
+       "options": null,
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph D lists the three demands of the Soviet's ultimatum of 31 March: recognition of its authority, withdrawal of the Savage Division and reopening of the railways.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>On 31 March the Soviet issued an ultimatum requiring recognition of its authority, the withdrawal of the Muslim 'Savage Division' and the reopening of the railways.</p></blockquote>"
+      },
+      {
+       "number": 2,
+       "prompt_html": "a reason why one community had few military leaders",
+       "options": null,
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph C explains that Muslims had been exempt from conscription under the Tsar, so they had almost no trained officers (= few military leaders).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Azerbaijanis, by contrast, had arms but, in Kazemzadeh's words, 'no comparable organization or experience': under the Tsar, Muslims had been exempt from conscription, so the community had almost no trained officers.</p></blockquote>"
+      },
+      {
+       "number": 3,
+       "prompt_html": "evidence of the economic importance of the city to the Soviet leadership",
+       "options": null,
+       "answer": [
+        "F"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F says Lenin assigned 100 million roubles to pay Baku's workers and buy oil, showing how much Baku's fuel mattered to Moscow.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Lenin had already assigned 100 million roubles to pay Baku's workers and buy oil for Russia, which shows how much the city's fuel mattered to Moscow.</p></blockquote>"
+      },
+      {
+       "number": 4,
+       "prompt_html": "a reference to damage to a place of worship",
+       "options": null,
+       "answer": [
+        "E"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph E mentions that the Taza Pir mosque (a place of worship) was damaged by shells.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Ismailiyya building and the offices of the newspaper Kaspi were burned, the Taza Pir mosque was damaged by shells, and tens of thousands of Muslims fled the city.</p></blockquote>"
+      },
+      {
+       "number": 5,
+       "prompt_html": "violence against a different community after control of the city changed hands",
+       "options": null,
+       "answer": [
+        "G"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph G describes reprisals against Armenians after the Islamic Army liberated Baku on 15 September 1918.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Reprisals against Armenians followed, and a commission of the Armenian National Council counted 8,988 dead; the ADR government formally condemned these killings.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      6,
+      9
+     ],
+     "type": "tfng",
+     "instructions_html": "<p>Do the following statements agree with the information given in the Reading Passage?</p><p>TRUE if the statement agrees with the information</p><p>FALSE if the statement contradicts the information</p><p>NOT GIVEN if there is no information on this</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 6,
+       "prompt_html": "The Transcaucasian Commissariat could rely on its own military forces.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage says the Commissariat had no army of its own and depended on the national councils for troops, which contradicts the statement.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The new body was fragile from the start: it had no army of its own and depended on the national councils for troops.</p></blockquote>"
+      },
+      {
+       "number": 7,
+       "prompt_html": "Kazemzadeh believed that ethnic identity largely shaped how people voted in Baku.",
+       "options": null,
+       "answer": [
+        "TRUE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>'The national factor largely determined the way a person voted' is a paraphrase of ethnic identity shaping voting.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The historian Kazemzadeh, writing in 1951, concluded that 'the national factor largely determined the way a person voted'.</p></blockquote>"
+      },
+      {
+       "number": 8,
+       "prompt_html": "The Armenian National Council supported the Soviet from the very beginning of the March crisis.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Council had previously declared itself neutral and joined the Soviet only after the ultimatum of 31 March, so it did not support the Soviet from the beginning.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>At this point the Armenian National Council, which had previously declared itself neutral, joined the Soviet, and ships of the Caspian fleet shelled the Muslim quarters.</p></blockquote>"
+      },
+      {
+       "number": 9,
+       "prompt_html": "Other governments at the Paris Peace Conference accepted the casualty figure given by the Azerbaijani delegation.",
+       "options": null,
+       "answer": [
+        "NOT GIVEN"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage gives the delegation's figure (more than twelve thousand) but says nothing about how other governments at the conference reacted to it.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Azerbaijani delegation to the Paris Peace Conference in 1919, by contrast, put the number of victims at more than twelve thousand, many of them old men, women and children.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      10,
+      13
+     ],
+     "type": "summary_completion",
+     "instructions_html": "<p>Complete the summary below.</p><p>Choose NO MORE THAN TWO WORDS from the passage for each answer.</p>",
+     "content_html": "<p><strong>Bolshevik rule in Baku and its end</strong></p><p>In April 1918 the Bolsheviks set up a council of commissars, which became known as the {{10}}. Besides closing the City Duma and silencing opposition newspapers, it placed the {{11}} under state ownership in June. Crimes committed in the districts were later investigated by a commission of the new Azerbaijani state, but the legal cases ended with an {{12}} in 1920. After a military defeat at Goychay, the council resigned, and the government that succeeded it asked a {{13}} of around a thousand soldiers for help.</p>",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 10,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Baku Commune",
+        "the Baku Commune"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Baku Council of People's Commissars, created on 25 April 1918, was 'known as the Baku Commune'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>On 25 April 1918 the Bolsheviks formalised their rule by creating the Baku Council of People's Commissars, known as the Baku Commune.</p></blockquote>"
+      },
+      {
+       "number": 11,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "oil industry",
+        "the oil industry"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>'Placed under state ownership' paraphrases 'nationalised'; what was nationalised in June was the oil industry.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>It closed the City Duma, banned opposition newspapers and, in June, nationalised the oil industry.</p></blockquote>"
+      },
+      {
+       "number": 12,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "amnesty",
+        "an amnesty"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Commission's cases were 'eventually dropped under an amnesty in February 1920'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Azerbaijani historians draw heavily on this material, although its figures cover different periods and perpetrators, and the cases were eventually dropped under an amnesty in February 1920.</p></blockquote>"
+      },
+      {
+       "number": 13,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "British force",
+        "a British force"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Centrocaspian Dictatorship, which replaced the Commune, invited 'a British force of about 1,000 men' (= around a thousand soldiers).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Commune resigned on 31 July, and the Centrocaspian Dictatorship that replaced it invited a British force of about 1,000 men.</p></blockquote>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "From Faction to State: Azerbaijani Deputies in the Transcaucasian Seym",
+   "passage_html": "<p><em>You should spend about 20 minutes on Questions 14-26, which are based on Reading Passage 2 below.</em></p><p><strong>A</strong> Between February and May 1918, Transcaucasia changed from a province of a collapsing Russia into three separate republics, and the Muslim deputies of the Transcaucasian Seym played a central part in this transformation. The Seym itself was an improvisation. The regional leaders in Tiflis had hoped that the All-Russian Constituent Assembly would restore a democratic Russia, but when the Bolsheviks dispersed it in January 1918, they decided to set up a parliament of their own. No new elections were held. Instead, the Transcaucasian results of the Constituent Assembly elections were reused, and the number of votes needed to win a seat was cut to one third, so that every party sent roughly three times as many deputies as before.</p><p><strong>B</strong> The Seym opened in Tiflis on 10 (23) February 1918 under the Georgian Menshevik Nikolay Chkheidze. Although about ten parties were represented, Kazemzadeh, the Western historian who wrote the standard account in 1951, observed that 'in reality it was composed of the representatives of the three major ethnic groups'. The Georgian Mensheviks and Musavat held about 30 seats each and the Armenian Dashnaktsutyun 27. Together with the Muslim Socialist Bloc, Hummat and Ittihad, the Muslim faction numbered 44 deputies, led by figures such as Mammad Amin Rasulzade, Fatali khan Khoyski, Nasib bey Yusifbeyli and Mammad Hasan Hajinski. The Bolsheviks boycotted the new parliament.</p><p><strong>C</strong> Questions of war and peace dominated the Seym from the outset, and on these the Muslim deputies took a distinctive line. On 1 March they joined a unanimous vote that peace should be made with Turkey on the basis of the 1914 borders. Two days later, however, Soviet Russia signed the Treaty of Brest-Litovsk, which handed Kars, Ardahan and Batum to the Ottoman Empire. The Georgian and Armenian majority refused to recognise the treaty, but Khoyski pointed out the inconsistency of acting as part of Russia one day and rejecting a Russian treaty the next. When news of the March massacres in Baku reached the Seym, Rasulzade demanded immediate help for the city and threatened a Muslim boycott. In mid-April, as the Seym voted for war with Turkey, Shafi bey Rustambeyli declared that Azerbaijanis would not fight their co-religionists, and the Musavat benches stayed empty until midnight.</p><p><strong>D</strong> Peace talks had opened at Trabzon on 14 March. The Transcaucasian delegation, headed by the Georgian Akaki Chkhenkeli, included Hajinski among its Muslim members, while the Ottoman side, led by Rauf Bey, insisted on the Brest-Litovsk terms. On 20 March the Ottomans called on Transcaucasia to proclaim its independence, arguing that a territory which had been part of Russia when the treaty was signed had no legal ground to reject it, a position Kazemzadeh considers 'legally correct'. Each nationality had its own priority: the Georgians would not give up Batum, the Armenians would not surrender Kars, and the Azerbaijanis wanted peace and independence. Chkhenkeli accepted Brest-Litovsk on 10 April, but Tiflis recalled the delegation and declared war; Hajinski kept negotiating with the Ottomans regardless. Batum soon fell, and on 22 April the Seym proclaimed the Transcaucasian Democratic Federative Republic, in whose cabinet Azerbaijanis received five posts.</p><p><strong>E</strong> The federation lasted barely a month. At the Batum conference, which opened on 11 May, the Ottoman delegation under Halil Bey and Vehib Pasha demanded more than Brest-Litovsk had given, including Akhaltsikhe, Akhalkalaki and Alexandropol. The German general von Lossow, who attended as an observer, offered mediation, an idea the Armenian delegates welcomed. Hajinski objected, arguing that a few territorial concessions would not hurt Transcaucasia, and an Armenian delegate openly accused him of passing information to the Turks. On 21 May Azerbaijani leaders proposed that, if the federation collapsed, they would accept at least a 'dual state' with Georgia, but the Georgians refused and secretly reached an agreement with Germany instead. On 26 May Georgia declared independence and the Seym dissolved itself.</p><p><strong>F</strong> The Muslim faction moved quickly. On 27 May its 44 deputies formed the Azerbaijani National Council, with Rasulzade as chairman, and the next day the Council adopted the Declaration of Independence. This proclaimed a democratic republic that guaranteed civil and political rights to all citizens regardless of nationality, religion, social position or sex. Khoyski formed the first government, and nearly all its ministers had sat in the Seym's Muslim faction. On 4 June Rasulzade and Hajinski signed the Treaty of Batum with the Ottoman Empire. Its fourth article promised Ottoman military assistance on request, which became the legal basis for the Caucasian Islamic Army that liberated Baku on 15 September 1918. In mid-June, after the Georgian government asked the Azerbaijani bodies to leave Tiflis, the government moved to Ganja, its temporary capital.</p><p><strong>G</strong> Historians remain divided over how to judge the faction's conduct. Kazemzadeh, whose account draws on Georgian émigré sources, argued that the Azerbaijanis were 'closer to the enemy than to the state of which they formed a part'. Yet he also acknowledged that their motive was Baku rather than religion, noting that Shiite Azerbaijanis had fought Sunni Ottomans for centuries. Swietochowski saw the deputies as pragmatists who needed an outside protector after the Baku massacres, while Azerbaijani historians regard the Seym as the school of national parliamentarism from which the first parliamentary republic in the Muslim East emerged.</p>",
+   "groups": [
+    {
+     "range": [
+      14,
+      17
+     ],
+     "type": "mcq",
+     "instructions_html": "<p>Choose the correct letter, A, B, C or D.</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 14,
+       "prompt_html": "How were the members of the Seym chosen?",
+       "options": [
+        {
+         "key": "A",
+         "text": "through special elections held across Transcaucasia"
+        },
+        {
+         "key": "B",
+         "text": "by appointment by the leaders of the Bolshevik government"
+        },
+        {
+         "key": "C",
+         "text": "on the basis of earlier election results, with fewer votes needed per seat"
+        },
+        {
+         "key": "D",
+         "text": "by agreement between the national councils of the three main groups"
+        }
+       ],
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>No new elections were held: the earlier Constituent Assembly results were reused and the quota of votes per seat was cut to one third (= a lower quota). A is contradicted; B and D are not mentioned.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Instead, the Transcaucasian results of the Constituent Assembly elections were reused, and the number of votes needed to win a seat was cut to one third, so that every party sent roughly three times as many deputies as before.</p></blockquote>"
+      },
+      {
+       "number": 15,
+       "prompt_html": "What point did Khoyski make in the Seym debate on Brest-Litovsk?",
+       "options": [
+        {
+         "key": "A",
+         "text": "The Seym should declare war on the Ottoman Empire."
+        },
+        {
+         "key": "B",
+         "text": "The Seym's attitude towards Russia was contradictory."
+        },
+        {
+         "key": "C",
+         "text": "Kars and Ardahan should remain part of Transcaucasia."
+        },
+        {
+         "key": "D",
+         "text": "The 1914 borders were no longer a realistic basis for peace."
+        }
+       ],
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Khoyski criticised the inconsistency of behaving as part of Russia and then rejecting Russia's treaty, i.e. a contradictory attitude towards Russia.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Georgian and Armenian majority refused to recognise the treaty, but Khoyski pointed out the inconsistency of acting as part of Russia one day and rejecting a Russian treaty the next.</p></blockquote>"
+      },
+      {
+       "number": 16,
+       "prompt_html": "At Trabzon, the Ottoman delegation argued that Transcaucasia",
+       "options": [
+        {
+         "key": "A",
+         "text": "should remain a province of Russia."
+        },
+        {
+         "key": "B",
+         "text": "should accept German mediation."
+        },
+        {
+         "key": "C",
+         "text": "should return Batum to Georgia."
+        },
+        {
+         "key": "D",
+         "text": "had no legal right to reject the Treaty of Brest-Litovsk."
+        }
+       ],
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Ottomans said a territory that had been part of Russia when Brest-Litovsk was signed had no legal ground to reject it. Kazemzadeh calls this 'legally correct'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>On 20 March the Ottomans called on Transcaucasia to proclaim its independence, arguing that a territory which had been part of Russia when the treaty was signed had no legal ground to reject it, a position Kazemzadeh considers 'legally correct'.</p></blockquote>"
+      },
+      {
+       "number": 17,
+       "prompt_html": "What did the fourth article of the Treaty of Batum provide for?",
+       "options": [
+        {
+         "key": "A",
+         "text": "Ottoman military support if Azerbaijan asked for it"
+        },
+        {
+         "key": "B",
+         "text": "the transfer of Ganja to Ottoman control"
+        },
+        {
+         "key": "C",
+         "text": "a common state of Azerbaijan and Georgia"
+        },
+        {
+         "key": "D",
+         "text": "the recognition of Georgian independence"
+        }
+       ],
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Article 4 promised Ottoman military assistance 'on request', which later became the legal basis for the Caucasian Islamic Army.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Its fourth article promised Ottoman military assistance on request, which became the legal basis for the Caucasian Islamic Army that liberated Baku on 15 September 1918.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      18,
+      22
+     ],
+     "type": "matching_features",
+     "instructions_html": "<p>Look at the following statements (Questions 18-22) and the list of people below.</p><p>Match each statement with the correct person, A-F.</p><p>NB You may use any letter more than once.</p>",
+     "content_html": "",
+     "image": null,
+     "options": [
+      {
+       "key": "A",
+       "text": "Mammad Amin Rasulzade"
+      },
+      {
+       "key": "B",
+       "text": "Fatali khan Khoyski"
+      },
+      {
+       "key": "C",
+       "text": "Mammad Hasan Hajinski"
+      },
+      {
+       "key": "D",
+       "text": "Shafi bey Rustambeyli"
+      },
+      {
+       "key": "E",
+       "text": "Nikolay Chkheidze"
+      },
+      {
+       "key": "F",
+       "text": "Akaki Chkhenkeli"
+      }
+     ],
+     "questions": [
+      {
+       "number": 18,
+       "prompt_html": "presided over the regional parliament when it first met",
+       "options": null,
+       "answer": [
+        "E"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Seym opened under the Georgian Menshevik Nikolay Chkheidze.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Seym opened in Tiflis on 10 (23) February 1918 under the Georgian Menshevik Nikolay Chkheidze.</p></blockquote>"
+      },
+      {
+       "number": 19,
+       "prompt_html": "announced that his community would not take up arms against people of the same faith",
+       "options": null,
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Rustambeyli declared that Azerbaijanis would not fight their co-religionists (= people of the same faith).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In mid-April, as the Seym voted for war with Turkey, Shafi bey Rustambeyli declared that Azerbaijanis would not fight their co-religionists, and the Musavat benches stayed empty until midnight.</p></blockquote>"
+      },
+      {
+       "number": 20,
+       "prompt_html": "continued talks with the other side after war had been declared",
+       "options": null,
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>After Tiflis declared war, Hajinski 'kept negotiating with the Ottomans regardless'. Chkhenkeli (F) was recalled.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Chkhenkeli accepted Brest-Litovsk on 10 April, but Tiflis recalled the delegation and declared war; Hajinski kept negotiating with the Ottomans regardless.</p></blockquote>"
+      },
+      {
+       "number": 21,
+       "prompt_html": "was suspected of secretly informing the opposing delegation",
+       "options": null,
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>An Armenian delegate accused Hajinski of passing information to the Turks.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Hajinski objected, arguing that a few territorial concessions would not hurt Transcaucasia, and an Armenian delegate openly accused him of passing information to the Turks.</p></blockquote>"
+      },
+      {
+       "number": 22,
+       "prompt_html": "led the body that adopted the Declaration of Independence",
+       "options": null,
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Rasulzade was chairman of the Azerbaijani National Council, which adopted the Declaration of Independence.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>On 27 May its 44 deputies formed the Azerbaijani National Council, with Rasulzade as chairman, and the next day the Council adopted the Declaration of Independence.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      23,
+      26
+     ],
+     "type": "sentence_completion",
+     "instructions_html": "<p>Complete the sentences below.</p><p>Choose NO MORE THAN TWO WORDS from the passage for each answer.</p>",
+     "content_html": "<p>The Armenian delegates at Batum supported the German proposal of {{23}}.</p><p>As the federation neared collapse, Azerbaijani leaders suggested a {{24}} shared with Georgia.</p><p>The Declaration of Independence established a {{25}} with equal rights for all citizens.</p><p>Kazemzadeh admitted that the Azerbaijani deputies were driven by concern for {{26}} rather than by religion.</p>",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 23,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "mediation",
+        "German mediation"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Von Lossow 'offered mediation, an idea the Armenian delegates welcomed'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The German general von Lossow, who attended as an observer, offered mediation, an idea the Armenian delegates welcomed.</p></blockquote>"
+      },
+      {
+       "number": 24,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "dual state",
+        "a dual state"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>On 21 May the Azerbaijani leaders proposed at least a 'dual state' with Georgia if the federation collapsed.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>On 21 May Azerbaijani leaders proposed that, if the federation collapsed, they would accept at least a 'dual state' with Georgia, but the Georgians refused and secretly reached an agreement with Germany instead.</p></blockquote>"
+      },
+      {
+       "number": 25,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "democratic republic",
+        "a democratic republic"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Declaration 'proclaimed a democratic republic' that guaranteed rights to all citizens.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>This proclaimed a democratic republic that guaranteed civil and political rights to all citizens regardless of nationality, religion, social position or sex.</p></blockquote>"
+      },
+      {
+       "number": 26,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Baku"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Kazemzadeh acknowledged that their motive was Baku rather than religion.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Yet he also acknowledged that their motive was Baku rather than religion, noting that Shiite Azerbaijanis had fought Sunni Ottomans for centuries.</p></blockquote>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "A Nation Finds Its Voice: Azerbaijan in 1917",
+   "passage_html": "<p><em>You should spend about 20 minutes on Questions 27-40, which are based on Reading Passage 3 below.</em></p><p><strong>A</strong> The February Revolution of 1917 swept away the Tsarist autocracy that had governed northern Azerbaijan for about a century. When the news reached Baku and Tiflis in the first days of March, the police and the old administration simply disappeared, and Azerbaijanis enjoyed freedom of speech, of the press and of organisation for the first time. The eight months that followed were marked by political freedom, divided authority and a deepening economic crisis. They were also the period in which the Azerbaijani national movement was transformed from a collection of scattered intellectual circles into a mass movement with a clear programme.</p><p><strong>B</strong> Authority in the region was fragmented. On 9 March the Provisional Government created the Special Transcaucasian Committee, known as OZAKOM, in Tiflis. Chaired by V. A. Kharlamov and composed of Duma members, among them the Azerbaijani Mammad Yusif Jafarov, it took over civil administration from the viceroy but had no legislative power. The historian Firuz Kazemzadeh dismisses it as 'a collective Viceroy, only much weaker'. In Baku, meanwhile, two bodies claimed authority. The Executive Committee of Public Organizations brought together the City Duma, the oil industrialists and various national groups, while the Baku Soviet of Workers' Deputies, which first met on 6 March with 52 delegates, was dominated by Socialist Revolutionaries and Mensheviks. Although the Bolsheviks held only two or three seats, their leader Stepan Shaumyan was elected chairman in his absence.</p><p><strong>C</strong> Azerbaijani workers were weakly represented in the Soviet, which many Azerbaijanis came to regard as an institution belonging to 'others'. Instead, they built organisations of their own. In Baku a Provisional Committee of Muslim Public Organizations was set up, headed by Ali Mardan bey Topchubashov, a lawyer and former member of the First Duma, with Mammad Amin Rasulzade among its leading figures. Similar Muslim National Councils appeared in Ganja and in district towns, where they functioned as a national government in miniature, organising meetings, collecting money, running schools and representing Muslims before the authorities. The Baku committee declared that the only acceptable form of government for Russia was a democratic republic.</p><p><strong>D</strong> The national programme took shape at a series of congresses. The Caucasian Muslim Congress, held in Baku from 15 to 20 April, called for universal free education in the Azerbaijani language, but its most important decisions were military: a census of Muslim military potential and the creation of bureaus to organise Muslim detachments. This mattered because Azerbaijanis, unlike Armenians and Georgians, had never been conscripted into the Russian army and therefore had almost no trained soldiers. A few weeks later, at the First All-Russian Muslim Congress in Moscow, some 900 delegates debated the future of Russia's Muslims. The Volga Tatars favoured a single Russia with cultural autonomy for all Muslims, whereas Rasulzade led those demanding territorial autonomy for each nation within a democratic federal republic. His resolution won by 446 votes to 271, establishing the idea that Azerbaijan was a distinct territorial nation rather than simply part of a wider Muslim community.</p><p><strong>E</strong> Political parties now operated openly. In June the Baku party Musavat merged with the Turkic Party of Federalists, founded in Ganja by Nasib bey Yusifbeyli, to form the Turkic Federalist Party Musavat. According to Tadeusz Swietochowski, the new party consisted of two distinct wings, a Left based in Baku and a Right based in Ganja, which disagreed on social questions, especially land, but were held together by secular Turkic nationalism. Not every group shared this vision. The Pan-Islamist party Ittihad opposed territorial autonomy because it would divide the Muslim community, and the socialist Hummat, led by Nariman Narimanov, rejected it as well.</p><p><strong>F</strong> Economic hardship formed the background to these developments. Between the outbreak of war and January 1917, prices rose by about 350 per cent, while wages increased by only about 200 per cent; in 1916 alone, meat became 142 per cent more expensive. Baku, which supplied most of Russia's oil, had a multinational population in which Azerbaijanis made up only about 21 per cent in 1913, and its skilled workforce was largely non-Azerbaijani. Strikes for an eight-hour day led to a collective agreement in May, and a general strike in the oil industry followed in September.</p><p><strong>G</strong> The strength of the national movement became evident at the ballot box. In the October elections to the Baku Soviet, Musavat received almost 10,000 of about 25,000 votes, roughly 40 per cent and more than any other party, while the Bolsheviks gained around 4,000. Kazemzadeh concluded that 'the national factor largely determined the way a person voted'. Yet Musavat chose not to enter the Soviet, which was left in the hands of the Bolsheviks and their allies, a decision Kazemzadeh calls 'a blunder for which they were destined to pay dearly'. In the Constituent Assembly elections held the following month, Musavat won about 63 per cent of the Muslim vote in Transcaucasia.</p><p><strong>H</strong> Most historians accept that the national idea reached the majority of Azerbaijanis in 1917, but they interpret its significance differently. Later Soviet writers portrayed Musavat as a 'counter-revolutionary' party of beks and khans, although the early Soviet author A. L. Popov admitted that it had stood on the positions of democracy and even socialism. Kazemzadeh regarded the whole period as 'only a prelude to greater struggles', while Swietochowski described it as 'the transition toward nationhood'. What is clear is that the goal remained autonomy within a federal Russia rather than independence; only the events of the following months would push the movement towards the independent republic proclaimed on 28 May 1918.</p>",
+   "groups": [
+    {
+     "range": [
+      27,
+      30
+     ],
+     "type": "mcq",
+     "instructions_html": "<p>Choose the correct letter, A, B, C or D.</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 27,
+       "prompt_html": "What does the passage say about OZAKOM?",
+       "options": [
+        {
+         "key": "A",
+         "text": "It was led by an Azerbaijani member of the Duma."
+        },
+        {
+         "key": "B",
+         "text": "It was set up by the Baku Soviet."
+        },
+        {
+         "key": "C",
+         "text": "It was unable to pass laws."
+        },
+        {
+         "key": "D",
+         "text": "Kazemzadeh considered it stronger than the viceroy."
+        }
+       ],
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>OZAKOM replaced the viceroy in civil administration but 'had no legislative power', i.e. it could not make laws. It was chaired by Kharlamov (not an Azerbaijani), was created by the Provisional Government (not the Soviet), and Kazemzadeh calls it weak.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Chaired by V. A. Kharlamov and composed of Duma members, among them the Azerbaijani Mammad Yusif Jafarov, it took over civil administration from the viceroy but had no legislative power.</p></blockquote>"
+      },
+      {
+       "number": 28,
+       "prompt_html": "Why were the military decisions of the Baku congress important?",
+       "options": [
+        {
+         "key": "A",
+         "text": "The Provisional Government had asked for Muslim troops."
+        },
+        {
+         "key": "B",
+         "text": "Azerbaijanis lacked soldiers with military training."
+        },
+        {
+         "key": "C",
+         "text": "Armenians and Georgians had refused to form national units."
+        },
+        {
+         "key": "D",
+         "text": "Many Azerbaijanis had already served in the Russian army."
+        }
+       ],
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The census and the bureaus for Muslim detachments mattered because Azerbaijanis had never been conscripted and so had almost no trained soldiers.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>This mattered because Azerbaijanis, unlike Armenians and Georgians, had never been conscripted into the Russian army and therefore had almost no trained soldiers.</p></blockquote>"
+      },
+      {
+       "number": 29,
+       "prompt_html": "At the Moscow congress, the Volga Tatars wanted",
+       "options": [
+        {
+         "key": "A",
+         "text": "full independence for every Muslim nation."
+        },
+        {
+         "key": "B",
+         "text": "a separate territory for each Muslim people."
+        },
+        {
+         "key": "C",
+         "text": "a federal republic led by Rasulzade."
+        },
+        {
+         "key": "D",
+         "text": "cultural rather than territorial self-government inside one Russia."
+        }
+       ],
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Volga Tatars favoured a single Russia with cultural autonomy for all Muslims; territorial autonomy was Rasulzade's position.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Volga Tatars favoured a single Russia with cultural autonomy for all Muslims, whereas Rasulzade led those demanding territorial autonomy for each nation within a democratic federal republic.</p></blockquote>"
+      },
+      {
+       "number": 30,
+       "prompt_html": "According to paragraph G, Musavat's refusal to join the Soviet",
+       "options": [
+        {
+         "key": "A",
+         "text": "allowed the Bolsheviks to take control of it."
+        },
+        {
+         "key": "B",
+         "text": "was a result of its disappointing election results."
+        },
+        {
+         "key": "C",
+         "text": "was praised by Kazemzadeh as a wise choice."
+        },
+        {
+         "key": "D",
+         "text": "helped it to win the Constituent Assembly elections."
+        }
+       ],
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>By staying out, Musavat left the Soviet to the Bolsheviks and their allies, and Kazemzadeh calls the decision a blunder they would pay for.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Yet Musavat chose not to enter the Soviet, which was left in the hands of the Bolsheviks and their allies, a decision Kazemzadeh calls 'a blunder for which they were destined to pay dearly'.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      31,
+      35
+     ],
+     "type": "summary_completion",
+     "instructions_html": "<p>Complete the summary below.</p><p>Choose NO MORE THAN TWO WORDS from the passage for each answer.</p>",
+     "content_html": "<p><strong>National organisations and parties in 1917</strong></p><p>Many Azerbaijanis saw the Baku Soviet as a body that belonged to other groups, so they formed their own organisations. In Baku, Topchubashov headed a committee of Muslim organisations, while in Ganja and smaller towns Muslim National Councils acted as a national government in {{31}}. In June, Musavat united with a party from Ganja; the resulting party had two {{32}} which disagreed about land but were bound together by secular Turkic {{33}}. Not everyone supported territorial autonomy: it was opposed both by Ittihad, a {{34}} party, and by the socialists of Hummat. All this took place against a background of economic hardship, as prices had risen far faster than {{35}} since the start of the war.</p>",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 31,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "miniature"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The councils in Ganja and the district towns worked as 'a national government in miniature', organising meetings, money, schools and representation.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Similar Muslim National Councils appeared in Ganja and in district towns, where they functioned as a national government in miniature, organising meetings, collecting money, running schools and representing Muslims before the authorities.</p></blockquote>"
+      },
+      {
+       "number": 32,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "wings",
+        "distinct wings"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Swietochowski says the new Musavat had two distinct wings, Baku (Left) and Ganja (Right), which disagreed on land.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>According to Tadeusz Swietochowski, the new party consisted of two distinct wings, a Left based in Baku and a Right based in Ganja, which disagreed on social questions, especially land, but were held together by secular Turkic nationalism.</p></blockquote>"
+      },
+      {
+       "number": 33,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "nationalism"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>'Bound together by' paraphrases 'held together by': the two wings were united by secular Turkic nationalism.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>According to Tadeusz Swietochowski, the new party consisted of two distinct wings, a Left based in Baku and a Right based in Ganja, which disagreed on social questions, especially land, but were held together by secular Turkic nationalism.</p></blockquote>"
+      },
+      {
+       "number": 34,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Pan-Islamist",
+        "pan-islamist",
+        "Pan Islamist"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Ittihad is described as the Pan-Islamist party that opposed territorial autonomy.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Pan-Islamist party Ittihad opposed territorial autonomy because it would divide the Muslim community, and the socialist Hummat, led by Nariman Narimanov, rejected it as well.</p></blockquote>"
+      },
+      {
+       "number": 35,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "wages"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Prices rose by about 350 per cent while wages rose by only about 200 per cent, so prices rose much faster than wages.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Between the outbreak of war and January 1917, prices rose by about 350 per cent, while wages increased by only about 200 per cent; in 1916 alone, meat became 142 per cent more expensive.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      36,
+      39
+     ],
+     "type": "tfng",
+     "instructions_html": "<p>Do the following statements agree with the information given in the Reading Passage?</p><p>TRUE if the statement agrees with the information</p><p>FALSE if the statement contradicts the information</p><p>NOT GIVEN if there is no information on this</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 36,
+       "prompt_html": "The Tsarist police remained active in Baku for some weeks after news of the revolution arrived.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage says that when the news arrived the police and the old administration 'simply disappeared', which contradicts the statement.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>When the news reached Baku and Tiflis in the first days of March, the police and the old administration simply disappeared, and Azerbaijanis enjoyed freedom of speech, of the press and of organisation for the first time.</p></blockquote>"
+      },
+      {
+       "number": 37,
+       "prompt_html": "Rasulzade had prepared his resolution together with the Bashkir delegates.",
+       "options": null,
+       "answer": [
+        "NOT GIVEN"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage says Rasulzade led the supporters of territorial autonomy and that his resolution won, but it does not say who helped him prepare it or mention Bashkir delegates.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Volga Tatars favoured a single Russia with cultural autonomy for all Muslims, whereas Rasulzade led those demanding territorial autonomy for each nation within a democratic federal republic.</p></blockquote>"
+      },
+      {
+       "number": 38,
+       "prompt_html": "In 1913 Azerbaijanis were a minority of the population of Baku.",
+       "options": null,
+       "answer": [
+        "TRUE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Azerbaijanis made up only about 21 per cent of Baku's population in 1913, i.e. a minority.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Baku, which supplied most of Russia's oil, had a multinational population in which Azerbaijanis made up only about 21 per cent in 1913, and its skilled workforce was largely non-Azerbaijani.</p></blockquote>"
+      },
+      {
+       "number": 39,
+       "prompt_html": "In the October elections to the Baku Soviet, the Bolsheviks won more than half as many votes as Musavat.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Musavat received almost 10,000 votes and the Bolsheviks around 4,000, which is less than half of Musavat's total.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In the October elections to the Baku Soviet, Musavat received almost 10,000 of about 25,000 votes, roughly 40 per cent and more than any other party, while the Bolsheviks gained around 4,000.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      40,
+      40
+     ],
+     "type": "mcq",
+     "instructions_html": "<p>Choose the correct letter, A, B, C or D.</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 40,
+       "prompt_html": "Which of the following is the most suitable title for this Reading Passage?",
+       "options": [
+        {
+         "key": "A",
+         "text": "How the Bolsheviks won the Baku Soviet elections of 1917"
+        },
+        {
+         "key": "B",
+         "text": "Revolution and the rise of the Azerbaijani national movement in 1917"
+        },
+        {
+         "key": "C",
+         "text": "The economic causes of the First World War in the Caucasus"
+        },
+        {
+         "key": "D",
+         "text": "The life and career of Ali Mardan bey Topchubashov"
+        }
+       ],
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage traces how, after the February Revolution, Azerbaijanis built their own organisations, congresses and parties, and how the national movement showed its strength. A is wrong (Musavat, not the Bolsheviks, came first); C and D are only details of single paragraphs.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The strength of the national movement became evident at the ballot box.</p></blockquote><blockquote><p>Most historians accept that the national idea reached the majority of Azerbaijanis in 1917, but they interpret its significance differently.</p></blockquote>"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

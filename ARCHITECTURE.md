@@ -298,8 +298,8 @@ History essays (branch `history-essays`)
 - `writing_context` adds the topic's medium English notes, so the AI marker can check facts.
 - Reading tests on the topics, Cambridge format: one passage per topic in `knowledge/history/reading/passages/` (13
   questions; the third of a test has 14), built by `tools/build_history_reading.py` into `history-test-<n>.json`
-  (3 passages, 40 questions, 60 min, renumbered; Q13-15, Q16-18) and `history-qNN-reading.json` for topics not yet
-  grouped (Q19, Q20: one passage, 20 min). `source:"history"`, imported with the Cambridge tests (top-level files only).
+  (3 passages, 40 questions, 60 min, renumbered): Test 1 Q13-Q15, Test 2 Q16-Q18, Test 3 Q19, Q20 + Q18 reused.
+  No single-passage tests. `source:"history"`, imported with the Cambridge tests (top-level files only).
   Setting `show_history_readings` hides untouched ones; never in mocks.
 
 ## 5. AI analysis runner (`backend/app/ai_runner.py`)
