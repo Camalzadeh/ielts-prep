@@ -296,8 +296,11 @@ History essays (branch `history-essays`)
 - Prompts with `source:"history"` and `tags:"history,Q13"`. Setting `show_history_prompts` (`"1"` by default)
   hides them from `GET /api/writing/prompts`; `pick_random_prompt` (Random Task 1/2 and mocks) never picks them.
 - `writing_context` adds the topic's medium English notes, so the AI marker can check facts.
-- Reading tests on the topics: `knowledge/history/reading/history-qNN-reading.json` (one passage, 13 questions, 20 min,
-  `source:"history"`), imported with the Cambridge tests. Setting `show_history_readings` hides untouched ones; never in mocks.
+- Reading tests on the topics, Cambridge format: one passage per topic in `knowledge/history/reading/passages/` (13
+  questions; the third of a test has 14), built by `tools/build_history_reading.py` into `history-test-<n>.json`
+  (3 passages, 40 questions, 60 min, renumbered; Q13-15, Q16-18) and `history-qNN-reading.json` for topics not yet
+  grouped (Q19, Q20: one passage, 20 min). `source:"history"`, imported with the Cambridge tests (top-level files only).
+  Setting `show_history_readings` hides untouched ones; never in mocks.
 
 ## 5. AI analysis runner (`backend/app/ai_runner.py`)
 

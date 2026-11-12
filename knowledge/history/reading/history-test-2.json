@@ -1,0 +1,755 @@
+{
+ "id": "history-test-2",
+ "type": "reading",
+ "module": "academic",
+ "title": "History Reading Test 2 (Q16–Q18)",
+ "series": "History (Azerbaijan)",
+ "book": null,
+ "test_no": 2,
+ "source": "history",
+ "source_url": "",
+ "duration_minutes": 60,
+ "parts": [
+  {
+   "number": 1,
+   "title": "From Self-Defence to Party Politics: Azerbaijan's First National Organisations",
+   "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-13, which are based on Reading Passage 1 below.</em></p><p><strong>A</strong> Before 1905 the Muslims of Russian Azerbaijan had almost no political organisation. Their elite expressed itself through newspapers and petitions, and no periodical in a Turkic language was permitted at all until 1904. Within roughly twelve years, however, Azerbaijanis moved from spontaneous self-defence to clandestine organisations and, finally, to a modern national party. Azerbaijani historians call the period from the revolution of 1905 to the February Revolution of 1917 the first stage of the national liberation movement, and the historian Tadeusz Swietochowski describes 1905 as 'the great watershed date in the history of Azerbaijan'.</p><p><strong>B</strong> The community entered this period from a position of weakness. When oil-field leases were auctioned in 1872, 'Tatars', as Azerbaijanis were then called, won about 5% of the successful bids, while Armenians won almost ten times as much. In Baku, Muslims made up over 70% of the unskilled workforce, whereas Armenians, who accounted for 17.5% of all workers, held a quarter of the highly skilled jobs. Labour unrest was nonetheless growing: in December 1904 a general strike of the Baku oil workers ended with the first collective labour contract in Russia, which included a nine-hour day, a limit on night work and pay books kept also in the workers' native language. In the same year young Azerbaijani socialists founded Hummet, the first Muslim social-democratic group.</p><p><strong>C</strong> The decisive shock came in 1905. After troops fired on workers in St Petersburg on 9 January, revolution spread to the Caucasus, and on 6 February the so-called 'Tatar-Armenian war' broke out in Baku with three days of killing while police and troops stood by. Violence then spread to Erivan, Nakhchivan, Shusha, Ganja and Tiflis. Some 128 Armenian and 158 Muslim villages were pillaged or destroyed, and estimates of the dead range from 3,100 to 10,000. The Armenians were organised by the Dashnaktsutiun party, whereas the Azerbaijanis, in Firuz Kazemzadeh's phrase, 'fought without coordination or plan'. Whether the authorities deliberately provoked the clashes remains disputed: Kazemzadeh argues that they had the power to prevent bloodshed but chose to abstain, while Swietochowski stresses that no incontrovertible proof of official connivance has been found. He does, however, see one lasting consequence: the violence generated, for the first time, a solidarity among Muslims that transcended local and sectarian loyalties.</p><p><strong>D</strong> The Baku liberals, led by Alimardan bey Topchubashov, responded with petitions and took part in the All-Russian Muslim congresses of 1905 and 1906, but these were moderate projects aimed at equality within Russia. The more radical, regional line came from Ganja. In the summer of 1905 Shafi bey Rustambeyli set up Qeyrat ('Zeal'), whose leaflets called on Muslims, Georgians and Armenians to unite against Tsarism. Qeyrat was small and short-lived, and it is the least documented of the early organisations; its founder soon helped to create a far more significant body.</p><p><strong>E</strong> That body was Difai ('Defence'), a clandestine association formed in Ganja in the autumn of 1905 by local notables and joined by Ahmad bey Agaoglu from Baku. The Azerbaijani historian Seyid-zade, however, dates its formal founding as a party to August-September 1906. Its declared aim was to 'defend and enlighten' the people. It established branches in Shusha, Aghdam, Nakhchivan, Kars and elsewhere; the largest, the Karabakh Unity Assembly in Shusha, had a 51-point programme and around 400 armed volunteers. Difai blamed Russia for the bloodshed and assassinated Tsarist officials known to have encouraged anti-Muslim violence, yet Agaoglu also told crowds in a Ganja mosque that 'even wild animals do not devour their own kind', reminding them that Muslims and Armenians had lived in peace for centuries. In April 1908 its leaders were exiled to Astrakhan. Swietochowski calls Difai 'the first proto-nationalist Azerbaijani organization', one that broke a long tradition of passive acceptance of Russian rule, although he adds that it was little concerned with working out a positive programme.</p><p><strong>F</strong> Mudafia, whose name also means 'Defence', appeared in the spring of 1907 under Ismail khan Ziyadkhanov, a deputy in the First Duma. It operated in the western part of Elizavetpol province, and its seal, which showed scales, a book, a sheaf and two crossed sabres, symbolised justice, knowledge, the peasantry and armed protection. The provincial governor, however, reported that it had few members, and even its founding date is uncertain: Seyid-zade gives March in one place and May in another.</p><p><strong>G</strong> After the revolution ebbed, Stolypin's repression set in and many intellectuals left for Istanbul. In this climate a group of former Hummet members founded Musavat ('Equality') in Baku, in October 1911 according to Seyid-zade, or in 1912 according to Swietochowski. Its eight-point programme of 1912 was Pan-Islamic, calling for the unity of all Muslims and the restoration of the independence of Muslim countries, and members worked in secret three-man cells. Evidence of its early activity is so scarce that the Soviet historian Ratgauzer even doubted that the party existed before 1917. In 1913 Mahammad Amin Rasulzade returned under an amnesty marking 300 years of the Romanov dynasty. By separating the religious community from a nation based on language, culture and history, he led the party from Pan-Islamism towards Turkism.</p><p><strong>H</strong> After the February Revolution Musavat became a legal mass party. In June 1917 it merged with the Ganja-based Turkic Party of Decentralization, led by Nasib bey Yusifbeyli and regarded as the heir of Difai, and the new party demanded territorial autonomy in a federal Russia. In the elections of November 1917 it won 63% of the Muslim vote in Transcaucasia. Interpretations of the party differ: Kazemzadeh notes that its founders were former socialists who soon moved to the right, while post-Soviet Azerbaijani scholars emphasise an unbroken line of national struggle from 1905 to the Azerbaijan Democratic Republic of 28 May 1918.</p>",
+   "groups": [
+    {
+     "range": [
+      1,
+      5
+     ],
+     "type": "matching_features",
+     "instructions_html": "<p>Look at the following statements (Questions 1-5) and the list of historians below.</p><p>Match each statement with the correct historian, A-D.</p><p>NB You may use any letter more than once.</p>",
+     "content_html": "",
+     "image": null,
+     "options": [
+      {
+       "key": "A",
+       "text": "Tadeusz Swietochowski"
+      },
+      {
+       "key": "B",
+       "text": "Firuz Kazemzadeh"
+      },
+      {
+       "key": "C",
+       "text": "Seyid-zade"
+      },
+      {
+       "key": "D",
+       "text": "Ratgauzer"
+      }
+     ],
+     "questions": [
+      {
+       "number": 1,
+       "prompt_html": "The Muslim side in the violence of 1905 had no organised strategy.",
+       "options": null,
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Kazemzadeh says the Azerbaijanis 'fought without coordination or plan', i.e. with no organised strategy.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Armenians were organised by the Dashnaktsutiun party, whereas the Azerbaijanis, in Firuz Kazemzadeh's phrase, 'fought without coordination or plan'.</p></blockquote>"
+      },
+      {
+       "number": 2,
+       "prompt_html": "There is no conclusive evidence that the authorities were involved in starting the clashes.",
+       "options": null,
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Swietochowski stresses that no incontrovertible (conclusive) proof of official connivance has been found.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Whether the authorities deliberately provoked the clashes remains disputed: Kazemzadeh argues that they had the power to prevent bloodshed but chose to abstain, while Swietochowski stresses that no incontrovertible proof of official connivance has been found.</p></blockquote>"
+      },
+      {
+       "number": 3,
+       "prompt_html": "One organisation was only formally established as a party about a year after it first appeared.",
+       "options": null,
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Difai appeared in the autumn of 1905, but Seyid-zade dates its formal founding as a party to August-September 1906.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Azerbaijani historian Seyid-zade, however, dates its formal founding as a party to August-September 1906.</p></blockquote>"
+      },
+      {
+       "number": 4,
+       "prompt_html": "One party may not have been active as early as is usually claimed.",
+       "options": null,
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Ratgauzer doubted that Musavat (founded 1911/1912) existed before 1917.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Evidence of its early activity is so scarce that the Soviet historian Ratgauzer even doubted that the party existed before 1917.</p></blockquote>"
+      },
+      {
+       "number": 5,
+       "prompt_html": "The founders of a party quickly abandoned their left-wing origins.",
+       "options": null,
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Kazemzadeh notes that Musavat's founders were former socialists who soon moved to the right.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Interpretations of the party differ: Kazemzadeh notes that its founders were former socialists who soon moved to the right, while post-Soviet Azerbaijani scholars emphasise an unbroken line of national struggle from 1905 to the Azerbaijan Democratic Republic of 28 May 1918.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      6,
+      9
+     ],
+     "type": "mcq",
+     "instructions_html": "<p>Choose the correct letter, A, B, C or D.</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 6,
+       "prompt_html": "What does the writer say about the agreement that ended the strike of December 1904?",
+       "options": [
+        {
+         "key": "A",
+         "text": "It gave Muslim workers the same wages as Armenian workers."
+        },
+        {
+         "key": "B",
+         "text": "It was the first agreement of its kind in the Russian Empire."
+        },
+        {
+         "key": "C",
+         "text": "It was negotiated on the workers' behalf by Hummet."
+        },
+        {
+         "key": "D",
+         "text": "It brought an end to night work in the oil industry."
+        }
+       ],
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The strike ended with 'the first collective labour contract in Russia'. It limited night work rather than abolishing it (D), and the passage does not link it to Hummet (C) or to pay differences between groups (A).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Labour unrest was nonetheless growing: in December 1904 a general strike of the Baku oil workers ended with the first collective labour contract in Russia, which included a nine-hour day, a limit on night work and pay books kept also in the workers' native language.</p></blockquote>"
+      },
+      {
+       "number": 7,
+       "prompt_html": "According to Swietochowski, what was one long-term result of the violence of 1905-1906?",
+       "options": [
+        {
+         "key": "A",
+         "text": "It proved that the Russian authorities had planned the clashes."
+        },
+        {
+         "key": "B",
+         "text": "It led Azerbaijani liberals to abandon petitions altogether."
+        },
+        {
+         "key": "C",
+         "text": "It united Muslims across regional and religious divisions."
+        },
+        {
+         "key": "D",
+         "text": "It gave the Dashnaktsutiun control of the Baku oil fields."
+        }
+       ],
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Swietochowski sees the violence as creating, for the first time, Muslim solidarity beyond local and sectarian loyalties. The other options are not attributed to him (A is the opposite of his view on official involvement).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>He does, however, see one lasting consequence: the violence generated, for the first time, a solidarity among Muslims that transcended local and sectarian loyalties.</p></blockquote>"
+      },
+      {
+       "number": 8,
+       "prompt_html": "What was the main message of Qeyrat?",
+       "options": [
+        {
+         "key": "A",
+         "text": "The peoples of the Caucasus should join forces against Russian rule."
+        },
+        {
+         "key": "B",
+         "text": "Muslims should arm themselves against their Armenian neighbours."
+        },
+        {
+         "key": "C",
+         "text": "Azerbaijanis should seek equality through the All-Russian Muslim congresses."
+        },
+        {
+         "key": "D",
+         "text": "The Muslims of Ganja should form their own political party."
+        }
+       ],
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Qeyrat's leaflets called on Muslims, Georgians and Armenians to unite against Tsarism, i.e. cooperation between the Caucasian peoples against Russian rule.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In the summer of 1905 Shafi bey Rustambeyli set up Qeyrat ('Zeal'), whose leaflets called on Muslims, Georgians and Armenians to unite against Tsarism.</p></blockquote>"
+      },
+      {
+       "number": 9,
+       "prompt_html": "Why does the writer refer to Agaoglu's speech in a Ganja mosque?",
+       "options": [
+        {
+         "key": "A",
+         "text": "to show that Difai relied on religious leaders for support"
+        },
+        {
+         "key": "B",
+         "text": "to explain why the leaders of Difai were sent into exile"
+        },
+        {
+         "key": "C",
+         "text": "to illustrate the methods Difai used against Tsarist officials"
+        },
+        {
+         "key": "D",
+         "text": "to show that Difai also promoted reconciliation with the Armenians"
+        }
+       ],
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Although Difai used violence against Tsarist officials, Agaoglu's words about wild animals not devouring their own kind show that Difai also urged peace between Muslims and Armenians.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Difai blamed Russia for the bloodshed and assassinated Tsarist officials known to have encouraged anti-Muslim violence, yet Agaoglu also told crowds in a Ganja mosque that 'even wild animals do not devour their own kind', reminding them that Muslims and Armenians had lived in peace for centuries.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      10,
+      13
+     ],
+     "type": "sentence_completion",
+     "instructions_html": "<p>Complete the sentences below.</p><p>Choose NO MORE THAN TWO WORDS from the passage for each answer.</p>",
+     "content_html": "<p>Rasulzade was able to come back to Russia in 1913 because of an {{10}} connected with a royal anniversary.</p><p>Rasulzade's distinction between a religious community and a nation moved Musavat away from Pan-Islamism and towards {{11}}.</p><p>After merging with a Ganja party in 1917, Musavat called for {{12}} within a federal Russia.</p><p>In the elections held at the end of 1917, Musavat received nearly two-thirds of the {{13}} in Transcaucasia.</p>",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 10,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "amnesty",
+        "an amnesty"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Rasulzade returned in 1913 under an amnesty marking 300 years of the Romanov dynasty (the royal anniversary).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In 1913 Mahammad Amin Rasulzade returned under an amnesty marking 300 years of the Romanov dynasty.</p></blockquote>"
+      },
+      {
+       "number": 11,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Turkism"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>By separating the religious community from the nation, Rasulzade led the party from Pan-Islamism towards Turkism.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>By separating the religious community from a nation based on language, culture and history, he led the party from Pan-Islamism towards Turkism.</p></blockquote>"
+      },
+      {
+       "number": 12,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "territorial autonomy",
+        "autonomy"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>After the June 1917 merger the new party demanded territorial autonomy in a federal Russia.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In June 1917 it merged with the Ganja-based Turkic Party of Decentralization, led by Nasib bey Yusifbeyli and regarded as the heir of Difai, and the new party demanded territorial autonomy in a federal Russia.</p></blockquote>"
+      },
+      {
+       "number": 13,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Muslim vote",
+        "Muslim votes"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>In November 1917 Musavat won 63% (nearly two-thirds) of the Muslim vote in Transcaucasia.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In the elections of November 1917 it won 63% of the Muslim vote in Transcaucasia.</p></blockquote>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "Voices from the Periphery: Azerbaijan's First Parliamentarians",
+   "passage_html": "<p><em>You should spend about 20 minutes on Questions 14-26, which are based on Reading Passage 2 below.</em></p><p><strong>A</strong> The revolution of 1905 compelled Nicholas II to make a concession that would have seemed unthinkable a few years earlier. The Manifesto of 17 October 1905 promised freedom of conscience, speech, assembly and association, together with a legislative State Duma whose approval would be required for every law. An electoral law followed on 11 December 1905. It opened the vote to part of the workers and only partially to the peasants, and the voting itself was indirect: citizens chose electors, who then met in provincial assemblies to select the deputies. Despite these limitations, Azerbaijanis could, for the first time, address the parliament of the empire from its own tribune.</p><p><strong>B</strong> In the Caucasus, however, the process was controlled by the viceroy, who was entitled to fix the dates of voting and to group districts as he saw fit. As a consequence, the Azerbaijani elections were held late: on 16 May 1906 in Elizavetpol province and on 31 May in Baku province, several weeks after the Duma had opened on 27 April. Even before the vote, the political direction of the future deputies had largely been settled. The Congress of Russian Muslims had resolved to support the platform of the Constitutional Democrats, or Cadets, who promised the 'equality of all nations', local autonomy and free education.</p><p><strong>C</strong> Five Azerbaijanis took their seats in the First Duma, and their backgrounds reveal a strikingly well-educated group. Alimardan bey Topchubashov was a lawyer, the editor of the newspaper Kaspiy and a member of the Baku town council; Ismail khan Ziyadkhanov was a lawyer from Elizavetpol; Asadulla bey Muradkhanov had trained at a teachers' seminary; Mammadtaghi Aliyev was a graduate of the Petrovsk Agricultural Academy; and Abdurrahim bey Haqverdiyev was a playwright. All five joined the Muslim fraction, which elected a seven-member bureau with Topchubashov as its chairman. Because many Muslim regions had not yet voted, the fraction initially had only 22 members, a genuine handicap at a time when a formal inquiry required 30 signatures.</p><p><strong>D</strong> The land question dominated the debates. On 24 June 1906 the fraction set out its own position: the waqf lands belonging to Muslim religious bodies must not be taken, peasants should receive land from crown, cabinet and monastery estates, private land could be acquired only at a fair price, and the resettlement of Russian peasants in the region had to stop. The most forceful speech came from Ziyadkhanov, who argued that the Caucasus suffered from a shortage of land just as central Russia did, and accused the administration of setting Armenians and Muslims against each other in the Erivan and Elizavetpol provinces. He also observed that a traveller could cover 100 versts in any direction without coming across a single school. Topchubashov, for his part, asked that the decisions of the Duma be published in the local languages.</p><p><strong>E</strong> The assembly survived for only 72 days. When it was dissolved on 8 July 1906, a large number of deputies gathered in Vyborg, in Finland, and signed an appeal urging the population to pay no taxes and to send no recruits to the army. Topchubashov and Ziyadkhanov were among the signatories, and they paid a heavy price. In December 1907 both men were sentenced to three months in prison and lost the right to be elected, and Topchubashov was also removed from his post as editor of Kaspiy.</p><p><strong>F</strong> The Second Duma, which sat for 103 days from 20 February 1907, brought a new group of Azerbaijani deputies: Fatali khan Khoyski and Khalil bey Khasmammadov, both lawyers trained in Moscow; Mahammad agha Shahtakhtinski, who had been educated in Leipzig and Paris; the teacher Mustafa Mahmudov; and Zeynal Zeynalov, an oil worker. A sixth man, Ismail Taghiyev, was elected for the city of Baku but never travelled to Saint Petersburg, so the city was left without a deputy. The fraction published an eleven-section programme calling for a constitutional monarchy, equal rights for Muslims and free compulsory schooling in the native language. Its unity, however, proved fragile. In March 1907 Zeynalov and several colleagues left to join the Trudoviks, complaining that the programme was 'only for the rich' and that the fraction was too slow on land reform.</p><p><strong>G</strong> Nowhere were the divisions clearer than on the subject of land. Speaking for the fraction, Khoyski called for large estates to be compulsorily alienated at a fair price and for the land to pass to a provincial fund run by local self-government rather than to a state fund. Zeynalov, by contrast, insisted that the peasants of Baku province were too poor to buy land and should be given it free of charge. On other matters the deputies were more united. Shahtakhtinski, Mahmudov and Khasmammadov campaigned against the field courts-martial, and Khoyski presented a bill, signed by 173 deputies, to abolish every restriction based on nationality and religion. The Speaker promised a debate, but the matter went no further.</p><p><strong>H</strong> Historians are divided over how these efforts should be judged. Dilara Seyid-zade is critical of the first fraction, describing it as 'not courageous' and noting that its bill on freedom of conscience was never debated. Certainly, neither Duma turned any of the deputies' demands into law, and the electoral law of 3 June 1907 cut the number of Caucasian deputies from 28 to 10, leaving the Muslims of three provinces with a single representative, Khasmammadov. Others, however, see the two Dumas as a school of parliamentarism. It is significant that Topchubashov, Khoyski and Khasmammadov later led the Azerbaijan Democratic Republic, the first parliamentary republic in the Muslim East.</p>",
+   "groups": [
+    {
+     "range": [
+      14,
+      17
+     ],
+     "type": "matching_information",
+     "instructions_html": "<p>The Reading Passage has eight paragraphs, A-H.</p><p>Which paragraph contains the following information?</p><p>NB You may use any letter more than once.</p>",
+     "content_html": "",
+     "image": null,
+     "options": [
+      {
+       "key": "A",
+       "text": ""
+      },
+      {
+       "key": "B",
+       "text": ""
+      },
+      {
+       "key": "C",
+       "text": ""
+      },
+      {
+       "key": "D",
+       "text": ""
+      },
+      {
+       "key": "E",
+       "text": ""
+      },
+      {
+       "key": "F",
+       "text": ""
+      },
+      {
+       "key": "G",
+       "text": ""
+      },
+      {
+       "key": "H",
+       "text": ""
+      }
+     ],
+     "questions": [
+      {
+       "number": 14,
+       "prompt_html": "a mention of a deputy who was elected but did not take up his seat",
+       "options": null,
+       "answer": [
+        "F"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F explains that Ismail Taghiyev won the Baku seat in the Second Duma but never went to the capital, so he never actually sat as a deputy.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>A sixth man, Ismail Taghiyev, was elected for the city of Baku but never travelled to Saint Petersburg, so the city was left without a deputy.</p></blockquote>"
+      },
+      {
+       "number": 15,
+       "prompt_html": "the reason why the Azerbaijani deputies arrived after parliament had started its work",
+       "options": null,
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph B says the viceroy controlled the timing of the elections, so voting in Azerbaijan took place weeks after the Duma opened.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>As a consequence, the Azerbaijani elections were held late: on 16 May 1906 in Elizavetpol province and on 31 May in Baku province, several weeks after the Duma had opened on 27 April.</p></blockquote>"
+      },
+      {
+       "number": 16,
+       "prompt_html": "a numerical problem that limited what the Muslim deputies could do",
+       "options": null,
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph C explains that the fraction had only 22 members while an inquiry needed 30 signatures, so its small size was a handicap.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Because many Muslim regions had not yet voted, the fraction initially had only 22 members, a genuine handicap at a time when a formal inquiry required 30 signatures.</p></blockquote>"
+      },
+      {
+       "number": 17,
+       "prompt_html": "the punishment of deputies for encouraging people to disobey the state",
+       "options": null,
+       "answer": [
+        "E"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph E describes the Vyborg appeal (refusing taxes and recruits) and the prison sentences and loss of electoral rights that followed.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In December 1907 both men were sentenced to three months in prison and lost the right to be elected, and Topchubashov was also removed from his post as editor of Kaspiy.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      18,
+      22
+     ],
+     "type": "tfng",
+     "instructions_html": "<p>Do the following statements agree with the information given in the Reading Passage?</p><p>TRUE if the statement agrees with the information</p><p>FALSE if the statement contradicts the information</p><p>NOT GIVEN if there is no information on this</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 18,
+       "prompt_html": "The electoral law of December 1905 gave every peasant the right to vote.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage says the law opened the vote 'only partially' to the peasants, which contradicts the idea that every peasant could vote.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>It opened the vote to part of the workers and only partially to the peasants, and the voting itself was indirect: citizens chose electors, who then met in provincial assemblies to select the deputies.</p></blockquote>"
+      },
+      {
+       "number": 19,
+       "prompt_html": "One of the Cadets' promises was that schooling would cost nothing.",
+       "options": null,
+       "answer": [
+        "TRUE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Cadets promised 'free education', which means schooling without charge.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Congress of Russian Muslims had resolved to support the platform of the Constitutional Democrats, or Cadets, who promised the 'equality of all nations', local autonomy and free education.</p></blockquote>"
+      },
+      {
+       "number": 20,
+       "prompt_html": "Haqverdiyev's plays were staged in Saint Petersburg while he was a deputy.",
+       "options": null,
+       "answer": [
+        "NOT GIVEN"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage only tells us that Haqverdiyev was a playwright. It says nothing about where or when his plays were performed.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Alimardan bey Topchubashov was a lawyer, the editor of the newspaper Kaspiy and a member of the Baku town council; Ismail khan Ziyadkhanov was a lawyer from Elizavetpol; Asadulla bey Muradkhanov had trained at a teachers' seminary; Mammadtaghi Aliyev was a graduate of the Petrovsk Agricultural Academy; and Abdurrahim bey Haqverdiyev was a playwright.</p></blockquote>"
+      },
+      {
+       "number": 21,
+       "prompt_html": "The Muslim fraction was prepared to see religious lands given to the peasants.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The fraction's position of 24 June 1906 stated that waqf lands belonging to Muslim religious bodies must not be taken, so it was not prepared to give them away.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>On 24 June 1906 the fraction set out its own position: the waqf lands belonging to Muslim religious bodies must not be taken, peasants should receive land from crown, cabinet and monastery estates, private land could be acquired only at a fair price, and the resettlement of Russian peasants in the region had to stop.</p></blockquote>"
+      },
+      {
+       "number": 22,
+       "prompt_html": "Baku had no representative in the Second Duma because the man it elected stayed away.",
+       "options": null,
+       "answer": [
+        "TRUE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Ismail Taghiyev was elected for Baku but never went to Saint Petersburg, so the city was left without a deputy.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>A sixth man, Ismail Taghiyev, was elected for the city of Baku but never travelled to Saint Petersburg, so the city was left without a deputy.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      23,
+      26
+     ],
+     "type": "matching_features",
+     "instructions_html": "<p>Look at the following statements (Questions 23-26) and the list of deputies below.</p><p>Match each statement with the correct deputy, A-E.</p><p>NB You may use any letter more than once.</p>",
+     "content_html": "",
+     "image": null,
+     "options": [
+      {
+       "key": "A",
+       "text": "Alimardan bey Topchubashov"
+      },
+      {
+       "key": "B",
+       "text": "Ismail khan Ziyadkhanov"
+      },
+      {
+       "key": "C",
+       "text": "Fatali khan Khoyski"
+      },
+      {
+       "key": "D",
+       "text": "Zeynal Zeynalov"
+      },
+      {
+       "key": "E",
+       "text": "Mahammad agha Shahtakhtinski"
+      }
+     ],
+     "questions": [
+      {
+       "number": 23,
+       "prompt_html": "wanted the Duma's decisions to be made available in the languages of the region",
+       "options": null,
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Topchubashov asked for the Duma's decisions to be published in the local languages.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Topchubashov, for his part, asked that the decisions of the Duma be published in the local languages.</p></blockquote>"
+      },
+      {
+       "number": 24,
+       "prompt_html": "claimed that the authorities had provoked conflict between two communities",
+       "options": null,
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Ziyadkhanov accused the administration of setting Armenians and Muslims against each other.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The most forceful speech came from Ziyadkhanov, who argued that the Caucasus suffered from a shortage of land just as central Russia did, and accused the administration of setting Armenians and Muslims against each other in the Erivan and Elizavetpol provinces.</p></blockquote>"
+      },
+      {
+       "number": 25,
+       "prompt_html": "believed that peasants should not have to pay for land",
+       "options": null,
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Zeynalov said the peasants of Baku province were too poor to buy land and should get it free of charge.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Zeynalov, by contrast, insisted that the peasants of Baku province were too poor to buy land and should be given it free of charge.</p></blockquote>"
+      },
+      {
+       "number": 26,
+       "prompt_html": "introduced a proposal that was supported by 173 members of parliament",
+       "options": null,
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Khoyski presented the bill on abolishing national and religious restrictions, which was signed by 173 deputies.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Shahtakhtinski, Mahmudov and Khasmammadov campaigned against the field courts-martial, and Khoyski presented a bill, signed by 173 deputies, to abolish every restriction based on nationality and religion.</p></blockquote>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "A Nation Finds Its Voice: Azerbaijan in 1917",
+   "passage_html": "<p><em>You should spend about 20 minutes on Questions 27-40, which are based on Reading Passage 3 below.</em></p><p><strong>A</strong> The February Revolution of 1917 swept away the Tsarist autocracy that had governed northern Azerbaijan for about a century. When the news reached Baku and Tiflis in the first days of March, the police and the old administration simply disappeared, and Azerbaijanis enjoyed freedom of speech, of the press and of organisation for the first time. The eight months that followed were marked by political freedom, divided authority and a deepening economic crisis. They were also the period in which the Azerbaijani national movement was transformed from a collection of scattered intellectual circles into a mass movement with a clear programme.</p><p><strong>B</strong> Authority in the region was fragmented. On 9 March the Provisional Government created the Special Transcaucasian Committee, known as OZAKOM, in Tiflis. Chaired by V. A. Kharlamov and composed of Duma members, among them the Azerbaijani Mammad Yusif Jafarov, it took over civil administration from the viceroy but had no legislative power. The historian Firuz Kazemzadeh dismisses it as 'a collective Viceroy, only much weaker'. In Baku, meanwhile, two bodies claimed authority. The Executive Committee of Public Organizations brought together the City Duma, the oil industrialists and various national groups, while the Baku Soviet of Workers' Deputies, which first met on 6 March with 52 delegates, was dominated by Socialist Revolutionaries and Mensheviks. Although the Bolsheviks held only two or three seats, their leader Stepan Shaumyan was elected chairman in his absence.</p><p><strong>C</strong> Azerbaijani workers were weakly represented in the Soviet, which many Azerbaijanis came to regard as an institution belonging to 'others'. Instead, they built organisations of their own. In Baku a Provisional Committee of Muslim Public Organizations was set up, headed by Ali Mardan bey Topchubashov, a lawyer and former member of the First Duma, with Mammad Amin Rasulzade among its leading figures. Similar Muslim National Councils appeared in Ganja and in district towns, where they functioned as a national government in miniature, organising meetings, collecting money, running schools and representing Muslims before the authorities. The Baku committee declared that the only acceptable form of government for Russia was a democratic republic.</p><p><strong>D</strong> The national programme took shape at a series of congresses. The Caucasian Muslim Congress, held in Baku from 15 to 20 April, called for universal free education in the Azerbaijani language, but its most important decisions were military: a census of Muslim military potential and the creation of bureaus to organise Muslim detachments. This mattered because Azerbaijanis, unlike Armenians and Georgians, had never been conscripted into the Russian army and therefore had almost no trained soldiers. A few weeks later, at the First All-Russian Muslim Congress in Moscow, some 900 delegates debated the future of Russia's Muslims. The Volga Tatars favoured a single Russia with cultural autonomy for all Muslims, whereas Rasulzade led those demanding territorial autonomy for each nation within a democratic federal republic. His resolution won by 446 votes to 271, establishing the idea that Azerbaijan was a distinct territorial nation rather than simply part of a wider Muslim community.</p><p><strong>E</strong> Political parties now operated openly. In June the Baku party Musavat merged with the Turkic Party of Federalists, founded in Ganja by Nasib bey Yusifbeyli, to form the Turkic Federalist Party Musavat. According to Tadeusz Swietochowski, the new party consisted of two distinct wings, a Left based in Baku and a Right based in Ganja, which disagreed on social questions, especially land, but were held together by secular Turkic nationalism. Not every group shared this vision. The Pan-Islamist party Ittihad opposed territorial autonomy because it would divide the Muslim community, and the socialist Hummat, led by Nariman Narimanov, rejected it as well.</p><p><strong>F</strong> Economic hardship formed the background to these developments. Between the outbreak of war and January 1917, prices rose by about 350 per cent, while wages increased by only about 200 per cent; in 1916 alone, meat became 142 per cent more expensive. Baku, which supplied most of Russia's oil, had a multinational population in which Azerbaijanis made up only about 21 per cent in 1913, and its skilled workforce was largely non-Azerbaijani. Strikes for an eight-hour day led to a collective agreement in May, and a general strike in the oil industry followed in September.</p><p><strong>G</strong> The strength of the national movement became evident at the ballot box. In the October elections to the Baku Soviet, Musavat received almost 10,000 of about 25,000 votes, roughly 40 per cent and more than any other party, while the Bolsheviks gained around 4,000. Kazemzadeh concluded that 'the national factor largely determined the way a person voted'. Yet Musavat chose not to enter the Soviet, which was left in the hands of the Bolsheviks and their allies, a decision Kazemzadeh calls 'a blunder for which they were destined to pay dearly'. In the Constituent Assembly elections held the following month, Musavat won about 63 per cent of the Muslim vote in Transcaucasia.</p><p><strong>H</strong> Most historians accept that the national idea reached the majority of Azerbaijanis in 1917, but they interpret its significance differently. Later Soviet writers portrayed Musavat as a 'counter-revolutionary' party of beks and khans, although the early Soviet author A. L. Popov admitted that it had stood on the positions of democracy and even socialism. Kazemzadeh regarded the whole period as 'only a prelude to greater struggles', while Swietochowski described it as 'the transition toward nationhood'. What is clear is that the goal remained autonomy within a federal Russia rather than independence; only the events of the following months would push the movement towards the independent republic proclaimed on 28 May 1918.</p>",
+   "groups": [
+    {
+     "range": [
+      27,
+      30
+     ],
+     "type": "mcq",
+     "instructions_html": "<p>Choose the correct letter, A, B, C or D.</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 27,
+       "prompt_html": "What does the passage say about OZAKOM?",
+       "options": [
+        {
+         "key": "A",
+         "text": "It was led by an Azerbaijani member of the Duma."
+        },
+        {
+         "key": "B",
+         "text": "It was set up by the Baku Soviet."
+        },
+        {
+         "key": "C",
+         "text": "It was unable to pass laws."
+        },
+        {
+         "key": "D",
+         "text": "Kazemzadeh considered it stronger than the viceroy."
+        }
+       ],
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>OZAKOM replaced the viceroy in civil administration but 'had no legislative power', i.e. it could not make laws. It was chaired by Kharlamov (not an Azerbaijani), was created by the Provisional Government (not the Soviet), and Kazemzadeh calls it weak.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Chaired by V. A. Kharlamov and composed of Duma members, among them the Azerbaijani Mammad Yusif Jafarov, it took over civil administration from the viceroy but had no legislative power.</p></blockquote>"
+      },
+      {
+       "number": 28,
+       "prompt_html": "Why were the military decisions of the Baku congress important?",
+       "options": [
+        {
+         "key": "A",
+         "text": "The Provisional Government had asked for Muslim troops."
+        },
+        {
+         "key": "B",
+         "text": "Azerbaijanis lacked soldiers with military training."
+        },
+        {
+         "key": "C",
+         "text": "Armenians and Georgians had refused to form national units."
+        },
+        {
+         "key": "D",
+         "text": "Many Azerbaijanis had already served in the Russian army."
+        }
+       ],
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The census and the bureaus for Muslim detachments mattered because Azerbaijanis had never been conscripted and so had almost no trained soldiers.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>This mattered because Azerbaijanis, unlike Armenians and Georgians, had never been conscripted into the Russian army and therefore had almost no trained soldiers.</p></blockquote>"
+      },
+      {
+       "number": 29,
+       "prompt_html": "At the Moscow congress, the Volga Tatars wanted",
+       "options": [
+        {
+         "key": "A",
+         "text": "full independence for every Muslim nation."
+        },
+        {
+         "key": "B",
+         "text": "a separate territory for each Muslim people."
+        },
+        {
+         "key": "C",
+         "text": "a federal republic led by Rasulzade."
+        },
+        {
+         "key": "D",
+         "text": "cultural rather than territorial self-government inside one Russia."
+        }
+       ],
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Volga Tatars favoured a single Russia with cultural autonomy for all Muslims; territorial autonomy was Rasulzade's position.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Volga Tatars favoured a single Russia with cultural autonomy for all Muslims, whereas Rasulzade led those demanding territorial autonomy for each nation within a democratic federal republic.</p></blockquote>"
+      },
+      {
+       "number": 30,
+       "prompt_html": "According to paragraph G, Musavat's refusal to join the Soviet",
+       "options": [
+        {
+         "key": "A",
+         "text": "allowed the Bolsheviks to take control of it."
+        },
+        {
+         "key": "B",
+         "text": "was a result of its disappointing election results."
+        },
+        {
+         "key": "C",
+         "text": "was praised by Kazemzadeh as a wise choice."
+        },
+        {
+         "key": "D",
+         "text": "helped it to win the Constituent Assembly elections."
+        }
+       ],
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>By staying out, Musavat left the Soviet to the Bolsheviks and their allies, and Kazemzadeh calls the decision a blunder they would pay for.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Yet Musavat chose not to enter the Soviet, which was left in the hands of the Bolsheviks and their allies, a decision Kazemzadeh calls 'a blunder for which they were destined to pay dearly'.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      31,
+      35
+     ],
+     "type": "summary_completion",
+     "instructions_html": "<p>Complete the summary below.</p><p>Choose NO MORE THAN TWO WORDS from the passage for each answer.</p>",
+     "content_html": "<p><strong>National organisations and parties in 1917</strong></p><p>Many Azerbaijanis saw the Baku Soviet as a body that belonged to other groups, so they formed their own organisations. In Baku, Topchubashov headed a committee of Muslim organisations, while in Ganja and smaller towns Muslim National Councils acted as a national government in {{31}}. In June, Musavat united with a party from Ganja; the resulting party had two {{32}} which disagreed about land but were bound together by secular Turkic {{33}}. Not everyone supported territorial autonomy: it was opposed both by Ittihad, a {{34}} party, and by the socialists of Hummat. All this took place against a background of economic hardship, as prices had risen far faster than {{35}} since the start of the war.</p>",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 31,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "miniature"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The councils in Ganja and the district towns worked as 'a national government in miniature', organising meetings, money, schools and representation.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Similar Muslim National Councils appeared in Ganja and in district towns, where they functioned as a national government in miniature, organising meetings, collecting money, running schools and representing Muslims before the authorities.</p></blockquote>"
+      },
+      {
+       "number": 32,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "wings",
+        "distinct wings"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Swietochowski says the new Musavat had two distinct wings, Baku (Left) and Ganja (Right), which disagreed on land.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>According to Tadeusz Swietochowski, the new party consisted of two distinct wings, a Left based in Baku and a Right based in Ganja, which disagreed on social questions, especially land, but were held together by secular Turkic nationalism.</p></blockquote>"
+      },
+      {
+       "number": 33,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "nationalism"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>'Bound together by' paraphrases 'held together by': the two wings were united by secular Turkic nationalism.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>According to Tadeusz Swietochowski, the new party consisted of two distinct wings, a Left based in Baku and a Right based in Ganja, which disagreed on social questions, especially land, but were held together by secular Turkic nationalism.</p></blockquote>"
+      },
+      {
+       "number": 34,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Pan-Islamist",
+        "pan-islamist",
+        "Pan Islamist"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Ittihad is described as the Pan-Islamist party that opposed territorial autonomy.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Pan-Islamist party Ittihad opposed territorial autonomy because it would divide the Muslim community, and the socialist Hummat, led by Nariman Narimanov, rejected it as well.</p></blockquote>"
+      },
+      {
+       "number": 35,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "wages"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Prices rose by about 350 per cent while wages rose by only about 200 per cent, so prices rose much faster than wages.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Between the outbreak of war and January 1917, prices rose by about 350 per cent, while wages increased by only about 200 per cent; in 1916 alone, meat became 142 per cent more expensive.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      36,
+      39
+     ],
+     "type": "tfng",
+     "instructions_html": "<p>Do the following statements agree with the information given in the Reading Passage?</p><p>TRUE if the statement agrees with the information</p><p>FALSE if the statement contradicts the information</p><p>NOT GIVEN if there is no information on this</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 36,
+       "prompt_html": "The Tsarist police remained active in Baku for some weeks after news of the revolution arrived.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage says that when the news arrived the police and the old administration 'simply disappeared', which contradicts the statement.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>When the news reached Baku and Tiflis in the first days of March, the police and the old administration simply disappeared, and Azerbaijanis enjoyed freedom of speech, of the press and of organisation for the first time.</p></blockquote>"
+      },
+      {
+       "number": 37,
+       "prompt_html": "Rasulzade had prepared his resolution together with the Bashkir delegates.",
+       "options": null,
+       "answer": [
+        "NOT GIVEN"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage says Rasulzade led the supporters of territorial autonomy and that his resolution won, but it does not say who helped him prepare it or mention Bashkir delegates.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Volga Tatars favoured a single Russia with cultural autonomy for all Muslims, whereas Rasulzade led those demanding territorial autonomy for each nation within a democratic federal republic.</p></blockquote>"
+      },
+      {
+       "number": 38,
+       "prompt_html": "In 1913 Azerbaijanis were a minority of the population of Baku.",
+       "options": null,
+       "answer": [
+        "TRUE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Azerbaijanis made up only about 21 per cent of Baku's population in 1913, i.e. a minority.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Baku, which supplied most of Russia's oil, had a multinational population in which Azerbaijanis made up only about 21 per cent in 1913, and its skilled workforce was largely non-Azerbaijani.</p></blockquote>"
+      },
+      {
+       "number": 39,
+       "prompt_html": "In the October elections to the Baku Soviet, the Bolsheviks won more than half as many votes as Musavat.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Musavat received almost 10,000 votes and the Bolsheviks around 4,000, which is less than half of Musavat's total.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In the October elections to the Baku Soviet, Musavat received almost 10,000 of about 25,000 votes, roughly 40 per cent and more than any other party, while the Bolsheviks gained around 4,000.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      40,
+      40
+     ],
+     "type": "mcq",
+     "instructions_html": "<p>Choose the correct letter, A, B, C or D.</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 40,
+       "prompt_html": "Which of the following is the most suitable title for this Reading Passage?",
+       "options": [
+        {
+         "key": "A",
+         "text": "How the Bolsheviks won the Baku Soviet elections of 1917"
+        },
+        {
+         "key": "B",
+         "text": "Revolution and the rise of the Azerbaijani national movement in 1917"
+        },
+        {
+         "key": "C",
+         "text": "The economic causes of the First World War in the Caucasus"
+        },
+        {
+         "key": "D",
+         "text": "The life and career of Ali Mardan bey Topchubashov"
+        }
+       ],
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage traces how, after the February Revolution, Azerbaijanis built their own organisations, congresses and parties, and how the national movement showed its strength. A is wrong (Musavat, not the Bolsheviks, came first); C and D are only details of single paragraphs.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The strength of the national movement became evident at the ballot box.</p></blockquote><blockquote><p>Most historians accept that the national idea reached the majority of Azerbaijanis in 1917, but they interpret its significance differently.</p></blockquote>"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

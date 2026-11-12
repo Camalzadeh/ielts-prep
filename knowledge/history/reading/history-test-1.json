@@ -1,0 +1,717 @@
+{
+ "id": "history-test-1",
+ "type": "reading",
+ "module": "academic",
+ "title": "History Reading Test 1 (Q13–Q15)",
+ "series": "History (Azerbaijan)",
+ "book": null,
+ "test_no": 1,
+ "source": "history",
+ "source_url": "",
+ "duration_minutes": 60,
+ "parts": [
+  {
+   "number": 1,
+   "title": "A Colony of the South: Tsarist Rule in Azerbaijan",
+   "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-13, which are based on Reading Passage 1 below.</em></p><p><strong>A</strong> Between 1801 and 1828 the Russian Empire extended its rule across the South Caucasus, and two treaties, Gulistan in 1813 and Turkmenchay in 1828, fixed a new frontier along the River Araz. About two-thirds of the Azerbaijani lands remained with Iran, while some half a million Azerbaijani-speaking Muslims passed for the first time under the rule of a European power. Whether the regime that followed deserves to be called colonial has long divided historians. Russia was a land empire, with no sea separating the centre from its possessions, and it was poorer than several of the territories it governed. Yet the word was used by Tsarist officials themselves. In an 1827 memorandum to Nicholas I, the finance minister Count Kankrin argued that Transcaucasia should be 'a colony producing the raw materials of a southern climate', and administrators studied French rule in Algeria as a model.</p><p><strong>B</strong> The conquest itself was violent. In January 1804 Russian troops stormed Ganja, killing its ruler, Javad khan, and renaming the city Elizavetpol. Other khanates, such as Karabakh, Shaki and Shirvan, at first accepted Russian protection through vassal treaties, but General Yermolov, commander in the Caucasus from 1816, distrusted the khans as pro-Iranian and removed them one by one: Shaki was absorbed in 1819, Shirvan in 1820 and Karabakh in 1822. In their place came the military-commandant system, under which Russian officers governed what were, in effect, 'khanates without khans', in which the commandant enjoyed almost the powers of a khan. Senators who inspected the region in 1834 reported that 'the rights, honour and property of hundreds of thousands of inhabitants depend on a commander's whim'.</p><p><strong>C</strong> Such conditions provoked a wave of uprisings: in Jar-Balakan in 1830, Talysh in 1831, Guba in 1837 and Shaki in 1838. The largest, in Guba, involved about 12,000 armed men inspired by Shamil, the imam of Dagestan. Although the revolts were local and uncoordinated, they pushed St Petersburg towards reform. The bureaucracy, however, was split between 'regionalists', who wanted slow change and respect for local customs, and 'integrationists', who demanded rapid centralisation. The integrationists won first. Baron Hahn's reform, in force from 1841, abolished the last traces of the khanates, introduced Russian law and dismissed native officials en masse. Because the new Russian officials did not know the language, they could not run the courts, and the experiment ended in chaos.</p><p><strong>D</strong> A different approach followed under Count Vorontsov, the first viceroy of the Caucasus, who arrived in 1845. Instead of Russification, he chose to co-opt the local elite. His rescript of December 1846 turned the beys and aghas into a hereditary landowning nobility, and their sons entered the civil service. The map was also redrawn: Shamakhi province, created in 1846, was renamed Baku province in 1859, when an earthquake led to the capital being moved, and Elizavetpol province followed in 1867. These borders did not follow ethnic lines, so many Azerbaijanis were left in the Irevan and Tiflis provinces. After Vorontsov retired in 1854, and especially under Alexander III, centralisation returned, and in 1882 the viceroyalty was abolished.</p><p><strong>E</strong> Economically, the region stagnated for decades, but the abolition in 1872 of the otkup, the state system of tax-farming oil wells, transformed Baku. Plots were now auctioned on long leases, and big capital arrived: the Nobel brothers in 1879, the Rothschilds in 1883 and several British firms. Output rose from about 1.5 million poods in 1872 to 671.5 million in 1901, roughly half of world production. Local people, however, gained little. In 1870 Azerbaijanis had owned 88 per cent of the wells; after 1872 their share was just 13 per cent, and they provided only 5 per cent of the money invested in the new leases.</p><p><strong>F</strong> The empire also reshaped the population. Article 15 of the Treaty of Turkmenchay allowed free migration, and Russia organised it: between 1828 and 1830 about 40,000 Armenians were resettled from Iran and some 84,000 from the Ottoman Empire, mainly into Irevan, Nakhchivan and Karabakh. From 1830 Russian religious dissenters, the Molokans and Dukhobors, were exiled to the region, German colonists had founded Helenendorf as early as 1819, and by 1913 Russian settlers held 44 villages and 20,000 desyatins of the best irrigated land in the Mugan steppe. The aim was a loyal Christian population on the borders with Iran and Turkey.</p><p><strong>G</strong> Legal and cultural discrimination completed the picture. Officially called 'Tatars', Muslims were regarded as unreliable. Under the City Statute of 1870 they could hold at most half of the seats on city councils, and from 1892 only one third, even in towns where they were the majority. No zemstvo, the elected rural assembly found in Russia, was ever introduced. The press was censored: the newspaper Akinchi was closed in 1877, and from 1891 to the early 1900s no Turkic periodical was permitted. Literacy remained at 4-5 per cent, and after the electoral law of 3 June 1907 Transcaucasian Muslims had a single deputy in the State Duma.</p><p><strong>H</strong> How historians interpret this record has shifted over time. Soviet scholars first called the conquest an absolute evil, then from the late 1930s a 'lesser evil', and from the 1950s stressed the 'progressive significance' of joining Russia. Post-Soviet Azerbaijani historians speak openly of colonial policy, while Western scholars such as Morrison and Kappeler argue that the term should be used carefully for the Caucasus. Swietochowski identifies 'the unmistakable features of colonialism', yet also points to a paradox. By abolishing the khanates and creating the Baku and Elizavetpol provinces, Russia unified Azerbaijani territory, and oil money and Russian schools produced the bourgeoisie and intelligentsia that founded the Azerbaijan Democratic Republic in 1918.</p>",
+   "groups": [
+    {
+     "range": [
+      1,
+      5
+     ],
+     "type": "matching_information",
+     "instructions_html": "<p>The Reading Passage has eight paragraphs, A-H.</p><p>Which paragraph contains the following information?</p><p>NB You may use any letter more than once.</p>",
+     "content_html": "",
+     "image": null,
+     "options": [
+      {
+       "key": "A",
+       "text": ""
+      },
+      {
+       "key": "B",
+       "text": ""
+      },
+      {
+       "key": "C",
+       "text": ""
+      },
+      {
+       "key": "D",
+       "text": ""
+      },
+      {
+       "key": "E",
+       "text": ""
+      },
+      {
+       "key": "F",
+       "text": ""
+      },
+      {
+       "key": "G",
+       "text": ""
+      },
+      {
+       "key": "H",
+       "text": ""
+      }
+     ],
+     "questions": [
+      {
+       "number": 1,
+       "prompt_html": "a reference to the overseas administration of another European state being examined as an example",
+       "options": null,
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph A says Russian administrators looked at how France ruled Algeria and used it as a model.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In an 1827 memorandum to Nicholas I, the finance minister Count Kankrin argued that Transcaucasia should be 'a colony producing the raw materials of a southern climate', and administrators studied French rule in Algeria as a model.</p></blockquote>"
+      },
+      {
+       "number": 2,
+       "prompt_html": "an explanation of why an attempt to impose a new legal system broke down",
+       "options": null,
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph C explains that Hahn's reform failed because the incoming Russian officials did not know the local language and so could not run the courts.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Because the new Russian officials did not know the language, they could not run the courts, and the experiment ended in chaos.</p></blockquote>"
+      },
+      {
+       "number": 3,
+       "prompt_html": "a contrast between the proportion of an industry held by local people before and after a reform",
+       "options": null,
+       "answer": [
+        "E"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph E compares the Azerbaijani share of oil wells in 1870 (88 per cent) with their share after the 1872 reform (13 per cent).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In 1870 Azerbaijanis had owned 88 per cent of the wells; after 1872 their share was just 13 per cent, and they provided only 5 per cent of the money invested in the new leases.</p></blockquote>"
+      },
+      {
+       "number": 4,
+       "prompt_html": "mention of a natural event that resulted in an administrative centre being relocated",
+       "options": null,
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph D says an earthquake led to the capital of Shamakhi province being moved, after which it was renamed Baku province.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The map was also redrawn: Shamakhi province, created in 1846, was renamed Baku province in 1859, when an earthquake led to the capital being moved, and Elizavetpol province followed in 1867.</p></blockquote>"
+      },
+      {
+       "number": 5,
+       "prompt_html": "a description of how one official interpretation of the past was replaced by another",
+       "options": null,
+       "answer": [
+        "H"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph H traces how Soviet historians moved from 'absolute evil' to 'lesser evil' and then to 'progressive significance'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Soviet scholars first called the conquest an absolute evil, then from the late 1930s a 'lesser evil', and from the 1950s stressed the 'progressive significance' of joining Russia.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      6,
+      10
+     ],
+     "type": "tfng",
+     "instructions_html": "<p>Do the following statements agree with the information given in the Reading Passage?</p><p>TRUE if the statement agrees with the information</p><p>FALSE if the statement contradicts the information</p><p>NOT GIVEN if there is no information on this</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 6,
+       "prompt_html": "Karabakh, Shaki and Shirvan were taken by military force before they had made any agreement with Russia.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage says these khanates first accepted Russian protection through vassal treaties and were only later abolished by Yermolov, so they did make agreements with Russia first.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Other khanates, such as Karabakh, Shaki and Shirvan, at first accepted Russian protection through vassal treaties, but General Yermolov, commander in the Caucasus from 1816, distrusted the khans as pro-Iranian and removed them one by one: Shaki was absorbed in 1819, Shirvan in 1820 and Karabakh in 1822.</p></blockquote>"
+      },
+      {
+       "number": 7,
+       "prompt_html": "The senators who inspected the region in 1834 recommended replacing the commandants with civilian governors.",
+       "options": null,
+       "answer": [
+        "NOT GIVEN"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage reports what the senators found (rule depended on a commander's whim), but it says nothing about any recommendation they made.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Senators who inspected the region in 1834 reported that 'the rights, honour and property of hundreds of thousands of inhabitants depend on a commander's whim'.</p></blockquote>"
+      },
+      {
+       "number": 8,
+       "prompt_html": "The rising in Guba was bigger than any of the other revolts of the 1830s.",
+       "options": null,
+       "answer": [
+        "TRUE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Guba uprising is described as 'the largest' of the four revolts, with about 12,000 armed men.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The largest, in Guba, involved about 12,000 armed men inspired by Shamil, the imam of Dagestan.</p></blockquote>"
+      },
+      {
+       "number": 9,
+       "prompt_html": "Vorontsov tried to make the local population adopt Russian culture.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage says Vorontsov chose co-optation of the local elite instead of Russification.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Instead of Russification, he chose to co-opt the local elite.</p></blockquote>"
+      },
+      {
+       "number": 10,
+       "prompt_html": "More Armenian settlers came from the Ottoman Empire than from Iran between 1828 and 1830.",
+       "options": null,
+       "answer": [
+        "TRUE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>About 84,000 Armenians came from the Ottoman Empire, compared with about 40,000 from Iran.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Article 15 of the Treaty of Turkmenchay allowed free migration, and Russia organised it: between 1828 and 1830 about 40,000 Armenians were resettled from Iran and some 84,000 from the Ottoman Empire, mainly into Irevan, Nakhchivan and Karabakh.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      11,
+      13
+     ],
+     "type": "summary_completion",
+     "instructions_html": "<p>Complete the summary below.</p><p>Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage for each answer.</p>",
+     "content_html": "<p><strong>Discrimination against Muslims</strong></p><p>In official usage, Muslims were referred to as {{11}} and were not trusted by the authorities. The City Statute of 1870 limited them to half of the seats on city councils, a proportion later reduced to a third. Unlike in Russia, no {{12}} was set up to give rural areas an elected body. Censorship was also strict: {{13}} was shut down in 1877, and for more than a decade from 1891 no Turkic periodical could appear.</p>",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 11,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Tatars",
+        "'Tatars'",
+        "the Tatars"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Muslims were 'officially called' Tatars; the summary paraphrases this as 'in official usage'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Officially called 'Tatars', Muslims were regarded as unreliable.</p></blockquote>"
+      },
+      {
+       "number": 12,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "zemstvo",
+        "a zemstvo",
+        "zemstvos"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>A zemstvo is defined in the passage as 'the elected rural assembly found in Russia', and it was never introduced.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>No zemstvo, the elected rural assembly found in Russia, was ever introduced.</p></blockquote>"
+      },
+      {
+       "number": 13,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Akinchi",
+        "the Akinchi",
+        "Akinchi newspaper"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The newspaper Akinchi was closed in 1877; 'shut down' paraphrases 'closed'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The press was censored: the newspaper Akinchi was closed in 1877, and from 1891 to the early 1900s no Turkic periodical was permitted.</p></blockquote>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "number": 2,
+   "title": "The Paradox of Empire: Russian Rule and the Azerbaijani Intelligentsia",
+   "passage_html": "<p><em>You should spend about 20 minutes on Questions 14-26, which are based on Reading Passage 2 below.</em></p><p><strong>A</strong> After the treaties of Gulistan in 1813 and Turkmenchay in 1828, northern Azerbaijan became part of the Russian Empire, while the south remained under Qajar Iran. Russian rule was, by most measures, colonial: the finance minister Kankrin described Transcaucasia as 'a colony producing the raw materials of a southern climate', and Muslims were treated as second-class subjects. Yet this rule had a paradoxical effect. The empire's own institutions, namely its civil service, schools, press, municipal government and oil economy, produced a secular, European-educated intelligentsia that turned these tools into instruments of national awakening. As the historian Swietochowski puts it, Russian rule 'prepared the Azerbaijani community in many ways for the rise of a national movement'. The intelligentsia, in other words, emerged both despite and because of colonial policy.</p><p><strong>B</strong> The first effects were territorial and religious. Within about fifteen years of the conquest Russia had abolished the khanates, and in 1867 the Azerbaijani lands were grouped into the Baku and Elizavetpol provinces, creating a territorial bloc that Azerbaijanis would later regard as the core of their homeland. The historian Shaffer stresses a second, less obvious change. Unlike Britain and France in the Arab world, Russia struck at the power of the clergy, confiscating much of their property, limiting the Sharia courts and closing many mosques and religious schools. This caused resentment, but it also released Azerbaijanis, earlier than most of the Muslim world, from the constraints of the traditional clerical establishment and made secular education possible.</p><p><strong>C</strong> The first generation of intellectuals were men who served the empire. Abbasgulu agha Bakikhanov, an army officer and translator, completed his history Gulistan-i Iram in 1841 and proposed a Russian-style school for Muslims. Mirza Fatali Akhundov, a translator in the viceroy's chancellery in Tiflis from 1834, wrote six comedies between 1850 and 1855, the first European-style plays in the Muslim world, campaigned for alphabet reform and attacked clerical power in his Letters of Kamal ud-Dawla (1865). Under Viceroy Vorontsov, sons of the landed gentry gained easy access to the civil service, so that, in Swietochowski's words, 'the 1840s witnessed the rise of an Azerbaijani class of professional bureaucrats'. Officials even encouraged writing in the local Turkic language in order to weaken Azerbaijani identification with Persia; Vorontsov himself called Akhundov the 'Tatar Moliere'.</p><p><strong>D</strong> Education became the main channel. From the 1830s Russo-Tatar state schools taught both Russian and Azerbaijani, and from 1879 the Azerbaijani section of the Gori Teachers' Seminary trained an entire generation of teachers, among them Mammadguluzadeh, Narimanov and Hajibeyli. For these men, Russian was not a means of assimilation but a gateway to European science, literature and political thought. The new schools, however, reached very few people. Overall literacy stayed at 4-5 per cent, and many parents boycotted Russian schools in the belief that they would lead to the Christianisation of their children.</p><p><strong>E</strong> The press and the stage gave the new elite a public voice. Hasan bey Zardabi, a graduate of Moscow University, staged Akhundov's comedy with school pupils in Baku in 1873, an event regarded as the birth of national theatre. Two years later he founded Akinchi, the first Turkic-language newspaper in Russia, which was written in plain spoken Azerbaijani rather than the Persian-influenced style of the literati. Shia clerics denounced it as an infidel invention, and it remained inaccessible to the mostly illiterate peasantry; the authorities closed it in 1877, during the Russo-Ottoman war. Yet after 1905 the press expanded rapidly: 63 newspapers and periodicals appeared between 1905 and 1917, and the satirical weekly Molla Nasreddin reached 5,000 copies.</p><p><strong>F</strong> Oil provided the money. The leasing reform of 1872 launched a boom that turned Baku from a town of 14,000 people in 1863 into a city of 206,000 by 1903, and in 1898 its oil output overtook that of the United States. Azerbaijanis lost most of their wells to Armenian, Russian and Western capital, but a handful of Muslim millionaires emerged and became patrons of national culture. The most generous, Haji Zeynalabdin Taghiyev, a former mason who was barely literate, built a theatre in 1883, opened the first Muslim girls' school in 1901 and owned several newspapers.</p><p><strong>G</strong> Discrimination, paradoxically, acted as a stimulus. Non-Christians were limited to half, and from 1892 to a third, of the seats on the Baku town council, no zemstvos were introduced, and Russian peasants were settled on the best land of the Mugan steppe. Because Muslims were denied full citizenship, Shaffer argues, cultural and political assimilation was unattainable, and the intelligentsia acquired a cause: equal rights, schooling in the mother tongue and self-government. Identity itself shifted in stages, from Muslim to Turkic to Azerbaijani. In 1891 an imaginary dialogue in the Tiflis journal Kashkul urged readers to call themselves 'Azerbaijani Turks', described by Swietochowski as the earliest recorded literary statement of a nascent national consciousness, while Ali bey Huseynzade later summed up his programme as 'Turkify, Islamize, Europeanize'.</p><p><strong>H</strong> The achievement should not be exaggerated. The intelligentsia was a tiny minority, the countryside remained attached to tradition, and many reformers accepted the Russian framework, seeking self-government within a liberalised empire rather than independence. Nevertheless, in May 1918 this elite founded the Azerbaijan Democratic Republic, the first republic in the Muslim East: a product of empire that had turned against empire.</p>",
+   "groups": [
+    {
+     "range": [
+      14,
+      18
+     ],
+     "type": "matching_features",
+     "instructions_html": "<p>Look at the following statements (Questions 14-18) and the list of people below.</p><p>Match each statement with the correct person, A-F.</p><p>NB You may use any letter more than once.</p>",
+     "content_html": "",
+     "image": null,
+     "options": [
+      {
+       "key": "A",
+       "text": "Abbasgulu agha Bakikhanov"
+      },
+      {
+       "key": "B",
+       "text": "Mirza Fatali Akhundov"
+      },
+      {
+       "key": "C",
+       "text": "Hasan bey Zardabi"
+      },
+      {
+       "key": "D",
+       "text": "Haji Zeynalabdin Taghiyev"
+      },
+      {
+       "key": "E",
+       "text": "Ali bey Huseynzade"
+      },
+      {
+       "key": "F",
+       "text": "Count Kankrin"
+      }
+     ],
+     "questions": [
+      {
+       "number": 14,
+       "prompt_html": "set up an educational institution for Muslim girls",
+       "options": null,
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Taghiyev 'opened the first Muslim girls' school in 1901'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The most generous, Haji Zeynalabdin Taghiyev, a former mason who was barely literate, built a theatre in 1883, opened the first Muslim girls' school in 1901 and owned several newspapers.</p></blockquote>"
+      },
+      {
+       "number": 15,
+       "prompt_html": "produced the earliest dramatic works of a Western type in the Muslim world",
+       "options": null,
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Akhundov wrote six comedies, 'the first European-style plays in the Muslim world'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Mirza Fatali Akhundov, a translator in the viceroy's chancellery in Tiflis from 1834, wrote six comedies between 1850 and 1855, the first European-style plays in the Muslim world, campaigned for alphabet reform and attacked clerical power in his Letters of Kamal ud-Dawla (1865).</p></blockquote>"
+      },
+      {
+       "number": 16,
+       "prompt_html": "wrote a historical work while serving the empire as a soldier",
+       "options": null,
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Bakikhanov was 'an army officer and translator' who completed his history Gulistan-i Iram in 1841.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Abbasgulu agha Bakikhanov, an army officer and translator, completed his history Gulistan-i Iram in 1841 and proposed a Russian-style school for Muslims.</p></blockquote>"
+      },
+      {
+       "number": 17,
+       "prompt_html": "launched a publication in the everyday language of ordinary people",
+       "options": null,
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Zardabi founded Akinchi, written 'in plain spoken Azerbaijani'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Two years later he founded Akinchi, the first Turkic-language newspaper in Russia, which was written in plain spoken Azerbaijani rather than the Persian-influenced style of the literati.</p></blockquote>"
+      },
+      {
+       "number": 18,
+       "prompt_html": "expressed his ideas in a three-part slogan",
+       "options": null,
+       "answer": [
+        "E"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Huseynzade summed up his programme as 'Turkify, Islamize, Europeanize', a three-part formula.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In 1891 an imaginary dialogue in the Tiflis journal Kashkul urged readers to call themselves 'Azerbaijani Turks', described by Swietochowski as the earliest recorded literary statement of a nascent national consciousness, while Ali bey Huseynzade later summed up his programme as 'Turkify, Islamize, Europeanize'.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      19,
+      22
+     ],
+     "type": "mcq",
+     "instructions_html": "<p>Choose the correct letter, A, B, C or D.</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 19,
+       "prompt_html": "According to Shaffer, Russia's policy towards the Muslim clergy",
+       "options": [
+        {
+         "key": "A",
+         "text": "followed the example set by Britain and France in the Arab world."
+        },
+        {
+         "key": "B",
+         "text": "was welcomed by most of the Muslim population."
+        },
+        {
+         "key": "C",
+         "text": "allowed secular schooling to develop sooner than in most Muslim societies."
+        },
+        {
+         "key": "D",
+         "text": "strengthened the role of traditional religious schools."
+        }
+       ],
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Shaffer says the policy freed Azerbaijanis from the clerical establishment 'earlier than most of the Muslim world' and made secular education possible. A is wrong (Russia acted unlike Britain and France), B is wrong (it caused resentment), D is wrong (religious schools were closed).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>This caused resentment, but it also released Azerbaijanis, earlier than most of the Muslim world, from the constraints of the traditional clerical establishment and made secular education possible.</p></blockquote>"
+      },
+      {
+       "number": 20,
+       "prompt_html": "Why did Tsarist officials encourage writing in the local Turkic language?",
+       "options": [
+        {
+         "key": "A",
+         "text": "to make it easier to teach Russian in schools"
+        },
+        {
+         "key": "B",
+         "text": "to reduce the population's sense of connection with Persia"
+        },
+        {
+         "key": "C",
+         "text": "to help Akhundov's comedies reach a wider audience"
+        },
+        {
+         "key": "D",
+         "text": "to win the support of the Muslim clergy"
+        }
+       ],
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The officials wanted to weaken the link Azerbaijanis felt with Persia.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Officials even encouraged writing in the local Turkic language in order to weaken Azerbaijani identification with Persia; Vorontsov himself called Akhundov the 'Tatar Moliere'.</p></blockquote>"
+      },
+      {
+       "number": 21,
+       "prompt_html": "What does the writer say about the newspaper Akinchi?",
+       "options": [
+        {
+         "key": "A",
+         "text": "It was condemned by religious leaders."
+        },
+        {
+         "key": "B",
+         "text": "It was widely read in rural areas."
+        },
+        {
+         "key": "C",
+         "text": "It imitated the literary style of Persian writers."
+        },
+        {
+         "key": "D",
+         "text": "It continued publishing until the revolution of 1905."
+        }
+       ],
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Shia clerics 'denounced it as an infidel invention', i.e. religious leaders condemned it. B is contradicted (it was inaccessible to illiterate peasants), C is wrong (it used plain Azerbaijani, not a Persian style), D is wrong (it was closed in 1877).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Shia clerics denounced it as an infidel invention, and it remained inaccessible to the mostly illiterate peasantry; the authorities closed it in 1877, during the Russo-Ottoman war.</p></blockquote>"
+      },
+      {
+       "number": 22,
+       "prompt_html": "What is the main point of paragraph G?",
+       "options": [
+        {
+         "key": "A",
+         "text": "Russian settlers took most of the land in Azerbaijan."
+        },
+        {
+         "key": "B",
+         "text": "Muslims eventually won equal representation on the Baku council."
+        },
+        {
+         "key": "C",
+         "text": "Educated Azerbaijanis gradually adopted a Russian identity."
+        },
+        {
+         "key": "D",
+         "text": "Unequal treatment gave educated Azerbaijanis political goals."
+        }
+       ],
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph G argues that discrimination made assimilation impossible and so gave the intelligentsia a political cause; the identity shift is presented as part of this process.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Because Muslims were denied full citizenship, Shaffer argues, cultural and political assimilation was unattainable, and the intelligentsia acquired a cause: equal rights, schooling in the mother tongue and self-government.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      23,
+      26
+     ],
+     "type": "sentence_completion",
+     "instructions_html": "<p>Complete the sentences below.</p><p>Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage for each answer.</p>",
+     "content_html": "<ul><li>A whole generation of teachers was trained in the Azerbaijani section of a seminary in {{23}}.</li><li>Some parents kept their children away from Russian schools because they feared {{24}}.</li><li>By the end of the 1890s, Baku was producing more oil than {{25}}.</li><li>In 1891 a journal suggested that its readers should describe themselves as {{26}}.</li></ul>",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 23,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Gori"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Azerbaijani section of the Gori Teachers' Seminary 'trained an entire generation of teachers'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>From the 1830s Russo-Tatar state schools taught both Russian and Azerbaijani, and from 1879 the Azerbaijani section of the Gori Teachers' Seminary trained an entire generation of teachers, among them Mammadguluzadeh, Narimanov and Hajibeyli.</p></blockquote>"
+      },
+      {
+       "number": 24,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Christianisation",
+        "Christianization",
+        "the Christianisation"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Parents boycotted Russian schools believing they would lead to the Christianisation of their children.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Overall literacy stayed at 4-5 per cent, and many parents boycotted Russian schools in the belief that they would lead to the Christianisation of their children.</p></blockquote>"
+      },
+      {
+       "number": 25,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "United States",
+        "the United States",
+        "USA",
+        "the USA",
+        "US",
+        "the US"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>In 1898 Baku's oil output 'overtook that of the United States'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The leasing reform of 1872 launched a boom that turned Baku from a town of 14,000 people in 1863 into a city of 206,000 by 1903, and in 1898 its oil output overtook that of the United States.</p></blockquote>"
+      },
+      {
+       "number": 26,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Azerbaijani Turks",
+        "Azerbaijani Turk"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Kashkul dialogue urged readers to call themselves 'Azerbaijani Turks'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In 1891 an imaginary dialogue in the Tiflis journal Kashkul urged readers to call themselves 'Azerbaijani Turks', described by Swietochowski as the earliest recorded literary statement of a nascent national consciousness, while Ali bey Huseynzade later summed up his programme as 'Turkify, Islamize, Europeanize'.</p></blockquote>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "number": 3,
+   "title": "The 'Tatar Molière': Mirza Fatali Akhundov and the Modernisation of the Muslim World",
+   "passage_html": "<p><em>You should spend about 20 minutes on Questions 27-40, which are based on Reading Passage 3 below.</em></p><p><strong>A</strong> In the nineteenth century the Muslim world found itself confronting the military, economic and technological power of Europe. The historian Mehrdad Kia draws a sharp contrast here: in Western Europe, nationalism and modernism grew out of internal social change, whereas in the Muslim Middle East they emerged as a response to an external threat. Most reformers of the age, such as the Ottoman Tanzimat statesmen or Jamal ad-Din al-Afghani, sought to modernise within the framework of Islam. Mirza Fatali Akhundov (1812-1878) went much further. In Kia's words, he made 'the first genuine attempt by a Muslim intellectual to articulate a systematic critique of Islamic culture and political traditions'.</p><p><strong>B</strong> Akhundov was born in Nukha (Shaki) and brought up by his mother's uncle, Akhund Hajji Alasgar, who taught him the Qur'an, Arabic and Persian and intended him for a career in the Shia clergy. That plan collapsed in Ganja in 1832-33, when the poet Mirza Shafi Vazeh asked the young student why he wished to become 'a hypocrite and a charlatan'. Akhundov later recalled that this encounter had lifted the curtain of ignorance from his eyes. In 1834 he moved to Tiflis and became a translator of Oriental languages in the viceroy's chancellery. He was promoted to chief translator in 1841 and eventually held the rank of colonel, although, as Kia points out, he never fought in any military campaign.</p><p><strong>C</strong> Tiflis, the administrative and intellectual capital of Transcaucasia, proved decisive for his development. There he mixed with exiled Russian Decembrists, the Georgian poet Aleksandr Chavchavadze, the Armenian writer Khachatur Abovyan and the playwright Giorgi Eristavi, whose comedies inspired his own. He also read widely in European thought, including Voltaire, Hume and John Stuart Mill, and by the mid-1840s, according to Kia, he had become 'philosophically a convinced materialist'. Brenda Shaffer adds that geography mattered too: because he lived in Tiflis, beyond the reach of the Iranian clergy, he could write more radically than anyone inside Iran.</p><p><strong>D</strong> His first instrument of reform was the stage. Between 1850 and 1855 he wrote six comedies in Azerbaijani Turkic, the first European-style plays in the Muslim East, which ridicule superstition, quackery, greed, corrupt officials and arbitrary khans. In one of them, the women of a family hire a dervish to destroy Paris by magic; when news of the 1848 revolution arrives, they are convinced that the spell has worked. The Russian viceroy Vorontsov, a patron of the theatre, called him the 'Tatar Molière'. For Akhundov, drama had an explicitly moral purpose: to educate a largely illiterate public through the spoken word.</p><p><strong>E</strong> Mass literacy, he believed, was blocked by the Arabic script, in which many letters differ only by dots and short vowels are not written. As a child he had needed three to four years simply to learn to read. In 1857 he proposed a reformed Arabic alphabet, and in 1863 he took the project to Istanbul, where he presented it to the Ottoman Scientific Society. The Society agreed that the script was defective and that reform did not contradict Islam, but it raised practical objections, the most important concerning printing. Tehran was even less receptive, replying that the Arabic script was 'the best and most beautiful' and needed no change. By about 1872 Akhundov had lost patience with half-measures and was calling for the complete replacement of the Arabic script with the Latin alphabet, a step that Azerbaijan and Turkey took only in the 1920s.</p><p><strong>F</strong> His political programme is set out most fully in the Letters of Kamal ud-Dawla, usually dated 1865. Composed in Persian, it takes the form of letters from a fictional Indian prince to a Persian prince, a device that allowed a tsarist official to criticise Iran and Islam without speaking in his own name. The Qajar shah appears as an ignorant despot and the Shia clergy as guardians of ignorance. The work condemns cruel punishments and the absence of a written legal code, insisting that the ruler must become the servant of the people under a constitution and a parliament. It also rejects the veil and polygamy, and calls for a 'Protestantism of Islam', a reformation comparable to the one Europe had experienced. Too dangerous to print, the treatise circulated in manuscript copies. The fact that the scholar E. G. Browne later attributed it to another writer, Mirza Aqa Khan Kermani, shows how widely it was read in Iran.</p><p><strong>G</strong> His influence was felt on both sides of the Araz. In Iran, friends and followers such as Malkum Khan, Kermani and Talibov spread his ideas, which, according to Shaffer, had an important impact on the Constitutional Revolution of 1905-1911. In Azerbaijan, students in Baku led by Hasan bey Zardabi and Najaf bey Vazirov staged The Vizier of the Lankaran Khan on 10 March 1873, the date now regarded as the birth of the national theatre. Swietochowski notes, however, that the plays were at first 'too radical' for their intended audience.</p><p><strong>H</strong> Historians have not been uncritical. Kia regards him as a revolutionary in his total rejection of tradition, yet calls him 'a thinker who lacked originality', faulting him for idealising pre-Islamic Iran, for his hostility towards Arabs and for assuming that European institutions could be copied mechanically. Soviet scholars portrayed him as a 'revolutionary democrat' and atheist, an image that is not false but which played down his Persian dimension and his loyalty to the tsarist state. Swietochowski, for his part, highlights the paradox of an official of 'impeccable loyalty' who described himself as 'almost Persian'. Whatever his limitations, much of his programme, including the Latin alphabet, secular schooling, women's rights and a national theatre, was realised in Azerbaijan in the twentieth century.</p>",
+   "groups": [
+    {
+     "range": [
+      27,
+      31
+     ],
+     "type": "matching_information",
+     "instructions_html": "<p>The Reading Passage has 8 paragraphs, A-H.</p><p>Which paragraph contains the following information?</p><p>NB You may use any letter more than once.</p>",
+     "content_html": "",
+     "image": null,
+     "options": [
+      {
+       "key": "A",
+       "text": ""
+      },
+      {
+       "key": "B",
+       "text": ""
+      },
+      {
+       "key": "C",
+       "text": ""
+      },
+      {
+       "key": "D",
+       "text": ""
+      },
+      {
+       "key": "E",
+       "text": ""
+      },
+      {
+       "key": "F",
+       "text": ""
+      },
+      {
+       "key": "G",
+       "text": ""
+      },
+      {
+       "key": "H",
+       "text": ""
+      }
+     ],
+     "questions": [
+      {
+       "number": 27,
+       "prompt_html": "an account of characters who mistake a coincidence for the success of a supernatural act",
+       "options": null,
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph D describes the comedy in which the women hire a dervish to destroy Paris by magic and then believe the news of the 1848 revolution proves the spell worked.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>when news of the 1848 revolution arrives, they are convinced that the spell has worked</p></blockquote>"
+      },
+      {
+       "number": 28,
+       "prompt_html": "a reference to how long it took Akhundov to acquire a basic skill",
+       "options": null,
+       "answer": [
+        "E"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph E states that as a child he needed three to four years to learn to read (the basic skill).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>As a child he had needed three to four years simply to learn to read.</p></blockquote>"
+      },
+      {
+       "number": 29,
+       "prompt_html": "an explanation of why Akhundov's place of residence gave him greater freedom of expression",
+       "options": null,
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph C reports Shaffer's view that living in Tiflis, outside the Iranian clergy's reach, let him write more radically.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>because he lived in Tiflis, beyond the reach of the Iranian clergy, he could write more radically than anyone inside Iran</p></blockquote>"
+      },
+      {
+       "number": 30,
+       "prompt_html": "evidence that a text reached a wide readership even though it was never printed",
+       "options": null,
+       "answer": [
+        "F"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F says the treatise circulated only in manuscript, yet Browne's misattribution shows it was widely read in Iran.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The fact that the scholar E. G. Browne later attributed it to another writer, Mirza Aqa Khan Kermani, shows how widely it was read in Iran.</p></blockquote>"
+      },
+      {
+       "number": 31,
+       "prompt_html": "a contrast between the ways two regions came to adopt new political ideas",
+       "options": null,
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph A gives Kia's contrast: in Western Europe nationalism and modernism grew from internal change, in the Muslim Middle East as a response to an external threat.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The historian Mehrdad Kia draws a sharp contrast here: in Western Europe, nationalism and modernism grew out of internal social change, whereas in the Muslim Middle East they emerged as a response to an external threat.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      32,
+      36
+     ],
+     "type": "tfng",
+     "instructions_html": "<p>Do the following statements agree with the information given in the Reading Passage?</p><p>TRUE if the statement agrees with the information</p><p>FALSE if the statement contradicts the information</p><p>NOT GIVEN if there is no information on this</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 32,
+       "prompt_html": "The relative who raised Akhundov wanted him to pursue a religious career.",
+       "options": null,
+       "answer": [
+        "TRUE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Hajji Alasgar, his mother's uncle, intended him for a career in the Shia clergy; this agrees with the statement.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Akhundov was born in Nukha (Shaki) and brought up by his mother's uncle, Akhund Hajji Alasgar, who taught him the Qur'an, Arabic and Persian and intended him for a career in the Shia clergy.</p></blockquote>"
+      },
+      {
+       "number": 33,
+       "prompt_html": "Akhundov's military rank reflected his experience in the field.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Although he reached the rank of colonel, the passage says he never fought in any military campaign, so the rank did not come from field experience.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>He was promoted to chief translator in 1841 and eventually held the rank of colonel, although, as Kia points out, he never fought in any military campaign.</p></blockquote>"
+      },
+      {
+       "number": 34,
+       "prompt_html": "Akhundov's comedies were performed in Istanbul during his visit in 1863.",
+       "options": null,
+       "answer": [
+        "NOT GIVEN"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage mentions the 1863 visit only in connection with the alphabet project presented to the Ottoman Scientific Society; it says nothing about any performance of his plays there.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In 1857 he proposed a reformed Arabic alphabet, and in 1863 he took the project to Istanbul, where he presented it to the Ottoman Scientific Society.</p></blockquote>"
+      },
+      {
+       "number": 35,
+       "prompt_html": "The Ottoman Scientific Society rejected Akhundov's proposal on religious grounds.",
+       "options": null,
+       "answer": [
+        "FALSE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Society agreed that reform did not contradict Islam; its objections were practical (printing), not religious.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Society agreed that the script was defective and that reform did not contradict Islam, but it raised practical objections, the most important concerning printing.</p></blockquote>"
+      },
+      {
+       "number": 36,
+       "prompt_html": "Akhundov used an invented narrator so that he would not have to voice his criticisms openly.",
+       "options": null,
+       "answer": [
+        "TRUE"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The letters are written by a fictional Indian prince, a device that let Akhundov criticise Iran and Islam without speaking in his own name.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Composed in Persian, it takes the form of letters from a fictional Indian prince to a Persian prince, a device that allowed a tsarist official to criticise Iran and Islam without speaking in his own name.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      37,
+      39
+     ],
+     "type": "summary_completion",
+     "instructions_html": "<p>Complete the summary below.</p><p>Choose NO MORE THAN TWO WORDS from the passage for each answer.</p>",
+     "content_html": "<p><strong>Akhundov's legacy and reputation</strong></p><p>Akhundov's ideas were carried into Iran by figures such as Malkum Khan and are said to have influenced the {{37}} that took place there early in the twentieth century. In Azerbaijan, a student production of one of his comedies in 1873 is seen as the beginning of the {{38}}, although his plays were initially considered too radical by audiences. Later judgements have been mixed. Kia praises his complete break with tradition but argues that he showed little {{39}}, pointing to his romantic view of pre-Islamic Iran and his belief that European institutions could simply be copied.</p>",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 37,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Constitutional Revolution",
+        "the Constitutional Revolution"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Shaffer says his ideas had an important impact on the Constitutional Revolution of 1905-1911, i.e. early in the twentieth century in Iran.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In Iran, friends and followers such as Malkum Khan, Kermani and Talibov spread his ideas, which, according to Shaffer, had an important impact on the Constitutional Revolution of 1905-1911.</p></blockquote>"
+      },
+      {
+       "number": 38,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "national theatre",
+        "national theater"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The 1873 Baku performance by students is regarded as the birth (beginning) of the national theatre.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In Azerbaijan, students in Baku led by Hasan bey Zardabi and Najaf bey Vazirov staged The Vizier of the Lankaran Khan on 10 March 1873, the date now regarded as the birth of the national theatre.</p></blockquote>"
+      },
+      {
+       "number": 39,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "originality"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Kia calls him 'a thinker who lacked originality'; 'showed little originality' paraphrases this.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Kia regards him as a revolutionary in his total rejection of tradition, yet calls him 'a thinker who lacked originality', faulting him for idealising pre-Islamic Iran, for his hostility towards Arabs and for assuming that European institutions could be copied mechanically.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      40,
+      40
+     ],
+     "type": "mcq",
+     "instructions_html": "<p>Choose the correct letter, A, B, C or D.</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 40,
+       "prompt_html": "Which of the following is the most suitable title for this Reading Passage?",
+       "options": [
+        {
+         "key": "A",
+         "text": "A playwright and reformer: Akhundov's critique of tradition and its legacy"
+        },
+        {
+         "key": "B",
+         "text": "Why the Arabic script was abandoned across the Muslim world"
+        },
+        {
+         "key": "C",
+         "text": "The Russian exiles who shaped literary life in Tiflis"
+        },
+        {
+         "key": "D",
+         "text": "How the Qajar shahs modernised Iran in the nineteenth century"
+        }
+       ],
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage follows Akhundov's reforms (comedies, alphabet reform, the Letters of Kamal ud-Dawla), his influence in Iran and Azerbaijan, and how historians judge him. B is not stated (his alphabet project was a proposal); C is only one detail of paragraph C; D is wrong, as the shah is a target of his criticism.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Mirza Fatali Akhundov (1812-1878) went much further.</p></blockquote><blockquote><p>His influence was felt on both sides of the Araz.</p></blockquote>"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

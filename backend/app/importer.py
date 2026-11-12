@@ -145,9 +145,11 @@ def _data_files(pattern: str) -> list[Path]:
 
 # --------------------------------------------------------------------------- tests
 def import_tests(conn: sqlite3.Connection, errors: list[str]) -> int:
-    # downloaded Cambridge tests, plus (this branch) the History reading tests kept with the History notes
-    paths = [p for base in (db.CONTENT_DIR / "tests", db.KNOWLEDGE_DIR / "history" / "reading") if base.is_dir()
-             for p in sorted(base.rglob("*.json"))]
+    # downloaded Cambridge tests, plus (this branch) the History reading tests kept with the History notes:
+    # only the built files at the top of knowledge/history/reading (tools/build_history_reading.py), not passages/
+    history = db.KNOWLEDGE_DIR / "history" / "reading"
+    paths = (sorted((db.CONTENT_DIR / "tests").rglob("*.json")) if (db.CONTENT_DIR / "tests").is_dir() else []) \
+        + (sorted(history.glob("*.json")) if history.is_dir() else [])
     if not paths:
         return 0
     n = 0

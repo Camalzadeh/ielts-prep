@@ -1,0 +1,273 @@
+{
+ "id": "history-q20-reading",
+ "type": "reading",
+ "module": "academic",
+ "title": "History Reading Q20 — The Muslim faction in the Seym; Trabzon and Batum",
+ "series": "History (Azerbaijan)",
+ "book": null,
+ "test_no": 20,
+ "source": "history",
+ "source_url": "",
+ "duration_minutes": 20,
+ "parts": [
+  {
+   "number": 1,
+   "title": "From Faction to State: Azerbaijani Deputies in the Transcaucasian Seym",
+   "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-13, which are based on the Reading Passage below.</em></p><p><strong>A</strong> Between February and May 1918, Transcaucasia changed from a province of a collapsing Russia into three separate republics, and the Muslim deputies of the Transcaucasian Seym played a central part in this transformation. The Seym itself was an improvisation. The regional leaders in Tiflis had hoped that the All-Russian Constituent Assembly would restore a democratic Russia, but when the Bolsheviks dispersed it in January 1918, they decided to set up a parliament of their own. No new elections were held. Instead, the Transcaucasian results of the Constituent Assembly elections were reused, and the number of votes needed to win a seat was cut to one third, so that every party sent roughly three times as many deputies as before.</p><p><strong>B</strong> The Seym opened in Tiflis on 10 (23) February 1918 under the Georgian Menshevik Nikolay Chkheidze. Although about ten parties were represented, Kazemzadeh, the Western historian who wrote the standard account in 1951, observed that 'in reality it was composed of the representatives of the three major ethnic groups'. The Georgian Mensheviks and Musavat held about 30 seats each and the Armenian Dashnaktsutyun 27. Together with the Muslim Socialist Bloc, Hummat and Ittihad, the Muslim faction numbered 44 deputies, led by figures such as Mammad Amin Rasulzade, Fatali khan Khoyski, Nasib bey Yusifbeyli and Mammad Hasan Hajinski. The Bolsheviks boycotted the new parliament.</p><p><strong>C</strong> Questions of war and peace dominated the Seym from the outset, and on these the Muslim deputies took a distinctive line. On 1 March they joined a unanimous vote that peace should be made with Turkey on the basis of the 1914 borders. Two days later, however, Soviet Russia signed the Treaty of Brest-Litovsk, which handed Kars, Ardahan and Batum to the Ottoman Empire. The Georgian and Armenian majority refused to recognise the treaty, but Khoyski pointed out the inconsistency of acting as part of Russia one day and rejecting a Russian treaty the next. When news of the March massacres in Baku reached the Seym, Rasulzade demanded immediate help for the city and threatened a Muslim boycott. In mid-April, as the Seym voted for war with Turkey, Shafi bey Rustambeyli declared that Azerbaijanis would not fight their co-religionists, and the Musavat benches stayed empty until midnight.</p><p><strong>D</strong> Peace talks had opened at Trabzon on 14 March. The Transcaucasian delegation, headed by the Georgian Akaki Chkhenkeli, included Hajinski among its Muslim members, while the Ottoman side, led by Rauf Bey, insisted on the Brest-Litovsk terms. On 20 March the Ottomans called on Transcaucasia to proclaim its independence, arguing that a territory which had been part of Russia when the treaty was signed had no legal ground to reject it, a position Kazemzadeh considers 'legally correct'. Each nationality had its own priority: the Georgians would not give up Batum, the Armenians would not surrender Kars, and the Azerbaijanis wanted peace and independence. Chkhenkeli accepted Brest-Litovsk on 10 April, but Tiflis recalled the delegation and declared war; Hajinski kept negotiating with the Ottomans regardless. Batum soon fell, and on 22 April the Seym proclaimed the Transcaucasian Democratic Federative Republic, in whose cabinet Azerbaijanis received five posts.</p><p><strong>E</strong> The federation lasted barely a month. At the Batum conference, which opened on 11 May, the Ottoman delegation under Halil Bey and Vehib Pasha demanded more than Brest-Litovsk had given, including Akhaltsikhe, Akhalkalaki and Alexandropol. The German general von Lossow, who attended as an observer, offered mediation, an idea the Armenian delegates welcomed. Hajinski objected, arguing that a few territorial concessions would not hurt Transcaucasia, and an Armenian delegate openly accused him of passing information to the Turks. On 21 May Azerbaijani leaders proposed that, if the federation collapsed, they would accept at least a 'dual state' with Georgia, but the Georgians refused and secretly reached an agreement with Germany instead. On 26 May Georgia declared independence and the Seym dissolved itself.</p><p><strong>F</strong> The Muslim faction moved quickly. On 27 May its 44 deputies formed the Azerbaijani National Council, with Rasulzade as chairman, and the next day the Council adopted the Declaration of Independence. This proclaimed a democratic republic that guaranteed civil and political rights to all citizens regardless of nationality, religion, social position or sex. Khoyski formed the first government, and nearly all its ministers had sat in the Seym's Muslim faction. On 4 June Rasulzade and Hajinski signed the Treaty of Batum with the Ottoman Empire. Its fourth article promised Ottoman military assistance on request, which became the legal basis for the Caucasian Islamic Army that liberated Baku on 15 September 1918. In mid-June, after the Georgian government asked the Azerbaijani bodies to leave Tiflis, the government moved to Ganja, its temporary capital.</p><p><strong>G</strong> Historians remain divided over how to judge the faction's conduct. Kazemzadeh, whose account draws on Georgian émigré sources, argued that the Azerbaijanis were 'closer to the enemy than to the state of which they formed a part'. Yet he also acknowledged that their motive was Baku rather than religion, noting that Shiite Azerbaijanis had fought Sunni Ottomans for centuries. Swietochowski saw the deputies as pragmatists who needed an outside protector after the Baku massacres, while Azerbaijani historians regard the Seym as the school of national parliamentarism from which the first parliamentary republic in the Muslim East emerged.</p>",
+   "groups": [
+    {
+     "range": [
+      1,
+      4
+     ],
+     "type": "mcq",
+     "instructions_html": "<p>Choose the correct letter, A, B, C or D.</p>",
+     "content_html": "",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 1,
+       "prompt_html": "How were the members of the Seym chosen?",
+       "options": [
+        {
+         "key": "A",
+         "text": "through special elections held across Transcaucasia"
+        },
+        {
+         "key": "B",
+         "text": "by appointment by the leaders of the Bolshevik government"
+        },
+        {
+         "key": "C",
+         "text": "on the basis of earlier election results, with fewer votes needed per seat"
+        },
+        {
+         "key": "D",
+         "text": "by agreement between the national councils of the three main groups"
+        }
+       ],
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>No new elections were held: the earlier Constituent Assembly results were reused and the quota of votes per seat was cut to one third (= a lower quota). A is contradicted; B and D are not mentioned.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Instead, the Transcaucasian results of the Constituent Assembly elections were reused, and the number of votes needed to win a seat was cut to one third, so that every party sent roughly three times as many deputies as before.</p></blockquote>"
+      },
+      {
+       "number": 2,
+       "prompt_html": "What point did Khoyski make in the Seym debate on Brest-Litovsk?",
+       "options": [
+        {
+         "key": "A",
+         "text": "The Seym should declare war on the Ottoman Empire."
+        },
+        {
+         "key": "B",
+         "text": "The Seym's attitude towards Russia was contradictory."
+        },
+        {
+         "key": "C",
+         "text": "Kars and Ardahan should remain part of Transcaucasia."
+        },
+        {
+         "key": "D",
+         "text": "The 1914 borders were no longer a realistic basis for peace."
+        }
+       ],
+       "answer": [
+        "B"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Khoyski criticised the inconsistency of behaving as part of Russia and then rejecting Russia's treaty, i.e. a contradictory attitude towards Russia.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Georgian and Armenian majority refused to recognise the treaty, but Khoyski pointed out the inconsistency of acting as part of Russia one day and rejecting a Russian treaty the next.</p></blockquote>"
+      },
+      {
+       "number": 3,
+       "prompt_html": "At Trabzon, the Ottoman delegation argued that Transcaucasia",
+       "options": [
+        {
+         "key": "A",
+         "text": "should remain a province of Russia."
+        },
+        {
+         "key": "B",
+         "text": "should accept German mediation."
+        },
+        {
+         "key": "C",
+         "text": "should return Batum to Georgia."
+        },
+        {
+         "key": "D",
+         "text": "had no legal right to reject the Treaty of Brest-Litovsk."
+        }
+       ],
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Ottomans said a territory that had been part of Russia when Brest-Litovsk was signed had no legal ground to reject it. Kazemzadeh calls this 'legally correct'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>On 20 March the Ottomans called on Transcaucasia to proclaim its independence, arguing that a territory which had been part of Russia when the treaty was signed had no legal ground to reject it, a position Kazemzadeh considers 'legally correct'.</p></blockquote>"
+      },
+      {
+       "number": 4,
+       "prompt_html": "What did the fourth article of the Treaty of Batum provide for?",
+       "options": [
+        {
+         "key": "A",
+         "text": "Ottoman military support if Azerbaijan asked for it"
+        },
+        {
+         "key": "B",
+         "text": "the transfer of Ganja to Ottoman control"
+        },
+        {
+         "key": "C",
+         "text": "a common state of Azerbaijan and Georgia"
+        },
+        {
+         "key": "D",
+         "text": "the recognition of Georgian independence"
+        }
+       ],
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Article 4 promised Ottoman military assistance 'on request', which later became the legal basis for the Caucasian Islamic Army.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Its fourth article promised Ottoman military assistance on request, which became the legal basis for the Caucasian Islamic Army that liberated Baku on 15 September 1918.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      5,
+      9
+     ],
+     "type": "matching_features",
+     "instructions_html": "<p>Look at the following statements (Questions 5-9) and the list of people below.</p><p>Match each statement with the correct person, A-F.</p><p>NB You may use any letter more than once.</p>",
+     "content_html": "",
+     "image": null,
+     "options": [
+      {
+       "key": "A",
+       "text": "Mammad Amin Rasulzade"
+      },
+      {
+       "key": "B",
+       "text": "Fatali khan Khoyski"
+      },
+      {
+       "key": "C",
+       "text": "Mammad Hasan Hajinski"
+      },
+      {
+       "key": "D",
+       "text": "Shafi bey Rustambeyli"
+      },
+      {
+       "key": "E",
+       "text": "Nikolay Chkheidze"
+      },
+      {
+       "key": "F",
+       "text": "Akaki Chkhenkeli"
+      }
+     ],
+     "questions": [
+      {
+       "number": 5,
+       "prompt_html": "presided over the regional parliament when it first met",
+       "options": null,
+       "answer": [
+        "E"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Seym opened under the Georgian Menshevik Nikolay Chkheidze.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The Seym opened in Tiflis on 10 (23) February 1918 under the Georgian Menshevik Nikolay Chkheidze.</p></blockquote>"
+      },
+      {
+       "number": 6,
+       "prompt_html": "announced that his community would not take up arms against people of the same faith",
+       "options": null,
+       "answer": [
+        "D"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Rustambeyli declared that Azerbaijanis would not fight their co-religionists (= people of the same faith).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In mid-April, as the Seym voted for war with Turkey, Shafi bey Rustambeyli declared that Azerbaijanis would not fight their co-religionists, and the Musavat benches stayed empty until midnight.</p></blockquote>"
+      },
+      {
+       "number": 7,
+       "prompt_html": "continued talks with the other side after war had been declared",
+       "options": null,
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>After Tiflis declared war, Hajinski 'kept negotiating with the Ottomans regardless'. Chkhenkeli (F) was recalled.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Chkhenkeli accepted Brest-Litovsk on 10 April, but Tiflis recalled the delegation and declared war; Hajinski kept negotiating with the Ottomans regardless.</p></blockquote>"
+      },
+      {
+       "number": 8,
+       "prompt_html": "was suspected of secretly informing the opposing delegation",
+       "options": null,
+       "answer": [
+        "C"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>An Armenian delegate accused Hajinski of passing information to the Turks.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Hajinski objected, arguing that a few territorial concessions would not hurt Transcaucasia, and an Armenian delegate openly accused him of passing information to the Turks.</p></blockquote>"
+      },
+      {
+       "number": 9,
+       "prompt_html": "led the body that adopted the Declaration of Independence",
+       "options": null,
+       "answer": [
+        "A"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Rasulzade was chairman of the Azerbaijani National Council, which adopted the Declaration of Independence.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>On 27 May its 44 deputies formed the Azerbaijani National Council, with Rasulzade as chairman, and the next day the Council adopted the Declaration of Independence.</p></blockquote>"
+      }
+     ]
+    },
+    {
+     "range": [
+      10,
+      13
+     ],
+     "type": "sentence_completion",
+     "instructions_html": "<p>Complete the sentences below.</p><p>Choose NO MORE THAN TWO WORDS from the passage for each answer.</p>",
+     "content_html": "<p>The Armenian delegates at Batum supported the German proposal of {{10}}.</p><p>As the federation neared collapse, Azerbaijani leaders suggested a {{11}} shared with Georgia.</p><p>The Declaration of Independence established a {{12}} with equal rights for all citizens.</p><p>Kazemzadeh admitted that the Azerbaijani deputies were driven by concern for {{13}} rather than by religion.</p>",
+     "image": null,
+     "options": null,
+     "questions": [
+      {
+       "number": 10,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "mediation",
+        "German mediation"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Von Lossow 'offered mediation, an idea the Armenian delegates welcomed'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The German general von Lossow, who attended as an observer, offered mediation, an idea the Armenian delegates welcomed.</p></blockquote>"
+      },
+      {
+       "number": 11,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "dual state",
+        "a dual state"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>On 21 May the Azerbaijani leaders proposed at least a 'dual state' with Georgia if the federation collapsed.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>On 21 May Azerbaijani leaders proposed that, if the federation collapsed, they would accept at least a 'dual state' with Georgia, but the Georgians refused and secretly reached an agreement with Germany instead.</p></blockquote>"
+      },
+      {
+       "number": 12,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "democratic republic",
+        "a democratic republic"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Declaration 'proclaimed a democratic republic' that guaranteed rights to all citizens.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>This proclaimed a democratic republic that guaranteed civil and political rights to all citizens regardless of nationality, religion, social position or sex.</p></blockquote>"
+      },
+      {
+       "number": 13,
+       "prompt_html": "",
+       "options": null,
+       "answer": [
+        "Baku"
+       ],
+       "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Kazemzadeh acknowledged that their motive was Baku rather than religion.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Yet he also acknowledged that their motive was Baku rather than religion, noting that Shiite Azerbaijanis had fought Sunni Ottomans for centuries.</p></blockquote>"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
