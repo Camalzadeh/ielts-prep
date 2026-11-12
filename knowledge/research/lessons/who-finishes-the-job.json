@@ -1,0 +1,348 @@
+{
+ "id": "who-finishes-the-job",
+ "title": "Who Finishes the Job? Fixing AI agents' code after the merge",
+ "topic": "AI agents in real software projects",
+ "level": "beginner",
+ "added": "2026-11-12",
+ "sources": [
+  {
+   "kind": "paper",
+   "title": "Who Finishes the Job? A Study of Follow-Up Fixes and Commit Authorship on AI Coding Agent Pull Requests",
+   "authors": "Wannita Takerngsaksiri, Nhat Duong, Scott Barnett",
+   "year": 2026,
+   "url": "https://arxiv.org/abs/2609.26847"
+  }
+ ],
+ "summary_md": "**In one sentence:** a 2026 study followed thousands of AI-written code changes *after* they were accepted into\npopular open-source projects and found that they need a confirmed fix more often than human changes (**1.62 times the\nodds**), but that the agent that wrote a change usually fixes it itself (**69.6%** of the time).\n\n### The basic words\n- **Open-source project:** software whose code is public, so anyone can read it and suggest improvements (often on **GitHub**).\n- **Commit:** one saved step of work: which lines changed, and who changed them.\n- **Pull request (PR):** a bundle of commits offered to a project as one proposed change, which others can review.\n- **Merged:** the project accepted the pull request, so the change is now part of the software.\n- **AI coding agent:** an AI system that does a whole programming task and opens the pull request itself (here OpenAI Codex, GitHub Copilot, Devin, Cursor and Claude Code).\n\n### The problem\nA merged agent PR is usually counted as finished work. But an accepted change can still be wrong, and then someone\nmust send a **follow-up fix**. Nobody had measured how often this happens for agents, or *who* does the fixing.\n\n### What the researchers did\nTakerngsaksiri, Duong and Barnett (Deakin University, Melbourne) took **6,774 merged agent PRs** from GitHub projects\nwith at least **500 stars**, plus **5,044 merged human PRs** from the same projects as a baseline. A filter found\n*candidate* fixes (a later fix-type PR in the same project, within **30 days**, touching the same files). Two researchers\nchecked 50 pairs and agreed on 45; an **LLM judge** (an AI model used as a grader) labelled the rest, and was right\n**90%** of the times it said \"real fix\".\n\n*Analogy:* a builder (the agent) finishes a wall and the owner signs it off. How often does someone return within a\nmonth to repair it, and is it the same builder?\n\n### Key results\n- **22.9%** of agent PRs had a candidate fix within 30 days, but only **4.5%** a verified one.\n- Same projects, same period: **3.68%** of agent PRs vs **2.34%** of human PRs got a verified fix (odds ratio **1.62**).\n- Fixes come fast: **half** of the 30-day fixes arrive in the **first week**.\n- Who fixed agent work (263 fixes): the **same agent 69.6%**, a human **27.4%**, another agent **3.0%**. Human PRs were fixed by humans **89.1%** of the time.\n- Inside agent fixes, on average **87.4%** of commits were agent-made (Codex excluded: it does not label its commits).\n- At merge time, PRs that later needed a fix looked almost the same as the others. Within a project, a PR that took\n  **10 times as many commits** had **6.1 times** the odds of a verified fix.\n\n### Why it matters, and the limits\nThe merge is not the end of the job: AI work must be followed after it is accepted, and reviewers need to read the code,\nnot just the numbers around it. If an agent writes and fixes its own code, no human \"insider\" learns that code. The study\ncovers only five agents in popular projects and misses fixes after 30 days or in other files, so the real rates are\nprobably minimums. It measures who *wrote* a fix, not who reviewed it or is responsible for it.\n\n### IELTS angle\nUseful words: *premature*, *a point of comparison*, *modest but revealing*, *far from trivial*, *a mirror image*,\n*there is no substitute for*. In Task 2, this study is a concrete example that \"finished\" AI work still\nneeds checking, and that credit and blame are harder to assign when machines do part of a job.\n",
+ "key_terms": [
+  {
+   "term": "AI coding agent",
+   "meaning": "An AI system that carries out a whole programming task by itself, from writing code to submitting it to a project.",
+   "example": "The AI coding agent opened a pull request without any help from a human."
+  },
+  {
+   "term": "open-source project",
+   "meaning": "Software whose code is public, so anyone can read it, use it and propose improvements.",
+   "example": "Thousands of volunteers contribute to open-source projects."
+  },
+  {
+   "term": "commit",
+   "meaning": "One saved step of work in a project's history, recording which lines changed and who changed them.",
+   "example": "She fixed the bug in a single commit."
+  },
+  {
+   "term": "pull request (PR)",
+   "meaning": "A group of commits offered to a project as one proposed change, which others can review before it is accepted.",
+   "example": "The maintainers reviewed the pull request for two days."
+  },
+  {
+   "term": "merge (a pull request)",
+   "meaning": "To accept a proposed change so that it becomes part of the project's code.",
+   "example": "Once the change was merged, every user received the new feature."
+  },
+  {
+   "term": "follow-up fix",
+   "meaning": "A later change that corrects a mistake introduced or left behind by an earlier, already accepted change.",
+   "example": "About 4.5% of merged agent pull requests needed a follow-up fix within 30 days."
+  },
+  {
+   "term": "code review",
+   "meaning": "Checking someone else's code changes before they are accepted.",
+   "example": "The study suggests that careful code review means actually reading the code."
+  },
+  {
+   "term": "LLM judge (LLM-as-a-judge)",
+   "meaning": "A large language model used to label or grade items, checked against human judgements.",
+   "example": "The LLM judge was right in 90% of the cases where it said a change was a real fix."
+  },
+  {
+   "term": "baseline",
+   "meaning": "A standard group or result used for comparison.",
+   "example": "Human pull requests from the same projects served as the baseline."
+  },
+  {
+   "term": "odds ratio",
+   "meaning": "A statistic comparing how likely an event is in one group with how likely it is in another (1 = no difference).",
+   "example": "An odds ratio of 1.62 means agent changes were noticeably more likely to need a fix."
+  },
+  {
+   "term": "code ownership",
+   "meaning": "The idea of who is responsible for, and knows best, a piece of code.",
+   "example": "When an agent fixes its own code, questions of code ownership become harder."
+  },
+  {
+   "term": "premature",
+   "meaning": "Academic word: happening or decided too early, before it is justified.",
+   "example": "It is premature to call the work finished before it has been tested."
+  },
+  {
+   "term": "far from trivial",
+   "meaning": "Academic phrase: significant; much more important than it first seems.",
+   "example": "The extra cost of repairing faulty work is far from trivial."
+  },
+  {
+   "term": "there is no substitute for",
+   "meaning": "Academic phrase: nothing else can replace (something) or do its job as well.",
+   "example": "There is no substitute for reading the code yourself."
+  }
+ ],
+ "discussion": [
+  "When a machine does part of a job, who do you think should be praised if the result is excellent?",
+  "Why might people trust work too quickly once it has been approved by a manager or an expert?",
+  "Do you think companies should tell customers when a product or service was partly made by AI? Why?"
+ ],
+ "reading": {
+  "duration_minutes": 20,
+  "parts": [
+   {
+    "number": 1,
+    "title": "Who Finishes the Job?",
+    "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-14, which are based on the Reading Passage below.</em></p><p><strong>A</strong> AI coding agents such as OpenAI Codex, GitHub Copilot, Devin, Cursor and Claude Code no longer merely suggest the next few words of code: they can take on a whole task by themselves and submit the result to a real software project. Many of these contributions go to open-source projects, whose code is published so that anyone can read it and propose improvements. When a project accepts a contribution, it is said to be merged, and in most discussions of AI productivity that moment is treated as the finish line. This assumption, I would argue, is premature: a change that has been accepted can still turn out to be faulty, and somebody then has to come back and repair it.</p><p><strong>B</strong> Programmers save their work in small recorded steps called commits, each of which notes exactly which lines were added or removed and who made the change. A group of commits that is offered to a project as a single proposal is known as a pull request, which others may review before it is merged. In a 2026 study, Wannita Takerngsaksiri, Nhat Duong and Scott Barnett of Deakin University in Melbourne followed 6,774 merged pull requests written by the five agents named above. All came from projects on GitHub, the leading code-sharing website, that had received at least 500 stars, a form of public approval similar to a 'like'. As a point of comparison, the researchers also collected 5,044 merged pull requests written by people in the same projects.</p><p><strong>C</strong> The first challenge was to decide what counts as a repair. The team began with a broad filter: a later pull request counted as a candidate fix if it was merged into the same project within 30 days, was labelled as a fix, and changed at least one of the same files. Many candidates, however, simply extended or tidied earlier work rather than correcting a mistake. Two of the authors therefore examined 50 candidate pairs independently and agreed on 45 of them. These agreed examples were used to build an AI judge, a large language model that then labelled thousands of further pairs, and its decisions were later checked against fresh human judgements. When the judge declared that a change was a genuine fix, it was right nine times out of ten. To my mind, this careful verification is the most impressive feature of the study, because a filter alone would have counted many harmless changes as repairs.</p><p><strong>D</strong> The headline figures are modest but revealing. Within 30 days, 22.9 per cent of merged agent pull requests attracted a candidate fix, but only 4.5 per cent were followed by a confirmed one. The more telling comparison is with human work: over a shared time window, 3.68 per cent of agent changes needed a confirmed fix, against 2.34 per cent of human ones, and when changes were compared only within the same projects, the agents' work had about 1.6 times the odds of needing repair. The problems also surfaced quickly: half of the fixes that appeared within a month had already arrived by the end of the first week. Four or five faulty changes in a hundred may not sound alarming, yet with nearly a million agent pull requests on GitHub in 2025 alone, the extra repair work is far from trivial.</p><p><strong>E</strong> Perhaps the most surprising result concerns who did the repairing. Of the 263 confirmed fixes to agent work, 69.6 per cent were submitted by the very agent that had written the original change, 27.4 per cent by a human and only 3.0 per cent by a different agent. The pattern varied between products: GitHub Copilot fixed about 95 per cent of its own faulty changes, whereas people repaired 38.4 per cent of those made by OpenAI Codex. Human work showed a mirror image, with 89.1 per cent of fixes to human changes made by humans. Inside these repairs, on average 87.4 per cent of the commits in each agent fix were made by an agent, and 76.4 per cent of the fixes were entirely agent-written (Codex, which does not label its commits, was excluded).</p><p><strong>F</strong> Could the faulty changes have been spotted before they were accepted? The researchers compared several measurements available at the moment of merging, such as the time spent under review and the amount of reviewer feedback. Across the whole sample, changes that later needed fixing looked almost identical to those that did not. Within individual projects, however, one signal stood out: a pull request that had needed ten times as many commits before acceptance had 6.1 times the odds of requiring a confirmed fix afterwards. In other words, work that was hard to finish before the merge tended to need more work after it. The lesson, I believe, is that reviewers cannot rely on such surface statistics to protect them; there is no substitute for actually reading the code.</p><p><strong>G</strong> The study has clear limits, which the authors acknowledge. It covers only five agents in popular projects, and its method misses repairs that arrive after 30 days or alter different files, so the true rates of fixing may well be higher than those reported. It also leaves open a larger question of ownership. In human teams, abandoned code is usually adopted by experienced colleagues who know its history; an agent that writes and repairs its own work leaves no such insider behind, and nobody yet knows what will happen to its code once the model responsible is withdrawn. The finding that agents largely clean up after themselves is therefore only partly reassuring. What it shows beyond doubt is that a merge is no longer the end of the job.</p>",
+    "groups": [
+     {
+      "range": [
+       1,
+       5
+      ],
+      "type": "matching_information",
+      "instructions_html": "<p>The Reading Passage has seven paragraphs, A-G.</p><p>Which paragraph contains the following information?</p><p>NB You may use any letter more than once.</p>",
+      "content_html": "",
+      "image": null,
+      "options": [
+       {
+        "key": "A",
+        "text": ""
+       },
+       {
+        "key": "B",
+        "text": ""
+       },
+       {
+        "key": "C",
+        "text": ""
+       },
+       {
+        "key": "D",
+        "text": ""
+       },
+       {
+        "key": "E",
+        "text": ""
+       },
+       {
+        "key": "F",
+        "text": ""
+       },
+       {
+        "key": "G",
+        "text": ""
+       }
+      ],
+      "questions": [
+       {
+        "number": 1,
+        "prompt_html": "a definition of the basic unit in which programmers record their changes",
+        "options": null,
+        "answer": [
+         "B"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph B explains that programmers save their work in small recorded steps called commits.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Programmers save their work in small recorded steps called commits, each of which notes exactly which lines were added or removed and who made the change.</p></blockquote>"
+       },
+       {
+        "number": 2,
+        "prompt_html": "an indication that changes which were difficult to complete were more likely to need later correction",
+        "options": null,
+        "answer": [
+         "F"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F reports that, within a project, a pull request that needed ten times as many commits had 6.1 times the odds of a confirmed fix, i.e. work that was hard to finish needed more work later.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In other words, work that was hard to finish before the merge tended to need more work after it.</p></blockquote>"
+       },
+       {
+        "number": 3,
+        "prompt_html": "a contrast between two products in how often their mistakes were corrected by people",
+        "options": null,
+        "answer": [
+         "E"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph E compares GitHub Copilot, which fixed about 95 per cent of its own faulty changes, with OpenAI Codex, whose faulty changes were repaired by people 38.4 per cent of the time.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The pattern varied between products: GitHub Copilot fixed about 95 per cent of its own faulty changes, whereas people repaired 38.4 per cent of those made by OpenAI Codex.</p></blockquote>"
+       },
+       {
+        "number": 4,
+        "prompt_html": "a reason why the study may underestimate how often repairs are needed",
+        "options": null,
+        "answer": [
+         "G"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph G says the method misses repairs that come after 30 days or change different files, so the true rates may be higher.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>It covers only five agents in popular projects, and its method misses repairs that arrive after 30 days or alter different files, so the true rates of fixing may well be higher than those reported.</p></blockquote>"
+       },
+       {
+        "number": 5,
+        "prompt_html": "the proportion of cases in which two researchers reached the same decision",
+        "options": null,
+        "answer": [
+         "C"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph C says two of the authors examined 50 pairs independently and agreed on 45 of them.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Two of the authors therefore examined 50 candidate pairs independently and agreed on 45 of them.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       6,
+       9
+      ],
+      "type": "ynng",
+      "instructions_html": "<p>Do the following statements agree with the views of the writer in the Reading Passage?</p><p>YES if the statement agrees with the views of the writer</p><p>NO if the statement contradicts the views of the writer</p><p>NOT GIVEN if it is impossible to say what the writer thinks about this</p>",
+      "content_html": "",
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 6,
+        "prompt_html": "It is sensible to regard a change as completed work as soon as it has been merged.",
+        "options": null,
+        "answer": [
+         "NO"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The writer calls the idea that a merge is 'the finish line' premature, because accepted changes can still be faulty and need repair.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>This assumption, I would argue, is premature: a change that has been accepted can still turn out to be faulty, and somebody then has to come back and repair it.</p></blockquote>"
+       },
+       {
+        "number": 7,
+        "prompt_html": "The method used to confirm genuine repairs is the strongest aspect of the research.",
+        "options": null,
+        "answer": [
+         "YES"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The writer says the careful verification is 'the most impressive feature of the study'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>To my mind, this careful verification is the most impressive feature of the study, because a filter alone would have counted many harmless changes as repairs.</p></blockquote>"
+       },
+       {
+        "number": 8,
+        "prompt_html": "AI coding agents will eventually make fewer mistakes than human programmers.",
+        "options": null,
+        "answer": [
+         "NOT GIVEN"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The writer compares how often agent and human changes needed fixing in the period studied, but makes no prediction about whether agents will one day make fewer mistakes than people.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The more telling comparison is with human work: over a shared time window, 3.68 per cent of agent changes needed a confirmed fix, against 2.34 per cent of human ones, and when changes were compared only within the same projects, the agents' work had about 1.6 times the odds of needing repair.</p></blockquote>"
+       },
+       {
+        "number": 9,
+        "prompt_html": "Simple figures recorded at the moment a change is accepted are not a dependable way of identifying faulty work.",
+        "options": null,
+        "answer": [
+         "YES"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>After reporting that changes which later needed fixing looked almost the same at merge time, the writer concludes that reviewers 'cannot rely on such surface statistics'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The lesson, I believe, is that reviewers cannot rely on such surface statistics to protect them; there is no substitute for actually reading the code.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       10,
+       13
+      ],
+      "type": "sentence_completion",
+      "instructions_html": "<p>Complete the sentences below.</p><p>Choose <strong>NO MORE THAN TWO WORDS AND/OR A NUMBER</strong> from the passage for each answer.</p>",
+      "content_html": "<ul>\n<li>The study only included projects that GitHub users had given a minimum of {{10}} stars.</li>\n<li>To be considered as a possible repair, a later pull request had to be merged no more than {{11}} after the original change.</li>\n<li>Problems were found early: by the end of the {{12}}, half of the fixes made within a month had already appeared.</li>\n<li>Inside a single project, a pull request that had required far more {{13}} before it was accepted was more likely to need a confirmed fix.</li>\n</ul>",
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 10,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "500",
+         "five hundred"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The projects had received 'at least 500 stars' ('a minimum of' = 'at least').</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>All came from projects on GitHub, the leading code-sharing website, that had received at least 500 stars, a form of public approval similar to a 'like'.</p></blockquote>"
+       },
+       {
+        "number": 11,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "30 days",
+         "thirty days"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>A candidate fix had to be merged into the same project 'within 30 days'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The team began with a broad filter: a later pull request counted as a candidate fix if it was merged into the same project within 30 days, was labelled as a fix, and changed at least one of the same files.</p></blockquote>"
+       },
+       {
+        "number": 12,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "first week",
+         "the first week"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Half of the fixes that appeared within a month 'had already arrived by the end of the first week'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The problems also surfaced quickly: half of the fixes that appeared within a month had already arrived by the end of the first week.</p></blockquote>"
+       },
+       {
+        "number": 13,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "commits",
+         "the commits"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>A pull request that needed ten times as many commits before acceptance had 6.1 times the odds of needing a confirmed fix.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Within individual projects, however, one signal stood out: a pull request that had needed ten times as many commits before acceptance had 6.1 times the odds of requiring a confirmed fix afterwards.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       14,
+       14
+      ],
+      "type": "mcq",
+      "instructions_html": "<p>Choose the correct letter, A, B, C or D.</p>",
+      "content_html": null,
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 14,
+        "prompt_html": "Which of the following is the most suitable title for this Reading Passage?",
+        "options": [
+         {
+          "key": "A",
+          "text": "Why AI coding agents are no longer allowed in open-source projects"
+         },
+         {
+          "key": "B",
+          "text": "After the merge: who repairs the work of AI coding agents?"
+         },
+         {
+          "key": "C",
+          "text": "How programmers learned to describe their commits more clearly"
+         },
+         {
+          "key": "D",
+          "text": "The end of human code review in popular software projects"
+         }
+        ],
+        "answer": [
+         "B"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The whole passage is about the follow-up fixes needed after agent-written changes are accepted (merged), and about who makes them. A and D are not stated; C is only background in paragraph B.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>What it shows beyond doubt is that a merge is no longer the end of the job.</p></blockquote>"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "writing": [
+  {
+   "task": 2,
+   "essay_type": "discussion",
+   "prompt": "Artificial intelligence now often completes part of a task, such as writing a report or a piece of software, which a person then checks and submits. Some people believe that the person who submits the work should receive all the credit and take full responsibility for any mistakes. Others think that the credit and the responsibility should be shared with the companies that make the AI tools.\n\nDiscuss both these views and give your own opinion."
+  },
+  {
+   "task": 1,
+   "essay_type": "bar",
+   "prompt": "The chart below shows who made the confirmed follow-up fixes to changes that had been accepted into popular open-source software projects in 2024-2025, according to who wrote the original change.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+   "image": "media/writing/research/who-finishes-fixers.svg",
+   "image_description": "Grouped bar chart, percentage of confirmed follow-up fixes made by each type of fixer, by author of the original accepted change (popular open-source projects, 2024-2025). Values given as the same agent / a human / another AI agent or bot: OpenAI Codex 59.2 / 38.4 / 2.4; Devin 72.7 / 23.9 / 3.4; GitHub Copilot 95.0 / 5.0 / 0.0; All AI agents 69.6 / 27.4 / 3.0; Human authors: same agent not applicable, a human 89.1, another AI agent or bot 10.9. Main trends: for every agent most fixes came from the same agent that wrote the change, ranging from 59.2% (Codex) to 95% (Copilot); humans fixed a large share of Codex's changes (38.4%) but almost none of Copilot's (5%); fixes by a different agent were rare (0-3.4%). Changes written by humans were overwhelmingly fixed by humans (89.1%), a mirror image of the agents' self-fixing (69.6% overall)."
+  }
+ ]
+}

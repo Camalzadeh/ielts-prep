@@ -8,7 +8,7 @@ from typing import Any, Optional
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, Field
 
-from .. import db
+from .. import db, research
 from ..context import kb_doc, kb_search
 
 router = APIRouter(prefix="/api", tags=["kb"])
@@ -16,18 +16,21 @@ router = APIRouter(prefix="/api", tags=["kb"])
 
 @router.get("/kb")
 def list_kb(category: Optional[str] = None, conn: sqlite3.Connection = Depends(db.get_db)) -> list[dict]:
-    sql = "SELECT slug, title, category, tags, path FROM kb_docs"
+    sql = "SELECT slug, title, category, tags, path FROM kb_docs WHERE 1=1"
     args: tuple = ()
     if category:
-        sql += " WHERE category = ?"
+        sql += " AND category = ?"
         args = (category,)
+    if not research.enabled(conn):   # AI Research guides follow the Settings switch
+        sql += f" AND category != '{research.KB_CATEGORY}'"
     return db.rows_to_dicts(conn.execute(sql + " ORDER BY category, title", args).fetchall())
 
 
 @router.get("/kb/search")
 def search_kb(q: str = "", limit: int = 20, conn: sqlite3.Connection = Depends(db.get_db)) -> list[dict]:
     try:
-        return kb_search(conn, q, max(1, min(limit, 100)))
+        hits = kb_search(conn, q, max(1, min(limit, 100)))
+        return hits if research.enabled(conn) else [d for d in hits if d["category"] != research.KB_CATEGORY]
     except sqlite3.OperationalError as exc:
         raise HTTPException(422, f"bad search query: {exc}")
 
@@ -46,6 +49,8 @@ def list_vocab(topic: Optional[str] = None, due: int = 0, q: Optional[str] = Non
                conn: sqlite3.Connection = Depends(db.get_db)) -> list[dict]:
     sql = "SELECT * FROM vocab WHERE 1=1"
     args: list[Any] = []
+    if not research.enabled(conn):   # AI Research terms hidden with the lessons
+        sql += " AND COALESCE(source, '') != 'research'"
     if topic:
         sql += " AND topic = ?"
         args.append(topic)
@@ -62,9 +67,10 @@ def list_vocab(topic: Optional[str] = None, due: int = 0, q: Optional[str] = Non
 
 @router.get("/vocab/topics")
 def vocab_topics(conn: sqlite3.Connection = Depends(db.get_db)) -> list[dict]:
+    where = "" if research.enabled(conn) else "WHERE COALESCE(source, '') != 'research' "
     return db.rows_to_dicts(conn.execute(
         "SELECT topic, COUNT(*) AS terms, SUM(CASE WHEN due_at IS NULL OR due_at <= ? THEN 1 ELSE 0 END) AS due "
-        "FROM vocab GROUP BY topic ORDER BY topic", (db.now_iso(),)).fetchall())
+        f"FROM vocab {where}GROUP BY topic ORDER BY topic", (db.now_iso(),)).fetchall())
 
 
 class Review(BaseModel):

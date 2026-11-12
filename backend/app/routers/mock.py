@@ -43,7 +43,7 @@ def test_weight(book: int | None, attempted: bool) -> float:
 def mock_test_weights(conn: sqlite3.Connection, ttype: str, module: str | None) -> list[tuple[str, float]]:
     rows = conn.execute(
         "SELECT t.id, t.module, t.book, EXISTS (SELECT 1 FROM attempts a WHERE a.test_id=t.id) AS done FROM tests t "
-        "WHERE t.type=? AND COALESCE(t.source, '') NOT IN ('external', 'history')",
+        "WHERE t.type=? AND COALESCE(t.source, '') NOT IN ('external', 'history', 'research')",
         (ttype,)).fetchall()
     if ttype == "reading":
         # only the exam's own module: an Academic mock never gets a General Training passage

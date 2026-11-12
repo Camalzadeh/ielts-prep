@@ -1,0 +1,317 @@
+{
+ "id": "agentic-prs-github",
+ "title": "AI Agents on GitHub: Do Developers Accept Their Pull Requests?",
+ "topic": "AI agents in real software projects",
+ "level": "beginner",
+ "added": "2026-11-12",
+ "sources": [
+  {
+   "kind": "paper",
+   "title": "On the Use of Agentic Coding: An Empirical Study of Pull Requests on GitHub",
+   "authors": "Watanabe et al.",
+   "year": 2025,
+   "url": "https://arxiv.org/abs/2509.14745"
+  },
+  {
+   "kind": "paper",
+   "title": "Behind Agentic Pull Requests: An Empirical Study on Developer Interventions in AI Agent-Authored Pull Requests (MSR 2026 Mining Challenge)",
+   "authors": "Khelifi, Ouni, Khemaja",
+   "year": 2026,
+   "url": "https://2026.msrconf.org/details/msr-2026-mining-challenge/26/Behind-Agentic-Pull-Requests-An-Empirical-Study-on-Developer-Interventions-in-AI-Age"
+  }
+ ],
+ "summary_md": "**In one sentence:** when developers let an AI agent (here, Claude Code) write and submit changes to real\nopen-source projects, most of that work is accepted, but almost half of it still needs fixing by people first.\n\n### Some words first\n- **GitHub**: a website where programmers keep their code and work on it together.\n- **Commit**: one saved set of changes to the code, with a short note.\n- **Pull request (PR)**: a proposal to add your commits to a project's official code. Other people review it.\n- **Merge**: accepting a pull request, so the changes become part of the official code.\n- **Agentic coding tool** (e.g. **Claude Code**): an AI that you give a task in plain language; it then reads files,\n  edits code, runs checks and can open the pull request itself, without a human copying and pasting each step.\n\n### The main study (Watanabe et al., 2025)\nThe authors searched GitHub for PRs whose description said \"Generated with Claude Code\", from 24 Feb to 30 Apr 2025, in\nprojects with at least 10 stars. They kept **567 agent-assisted PRs from 157 open-source projects** and paired each with a\nPR by the **same developer in the same project** made without the agent.\n\n| Finding | Agent-assisted PRs | Same developers, no agent |\n|---|---|---|\n| Merged (accepted) | **83.8%** | **91.0%** |\n| Merged with no further commits | 54.9% | 58.5% |\n| Typical time to merge | 1.23 hours | 1.04 hours (difference not significant) |\n| PRs adding or changing tests | 18.8% | 4.5% |\n| PRs with several purposes | 39.9% | 12.2% |\n| Typical description length | 355 words | 56 words |\n\n- **Why PRs were rejected:** most often another solution was chosen (12.0% of the 92 rejected); few for bad design or new\n  bugs; one explicitly for not trusting AI code. But **64.1%** were closed with no explanation.\n- **What people fixed** in the 45.1% of merged agent PRs that needed more commits: bug fixes (**47.7%**, often weak\n  *error handling*), documentation (**29.0%**), refactoring to fit the project (**27.1%**), style (**23.4%**).\n  Claude itself co-authored revision commits in 41.1% of these PRs.\n- **Advice:** give agents small, self-contained tasks, and write the project's rules in a guideline file (e.g. CLAUDE.md).\n\n### The second, short study (Khelifi, Ouni and Khemaja, MSR 2026)\nOnly an abstract is public. Using the **AIDev** dataset, humans intervened in **52.17%** of agent-written PRs vs\n**83.59%** of human-written ones, but interventions in agent PRs took more effort. Human effort: **guidance 58.02%**\n(limiting the agent, enforcing conventions), decisions 21.16%, direct code changes 17.05%, operational 3.69%. The\nauthors conclude that developers are moving from *writing* code to *supervising* it.\n\n### Why it matters\nThese are some of the first measurements of AI agents in real projects, not in test benchmarks. The agent's work is\noften good enough, but human experts still decide, correct and guide.\n\n### Limitations\nOne tool, its first months (developers may have been experimenting), and \"merged\" is the only measure of success: nobody\nchecked whether merged code caused problems later. The second study is only a short abstract.\n\n### IELTS angle\nUseful words from the passage: *crucially*, *a point of comparison*, *revealing*, *statistically lower*, *set aside*,\n*intervene*, *self-contained*. In Task 2 on work and technology, this research is a concrete example that AI can take over\nroutine production while human expertise shifts towards checking and supervision.\n",
+ "key_terms": [
+  {
+   "term": "agentic coding tool",
+   "meaning": "An AI system that is given a programming task in plain language and carries it out largely by itself: reading files, editing code, running checks and submitting the result.",
+   "example": "Claude Code is an agentic coding tool released in February 2025."
+  },
+  {
+   "term": "GitHub",
+   "meaning": "A website where programmers store their code and work on it together; each project keeps a central, official copy.",
+   "example": "The researchers searched GitHub for pull requests marked 'Generated with Claude Code'."
+  },
+  {
+   "term": "commit",
+   "meaning": "One saved set of changes to a project's code, with a short note describing them.",
+   "example": "More than half of the agent's pull requests were merged as a single commit."
+  },
+  {
+   "term": "pull request (PR)",
+   "meaning": "A formal proposal to add new changes to a project's official code, which other people review before accepting or rejecting it.",
+   "example": "The agent can package its work as a pull request."
+  },
+  {
+   "term": "merge",
+   "meaning": "To accept a pull request so that its changes become part of the official code.",
+   "example": "83.8 per cent of the agent-assisted pull requests were merged."
+  },
+  {
+   "term": "maintainer",
+   "meaning": "A person responsible for a software project who decides which proposed changes are accepted.",
+   "example": "Maintainers closed some requests because they had solved the problem another way."
+  },
+  {
+   "term": "refactoring",
+   "meaning": "Reorganising existing code to make it clearer or easier to maintain without changing what it does.",
+   "example": "Refactoring was much more common in the agent's pull requests."
+  },
+  {
+   "term": "software test",
+   "meaning": "A small program that checks automatically whether other code behaves as intended.",
+   "example": "Almost 19 per cent of the agent-assisted requests added or updated tests."
+  },
+  {
+   "term": "error handling",
+   "meaning": "The part of a program that decides what to do when something goes wrong.",
+   "example": "Many of the human fixes concerned the agent's error handling."
+  },
+  {
+   "term": "human oversight",
+   "meaning": "People checking, correcting and directing the work of an automated system.",
+   "example": "The studies suggest that AI-written code still benefits from human oversight."
+  },
+  {
+   "term": "intervene / intervention",
+   "meaning": "Academic word: to become involved in a situation in order to change or improve it.",
+   "example": "Humans intervened in 52.17 per cent of the agent-written requests."
+  },
+  {
+   "term": "a point of comparison",
+   "meaning": "Academic phrase: something used as a standard to judge something else against.",
+   "example": "Pairing each request with a human one gave the researchers a fair point of comparison."
+  },
+  {
+   "term": "self-contained",
+   "meaning": "Complete in itself; not depending on other parts.",
+   "example": "Developers are advised to give agents small, self-contained tasks."
+  }
+ ],
+ "discussion": [
+  "Do you think people will trust work produced by AI as much as work produced by human experts? Why or why not?",
+  "If machines do more of the routine work in a profession, what skills will young people entering that profession need?",
+  "Who should be held responsible when a product built partly by AI turns out to be faulty: the company, the user or the tool's maker?"
+ ],
+ "reading": {
+  "duration_minutes": 20,
+  "parts": [
+   {
+    "number": 1,
+    "title": "When the Machine Opens the Pull Request",
+    "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-13, which are based on the Reading Passage below.</em></p><p><strong>A</strong> Many open-source software projects are developed on GitHub, a website where programmers store their code and work on it together. Each project keeps an official copy, which contributors do not edit directly. Instead, they save their edits in one or more commits, each a recorded set of changes with a short note, and then open a pull request: a formal proposal asking the project's maintainers to 'pull' the new work in. Reviewers can comment, ask for corrections or close the request. If they approve it, the changes are merged and become part of the official code. Researchers have recently begun to ask what happens to this routine when the proposals are prepared with the help of artificial intelligence.</p><p><strong>B</strong> One such AI system is Claude Code, which the company Anthropic released in February 2025. Unlike a chatbot, which answers one question at a time, an agentic coding tool is given a task in plain language and carries it out largely by itself: it reads the project's files, edits them, runs checks and can even submit its work as a pull request. Miku Watanabe and colleagues searched GitHub for pull requests containing the phrase 'Generated with Claude Code', which the tool adds automatically. They considered only projects with at least ten 'stars', a rough indicator of public interest, and only requests submitted between 24 February and 30 April 2025. This left 567 agent-assisted pull requests from 157 open-source projects. Crucially, each one was paired with a request made by the same developer in the same project without the tool, which gave the researchers a fair point of comparison.</p><p><strong>C</strong> The first question was what developers actually use the agent for. Fixing bugs and adding features were the two most common purposes in both groups, at almost identical rates. The differences lay elsewhere. Almost 19 per cent of the agent-assisted requests involved tests, the small programs that check whether code behaves as intended, compared with under 5 per cent of the developers' own requests. Refactoring, which means reorganising code without changing what it does, and documentation were also noticeably more frequent. Around 40 per cent of the agent's requests combined several purposes, against 12 per cent of the human ones. Their written descriptions were also far longer, with a typical length of 355 words compared with just 56, perhaps because the agent sets out its reasoning in detail.</p><p><strong>D</strong> Were these contributions welcome? Largely, yes. Of the 567 agent-assisted requests, 83.8 per cent were eventually merged. That is a high figure, although it is statistically lower than the 91.0 per cent achieved by the same developers working alone. Accepted requests of both kinds were typically merged within a little over an hour. The reasons for rejection are revealing. The most common identifiable cause was that the problem had been solved in a different way, while very few requests were turned down because of poor design or new faults, and only one explicitly because of doubts about code produced by an AI. However, nearly two-thirds of the rejected requests were closed without any explanation at all.</p><p><strong>E</strong> Being accepted, however, is not the same as being accepted without changes. Of the merged agent-assisted requests, 54.9 per cent went in exactly as submitted, close to the 58.5 per cent for the developers' own work. The remaining 45.1 per cent needed further commits first. Nearly half of these revised requests (47.7 per cent) included bug fixes, most often concerning error handling, the part of a program that decides what to do when something goes wrong; the agent frequently failed to distinguish failures a program can recover from and those that should stop it. Reviewers also had to update documentation that the agent had left out of date (29.0 per cent), reorganise code to suit the project's structure (27.1 per cent) and tidy the code so that it matched the house style of the particular project (23.4 per cent). Interestingly, the agent was not simply set aside at this stage: Claude was credited as a co-author of revision commits in 41.1 per cent of the revised requests.</p><p><strong>F</strong> A second, much shorter study, by Syrine Khelifi, Ali Ouni and Maha Khemaja, was presented at the Mining Software Repositories (MSR) conference in 2026; only a brief summary of it is publicly available. Drawing on a collection of pull requests known as the AIDev dataset, the authors report that humans stepped in on 52.17 per cent of requests written by AI agents, compared with 83.59 per cent of those written by people. When they did intervene in agent-written work, however, more effort was required, with larger code changes and longer durations. Of all human effort, 58.02 per cent went on guidance, such as restricting what the agent could do and enforcing the project's conventions, while directly changing the code accounted for only 17.05 per cent. In the authors' view, developers are moving away from implementation and towards supervision, guidance and quality control.</p><p><strong>G</strong> The larger study has clear limitations. It examined a single tool during its first few months, when, as its authors admit, some developers may simply have been experimenting. It also judged success only by whether a request was merged, without checking whether the accepted code later caused faults. Nevertheless, the authors draw some practical lessons. They advise developers to give agents small, self-contained tasks, since oversized requests are harder to review, and to write each project's rules about formatting and design into a guideline file that the agent can follow.</p>",
+    "groups": [
+     {
+      "range": [
+       1,
+       6
+      ],
+      "type": "matching_headings",
+      "instructions_html": "<p>The Reading Passage has seven paragraphs, <strong>A-G</strong>.</p><p>Choose the correct heading for paragraphs <strong>B-G</strong> from the list of headings below.</p><p><em>Write the correct number, <strong>i-ix</strong>, in boxes 1-6 on your answer sheet.</em></p><p><em>Example Answer</em></p><p>Paragraph <strong>A</strong> <strong>i</strong></p>",
+      "content_html": null,
+      "image": null,
+      "options": [
+       {
+        "key": "i",
+        "text": "How changes to shared code are proposed and approved"
+       },
+       {
+        "key": "ii",
+        "text": "Doubts among developers about whether AI can be trusted"
+       },
+       {
+        "key": "iii",
+        "text": "Building a matched collection of examples"
+       },
+       {
+        "key": "iv",
+        "text": "The kinds of task most often handed to the agent"
+       },
+       {
+        "key": "v",
+        "text": "A high success rate, though below that of humans"
+       },
+       {
+        "key": "vi",
+        "text": "How the speed of AI agents compares with that of programmers"
+       },
+       {
+        "key": "vii",
+        "text": "The extra work done on contributions before they are accepted"
+       },
+       {
+        "key": "viii",
+        "text": "Evidence that human effort is moving from writing to supervising"
+       },
+       {
+        "key": "ix",
+        "text": "Weaknesses of the research and advice for users"
+       }
+      ],
+      "questions": [
+       {
+        "number": 1,
+        "prompt_html": "Paragraph B",
+        "options": null,
+        "answer": [
+         "iii"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph B describes how the researchers collected 567 agent-assisted pull requests and paired each one with a comparable request made without the tool.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Crucially, each one was paired with a request made by the same developer in the same project without the tool, which gave the researchers a fair point of comparison.</p></blockquote>"
+       },
+       {
+        "number": 2,
+        "prompt_html": "Paragraph C",
+        "options": null,
+        "answer": [
+         "iv"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph C compares the purposes of the two groups of requests: tests, refactoring and documentation are much more common in the agent's work.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The first question was what developers actually use the agent for.</p></blockquote>"
+       },
+       {
+        "number": 3,
+        "prompt_html": "Paragraph D",
+        "options": null,
+        "answer": [
+         "v"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph D is about acceptance: 83.8 per cent of agent-assisted requests were merged, which is high but lower than the 91.0 per cent for the developers' own requests. Heading ii is a trap: only one request was withdrawn because of doubts about AI. Heading vi is also a trap: the paragraph mentions waiting time for merging, not how fast the agent works.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>That is a high figure, although it is statistically lower than the 91.0 per cent achieved by the same developers working alone.</p></blockquote>"
+       },
+       {
+        "number": 4,
+        "prompt_html": "Paragraph E",
+        "options": null,
+        "answer": [
+         "vii"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph E explains that 45.1 per cent of merged requests needed further commits and lists what the reviewers had to fix before merging.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The remaining 45.1 per cent needed further commits first.</p></blockquote>"
+       },
+       {
+        "number": 5,
+        "prompt_html": "Paragraph F",
+        "options": null,
+        "answer": [
+         "viii"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F reports the second study: most human effort goes on guidance, and developers are moving 'towards supervision, guidance and quality control'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In the authors' view, developers are moving away from implementation and towards supervision, guidance and quality control.</p></blockquote>"
+       },
+       {
+        "number": 6,
+        "prompt_html": "Paragraph G",
+        "options": null,
+        "answer": [
+         "ix"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph G lists the limitations of the first study (one tool, an early period, success measured only by merging) and then the authors' practical advice.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The larger study has clear limitations.</p></blockquote><blockquote><p>Nevertheless, the authors draw some practical lessons.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       7,
+       10
+      ],
+      "type": "tfng",
+      "instructions_html": "<p>Do the following statements agree with the information given in the Reading Passage? In boxes 7-10 on your answer sheet, write</p><p><strong>TRUE</strong> if the statement agrees with the information</p><p><strong>FALSE</strong> if the statement contradicts the information</p><p><strong>NOT GIVEN</strong> if there is no information on this</p>",
+      "content_html": null,
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 7,
+        "prompt_html": "Most of the projects in the first study were run by large technology companies.",
+        "options": null,
+        "answer": [
+         "NOT GIVEN"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph B says the projects were open-source and had at least ten 'stars', but it says nothing about who runs them or whether companies are involved.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>They considered only projects with at least ten 'stars', a rough indicator of public interest, and only requests submitted between 24 February and 30 April 2025.</p></blockquote>"
+       },
+       {
+        "number": 8,
+        "prompt_html": "Pull requests prepared with the agent were usually explained at greater length than those written by developers alone.",
+        "options": null,
+        "answer": [
+         "TRUE"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph C gives a typical description length of 355 words for the agent's requests against 56 words for the human ones.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Their written descriptions were also far longer, with a typical length of 355 words compared with just 56, perhaps because the agent sets out its reasoning in detail.</p></blockquote>"
+       },
+       {
+        "number": 9,
+        "prompt_html": "Reviewers gave a reason for most of the agent-assisted pull requests that they rejected.",
+        "options": null,
+        "answer": [
+         "FALSE"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph D says nearly two-thirds of the rejected requests were closed without any explanation, so most were not given a reason.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>However, nearly two-thirds of the rejected requests were closed without any explanation at all.</p></blockquote>"
+       },
+       {
+        "number": 10,
+        "prompt_html": "According to the second study, when people intervened in work written by an agent, it usually took less effort than intervening in human work.",
+        "options": null,
+        "answer": [
+         "FALSE"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F says the opposite: interventions in agent-written work required more effort, with larger code changes and longer durations.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>When they did intervene in agent-written work, however, more effort was required, with larger code changes and longer durations.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       11,
+       13
+      ],
+      "type": "summary_completion",
+      "instructions_html": "<p>Complete the summary below.</p><p>Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage for each answer.</p><p><em>Write your answers in boxes 11-13 on your answer sheet.</em></p>",
+      "content_html": "<p><strong>Corrections made to the agent's work</strong></p><p>Slightly more than half of the accepted agent-assisted requests were merged with no revisions. In the rest, the most common correction was a bug fix, often related to {{11}}, because the agent did not always separate failures that a program could survive from those that should halt it. Reviewers also had to bring {{12}} up to date, to restructure code so that it fitted the existing project, and, in almost a quarter of cases, to adjust the code so that it followed the {{13}} of the project concerned.</p>",
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 11,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "error handling"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The bug fixes were 'most often concerning error handling', and the agent failed to tell recoverable failures from those that should stop the program.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Nearly half of these revised requests (47.7 per cent) included bug fixes, most often concerning error handling, the part of a program that decides what to do when something goes wrong; the agent frequently failed to distinguish failures a program can recover from and those that should stop it.</p></blockquote>"
+       },
+       {
+        "number": 12,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "documentation",
+         "the documentation"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Reviewers had to 'update documentation that the agent had left out of date' (29.0 per cent).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Reviewers also had to update documentation that the agent had left out of date (29.0 per cent), reorganise code to suit the project's structure (27.1 per cent) and tidy the code so that it matched the house style of the particular project (23.4 per cent).</p></blockquote>"
+       },
+       {
+        "number": 13,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "house style",
+         "the house style"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>In 23.4 per cent of revised requests (almost a quarter), the code was tidied 'so that it matched the house style of the particular project'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Reviewers also had to update documentation that the agent had left out of date (29.0 per cent), reorganise code to suit the project's structure (27.1 per cent) and tidy the code so that it matched the house style of the particular project (23.4 per cent).</p></blockquote>"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "writing": [
+  {
+   "task": 2,
+   "essay_type": "discussion",
+   "prompt": "Some people believe that as artificial intelligence becomes able to do skilled work such as writing computer programs, the value of human expertise will decline. Others argue that these tools will make experienced professionals more important than ever.\n\nDiscuss both these views and give your own opinion."
+  },
+  {
+   "task": 1,
+   "essay_type": "bar",
+   "prompt": "The chart below shows the percentage of pull requests (proposals to change the code of a software project) that contained six types of change, comparing requests prepared with an AI coding agent and requests written by the same developers without it, in open-source projects in 2024-2025. A single request could contain more than one type of change.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+   "image": "media/writing/research/agentic-prs-purposes.svg",
+   "image_description": "Grouped bar chart, percentage of pull requests containing each type of change (multi-label, so totals exceed 100%), with an AI agent (213 requests) / without it, same developers (221 requests): Bug fixes 31.0 / 30.8; New features 26.8 / 27.6; Refactoring 24.9 / 14.9; Documentation 22.1 / 14.0; Tests 18.8 / 4.5; Housekeeping 3.8 / 10.4. Main trends: bug fixes and new features are the two most common types in both groups at almost identical rates (about 31% and 27%). The agent-assisted requests have much higher shares of refactoring (+10 points), documentation (+8.1) and especially tests (18.8% vs 4.5%, about four times as high). Housekeeping is the only category clearly more common without the agent (10.4% vs 3.8%) and is the least common type for agent requests."
+  }
+ ]
+}

@@ -1,0 +1,331 @@
+{
+ "id": "senior-swe-bench",
+ "title": "Senior SWE-Bench: when passing the tests is not enough",
+ "topic": "Quality and trust in AI-written code",
+ "level": "beginner",
+ "added": "2026-11-12",
+ "sources": [
+  {
+   "kind": "article",
+   "title": "Senior SWE-Bench (benchmark page and leaderboard)",
+   "authors": "Snorkel AI",
+   "year": 2026,
+   "url": "https://snorkel.ai/blog/senior-swe-bench/"
+  }
+ ],
+ "summary_md": "**In one sentence:** *Senior SWE-Bench* is a test set and leaderboard for AI coding agents, published in 2026 by\nthe company Snorkel AI with researchers from Princeton and the University of Wisconsin-Madison. It asks not only\n\"does the code work?\" but also \"is it code a good engineer would accept?\". The source is a company web page, not a\npeer-reviewed paper.\n\n### Benchmarks and leaderboards, in plain words\nA **benchmark** is a fixed set of tasks with an agreed way of marking them, so that different AI systems can be\ncompared fairly, like giving every student the same exam. A **leaderboard** is the ranked table of results, like a\nleague table of universities. For coding, a benchmark gives an AI agent a real programming problem and then runs\n**automated tests**: small programs that check whether the software now does what it should. \"Passing the tests\"\nmeans all those checks succeeded. But, like an essay that answers the question yet is long-winded and in the wrong style,\ncode can be correct without being *good*.\n\n### What is different here\n- **Real work:** 100 tasks (50 public, 50 kept private) from **12 open-source projects**, each based on a real\n  change merged into the project, mostly written by engineers with at least 100 contributions to it. The original\n  change serves as the expert **reference solution**.\n- **Realistic instructions:** short messages like a teammate's bug report (one example: 549 characters) instead of a\n  full specification (an example from SWE-Bench Pro: 5,888 characters). The agent must decide how to change the code.\n- **Private half:** stops developers from training on the whole test and inflating their scores.\n- **Two scores:**\n  - **Basic Solve Rate:** the share of attempts that pass all pre-written tests and the extra tests written by a\n    *validation agent* for each design.\n  - **Tasteful Solve Rate:** the same, plus four **quality gates**: a task rubric above its threshold; a change less\n    than **twice** the size of the reference solution (no \"bloat\"); and scores **above 2 out of 5** for following the\n    project's conventions and for quality compared with the expert's solution. These scores come from two AI judges\n    (Claude Sonnet 4.6 and GPT-5.4, averaged), calibrated against human reviewers.\n\n### Results (leaderboard, one attempt per task)\n| System | Basic | Tasteful |\n|---|---|---|\n| Opus 5.5 (1st) | 61.8% | 39.3% |\n| GPT-6 Astra (2nd) | 60.0% | 36.8% |\n| Opus 5 (5th) | 62.1% | 34.7% |\n| Gemini 4 Argon | 56.4% | 27.7% |\n| Grok 4.7 | 49.5% | 27.4% |\n| Gemini 3.1 Pro (last) | 9.5% | 2.1% |\n\nFor every system the Tasteful rate is much lower than the Basic rate: many solutions that \"work\" would not pass a\nsenior engineer's review. Opus 5 has the best Basic score but is only 5th once quality counts.\n\n### Why it matters\nAI agents increasingly write real code. A test-only score can make them look more ready than they are.\n\n### Limitations\nIt comes from a company page that also invites developers to have their models evaluated, not from a peer-reviewed paper. The quality judges are AI models, so\n\"taste\" partly means what two models like. 100 tasks from 12 projects cannot cover all software work.\n\n### IELTS angle\nUseful words: *objective*, *resemble*, *spell out*, *penalise*, *calibrated against*, *taken into account*,\n*read with caution*. For Task 2 on exams, school league tables or rankings, this is a fresh example of how a single\nscore can hide the quality of the work behind it, and how the people who design a test decide what counts as ability.\n",
+ "key_terms": [
+  {
+   "term": "benchmark (in AI)",
+   "meaning": "A fixed set of tasks with an agreed marking method, used to compare AI systems under the same conditions.",
+   "example": "Senior SWE-Bench is a benchmark of 100 software-engineering tasks."
+  },
+  {
+   "term": "leaderboard",
+   "meaning": "A ranked table showing how different systems scored on a benchmark.",
+   "example": "Opus 5.5 was at the top of the Senior SWE-Bench leaderboard."
+  },
+  {
+   "term": "coding agent",
+   "meaning": "An AI system that can read a code base, run commands and change code by itself to complete a programming task.",
+   "example": "The coding agent had to start the application and read its logs to find the bug."
+  },
+  {
+   "term": "automated test",
+   "meaning": "A small program that checks automatically whether software behaves as it should.",
+   "example": "The change passed every automated test but was twice as long as necessary."
+  },
+  {
+   "term": "open-source project",
+   "meaning": "Software whose code is public, so anyone can read it and contribute changes.",
+   "example": "The tasks come from twelve open-source projects."
+  },
+  {
+   "term": "reference solution",
+   "meaning": "An expert's answer to a task, used as the standard against which other answers are compared.",
+   "example": "Each patch was compared with the reference solution written by an experienced engineer."
+  },
+  {
+   "term": "solve rate",
+   "meaning": "The percentage of attempts at the tasks that are counted as successful.",
+   "example": "Its basic solve rate was 61.8 per cent, but its tasteful solve rate was only 39.3 per cent."
+  },
+  {
+   "term": "quality gate",
+   "meaning": "A check that work must pass before it is accepted, beyond simply working correctly.",
+   "example": "The Tasteful Solve Rate adds four quality gates to the basic tests."
+  },
+  {
+   "term": "code bloat",
+   "meaning": "Code that is much longer or more complicated than needed.",
+   "example": "Changes more than twice the size of the expert's solution were rejected as bloat."
+  },
+  {
+   "term": "training on the test (contamination)",
+   "meaning": "When an AI system has seen the test questions during training, so its score overstates its real ability.",
+   "example": "Keeping half of the tasks private reduces the risk of training on the test."
+  },
+  {
+   "term": "rubric",
+   "meaning": "A list of criteria used to mark a piece of work.",
+   "example": "Each task had its own rubric for requirements that are hard to test automatically."
+  },
+  {
+   "term": "calibrate (against)",
+   "meaning": "Academic verb: to adjust a measure so that it agrees with a trusted standard.",
+   "example": "The AI judges' thresholds were calibrated against human reviewers."
+  },
+  {
+   "term": "out of step with",
+   "meaning": "Phrase: not matching or fitting with something else.",
+   "example": "Code can pass every test and still be out of step with the rest of the program."
+  },
+  {
+   "term": "take into account",
+   "meaning": "Phrase: to consider something when making a judgement.",
+   "example": "Opus 5 fell to fifth place once quality was taken into account."
+  }
+ ],
+ "discussion": [
+  "Do you think exam results show what a person can really do? Why or why not?",
+  "Would you trust code, or other work, produced by an AI if it had passed all the tests? What else would you want to check?",
+  "Should companies that build AI systems also be the ones who test and rank them? Why?"
+ ],
+ "reading": {
+  "duration_minutes": 20,
+  "parts": [
+   {
+    "number": 1,
+    "title": "Passing the Test Is Not the Same as Doing the Job",
+    "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-13, which are based on the Reading Passage below.</em></p><p><strong>A</strong> When a new artificial intelligence system is released, its makers almost always announce how it performed on a series of benchmarks. A benchmark is simply a fixed collection of tasks, with an agreed way of marking them, that allows different systems to be compared under identical conditions; a leaderboard is the ranked table of their results, much like a league table of schools or universities. In software engineering, the usual benchmarks give an AI 'coding agent' a problem from a real program and then run a set of automated tests. If the tests pass, the task is counted as solved. This seems objective, but experienced programmers know that code can pass every test and still be poorly written: too long, hard to maintain, or out of step with the rest of the program.</p><p><strong>B</strong> Senior SWE-Bench, a benchmark released in 2026 by the data company Snorkel AI together with researchers from Princeton University and the University of Wisconsin-Madison, was designed around this gap. Its authors argue that most existing software benchmarks treat AI agents like junior engineers, handing them detailed requirements and marking their work against a fixed set of tests. The new benchmark instead aims to resemble the assignments given to experienced engineers, who must work out for themselves what needs to be done.</p><p><strong>C</strong> The benchmark's 100 tasks are drawn from twelve open-source projects, ranging from small libraries to complete applications. Rather than being invented, each task is based on a recent change that was actually merged into one of these projects. Most of these changes were written by engineers with at least 100 contributions to the project concerned, and work by the projects' own maintainers was given priority, so the original change can serve as an expert's reference solution. The tasks include building new features, moving code to new designs, fixing bugs and solving performance problems. Investigation tasks may require an agent to start the application, read its logs, reproduce a failure and track down its root cause.</p><p><strong>D</strong> One unusual feature is the style of the instructions. Instead of a precise technical specification, agents receive the kind of message a product manager, a colleague or a user might send. In one example, a bug report of 549 characters simply describes a symptom seen on live systems and asks for the cause to be found and fixed; by comparison, a sample instruction from another benchmark, SWE-Bench Pro, runs to 5,888 characters and names the exact functions to be written. The reasoning is that real requests rarely spell out the solution, and that a system which performs well when every step is stated may struggle when it has to decide for itself where a change belongs. Short instructions, in other words, test judgement as well as technical skill.</p><p><strong>E</strong> Only half of the tasks have been made public. The other 50 are kept private, a decision intended to reduce the risk that developers improve their position on the leaderboard by training their systems directly on the test material. Teachers will recognise the problem: once students have seen the exam paper, a high mark says little about what they can actually do.</p><p><strong>F</strong> The most distinctive element, however, is the marking. Every attempt is judged against two standards. The Basic Solve Rate is the share of attempts that pass all the pre-written tests, which check that the required behaviour works and that nothing which previously worked has been broken. Because agents may design a new feature in different ways, a validation agent also writes extra tests suited to the design that each solution has chosen. The Tasteful Solve Rate, in contrast, adds four further quality gates. A task-specific rubric must be scored above a threshold; the change must be less than twice the size of the reference solution, which penalises bloated code; and two judgements, one of how well the code follows the existing conventions of the project and one of its quality compared with the expert's solution, must each score above 2 out of 5. These judgements are made by a panel of two AI models, Claude Sonnet 4.6 and GPT-5.4, whose scores are averaged, and the developers say that the thresholds were calibrated against human reviewers.</p><p><strong>G</strong> The results suggest that the extra gates matter. At the top of the leaderboard, Opus 5.5 passed the basic tests in 61.8 per cent of attempts, but only 39.3 per cent of its attempts also met the quality standards. Opus 5, by contrast, achieved a slightly higher basic score of 62.1 per cent, yet it dropped to fifth place once quality was taken into account. At the bottom of the table, Gemini 3.1 Pro succeeded in 9.5 per cent of attempts at the basic level and in just 2.1 per cent once quality was included. The table also reveals differences in effort: GPT-6 Astra, in second place, needed an average of 35 steps per task, compared with 76 for the leader.</p><p><strong>H</strong> The benchmark should nevertheless be read with some caution. It is presented on a company web page rather than in a peer-reviewed journal, and the same company invites other developers to have their models evaluated against it. Its quality judges are themselves AI systems, so the scores partly reflect what two particular models consider good code. Moreover, a hundred tasks from twelve projects, however carefully chosen, cannot represent every kind of software work. Even so, the benchmark makes a point that applies well beyond programming: a single pass mark can hide large differences in the quality of the work behind it, and whoever designs a test decides, in effect, what counts as ability.</p>",
+    "groups": [
+     {
+      "range": [
+       1,
+       5
+      ],
+      "type": "tfng",
+      "instructions_html": "<p>Do the following statements agree with the information given in the Reading Passage?</p><p>TRUE if the statement agrees with the information</p><p>FALSE if the statement contradicts the information</p><p>NOT GIVEN if there is no information on this</p>",
+      "content_html": "",
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 1,
+        "prompt_html": "The tasks in the benchmark were created specially by the researchers rather than taken from real software projects.",
+        "options": null,
+        "answer": [
+         "FALSE"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph C says the tasks were not invented: each one is based on a real change merged into an open-source project.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Rather than being invented, each task is based on a recent change that was actually merged into one of these projects.</p></blockquote>"
+       },
+       {
+        "number": 2,
+        "prompt_html": "One purpose of keeping some tasks hidden is to stop developers from training their systems on the whole test.",
+        "options": null,
+        "answer": [
+         "TRUE"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph E says the 50 private tasks reduce the risk that developers raise their ranking by training directly on the test material.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The other 50 are kept private, a decision intended to reduce the risk that developers improve their position on the leaderboard by training their systems directly on the test material.</p></blockquote>"
+       },
+       {
+        "number": 3,
+        "prompt_html": "The engineers who wrote the original changes were paid for allowing their work to be used.",
+        "options": null,
+        "answer": [
+         "NOT GIVEN"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph C describes who wrote the original changes (engineers with at least 100 contributions, and maintainers), but says nothing about payment.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Most of these changes were written by engineers with at least 100 contributions to the project concerned, and work by the projects' own maintainers was given priority, so the original change can serve as an expert's reference solution.</p></blockquote>"
+       },
+       {
+        "number": 4,
+        "prompt_html": "The standards applied by the AI judges were checked against the opinions of human reviewers.",
+        "options": null,
+        "answer": [
+         "TRUE"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F says the thresholds were 'calibrated against human reviewers'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>These judgements are made by a panel of two AI models, Claude Sonnet 4.6 and GPT-5.4, whose scores are averaged, and the developers say that the thresholds were calibrated against human reviewers.</p></blockquote>"
+       },
+       {
+        "number": 5,
+        "prompt_html": "Each task in the benchmark would take an experienced human engineer several days to complete.",
+        "options": null,
+        "answer": [
+         "NOT GIVEN"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph B says the tasks resemble the work of experienced engineers, but the passage never says how long a task would take a human.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The new benchmark instead aims to resemble the assignments given to experienced engineers, who must work out for themselves what needs to be done.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       6,
+       8
+      ],
+      "type": "mcq",
+      "instructions_html": "<p>Choose the correct letter, A, B, C or D.</p>",
+      "content_html": null,
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 6,
+        "prompt_html": "According to the writer, why are the instructions in Senior SWE-Bench kept short and informal?",
+        "options": [
+         {
+          "key": "A",
+          "text": "to reduce the cost of running the tests"
+         },
+         {
+          "key": "B",
+          "text": "to find out whether a system can make its own decisions about a change"
+         },
+         {
+          "key": "C",
+          "text": "because the original changes had no written description"
+         },
+         {
+          "key": "D",
+          "text": "so that the human reviewers can read them more quickly"
+         }
+        ],
+        "answer": [
+         "B"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph D explains that real requests rarely spell out the solution, so short instructions test whether a system can decide for itself where a change belongs, i.e. its judgement. A, C and D are not mentioned.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The reasoning is that real requests rarely spell out the solution, and that a system which performs well when every step is stated may struggle when it has to decide for itself where a change belongs.</p></blockquote>"
+       },
+       {
+        "number": 7,
+        "prompt_html": "What does the writer say about Opus 5.5, the system ranked first?",
+        "options": [
+         {
+          "key": "A",
+          "text": "It achieved the highest result on both standards."
+         },
+         {
+          "key": "B",
+          "text": "It needed fewer steps per task than any other system."
+         },
+         {
+          "key": "C",
+          "text": "More than half of its attempts met the quality standards."
+         },
+         {
+          "key": "D",
+          "text": "A system ranked below it did slightly better on the basic tests."
+         }
+        ],
+        "answer": [
+         "D"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph G says Opus 5, in fifth place, had a slightly higher basic score (62.1 per cent against 61.8). A is wrong for the same reason, B is wrong because GPT-6 Astra needed fewer steps (35 against 76), and C is wrong because only 39.3 per cent of its attempts met the quality standards.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Opus 5, by contrast, achieved a slightly higher basic score of 62.1 per cent, yet it dropped to fifth place once quality was taken into account.</p></blockquote>"
+       },
+       {
+        "number": 8,
+        "prompt_html": "What is the writer's main point in the last paragraph?",
+        "options": [
+         {
+          "key": "A",
+          "text": "The benchmark has limitations, but its central message is widely relevant."
+         },
+         {
+          "key": "B",
+          "text": "The benchmark's results are too unreliable to be of any use."
+         },
+         {
+          "key": "C",
+          "text": "Human reviewers should replace the AI judges in future versions."
+         },
+         {
+          "key": "D",
+          "text": "All of the benchmark's tasks should be made available to the public."
+         }
+        ],
+        "answer": [
+         "A"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph H lists reasons for caution (company page, AI judges, limited number of tasks) but ends by saying the benchmark 'makes a point that applies well beyond programming'. The writer does not call it worthless, ask for human judges instead, or ask for the private tasks to be published.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Even so, the benchmark makes a point that applies well beyond programming: a single pass mark can hide large differences in the quality of the work behind it, and whoever designs a test decides, in effect, what counts as ability.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       9,
+       13
+      ],
+      "type": "table_completion",
+      "instructions_html": "<p>Complete the table below.</p><p>Choose <strong>NO MORE THAN TWO WORDS AND/OR A NUMBER</strong> from the passage for each answer.</p>",
+      "content_html": "<p><strong>How Senior SWE-Bench marks an attempt</strong></p>\n<table>\n<tbody>\n<tr>\n<th>CHECK</th>\n<th>WHAT IS CHECKED</th>\n<th>COUNTS FOR</th>\n</tr>\n<tr>\n<td>Pre-written tests</td>\n<td>required behaviour works; nothing that worked before is broken</td>\n<td>both scores</td>\n</tr>\n<tr>\n<td>Extra tests</td>\n<td>written by a {{9}} to suit the design each solution has chosen</td>\n<td>both scores</td>\n</tr>\n<tr>\n<td>Task rubric</td>\n<td>score must be above a {{10}}</td>\n<td>Tasteful Solve Rate only</td>\n</tr>\n<tr>\n<td>Size of the change</td>\n<td>must be less than {{11}} the size of the reference solution</td>\n<td>Tasteful Solve Rate only</td>\n</tr>\n<tr>\n<td>Codebase practice</td>\n<td>how well the code follows the project's existing {{12}}</td>\n<td>Tasteful Solve Rate only</td>\n</tr>\n<tr>\n<td>Relative quality</td>\n<td>compared with the expert's solution; score must be above {{13}} out of 5</td>\n<td>Tasteful Solve Rate only</td>\n</tr>\n</tbody>\n</table>",
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 9,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "validation agent",
+         "a validation agent"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F: extra tests suited to each design are written by a validation agent.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Because agents may design a new feature in different ways, a validation agent also writes extra tests suited to the design that each solution has chosen.</p></blockquote>"
+       },
+       {
+        "number": 10,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "threshold",
+         "a threshold"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F: the task-specific rubric must be scored above a threshold.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>A task-specific rubric must be scored above a threshold; the change must be less than twice the size of the reference solution, which penalises bloated code; and two judgements, one of how well the code follows the existing conventions of the project and one of its quality compared with the expert's solution, must each score above 2 out of 5.</p></blockquote>"
+       },
+       {
+        "number": 11,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "twice"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F: the change must be less than twice the size of the reference solution.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>A task-specific rubric must be scored above a threshold; the change must be less than twice the size of the reference solution, which penalises bloated code; and two judgements, one of how well the code follows the existing conventions of the project and one of its quality compared with the expert's solution, must each score above 2 out of 5.</p></blockquote>"
+       },
+       {
+        "number": 12,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "conventions",
+         "existing conventions"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F: one judgement measures how well the code follows the existing conventions of the project.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>A task-specific rubric must be scored above a threshold; the change must be less than twice the size of the reference solution, which penalises bloated code; and two judgements, one of how well the code follows the existing conventions of the project and one of its quality compared with the expert's solution, must each score above 2 out of 5.</p></blockquote>"
+       },
+       {
+        "number": 13,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "2",
+         "two"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F: both judgements, including quality compared with the expert's solution, must score above 2 out of 5.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>A task-specific rubric must be scored above a threshold; the change must be less than twice the size of the reference solution, which penalises bloated code; and two judgements, one of how well the code follows the existing conventions of the project and one of its quality compared with the expert's solution, must each score above 2 out of 5.</p></blockquote>"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "writing": [
+  {
+   "task": 2,
+   "essay_type": "discussion",
+   "prompt": "Tests and rankings, such as school examinations, university league tables and performance tables for computer systems, are widely used to measure ability. Some people believe they are the fairest and most reliable way to compare people or products. Others argue that they fail to show what someone or something can really do.\n\nDiscuss both these views and give your own opinion."
+  },
+  {
+   "task": 1,
+   "essay_type": "bar",
+   "prompt": "The chart below shows the percentage of attempts at software-engineering tasks that six AI coding systems completed successfully in the Senior SWE-Bench benchmark in 2026, measured in two ways: passing the automated tests only, and passing the tests as well as additional code-quality checks.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+   "image": "media/writing/research/senior-swe-bench-solve-rates.svg",
+   "image_description": "Bar chart, share of attempts solved (%, 0-70) by six AI coding systems on Senior SWE-Bench (2026), Basic Solve Rate (tests passed) / Tasteful Solve Rate (tests and quality checks passed): Opus 5.5 61.8 / 39.3; GPT-6 Astra 60.0 / 36.8; Opus 5 62.1 / 34.7; Gemini 4 Argon 56.4 / 27.7; Grok 4.7 49.5 / 27.4; Gemini 3.1 Pro 9.5 / 2.1. Every system scores much lower once quality checks are added: roughly 20-29 points lower for the top five, so only about half to two-thirds of their test-passing attempts also pass the quality checks. The top three are close on the basic measure (60-62%); Opus 5 has the highest basic score but only the third-highest tasteful score of these six, while Opus 5.5 leads on the tasteful measure. Gemini 4 Argon and Grok 4.7 have almost the same tasteful rate (about 27%) despite a 7-point gap in basic rate. Gemini 3.1 Pro is far behind on both (under 10% and about 2%)."
+  }
+ ]
+}

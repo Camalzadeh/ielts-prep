@@ -1,0 +1,16 @@
+{
+ "type": "bar",
+ "title": "Problems found in AI answers to eight tasks, by answer format",
+ "y_label": "Total problems found (9 people)",
+ "x_label": "Data analysis task",
+ "categories": ["Task 1", "Task 2", "Task 3", "Task 4", "Task 5", "Task 6", "Task 7", "Task 8"],
+ "series": [
+  {"name": "Steps + alternatives", "values": [17, 8, 19, 9, 17, 11, 12, 8]},
+  {"name": "Steps only", "values": [12, 19, 6, 15, 9, 10, 5, 15]},
+  {"name": "Original paragraphs", "values": [8, 7, 10, 7, 6, 6, 5, 5]}
+ ],
+ "y_min": 0,
+ "y_max": 20,
+ "y_step": 4,
+ "decimals": 0
+}

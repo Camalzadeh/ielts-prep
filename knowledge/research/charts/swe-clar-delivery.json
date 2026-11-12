@@ -1,0 +1,36 @@
+{
+ "type": "bar",
+ "title": "Share of 100 software tasks completed by two AI coding agents (%)",
+ "y_label": "Tasks completed (%)",
+ "x_label": "Information available to the agent",
+ "categories": [
+  "No questions allowed",
+  "Questions during coding",
+  "Questions before coding",
+  "Full requirements given"
+ ],
+ "series": [
+  {
+   "name": "GPT-5.6 Luna",
+   "values": [
+    6.0,
+    26.0,
+    49.0,
+    75.0
+   ]
+  },
+  {
+   "name": "GLM-5.3 Flash",
+   "values": [
+    5.0,
+    13.0,
+    39.0,
+    71.0
+   ]
+  }
+ ],
+ "y_min": 0,
+ "y_max": 100,
+ "y_step": 20,
+ "decimals": 0
+}

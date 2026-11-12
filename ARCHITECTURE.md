@@ -289,6 +289,15 @@ Backend additions (non-breaking, implemented)
 - Setting `show_general_training` (`"0"` by default): `GET /api/tests` leaves out General Training tests the
   learner never started (any attempt keeps a test listed; `module=` lists one module regardless). Mocks pick
   reading tests of the exam's own module only (Academic by default).
+- AI Research lessons (branch `research`, `backend/app/research.py`, format in `knowledge/research/README.md`):
+  `knowledge/research/lessons/<id>.json` -> importer step `research`: readings -> full Cambridge-style tests
+  `research-test-<n>` (series "AI Research", 3 passages / 40 questions / 60 min, grouped in `knowledge/research/tests.json`,
+  questions renumbered; ungrouped lessons -> one-passage test `research-<id>`, 20 min) in the Reading library, writing -> prompts in the Writing bank (`source:"research"`,
+  `tags:"research,<id>"`), key terms -> vocab (topic "AI Research"); `import_kb` adds a generated guide per lesson
+  (slug `research-<id>`, category `ai-research`: notes, terms, sources, links to the test and prompts).
+  Setting `show_research` (`"1"` by default) hides all of these (started tests / prompts with essays stay); random
+  picks and mocks never use them. `writing_context` adds the lesson notes for research prompts. Check lessons with
+  `tools/check_research.py`; Task 1 charts with `tools/research_chart.py`.
 
 ## 5. AI analysis runner (`backend/app/ai_runner.py`)
 

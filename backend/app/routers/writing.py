@@ -8,7 +8,7 @@ from typing import Any, Optional
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 
-from .. import db
+from .. import db, research
 from ..context import latest_ai_band
 from ..importer import word_count
 
@@ -32,6 +32,10 @@ def list_prompts(task: Optional[int] = None, essay_type: Optional[str] = None, q
                  conn: sqlite3.Connection = Depends(db.get_db)) -> list[dict]:
     sql = f"SELECT {PROMPT_COLS} FROM writing_prompts p WHERE 1=1"
     args: list[Any] = []
+    if not research.enabled(conn):
+        # AI Research prompts: switched in Settings; prompts with essays stay
+        sql += (" AND (COALESCE(p.source, '') != 'research'"
+                " OR EXISTS (SELECT 1 FROM writing_submissions s WHERE s.prompt_id = p.id))")
     if task:
         sql += " AND p.task = ?"
         args.append(task)
@@ -50,7 +54,8 @@ def list_prompts(task: Optional[int] = None, essay_type: Optional[str] = None, q
 
 
 def pick_random_prompt(conn: sqlite3.Connection, task: int | None, module: str | None = None) -> dict | None:
-    sql = f"SELECT {PROMPT_COLS} FROM writing_prompts p WHERE 1=1"
+    # Random Task 1/2 never picks AI Research prompts
+    sql = f"SELECT {PROMPT_COLS} FROM writing_prompts p WHERE COALESCE(p.source, '') != 'research'"
     args: list[Any] = []
     if task:
         sql += " AND p.task = ?"

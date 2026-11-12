@@ -1,0 +1,15 @@
+{
+ "type": "bar",
+ "title": "Types of change in pull requests made with and without an AI agent (%)",
+ "y_label": "% of pull requests",
+ "x_label": "Type of change",
+ "categories": ["Bug fixes", "New features", "Refactoring", "Documentation", "Tests", "Housekeeping"],
+ "series": [
+  {"name": "With an AI agent", "values": [31.0, 26.8, 24.9, 22.1, 18.8, 3.8]},
+  {"name": "Without (same developers)", "values": [30.8, 27.6, 14.9, 14.0, 4.5, 10.4]}
+ ],
+ "y_min": 0,
+ "y_max": 35,
+ "y_step": 5,
+ "decimals": 1
+}

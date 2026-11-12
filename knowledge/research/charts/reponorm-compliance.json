@@ -1,0 +1,16 @@
+{
+ "type": "bar",
+ "title": "Project norms followed by an AI coding model (DeepSeek), by type of norm",
+ "y_label": "Norms followed (%)",
+ "x_label": "Type of norm",
+ "categories": ["All norms", "Contribution", "Behavioural", "Not stated in task"],
+ "series": [
+  {"name": "No extra guidance", "values": [65.6, 33.8, 96.5, 52.1]},
+  {"name": "Documentation (CodeWiki)", "values": [65.7, 34.8, 95.5, 52.4]},
+  {"name": "Norm package (RepoNorm)", "values": [72.6, 49.2, 96.0, 61.3]}
+ ],
+ "y_min": 0,
+ "y_max": 100,
+ "y_step": 20,
+ "decimals": 1
+}

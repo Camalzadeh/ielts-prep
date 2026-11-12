@@ -60,6 +60,12 @@ tactics for the current question/task type, the course's word tables and phrase 
 insert it into your essay), the course rules, vocabulary and a free translator (select any text →
 *Translate*). It is off during mock exams unless you allow it in Settings.
 
+**AI Research**: learn AI and practise IELTS together. Material from AI papers, forum threads and courses becomes
+IELTS-style reading tests (**Reading**, series "AI Research"), writing prompts (**Writing**, source "AI Research")
+and guides that explain each idea with its key terms (**Learn → Knowledge base → AI Research**; the terms are also
+flashcards). They are never used in mock exams or random picks, and **Settings → AI Research** switches them on or off. To add lessons, put material in `knowledge/research/inbox/`
+(not committed) and ask Claude to make lessons from it; see `knowledge/research/README.md`.
+
 ## AI feedback (optional)
 "Explain my mistakes" / "Analyse with AI" uses a coding-agent CLI installed and logged in on your
 computer. The header offers the ones it finds; **Settings → AI provider** lists all of them with install steps.

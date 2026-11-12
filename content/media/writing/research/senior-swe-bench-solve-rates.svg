@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="760" height="460" font-family="Arial, Helvetica, sans-serif" font-size="13">
+<rect width="760" height="460" fill="#ffffff"/>
+<text x="380.0" y="30" text-anchor="middle" font-size="16" font-weight="bold">Senior SWE-Bench: attempts solved by six AI coding systems (%)</text>
+<line x1="78" x2="736" y1="364.0" y2="364.0" stroke="#e3e3e3"/><text x="70" y="368.0" text-anchor="end">0</text>
+<line x1="78" x2="736" y1="321.1" y2="321.1" stroke="#e3e3e3"/><text x="70" y="325.1" text-anchor="end">10</text>
+<line x1="78" x2="736" y1="278.3" y2="278.3" stroke="#e3e3e3"/><text x="70" y="282.3" text-anchor="end">20</text>
+<line x1="78" x2="736" y1="235.4" y2="235.4" stroke="#e3e3e3"/><text x="70" y="239.4" text-anchor="end">30</text>
+<line x1="78" x2="736" y1="192.6" y2="192.6" stroke="#e3e3e3"/><text x="70" y="196.6" text-anchor="end">40</text>
+<line x1="78" x2="736" y1="149.7" y2="149.7" stroke="#e3e3e3"/><text x="70" y="153.7" text-anchor="end">50</text>
+<line x1="78" x2="736" y1="106.9" y2="106.9" stroke="#e3e3e3"/><text x="70" y="110.9" text-anchor="end">60</text>
+<line x1="78" x2="736" y1="64.0" y2="64.0" stroke="#e3e3e3"/><text x="70" y="68.0" text-anchor="end">70</text>
+<line x1="78" x2="78" y1="64" y2="364" stroke="#000"/><line x1="78" x2="736" y1="364" y2="364" stroke="#000"/>
+<text transform="translate(20 214.0) rotate(-90)" text-anchor="middle">Share of attempts solved (%)</text>
+<text x="132.8" y="384" text-anchor="middle">Opus 5.5</text>
+<text x="242.5" y="384" text-anchor="middle">GPT-6 Astra</text>
+<text x="352.2" y="384" text-anchor="middle">Opus 5</text>
+<text x="461.8" y="384" text-anchor="middle">Gemini 4 Argon</text>
+<text x="571.5" y="384" text-anchor="middle">Grok 4.7</text>
+<text x="681.2" y="384" text-anchor="middle">Gemini 3.1 Pro</text>
+<text x="407.0" y="408" text-anchor="middle">AI system</text>
+<rect x="90.1" y="99.1" width="40.8" height="264.9" fill="#2b2b2b" stroke="#000" stroke-width=".6"/>
+<text x="110.4" y="94.1" text-anchor="middle" font-size="11">61.8</text>
+<rect x="199.7" y="106.9" width="40.8" height="257.1" fill="#2b2b2b" stroke="#000" stroke-width=".6"/>
+<text x="220.1" y="101.9" text-anchor="middle" font-size="11">60.0</text>
+<rect x="309.4" y="97.9" width="40.8" height="266.1" fill="#2b2b2b" stroke="#000" stroke-width=".6"/>
+<text x="329.8" y="92.9" text-anchor="middle" font-size="11">62.1</text>
+<rect x="419.1" y="122.3" width="40.8" height="241.7" fill="#2b2b2b" stroke="#000" stroke-width=".6"/>
+<text x="439.4" y="117.3" text-anchor="middle" font-size="11">56.4</text>
+<rect x="528.7" y="151.9" width="40.8" height="212.1" fill="#2b2b2b" stroke="#000" stroke-width=".6"/>
+<text x="549.1" y="146.9" text-anchor="middle" font-size="11">49.5</text>
+<rect x="638.4" y="323.3" width="40.8" height="40.7" fill="#2b2b2b" stroke="#000" stroke-width=".6"/>
+<text x="658.8" y="318.3" text-anchor="middle" font-size="11">9.5</text>
+<rect x="132.8" y="195.6" width="40.8" height="168.4" fill="#8c8c8c" stroke="#000" stroke-width=".6"/>
+<text x="153.2" y="190.6" text-anchor="middle" font-size="11">39.3</text>
+<rect x="242.5" y="206.3" width="40.8" height="157.7" fill="#8c8c8c" stroke="#000" stroke-width=".6"/>
+<text x="262.9" y="201.3" text-anchor="middle" font-size="11">36.8</text>
+<rect x="352.2" y="215.3" width="40.8" height="148.7" fill="#8c8c8c" stroke="#000" stroke-width=".6"/>
+<text x="372.6" y="210.3" text-anchor="middle" font-size="11">34.7</text>
+<rect x="461.8" y="245.3" width="40.8" height="118.7" fill="#8c8c8c" stroke="#000" stroke-width=".6"/>
+<text x="482.2" y="240.3" text-anchor="middle" font-size="11">27.7</text>
+<rect x="571.5" y="246.6" width="40.8" height="117.4" fill="#8c8c8c" stroke="#000" stroke-width=".6"/>
+<text x="591.9" y="241.6" text-anchor="middle" font-size="11">27.4</text>
+<rect x="681.2" y="355.0" width="40.8" height="9.0" fill="#8c8c8c" stroke="#000" stroke-width=".6"/>
+<text x="701.6" y="350.0" text-anchor="middle" font-size="11">2.1</text>
+<rect x="78" y="427" width="14" height="14" fill="#2b2b2b" stroke="#000" stroke-width=".6"/>
+<text x="106" y="438">Basic Solve Rate (tests passed)</text>
+<rect x="350.5" y="427" width="14" height="14" fill="#8c8c8c" stroke="#000" stroke-width=".6"/>
+<text x="378.5" y="438">Tasteful Solve Rate (tests and quality checks passed)</text>
+</svg>

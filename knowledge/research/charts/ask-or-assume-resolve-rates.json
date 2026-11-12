@@ -1,0 +1,15 @@
+{
+ "type": "bar",
+ "title": "Software problems solved by AI coding agents in five settings (%)",
+ "y_label": "Problems solved (%)",
+ "x_label": "Setting",
+ "categories": ["Full report", "Details hidden", "Told to ask", "Single agent", "Two-agent team"],
+ "series": [
+  {"name": "Claude Sonnet 4.5", "values": [70.8, 54.8, 70.4, 61.2, 69.4]},
+  {"name": "Kimi K2.6", "values": [72.8, 55.4, 47.2, 61.6, 69.4]}
+ ],
+ "y_min": 0,
+ "y_max": 80,
+ "y_step": 10,
+ "decimals": 1
+}

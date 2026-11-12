@@ -1,0 +1,385 @@
+{
+ "id": "reponorm",
+ "title": "RepoNorm: teaching coding agents a project's unwritten rules",
+ "topic": "Quality and trust in AI-written code",
+ "level": "intermediate",
+ "added": "2026-11-12",
+ "sources": [
+  {
+   "kind": "paper",
+   "title": "Acquiring and Verifying Repository Norms for Coding Agents",
+   "authors": "Kaifeng He, Xiaojun Zhang, Zhenxi Chen, Christoph Treude, Mingwei Liu",
+   "year": 2026,
+   "url": "https://arxiv.org/abs/2610.07757"
+  }
+ ],
+ "summary_md": "**In one sentence:** AI coding agents often write code that passes its tests but still breaks a project's\nunwritten rules (a missing test, changelog line or safety step). **RepoNorm** (He et al., 2026) collects those rules\nfrom a project *before* any task, checks each one against the code, and hands the agent only the well-supported ones.\n\n### First, two words\n- A **repository** is the shared folder of a software project: all its code, tests, documentation and the full history\n  of every change (kept with a tool called Git).\n- **Norms** are the team's expectations about *how* a change should be made: \"add a test\", \"write a line in the\n  changelog\", \"keep the existing error handling\". Like the house rules in a new job, some are written in a handbook\n  (a *contribution guide*); many are unwritten and you only learn them by watching how things are already done.\n\n### The problem\nAn agent is usually judged by **functional tests**: does the new feature work? In the paper's Jinja example, an agent\npassed all 171 functional checks but forgot the changelog entry that the contribution guide requires. In Tiktoken, an\nagent passed all 18 checks but skipped an existing repair step for unusual characters in its new code path.\nHand-written instruction files (CLAUDE.md, AGENTS.md) help but take effort; generated wikis such as CodeWiki explain the\ncode but do not say which statements are *obligations*.\n\n### The idea\n1. **Explicit channel:** read what the project states (guides, configuration files, automated workflows).\n2. **Implicit channel:** infer conventions from what the code consistently does, then test the guess on all matching code\n   and look for **counterexamples**. (A rule about Jinja filters was narrowed after the `sum` and `join` filters did not fit.)\n3. **Verification:** each candidate is *accepted*, sent for *review* or *rejected*. Git history may be consulted, but\n   history alone can never accept or reject a rule.\n4. **Delivery:** accepted norms go into a small package of Markdown files ordered by folder, so the agent can look up\n   the rules for the files it is changing.\n\n### Results (121 tasks, six small Python projects, three models: DeepSeek, Qwen, Gemini)\n| Measure (vs. no guidance, relative change) | RepoNorm |\n|---|---|\n| All norms followed | +7.42% to +10.77% |\n| Contribution norms (tests, docs, changelog, style, typing) | +31.64% to +45.44% |\n| Norms the task never mentioned | +11.34% to +17.69% |\n| Behaviour norms | already 87.6-96.5% without help; small, mixed changes |\n\n- Functional success was 5.79-9.09 percentage points higher, but **not statistically significant**.\n- CodeWiki documentation did not consistently raise compliance.\n- Precision: 258 of 300 sampled accepted norms (86%) were correct, but they fully covered only 21.88% of the 160\n  reference norms (52.50% after an extra automated review, with precision falling to 75.17%).\n- Cost: about 9 minutes per package; 2.14 hours in total, 3.2% of the agents' coding time.\n\n### Why it matters\nTrust in AI-written code depends on more than \"it works\". Reviewers reject changes that ignore the team's conventions.\nGiving an agent checked rules *with their evidence* makes its work more complete.\n\n### Limitations\nOnly Python; six relatively small projects; packages can go stale as the code changes; and the agent may still\noverlook relevant rules among many entries.\n\n### IELTS angle\nUseful words from the passage: *lapse*, *trivial*, *undermine confidence*, *precaution*, *premature*, *modest*,\n*twofold*. In Task 2 essays on work, migration or education, this is a vivid example of how **unwritten rules** trip\nup newcomers, and of the benefit of making expectations explicit, with reasons.\n",
+ "key_terms": [
+  {
+   "term": "repository (in software)",
+   "meaning": "The shared store of a software project: its code, tests, documentation and the history of every change.",
+   "example": "The agent explored the repository before editing any files."
+  },
+  {
+   "term": "coding agent",
+   "meaning": "An AI program, built on a large language model, that can navigate a project, edit files and run tests by itself.",
+   "example": "The coding agent finished the feature but forgot to update the documentation."
+  },
+  {
+   "term": "repository norm",
+   "meaning": "An expectation about how changes to a particular project should be made, tested and documented.",
+   "example": "Adding a changelog entry for every change is a repository norm in Jinja."
+  },
+  {
+   "term": "changelog",
+   "meaning": "A running list, kept in the project, of what changed in each version.",
+   "example": "The patch worked, but nobody had added a line to the changelog."
+  },
+  {
+   "term": "functional test",
+   "meaning": "An automated check that the code does what was asked, without judging how it was written.",
+   "example": "All 171 functional tests passed, yet a project rule was broken."
+  },
+  {
+   "term": "explicit vs implicit norm",
+   "meaning": "An explicit norm is written down (e.g. in a contribution guide); an implicit one can only be seen in what the code consistently does.",
+   "example": "RepoNorm collects explicit norms from guides and infers implicit ones from the code."
+  },
+  {
+   "term": "counterexample",
+   "meaning": "A case that does not fit a proposed general rule and so shows the rule is too broad or wrong.",
+   "example": "The sum filter was a counterexample to the first version of the rule."
+  },
+  {
+   "term": "instruction file (CLAUDE.md / AGENTS.md)",
+   "meaning": "A text file in a project that tells AI agents how to work in it.",
+   "example": "Writing an instruction file by hand means listing every rule and when it applies."
+  },
+  {
+   "term": "benchmark",
+   "meaning": "A fixed set of tasks used to compare systems fairly.",
+   "example": "The benchmark contained 121 coding tasks from six Python projects."
+  },
+  {
+   "term": "precision and coverage",
+   "meaning": "Precision: how many of the rules found are correct. Coverage: how many of the rules that exist were found.",
+   "example": "The accepted norms had high precision but low coverage."
+  },
+  {
+   "term": "statistically significant",
+   "meaning": "Large enough, given the data, that it is unlikely to be due to chance.",
+   "example": "The improvement in functional success was not statistically significant."
+  },
+  {
+   "term": "lapse",
+   "meaning": "Academic word: a small failure or mistake, often from forgetting or not paying attention.",
+   "example": "Such lapses may look trivial, but they slow down review."
+  },
+  {
+   "term": "premature",
+   "meaning": "Academic word: happening or done too early, before there is enough evidence.",
+   "example": "It would be premature to say the method makes code work better."
+  },
+  {
+   "term": "precaution",
+   "meaning": "Academic word: an action taken in advance to prevent something bad or wrong from happening.",
+   "example": "Not letting old history decide a rule on its own seems a wise precaution."
+  }
+ ],
+ "discussion": [
+  "When people start a new job or move to a new country, how do they usually learn the unwritten rules?",
+  "Would you trust code, or any other work, produced by an AI if it worked correctly but did not follow your team's usual way of doing things? Why?",
+  "Is it better for an organisation to write all its rules down, or are some rules better left unwritten?"
+ ],
+ "reading": {
+  "duration_minutes": 20,
+  "parts": [
+   {
+    "number": 1,
+    "title": "Learning the House Rules: Can AI Coding Agents Follow a Team's Norms?",
+    "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-14, which are based on the Reading Passage below.</em></p><p><strong>A</strong> Anyone who has started a new job knows that the staff handbook tells only part of the story. It may explain how to claim expenses, but not that the manager expects to be copied into client emails. Newcomers learn these house rules slowly, by watching colleagues. Software teams work in much the same way. Their shared work lives in a repository: a central store holding a project's code, tests and documentation, with a record of every change. Around that code grows a set of norms: expectations about how a change should be made, tested and described. Some are written in a contribution guide; others are visible only in the existing code.</p><p><strong>B</strong> Increasingly, the newcomer is not a person but an AI coding agent, a program that can explore a repository, edit files and run tests by itself. Such agents are judged mainly on whether their code passes functional tests, which check only that the requested feature works. A 2026 paper by Kaifeng He and colleagues in China and Singapore shows why this is not enough. In one example, an agent asked to extend a feature of Jinja, a Python templating library, passed all 171 functional checks. Yet it did not add an entry to the changelog, the list of changes that Jinja's contribution guide requires, which the task description had not mentioned. Such lapses may look trivial, but they are precisely what slows down human review and undermines confidence in code written by machines.</p><p><strong>C</strong> A second case is subtler. Tiktoken, a library that prepares text for language models, contains a step that repairs certain unusual characters before passing them to its core encoder. When an agent added a way of processing text in chunks, its new code skipped that repair. The patch passed all 18 functional checks, yet it quietly broke an established behaviour. An agent, then, must both discover norms that the task never mentions and work out where each one applies.</p><p><strong>D</strong> Existing remedies only partly solve the problem. Developers can write instruction files, such as CLAUDE.md or AGENTS.md, but writing them by hand means identifying every relevant norm and when it applies. Documentation tools such as CodeWiki describe how a repository is organised, yet they leave the agent to decide which statements are obligations and which are merely descriptions. The authors also cite an earlier study which found that agents generally obey instruction files, but without a consistent gain in the number of tasks they solve. Obedience, in other words, is only as useful as the instructions themselves.</p><p><strong>E</strong> The authors' system, RepoNorm, gathers candidate norms before any task begins, through two channels. The explicit channel reads what the project states in writing, such as contribution guides and configuration files. The implicit channel infers conventions from what the code consistently does, and tests each guess against the code. In Jinja, several filters return a special 'undefined' value for empty input, suggesting that every filter reducing a sequence to one value behaves this way. Checking the matching functions revealed counterexamples: the sum filter returns a starting value, normally zero, and the join filter returns an empty string. The rule was therefore narrowed to filters that select a single element, such as first, last and max.</p><p><strong>F</strong> Every candidate is then verified and either accepted, sent for review or rejected. RepoNorm can also search the project's history of changes, but historical evidence alone can never accept or reject a norm. This seems a wise precaution, since a once-common practice may have been abandoned. By default only accepted norms reach the agent. They are delivered as plain text files, organised according to the folders they apply to, together with the evidence behind them.</p><p><strong>G</strong> The researchers tested three AI models, from DeepSeek, Qwen and Gemini, on 121 tasks from six relatively small Python projects, with no extra guidance, with CodeWiki documentation, or with a RepoNorm package. With the package, the share of applicable norms that agents followed rose by between 7.42% and 10.77% in relative terms. The largest gains, of 31.64% to 45.44%, came in contribution norms such as writing tests and updating documentation and changelogs, which functional tests do not check. By contrast, norms about how the code behaves were already followed between 87.6% and 96.5% of the time without help, and changed little. CodeWiki brought no consistent improvement.</p><p><strong>H</strong> Whether the code worked better is less clear. Functional success rose by between 5.79 and 9.09 percentage points, but none of these differences passed the authors' test of statistical significance. It would therefore be premature to claim that knowing a team's norms makes an agent's code more likely to work; what the study does show is that the code becomes more complete. The norms were largely reliable: of a sample of 300 accepted entries, 258, or 86%, were judged correct. Coverage was weaker: the accepted norms fully captured only 21.88% of 160 reference norms prepared by the researchers.</p><p><strong>I</strong> The cost is modest. Building a package took just over nine minutes on average, and the total of 2.14 hours was only 3.2% of the time the agents then spent coding. The limitations are equally clear: only Python is supported so far, packages can become out of date as a project changes, and whether the approach works for much larger projects remains untested. Even so, the central lesson applies well beyond software. A newcomer who is shown the house rules, together with the reasons for them, is far more likely to behave like a colleague than like a stranger.</p>",
+    "groups": [
+     {
+      "range": [
+       1,
+       5
+      ],
+      "type": "matching_information",
+      "instructions_html": "<p>The Reading Passage has nine paragraphs, <strong>A-I</strong>.</p><p>Which paragraph contains the following information?</p><p><em>Write the correct letter, <strong>A-I</strong>, in boxes 1-5 on your answer sheet.</em></p><p><strong>NB</strong> You may use any letter more than once.</p>",
+      "content_html": "",
+      "image": null,
+      "options": [
+       {
+        "key": "A",
+        "text": ""
+       },
+       {
+        "key": "B",
+        "text": ""
+       },
+       {
+        "key": "C",
+        "text": ""
+       },
+       {
+        "key": "D",
+        "text": ""
+       },
+       {
+        "key": "E",
+        "text": ""
+       },
+       {
+        "key": "F",
+        "text": ""
+       },
+       {
+        "key": "G",
+        "text": ""
+       },
+       {
+        "key": "H",
+        "text": ""
+       },
+       {
+        "key": "I",
+        "text": ""
+       }
+      ],
+      "questions": [
+       {
+        "number": 1,
+        "prompt_html": "a reference to the risk that the guidance may become outdated",
+        "options": null,
+        "answer": [
+         "I"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph I lists among the limitations that packages 'can become out of date as a project changes'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The limitations are equally clear: only Python is supported so far, packages can become out of date as a project changes, and whether the approach works for much larger projects remains untested.</p></blockquote>"
+       },
+       {
+        "number": 2,
+        "prompt_html": "an example of a proposed rule that turned out to be too general",
+        "options": null,
+        "answer": [
+         "E"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph E describes the Jinja filter rule: counterexamples (sum and join) showed it was too broad, so it was narrowed.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The rule was therefore narrowed to filters that select a single element, such as first, last and max.</p></blockquote>"
+       },
+       {
+        "number": 3,
+        "prompt_html": "a description of how new employees usually pick up rules that are not written down",
+        "options": null,
+        "answer": [
+         "A"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph A says that the staff handbook tells only part of the story and that newcomers learn the house rules by watching colleagues.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Newcomers learn these house rules slowly, by watching colleagues.</p></blockquote>"
+       },
+       {
+        "number": 4,
+        "prompt_html": "a mention of research suggesting that following instructions does not guarantee better results",
+        "options": null,
+        "answer": [
+         "D"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph D cites an earlier study: agents obey instruction files but do not consistently solve more tasks.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The authors also cite an earlier study which found that agents generally obey instruction files, but without a consistent gain in the number of tasks they solve.</p></blockquote>"
+       },
+       {
+        "number": 5,
+        "prompt_html": "a figure showing what proportion of a sample of rules was accurate",
+        "options": null,
+        "answer": [
+         "H"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph H gives the precision result: 258 of 300 sampled entries, or 86%, were judged correct.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The norms were largely reliable: of a sample of 300 accepted entries, 258, or 86%, were judged correct.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       6,
+       9
+      ],
+      "type": "ynng",
+      "instructions_html": "<p>Do the following statements agree with the views of the writer in the Reading Passage?</p><p>In boxes 6-9 on your answer sheet, write</p><p><strong>YES</strong> if the statement agrees with the views of the writer</p><p><strong>NO</strong> if the statement contradicts the views of the writer</p><p><strong>NOT GIVEN</strong> if it is impossible to say what the writer thinks about this</p>",
+      "content_html": "",
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 6,
+        "prompt_html": "Omissions such as a missing changelog entry are of little real importance.",
+        "options": null,
+        "answer": [
+         "NO"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The writer admits such lapses 'may look trivial' but argues that they slow down human review and undermine confidence in machine-written code, so the writer thinks they do matter.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Such lapses may look trivial, but they are precisely what slows down human review and undermines confidence in code written by machines.</p></blockquote>"
+       },
+       {
+        "number": 7,
+        "prompt_html": "It is sensible that records of past changes cannot decide on their own whether a norm is accepted.",
+        "options": null,
+        "answer": [
+         "YES"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The writer calls the rule that historical evidence alone can never accept or reject a norm 'a wise precaution'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>This seems a wise precaution, since a once-common practice may have been abandoned.</p></blockquote>"
+       },
+       {
+        "number": 8,
+        "prompt_html": "The study proves that knowing a team's norms helps an agent produce code that works.",
+        "options": null,
+        "answer": [
+         "NO"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The writer says the gains in functional success were not statistically significant, so such a claim 'would be premature'; the study only shows the code becomes more complete.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>It would therefore be premature to claim that knowing a team's norms makes an agent's code more likely to work; what the study does show is that the code becomes more complete.</p></blockquote>"
+       },
+       {
+        "number": 9,
+        "prompt_html": "RepoNorm is likely to be more useful for large projects than for small ones.",
+        "options": null,
+        "answer": [
+         "NOT GIVEN"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The writer only says that larger projects have not been tested; there is no opinion on whether the approach would work better or worse for them.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The limitations are equally clear: only Python is supported so far, packages can become out of date as a project changes, and whether the approach works for much larger projects remains untested.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       10,
+       13
+      ],
+      "type": "summary_completion",
+      "instructions_html": "<p>Complete the summary using the list of words, <strong>A-H</strong>, below.</p><p><em>Write the correct letter, <strong>A-H</strong>, in boxes 10-13 on your answer sheet.</em></p>",
+      "content_html": "<p><strong>How RepoNorm prepares guidance for a coding agent</strong></p><p>Before any task is given, RepoNorm collects possible norms in two ways. Some come from what the project says in writing, such as its contribution guide, while others are {{10}} from regular patterns in the code. Each proposed rule is checked against the code, and if {{11}} are found, the rule may be made narrower. Every candidate is then given a status, and normally only norms that have been {{12}} are handed to the agent. These are supplied as plain text files grouped by the {{13}} they cover, so the agent can find the guidance for the part of the project it is changing.</p>",
+      "image": null,
+      "options": [
+       {
+        "key": "A",
+        "text": "accepted"
+       },
+       {
+        "key": "B",
+        "text": "authors"
+       },
+       {
+        "key": "C",
+        "text": "counterexamples"
+       },
+       {
+        "key": "D",
+        "text": "dates"
+       },
+       {
+        "key": "E",
+        "text": "folders"
+       },
+       {
+        "key": "F",
+        "text": "inferred"
+       },
+       {
+        "key": "G",
+        "text": "rejected"
+       },
+       {
+        "key": "H",
+        "text": "translated"
+       }
+      ],
+      "questions": [
+       {
+        "number": 10,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "F"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The implicit channel 'infers conventions from what the code consistently does' (F, inferred).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The implicit channel infers conventions from what the code consistently does, and tests each guess against the code.</p></blockquote>"
+       },
+       {
+        "number": 11,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "C"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Checking the Jinja filters revealed counterexamples (sum and join), and the rule was narrowed (C, counterexamples).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Checking the matching functions revealed counterexamples: the sum filter returns a starting value, normally zero, and the join filter returns an empty string.</p></blockquote>"
+       },
+       {
+        "number": 12,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "A"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>By default only accepted norms reach the agent (A, accepted). Rejected norms are never delivered.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>By default only accepted norms reach the agent.</p></blockquote>"
+       },
+       {
+        "number": 13,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "E"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The files are 'organised according to the folders they apply to' (E, folders).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>They are delivered as plain text files, organised according to the folders they apply to, together with the evidence behind them.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       14,
+       14
+      ],
+      "type": "mcq",
+      "instructions_html": "<p>Choose the correct letter, A, B, C or D.</p>",
+      "content_html": null,
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 14,
+        "prompt_html": "Which of the following is the most suitable title for this Reading Passage?",
+        "options": [
+         {
+          "key": "A",
+          "text": "Why functional tests are all that software teams really need"
+         },
+         {
+          "key": "B",
+          "text": "Teaching AI coding agents the unwritten rules of a project"
+         },
+         {
+          "key": "C",
+          "text": "How new employees can write better staff handbooks"
+         },
+         {
+          "key": "D",
+          "text": "Why AI models from three companies write code faster than people"
+         }
+        ],
+        "answer": [
+         "B"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage presents RepoNorm, which collects and checks a project's norms (its 'house rules') so that AI coding agents can follow them. A is the opposite of the passage's argument; C is only the opening analogy; D is not stated.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The authors' system, RepoNorm, gathers candidate norms before any task begins, through two channels.</p></blockquote>"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "writing": [
+  {
+   "task": 2,
+   "essay_type": "discussion",
+   "prompt": "When people join a new group, such as a workplace, a school or a country, they often find that many of its rules are unwritten. Some people believe that it is the newcomer's responsibility to learn and adapt to these unwritten rules. Others argue that groups should make their rules clear and explicit for everyone.\n\nDiscuss both these views and give your own opinion."
+  },
+  {
+   "task": 1,
+   "essay_type": "bar",
+   "prompt": "The chart below shows the percentage of a software project's rules (norms) that an AI coding assistant followed when it was given three different kinds of help, for four types of rule. Contribution rules include adding tests and updating documentation; behavioural rules concern how the code must work.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+   "image": "media/writing/research/reponorm-compliance.svg",
+   "image_description": "Grouped bar chart, percentage of applicable project norms followed (norm compliance rate, 0-100%) by one AI coding model (DeepSeek V4 Flash) on 121 tasks, under three conditions: no extra guidance / documentation (CodeWiki) / norm package (RepoNorm). All norms: 65.6 / 65.7 / 72.6. Contribution norms: 33.8 / 34.8 / 49.2. Behavioural norms: 96.5 / 95.5 / 96.0. Norms not stated in the task: 52.1 / 52.4 / 61.3. Main trends: behavioural norms are followed almost always (about 95-96%) whatever the help, while contribution norms are followed least (about a third without the package). The norm package gives the highest rate for all norms, contribution norms and unstated norms, with the biggest rise for contribution norms (33.8 to 49.2, about 15 points); documentation makes almost no difference (changes of under 1 point). For behavioural norms the three conditions are almost equal, with no help marginally highest."
+  }
+ ]
+}

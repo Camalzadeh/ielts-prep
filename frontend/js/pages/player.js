@@ -631,7 +631,7 @@ export async function render(root, params, query) {
     <h1>${esc(test.title || testId)}</h1>
     <div class="facts">
       <div><b>${allNums.length}</b><span>questions</span></div>
-      <div><b>${parts.length}</b><span>${type === 'reading' ? 'passages' : 'parts'}</span></div>
+      <div><b>${parts.length}</b><span>${type === 'reading' ? (parts.length === 1 ? 'passage' : 'passages') : 'parts'}</span></div>
       <div><b>${Math.round(durationSec / 60)}</b><span>minutes</span></div>
     </div>
     <ul>

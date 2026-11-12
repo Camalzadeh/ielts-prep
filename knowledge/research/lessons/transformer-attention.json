@@ -1,0 +1,303 @@
+{
+ "id": "transformer-attention",
+ "title": "Attention Is All You Need: the Transformer",
+ "topic": "Model architectures",
+ "level": "intermediate",
+ "added": "2026-11-12",
+ "sources": [
+  {
+   "kind": "paper",
+   "title": "Attention Is All You Need",
+   "authors": "Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, Polosukhin",
+   "year": 2017,
+   "url": "https://arxiv.org/abs/1706.03762"
+  }
+ ],
+ "summary_md": "**In one sentence:** the 2017 paper *Attention Is All You Need* replaced the step-by-step way neural networks\nread text with **attention**, letting every word look at every other word at once. This design, the\n**Transformer**, is the \"T\" in GPT and the engine inside almost every modern chatbot.\n\n### The problem it solved\nBefore 2017, translation systems used **recurrent neural networks (RNNs)**. They read a sentence word by word,\nlike a person reading through a narrow slot. That was slow (each step waits for the previous one, so the\ngraphics card cannot work in parallel), and details from the start of long sentences tended to fade.\n\n### The idea: attention\nFor every word the model makes three vectors (lists of numbers):\n\n| Vector | Rough meaning |\n|---|---|\n| **Query** | \"What am I looking for?\" |\n| **Key** | \"What do I contain?\" |\n| **Value** | \"What information can I pass on?\" |\n\nEach word's query is compared with every word's key. The better they match, the more of that word's value is\nmixed into the new representation. In *\"The animal didn't cross the street because it was too tired\"*, this is\nhow *it* gets linked to *animal*. All the comparisons are done at the same time, which suits GPUs.\n\n- **Multi-head attention:** the paper runs 8 attention \"heads\" in parallel, each free to learn a different kind of\n  relationship (grammar, meaning, ...).\n- **Positional encoding:** attention alone does not know word order, so sine/cosine patterns are added to say\n  where each word is.\n\n### Results (from the paper)\n- English→German: **28.4 BLEU** (over 2 points better than the best earlier results, including ensembles).\n- English→French: **41.8 BLEU**, a new single-model record.\n- Training: base model ~12 hours, big model 3.5 days, on one machine with 8 GPUs (much cheaper than rivals).\n\n### Why it matters\nTransformers can be trained efficiently on huge amounts of text, and they kept getting better as they got bigger.\nThat led to BERT (2018), GPT (2018 onward) and today's large language models, and to Transformer versions for\nimages, audio and biology.\n\n### The catch\nEvery word is compared with every other word, so cost grows with the **square** of the text length (2× longer\ntext ≈ 4× more attention work). A lot of later research tries to make attention cheaper for long documents.\n\n### IELTS angle\nThe passage uses typical Academic reading language: *discard*, *novelty*, *a fraction of*, *striking*,\n*limitations*. In Writing Task 2 on technology, you can use this paper as a concrete example of how one research\nidea can transform a whole industry within a few years.\n",
+ "key_terms": [
+  {
+   "term": "Transformer",
+   "meaning": "A neural-network design (2017) built on attention; the basis of GPT, BERT and most modern language models.",
+   "example": "The Transformer replaced recurrent networks in machine translation within a year."
+  },
+  {
+   "term": "attention (in AI)",
+   "meaning": "A mechanism that lets a model decide how much each part of the input should influence each other part.",
+   "example": "Attention lets the model link a pronoun to the noun it refers to."
+  },
+  {
+   "term": "self-attention",
+   "meaning": "Attention in which the words of one sequence attend to each other (rather than to a different sequence).",
+   "example": "In self-attention, every word in the sentence looks at every other word."
+  },
+  {
+   "term": "recurrent neural network (RNN)",
+   "meaning": "An older kind of network that processes a sequence one step at a time, carrying a running summary forward.",
+   "example": "RNNs were slow to train because each step waited for the one before."
+  },
+  {
+   "term": "query, key and value",
+   "meaning": "The three vectors made for each word in attention: what it looks for, what it offers, and the information it passes on.",
+   "example": "A word's query is compared with the keys of all the other words."
+  },
+  {
+   "term": "multi-head attention",
+   "meaning": "Running several attention calculations in parallel so each 'head' can learn a different kind of relationship.",
+   "example": "The original Transformer used eight attention heads."
+  },
+  {
+   "term": "positional encoding",
+   "meaning": "Numbers added to each word's representation to tell the model the word's position in the sequence.",
+   "example": "Without positional encoding, 'dog bites man' and 'man bites dog' would look the same."
+  },
+  {
+   "term": "BLEU score",
+   "meaning": "A standard measure of machine-translation quality: how closely the output matches human reference translations.",
+   "example": "The big model reached 28.4 BLEU on English-German."
+  },
+  {
+   "term": "parallel processing",
+   "meaning": "Doing many calculations at the same time instead of one after another, as graphics processors (GPUs) do.",
+   "example": "Attention suits parallel processing because all the comparisons are independent."
+  },
+  {
+   "term": "large language model (LLM)",
+   "meaning": "A very large Transformer trained on huge amounts of text to predict and generate language.",
+   "example": "Today's chatbots are built on large language models."
+  },
+  {
+   "term": "a fraction of (the cost/time)",
+   "meaning": "Academic phrase: a small part of something, much less than.",
+   "example": "The model was trained in a fraction of the time needed by earlier systems."
+  },
+  {
+   "term": "novelty",
+   "meaning": "The quality of being new and original; the new element of an idea.",
+   "example": "The novelty of the paper was to make attention the whole architecture."
+  }
+ ],
+ "discussion": [
+  "Why do you think one research paper was able to change a whole industry so quickly?",
+  "Should the most powerful AI systems be developed by companies or by universities and governments? Why?",
+  "How might AI translation change the way people learn foreign languages in the future?"
+ ],
+ "reading": {
+  "duration_minutes": 20,
+  "parts": [
+   {
+    "number": 1,
+    "title": "The Paper That Taught Machines to Pay Attention",
+    "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-13, which are based on the Reading Passage below.</em></p><p><strong>A</strong> In June 2017 eight researchers, most of them working at Google Brain and Google Research, published a paper with an unusually confident title: 'Attention Is All You Need'. At the time, the best systems for machine translation read a sentence one word at a time, using recurrent neural networks that carried a running summary of everything they had seen so far. The authors proposed to discard this step-by-step design entirely. Their model, which they called the Transformer, relied on a single mechanism, attention, to connect every word in a sentence directly with every other word.</p><p><strong>B</strong> The weakness of recurrent networks was not that they failed to understand language, but that they were slow to train. Because each step depended on the result of the previous one, the calculations for a long sentence had to be carried out in sequence, so the thousands of processors on a modern graphics card could not all be put to work at once. Information from the start of a long sentence also had to pass through many steps to reach the end, and some of it tended to be lost along the way. Researchers had already added attention to recurrent systems as a kind of supplement, allowing the model to look back at earlier words; the novelty of the 2017 paper was to make attention the whole architecture rather than an extra part.</p><p><strong>C</strong> In the Transformer, each word is first turned into a list of numbers. For every word, the model then produces three further lists, known as a query, a key and a value. Loosely, the query describes what a word is looking for, the key describes what it offers, and the value carries the information it can pass on. By comparing one word's query with the keys of all the others, the model calculates how much attention that word should pay to each of them, and it builds a new representation from the matching values. In the sentence 'The animal didn't cross the street because it was too tired', this is how the model can link 'it' with 'animal' rather than 'street'. Since these comparisons can be computed for all the words at the same time, the work suits parallel hardware.</p><p><strong>D</strong> Two further ideas made the design practical. First, rather than calculating attention once, the model does so eight times in parallel, in what the authors called multi-head attention, so that different 'heads' can track different kinds of relationship, such as grammar in one case and meaning in another. Second, because attention by itself treats a sentence as an unordered collection of words, information about position has to be added. The authors did this with positional encodings: patterns of sine and cosine waves of different frequencies, added to each word's numbers, that tell the model where in the sentence the word stands.</p><p><strong>E</strong> The results were striking. On a standard English-to-German translation test, the larger version of the Transformer scored 28.4 on BLEU, a measure of how closely machine output matches human translations, beating the previous best results, including those of combined systems, by more than two points. On English-to-French it reached 41.8, a new record for a single model. Just as important was the cost. The smaller base model was trained in about twelve hours on one machine with eight graphics processors, and the large one in three and a half days, a fraction of the computing time needed by the competing systems.</p><p><strong>F</strong> Few people predicted how far the idea would travel. Within two years the architecture had become the basis of systems such as BERT, released by Google in 2018, and the GPT series from OpenAI, the first of which also appeared in 2018. Because a Transformer could be trained efficiently on enormous quantities of text, researchers found that its abilities kept improving as models and datasets grew, a discovery that led directly to the large language models behind today's chatbots. Versions of the design have since been applied to images, audio and even the prediction of protein structures.</p><p><strong>G</strong> The design also has limitations. Because every word is compared with every other word, the amount of computation grows with the square of the length of the text: doubling the length of a document roughly quadruples the work of the attention step. Much later research has aimed to reduce this cost so that models can read whole books or long conversations. Some critics also argue that the field's heavy dependence on one architecture has narrowed the range of ideas being explored. Even so, few papers in the history of computing have changed their discipline so quickly.</p>",
+    "groups": [
+     {
+      "range": [
+       1,
+       5
+      ],
+      "type": "matching_information",
+      "instructions_html": "<p>The Reading Passage has seven paragraphs, A-G.</p><p>Which paragraph contains the following information?</p><p>NB You may use any letter more than once.</p>",
+      "content_html": "",
+      "image": null,
+      "options": [
+       {
+        "key": "A",
+        "text": ""
+       },
+       {
+        "key": "B",
+        "text": ""
+       },
+       {
+        "key": "C",
+        "text": ""
+       },
+       {
+        "key": "D",
+        "text": ""
+       },
+       {
+        "key": "E",
+        "text": ""
+       },
+       {
+        "key": "F",
+        "text": ""
+       },
+       {
+        "key": "G",
+        "text": ""
+       }
+      ],
+      "questions": [
+       {
+        "number": 1,
+        "prompt_html": "an example showing how the model works out what a word refers to",
+        "options": null,
+        "answer": [
+         "C"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph C uses the sentence about the tired animal to show how attention links 'it' with 'animal'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In the sentence 'The animal didn't cross the street because it was too tired', this is how the model can link 'it' with 'animal' rather than 'street'.</p></blockquote>"
+       },
+       {
+        "number": 2,
+        "prompt_html": "a description of a way of judging machine output against human work",
+        "options": null,
+        "answer": [
+         "E"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph E defines BLEU as 'a measure of how closely machine output matches human translations'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>On a standard English-to-German translation test, the larger version of the Transformer scored 28.4 on BLEU, a measure of how closely machine output matches human translations, beating the previous best results, including those of combined systems, by more than two points.</p></blockquote>"
+       },
+       {
+        "number": 3,
+        "prompt_html": "a reason why an earlier kind of system could not make full use of the available hardware",
+        "options": null,
+        "answer": [
+         "B"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph B explains that recurrent networks had to calculate step by step, so the processors of a graphics card could not all work at once.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Because each step depended on the result of the previous one, the calculations for a long sentence had to be carried out in sequence, so the thousands of processors on a modern graphics card could not all be put to work at once.</p></blockquote>"
+       },
+       {
+        "number": 4,
+        "prompt_html": "a method of giving the model information about word order",
+        "options": null,
+        "answer": [
+         "D"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph D describes positional encodings, which tell the model where each word stands in the sentence.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The authors did this with positional encodings: patterns of sine and cosine waves of different frequencies, added to each word's numbers, that tell the model where in the sentence the word stands.</p></blockquote>"
+       },
+       {
+        "number": 5,
+        "prompt_html": "a concern that depending on a single design may limit new thinking",
+        "options": null,
+        "answer": [
+         "G"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph G reports critics who say that relying on one architecture has 'narrowed the range of ideas being explored'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Some critics also argue that the field's heavy dependence on one architecture has narrowed the range of ideas being explored.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       6,
+       10
+      ],
+      "type": "tfng",
+      "instructions_html": "<p>Do the following statements agree with the information given in the Reading Passage?</p><p>TRUE if the statement agrees with the information</p><p>FALSE if the statement contradicts the information</p><p>NOT GIVEN if there is no information on this</p>",
+      "content_html": "",
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 6,
+        "prompt_html": "Attention had never been used in translation systems before 2017.",
+        "options": null,
+        "answer": [
+         "FALSE"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph B says researchers had already added attention to recurrent systems; what was new in 2017 was building the whole model from it.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Researchers had already added attention to recurrent systems as a kind of supplement, allowing the model to look back at earlier words; the novelty of the 2017 paper was to make attention the whole architecture rather than an extra part.</p></blockquote>"
+       },
+       {
+        "number": 7,
+        "prompt_html": "The authors expected their model to be used mainly for tasks other than translation.",
+        "options": null,
+        "answer": [
+         "NOT GIVEN"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage says the model was tested on translation and that 'few people predicted how far the idea would travel', but it says nothing about what the authors themselves expected it to be used for.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Few people predicted how far the idea would travel.</p></blockquote>"
+       },
+       {
+        "number": 8,
+        "prompt_html": "Multi-head attention allows different parts of the model to focus on different types of relationship between words.",
+        "options": null,
+        "answer": [
+         "TRUE"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph D says the eight 'heads' can track different kinds of relationship, such as grammar and meaning.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>First, rather than calculating attention once, the model does so eight times in parallel, in what the authors called multi-head attention, so that different 'heads' can track different kinds of relationship, such as grammar in one case and meaning in another.</p></blockquote>"
+       },
+       {
+        "number": 9,
+        "prompt_html": "The base model took longer to train than the large model.",
+        "options": null,
+        "answer": [
+         "FALSE"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph E gives about twelve hours for the base model and three and a half days for the large one, so the base model was much quicker.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The smaller base model was trained in about twelve hours on one machine with eight graphics processors, and the large one in three and a half days, a fraction of the computing time needed by the competing systems.</p></blockquote>"
+       },
+       {
+        "number": 10,
+        "prompt_html": "The first GPT model was released before BERT.",
+        "options": null,
+        "answer": [
+         "NOT GIVEN"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F says both BERT and the first GPT model appeared in 2018 but does not say which came first.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Within two years the architecture had become the basis of systems such as BERT, released by Google in 2018, and the GPT series from OpenAI, the first of which also appeared in 2018.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       11,
+       13
+      ],
+      "type": "summary_completion",
+      "instructions_html": "<p>Complete the summary below.</p><p>Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage for each answer.</p>",
+      "content_html": "<p><strong>How a Transformer reads a sentence</strong></p><p>Every word is first converted into a list of numbers. The model then creates a query, a key and a {{11}} for each word. To decide how much attention one word should give to the others, its query is compared with their {{12}}. Since attention on its own ignores the order of the words, {{13}} based on sine and cosine waves are added to show where each word appears.</p>",
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 11,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "value",
+         "a value"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The three lists produced for every word are a query, a key and a value.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>For every word, the model then produces three further lists, known as a query, a key and a value.</p></blockquote>"
+       },
+       {
+        "number": 12,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "keys",
+         "the keys"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>A word's query is compared 'with the keys of all the others'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>By comparing one word's query with the keys of all the others, the model calculates how much attention that word should pay to each of them, and it builds a new representation from the matching values.</p></blockquote>"
+       },
+       {
+        "number": 13,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "positional encodings",
+         "positional encoding"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Positional encodings, made of sine and cosine waves, tell the model where each word stands.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The authors did this with positional encodings: patterns of sine and cosine waves of different frequencies, added to each word's numbers, that tell the model where in the sentence the word stands.</p></blockquote>"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "writing": [
+  {
+   "task": 2,
+   "essay_type": "discussion",
+   "prompt": "Some people think that students at schools and universities should be free to use artificial intelligence tools such as chatbots in their studies. Others believe that these tools stop students from developing their own skills.\n\nDiscuss both these views and give your own opinion."
+  },
+  {
+   "task": 2,
+   "essay_type": "opinion",
+   "prompt": "Most major advances in artificial intelligence are now made by large technology companies rather than by universities. Some people believe these companies should be required to publish their research openly so that anyone can use it.\n\nTo what extent do you agree or disagree?"
+  },
+  {
+   "task": 1,
+   "essay_type": "bar",
+   "prompt": "The chart below shows the translation quality scores (BLEU) achieved by five machine translation systems when translating from English into German and from English into French, as reported in 2017.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+   "image": "media/writing/research/transformer-bleu.svg",
+   "image_description": "Bar chart, BLEU score (0-50) of five translation systems reported in 2017, for English to German / English to French: GNMT+RL 24.6 / 39.9; ConvS2S 25.2 / 40.5; MoE 26.0 / 40.6; Transformer (base) 27.3 / 38.1; Transformer (big) 28.4 / 41.8. All systems score far higher for English-French (38-42) than English-German (24-28). English-German rises steadily from GNMT+RL to Transformer (big). Transformer (big) is highest on both. Transformer (base) is second-best for German but lowest of all for French."
+  }
+ ]
+}

@@ -20,6 +20,8 @@ content/_cache/
 IELTS_PREP_ARCHIVE/
 LATEST_EXAMS_ARCHIVE/
 knowledge/raw/
+knowledge/research/inbox/
+/papers/
 knowledge/data/my_essays.json
 knowledge/data/peer_essays.json
 knowledge/data/photo_essays.json

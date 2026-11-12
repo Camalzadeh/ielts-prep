@@ -1,0 +1,5 @@
+[
+ {"test_no": 1, "lessons": ["transformer-attention", "ask-or-assume", "swe-clar"]},
+ {"test_no": 2, "lessons": ["nonprogrammers-ai-code", "agentic-prs-github", "who-finishes-the-job"]},
+ {"test_no": 3, "lessons": ["radar-meta", "senior-swe-bench", "reponorm"]}
+]

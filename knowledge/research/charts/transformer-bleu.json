@@ -1,0 +1,39 @@
+{
+ "type": "bar",
+ "title": "Translation quality of five systems, 2017 (BLEU score)",
+ "y_label": "BLEU score",
+ "x_label": "Translation system",
+ "categories": [
+  "GNMT+RL",
+  "ConvS2S",
+  "MoE",
+  "Transformer (base)",
+  "Transformer (big)"
+ ],
+ "series": [
+  {
+   "name": "English to German",
+   "values": [
+    24.6,
+    25.2,
+    26.0,
+    27.3,
+    28.4
+   ]
+  },
+  {
+   "name": "English to French",
+   "values": [
+    39.9,
+    40.5,
+    40.6,
+    38.1,
+    41.8
+   ]
+  }
+ ],
+ "y_min": 0,
+ "y_max": 50,
+ "y_step": 10,
+ "decimals": 1
+}

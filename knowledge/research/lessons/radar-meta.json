@@ -1,0 +1,359 @@
+{
+ "id": "radar-meta",
+ "title": "RADAR: letting AI approve low-risk code at Meta",
+ "topic": "Quality and trust in AI-written code",
+ "level": "beginner",
+ "added": "2026-11-12",
+ "sources": [
+  {
+   "kind": "paper",
+   "title": "Automating Low-Risk Code Review at Meta: RADAR, Risk Calibration, and Review Efficiency",
+   "authors": "Chris Adams, Arjun Singh Banga, Parveen Bansal et al.",
+   "year": 2026,
+   "url": "https://arxiv.org/abs/2605.30208"
+  }
+ ],
+ "summary_md": "**In one sentence:** Meta built **RADAR**, a chain of automatic checks that lets low-risk code changes be\napproved and added to its software with little or no human review, because AI coding tools now produce code\nfaster than people can read it.\n\n### First: what is code review?\nSoftware is built from many small changes. Before a change is added to the shared code, a colleague reads it,\nmuch like an editor checking an article. Companies do this because authors write more carefully when they know\nthey will be checked, and reviewers catch mistakes, make code easier to read and suggest better designs. At\nMeta a proposed change is a **diff**; when it is accepted it **lands**.\n\n### The problem\nIn one year the amount of significant code per human-landed diff rose by **105.9%** and diffs per developer per\nmonth by **51%**, with **over 80%** of that rise put down to agentic AI. Meanwhile the share of diffs reviewed\nwithin 24 hours fell, and some groups had thousands of diffs waiting.\n\n### The idea: a funnel of gates\nRADAR (Risk Aware Diff Auto Review) is not one model but a series of filters; failing any one sends the change\nto a human.\n- **Who wrote it?** Bot changes from fixed scripts (*deterministic codemods*) were approved once as a script and\n  skip per-diff AI review. AI-generated changes are checked one by one. Each **RACER** *runbook* (a pre-written\n  instruction set for Meta's AI maintenance tool) needs a clean 60-day record and has a daily cap (up to 2,000).\n- **Fixed rules**, e.g. no open-source or financially regulated code.\n- **Diff Risk Score:** a machine-learning model that predicts the chance of a production incident. P5 = only the\n  safest 5% pass. (It is imperfect: flagging 10% of diffs catches about 60% of incident-causing ones.)\n- **Automated Code Review:** an LLM reads the code and accepts only if every change is a \"safe\" kind (formatting,\n  docs, logging, tests...) with confidence of at least 8/10.\n- Human-written diffs go through **Verification** (ship now, reviewed later) and then **Approval** (no review at all).\n\nThink of an airport: frequent travellers with a clean record use a fast lane, but anything unusual still goes to\na person.\n\n### Results (from the paper)\n- 535,290 diffs reviewed, 331,720 landed, up to about 25,000 a day.\n- Revert rate **1/3** and production-incident rate **1/50** of non-RADAR diffs.\n- Loosening the risk threshold from the 25th to the 50th percentile raised the approve rate to **60.31%**\n  (verification pass rate 26.31%) without worse safety figures.\n- Median review wall time down **35%**; median time to close reported as down \"over 330%\" (an unusual way of\n  expressing a reduction; the paper does not explain the calculation).\n\n### Why it matters\nIt is one of the largest real examples of letting AI approve AI-written work, and it shows a cautious recipe:\nstart strict, measure, then loosen.\n\n### Limitations\nThe changes RADAR handles are hand-picked low-risk ones, so the safety comparison is not like-for-like; diffs were\nnot randomly assigned, so the results are not proof of cause; reverts and incidents miss some harm; Meta's\nsetting may not transfer elsewhere; data are not released. Review also spreads knowledge between engineers,\nwhich automation may reduce.\n\n### IELTS angle\nUseful words: *track record*, *scarce*, *by design*, *frank about*, *gradually*, *trade-off*, *threshold*. In\nTask 2 on technology and work, RADAR is a concrete example of automation that keeps humans in charge of\nhigh-risk decisions while machines take routine ones.\n",
+ "key_terms": [
+  {
+   "term": "code review",
+   "meaning": "The practice of having a colleague read a change to software before it is added to the shared code.",
+   "example": "Code review helps teams catch mistakes before customers see them."
+  },
+  {
+   "term": "diff",
+   "meaning": "Meta's name for a proposed change to the code; it 'lands' when accepted and merged.",
+   "example": "The engineer submitted a small diff that fixed a spelling error in the menu."
+  },
+  {
+   "term": "agentic AI",
+   "meaning": "AI tools that can carry out multi-step tasks, such as writing and testing code, largely on their own.",
+   "example": "Agentic AI was responsible for most of the growth in code volume."
+  },
+  {
+   "term": "risk score",
+   "meaning": "A number from a machine-learning model estimating how likely something is to go wrong.",
+   "example": "Only changes with a very low risk score were approved automatically."
+  },
+  {
+   "term": "threshold (percentile)",
+   "meaning": "The cut-off a score must pass; 'P5' means only the safest 5 per cent qualify.",
+   "example": "Raising the threshold from P25 to P50 let more changes through."
+  },
+  {
+   "term": "large language model (LLM)",
+   "meaning": "A very large AI model trained on text (and code) that can read and write language.",
+   "example": "An LLM read each change and decided whether it was safe."
+  },
+  {
+   "term": "production incident",
+   "meaning": "A failure in a live service that real users experience.",
+   "example": "The team checked whether automated changes caused more production incidents."
+  },
+  {
+   "term": "revert",
+   "meaning": "To undo a change that has already been added, usually because it caused a problem.",
+   "example": "RADAR-reviewed changes were reverted far less often than others."
+  },
+  {
+   "term": "codemod",
+   "meaning": "A script that makes the same mechanical change across a large amount of code.",
+   "example": "A codemod renamed the old function in thousands of files at once."
+  },
+  {
+   "term": "funnel (of checks)",
+   "meaning": "A series of filters that each remove some items, so only a few pass every stage.",
+   "example": "RADAR works as a funnel: failing any gate sends the change to a human."
+  },
+  {
+   "term": "track record",
+   "meaning": "Academic/business phrase: the past performance of a person or thing, used to judge it.",
+   "example": "A runbook with a poor track record is blocked from automatic approval."
+  },
+  {
+   "term": "scarce",
+   "meaning": "Academic word: in short supply; not enough to meet demand.",
+   "example": "Human attention is a scarce resource in large organisations."
+  },
+  {
+   "term": "by design",
+   "meaning": "Academic phrase: deliberately, as part of the plan rather than by accident.",
+   "example": "The changes the system handles are, by design, simpler than typical ones."
+  }
+ ],
+ "discussion": [
+  "In which jobs do you think it is acceptable for a computer to approve someone's work without a human checking it?",
+  "Why might people trust a decision made by a person more than the same decision made by a machine?",
+  "If machines take over routine checking, how will young employees learn from more experienced colleagues?"
+ ],
+ "reading": {
+  "duration_minutes": 20,
+  "parts": [
+   {
+    "number": 1,
+    "title": "Letting the Machine Sign Off",
+    "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-13, which are based on the Reading Passage below.</em></p><p><strong>A</strong> Software is built from thousands of small changes, and in most technology companies none is added to the shared code until a colleague has read it, a practice known as code review. The process resembles an editor checking a manuscript before publication. It serves two purposes: authors write more carefully when they know their peers will examine their work, and reviewers can spot mistakes, make code easier to read and propose better designs. At Meta, a proposed change is called a 'diff', and when it is accepted into the code base it is said to 'land'.</p><p><strong>B</strong> For years Meta's reviewers kept up with the flow of diffs, but AI coding assistants have upset this balance. According to a 2026 report by Meta researchers, the amount of significant code in each human-written diff rose by 105.9 per cent in a single year, while the number of diffs per developer per month grew by 51 per cent. More than 80 per cent of that increase was attributed to agentic AI, meaning tools that can carry out programming tasks on their own. Meanwhile, the proportion of diffs reviewed within 24 hours fell, and some large groups had thousands of changes waiting. In short, code was being written faster than people could read it.</p><p><strong>C</strong> The company's response was RADAR, short for Risk Aware Diff Auto Review. Rather than a single program, RADAR is a funnel: a sequence of filters, any of which can send a change back to a human. The designers' aim was to automate the routine end of the work, changes of low to medium complexity, so that scarce human attention could be concentrated on the changes most likely to cause harm. The first question is who wrote the diff: a person or a piece of software, often called a bot.</p><p><strong>D</strong> Some bot changes come from deterministic codemods, scripts that carry out a fixed, fully specified transformation without AI. Since the script itself has been checked and approved in advance, the individual diffs it produces skip the AI review stage. Changes generated by AI models, by contrast, can differ each time, so every one is examined separately. The strictest rules apply to RACER, Meta's AI maintenance tool, which works from runbooks: pre-written instructions for one kind of task, such as removing unused code. Each runbook needs its own clean track record: over the previous 60 days it must have caused no production incidents, and few of its changes may have been reversed or rejected. Even trusted runbooks are limited to 2,000 automatically landed changes a day. As a result, two runbooks that make identical edits can be treated differently if one has a history of mistakes.</p><p><strong>E</strong> Eligible bot changes then face three gates, and all must be passed. The first consists of fixed rules: for example, the system will not touch open-source code or code covered by financial-reporting regulations. The second is the Diff Risk Score, a machine-learning model that estimates how likely a change is to cause a production incident, meaning a failure in the live service. The score was originally developed to let low-risk changes through during code freezes, and now supports around 20 features at Meta. It is not perfect: flagging the riskiest 10 per cent of diffs catches about 60 per cent of the changes that go on to cause incidents. It is applied as a percentile, so a setting of P5 admits only the safest 5 per cent of diffs, and a lower setting is therefore more cautious. The final gate is Automated Code Review, in which a large language model reads the actual code and sorts each change into safe categories, such as formatting or new tests, or risk categories, such as bugs and security weaknesses. A diff is accepted only if every change is judged safe and the model's confidence is at least 8 out of 10. Even then, approved bot changes land after a delay, during which a human reviewer can still reject them.</p><p><strong>F</strong> Diffs written by people follow a separate, two-step route. In the first step, RADAR Verification, the author must meet certain conditions, such as a minimum period of employment. A verified diff may go live at once, on condition that a colleague reviews it later. In the second step, RADAR Approval, stricter criteria decide whether this later review can be dropped entirely.</p><p><strong>G</strong> RADAR has so far reviewed 535,290 diffs and landed 331,720 of them, handling up to 25,000 a day. Changes that passed through it were reverted, or undone, at one third of the rate of other changes, and caused production incidents at one fiftieth of the rate. When the engineers loosened the risk threshold from the 25th to the 50th percentile, the approval rate rose to 60.31 per cent without any worsening in the safety figures. Compared with human-reviewed diffs, median review time fell by 35 per cent, and the authors report a reduction of over 330 per cent in the median time to close a diff.</p><p><strong>H</strong> The authors are frank about the limits of their evidence. Because diffs were not randomly assigned to RADAR, the study cannot prove that the system caused the improvements, and the changes it handles are, by design, simpler than typical ones. Reverts and incidents do not capture every kind of harm, and results achieved with Meta's tools may not transfer to other organisations. There is also a less obvious cost: code review spreads knowledge between engineers, and although the authors judge this trade-off acceptable at present, it may change as automation expands. Perhaps the study's most valuable lesson is not that machines can replace reviewers, but that trust in them can be granted gradually, one measured step at a time.</p>",
+    "groups": [
+     {
+      "range": [
+       1,
+       4
+      ],
+      "type": "mcq",
+      "instructions_html": "<p>Choose the correct letter, <strong>A</strong>, <strong>B</strong>, <strong>C</strong> or <strong>D</strong>.</p><p>Write the correct letter in boxes 1-4 on your answer sheet.</p>",
+      "content_html": null,
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 1,
+        "prompt_html": "According to paragraph B, why did Meta need a system such as RADAR?",
+        "options": [
+         {
+          "key": "A",
+          "text": "Human reviewers had become less careful than in the past."
+         },
+         {
+          "key": "B",
+          "text": "Code was being produced more quickly than people could review it."
+         },
+         {
+          "key": "C",
+          "text": "AI tools were making more errors than human engineers."
+         },
+         {
+          "key": "D",
+          "text": "The company had reduced the number of people who review code."
+         }
+        ],
+        "answer": [
+         "B"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph B says code was being written faster than people could read it, so a system relying on humans to examine most changes could not keep up. The passage never says reviewers were careless, that AI made more errors, or that reviewer numbers were cut.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In short, code was being written faster than people could read it.</p></blockquote>"
+       },
+       {
+        "number": 2,
+        "prompt_html": "What does the writer say about the Diff Risk Score?",
+        "options": [
+         {
+          "key": "A",
+          "text": "It was first built specifically for RADAR."
+         },
+         {
+          "key": "B",
+          "text": "It identifies every change that will later cause an incident."
+         },
+         {
+          "key": "C",
+          "text": "Choosing a lower percentile setting allows fewer changes through."
+         },
+         {
+          "key": "D",
+          "text": "It reads the code to decide what each change actually does."
+         }
+        ],
+        "answer": [
+         "C"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>A setting of P5 admits only the safest 5 per cent, so a lower setting is 'more cautious'. A is wrong (it was built for code freezes), B is wrong (it catches about 60 per cent), and D describes Automated Code Review, not the risk score.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>It is applied as a percentile, so a setting of P5 admits only the safest 5 per cent of diffs, and a lower setting is therefore more cautious.</p></blockquote>"
+       },
+       {
+        "number": 3,
+        "prompt_html": "What happens to a bot change after it has passed all three gates?",
+        "options": [
+         {
+          "key": "A",
+          "text": "It is added to the code immediately and can no longer be stopped."
+         },
+         {
+          "key": "B",
+          "text": "It is sent to a human reviewer, who makes the final decision."
+         },
+         {
+          "key": "C",
+          "text": "It is checked once more by the RACER tool."
+         },
+         {
+          "key": "D",
+          "text": "It is added after a waiting period in which a person may still block it."
+         }
+        ],
+        "answer": [
+         "D"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph E says approved bot changes land after a delay, and a human reviewer can still reject them during that time.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Even then, approved bot changes land after a delay, during which a human reviewer can still reject them.</p></blockquote>"
+       },
+       {
+        "number": 4,
+        "prompt_html": "Which limitation of the study do the authors themselves acknowledge?",
+        "options": [
+         {
+          "key": "A",
+          "text": "RADAR sometimes approved changes that contained security weaknesses."
+         },
+         {
+          "key": "B",
+          "text": "The results do not show that RADAR was responsible for the improvements."
+         },
+         {
+          "key": "C",
+          "text": "Many engineers refused to let RADAR handle their work."
+         },
+         {
+          "key": "D",
+          "text": "The language model was too slow to be used every day."
+         }
+        ],
+        "answer": [
+         "B"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph H says that because diffs were not randomly assigned, the study cannot prove that the system caused the improvements. None of the other problems is mentioned.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Because diffs were not randomly assigned to RADAR, the study cannot prove that the system caused the improvements, and the changes it handles are, by design, simpler than typical ones.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       5,
+       9
+      ],
+      "type": "matching_features",
+      "instructions_html": "<p>Look at the following statements (Questions 5-9) and the list of parts of the RADAR system below.</p><p>Match each statement with the correct part, <strong>A-F</strong>.</p><p>Write the correct letter, <strong>A-F</strong>, in boxes 5-9 on your answer sheet.</p><p>NB You may use any letter more than once.</p>",
+      "content_html": null,
+      "image": null,
+      "options": [
+       {
+        "key": "A",
+        "text": "deterministic codemods"
+       },
+       {
+        "key": "B",
+        "text": "RACER runbooks"
+       },
+       {
+        "key": "C",
+        "text": "the Diff Risk Score"
+       },
+       {
+        "key": "D",
+        "text": "Automated Code Review"
+       },
+       {
+        "key": "E",
+        "text": "RADAR Verification"
+       },
+       {
+        "key": "F",
+        "text": "RADAR Approval"
+       }
+      ],
+      "questions": [
+       {
+        "number": 5,
+        "prompt_html": "will only accept a change if it reaches a minimum level of certainty",
+        "options": null,
+        "answer": [
+         "D"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Automated Code Review accepts a diff only when the model's confidence is at least 8 out of 10.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>A diff is accepted only if every change is judged safe and the model's confidence is at least 8 out of 10.</p></blockquote>"
+       },
+       {
+        "number": 6,
+        "prompt_html": "each one is judged on how safely it has performed over the past two months",
+        "options": null,
+        "answer": [
+         "B"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Each RACER runbook must have a clean record over the previous 60 days (about two months).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Each runbook needs its own clean track record: over the previous 60 days it must have caused no production incidents, and few of its changes may have been reversed or rejected.</p></blockquote>"
+       },
+       {
+        "number": 7,
+        "prompt_html": "lets a person's change go live provided that it is checked by someone afterwards",
+        "options": null,
+        "answer": [
+         "E"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>After RADAR Verification, a diff may go live at once, on condition that a colleague reviews it later. (RADAR Approval is the step that removes this later review.)</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>A verified diff may go live at once, on condition that a colleague reviews it later.</p></blockquote><blockquote><p>In the first step, RADAR Verification, the author must meet certain conditions, such as a minimum period of employment.</p></blockquote>"
+       },
+       {
+        "number": 8,
+        "prompt_html": "avoid the AI review stage because their method was approved beforehand",
+        "options": null,
+        "answer": [
+         "A"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Diffs from deterministic codemods skip the AI review stage, since the script itself was checked and approved in advance.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Since the script itself has been checked and approved in advance, the individual diffs it produces skip the AI review stage.</p></blockquote><blockquote><p>Some bot changes come from deterministic codemods, scripts that carry out a fixed, fully specified transformation without AI.</p></blockquote>"
+       },
+       {
+        "number": 9,
+        "prompt_html": "was first created to deal with a different situation",
+        "options": null,
+        "answer": [
+         "C"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Diff Risk Score was originally developed to let low-risk changes through during code freezes.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The score was originally developed to let low-risk changes through during code freezes, and now supports around 20 features at Meta.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       10,
+       13
+      ],
+      "type": "sentence_completion",
+      "instructions_html": "<p>Complete the sentences below.</p><p>Choose <strong>NO MORE THAN TWO WORDS AND/OR A NUMBER</strong> from the passage for each answer.</p><p>Write your answers in boxes 10-13 on your answer sheet.</p>",
+      "content_html": "<ul><li>More than 80 per cent of the growth in diffs per developer was due to {{10}}.</li><li>RACER carries out maintenance tasks by following sets of pre-written instructions called {{11}}.</li><li>Production incidents caused by changes that went through RADAR happened at only {{12}} of the rate of other changes.</li><li>One hidden cost of automation is that code review normally helps to spread {{13}} among engineers.</li></ul>",
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 10,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "agentic AI"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph B attributes over 80 per cent of the increase to agentic AI.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>More than 80 per cent of that increase was attributed to agentic AI, meaning tools that can carry out programming tasks on their own.</p></blockquote>"
+       },
+       {
+        "number": 11,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "runbooks"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>RACER works from runbooks, pre-written instructions for one kind of task.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The strictest rules apply to RACER, Meta's AI maintenance tool, which works from runbooks: pre-written instructions for one kind of task, such as removing unused code.</p></blockquote>"
+       },
+       {
+        "number": 12,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "one fiftieth",
+         "1/50",
+         "a fiftieth"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph G gives one third for reverts and one fiftieth for production incidents.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Changes that passed through it were reverted, or undone, at one third of the rate of other changes, and caused production incidents at one fiftieth of the rate.</p></blockquote>"
+       },
+       {
+        "number": 13,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "knowledge"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph H says code review spreads knowledge between engineers, a benefit that may be lost as automation expands.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>There is also a less obvious cost: code review spreads knowledge between engineers, and although the authors judge this trade-off acceptable at present, it may change as automation expands.</p></blockquote>"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "writing": [
+  {
+   "task": 2,
+   "essay_type": "opinion",
+   "prompt": "Automated systems can now approve people's work and carry out safety checks far more quickly than human staff. Some people believe that, whenever a machine is faster, important decisions of this kind should be left to it.\n\nTo what extent do you agree or disagree?"
+  }
+ ]
+}

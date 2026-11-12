@@ -90,7 +90,7 @@ function bankView(body) {
       all = asList(data, 'prompts');
       const sources = [...new Set(all.map((p) => p.source).filter(Boolean))].sort();
       const cur = f.source;
-      srcSel.replaceChildren(h('option', { value: '' }, 'All sources'), ...sources.map((s) => h('option', { value: s, selected: s === cur }, s.replace(/_/g, ' '))));
+      srcSel.replaceChildren(h('option', { value: '' }, 'All sources'), ...sources.map((s) => h('option', { value: s, selected: s === cur }, sourceLabel(s))));
       drawList();
     });
   };
@@ -110,6 +110,9 @@ function bankView(body) {
   load();
 }
 
+const SOURCE_LABELS = { research: 'AI Research' };   // AI Research lessons (knowledge/research)
+const sourceLabel = (s) => SOURCE_LABELS[s] || String(s).replace(/_/g, ' ');
+
 function promptItem(p) {
   const done = Number(p.submission_count || p.submissions || 0);
   const draft = store.get(`draft.writing.${p.id}`);
@@ -118,7 +121,7 @@ function promptItem(p) {
       <div class="p-meta">
         <span class="badge accent">Task ${esc(p.task)}</span>
         ${p.essay_type ? `<span class="badge">${esc(essayTypeLabel(p.essay_type))}</span>` : ''}
-        ${p.source ? `<span class="badge">${esc(String(p.source).replace(/_/g, ' '))}</span>` : ''}
+        ${p.source ? `<span class="badge">${esc(sourceLabel(p.source))}</span>` : ''}
         ${p.source_date ? `<span class="badge">${esc(p.source_date)}</span>` : ''}
         ${p.image_path ? `<span class="badge">${icon('dashboard')} visual</span>` : ''}
         ${done ? `<span class="badge good">${done} submitted</span>` : ''}
@@ -282,7 +285,7 @@ async function renderSubmission(root, id) {
   const promptCard = h('div', { class: 'card card-pad' });
   promptCard.innerHTML = `<div class="row" style="margin-bottom:8px"><span class="badge accent">Task ${task}</span>
       ${p.essay_type ? `<span class="badge">${esc(essayTypeLabel(p.essay_type))}</span>` : ''}
-      ${p.source ? `<span class="badge">${esc(String(p.source).replace(/_/g, ' '))}</span>` : ''}</div>
+      ${p.source ? `<span class="badge">${esc(sourceLabel(p.source))}</span>` : ''}</div>
     <div style="white-space:pre-wrap;line-height:1.65">${esc(p.prompt || '(prompt not available)')}</div>
     ${p.image_path ? `<img class="zoomable" src="${esc(mediaUrl(p.image_path))}" alt="Task visual" title="Click to enlarge" style="margin-top:12px;border:1px solid var(--border);border-radius:8px;background:#fff">` : ''}`;
   const essayCard = h('div', { class: 'card card-pad' });

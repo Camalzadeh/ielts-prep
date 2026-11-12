@@ -1,0 +1,308 @@
+{
+ "id": "ask-or-assume",
+ "title": "Ask or Assume? Coding agents that know when to ask",
+ "topic": "Coding agents and unclear instructions",
+ "level": "intermediate",
+ "added": "2026-11-12",
+ "sources": [
+  {
+   "kind": "paper",
+   "title": "Ask or Assume? Uncertainty-Aware Clarification-Seeking in Coding Agents",
+   "authors": "Nicholas Edwards, Sebastian Schuster",
+   "year": 2026,
+   "url": "https://arxiv.org/abs/2603.26233"
+  }
+ ],
+ "summary_md": "**In one sentence:** Edwards and Schuster (University of Vienna, 2026) tested whether AI coding agents can notice\nfor themselves that a task description is missing something important, and then **ask** instead of **assuming**.\nA design that splits the work between a \"doer\" and a \"watcher\" agent did this well.\n\n### The problem\nAn **AI agent** is a program built on a large language model (LLM) that does not just answer once but takes many\nactions by itself: here, it explores a code base, edits files and runs tests. Real instructions are often\n**underspecified**: a bug report leaves out the operating system, an exact value or an error message. Human\nprogrammers ask a colleague; most agents are built to finish the job alone, so they guess.\n\n### How they tested it\n- **Tasks:** SWE-bench Verified, 500 real bug reports from GitHub. Earlier researchers had used GPT-4o to rewrite each\n  report as a vague summary that keeps the technical words but drops key details. (A hand check of 10: in 5 the\n  missing detail was essential.)\n- **The \"user\":** GPT-5.1 plays the person who wrote the report. It sees the full original and may only answer from\n  it, at most three times per task.\n- **Five settings:** *Full* (complete report, no questions), *Hidden* (vague report, no questions), *Interactive\n  Baseline* (vague report, and told \"this is incomplete, ask first\"), *UA-Single* (one agent reminded every step to\n  check for missing information), *UA-Multi* (two agents on the same model: a **Main Agent** that codes and an\n  **Intent Agent** that only watches the history and answers yes/no to \"is something missing?\"; on \"yes\" the Main\n  Agent must ask). Analogy: a builder plus a supervisor who only checks whether the plans still make sense.\n\n### Results (share of the 500 problems solved)\n| Setting | Claude Sonnet 4.5 | Kimi K2.6 |\n|---|---|---|\n| Full | 70.8% | 72.8% |\n| Hidden | 54.8% | 55.4% |\n| Interactive Baseline | 70.4% | 47.2% |\n| UA-Single | 61.2% | 61.6% |\n| UA-Multi | **69.4%** | **69.4%** |\n\n- With Claude, UA-Multi is statistically indistinguishable from *Full*: asking won back almost everything the\n  hidden details had cost. With Kimi a small but significant gap to *Full* remained.\n- Kimi's poor Interactive Baseline score came mainly from using the \"task completion\" tool to ask its questions:\n  a sign that hard-coded instructions are brittle.\n- **Knowing when to ask:** the Interactive Baseline (Claude) asked in almost every task. UA-Multi asked in 344 of 500;\n  on the 156 it did alone it still solved 76.9% (the Hidden agent: 77.6% on the same tasks). It asked more on harder\n  tasks and also in the middle of the work, not only at the start.\n- Kimi asked much more: 8.71 questions per task against 3.06 for Claude, which the authors read as poorer\n  **calibration**.\n\n### Limitations\n- A simulated user is often unnaturally cooperative; real people may answer differently.\n- Cost: UA-Multi with Claude cost about $3.50 per task, against $1.63 for *Full*. The authors argue this is cheap\n  compared with developer time spent fixing work built on a wrong guess.\n- SWE-bench covers only part of software engineering; earlier work found smaller models much worse at this; high-stakes\n  uses (e.g. security) need separate testing.\n\n### IELTS angle\nUseful words from the passage: *press ahead*, *vital*, *discerning*, *selective*, *fragile*, *high-stakes*. In Task 2\nessays on workplaces or education, the study supports the argument that asking at the right moment (not always,\nnot never) beats both blind independence and constant checking.\n",
+ "key_terms": [
+  {
+   "term": "AI agent",
+   "meaning": "A program built on a language model that takes a series of actions by itself (searching, editing, running code) to finish a task, rather than just replying once.",
+   "example": "The coding agent explored the files, changed the code and ran the tests without human help."
+  },
+  {
+   "term": "underspecified (instruction)",
+   "meaning": "An instruction that leaves out details needed to do the task correctly.",
+   "example": "The bug report was underspecified: it never said which operating system was affected."
+  },
+  {
+   "term": "clarification question",
+   "meaning": "A question asked to fill a gap or remove an ambiguity before or during a task.",
+   "example": "The agent asked one clarification question about the expected output format."
+  },
+  {
+   "term": "benchmark (SWE-bench Verified)",
+   "meaning": "A standard set of tasks used to compare AI systems; SWE-bench Verified is 500 real software problems reported on GitHub.",
+   "example": "The agents were scored on how many of the benchmark's 500 problems they solved."
+  },
+  {
+   "term": "resolve rate",
+   "meaning": "The percentage of tasks an agent solves correctly (its fix passes the tests).",
+   "example": "The two-agent team reached a resolve rate of 69.4 per cent."
+  },
+  {
+   "term": "simulated user",
+   "meaning": "A second AI model that plays the role of a human user, answering the agent's questions from hidden information.",
+   "example": "GPT-5.1 acted as a simulated user and could answer only from the original report."
+  },
+  {
+   "term": "multi-agent system",
+   "meaning": "A design in which several AI agents with different roles work together on one task.",
+   "example": "In the multi-agent system, one agent wrote code while another watched for missing information."
+  },
+  {
+   "term": "calibration",
+   "meaning": "How well a model's confidence matches reality; here, asking when information is really missing and not otherwise.",
+   "example": "An agent with good calibration stays quiet on easy tasks and asks on hard ones."
+  },
+  {
+   "term": "open-weight model",
+   "meaning": "A language model whose trained parameters (weights) are published so anyone can download and run it.",
+   "example": "Kimi K2.6 is an open-weight model, while Claude Sonnet 4.5 is a commercial one."
+  },
+  {
+   "term": "baseline",
+   "meaning": "A simple or standard setting used as a point of comparison for a new method.",
+   "example": "The new design was compared with three baselines, including one with the full report."
+  },
+  {
+   "term": "press ahead (with something)",
+   "meaning": "To continue doing something with determination, often despite problems or warnings.",
+   "example": "Many agents press ahead even when a vital detail is missing."
+  },
+  {
+   "term": "discerning",
+   "meaning": "Able to judge well and make good distinctions.",
+   "example": "The Claude-based team was more discerning about when a question was really needed."
+  },
+  {
+   "term": "high-stakes",
+   "meaning": "Involving serious risks or consequences if something goes wrong.",
+   "example": "The authors warn that high-stakes software needs further testing."
+  }
+ ],
+ "discussion": [
+  "In your culture, is it seen as a sign of weakness or of good sense to ask a lot of questions at work or school? Why?",
+  "Would you prefer an AI assistant that asks you questions before acting or one that simply gets on with the task? Why?",
+  "Who should be responsible when an AI system makes a mistake because its instructions were unclear: the user, the developer or the company?"
+ ],
+ "reading": {
+  "duration_minutes": 20,
+  "parts": [
+   {
+    "number": 1,
+    "title": "Should a Machine Ask Before It Acts?",
+    "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-13, which are based on the Reading Passage below.</em></p><p><strong>A</strong> When one person hands a job to another, the instructions are rarely complete. A manager may forget to mention a deadline; a client may not say which computer a fault appeared on. Human colleagues usually cope with such gaps: they fill in what they can reasonably guess and, when they cannot, they simply ask. Artificial intelligence 'agents' are a different matter. These are programs, built on the large language models that power modern chatbots, which do not merely reply to a message but carry out a series of actions by themselves, such as searching through files, editing computer code and running tests. According to Nicholas Edwards and Sebastian Schuster of the University of Vienna, today's agents have largely been designed to complete a job on their own rather than to work alongside a person, so they tend to press ahead even when a vital piece of information is missing. In a 2026 study, they set out to discover whether coding agents could recognise for themselves when they ought to stop and ask.</p><p><strong>B</strong> To do this, they needed tasks in which something important had been left out. They began with SWE-bench Verified, a collection of 500 genuine software problems, each originally reported on GitHub, a website where programmers share and maintain code. Other researchers had earlier used a different AI system, GPT-4o, to shorten each of these reports into a vaguer summary that kept the technical vocabulary but dropped key details. Edwards and Schuster checked ten of the rewritten reports by hand: in half of them the missing information was essential, while in the rest enough clues survived for a capable agent to locate the fault anyway. The role of the person who had reported each problem was played by yet another model, GPT-5.1. This simulated user was shown the original, complete report and was permitted to answer only from that text, and only three times per task.</p><p><strong>C</strong> The researchers compared several arrangements. In the 'Full' setting, an agent received the complete report and was not allowed to ask anything; in the 'Hidden' setting it received the shortened report under the same rule. A third arrangement, the 'Interactive Baseline', gave the agent the shortened report, but its instructions stated plainly that the report was incomplete and that it must question the user before starting work. The two new designs also used the shortened report but received no such warning. In the first, a single agent was reminded at every step to check whether anything was unclear. The second split the job between two agents running on the same model. A Main Agent did all the practical work of exploring and changing the code, while an Intent Agent did nothing but study the record of what had happened so far. Its only output was a yes-or-no decision about whether something was missing; whenever the answer was yes, the Main Agent's next move had to be a question to the user. It resembles a builder working beside a supervisor whose sole job is to notice when the plans stop making sense.</p><p><strong>D</strong> Two models served as the 'brain' of the agents: Claude Sonnet 4.5, a commercial system, and Kimi K2.6, an 'open-weight' model whose trained parameters anyone can download. With Claude, the agent that saw the full report solved 70.8 per cent of the problems, but this fell to 54.8 per cent when details were hidden. The single questioning agent recovered part of the loss, reaching 61.2 per cent, while the two-agent team reached 69.4 per cent, a figure that the authors' statistical tests could not distinguish from the result with complete information. Kimi K2.6 also scored 69.4 per cent with the two-agent design, a little below its own full-information score of 72.8 per cent. However, Kimi managed only 47.2 per cent in the Interactive Baseline, the weakest result in the study, largely because it wrongly tried to put its questions through the 'task completion' tool, which is meant to signal that the work is finished. The authors see this as a sign that rigid, hand-written instructions can be fragile.</p><p><strong>E</strong> Perhaps more revealing is when the agents chose to ask. Told that information was missing, the Claude-based Interactive Baseline asked questions in almost every task, whether they were needed or not. The two-agent team was more selective: it consulted the user in 344 of the 500 tasks, and on the 156 it handled alone it solved nearly 77 per cent, about the same as the Hidden agent achieved on those same tasks. In other words, it tended to stay silent precisely when silence was safe. It also asked more often as problems became harder, and it raised questions in the middle of a task as well as at the start. Kimi was less discerning: its two-agent team averaged 8.71 questions per task, against 3.06 for Claude, which the researchers interpret as weaker judgement about what it really needed to know.</p><p><strong>F</strong> The authors are careful about the limits of their work. Simulated users, they note, are often unnaturally cooperative, so real people could produce different results. The two-agent design is also more expensive to run: with Claude it cost about $3.50 per task, more than twice the $1.63 needed when the agent simply received the full report, although the researchers argue that this is small compared with the time a developer would lose correcting work built on a wrong guess. Finally, they point out that the benchmark represents only part of the work that software engineers do, and that earlier studies found smaller models far less able to judge their own uncertainty. Whether agents will ask the right questions in high-stakes settings, such as software where security is critical, remains to be tested.</p>",
+    "groups": [
+     {
+      "range": [
+       1,
+       5
+      ],
+      "type": "matching_headings",
+      "instructions_html": "<p>The Reading Passage has six paragraphs, <strong>A-F</strong>.</p><p>Choose the correct heading for paragraphs <strong>B-F</strong> from the list of headings below.</p><p><em>Write the correct number, <strong>i-viii</strong>, in boxes on your answer sheet.</em></p><p><em>Example Answer</em></p><p>Paragraph <strong>A</strong> <strong>v</strong></p>",
+      "content_html": null,
+      "image": null,
+      "options": [
+       {
+        "key": "i",
+        "text": "Reasons to treat the results with caution"
+       },
+       {
+        "key": "ii",
+        "text": "How real programmers judged the agents' questions"
+       },
+       {
+        "key": "iii",
+        "text": "Building a test with deliberate gaps"
+       },
+       {
+        "key": "iv",
+        "text": "Knowing when to keep quiet"
+       },
+       {
+        "key": "v",
+        "text": "A skill that people take for granted"
+       },
+       {
+        "key": "vi",
+        "text": "Recovering almost all of the lost performance"
+       },
+       {
+        "key": "vii",
+        "text": "The rising cost of training large models"
+       },
+       {
+        "key": "viii",
+        "text": "Several set-ups, one with a watchful partner"
+       }
+      ],
+      "questions": [
+       {
+        "number": 1,
+        "prompt_html": "Paragraph B",
+        "options": null,
+        "answer": [
+         "iii"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph B explains how the researchers obtained problem reports from which important details had been removed on purpose, and how they checked them.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Other researchers had earlier used a different AI system, GPT-4o, to shorten each of these reports into a vaguer summary that kept the technical vocabulary but dropped key details.</p></blockquote>"
+       },
+       {
+        "number": 2,
+        "prompt_html": "Paragraph C",
+        "options": null,
+        "answer": [
+         "viii"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph C compares the different settings and describes the new design in which an Intent Agent watches the work and decides when the Main Agent must ask (like a supervisor beside a builder).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The second split the job between two agents running on the same model.</p></blockquote>"
+       },
+       {
+        "number": 3,
+        "prompt_html": "Paragraph D",
+        "options": null,
+        "answer": [
+         "vi"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph D reports that hiding details lowered Claude's score from 70.8 to 54.8 per cent, and that the two-agent team won back almost all of it (69.4 per cent).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The single questioning agent recovered part of the loss, reaching 61.2 per cent, while the two-agent team reached 69.4 per cent, a figure that the authors' statistical tests could not distinguish from the result with complete information.</p></blockquote>"
+       },
+       {
+        "number": 4,
+        "prompt_html": "Paragraph E",
+        "options": null,
+        "answer": [
+         "iv"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph E is about how selective the agents were: the two-agent team did not ask when asking was unnecessary. Note that heading ii is wrong: no real programmers were involved.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In other words, it tended to stay silent precisely when silence was safe.</p></blockquote>"
+       },
+       {
+        "number": 5,
+        "prompt_html": "Paragraph F",
+        "options": null,
+        "answer": [
+         "i"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F lists the limits of the study: simulated users, cost, a benchmark that covers only part of the work, and smaller models. Heading vii is a trap: the paragraph discusses the cost of running the agents per task, not of training models.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The authors are careful about the limits of their work.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       6,
+       9
+      ],
+      "type": "tfng",
+      "instructions_html": "<p>Do the following statements agree with the information given in the Reading Passage?</p><p>TRUE if the statement agrees with the information</p><p>FALSE if the statement contradicts the information</p><p>NOT GIVEN if there is no information on this</p>",
+      "content_html": "",
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 6,
+        "prompt_html": "The shortened versions of the problem reports were written by human programmers.",
+        "options": null,
+        "answer": [
+         "FALSE"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph B says the reports were shortened by an AI system, GPT-4o, not by people. (Edwards and Schuster only checked ten of them by hand.)</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Other researchers had earlier used a different AI system, GPT-4o, to shorten each of these reports into a vaguer summary that kept the technical vocabulary but dropped key details.</p></blockquote>"
+       },
+       {
+        "number": 7,
+        "prompt_html": "The simulated user knew more about each problem than the agents that could question it.",
+        "options": null,
+        "answer": [
+         "TRUE"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The simulated user (GPT-5.1) saw the original, complete report, while the agents that could ask questions (the Interactive Baseline and the two new designs) all worked from the shortened report.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>This simulated user was shown the original, complete report and was permitted to answer only from that text, and only three times per task.</p></blockquote>"
+       },
+       {
+        "number": 8,
+        "prompt_html": "Before the experiments, the researchers predicted that Kimi K2.6 would ask more questions than Claude Sonnet 4.5.",
+        "options": null,
+        "answer": [
+         "NOT GIVEN"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph E reports that Kimi did ask far more questions and gives the researchers' interpretation of this result, but nothing is said about what they expected before the experiments.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Kimi was less discerning: its two-agent team averaged 8.71 questions per task, against 3.06 for Claude, which the researchers interpret as weaker judgement about what it really needed to know.</p></blockquote>"
+       },
+       {
+        "number": 9,
+        "prompt_html": "The authors consider the extra expense of the two-agent design to be worthwhile.",
+        "options": null,
+        "answer": [
+         "TRUE"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F says the design costs more than twice as much, but the researchers argue that the cost is small compared with the developer time saved.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The two-agent design is also more expensive to run: with Claude it cost about $3.50 per task, more than twice the $1.63 needed when the agent simply received the full report, although the researchers argue that this is small compared with the time a developer would lose correcting work built on a wrong guess.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       10,
+       13
+      ],
+      "type": "sentence_completion",
+      "instructions_html": "<p>Complete the sentences below.</p><p>Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage for each answer.</p><p><em>Write your answers in boxes on your answer sheet.</em></p>",
+      "content_html": "<ul>\n<li>In the Interactive Baseline, the agent was warned in advance that the problem report it received was {{10}}.</li>\n<li>The Intent Agent did not change any code; all it produced was a {{11}} decision.</li>\n<li>Kimi K2.6 did badly in the Interactive Baseline mainly because it asked its questions through the {{12}} tool.</li>\n<li>Results with real people might differ, because simulated users tend to be unusually {{13}}.</li>\n</ul>",
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 10,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "incomplete"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Interactive Baseline's instructions 'stated plainly that the report was incomplete'.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>A third arrangement, the 'Interactive Baseline', gave the agent the shortened report, but its instructions stated plainly that the report was incomplete and that it must question the user before starting work.</p></blockquote>"
+       },
+       {
+        "number": 11,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "yes-or-no",
+         "yes or no",
+         "yes/no"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The Intent Agent's only output was 'a yes-or-no decision' about whether something was missing.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Its only output was a yes-or-no decision about whether something was missing; whenever the answer was yes, the Main Agent's next move had to be a question to the user.</p></blockquote>"
+       },
+       {
+        "number": 12,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "task completion",
+         "'task completion'"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Kimi wrongly tried to put its questions through the 'task completion' tool, which is meant for signalling that the work is finished.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>However, Kimi managed only 47.2 per cent in the Interactive Baseline, the weakest result in the study, largely because it wrongly tried to put its questions through the 'task completion' tool, which is meant to signal that the work is finished.</p></blockquote>"
+       },
+       {
+        "number": 13,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "cooperative",
+         "unnaturally cooperative"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The authors note that simulated users are 'often unnaturally cooperative', so results with real people could differ.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Simulated users, they note, are often unnaturally cooperative, so real people could produce different results.</p></blockquote>"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "writing": [
+  {
+   "task": 2,
+   "essay_type": "discussion",
+   "prompt": "Some people believe that employees and students should always ask for clarification before they start a task. Others think it is better for them to work out what to do independently, even if they sometimes make mistakes.\n\nDiscuss both these views and give your own opinion."
+  },
+  {
+   "task": 1,
+   "essay_type": "bar",
+   "prompt": "The chart below shows the percentage of 500 real software problems solved by AI coding agents built on two different language models, Claude Sonnet 4.5 and Kimi K2.6, under five different conditions, as reported in a 2026 study.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+   "image": "media/writing/research/ask-or-assume-resolve-rates.svg",
+   "image_description": "Grouped bar chart, percentage of 500 software problems solved (scale 0-80) by AI coding agents using two models, Claude Sonnet 4.5 / Kimi K2.6, in five settings. Full report (agent gets the complete problem description, cannot ask): 70.8 / 72.8. Details hidden (vague description, cannot ask): 54.8 / 55.4. Told to ask (vague description, told it is incomplete and must ask first): 70.4 / 47.2. Single agent (one agent that decides itself when to ask): 61.2 / 61.6. Two-agent team (a second agent watches and decides when to ask): 69.4 / 69.4. Main trends: both models do best with the full report and worst-or-near-worst when details are hidden (about 55%). Letting the agent ask recovers most of the loss; the two-agent team is close to the full-report level for both models (identical 69.4). The two models score almost the same in every setting except 'told to ask', where Claude (70.4) is far ahead of Kimi (47.2), Kimi's lowest score and the lowest figure on the chart."
+  }
+ ]
+}

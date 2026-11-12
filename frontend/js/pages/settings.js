@@ -35,6 +35,19 @@ export async function render(root) {
     h('p', { class: 'small muted' }, 'The library has Academic and General Training reading tests. General Training is hidden unless you switch it on here; tests you already started or submitted always stay, with their results. Mock exams always use Academic tests.'),
     h('label', { class: 'switch', style: { marginTop: '8px' } }, gtToggle, 'Show General Training reading tests')));
 
+  // ------------------------------------------------ AI Research lessons
+  const researchToggle = h('input', { type: 'checkbox' });
+  api.get('/api/settings').then((s) => { researchToggle.checked = s.show_research !== '0'; }).catch(() => {});
+  researchToggle.addEventListener('change', async () => {
+    const value = researchToggle.checked ? '1' : '0';
+    try { await api.put('/api/settings', { show_research: value }); state.settings.show_research = value; toast('Saved.', 'good'); }
+    catch (e) { toast(e.message, 'error'); }
+  });
+  col.append(h('section', { class: 'card card-pad' },
+    h('h2', { style: { margin: 0 } }, 'AI Research'),
+    h('p', { class: 'small muted' }, 'Learn AI while you practise: material from AI research papers, forums and courses as IELTS-style reading tests (Reading → series “AI Research”), writing prompts (Writing → source “AI Research”) and guides explaining each idea with its key terms (Learn → Knowledge base → AI Research; the terms are also flashcards). They are never used in mock exams or random picks. Tests and prompts you already started stay visible either way.'),
+    h('label', { class: 'switch', style: { marginTop: '8px' } }, researchToggle, 'Show AI Research readings, writing prompts and guides')));
+
   // ------------------------------------------------ profile
   const nameInput = h('input', { class: 'input', type: 'text', id: 'user_name', placeholder: 'e.g. Aysel' });
   api.get('/api/settings').then((s) => { nameInput.value = s.user_name || ''; }).catch(() => {});

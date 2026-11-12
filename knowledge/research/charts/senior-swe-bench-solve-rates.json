@@ -1,0 +1,15 @@
+{
+ "type": "bar",
+ "title": "Senior SWE-Bench: attempts solved by six AI coding systems (%)",
+ "y_label": "Share of attempts solved (%)",
+ "x_label": "AI system",
+ "categories": ["Opus 5.5", "GPT-6 Astra", "Opus 5", "Gemini 4 Argon", "Grok 4.7", "Gemini 3.1 Pro"],
+ "series": [
+  {"name": "Basic Solve Rate (tests passed)", "values": [61.8, 60.0, 62.1, 56.4, 49.5, 9.5]},
+  {"name": "Tasteful Solve Rate (tests and quality checks passed)", "values": [39.3, 36.8, 34.7, 27.7, 27.4, 2.1]}
+ ],
+ "y_min": 0,
+ "y_max": 70,
+ "y_step": 10,
+ "decimals": 1
+}

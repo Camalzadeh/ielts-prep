@@ -99,6 +99,7 @@ export async function render(root, params) {
 }
 
 function seriesSort(a, b) {
+  if ((a === 'AI Research') !== (b === 'AI Research')) return a === 'AI Research' ? -1 : 1;   // learn-AI readings first
   const na = (a.match(/(\d+)/) || [])[1], nb = (b.match(/(\d+)/) || [])[1];
   const ca = /cambridge/i.test(a), cb = /cambridge/i.test(b);
   if (ca !== cb) return ca ? -1 : 1;
@@ -108,7 +109,7 @@ function seriesSort(a, b) {
 
 function testCard(t, type) {
   const active = store.get(`active.${t.id}.practice.`) || t.in_progress_attempt;
-  const short = t.test_no ? `Test ${t.test_no}` : t.title;
+  const short = t.test_no ? `Test ${t.test_no}` : t.source === 'research' ? t.title.replace(/^AI Research\s*[—-]\s*/, '') : t.title;
   const card = h('article', { class: `card test-card${t.attempts ? ' done' : ''}` });
   card.innerHTML = `
     <div>
@@ -120,7 +121,7 @@ function testCard(t, type) {
       <div class="t-band">Last<span class="band-pill ${t.last_band == null ? 'none' : ''}">${fmtBand(t.last_band)}</span></div>
       <div class="t-band">Attempts<b style="font-size:15px;color:var(--text)">${t.attempts || 0}</b></div>
     </div>
-    <div class="t-meta"><span>${t.question_count || 40} questions</span>${t.module === 'general' ? '<span class="badge">General Training</span>' : ''}${active ? '<span class="badge warn">In progress</span>' : ''}</div>`;
+    <div class="t-meta"><span>${t.question_count || 40} questions</span>${t.module === 'general' ? '<span class="badge">General Training</span>' : ''}${t.source === 'research' && !t.test_no ? '<span class="badge accent">1 passage · 20 min</span>' : ''}${active ? '<span class="badge warn">In progress</span>' : ''}</div>`;
   const actions = h('div', { class: 't-actions' });
   if (active) {
     actions.append(h('a', { class: 'btn primary sm', href: `#/test/${encodeURIComponent(t.id)}/${active}` }, 'Resume'),

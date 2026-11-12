@@ -14,7 +14,7 @@ import traceback
 from pathlib import Path
 from typing import Any
 
-from . import db
+from . import db, research
 from .grading import count_questions
 from .my_results import import_my_results
 
@@ -48,7 +48,7 @@ def run_import() -> dict[str, Any]:
         conn = db.connect()
         try:
             for name, fn in (("tests", import_tests), ("writing_prompts", import_writing_prompts),
-                             ("retired_prompts", retire_prompts), ("stale_prompts", prune_stale_prompts),
+                             ("research", import_research), ("retired_prompts", retire_prompts), ("stale_prompts", prune_stale_prompts),
                              ("speaking_questions", import_speaking_questions),
                              ("vocab", import_vocab), ("my_essays", import_my_essays),
                              ("photo_essays", import_photo_essays), ("test_results", import_test_results),
@@ -144,6 +144,22 @@ def _data_files(pattern: str) -> list[Path]:
 
 
 # --------------------------------------------------------------------------- tests
+def _upsert_test(conn: sqlite3.Connection, data: dict, ttype: str, path: Path) -> None:
+    conn.execute(
+        """INSERT INTO tests(id, type, module, title, series, book, test_no, source, source_url,
+                             question_count, file_path, data_json, imported_at)
+           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
+           ON CONFLICT(id) DO UPDATE SET type=excluded.type, module=excluded.module,
+             title=excluded.title, series=excluded.series, book=excluded.book,
+             test_no=excluded.test_no, source=excluded.source, source_url=excluded.source_url,
+             question_count=excluded.question_count, file_path=excluded.file_path,
+             data_json=excluded.data_json, imported_at=excluded.imported_at""",
+        (data["id"], ttype, data.get("module") or "academic", data.get("title") or data["id"],
+         data.get("series"), _int(data.get("book")), _int(data.get("test_no")),
+         data.get("source"), data.get("source_url"), count_questions(data), _rel(path),
+         json.dumps(data, ensure_ascii=False), db.now_iso()))
+
+
 def import_tests(conn: sqlite3.Connection, errors: list[str]) -> int:
     base = db.CONTENT_DIR / "tests"
     if not base.is_dir():
@@ -155,20 +171,7 @@ def import_tests(conn: sqlite3.Connection, errors: list[str]) -> int:
             if data is not None:
                 errors.append(f"{_rel(path)}: not a test document")
             continue
-        ttype = data.get("type") or path.parent.name
-        conn.execute(
-            """INSERT INTO tests(id, type, module, title, series, book, test_no, source, source_url,
-                                 question_count, file_path, data_json, imported_at)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
-               ON CONFLICT(id) DO UPDATE SET type=excluded.type, module=excluded.module,
-                 title=excluded.title, series=excluded.series, book=excluded.book,
-                 test_no=excluded.test_no, source=excluded.source, source_url=excluded.source_url,
-                 question_count=excluded.question_count, file_path=excluded.file_path,
-                 data_json=excluded.data_json, imported_at=excluded.imported_at""",
-            (data["id"], ttype, data.get("module") or "academic", data.get("title") or data["id"],
-             data.get("series"), _int(data.get("book")), _int(data.get("test_no")),
-             data.get("source"), data.get("source_url"), count_questions(data), _rel(path),
-             json.dumps(data, ensure_ascii=False), db.now_iso()))
+        _upsert_test(conn, data, data.get("type") or path.parent.name, path)
         n += 1
     # Drop tests whose JSON was deleted (e.g. failed validation on a rescrape), unless already attempted.
     for test_id, rel in conn.execute("SELECT id, file_path FROM tests").fetchall():
@@ -288,6 +291,7 @@ def prune_stale_prompts(conn: sqlite3.Connection, errors: list[str]) -> int:
     wording), unless the learner added them, wrote an essay on them or a mock exam uses them."""
     current = {_str(item.get("prompt")) for path in _data_files("writing_prompts*.json")
                for item in _items(_read_json(path, []))}
+    current |= research.prompt_texts()   # AI Research lessons (knowledge/research/lessons)
     in_mocks = _mock_prompt_ids(conn)
     n = 0
     for pid, prompt in conn.execute(
@@ -297,6 +301,46 @@ def prune_stale_prompts(conn: sqlite3.Connection, errors: list[str]) -> int:
             conn.execute("DELETE FROM writing_prompts WHERE id = ?", (pid,))
             n += 1
     return n
+
+
+# --------------------------------------------------------------------------- AI Research lessons
+def import_research(conn: sqlite3.Connection, errors: list[str]) -> dict[str, int]:
+    """knowledge/research/lessons/*.json: each lesson's reading -> tests, writing -> writing_prompts,
+    key terms -> vocab (topic "AI Research"); its notes become a knowledge-base guide in import_kb.
+    A deleted lesson's test goes with import_tests' cleanup; its prompts with prune_stale_prompts;
+    its guide with import_kb; its unreviewed flashcards here."""
+    stats = {"lessons": 0, "readings": 0, "prompts": 0, "terms": 0}
+    terms_now: set[str] = set()
+    keep = set()
+    for test, path in research.reading_tests(errors):   # full 3-passage tests (tests.json) + ungrouped lessons
+        _upsert_test(conn, test, "reading", path)
+        keep.add(test["id"])
+    stats["readings"] = len(keep)
+    for (tid,) in conn.execute("SELECT id FROM tests WHERE source = ? AND NOT EXISTS "
+                               "(SELECT 1 FROM attempts a WHERE a.test_id = tests.id)", (research.SOURCE,)).fetchall():
+        if tid not in keep:   # e.g. a lesson's one-passage test once it joins a full test
+            conn.execute("DELETE FROM tests WHERE id = ?", (tid,))
+    for path, lesson in research.load_lessons(errors):
+        stats["lessons"] += 1
+        for item in research.lesson_prompts(lesson):
+            if _upsert_prompt(conn, item):
+                stats["prompts"] += 1
+        for t in lesson.get("key_terms") or []:
+            term = _str(t.get("term")) if isinstance(t, dict) else None
+            if not term:
+                continue
+            conn.execute(
+                """INSERT INTO vocab(term, meaning, example, topic, source) VALUES (?,?,?,?,?)
+                   ON CONFLICT(term, topic) DO UPDATE SET meaning=excluded.meaning, example=excluded.example,
+                     source=excluded.source""",
+                (term, _str(t.get("meaning")), _str(t.get("example")), research.VOCAB_TOPIC, research.SOURCE))
+            terms_now.add(term)
+            stats["terms"] += 1
+    for vid, term in conn.execute("SELECT id, term FROM vocab WHERE source = ? AND COALESCE(reps, 0) = 0",
+                                  (research.SOURCE,)).fetchall():
+        if term not in terms_now:
+            conn.execute("DELETE FROM vocab WHERE id = ?", (vid,))
+    return stats
 
 
 # --------------------------------------------------------------------------- speaking
@@ -579,6 +623,19 @@ def _slugify(s: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-") or "doc"
 
 
+def _upsert_kb_doc(conn: sqlite3.Connection, slug: str, title: str, category: str, tags: str | None,
+                   rel_posix: str, body: str) -> None:
+    # the path is the stable identity; free the slug if another path held it
+    conn.execute("DELETE FROM kb_docs WHERE slug = ? AND path <> ?", (slug, rel_posix))
+    existing = conn.execute("SELECT id FROM kb_docs WHERE path = ?", (rel_posix,)).fetchone()
+    if existing:
+        conn.execute("UPDATE kb_docs SET slug=?, title=?, category=?, tags=?, content_md=? WHERE id=?",
+                     (slug, title, category, tags, body, existing[0]))
+    else:
+        conn.execute("INSERT INTO kb_docs(slug, title, category, tags, path, content_md) VALUES (?,?,?,?,?,?)",
+                     (slug, title, category, tags, rel_posix, body))
+
+
 def import_kb(conn: sqlite3.Connection, errors: list[str]) -> int:
     base = db.KNOWLEDGE_DIR / "kb"
     seen_paths: set[str] = set()
@@ -608,16 +665,18 @@ def import_kb(conn: sqlite3.Connection, errors: list[str]) -> int:
             tags = ", ".join(tags) if isinstance(tags, list) else (tags or None)
             rel_posix = rel.as_posix()
             seen_paths.add(rel_posix)
-            # the path is the stable identity; free the slug if another path held it
-            conn.execute("DELETE FROM kb_docs WHERE slug = ? AND path <> ?", (slug, rel_posix))
-            existing = conn.execute("SELECT id FROM kb_docs WHERE path = ?", (rel_posix,)).fetchone()
-            if existing:
-                conn.execute("UPDATE kb_docs SET slug=?, title=?, category=?, tags=?, content_md=? WHERE id=?",
-                             (slug, str(title), str(category), tags, body, existing[0]))
-            else:
-                conn.execute("INSERT INTO kb_docs(slug, title, category, tags, path, content_md) VALUES (?,?,?,?,?,?)",
-                             (slug, str(title), str(category), tags, rel_posix, body))
+            _upsert_kb_doc(conn, slug, str(title), str(category), tags, rel_posix, body)
             n += 1
+    # AI Research lessons: one generated guide each, linking to the lesson's reading test and writing prompts
+    prompt_ids = {r["prompt"]: r["id"] for r in conn.execute(
+        "SELECT id, prompt FROM writing_prompts WHERE source = ?", (research.SOURCE,))}
+    for _, lesson in research.load_lessons():
+        rel_posix = f"research/{lesson['id']}"
+        seen_paths.add(rel_posix)
+        _upsert_kb_doc(conn, f"research-{lesson['id']}", lesson["title"], research.KB_CATEGORY,
+                       lesson.get("topic"), rel_posix,
+                       research.lesson_markdown(lesson, prompt_ids))
+        n += 1
     for r in conn.execute("SELECT id, path FROM kb_docs").fetchall():
         if r["path"] not in seen_paths:
             conn.execute("DELETE FROM kb_docs WHERE id = ?", (r["id"],))

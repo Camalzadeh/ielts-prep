@@ -1,0 +1,413 @@
+{
+ "id": "swe-clar",
+ "title": "SWE-Clar: can coding agents ask the right questions?",
+ "topic": "Coding agents and unclear instructions",
+ "level": "intermediate",
+ "added": "2026-11-12",
+ "sources": [
+  {
+   "kind": "paper",
+   "title": "SWE-Clar: Can Coding Agents Clarify Incomplete Client Requirements and Deliver Greenfield Software?",
+   "authors": "Jialei Li, Dingxian Wang, Xiaoyan Zhao et al.",
+   "year": 2026,
+   "url": "https://arxiv.org/abs/2610.31854"
+  }
+ ],
+ "summary_md": "**In one sentence:** *SWE-Clar* (2026) tests whether AI **coding agents** can do what a good freelancer does with a\nvague job request: ask the client the right questions, understand the answers, and then build working software alone.\n\n### The problem\nClients rarely describe everything they want in their first message. The paper's (fictional) example is a US$6,000\n\"custom order portal\" whose request never says *which* cancellations get refunds. Two things make this hard for an agent:\na client cannot answer questions during a long build, and **getting an answer is not the same as understanding it**\n(\"refund only approved cancellations\" can be misread as \"refund every cancelled order\").\n\n### How the test works\n- **100 tasks** from real Upwork jobs, each paid at least **US$4,000** (chosen from 122 candidates; design jobs excluded).\n  They hold **512 requirement units**: one requirement + one question about it + the tests that check it.\n- The agent gets an incomplete request and a starter project. A **client agent** (another AI that knows the full\n  requirements) answers its questions; a **supervisor** AI checks each reply first. The agent decides when to stop asking.\n- The conversation is then **frozen** and copied into two separate runs:\n  1. **Build run:** the agent writes the software; hidden **acceptance tests** decide pass/fail (all must pass) → *implementation score*.\n  2. **Question run:** the agent answers the requirement questions; a judge AI grades them Correct (1) / Partial (0.5) / Incorrect (0) → *clarification score*.\n  Keeping them apart stops the questions from giving the builder hints.\n\nAnalogy: it is like testing a new employee by letting them interview the customer, then (a) checking the product they\ndeliver and (b) separately giving them a quiz on what the customer asked for.\n\n### Key results\n- Nine leading models passed **39% to 67%** of tasks. The best, **GPT-6 Astra**, still failed 33 of 100. Better understanding\n  went with better delivery (correlation r = 0.89). Astra (~$5.39/task) cost less than both Claude models but scored higher.\n- With two low-cost models (GPT-5.6 Luna / GLM-5.3 Flash): **no questions 6% / 5%**, **questions first 49% / 39%**,\n  **full requirements given 75% / 71%**. Asking closes only about 51-62% of the gap.\n- Agents **stop asking too early**: when they finish, only **33.6-53.7%** of the hidden requirements have been fully revealed.\n- **Hearing ≠ understanding ≠ building:** 2.8-6.4% of fully explained requirements were still answered incorrectly, and\n  6.1-7.8% of requirements were explained correctly but failed their tests.\n- Asking **during** coding instead of before it was worse: 49% → 26% (Luna), 39% → 13% (Flash).\n\n### Why it matters\nReal software work starts from unclear requests. The study shows that the bottleneck for AI developers is not only\nwriting code but finding out, and keeping hold of, what the client actually needs.\n\n### Limitations\nThe clients are simulated by an AI, not real people; the experiments on questioning used only two models; and even\nwith complete requirements 25-29% of tasks still failed, so the benchmark mixes two difficulties.\n\n### IELTS angle\nUseful words from the passage: *commission*, *grasp*, *distinct*, *interchangeable*, *cross-check*, *objectively*,\n*revealing*. In Task 2 essays about customers, services or technology, this study is a concrete example of why clear\ncommunication between a client and a professional matters, and why automation does not remove that need.\n",
+ "key_terms": [
+  {
+   "term": "coding agent",
+   "meaning": "An AI system, built on a large language model, that writes code on its own: reading files, running programs and fixing errors until the job is done.",
+   "example": "The coding agent asked the client six questions before it started to build the portal."
+  },
+  {
+   "term": "large language model (LLM)",
+   "meaning": "A very large AI model trained on huge amounts of text to understand and generate language, including code.",
+   "example": "Each coding agent in the study was powered by a different large language model."
+  },
+  {
+   "term": "benchmark",
+   "meaning": "A fixed set of tasks and scoring rules used to compare AI systems fairly.",
+   "example": "SWE-Clar is a benchmark of 100 freelance software tasks."
+  },
+  {
+   "term": "requirement",
+   "meaning": "Something the client needs the software to do, or a rule it must follow.",
+   "example": "One requirement was that only approved cancellations should be refunded."
+  },
+  {
+   "term": "requirement clarification",
+   "meaning": "Asking the client questions to fill in missing or unclear requirements before building.",
+   "example": "Requirement clarification raised one model's success rate from 6% to 49%."
+  },
+  {
+   "term": "greenfield software",
+   "meaning": "A new software product built from scratch, rather than a change to an existing system.",
+   "example": "All the tasks in the benchmark were greenfield projects."
+  },
+  {
+   "term": "simulated client (client agent)",
+   "meaning": "An AI model that plays the customer and answers questions using the full, hidden requirements.",
+   "example": "The client agent knew every requirement but only revealed what it was asked."
+  },
+  {
+   "term": "acceptance test",
+   "meaning": "An automatic check that the delivered software behaves the way the client required.",
+   "example": "A task counted as passed only if every acceptance test succeeded."
+  },
+  {
+   "term": "task pass rate (implementation score)",
+   "meaning": "The percentage of tasks in which the software passes all of its tests.",
+   "example": "The best model had a task pass rate of 67%."
+  },
+  {
+   "term": "AI judge",
+   "meaning": "An AI model used to grade another model's answers against reference answers.",
+   "example": "The AI judge marked each answer as correct, partial or incorrect."
+  },
+  {
+   "term": "commission (noun)",
+   "meaning": "Academic/business word: a piece of work that someone is formally asked and paid to do.",
+   "example": "The order portal was a fixed-price commission worth US$6,000."
+  },
+  {
+   "term": "grasp (verb/noun)",
+   "meaning": "To understand something fully; an understanding of something.",
+   "example": "Their grasp of the requirements was weaker when they asked questions during coding."
+  },
+  {
+   "term": "not interchangeable",
+   "meaning": "Academic phrase: two things that are related but cannot replace each other.",
+   "example": "Explaining a requirement and implementing it are related but not interchangeable skills."
+  }
+ ],
+ "discussion": [
+  "Why do you think customers often find it difficult to explain exactly what they want from a product or service?",
+  "Do you think AI will replace freelance workers such as programmers and designers, or will it mainly help them? Why?",
+  "Is it better for professionals to ask many questions before they start a job, or to show customers early versions and get feedback? Why?"
+ ],
+ "reading": {
+  "duration_minutes": 20,
+  "parts": [
+   {
+    "number": 1,
+    "title": "Can an AI Developer Ask the Right Questions?",
+    "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-14, which are based on the Reading Passage below.</em></p><p><strong>A</strong> The first message a client sends to a software developer is rarely a full description of what they want, so human freelancers ask questions. A 2026 paper by researchers from the University of Science and Technology of China, the National University of Singapore and the freelance platform Upwork asks whether artificial intelligence can do the same. Its subject is the coding agent: a large language model that works on its own, reading files, running programs and correcting its mistakes until it judges a job complete.</p><p><strong>B</strong> The authors begin with an imaginary but typical commission: a fixed-price job worth US$6,000 to build a 'custom order portal' for managing orders, cancellations and refunds. The request says nothing about the rules for refunds. The example makes two points. First, building a complete product takes a long time, and a busy client cannot be expected to answer questions at every stage. Second, receiving an answer is not the same as understanding it: a client may reply that only approved cancellations should be refunded, while the freelancer takes this to mean that every cancelled order earns a refund. A useful test, the authors argue, must therefore check not only whether an agent asks, but whether it has grasped what it was told.</p><p><strong>C</strong> To build such a test, which they named SWE-Clar, the team started with 122 real Upwork jobs, each with total payments of at least US$4,000. They kept 100 that could be reproduced on an ordinary computer and checked automatically; jobs centred on visual design were left out because they are hard to assess objectively. Web applications formed the largest group, with 35 tasks. A powerful model, GPT-6 Astra, helped to extract the important requirements from the original client conversations, and two reviewers with industry experience cross-checked the results. The outcome was 512 'requirement units', each linking one client requirement to a question about it and to the tests that check it.</p><p><strong>D</strong> Each task begins with an incomplete request and a starter project. A second AI model, the client agent, knows the full requirements and answers the agent's questions; in the main experiments this role was played by GPT-5.6 Luna. A third model, acting as a supervisor, checks every reply for accuracy before it is passed on. Once the coding agent declares that it has finished asking, it must work alone. At that moment the conversation is frozen and copied into two separate runs. In the first, the agent writes the software, which is then judged by hidden acceptance tests; a task counts as passed only if every test succeeds. In the second, the agent answers written questions about the requirements, and a judge model grades each answer as correct, partial or incorrect, with partially correct answers earning half credit. Keeping the runs apart is essential: otherwise a question such as 'which cancellations qualify for a refund?' would give the builder an unearned hint.</p><p><strong>E</strong> Nine leading models were tested. Their pass rates ranged from 39 to 67 per cent: the best, GPT-6 Astra, still failed 33 of the 100 jobs, ahead of Claude Opus 5 at 63 per cent and Claude Fable 5.1 at 60 per cent. Spending more did not guarantee better results, however: Astra cost about US$5.39 per task, less than either Claude model, yet it scored highest.</p><p><strong>F</strong> Another experiment compared three situations using two low-cost models, GPT-5.6 Luna and GLM-5.3 Flash. When they were not allowed to ask anything, they completed only 6 and 5 per cent of the tasks. When they could question the client first, these figures rose to 49 and 39 per cent, and with the complete requirements handed over at the start, they reached 75 and 71 per cent. Asking questions therefore helped enormously, but it closed only about half to three-fifths of the gap created by missing information. The agents also stopped asking too soon: across all nine models, only between roughly a third and a half of the hidden requirements had been fully revealed when the conversation ended. Yet complete information was not enough either, since 25 to 29 per cent of tasks still failed.</p><p><strong>G</strong> Understanding and building also turned out to be distinct skills. Even for requirements the client had fully explained, between 2.8 and 6.4 per cent of the agents' answers were judged incorrect. Conversely, for each model, between 6.1 and 7.8 per cent of all requirements were described correctly in the written answers yet failed their tests. In one case, an agent correctly stated that badly formed historical data should produce an error, while a valid empty history should return no results; its program, however, turned the invalid empty input into a valid one and returned no results without any error. In the authors' view, the answers show what an agent can explain and the tests show what it builds; the two are related but not interchangeable.</p><p><strong>H</strong> Finally, when the two low-cost models were allowed to keep asking questions while they were coding, rather than only beforehand, their success rates fell sharply, from 49 to 26 per cent for Luna and from 39 to 13 per cent for Flash, and their grasp of the requirements was weaker too. The authors suggest that mixing new answers, earlier guesses and code changes may lead an agent to confuse outdated assumptions with current requirements. The study has limits: its clients are simulated by AI, and the experiments on questioning used only two models. Even so, their advice is practical: agents should ensure the critical requirements are clear before they start, turn each one into a concrete check, and keep testing their code against those checks.</p>",
+    "groups": [
+     {
+      "range": [
+       1,
+       4
+      ],
+      "type": "matching_information",
+      "instructions_html": "<p>The Reading Passage has eight paragraphs, A-H.</p><p>Which paragraph contains the following information?</p><p>NB You may use any letter more than once.</p>",
+      "content_html": "",
+      "image": null,
+      "options": [
+       {
+        "key": "A",
+        "text": ""
+       },
+       {
+        "key": "B",
+        "text": ""
+       },
+       {
+        "key": "C",
+        "text": ""
+       },
+       {
+        "key": "D",
+        "text": ""
+       },
+       {
+        "key": "E",
+        "text": ""
+       },
+       {
+        "key": "F",
+        "text": ""
+       },
+       {
+        "key": "G",
+        "text": ""
+       },
+       {
+        "key": "H",
+        "text": ""
+       }
+      ],
+      "questions": [
+       {
+        "number": 1,
+        "prompt_html": "a type of job that was deliberately not included in the test",
+        "options": null,
+        "answer": [
+         "C"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph C says jobs centred on visual design were 'left out' because they are hard to assess objectively.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>They kept 100 that could be reproduced on an ordinary computer and checked automatically; jobs centred on visual design were left out because they are hard to assess objectively.</p></blockquote>"
+       },
+       {
+        "number": 2,
+        "prompt_html": "the reason for keeping the assessment of understanding apart from the building of the software",
+        "options": null,
+        "answer": [
+         "D"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph D explains that a question asked in the same run could give the builder an unearned hint.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Keeping the runs apart is essential: otherwise a question such as 'which cancellations qualify for a refund?' would give the builder an unearned hint.</p></blockquote>"
+       },
+       {
+        "number": 3,
+        "prompt_html": "an example of a program that did not follow a rule which its creator had described accurately",
+        "options": null,
+        "answer": [
+         "G"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph G describes an agent that correctly stated how bad historical data should be handled, but whose program turned the invalid empty input into a valid one and returned no error.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In one case, an agent correctly stated that badly formed historical data should produce an error, while a valid empty history should return no results; its program, however, turned the invalid empty input into a valid one and returned no results without any error.</p></blockquote>"
+       },
+       {
+        "number": 4,
+        "prompt_html": "a possible explanation for why more chances to ask questions led to worse results",
+        "options": null,
+        "answer": [
+         "H"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph H reports the authors' suggestion that mixing new answers, earlier guesses and code changes may make an agent confuse old assumptions with current requirements.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The authors suggest that mixing new answers, earlier guesses and code changes may lead an agent to confuse outdated assumptions with current requirements.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       5,
+       8
+      ],
+      "type": "mcq",
+      "instructions_html": "<p>Choose the correct letter, A, B, C or D.</p>",
+      "content_html": null,
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 5,
+        "prompt_html": "Why do the authors describe the imaginary order portal in paragraph B?",
+        "options": [
+         {
+          "key": "A",
+          "text": "to show that freelance software projects are often underpaid"
+         },
+         {
+          "key": "B",
+          "text": "to illustrate that a client's reply can still be misunderstood"
+         },
+         {
+          "key": "C",
+          "text": "to argue that clients should always supply a complete written specification"
+         },
+         {
+          "key": "D",
+          "text": "to explain how refunds are usually handled on freelance platforms"
+         }
+        ],
+        "answer": [
+         "B"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The example shows a client saying only approved cancellations should be refunded while the freelancer understands that every cancelled order earns a refund. A, C and D are not the purpose of the example.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Second, receiving an answer is not the same as understanding it: a client may reply that only approved cancellations should be refunded, while the freelancer takes this to mean that every cancelled order earns a refund.</p></blockquote>"
+       },
+       {
+        "number": 6,
+        "prompt_html": "What does the writer say about GPT-6 Astra as a coding agent?",
+        "options": [
+         {
+          "key": "A",
+          "text": "It was the most expensive model in the study."
+         },
+         {
+          "key": "B",
+          "text": "It was unsuccessful on roughly one third of the tasks."
+         },
+         {
+          "key": "C",
+          "text": "It was the only model to pass more than 60 per cent of the tasks."
+         },
+         {
+          "key": "D",
+          "text": "It played the role of the client in the main experiments."
+         }
+        ],
+        "answer": [
+         "B"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Astra failed 33 of the 100 jobs, about one third. It cost less than both Claude models (not A), Claude Opus 5 also passed 63 per cent (not C), and the client was played by GPT-5.6 Luna (not D).</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Their pass rates ranged from 39 to 67 per cent: the best, GPT-6 Astra, still failed 33 of the 100 jobs, ahead of Claude Opus 5 at 63 per cent and Claude Fable 5.1 at 60 per cent.</p></blockquote>"
+       },
+       {
+        "number": 7,
+        "prompt_html": "What did the comparison of three situations in paragraph F show?",
+        "options": [
+         {
+          "key": "A",
+          "text": "Allowing the agents to ask questions made only a small difference."
+         },
+         {
+          "key": "B",
+          "text": "With the complete requirements, the agents completed almost every task."
+         },
+         {
+          "key": "C",
+          "text": "Asking questions helped a great deal but did not make up for all the missing information."
+         },
+         {
+          "key": "D",
+          "text": "The agents usually kept asking until every hidden requirement had been revealed."
+         }
+        ],
+        "answer": [
+         "C"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Questions raised success from 6 and 5 per cent to 49 and 39 per cent, but closed only about half to three-fifths of the gap. A is contradicted by the large rise, B by the 25 to 29 per cent of tasks that still failed, and D by the agents stopping too soon.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Asking questions therefore helped enormously, but it closed only about half to three-fifths of the gap created by missing information.</p></blockquote>"
+       },
+       {
+        "number": 8,
+        "prompt_html": "What happened when the agents could continue asking questions during coding?",
+        "options": [
+         {
+          "key": "A",
+          "text": "One model improved while the other did worse."
+         },
+         {
+          "key": "B",
+          "text": "Both models completed fewer tasks successfully."
+         },
+         {
+          "key": "C",
+          "text": "There was no measurable change in either model's results."
+         },
+         {
+          "key": "D",
+          "text": "The agents understood the requirements better, although they completed fewer tasks."
+         }
+        ],
+        "answer": [
+         "B"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Success fell from 49 to 26 per cent for Luna and from 39 to 13 per cent for Flash, and their understanding was weaker too, so D is wrong.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Finally, when the two low-cost models were allowed to keep asking questions while they were coding, rather than only beforehand, their success rates fell sharply, from 49 to 26 per cent for Luna and from 39 to 13 per cent for Flash, and their grasp of the requirements was weaker too.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       9,
+       13
+      ],
+      "type": "summary_completion",
+      "instructions_html": "<p>Complete the summary below.</p><p>Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage for each answer.</p>",
+      "content_html": "<p><strong>How a SWE-Clar task is run</strong></p><p>The AI being tested acts as a freelancer and receives an incomplete request and a starter project. Its questions are answered by the {{9}}, which has the complete set of requirements, but every reply is first checked for accuracy by a {{10}}. When the agent says it has no more questions, the conversation is {{11}} and used to begin two separate runs. In one, the finished software has to pass all of the hidden {{12}}. In the other, the agent's written answers are graded, and an answer that is only partly right receives {{13}}.</p>",
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 9,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "client agent",
+         "the client agent"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The client agent is the second AI model, which has the full requirements and answers the questions.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>A second AI model, the client agent, knows the full requirements and answers the agent's questions; in the main experiments this role was played by GPT-5.6 Luna.</p></blockquote>"
+       },
+       {
+        "number": 10,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "supervisor",
+         "a supervisor"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>A third model acts as a supervisor and checks each reply for accuracy.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>A third model, acting as a supervisor, checks every reply for accuracy before it is passed on.</p></blockquote>"
+       },
+       {
+        "number": 11,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "frozen"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Once the agent stops asking, the conversation is frozen and copied into two runs.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>At that moment the conversation is frozen and copied into two separate runs.</p></blockquote>"
+       },
+       {
+        "number": 12,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "acceptance tests"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The software is judged by hidden acceptance tests, and every test must succeed.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In the first, the agent writes the software, which is then judged by hidden acceptance tests; a task counts as passed only if every test succeeds.</p></blockquote>"
+       },
+       {
+        "number": 13,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "half credit"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Partially correct answers earn half credit.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>In the second, the agent answers written questions about the requirements, and a judge model grades each answer as correct, partial or incorrect, with partially correct answers earning half credit.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       14,
+       14
+      ],
+      "type": "mcq",
+      "instructions_html": "<p>Choose the correct letter, A, B, C or D.</p>",
+      "content_html": null,
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 14,
+        "prompt_html": "Which of the following is the most suitable title for this Reading Passage?",
+        "options": [
+         {
+          "key": "A",
+          "text": "Why AI developers now do better work than human freelancers"
+         },
+         {
+          "key": "B",
+          "text": "Testing whether AI agents can clarify a client's needs and then deliver"
+         },
+         {
+          "key": "C",
+          "text": "How freelance websites decide which software jobs to advertise"
+         },
+         {
+          "key": "D",
+          "text": "The rising cost of hiring software developers online"
+         }
+        ],
+        "answer": [
+         "B"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The passage describes a test (SWE-Clar) of whether coding agents can find out what an incomplete request is missing by asking the client, and then build working software. A is contradicted (even the best agent failed a third of the jobs); C and D are only minor details or not discussed.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>A 2026 paper by researchers from the University of Science and Technology of China, the National University of Singapore and the freelance platform Upwork asks whether artificial intelligence can do the same.</p></blockquote>"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "writing": [
+  {
+   "task": 2,
+   "essay_type": "discussion",
+   "prompt": "Customers often find it difficult to explain exactly what they want from a product or service. Some people believe it is the responsibility of the professional, such as a designer or a software developer, to find out what the customer really needs. Others think customers themselves should be responsible for stating their requirements clearly.\n\nDiscuss both these views and give your own opinion."
+  },
+  {
+   "task": 1,
+   "essay_type": "bar",
+   "prompt": "The chart below shows the percentage of 100 software development tasks that two AI coding systems completed successfully under four different conditions, according to a study published in 2026.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+   "image": "media/writing/research/swe-clar-delivery.svg",
+   "image_description": "Bar chart, percentage of 100 software tasks completed (0-100%) by two AI coding systems, GPT-5.6 Luna / GLM-5.3 Flash, under four conditions: no questions allowed 6 / 5; questions to the client allowed during coding 26 / 13; questions allowed before coding only 49 / 39; full requirements given at the start 75 / 71. Main trends: both systems complete almost nothing when they cannot ask questions; results rise with each condition from left to right and are highest when full requirements are given (about three quarters of tasks). Asking before coding is much better than asking during coding (about double for Luna, three times for Flash). Luna is ahead of Flash in every condition; the gap is widest when questions are asked during coding or before coding (13 and 10 points) and smallest with no questions (1 point)."
+  }
+ ]
+}

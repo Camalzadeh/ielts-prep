@@ -10,7 +10,7 @@ import re
 import sqlite3
 from typing import Any
 
-from . import db
+from . import db, research
 from .grading import html_to_text, iter_questions, normalise
 
 STOPWORDS = set("""a an the and or but of to in on at for with by from as is are was were be been being it its
@@ -296,7 +296,7 @@ def attempt_context(conn: sqlite3.Connection, attempt_id: int, exclude_analysis:
 # --------------------------------------------------------------------------- writing
 def writing_context(conn: sqlite3.Connection, submission_id: int, exclude_analysis: int | None = None) -> str:
     s = conn.execute(
-        "SELECT s.*, p.task, p.module, p.essay_type, p.prompt, p.image_path, p.image_description, p.source "
+        "SELECT s.*, p.task, p.module, p.essay_type, p.prompt, p.image_path, p.image_description, p.source, p.tags "
         "FROM writing_submissions s LEFT JOIN writing_prompts p ON p.id = s.prompt_id WHERE s.id = ?",
         (submission_id,)).fetchone()
     if not s:
@@ -315,6 +315,12 @@ def writing_context(conn: sqlite3.Connection, submission_id: int, exclude_analys
         out.append("Image description (data shown in the visual):\n" + s["image_description"])
     elif s["task"] == 1:
         out.append("(No image description available — judge data accuracy cautiously.)")
+    lesson = research.get_lesson(research.lesson_id_from_tags(s["tags"]) or "") if s["source"] == research.SOURCE else None
+    if lesson and lesson.get("summary_md"):
+        out.append(f"\n## Background: AI Research lesson '{lesson['title']}'\n"
+                   "(The prompt comes from this lesson. Use these notes only to check facts about AI that the "
+                   "candidate states; the essay is marked on the IELTS criteria, not on AI knowledge.)\n"
+                   + _clip(lesson["summary_md"], 4000))
     out += ["\n## Candidate's essay", s["text"] or ""]
     keys = s.keys()
     if "teacher_band" in keys and (s["teacher_band"] is not None or s["teacher_comments"]):

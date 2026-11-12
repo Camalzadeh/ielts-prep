@@ -21,6 +21,7 @@ export async function render(root, params, query) {
 const CAT_LABELS = {
   'writing-task1': 'Writing Task 1', 'writing-task2': 'Writing Task 2', writing: 'Writing', speaking: 'Speaking',
   reading: 'Reading', listening: 'Listening', vocabulary: 'Vocabulary', grammar: 'Grammar', general: 'General',
+  'ai-research': 'AI Research',
 };
 const catLabel = (c) => CAT_LABELS[c] || (c ? c.replace(/[-_]/g, ' ').replace(/\b\w/g, (m) => m.toUpperCase()) : 'Other');
 

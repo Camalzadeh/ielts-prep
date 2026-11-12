@@ -436,3 +436,102 @@ def test_mock_material_weights(client):
         conn.execute("DELETE FROM writing_prompts WHERE task=9")
         conn.execute("DELETE FROM attempts WHERE test_id LIKE 'w-%'")
         conn.execute("DELETE FROM tests WHERE id LIKE 'w-%'")
+
+
+
+def test_research_lessons(client):
+    """AI Research lessons: reading -> Reading library, writing -> Writing bank, notes -> knowledge base;
+    one Settings switch; never in mocks or random picks."""
+    import json as _json
+    from backend.app.routers import mock as mockr, writing as writingr
+    lessons = db.KNOWLEDGE_DIR / "research" / "lessons"
+    lessons.mkdir(parents=True, exist_ok=True)
+    path = lessons / "test-lesson.json"
+    prompt = "Some people think AI research should be open to everyone. To what extent do you agree or disagree?"
+    path.write_text(_json.dumps({
+        "id": "test-lesson", "title": "Test lesson", "topic": "Testing", "summary_md": "Attention links words.",
+        "sources": [{"kind": "paper", "title": "A paper", "url": "https://example.org/p"}],
+        "key_terms": [{"term": "zz-attention", "meaning": "looking at other words"}],
+        "reading": {"parts": [{"number": 1, "passage_html": "<p>A text.</p>", "groups": [
+            {"range": [1, 1], "type": "tfng", "questions": [{"number": 1, "prompt_html": "x", "answer": ["TRUE"]}]}]}]},
+        "writing": [{"task": 2, "essay_type": "opinion", "prompt": prompt}]}), encoding="utf-8")
+    tests_ids = lambda: {t["id"] for t in client.get("/api/tests?type=reading").json()}
+    try:
+        importer.run_import()
+        # reading in the library, as a normal 20-minute test
+        assert "research-test-lesson" in tests_ids()
+        t = client.get("/api/tests/research-test-lesson").json()
+        assert t["series"] == "AI Research" and t["duration_minutes"] == 20 and t["source"] == "research"
+        # writing in the bank
+        p = next(p for p in client.get("/api/writing/prompts").json() if p["prompt"] == prompt)
+        assert p["source"] == "research" and p["tags"] == "research,test-lesson"
+        pid = p["id"]
+        # notes in the knowledge base, linking to the reading and the writing prompt
+        assert any(d["slug"] == "research-test-lesson" and d["category"] == "ai-research" for d in client.get("/api/kb").json())
+        doc = client.get("/api/kb/research-test-lesson").json()["content_md"]
+        assert "Attention links words." in doc and "zz-attention" in doc
+        assert "#/test/research-test-lesson" in doc and f"#/writing/write/{pid}" in doc
+        assert any(d["slug"] == "research-test-lesson" for d in client.get("/api/kb/search?q=attention").json())
+        # never in mocks or random picks
+        with db.session(readonly=True) as conn:
+            assert "research-test-lesson" not in dict(mockr.mock_test_weights(conn, "reading", "academic"))
+            assert pid not in {c["id"] for c, _ in mockr.mock_prompt_weights(conn, 2, "academic")}
+            for _ in range(30):
+                assert (writingr.pick_random_prompt(conn, 2) or {}).get("id") != pid
+        # the AI marker gets the lesson notes
+        sid = client.post("/api/writing/submissions", json={"prompt_id": pid, "text": "An essay."}).json()["id"]
+        with db.session(readonly=True) as conn:
+            assert "Attention links words." in context.writing_context(conn, sid)
+        client.delete(f"/api/writing/submissions/{sid}")
+        assert any(v["term"] == "zz-attention" for v in client.get("/api/vocab?topic=AI Research").json())
+        # the switch hides everything...
+        client.put("/api/settings", json={"show_research": "0"})
+        assert "research-test-lesson" not in tests_ids()
+        assert pid not in {p["id"] for p in client.get("/api/writing/prompts").json()}
+        assert "research-test-lesson" not in {d["slug"] for d in client.get("/api/kb").json()}
+        assert "research-test-lesson" not in {d["slug"] for d in client.get("/api/kb/search?q=attention").json()}
+        assert not any(v["term"] == "zz-attention" for v in client.get("/api/vocab").json())
+        # ...except what was already started
+        aid = client.post("/api/attempts", json={"test_id": "research-test-lesson"}).json()["id"]
+        assert "research-test-lesson" in tests_ids()
+        client.delete(f"/api/attempts/{aid}")
+    finally:
+        client.put("/api/settings", json={"show_research": "1"})
+        path.unlink()
+        importer.run_import()
+    # a deleted lesson leaves nothing behind
+    with db.session(readonly=True) as conn:
+        assert not conn.execute("SELECT 1 FROM tests WHERE id='research-test-lesson'").fetchone()
+    # tests.json groups three lessons into one Cambridge-style test: Passages 1-3, renumbered, 60 minutes
+    tests_json = db.KNOWLEDGE_DIR / "research" / "tests.json"
+    group = ["grp-a", "grp-b", "grp-c"]
+    for n, lid in enumerate(group):
+        qs = 2 if n == 2 else 1
+        (lessons / f"{lid}.json").write_text(_json.dumps({
+            "id": lid, "title": lid, "summary_md": "x",
+            "reading": {"parts": [{"number": 1, "passage_html": "<p><em>You should spend about 20 minutes on "
+                                   "Questions 1-1, which are based on the Reading Passage below.</em></p><p>Text.</p>",
+                                   "groups": [{"range": [1, qs], "type": "sentence_completion",
+                                               "content_html": "".join(f"<p>{{{{{i}}}}}</p>" for i in range(1, qs + 1)),
+                                               "questions": [{"number": i, "answer": ["text"]} for i in range(1, qs + 1)]}]}]}}),
+            encoding="utf-8")
+    tests_json.write_text(_json.dumps([{"test_no": 9, "lessons": group}]), encoding="utf-8")
+    try:
+        importer.run_import()
+        ids = tests_ids()
+        assert "research-test-9" in ids and not ids & {f"research-{g}" for g in group}
+        t = client.get("/api/tests/research-test-9").json()
+        assert t["duration_minutes"] == 60 and t["series"] == "AI Research" and [p["number"] for p in t["parts"]] == [1, 2, 3]
+        p3 = t["parts"][2]
+        assert p3["groups"][0]["range"] == [3, 4] and "{{4}}" in p3["groups"][0]["content_html"]
+        assert "Questions 3-4, which are based on Reading Passage 3" in p3["passage_html"]
+    finally:
+        tests_json.unlink()
+        for lid in group:
+            (lessons / f"{lid}.json").unlink()
+        importer.run_import()
+    assert "research-test-9" not in tests_ids()
+    with db.session(readonly=True) as conn:
+        assert not conn.execute("SELECT 1 FROM writing_prompts WHERE prompt=?", (prompt,)).fetchone()
+        assert not conn.execute("SELECT 1 FROM vocab WHERE term='zz-attention'").fetchone()
+        assert not conn.execute("SELECT 1 FROM kb_docs WHERE slug='research-test-lesson'").fetchone()

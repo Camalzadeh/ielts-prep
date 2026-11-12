@@ -1,0 +1,299 @@
+{
+ "id": "nonprogrammers-ai-code",
+ "title": "Can Non-programmers Check AI-Generated Code?",
+ "topic": "People working with AI",
+ "level": "beginner",
+ "added": "2026-11-12",
+ "sources": [
+  {
+   "kind": "paper",
+   "title": "Non-programmers Assessing AI-Generated Code: A Case Study of Business Users Analyzing Data",
+   "authors": "Yuvraj Virk, Dongyu Liu",
+   "year": 2025,
+   "url": "https://arxiv.org/abs/2508.06484"
+  }
+ ],
+ "summary_md": "**In one sentence:** in a 2025 study, marketing and sales professionals who could not program were asked to find\nthe mistakes in AI-written data analyses; even though they were warned, prompted and paid to look for errors, they\nmissed many, including ones that needed no technical knowledge.\n\n### The problem\nChatbots such as ChatGPT can now write and run **code** for people who cannot program. A manager asks a question\n(\"Why did sales peak on these dates?\"), the **large language model (LLM)** writes and runs a small program, and\nexplains the method and result in plain English. In the study, 18 of 26 professionals said they used such tools to\nanalyse data daily or weekly. But LLMs still make mistakes in complex analysis, and the user never sees the code.\nSo: **can a non-programmer catch the AI's errors from the explanation alone?**\n\n### How the study worked\n- The AI (*Llama 3.1*) rewrote its code until it ran, then explained it under \"Methods\" and \"Results\"; the authors\n  checked and edited every explanation. Errors that exist only in code (e.g. a **hallucinated** function name) were\n  out of scope: the study looked at flaws in the *approach*.\n- **Survey 1:** 10 marketing/sales professionals with no programming or data-science experience judged 8 realistic\n  tasks on one dataset (27 weeks of figures for an imaginary TV company). Every answer had at least one flaw.\n  A flaw was **safety-critical** if missing it could lead to an unsound business decision.\n- Against blind trust: a warning on every task, a $6 bonus for the top three (75% on top of $8 pay), and a first\n  step of restating the AI's method in their own words.\n\n### Key results\n- No flaw was found consistently; many were found by only one person; some safety-critical flaws by nobody.\n- Of the flaws people did find, about 72% involved technical content, 33% marketing (domain) knowledge and 41%\n  only general critical thinking (one flaw can be in several groups).\n- Typical gaps: broad comments instead of step-by-step checking; most missed that the AI ignored holidays and\n  seasons when explaining sales peaks; people noticed wrong steps far more than **missing** ones.\n- **Survey 2** (18 new people): answers were split into clear steps, and for half the tasks two **alternatives**\n  were shown per step. On a pricing task (find the best price from $800 to $1,200; the AI tried only one price),\n  8 of 9 spotted the flaw with steps, against 5 of 10 in survey 1 and 4 of 9 with steps plus alternatives.\n  Alternatives were often too technical, yet on 4 of the 8 tasks that group found the most flaws.\n\n### Why it matters\nThe authors conclude that business professionals **cannot reliably verify** AI-generated analyses on their own.\nThe cause is not overconfidence or simply a lack of technical knowledge, but applying their expertise in an\nunfamiliar technical context. They ask for much more reliable AI and for explanations built on visuals, clearly\nmarked decisions and accessible alternatives.\n\n### Limitations\nVery small samples (10 and 18 people), one professional group and written explanations only.\n\n### IELTS angle\nUseful words: *be relied upon*, *precautions*, *sobering*, *a mixed blessing*, *preliminary*, *safety net*,\n*verify*. In Task 2 essays on AI at work or responsibility for AI mistakes, this study is a concrete example:\neven warned, motivated professionals could not reliably check output they did not fully understand, so \"a human\nwill check it\" is not always a real safeguard.\n",
+ "key_terms": [
+  {
+   "term": "large language model (LLM)",
+   "meaning": "An AI system trained on huge amounts of text to predict and produce language; chatbots such as ChatGPT are built on one.",
+   "example": "The large language model wrote the code and then explained its results in plain English."
+  },
+  {
+   "term": "code generation",
+   "meaning": "Using AI to write computer programs from a description in ordinary language.",
+   "example": "Code generation lets people without programming skills run complex data analyses."
+  },
+  {
+   "term": "end user / non-programmer",
+   "meaning": "A person who uses software to get their own work done but does not write code professionally.",
+   "example": "The study asked whether end users can check AI-written analyses they cannot read."
+  },
+  {
+   "term": "hallucination (in AI)",
+   "meaning": "When an AI confidently produces something false or invented, such as a software function that does not exist.",
+   "example": "A hallucinated function name is invisible to someone who only reads the explanation."
+  },
+  {
+   "term": "safety-critical flaw",
+   "meaning": "In this study, an error that could lead to a poor or unsound decision if nobody noticed it.",
+   "example": "Some safety-critical flaws were missed by every participant."
+  },
+  {
+   "term": "domain knowledge",
+   "meaning": "Expert knowledge of a particular field (here, marketing), as opposed to technical or programming knowledge.",
+   "example": "Noticing that holidays affect sales needs domain knowledge, not coding skill."
+  },
+  {
+   "term": "mean squared error (MSE)",
+   "meaning": "A statistic showing how far a model's predictions are from real values, usually as one large number that is hard to interpret.",
+   "example": "Participants preferred a graph of the forecast to a mean squared error."
+  },
+  {
+   "term": "verification / human oversight",
+   "meaning": "Checking that an AI system's output is correct before it is used.",
+   "example": "The authors conclude that business users cannot reliably carry out this verification alone."
+  },
+  {
+   "term": "over-reliance (on AI)",
+   "meaning": "Trusting an AI's output more than its real accuracy justifies.",
+   "example": "Warnings and bonuses were used to reduce over-reliance on the AI."
+  },
+  {
+   "term": "a mixed blessing",
+   "meaning": "Academic idiom: something with both advantages and disadvantages.",
+   "example": "The alternatives proved a mixed blessing: helpful on some tasks, confusing on others."
+  },
+  {
+   "term": "sobering",
+   "meaning": "Making people serious and aware of a problem; disappointing in a way that teaches something.",
+   "example": "Despite these precautions, the results were sobering."
+  },
+  {
+   "term": "be relied upon (to do something)",
+   "meaning": "Formal phrase: be trusted to do something consistently.",
+   "example": "Non-programmers cannot be relied upon to notice every AI error."
+  }
+ ],
+ "discussion": [
+  "Do you think people trust computers and AI too much in their daily lives? Why?",
+  "If an AI tool makes a mistake that costs a company money, who should be blamed: the employee, the company or the developer of the tool?",
+  "Should schools and universities teach everyone basic data and AI skills, even students who will not work in technology? Why or why not?"
+ ],
+ "reading": {
+  "duration_minutes": 20,
+  "parts": [
+   {
+    "number": 1,
+    "title": "Can Business Users Catch an AI's Mistakes?",
+    "passage_html": "<p><em>You should spend about 20 minutes on Questions 1-13, which are based on the Reading Passage below.</em></p><p><strong>A</strong> Not long ago, analysing sales figures in depth required a trained data analyst; today, a marketing manager can type a question into a chatbot, which writes the necessary computer code, runs it and reports the answer in ordinary English. The practice is already common: in a 2025 study by Yuvraj Virk and Dongyu Liu of the University of California, Davis, 18 of the 26 marketing and sales professionals questioned said they used tools such as ChatGPT to analyse data daily or weekly. The difficulty is that the large language models behind these tools, systems trained on vast amounts of text to produce language, still make errors in complex analysis. The researchers therefore asked an uncomfortable question: can people who cannot read code be relied upon to notice when the machine gets something wrong?</p><p><strong>B</strong> The authors first recreated the way such tools are typically used: a user describes a task, the AI writes and runs a program, and the user receives only a written account of the method and results, never the code. Some errors are therefore invisible: a language model may 'hallucinate' the name of a software function that does not exist, a mistake only a programmer could detect, so the study concentrated on flaws in the overall approach. The answers came from an openly available model, Llama 3.1, which rewrote its code until it ran without errors and then explained its work under the headings 'Methods' and 'Results'. Every explanation was then checked by the authors and, where necessary, edited so that it described the code faithfully in language a non-specialist could follow.</p><p><strong>C</strong> The ten participants in the first survey, recruited online, all worked in marketing, sales or business development, held at least an undergraduate degree and used marketing data to inform decisions at least once a month, but none had any professional experience of programming or data science. They were given eight realistic tasks based on a single table covering 27 weeks of sales and marketing figures for an imaginary television company. These ranged from choosing a model to forecast sales to explaining sudden sales peaks, and each AI answer contained at least one flaw identified by the authors in advance. The authors called a flaw 'safety-critical' when overlooking it could push a business towards an unsound decision, such as relying on a highly inaccurate sales forecast.</p><p><strong>D</strong> Much was done to prevent blind trust. Every task carried a highlighted warning that the AI's methods or results often contain mistakes, some of which may be hard to notice. The three best performers were promised a bonus of $6, a 75% increase on the basic payment of $8. Before listing any problems, participants also had to restate the AI's method in their own words.</p><p><strong>E</strong> Despite these precautions, the results were sobering. No flaw was detected consistently, many were mentioned by just one person, and some safety-critical flaws were missed by every participant. This was not simply a matter of technical ignorance: of the flaws that participants did report, about 72% concerned technical content, while roughly a third depended on marketing knowledge and about 41% required nothing more than general critical thinking. Yet clear weaknesses emerged. Participants tended to comment on methods in broad terms instead of examining individual steps, and most failed to mention that the AI had ignored seasonal effects such as holidays when explaining sudden peaks in sales. They were also far quicker to criticise something the AI had done wrongly than to notice something it had failed to do; no one spotted the useful variables the AI should have added to its model. Several asked for graphs and concrete forecasts rather than abstract statistics such as the mean squared error, a single figure summarising how far predictions are from reality. In several cases, however, participants found nothing wrong at all and declared themselves satisfied.</p><p><strong>F</strong> A second survey, with 18 new participants, tested two possible explanations. Perhaps the AI's decisions were buried in long paragraphs, so the answers were rewritten as clearly separated steps. Perhaps, too, users find it hard to imagine other ways of solving a problem, so for half of the tasks each step was accompanied by two plausible alternatives. Formatting made a large difference to only one flaw, a relatively obvious one in a pricing task, where the AI had been told to find the best price between $800 and $1,200 but had tested only one price. When the answer was set out in steps, eight of nine participants noticed the error, compared with five of ten in the first study and four of nine when alternatives were also shown. The alternatives themselves proved a mixed blessing, since they were often too technical for participants to evaluate. Even so, on four of the eight tasks the group shown alternatives found the most flaws by a wide margin, although the authors stress that this evidence is preliminary. Ability also varied greatly from one person to another, and this variation was unrelated to professional experience or the time spent on each task.</p><p><strong>G</strong> The authors draw a clear conclusion: business professionals cannot reliably verify AI-generated analyses on their own. Nor, they argue, can the failures be blamed on overconfidence, since the participants had been warned, prompted and paid to look for errors. The real obstacle appears to be applying familiar expertise and common sense in an unfamiliar technical setting. They therefore call for far more reliable AI and for explanations built around visual results, prominent decisions and accessible alternatives. The study has clear limitations, notably its small samples and its focus on a single professional group. Nevertheless, for any organisation that expects its staff to act as a safety net for automated analysis, the findings are difficult to ignore.</p>",
+    "groups": [
+     {
+      "range": [
+       1,
+       5
+      ],
+      "type": "tfng",
+      "instructions_html": "<p>Do the following statements agree with the information given in the Reading Passage?</p><p><strong>TRUE</strong> if the statement agrees with the information</p><p><strong>FALSE</strong> if the statement contradicts the information</p><p><strong>NOT GIVEN</strong> if there is no information on this</p>",
+      "content_html": null,
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 1,
+        "prompt_html": "The researchers reviewed the AI's explanations and corrected them where needed before participants saw them.",
+        "options": null,
+        "answer": [
+         "TRUE"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph B says every explanation was checked by the authors and edited where necessary.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Every explanation was then checked by the authors and, where necessary, edited so that it described the code faithfully in language a non-specialist could follow.</p></blockquote>"
+       },
+       {
+        "number": 2,
+        "prompt_html": "Some of the participants in the first survey had previously worked as professional programmers.",
+        "options": null,
+        "answer": [
+         "FALSE"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph C says none of the participants had any professional experience of programming or data science.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The ten participants in the first survey, recruited online, all worked in marketing, sales or business development, held at least an undergraduate degree and used marketing data to inform decisions at least once a month, but none had any professional experience of programming or data science.</p></blockquote>"
+       },
+       {
+        "number": 3,
+        "prompt_html": "Participants were required to explain the AI's method in their own words before criticising it.",
+        "options": null,
+        "answer": [
+         "TRUE"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph D says participants had to restate the AI's method in their own words before listing any problems.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Before listing any problems, participants also had to restate the AI's method in their own words.</p></blockquote>"
+       },
+       {
+        "number": 4,
+        "prompt_html": "Participants who regularly used AI tools to analyse data found more flaws than those who used them less often.",
+        "options": null,
+        "answer": [
+         "NOT GIVEN"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph A gives the number of professionals who use such tools daily or weekly, and paragraph F says differences in ability were unrelated to experience or time spent. The passage never compares people by how often they use AI tools.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The practice is already common: in a 2025 study by Yuvraj Virk and Dongyu Liu of the University of California, Davis, 18 of the 26 marketing and sales professionals questioned said they used tools such as ChatGPT to analyse data daily or weekly.</p></blockquote><blockquote><p>Ability also varied greatly from one person to another, and this variation was unrelated to professional experience or the time spent on each task.</p></blockquote>"
+       },
+       {
+        "number": 5,
+        "prompt_html": "The authors believe that participants missed flaws mainly because they trusted the AI too much.",
+        "options": null,
+        "answer": [
+         "FALSE"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph G says the authors argue the failures cannot be blamed on overconfidence; the real obstacle is applying expertise in an unfamiliar technical setting.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Nor, they argue, can the failures be blamed on overconfidence, since the participants had been warned, prompted and paid to look for errors.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       6,
+       9
+      ],
+      "type": "matching_sentence_endings",
+      "instructions_html": "<p>Complete each sentence with the correct ending, <strong>A-G</strong>, below.</p><p>Write the correct letter, <strong>A-G</strong>, in boxes 6-9 on your answer sheet.</p>",
+      "content_html": "<p>6 The authors classed a flaw as safety-critical if it {{6}}</p><p>7 Participants were more likely to point out a step the AI had got wrong {{7}}</p><p>8 Presenting the AI's answer as a series of separate steps {{8}}</p><p>9 The alternatives offered for each step {{9}}</p>",
+      "image": null,
+      "options": [
+       {
+        "key": "A",
+        "text": "consistently improved the detection of every kind of flaw."
+       },
+       {
+        "key": "B",
+        "text": "could lead to a poor decision if nobody noticed it."
+       },
+       {
+        "key": "C",
+        "text": "were frequently too technical for participants to judge."
+       },
+       {
+        "key": "D",
+        "text": "could only be detected by someone able to read code."
+       },
+       {
+        "key": "E",
+        "text": "than to notice something important that was missing."
+       },
+       {
+        "key": "F",
+        "text": "made participants more confident in the AI's results."
+       },
+       {
+        "key": "G",
+        "text": "helped people to notice a fairly obvious error."
+       }
+      ],
+      "questions": [
+       {
+        "number": 6,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "B"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph C defines a safety-critical flaw as one that, if overlooked, could push a business towards an unsound decision.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The authors called a flaw 'safety-critical' when overlooking it could push a business towards an unsound decision, such as relying on a highly inaccurate sales forecast.</p></blockquote>"
+       },
+       {
+        "number": 7,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "E"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph E says participants were far quicker to criticise something done wrongly than to notice something the AI had failed to do.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>They were also far quicker to criticise something the AI had done wrongly than to notice something it had failed to do; no one spotted the useful variables the AI should have added to its model.</p></blockquote>"
+       },
+       {
+        "number": 8,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "G"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F says that when the pricing answer was set out in steps, eight of nine participants noticed the error, compared with five of ten before, and the passage calls this flaw relatively obvious. (A is wrong: formatting made a large difference to only one flaw.)</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Formatting made a large difference to only one flaw, a relatively obvious one in a pricing task, where the AI had been told to find the best price between $800 and $1,200 but had tested only one price.</p></blockquote><blockquote><p>When the answer was set out in steps, eight of nine participants noticed the error, compared with five of ten in the first study and four of nine when alternatives were also shown.</p></blockquote>"
+       },
+       {
+        "number": 9,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "C"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Paragraph F says the alternatives were often too technical for participants to evaluate.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The alternatives themselves proved a mixed blessing, since they were often too technical for participants to evaluate.</p></blockquote>"
+       }
+      ]
+     },
+     {
+      "range": [
+       10,
+       13
+      ],
+      "type": "note_completion",
+      "instructions_html": "<p>Complete the notes below.</p><p>Choose <strong>NO MORE THAN TWO WORDS AND/OR A NUMBER</strong> from the passage for each answer.</p>",
+      "content_html": "<p><strong>How the study was run</strong></p><p><strong>First survey</strong></p><ul><li>ten professionals from marketing, sales or business development</li><li>all tasks used the same data: 27 weeks of figures from a fictional {{10}} company</li><li>a warning on every task: the AI's work often includes {{11}}</li><li>reward for the top three: a bonus worth a {{12}} rise on the basic payment</li></ul><p><strong>Second survey</strong></p><ul><li>18 new participants; answers split into steps, sometimes with alternatives</li><li>large individual differences, not explained by professional experience or the {{13}} each person spent on a task</li></ul>",
+      "image": null,
+      "options": null,
+      "questions": [
+       {
+        "number": 10,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "television",
+         "TV",
+         "a television"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The dataset covered 27 weeks of figures for an imaginary television company ('fictional' = 'imaginary').</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>They were given eight realistic tasks based on a single table covering 27 weeks of sales and marketing figures for an imaginary television company.</p></blockquote>"
+       },
+       {
+        "number": 11,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "mistakes"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The highlighted warning said the AI's methods or results often contain mistakes.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Every task carried a highlighted warning that the AI's methods or results often contain mistakes, some of which may be hard to notice.</p></blockquote>"
+       },
+       {
+        "number": 12,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "75%",
+         "75 per cent",
+         "75 percent"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>The $6 bonus was a 75% increase on the $8 basic payment.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>The three best performers were promised a bonus of $6, a 75% increase on the basic payment of $8.</p></blockquote>"
+       },
+       {
+        "number": 13,
+        "prompt_html": "",
+        "options": null,
+        "answer": [
+         "time"
+        ],
+        "explanation_html": "<p><strong>Answer Explanation:</strong></p><p>Variation between people was unrelated to professional experience or the time spent on each task.</p><p><strong>Evidence from the passage:</strong></p><blockquote><p>Ability also varied greatly from one person to another, and this variation was unrelated to professional experience or the time spent on each task.</p></blockquote>"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "writing": [
+  {
+   "task": 2,
+   "essay_type": "discussion",
+   "prompt": "More and more employees now use artificial intelligence tools at work to produce reports and analyses that they cannot fully understand or check. Some people believe that the employee who uses the tool should be responsible for any mistakes it makes. Others think that the companies that develop these tools should be held responsible.\n\nDiscuss both these views and give your own opinion."
+  },
+  {
+   "task": 1,
+   "essay_type": "bar",
+   "prompt": "The chart below shows the total number of problems that groups of nine business professionals found in AI-generated answers to eight data analysis tasks, when the answers were presented in three different formats.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+   "image": "media/writing/research/nonprogrammers-shortcomings.svg",
+   "image_description": "Grouped bar chart, total problems (shortcomings) found by nine participants in AI answers to eight data analysis tasks, for three answer formats: steps + alternatives / steps only / original paragraphs. Task 1: 17 / 12 / 8; Task 2: 8 / 19 / 7; Task 3: 19 / 6 / 10; Task 4: 9 / 15 / 7; Task 5: 17 / 9 / 6; Task 6: 11 / 10 / 6; Task 7: 12 / 5 / 5; Task 8: 8 / 15 / 5. Totals over all tasks: 101 / 91 / 54. Main trends: the original paragraph format produced the fewest problems found on almost every task (5-10). Steps + alternatives was clearly highest on Tasks 1, 3, 5 and 7 (12-19), while steps only was highest on Tasks 2, 4 and 8 (15-19). Task 6 was similar for both new formats (11 and 10). The only case where a new format did worse than the original was steps only on Task 3 (6 vs 10); on Task 7 steps only equalled the original (5). The highest value was 19 (steps + alternatives on Task 3, steps only on Task 2)."
+  }
+ ]
+}
