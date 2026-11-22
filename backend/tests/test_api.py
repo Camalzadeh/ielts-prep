@@ -436,6 +436,27 @@ def test_mock_material_weights(client):
         conn.execute("DELETE FROM writing_prompts WHERE task=9")
         conn.execute("DELETE FROM attempts WHERE test_id LIKE 'w-%'")
         conn.execute("DELETE FROM tests WHERE id LIKE 'w-%'")
+
+
+def test_mock_list_bands_and_optional_writing(client):
+    # an unfinished mock shows the bands of the sections already done
+    m = client.post("/api/mock", json={"sections": ["listening", "reading", "writing"]}).json()
+    aid = client.post("/api/attempts", json={"test_id": "fixture-reading-1", "mode": "mock", "mock_id": m["id"]}).json()["id"]
+    client.post(f"/api/attempts/{aid}/submit", json={"answers": {"1": "FALSE"}})
+    row = next(x for x in client.get("/api/mock").json() if x["id"] == m["id"])
+    assert row["status"] == "in_progress" and row["reading_band"] is not None and row["overall_band"] is None
+    client.delete(f"/api/mock/{m['id']}")
+    client.delete(f"/api/attempts/{aid}")
+    # Writing can be left out like Speaking, and added back (it then gets its prompts)
+    m = client.post("/api/mock", json={"sections": ["listening", "reading", "speaking"]}).json()
+    assert "writing" not in m["plan"]["sections"] and "writing" not in m["plan"]
+    r = client.put(f"/api/mock/{m['id']}/sections", json={"sections": ["listening", "reading", "writing", "speaking"]}).json()
+    assert r["plan"]["sections"] == ["listening", "reading", "writing", "speaking"] and "task2" in r["plan"]["writing"]
+    r = client.put(f"/api/mock/{m['id']}/sections", json={"sections": ["listening", "reading", "speaking"]}).json()
+    assert r["plan"]["sections"] == ["listening", "reading", "speaking"]
+    client.delete(f"/api/mock/{m['id']}")
+
+
 def test_listening_audio_length_and_prompt_history(client, tmp_path):
     import wave
     from backend.app.routers import tests as testsr

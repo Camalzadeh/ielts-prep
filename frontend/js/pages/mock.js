@@ -24,12 +24,15 @@ export async function render(root, params) {
   return renderMock(root, Number(id));
 }
 
-// Speaking can be left out (e.g. no microphone or no quiet room); the choice is remembered.
-const includeSpeaking = () => store.get('mock.includeSpeaking', true) !== false;
+// Writing and Speaking can be left out (e.g. no time, no microphone or no quiet room); the choice is remembered.
+const OPTIONAL = ['writing', 'speaking'];
+const includeKey = (k) => (k === 'speaking' ? 'mock.includeSpeaking' : `mock.include.${k}`);
+const includes = (k) => !OPTIONAL.includes(k) || store.get(includeKey(k), true) !== false;
+const labelOf = (k) => SECTIONS.find((s) => s.key === k)?.label || k;
 
 async function startNew() {
   try {
-    const sections = SECTIONS.map((s) => s.key).filter((k) => k !== 'speaking' || includeSpeaking());
+    const sections = SECTIONS.map((s) => s.key).filter(includes);
     const res = await api.post('/api/mock', { sections, random: true });
     navigate(`#/mock/${res.id}`);
   } catch (e) { toast(`Could not create mock: ${e.message}`, 'error'); }
@@ -38,22 +41,25 @@ async function startNew() {
 function renderList(root) {
   setTitle('Mock Exam');
   const startBtn = h('button', { class: 'btn primary lg', type: 'button', onclick: startNew });
-  const speakToggle = h('input', { type: 'checkbox', checked: includeSpeaking() });
   const how = h('div', { class: 'grid grid-4', style: { marginBottom: '26px' } });
   const drawStart = () => {
-    const on = includeSpeaking();
-    startBtn.innerHTML = `${icon('play')} ${on ? 'Start a full mock' : 'Start mock without Speaking'}`;
-    how.querySelectorAll('[data-sec="speaking"]').forEach((c) => c.classList.toggle('skipped', !on));
+    const off = OPTIONAL.filter((k) => !includes(k));
+    startBtn.innerHTML = `${icon('play')} ${off.length ? `Start mock without ${off.map(labelOf).join(' & ')}` : 'Start a full mock'}`;
+    for (const k of OPTIONAL) how.querySelectorAll(`[data-sec="${k}"]`).forEach((c) => c.classList.toggle('skipped', !includes(k)));
   };
-  speakToggle.addEventListener('change', () => { store.set('mock.includeSpeaking', speakToggle.checked); drawStart(); });
+  const toggles = OPTIONAL.map((k) => {
+    const box = h('input', { type: 'checkbox', checked: includes(k) });
+    box.addEventListener('change', () => { store.set(includeKey(k), box.checked); drawStart(); });
+    return h('label', { class: 'switch', title: `Leave ${labelOf(k)} out of new mocks (you can also skip or add it inside a mock)` }, box, `Include ${labelOf(k)}`);
+  });
   root.replaceChildren(h('div', { class: 'page-head' },
     h('div', null, h('h1', null, 'Mock exam'), h('p', null, 'A full IELTS exam with random unseen materials: Listening → Reading → Writing → Speaking.')),
     h('div', { class: 'page-actions', style: { alignItems: 'center' } },
-      h('label', { class: 'switch', title: 'Leave Speaking out of new mocks (you can also skip or add it inside a mock)' }, speakToggle, 'Include Speaking'),
+      ...toggles,
       startBtn)));
   how.append(...SECTIONS.map((s, i) => h('div', { class: 'card card-pad mock-step', dataset: { sec: s.key } },
     h('div', { class: 'row' }, h('span', { class: 'badge accent' }, `Step ${i + 1}`), h('span', { class: 'muted small' }, s.time),
-      s.key === 'speaking' ? h('span', { class: 'badge skip-badge' }, 'Skipped') : ''),
+      OPTIONAL.includes(s.key) ? h('span', { class: 'badge skip-badge' }, 'Skipped') : ''),
     h('h3', { style: { marginTop: '10px' } }, s.label),
     h('p', { class: 'small muted', style: { margin: 0 } }, {
       listening: 'Recording plays once; parts advance automatically. The timer covers the whole recording plus 2 minutes to check.',
@@ -72,7 +78,7 @@ function renderList(root) {
     wrap.innerHTML = `<table class="table"><thead><tr><th>#</th><th>Started</th><th>Status</th><th class="num">L</th><th class="num">R</th><th class="num">W</th><th class="num">S</th><th>Overall</th><th></th></tr></thead><tbody>
       ${rows.map((m) => `<tr><td>${m.id}</td><td>${esc(fmtDate(m.created_at))}</td>
         <td>${m.status === 'finished' ? '<span class="badge good">Finished</span>' : '<span class="badge warn">In progress</span>'}</td>
-        <td class="num">${fmtBand(m.listening_band)}</td><td class="num">${fmtBand(m.reading_band)}</td><td class="num">${fmtBand(m.writing_band)}</td><td class="num">${m.plan?.sections && !m.plan.sections.includes('speaking') ? '<span class="muted small">skipped</span>' : fmtBand(m.speaking_band)}</td>
+        <td class="num">${fmtBand(m.listening_band)}</td><td class="num">${fmtBand(m.reading_band)}</td>${OPTIONAL.map((k) => `<td class="num">${m.plan?.sections && !m.plan.sections.includes(k) ? '<span class="muted small">skipped</span>' : fmtBand(m[`${k}_band`])}</td>`).join('')}
         <td>${m.overall_band != null ? `<span class="band-pill">${fmtBand(m.overall_band)}</span>` : '<span class="muted small">–</span>'}</td>
         <td><a class="btn sm" href="#/mock/${m.id}">${m.status === 'finished' ? 'View' : 'Continue'}</a></td></tr>`).join('')}</tbody></table>`;
     list.append(wrap);
@@ -115,7 +121,7 @@ async function renderMock(root, id) {
   };
   // Only show an overall band once every planned section has a band.
   const complete = sections.every((s) => bands[s.key] != null);
-  const noSpeaking = !sections.some((s) => s.key === 'speaking');
+  const skipped = OPTIONAL.filter((k) => !sections.some((s) => s.key === k));
   if (!complete && mock.overall_band == null) bands.overall = null;
   const states = Object.fromEntries(sections.map((s) => [s.key, sectionState(mock, s.key)]));
   const currentIdx = sections.findIndex((s) => !states[s.key].done);
@@ -143,7 +149,7 @@ async function renderMock(root, id) {
   // section cards
   const grid = h('div', { class: 'grid grid-2', style: { marginBottom: '22px' } });
   for (const [i, s] of sections.entries()) grid.append(sectionCard(mock, s, states[s.key], bands[s.key], i === currentIdx, id));
-  if (noSpeaking) grid.append(skippedSpeakingCard(mock, id, finished));
+  for (const k of skipped) grid.append(skippedCard(mock, k, id, finished));
   root.append(grid);
 
   // final
@@ -151,7 +157,7 @@ async function renderMock(root, id) {
   const tiles = SECTIONS.map((s) => `<div class="card stat${sections.includes(s) ? '' : ' skipped'}" style="text-align:center"><div class="stat-label" style="justify-content:center">${s.label}</div>
       <div class="stat-value">${sections.includes(s) ? fmtBand(bands[s.key]) : '<span class="small muted">skipped</span>'}</div></div>`).join('');
   final.innerHTML = `<div class="row" style="gap:26px;align-items:center">
-      ${bandRing(bands.overall, 130, noSpeaking ? 'Overall · no S' : 'Overall')}
+      ${bandRing(bands.overall, 130, skipped.length ? `Overall · no ${skipped.map((k) => k[0].toUpperCase()).join('/')}` : 'Overall')}
       <div style="flex:1;min-width:280px"><h2>${allDone ? (finished ? 'Final result' : 'All sections complete') : 'Results so far'}</h2>
       <p class="muted small">${allDone ? 'Writing and speaking bands come from AI analysis — run “Analyse with AI” on each, then finish the mock to lock in the overall band.' : 'Complete each section in order. Writing and speaking bands appear after AI analysis.'}</p>
       <div class="grid grid-4" style="gap:10px">${tiles}</div></div></div>`;
@@ -218,6 +224,7 @@ function sectionCard(mock, s, st, band, isCurrent, id) {
     }
     if (st.open) body.append(h('div', { class: 'small', style: { marginTop: '6px', color: 'var(--warn)' } }, `Stopped part-way: your draft (${st.open.words} words) and the time used are saved.`));
     if (!st.done && (w.task1 || w.task2)) btns.append(h('a', { class: `btn ${isCurrent || st.open ? 'primary' : ''}`, href: `#/mock/${id}/writing`, html: st.open ? `${icon('play')} Resume Writing` : 'Start Writing' }));
+    if (!st.done && mock.status !== 'finished') btns.append(skipButton(mock, 'writing', id));
     if (st.done && band == null) body.append(h('div', { style: { color: 'var(--warn)', marginTop: '6px' } }, 'Run AI analysis on both essays to get the writing band.'));
   } else if (s.key === 'speaking') {
     const sp = plan.speaking || {};
@@ -235,12 +242,7 @@ function sectionCard(mock, s, st, band, isCurrent, id) {
         navigate(`#/mock/${id}/speaking`);
       } }, 'Start again'));
     } else if (!st.done) btns.append(h('a', { class: `btn ${isCurrent ? 'primary' : ''}`, href: `#/mock/${id}/speaking` }, 'Start Speaking'));
-    if (!st.done && mock.status !== 'finished') {
-      btns.append(h('button', { class: 'btn ghost', type: 'button', html: `${icon('close')} Skip Speaking`, onclick: async () => {
-        if (!(await confirmDialog('Skip Speaking?', '<p>This mock will be scored on the other sections only, and its overall band is marked “without Speaking”. You can add Speaking back until the mock is finished.</p>', 'Skip Speaking'))) return;
-        setSections(id, (plan.sections || SECTIONS.map((x) => x.key)).filter((k) => k !== 'speaking'));
-      } }));
-    }
+    if (!st.done && mock.status !== 'finished') btns.append(skipButton(mock, 'speaking', id));
     if (st.done && band == null) body.append(h('div', { style: { color: 'var(--warn)', marginTop: '6px' } }, 'Run AI analysis on the session to get the speaking band.'));
   }
   return card;
@@ -251,18 +253,30 @@ async function setSections(id, sections) {
   catch (e) { toast(e.message, 'error'); }
 }
 
-/** Shown in place of the Speaking card when the mock leaves it out. */
-function skippedSpeakingCard(mock, id, finished) {
+/** "Skip Writing" / "Skip Speaking" on a section that has no results yet. */
+function skipButton(mock, key, id) {
   const plan = mock.plan || {};
+  const label = labelOf(key);
+  return h('button', { class: 'btn ghost', type: 'button', html: `${icon('close')} Skip ${label}`, onclick: async () => {
+    const extra = key === 'writing' ? ' Any unsent draft of this mock\'s essays is kept on this computer.' : '';
+    if (!(await confirmDialog(`Skip ${label}?`, `<p>This mock will be scored on the other sections only, and its overall band is marked “without ${label}”. You can add ${label} back until the mock is finished.${extra}</p>`, `Skip ${label}`))) return;
+    setSections(id, (plan.sections || SECTIONS.map((x) => x.key)).filter((k) => k !== key));
+  } });
+}
+
+/** Shown in place of an optional section's card when the mock leaves it out. */
+function skippedCard(mock, key, id, finished) {
+  const plan = mock.plan || {};
+  const s = SECTIONS.find((x) => x.key === key);
   return h('div', { class: 'card card-pad skipped' },
     h('div', { class: 'row between' },
-      h('div', { class: 'row' }, h('span', { class: 'm-icon', html: icon('speaking'), style: { width: '34px', height: '34px', borderRadius: '9px', background: 'var(--surface-3)', color: 'var(--text-3)', display: 'grid', placeItems: 'center' } }),
-        h('h3', { style: { margin: 0 } }, 'Speaking')),
+      h('div', { class: 'row' }, h('span', { class: 'm-icon', html: icon(s.icon), style: { width: '34px', height: '34px', borderRadius: '9px', background: 'var(--surface-3)', color: 'var(--text-3)', display: 'grid', placeItems: 'center' } }),
+        h('h3', { style: { margin: 0 } }, s.label)),
       h('span', { class: 'badge' }, 'Skipped')),
-    h('p', { class: 'small muted', style: { margin: '10px 0 0' } }, 'Not part of this mock: the overall band is calculated without Speaking.'),
+    h('p', { class: 'small muted', style: { margin: '10px 0 0' } }, `Not part of this mock: the overall band is calculated without ${s.label}.`),
     finished ? '' : h('div', { class: 'row', style: { marginTop: '12px' } },
-      h('button', { class: 'btn', type: 'button', html: `${icon('plus')} Add Speaking back`,
-        onclick: () => setSections(id, [...(plan.sections || []), 'speaking']) })));
+      h('button', { class: 'btn', type: 'button', html: `${icon('plus')} Add ${s.label} back`,
+        onclick: () => setSections(id, SECTIONS.map((x) => x.key).filter((k) => k === key || (plan.sections || []).includes(k))) })));
 }
 
 async function renderWriting(root, id) {

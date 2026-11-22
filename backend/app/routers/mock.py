@@ -146,7 +146,17 @@ def _mock_dict(conn: sqlite3.Connection, row: sqlite3.Row) -> dict:
 
 @router.get("")
 def list_mocks(conn: sqlite3.Connection = Depends(db.get_db)) -> list[dict]:
-    return [_mock_dict(conn, r) for r in conn.execute("SELECT * FROM mock_exams ORDER BY id DESC")]
+    out = []
+    for r in conn.execute("SELECT * FROM mock_exams ORDER BY id DESC").fetchall():
+        d = _mock_dict(conn, r)
+        if r["status"] != "finished":
+            # an unfinished mock still shows the bands of the sections already done
+            live = compute_bands(conn, r["id"])
+            for sec in SECTIONS:
+                if d.get(f"{sec}_band") is None:
+                    d[f"{sec}_band"] = live.get(sec)
+        out.append(d)
+    return out
 
 
 @router.get("/{mock_id}")
