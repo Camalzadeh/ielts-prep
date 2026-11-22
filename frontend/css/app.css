@@ -831,3 +831,30 @@ html.is-fullscreen .main-col { padding-bottom: 0; }
 .step.in-progress { background: var(--warn-soft); }
 .step.in-progress .s-num { background: var(--warn); color: #fff; }
 .step.in-progress .s-sub { color: var(--warn); font-weight: 600; }
+
+/* ---------- Progress: per-skill card, attempt history pop-up ---------- */
+.progress-card { margin-bottom: 18px; padding: 0; }
+.progress-card > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; }
+.progress-card > summary::-webkit-details-marker { display: none; }
+.progress-card > summary::after { content: '▾'; color: var(--text-3); margin-left: 6px; transition: transform .15s; }
+.progress-card:not([open]) > summary::after { transform: rotate(-90deg); }
+.progress-card .p-title { display: flex; align-items: center; gap: 8px; font-weight: 650; }
+.progress-card .p-title svg { width: 16px; height: 16px; color: var(--accent); }
+.progress-card > summary .muted { margin-left: auto; }
+.progress-body { display: grid; grid-template-columns: minmax(260px, 1fr) minmax(0, 1.6fr); gap: 18px; padding: 0 16px 16px; align-items: start; }
+.progress-left { display: flex; flex-direction: column; gap: 10px; }
+.progress-tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.progress-chart { height: 210px; }
+.stat.compact { padding: 8px 12px; background: var(--surface-2); box-shadow: none; }
+.stat.compact .stat-label { font-size: 11.5px; }
+.stat.compact .stat-value { font-size: 20px; margin-top: 2px; }
+.stat-value.tone-good { color: var(--good); }
+.stat-value.tone-bad { color: var(--bad); }
+.weak-types { display: flex; flex-direction: column; }
+.qtype-row.compact { grid-template-columns: minmax(110px, 1.2fr) 1.4fr 40px; gap: 8px; padding: 4px 0; font-size: 12.5px; }
+.attempt-stats { gap: 8px; }
+.link-btn { background: none; border: 0; padding: 0; font: inherit; font-size: 15px; font-weight: 680; color: var(--accent); cursor: pointer; text-align: left; }
+.link-btn:hover, .link-badge:hover { text-decoration: underline; }
+.link-badge { border: 0; cursor: pointer; font: inherit; font-size: 12px; }
+@media (max-width: 900px) { .progress-body { grid-template-columns: minmax(0, 1fr); } }
+

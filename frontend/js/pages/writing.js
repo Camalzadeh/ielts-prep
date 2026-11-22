@@ -7,6 +7,7 @@ import { annotatedText, writingCorrections, fixesToggle } from '../components/in
 import { splitPane } from '../components/split.js';
 import { deleteButton, canDelete, rowDeleteHtml, onRowDelete } from '../components/delete.js';
 import { navigate, nav, setTitle } from '../app.js';
+import { skillProgress, showAttempts } from '../components/progress.js';
 
 export async function render(root, params, query) {
   const [sub, id] = params;
@@ -37,7 +38,7 @@ function renderBank(root, tab) {
       h('button', { class: 'btn primary', type: 'button', html: `${icon('shuffle')} Random Task 2`, onclick: () => randomPrompt(2) }))));
   const tabs = h('div', { class: 'tabs', role: 'tablist' });
   const body = h('div');
-  root.append(tabs, body);
+  root.append(skillProgress('writing'), tabs, body);
   const draw = (t) => {
     const n = listDrafts().length;
     tabs.replaceChildren(
@@ -121,12 +122,13 @@ function promptItem(p) {
         ${p.source ? `<span class="badge">${esc(String(p.source).replace(/_/g, ' '))}</span>` : ''}
         ${p.source_date ? `<span class="badge">${esc(p.source_date)}</span>` : ''}
         ${p.image_path ? `<span class="badge">${icon('dashboard')} visual</span>` : ''}
-        ${done ? `<span class="badge good">${done} submitted</span>` : ''}
+        ${done ? `<button class="badge good link-badge" type="button" title="See every essay on this prompt and its bands">${done} submitted ›</button>` : ''}
         ${draft?.text ? '<span class="badge warn">Draft</span>' : ''}
       </div>
       <div class="p-text">${esc(p.prompt)}</div>
     </div>`;
   el.querySelectorAll('.badge svg').forEach((s) => { s.style.width = '12px'; s.style.height = '12px'; });
+  el.querySelector('.link-badge')?.addEventListener('click', () => showAttempts({ kind: 'writing', promptId: p.id, title: `Task ${p.task} prompt — your essays` }));
   el.append(h('a', { class: 'btn primary sm', href: `#/writing/write/${p.id}` }, draft?.text ? 'Continue' : 'Write'));
   return el;
 }

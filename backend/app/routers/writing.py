@@ -144,8 +144,8 @@ def delete_submission(submission_id: int, conn: sqlite3.Connection = Depends(db.
 
 
 @router.get("/submissions")
-def list_submissions(task: Optional[int] = None, origin: Optional[str] = None, limit: int = 200,
-                     conn: sqlite3.Connection = Depends(db.get_db)) -> list[dict]:
+def list_submissions(task: Optional[int] = None, origin: Optional[str] = None, prompt_id: Optional[int] = None,
+                     limit: int = 200, conn: sqlite3.Connection = Depends(db.get_db)) -> list[dict]:
     sql = ("SELECT s.id, s.prompt_id, s.mock_id, s.word_count, s.time_spent_sec, s.created_at, s.origin, "
            "s.teacher_band, "
            "p.task, p.essay_type, substr(p.prompt, 1, 200) AS prompt_excerpt FROM writing_submissions s "
@@ -157,6 +157,9 @@ def list_submissions(task: Optional[int] = None, origin: Optional[str] = None, l
     if origin:
         sql += " AND s.origin = ?"
         args.append(origin)
+    if prompt_id:   # every essay on one prompt (its attempt history)
+        sql += " AND s.prompt_id = ?"
+        args.append(prompt_id)
     sql += " ORDER BY s.created_at DESC, s.id DESC LIMIT ?"
     args.append(max(1, min(limit, 5000)))
     out = []

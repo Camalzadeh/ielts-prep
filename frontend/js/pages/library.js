@@ -3,6 +3,7 @@ import { api } from '../api.js';
 import { h, esc, icon, withStates, emptyState, fmtBand, store, asList, debounce } from '../ui.js';
 import { navigate, setTitle } from '../app.js';
 import { confirmDelete } from '../components/delete.js';
+import { skillProgress, showAttempts } from '../components/progress.js';
 
 export async function render(root, params) {
   const type = params[0] === 'reading' ? 'reading' : 'listening';
@@ -19,7 +20,7 @@ export async function render(root, params) {
     h('div', { class: 'page-actions' }));
   const toolbar = h('div', { class: 'toolbar' });
   const list = h('div');
-  root.append(head, toolbar, list);
+  root.append(head, skillProgress(type), toolbar, list);
 
   await withStates(list, () => Promise.all([
     api.get('/api/tests', { type }),
@@ -118,9 +119,10 @@ function testCard(t, type) {
     <div class="t-bands">
       <div class="t-band">Best<span class="band-pill ${t.best_band == null ? 'none' : ''}">${fmtBand(t.best_band)}</span></div>
       <div class="t-band">Last<span class="band-pill ${t.last_band == null ? 'none' : ''}">${fmtBand(t.last_band)}</span></div>
-      <div class="t-band">Attempts<b style="font-size:15px;color:var(--text)">${t.attempts || 0}</b></div>
+      <div class="t-band">Attempts${t.attempts || active ? `<button class="link-btn t-attempts" type="button" title="See every attempt and your progress on this test">${t.attempts || 0} ›</button>` : '<b style="font-size:15px;color:var(--text)">0</b>'}</div>
     </div>
     <div class="t-meta"><span>${t.question_count || 40} questions</span>${t.module === 'general' ? '<span class="badge">General Training</span>' : ''}${active ? '<span class="badge warn">In progress</span>' : ''}</div>`;
+  card.querySelector('.t-attempts')?.addEventListener('click', () => showAttempts({ kind: 'test', testId: t.id, title: `${t.title || short} — your attempts` }));
   const actions = h('div', { class: 't-actions' });
   if (active) {
     actions.append(h('a', { class: 'btn primary sm', href: `#/test/${encodeURIComponent(t.id)}/${active}` }, 'Resume'),

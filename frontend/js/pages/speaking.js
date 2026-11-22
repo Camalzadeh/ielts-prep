@@ -6,6 +6,7 @@ import { deleteButton, canDelete, rowDeleteHtml, onRowDelete } from '../componen
 import { annotatedText, speakingAnswers, mistakeCorrections, fixesToggle } from '../components/inline-fix.js';
 import { navigate, nav, setTitle } from '../app.js';
 import { assistButton, setAssistContext, setAssistDetail } from '../components/assist.js';
+import { skillProgress } from '../components/progress.js';
 
 const MODES = {
   part1: { title: 'Part 1', sub: 'Introduction & interview · 4–5 min', session: 'practice_part1', icon: 'speaking' },
@@ -28,6 +29,7 @@ function renderHome(root) {
   root.replaceChildren(h('div', { class: 'page-head' },
     h('div', null, h('h1', null, 'Speaking'), h('p', null, 'Practise with real recent questions. Your answers are recorded, transcribed locally and can be analysed by AI.')),
     h('div', { class: 'page-actions' }, h('a', { class: 'btn', href: '#/speaking/bank', html: `${icon('book')} Question bank` }))));
+  root.append(skillProgress('speaking'));
   const modes = h('div', { class: 'grid grid-4', style: { marginBottom: '26px' } });
   for (const [k, m] of Object.entries(MODES)) {
     modes.append(h('a', { class: 'card mode-card', href: `#/speaking/practice/${k}`, style: { textDecoration: 'none' } },
