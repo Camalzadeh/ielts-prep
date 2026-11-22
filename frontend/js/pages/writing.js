@@ -85,20 +85,42 @@ function bankView(body) {
   toolbar.append(search, taskChips, typeSel, srcSel, h('div', { class: 'spacer' }), addBtn);
 
   let all = [];
+  let loadSeq = 0;
   const load = () => {
     store.set('writingFilter', f);
+    const seq = ++loadSeq;
     withStates(list, () => api.get('/api/writing/prompts', { task: f.task, essay_type: f.essay_type, q: f.q }), (data) => {
+      if (seq !== loadSeq) return; // a newer filter change is already loading
       all = asList(data, 'prompts');
-      const sources = [...new Set(all.map((p) => p.source).filter(Boolean))].sort();
-      const cur = f.source;
-      srcSel.replaceChildren(h('option', { value: '' }, 'All sources'), ...sources.map((s) => h('option', { value: s, selected: s === cur }, s.replace(/_/g, ' '))));
+      drawSources();
       drawList();
     });
+  };
+  // The source list comes from the prompts that match task/type/search. The selected source is
+  // always kept as an option (with its count, possibly 0) so the dropdown never shows
+  // "All sources" while a hidden source filter is still applied.
+  const drawSources = () => {
+    const counts = new Map();
+    for (const p of all) if (p.source) counts.set(p.source, (counts.get(p.source) || 0) + 1);
+    if (f.source && !counts.has(f.source)) counts.set(f.source, 0);
+    srcSel.replaceChildren(h('option', { value: '' }, 'All sources'),
+      ...[...counts.keys()].sort().map((s) => h('option', { value: s, selected: s === f.source }, `${s.replace(/_/g, ' ')} (${counts.get(s)})`)));
+  };
+  const clearFilters = () => {
+    Object.assign(f, { task: '', essay_type: '', source: '', q: '' });
+    search.querySelector('input').value = '';
+    drawChips(); drawTypeSel(); load();
   };
   const drawList = () => {
     const shown = all.filter((p) => !f.source || p.source === f.source);
     list.replaceChildren();
-    if (!shown.length) { list.append(emptyState('No prompts found', 'Try a different filter, or add your own prompt.', 'writing')); return; }
+    if (!shown.length) {
+      const active = [f.task && `Task ${f.task}`, f.essay_type && essayTypeLabel(f.essay_type), f.source && f.source.replace(/_/g, ' '), f.q && `“${f.q}”`].filter(Boolean);
+      const empty = emptyState('No prompts found', active.length ? `Nothing matches ${active.join(' + ')}.` : 'Add your own prompt.', 'writing');
+      if (active.length) empty.append(h('button', { class: 'btn', type: 'button', style: { marginTop: '12px' }, onclick: clearFilters }, 'Clear filters'));
+      list.append(empty);
+      return;
+    }
     list.append(h('div', { class: 'small muted', style: { marginBottom: '10px' } }, `${shown.length} prompt${shown.length > 1 ? 's' : ''}`));
     const ul = h('div', { class: 'prompt-list' });
     for (const p of shown.slice(0, 300)) ul.append(promptItem(p));
