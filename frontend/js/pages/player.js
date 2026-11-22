@@ -16,7 +16,10 @@ export async function render(root, params, query) {
   const test = await api.get(`/api/tests/${encodeURIComponent(testId)}`);
   const type = test.type === 'listening' ? 'listening' : 'reading';
   const parts = (test.parts || []).slice().sort((a, b) => a.number - b.number);
-  const durationSec = (Number(test.duration_minutes) || (type === 'listening' ? 30 : 60)) * 60;
+  // Listening: the recording plus 2 minutes to check, never less than 30 minutes (some tests run past 30)
+  const CHECK_SEC = 120;
+  let durationSec = (Number(test.duration_minutes) || (type === 'listening' ? 30 : 60)) * 60;
+  if (type === 'listening' && Number(test.audio_seconds) > 0) durationSec = Math.max(durationSec, Math.ceil(Number(test.audio_seconds) + CHECK_SEC));
   setTitle(test.title || testId);
 
   const allNums = parts.flatMap(partQuestionNumbers);
@@ -313,6 +316,10 @@ export async function render(root, params, query) {
       const now = performance.now();
       S.elapsed += (now - lastTick) / 1000;
       lastTick = now;
+      // a mock listening never times out while the recording is still playing
+      if (S.elapsed >= durationSec && type === 'listening' && mode === 'mock' && !S.audio.finished && audio && !audioFailed) {
+        durationSec = Math.ceil(S.elapsed) + 30;
+      }
       drawTimer();
       if (S.elapsed >= durationSec && !timeUpShown) { timeUpShown = true; onTimeUp(); }
     }, 500);
@@ -429,8 +436,10 @@ export async function render(root, params, query) {
       loadAudioForPart(next, true);
     } else {
       S.audio.finished = true;
+      durationSec = Math.max(durationSec, Math.ceil(S.elapsed) + CHECK_SEC);   // always 2 minutes to check
+      drawTimer();
       drawAudio();
-      toast('The recording has finished. Check your answers, then submit.');
+      toast('The recording has finished. You have at least 2 minutes to check your answers.');
     }
     saveLocal();
   }

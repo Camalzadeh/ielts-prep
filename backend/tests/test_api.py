@@ -436,3 +436,21 @@ def test_mock_material_weights(client):
         conn.execute("DELETE FROM writing_prompts WHERE task=9")
         conn.execute("DELETE FROM attempts WHERE test_id LIKE 'w-%'")
         conn.execute("DELETE FROM tests WHERE id LIKE 'w-%'")
+def test_listening_audio_length_and_prompt_history(client, tmp_path):
+    import wave
+    from backend.app.routers import tests as testsr
+    wav = tmp_path / "a.wav"
+    with wave.open(str(wav), "wb") as w:
+        w.setnchannels(1); w.setsampwidth(2); w.setframerate(8000); w.writeframes(b"\0\0" * 16000)   # 2 seconds
+    assert abs(testsr.audio_seconds(wav) - 2.0) < 0.1
+    assert testsr.audio_seconds(tmp_path / "missing.mp3") is None
+    # no local audio in the fixtures: the total is unknown, so the player keeps its 30 minutes
+    assert client.get("/api/tests/fixture-listening-1").json()["audio_seconds"] is None
+    # every essay on one prompt (the prompt's attempt history)
+    pid = client.get("/api/writing/prompts").json()[0]["id"]
+    sid = client.post("/api/writing/submissions", json={"prompt_id": pid, "text": "An essay."}).json()["id"]
+    assert [s["id"] for s in client.get(f"/api/writing/submissions?prompt_id={pid}").json()][0] == sid
+    assert all(s["prompt_id"] == pid for s in client.get(f"/api/writing/submissions?prompt_id={pid}").json())
+    client.delete(f"/api/writing/submissions/{sid}")
+
+

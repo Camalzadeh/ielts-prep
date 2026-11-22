@@ -22,16 +22,55 @@ def _load_test(conn: sqlite3.Connection, test_id: str) -> tuple[sqlite3.Row, dic
     return row, db.loads(row["data_json"], {})
 
 
+_audio_len_cache: dict[str, tuple[float, float | None]] = {}
+
+
+def audio_seconds(path) -> float | None:
+    """Length of a local recording in seconds (PyAV, cached until the file changes); None if unknown."""
+    try:
+        mtime = path.stat().st_mtime
+    except OSError:
+        return None
+    hit = _audio_len_cache.get(str(path))
+    if hit and hit[0] == mtime:
+        return hit[1]
+    secs = None
+    try:
+        import av  # installed with faster-whisper
+        with av.open(str(path)) as f:
+            if f.duration:
+                secs = f.duration / 1_000_000
+            else:
+                s = next((s for s in f.streams if s.type == "audio"), None)
+                if s is not None and s.duration and s.time_base:
+                    secs = float(s.duration * s.time_base)
+    except Exception:  # noqa: BLE001 - optional: the player falls back to the audio element
+        secs = None
+    _audio_len_cache[str(path)] = (mtime, secs)
+    return secs
+
+
 def _add_media_urls(test: dict) -> dict:
+    total, known = 0.0, True
     for part in test.get("parts") or []:
         audio_url = None
         if part.get("audio") and (db.CONTENT_DIR / part["audio"]).is_file():
             audio_url = db.media_url(part["audio"])
+            secs = audio_seconds(db.CONTENT_DIR / part["audio"])
+            part["audio_seconds"] = round(secs, 1) if secs else None
+        if part.get("audio") or part.get("audio_remote"):
+            if not part.get("audio_seconds"):
+                known = False
+            else:
+                total += part["audio_seconds"]
         if part.get("audio") or part.get("audio_remote"):
             part["audio_url"] = audio_url or part.get("audio_remote") or db.media_url(part.get("audio"))
         for g in part.get("groups") or []:
             if g.get("image"):
                 g["image_url"] = db.media_url(g["image"])
+    if test.get("type") == "listening":
+        # total recording length, so the player can give max(30 min, audio + checking time)
+        test["audio_seconds"] = round(total, 1) if known and total else None
     return test
 
 

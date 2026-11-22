@@ -10,7 +10,7 @@ import { navigate, nav, setTitle } from '../app.js';
 import { deleteButton } from '../components/delete.js';
 
 const SECTIONS = [
-  { key: 'listening', label: 'Listening', icon: 'listening', time: '30 min' },
+  { key: 'listening', label: 'Listening', icon: 'listening', time: '30+ min' },
   { key: 'reading', label: 'Reading', icon: 'reading', time: '60 min' },
   { key: 'writing', label: 'Writing', icon: 'writing', time: '60 min' },
   { key: 'speaking', label: 'Speaking', icon: 'speaking', time: '11–14 min' },
@@ -56,7 +56,7 @@ function renderList(root) {
       s.key === 'speaking' ? h('span', { class: 'badge skip-badge' }, 'Skipped') : ''),
     h('h3', { style: { marginTop: '10px' } }, s.label),
     h('p', { class: 'small muted', style: { margin: 0 } }, {
-      listening: 'Recording plays once; parts advance automatically.',
+      listening: 'Recording plays once; parts advance automatically. The timer covers the whole recording plus 2 minutes to check.',
       reading: 'Three passages, strict 60-minute timer.',
       writing: 'Task 1 + Task 2 with one shared 60-minute timer.',
       speaking: 'Parts 1–3 recorded with examiner prompts.',

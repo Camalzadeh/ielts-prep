@@ -16,7 +16,7 @@ export async function render(root, params) {
     h('div', null, h('h1', null, `${label} tests`),
       h('p', null, type === 'reading'
         ? 'Academic reading — 3 passages, 40 questions, 60 minutes. Highlight text, resize panes, review every answer.'
-        : 'Computer-delivered style listening — 4 parts, 40 questions, 30 minutes.')),
+        : 'Computer-delivered style listening — 4 parts, 40 questions. The timer runs for the whole recording plus 2 minutes to check (at least 30 minutes).')),
     h('div', { class: 'page-actions' }));
   const toolbar = h('div', { class: 'toolbar' });
   const list = h('div');
