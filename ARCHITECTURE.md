@@ -32,6 +32,9 @@ ielts/
     app/main.py  db.py  schema.sql  grading.py  importer.py  ai_runner.py  transcribe.py  routers/*.py
   frontend/
     index.html  css/  js/ (ES modules, hash router)  vendor/ (chart.js etc., vendored — no CDN at runtime)
+    konspekt/writing.html     <- Learn → "Writing notes", Azerbaijani (static guide from the teacher's handouts,
+                                 no personal data; its data-me sections are filled from /api/writing/submissions)
+    konspekt/writing.en.html  <- the same guide in English (same markup); the page has an EN / AZ switch
   tools/
     extract_archives.py  scrape_engnovate_*.py  ielts_db.py (CLI DB helper for AI)
   launcher/  start.bat  launch.pyw  ielts.ico  create_shortcut.ps1

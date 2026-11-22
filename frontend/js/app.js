@@ -42,6 +42,7 @@ const ROUTES = [
   [/^\/learn$/, 'learn', 'learn', 'Learn'],
   [/^\/learn\/(kb)\/(.+)$/, 'learn', 'learn', 'Learn'],
   [/^\/learn\/(vocab)$/, 'learn', 'learn', 'Vocabulary'],
+  [/^\/learn\/(konspekt)$/, 'learn', 'learn', 'Writing notes'],
   [/^\/history$/, 'history', 'history', 'History'],
   [/^\/settings$/, 'settings', 'settings', 'Settings'],
 ];

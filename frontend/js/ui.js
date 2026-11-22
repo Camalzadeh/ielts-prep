@@ -350,7 +350,7 @@ export function qtypeLabel(t) {
 
 export const ESSAY_TYPES = {
   opinion: 'Opinion', discussion: 'Discussion', adv_disadv: 'Advantages / Disadvantages',
-  problem_solution: 'Problem / Solution', cause_effect: 'Causes / Effects', direct_question: 'Two-part question',
+  problem_solution: 'Problem / Solution', cause_effect: 'Causes / Effects', cause_solution: 'Causes / Solutions', direct_question: 'Two-part question',
   outweigh: 'Outweigh', positive_negative: 'Positive / Negative', line: 'Line graph', bar: 'Bar chart',
   pie: 'Pie chart', table: 'Table', map: 'Map', process: 'Process', mixed: 'Mixed charts',
 };

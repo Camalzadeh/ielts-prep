@@ -518,3 +518,25 @@ def test_listening_audio_length_and_prompt_history(client, tmp_path):
     client.delete(f"/api/writing/submissions/{sid}")
 
 
+def test_writing_konspekt_page(client):
+    # The Learn tab fetches this fragment; it is committed, so it must carry no personal data
+    # (the learner's own essays are filled in at runtime from /api/writing/submissions).
+    import re
+    r = client.get("/konspekt/writing.html")
+    assert r.status_code == 200
+    page = r.text
+    assert page.count('data-me="') == 2
+    assert 'id="t1-line"' in page and 'id="t2-opinion"' in page
+    for marker in ("Barattson", "data:image", "116 söz", "Table-larda 7.5"):
+        assert marker not in page
+    assets = db.ROOT / "knowledge" / "kb" / "assets"
+    images = re.findall(r'src="/media/kb/([^"]+)"', page)
+    assert len(images) == 8 and all((assets / name).is_file() for name in images)
+    css = client.get("/css/konspekt.css")
+    assert css.status_code == 200 and ".wk" in css.text
+    # the English version has exactly the same structure (same ids, the same live sections)
+    en = client.get("/konspekt/writing.en.html")
+    assert en.status_code == 200
+    tags = lambda html: re.findall(r"<(\w+)((?:\s+(?:id|class|data-me|href|src)=\"[^\"]*\")*)", html)
+    assert tags(en.text) == tags(page)
+    assert not re.search("[əƏğış]", re.sub(r"<[^>]+>", " ", en.text))

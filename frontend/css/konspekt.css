@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Writing konspekti (Learn → Writing konspekti). Scoped under .wk.
+   Uses the app tokens from app.css; adds sentence-role colours and the
+   teacher's red-pen board notes. Page content: frontend/konspekt/writing.html
+   ========================================================================== */
+
+.wk {
+  --wk-pen: #c62f2f;
+  --wk-para: #6b4fb8;
+  --wk-topic: #2747a8;
+  --wk-expl: #5e687c;
+  --wk-res: #1c8455;
+  --wk-ex: #b26b00;
+  --wk-hand: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+  display: flex; flex-direction: column; gap: 18px; min-width: 0;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .wk {
+    --wk-pen: #f27a7a; --wk-para: #b9a2f2; --wk-topic: #93abff; --wk-expl: #a3acbe; --wk-res: #5fcb9b; --wk-ex: #e6b55e;
+  }
+}
+:root[data-theme="dark"] .wk {
+  --wk-pen: #f27a7a; --wk-para: #b9a2f2; --wk-topic: #93abff; --wk-expl: #a3acbe; --wk-res: #5fcb9b; --wk-ex: #e6b55e;
+}
+
+.wk-layout { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 20px; align-items: start; }
+.wk-toc .kb-cat:first-child { padding-top: 4px; }
+.wk-toc a.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.wk-tools { display: flex; align-items: center; gap: 8px; padding: 8px; font-size: 13px; color: var(--text-2); border-bottom: 1px solid var(--border); margin-bottom: 4px; cursor: pointer; }
+.wk-tools input { accent-color: var(--accent); width: 16px; height: 16px; }
+@media (max-width: 1100px) {
+  .wk-layout { grid-template-columns: minmax(0, 1fr); }
+  .wk-toc { position: static; max-height: 260px; }
+}
+
+/* hero + parts */
+.wk .hero { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 26px 28px 22px; position: relative; box-shadow: var(--shadow-sm); }
+.wk .hero h1 { font-size: clamp(26px, 3.4vw, 36px); line-height: 1.1; letter-spacing: -.02em; margin: 0 0 10px; text-wrap: balance; }
+.wk .hero p { margin: 0; color: var(--text-2); max-width: 64ch; }
+.wk .hero .pen-note { display: inline-block; margin-top: 12px; transform: rotate(-2deg); }
+.wk .facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+.wk .fact { border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; background: var(--surface-2); }
+.wk .fact b { display: block; margin-bottom: 6px; }
+.wk .fact ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 14px; color: var(--text-2); }
+.wk .fact strong { color: var(--text); font-variant-numeric: tabular-nums; }
+.wk .part { display: flex; align-items: baseline; gap: 12px; margin-top: 14px; scroll-margin-top: calc(var(--topbar-h) + 16px); }
+.wk .part .tag { font-weight: 750; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--surface); background: var(--text); padding: 4px 10px; border-radius: 6px; }
+.wk .part h2 { font-size: clamp(22px, 2.8vw, 30px); letter-spacing: -.02em; margin: 0; line-height: 1.15; }
+
+/* sheets */
+.wk .sheet { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px 26px; box-shadow: var(--shadow-sm); scroll-margin-top: calc(var(--topbar-h) + 16px); min-width: 0; }
+.wk .sheet > h3 { font-size: 21px; letter-spacing: -.01em; margin: 0 0 4px; text-wrap: balance; }
+.wk .sheet .src { font-size: 12.5px; color: var(--text-3); margin: 0 0 14px; }
+.wk .sheet .src::before { content: "Mənbə: "; font-weight: 650; }
+.wk .sheet h4 { font-size: 16px; margin: 20px 0 8px; }
+.wk .sheet p { margin: 0 0 10px; max-width: 74ch; }
+.wk .sheet ul, .wk .sheet ol { margin: 0 0 10px; padding-left: 20px; }
+.wk .sheet li { margin: 3px 0; }
+.wk .lead { font-size: 15.5px; color: var(--text-2); }
+.wk .stack { display: flex; flex-direction: column; gap: 10px; }
+.wk .stack > * + * { margin-top: 0; } /* app.css .stack adds margins; this page spaces with gap */
+.wk .cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.wk .cols > * { min-width: 0; }
+@media (max-width: 820px) { .wk .cols, .wk .facts { grid-template-columns: minmax(0, 1fr); } .wk .sheet { padding: 18px 14px; } .wk .hero { padding: 20px 14px; } }
+.wk em { font-family: var(--font-reading); font-style: italic; }
+
+/* tables */
+.wk .tbl { overflow-x: auto; margin: 6px 0 14px; border: 1px solid var(--border); border-radius: var(--radius); }
+.wk table { border-collapse: collapse; width: 100%; font-size: 14px; }
+.wk th, .wk td { text-align: left; vertical-align: top; padding: 8px 12px; border-bottom: 1px solid var(--border); }
+.wk tr:last-child td { border-bottom: 0; }
+.wk th { background: var(--surface-2); font-weight: 650; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--text-3); }
+.wk .num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.wk td a { font-weight: 600; }
+
+/* teacher's red-pen board notes */
+.wk .board { border: 1px dashed color-mix(in srgb, var(--wk-pen) 55%, transparent); border-radius: var(--radius); padding: 12px 16px; background: var(--surface);
+  font-family: var(--wk-hand); color: var(--wk-pen); font-size: 17px; line-height: 1.45;
+  background-image: repeating-linear-gradient(to bottom, transparent 0 24px, color-mix(in srgb, var(--wk-pen) 12%, transparent) 24px 25px); }
+.wk .board .t { display: block; font-weight: 700; font-size: 18px; margin: 6px 0 0; }
+.wk .board .t:first-child { margin-top: 0; }
+.wk .board ul { margin: 0; padding-left: 20px; }
+.wk .board-cap { font-size: 12.5px; color: var(--text-3); margin: 6px 0 12px; }
+.wk .pen-note { font-family: var(--wk-hand); color: var(--wk-pen); font-size: 19px; font-weight: 700; line-height: 1.2; }
+
+/* callouts */
+.wk .note { border-radius: var(--radius); padding: 12px 14px; background: var(--surface-2); border: 1px solid var(--border); font-size: 14.5px; }
+.wk .note > b:first-child { display: block; margin-bottom: 4px; }
+.wk .note.me { border-color: color-mix(in srgb, var(--wk-pen) 45%, var(--border)); background: color-mix(in srgb, var(--wk-pen) 6%, var(--surface)); }
+.wk .note.me > b:first-child { color: var(--wk-pen); }
+.wk .note p:last-child, .wk .note ul:last-child { margin-bottom: 0; }
+.wk .x { color: var(--bad); font-weight: 600; }
+.wk .ok { color: var(--good); font-weight: 600; }
+
+.wk .formula { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 8px 0 14px; }
+.wk .formula span { border: 1px solid var(--border); background: var(--surface-2); border-radius: 7px; padding: 4px 10px; font-weight: 600; font-size: 14px; }
+.wk .formula i { font-style: normal; color: var(--text-3); font-weight: 700; }
+
+.wk .plan { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 8px 0 14px; }
+.wk .pbox { border: 1px solid var(--border); border-radius: 9px; padding: 10px 12px; background: var(--surface-2); min-width: 0; }
+.wk .pbox small { display: block; font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--text-3); }
+.wk .pbox b { display: block; font-size: 14.5px; margin: 2px 0 3px; }
+.wk .pbox p { font-size: 13px; margin: 0; color: var(--text-2); }
+.wk .pbox.strong { border-color: color-mix(in srgb, var(--accent) 50%, var(--border)); }
+
+.wk .ladder { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 10px 0 16px; }
+.wk .rung { border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; border-top: 4px solid var(--c); min-width: 0; }
+.wk .rung small { display: block; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--c); font-weight: 750; }
+.wk .rung b { display: block; font-size: 15px; margin: 2px 0 4px; }
+.wk .rung p { font-size: 13px; color: var(--text-2); margin: 0; }
+@media (max-width: 820px) { .wk .plan, .wk .ladder { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* sentence roles: wrapped spans get --c, the toggle (.wk.hl) paints them */
+.wk .r-para, .wk .r-th { --c: var(--wk-para); }
+.wk .r-top { --c: var(--wk-topic); }
+.wk .r-exp { --c: var(--wk-expl); }
+.wk .r-res { --c: var(--wk-res); }
+.wk .r-ex { --c: var(--wk-ex); }
+.wk .r { border-radius: 3px; padding: 1px 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.wk.hl .r { background: color-mix(in srgb, var(--c) 14%, transparent); border-bottom: 2px solid color-mix(in srgb, var(--c) 70%, transparent); }
+.wk.hl .r-exp { background: transparent; border-bottom: 2px dotted color-mix(in srgb, var(--wk-expl) 60%, transparent); }
+.wk .r-th { font-weight: 600; }
+.wk .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12.5px; color: var(--text-2); margin: 4px 0 10px; }
+.wk .legend span { display: inline-flex; align-items: center; gap: 6px; }
+.wk .legend i { width: 12px; height: 12px; border-radius: 3px; background: color-mix(in srgb, var(--c) 30%, transparent); border-bottom: 2px solid var(--c); }
+
+/* model essays */
+.wk .essay { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin: 12px 0 6px; }
+.wk .essay-h { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; justify-content: space-between; padding: 10px 14px; background: var(--surface-2); border-bottom: 1px solid var(--border); }
+.wk .essay-h .wc { font-size: 12.5px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+.wk .q { padding: 12px 14px 0; font-family: var(--font-reading); font-style: italic; color: var(--text-2); font-size: 15px; max-width: 78ch; }
+.wk .q::before { content: "Sual: "; font-family: var(--font); font-style: normal; font-weight: 700; font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--text); }
+.wk .essay figure { margin: 12px 14px 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: #fff; max-width: 620px; cursor: zoom-in; }
+.wk .essay figure img { display: block; width: 100%; height: auto; }
+.wk .body-e { padding: 12px 14px 14px; font-family: var(--font-reading); font-size: 16px; line-height: 1.72; max-width: 80ch; }
+.wk .body-e p { margin: 0 0 12px; max-width: none; }
+.wk .body-e p:last-child { margin-bottom: 0; }
+.wk .plabel { display: inline-block; font-family: var(--font); font-size: 10.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--surface); background: var(--text-2); border-radius: 4px; padding: 1px 6px; margin-right: 6px; vertical-align: 2px; }
+.wk .plabel.ov { background: var(--wk-pen); }
+.wk mark { background: color-mix(in srgb, var(--hl) 75%, transparent); color: inherit; border-radius: 3px; padding: 0 2px; }
+.wk .why { padding: 10px 14px 12px; border-top: 1px solid var(--border); font-size: 14px; }
+.wk .why ul { margin: 6px 0 0; padding-left: 20px; }
+
+/* quiz + checklists */
+.wk .quiz { display: flex; flex-direction: column; gap: 8px; }
+.wk .quiz details { border: 1px solid var(--border); border-radius: 9px; padding: 10px 14px; background: var(--surface); }
+.wk .quiz summary { cursor: pointer; font-family: var(--font-reading); font-size: 15px; list-style: none; }
+.wk .quiz summary::-webkit-details-marker { display: none; }
+.wk .quiz summary::after { content: "Tipi göstər"; float: right; font-family: var(--font); font-size: 12px; font-weight: 600; color: var(--accent); margin-left: 10px; }
+.wk .quiz details[open] summary::after { content: "Gizlət"; }
+.wk .quiz .ans { margin-top: 8px; font-size: 14px; }
+.wk .quiz .ans b { color: var(--good); }
+.wk .check { list-style: none; padding: 0 !important; }
+.wk .check li { padding-left: 28px; position: relative; margin: 7px 0; }
+.wk .check li::before { content: ""; position: absolute; left: 0; top: 3px; width: 16px; height: 16px; border: 2px solid var(--text-3); border-radius: 4px; }
+.wk footer { font-size: 13px; color: var(--text-3); padding: 6px 4px; }
+.wk footer ul { columns: 2; padding-left: 18px; }
+@media (max-width: 760px) { .wk footer ul { columns: 1; } }
+
+/* live "your essays" panel */
+.wk .me-stats { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 14px; }
+.wk .me-stat { border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 12px; background: var(--surface-2); min-width: 120px; }
+.wk .me-stat b { display: block; font-size: 20px; font-variant-numeric: tabular-nums; }
+.wk .me-stat span { font-size: 12px; color: var(--text-3); }
+.wk .me-bands { display: flex; flex-wrap: wrap; gap: 6px; }
+.wk .me-band { font-variant-numeric: tabular-nums; font-weight: 650; border-radius: 6px; padding: 2px 8px; border: 1px solid var(--border); background: var(--surface); }
+.wk .me-band.lo { color: var(--bad); border-color: color-mix(in srgb, var(--bad) 40%, var(--border)); }
+.wk .me-band.hi { color: var(--good); border-color: color-mix(in srgb, var(--good) 40%, var(--border)); }
+
+/* language switch in the notes' contents rail */
+.wk-lang { margin: 0 0 8px; flex-wrap: wrap; }
