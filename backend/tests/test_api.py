@@ -473,6 +473,33 @@ def test_exam_settings_and_stats(client):
     assert client.get("/api/stats").json()["exam"]["date"] is None
 
 
+def test_manual_results(client):
+    import json as _json
+    path = db.DATA_DIR / "manual_results.json"
+    path.write_text(_json.dumps({"speaking": [
+        {"key": "trial", "band": 6.5, "date": "2026-11-14", "note": "Trial exam",
+         "report": {"summary": "Good vocabulary.", "priorities": ["Answer every part of the cue card."]}},
+        {"key": "p1", "band": 7, "date": None, "note": "Practice (no date)"},
+        {"key": "bad"}]}), encoding="utf-8")
+    try:
+        r = importer.run_import()
+        assert any("manual_results.json" in e for e in r["errors"])          # the entry without a band
+        rows = [s for s in client.get("/api/speaking/sessions").json() if s["mode"] == "imported" and s["notes"] in ("Trial exam", "Practice (no date)")]
+        assert sorted(s["teacher_band"] for s in rows) == [6.5, 7.0]
+        undated = next(s for s in rows if s["notes"] == "Practice (no date)")
+        assert undated["created_at"] is None
+        trial = next(s for s in rows if s["notes"] == "Trial exam")
+        assert client.get(f"/api/speaking/sessions/{trial['id']}").json()["plan"]["report"]["summary"] == "Good vocabulary."
+        assert client.get("/api/stats").json()["speaking_priorities"] == ["Answer every part of the cue card."]
+        importer.run_import()                                                # idempotent: same rows
+        again = [s for s in client.get("/api/speaking/sessions").json() if s["notes"] in ("Trial exam", "Practice (no date)")]
+        assert sorted(s["id"] for s in again) == sorted(s["id"] for s in rows)
+    finally:
+        path.unlink()
+        importer.run_import()
+    assert not [s for s in client.get("/api/speaking/sessions").json() if s["notes"] in ("Trial exam", "Practice (no date)")]
+
+
 def test_listening_audio_length_and_prompt_history(client, tmp_path):
     import wave
     from backend.app.routers import tests as testsr

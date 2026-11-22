@@ -889,3 +889,9 @@ html.is-fullscreen .main-col { padding-bottom: 0; }
 @media (max-width: 1100px) { .exam-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .exam-plan { grid-column: 1 / -1; } }
 @media (max-width: 700px) { .exam-grid { grid-template-columns: minmax(0, 1fr); } }
 
+/* examiner report, focus lists */
+.examiner-report .m-orig, .ai-v .m-orig { color: var(--bad); text-decoration: line-through; text-decoration-thickness: 1px; }
+.examiner-report .m-fix, .ai-v .m-fix { color: var(--good); font-weight: 600; }
+.focus-list { margin: 0; padding-left: 1.3em; }
+.focus-list li { margin: 4px 0; }
+

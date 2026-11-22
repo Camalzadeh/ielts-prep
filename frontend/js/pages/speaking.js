@@ -524,9 +524,10 @@ async function renderSession(root, id) {
         onResult: (j) => { aiAnswers = speakingAnswers(j); aiLoose = aiAnswers.size ? [] : mistakeCorrections(j); if (lastS) draw(lastS); },
       }));
     }
-    countEl.textContent = `${fmtDate(s.created_at)} · ${responses.length} answer${responses.length === 1 ? '' : 's'}`;
+    countEl.textContent = `${s.created_at ? fmtDate(s.created_at) : 'Date not recorded'} · ${responses.length} answer${responses.length === 1 ? '' : 's'}`;
     if (!responses.length && s.teacher_band != null) {
-      respBox.replaceChildren(h('div', { class: 'card', html: `<p><b>Teacher-assessed band ${esc(fmtBand(s.teacher_band))}</b> — ${esc(s.notes || '')}</p>
+      const report = s.plan?.report;
+      respBox.replaceChildren(report ? examinerReport(s, report) : h('div', { class: 'card', html: `<p><b>Teacher-assessed band ${esc(fmtBand(s.teacher_band))}</b> — ${esc(s.notes || '')}</p>
         <p class="muted">Imported from your records (no recordings). Practise these questions again here to get recordings, transcripts and AI feedback.</p>` }));
       return;
     }
@@ -648,4 +649,34 @@ async function renderBank(root) {
   topicSel.addEventListener('change', () => { f.topic = topicSel.value; load(); });
   loadTopics();
   load();
+}
+
+/** An examiner's speaking report (data/manual_results.json -> plan.report): band, priorities, errors, notes. */
+function examinerReport(s, r) {
+  const card = h('div', { class: 'card card-pad examiner-report' });
+  card.append(h('div', { class: 'row', style: { gap: '18px', alignItems: 'center' } },
+    h('div', { class: 'ai-band' }, h('b', null, fmtBand(s.teacher_band)), h('span', null, 'Examiner band')),
+    h('div', { style: { flex: '1', minWidth: '0' } }, h('h2', { style: { margin: '0 0 4px' } }, s.notes || 'Examiner report'),
+      r.summary ? h('p', { style: { margin: 0 } }, r.summary) : null)));
+  if (asList(r.priorities).length) {
+    card.append(h('h3', null, 'Your priorities'),
+      h('ol', { class: 'focus-list' }, ...r.priorities.map((p) => h('li', null, p))));
+  }
+  if (asList(r.errors).length) {
+    const t = h('div', { class: 'table-wrap' });
+    t.innerHTML = `<table class="table"><thead><tr><th>You said</th><th>Correct form</th><th>Why</th></tr></thead><tbody>
+      ${r.errors.map((e) => `<tr><td><span class="m-orig">${esc(e.said || '')}</span></td><td><span class="m-fix">${esc(e.correct || '')}</span></td><td class="small">${esc(e.why || '')}</td></tr>`).join('')}</tbody></table>`;
+    card.append(h('h3', null, `Language errors (${r.errors.length})`), t);
+  }
+  const parts = Object.entries(r.parts || {});
+  if (parts.length || asList(r.good).length) {
+    card.append(h('h3', null, 'Notes'), h('ul', null,
+      ...asList(r.good).map((g) => h('li', null, h('b', null, 'Good: '), g)),
+      ...parts.map(([k, v]) => h('li', null, h('b', null, `${k}: `), v))));
+  }
+  if (asList(r.recommendations).length) {
+    card.append(h('details', null, h('summary', { class: 'small' }, `General recommendations (${r.recommendations.length})`),
+      h('ul', { class: 'small' }, ...r.recommendations.map((x) => h('li', null, x)))));
+  }
+  return card;
 }

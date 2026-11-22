@@ -8,6 +8,10 @@ messages and photo transcriptions). Runs as the last import step, so these bands
   of that test with the same band already exists (answers replayed from a screenshot), it is re-dated instead.
 - Writing rows ("Part1 (<start of my essay>)") -> the matching telegram-imported essay gets the band and date.
 - Speaking rows ("Part1 (Topic1-15)", "Part2 (Topic2)") -> band-only speaking sessions (mode='imported').
+
+Also `data/manual_results.json` (private): results typed in by hand, e.g. an examiner's speaking report or
+practice bands with no known date -> band-only speaking sessions keyed by "key" (plan_json.key); an examiner
+report goes into plan_json.report and is shown on the session page.
 """
 from __future__ import annotations
 
@@ -20,6 +24,7 @@ from functools import lru_cache
 from . import db
 
 DOC = db.ROOT / "My Results.docx"
+MANUAL = db.DATA_DIR / "manual_results.json"
 RAW = db.KNOWLEDGE_DIR / "raw"
 # The teacher's name as it appears as message author in the course chat archive. Kept out of the repo:
 # one line in data/teacher_name.txt (private). Without it, results are dated without the teacher's posts.
@@ -113,13 +118,14 @@ def _rows() -> list[tuple[str, str, str]]:
 
 
 def import_my_results(conn: sqlite3.Connection, errors: list[str]) -> dict:
-    stats = {"tests": 0, "redated": 0, "writing": 0, "speaking": 0, "skipped": 0}
-    if not DOC.exists():
+    stats = {"tests": 0, "redated": 0, "writing": 0, "speaking": 0, "skipped": 0, "manual": 0}
+    if not DOC.exists() and not MANUAL.exists():
         return stats
     # Rows are updated in place (not re-created) so AI analyses keep pointing at them.
     seen_attempts: set[int] = set()
     seen_sessions: set[int] = set()
-    for desc, kind, score in _rows():
+    seen_sessions |= _import_manual(conn, stats, errors)
+    for desc, kind, score in (_rows() if DOC.exists() else []):
         try:
             band = float(score)
         except ValueError:
@@ -157,6 +163,42 @@ def import_my_results(conn: sqlite3.Connection, errors: list[str]) -> dict:
                 conn.execute(f"DELETE FROM {table} WHERE id = ?", (rid,))
     realign_essay_dates(conn)
     return stats
+
+
+def _import_manual(conn, stats: dict, errors: list[str]) -> set[int]:
+    """data/manual_results.json -> band-only speaking sessions (see module docstring). Returns their ids."""
+    seen: set[int] = set()
+    if not MANUAL.exists():
+        return seen
+    try:
+        data = json.loads(MANUAL.read_text(encoding="utf-8-sig"))
+    except (OSError, ValueError) as exc:
+        errors.append(f"data/manual_results.json: {exc}")
+        # keep what was imported before rather than deleting it over a typo
+        return {r[0] for r in conn.execute("SELECT id FROM speaking_sessions WHERE mode = 'imported' "
+                                           "AND json_extract(plan_json, '$.source') = 'manual_results.json'")}
+    for item in data.get("speaking") or []:
+        key, band = item.get("key"), item.get("band")
+        if not key or not isinstance(band, (int, float)):
+            errors.append(f"data/manual_results.json: speaking entry needs 'key' and a numeric 'band': {item!r}")
+            continue
+        date = f"{item['date']}T12:00:00" if item.get("date") and len(str(item["date"])) == 10 else item.get("date")
+        plan = {"source": "manual_results.json", "key": key, "kind": item.get("kind") or "practice"}
+        if item.get("report"):
+            plan["report"] = item["report"]
+        note = item.get("note") or f"Speaking result ({key})"
+        row = conn.execute("SELECT id FROM speaking_sessions WHERE mode = 'imported' "
+                           "AND json_extract(plan_json, '$.key') = ?", (key,)).fetchone()
+        if row:
+            conn.execute("UPDATE speaking_sessions SET created_at=?, finished_at=?, plan_json=?, teacher_band=?, notes=? "
+                         "WHERE id=?", (date, date, json.dumps(plan), float(band), note, row["id"]))
+            seen.add(row["id"])
+        else:
+            cur = conn.execute("INSERT INTO speaking_sessions(created_at, finished_at, plan_json, mode, teacher_band, notes) "
+                               "VALUES (?,?,?, 'imported', ?,?)", (date, date, json.dumps(plan), float(band), note))
+            seen.add(cur.lastrowid)
+        stats["manual"] += 1
+    return seen
 
 
 def realign_essay_dates(conn) -> None:
