@@ -428,6 +428,19 @@ def mock_context(conn: sqlite3.Connection, mock_id: int, exclude_analysis: int |
 # --------------------------------------------------------------------------- progress
 def progress_context(conn: sqlite3.Connection, exclude_analysis: int | None = None) -> str:
     out = ["# Progress overview (all history)"]
+    exam = db.get_setting(conn, "exam_date") or ""
+    target = db.get_setting(conn, "target_band") or "7"
+    if exam:
+        from datetime import date
+        try:
+            left = (date.fromisoformat(exam) - date.today()).days
+            kind = db.get_setting(conn, "exam_date_kind") or "exact"
+            out.append(f"Exam: {exam} ({'booked' if kind == 'exact' else 'predicted date'}), {left} day(s) from today. "
+                       f"Target overall band: {target}. Make the plan fit the days left.")
+        except ValueError:
+            pass
+    else:
+        out.append(f"Target overall band: {target}. Exam date not set.")
     ext = conn.execute("SELECT * FROM external_results WHERE is_mine = 1 ORDER BY date").fetchall()
     if ext:
         out.append("\n## External results (trial exams / screenshots — baseline)")

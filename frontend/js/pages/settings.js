@@ -4,6 +4,7 @@ import { h, esc, icon, toast, asList } from '../ui.js';
 import { state, setProvider, onStateChange, setTheme, themePref } from '../state.js';
 import { setTitle } from '../app.js';
 import { loadAssistSettings } from '../components/assist.js';
+import { editExam } from '../components/exam.js';
 
 export async function render(root) {
   setTitle('Settings');
@@ -34,6 +35,20 @@ export async function render(root) {
     h('h2', { style: { margin: 0 } }, 'General Training reading'),
     h('p', { class: 'small muted' }, 'The library has Academic and General Training reading tests. General Training is hidden unless you switch it on here; tests you already started or submitted always stay, with their results. Mock exams always use Academic tests.'),
     h('label', { class: 'switch', style: { marginTop: '8px' } }, gtToggle, 'Show General Training reading tests')));
+
+  // ------------------------------------------------ my exam
+  const examLine = h('p', { class: 'small', style: { margin: '8px 0 0' } });
+  const drawExam = (st) => {
+    examLine.textContent = st.exam_date
+      ? `${new Date(`${st.exam_date}T12:00:00`).toLocaleDateString(undefined, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })} · ${st.exam_date_kind === 'predicted' ? 'predicted date' : 'booked'} · target band ${st.target_band || 7}`
+      : `No exam date set · target band ${st.target_band || 7}`;
+  };
+  api.get('/api/settings').then(drawExam).catch(() => {});
+  col.append(h('section', { class: 'card card-pad' },
+    h('h2', { style: { margin: 0 } }, 'My exam'),
+    h('p', { class: 'small muted' }, 'Your IELTS exam date, exact (booked) or predicted, and your target band. The dashboard shows a countdown, your readiness per skill and a plan for the days left; the AI progress analysis plans around it too.'),
+    examLine,
+    h('button', { class: 'btn sm', type: 'button', style: { marginTop: '10px' }, onclick: async () => { if (await editExam()) api.get('/api/settings').then(drawExam); } }, 'Set exam date & target')));
 
   // ------------------------------------------------ profile
   const nameInput = h('input', { class: 'input', type: 'text', id: 'user_name', placeholder: 'e.g. Aysel' });

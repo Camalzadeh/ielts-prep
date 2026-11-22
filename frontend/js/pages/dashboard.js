@@ -2,7 +2,8 @@
 import { api } from '../api.js';
 import { h, esc, icon, fmtBand, withStates, qtypeLabel, timeAgo, parseDate, emptyState, asList } from '../ui.js';
 import { analysisPanel } from '../components/analysis.js';
-import { setTitle } from '../app.js';
+import { setTitle, navigate } from '../app.js';
+import { examCard } from '../components/exam.js';
 
 const SKILLS = [
   ['listening', 'Listening', '--series-1'],
@@ -46,6 +47,12 @@ export async function render(root) {
     const est = Object.fromEntries(SKILLS.map(([k]) => [k, estimate(bot[k])]));
     const have = SKILLS.filter(([k]) => est[k] !== null);
     const overall = have.length ? roundBand(have.reduce((s, [k]) => s + est[k], 0) / have.length) : null;
+
+    // ------------------------------------------- exam countdown, readiness and plan
+    const weakTypes = asList(stats?.by_question_type).filter((x) => Number(x.total) >= 5)
+      .map((x) => ({ ...x, rate: Number(x.correct) / Number(x.total) })).sort((a, b) => a.rate - b.rate);
+    content.append(examCard({ exam: stats?.exam, est, overall, weakTypes, prios: stats?.speaking_priorities,
+      onChange: () => navigate('#/', { replace: true }) }));
 
     // ------------------------------------------- band tiles
     const tiles = h('div', { class: 'grid grid-5', style: { marginBottom: '16px' } });

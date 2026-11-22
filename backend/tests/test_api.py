@@ -457,6 +457,22 @@ def test_mock_list_bands_and_optional_writing(client):
     client.delete(f"/api/mock/{m['id']}")
 
 
+def test_exam_settings_and_stats(client):
+    from datetime import date, timedelta
+    day = (date.today() + timedelta(days=3)).isoformat()
+    s = client.put("/api/settings", json={"exam_date": day, "exam_date_kind": "predicted", "target_band": "7.5"}).json()
+    assert s["exam_date"] == day and s["target_band"] == "7.5"
+    assert client.put("/api/settings", json={"exam_date": "22/11/2026"}).status_code == 422
+    assert client.put("/api/settings", json={"exam_date_kind": "soon"}).status_code == 422
+    assert client.put("/api/settings", json={"target_band": "7.3"}).status_code == 422
+    exam = client.get("/api/stats").json()["exam"]
+    assert exam == {"date": day, "kind": "predicted", "days_left": 3, "target": 7.5}
+    with db.session(readonly=True) as conn:
+        assert "3 day(s) from today" in context.progress_context(conn)
+    client.put("/api/settings", json={"exam_date": "", "exam_date_kind": "exact", "target_band": "7"})
+    assert client.get("/api/stats").json()["exam"]["date"] is None
+
+
 def test_listening_audio_length_and_prompt_history(client, tmp_path):
     import wave
     from backend.app.routers import tests as testsr

@@ -858,3 +858,34 @@ html.is-fullscreen .main-col { padding-bottom: 0; }
 .link-badge { border: 0; cursor: pointer; font: inherit; font-size: 12px; }
 @media (max-width: 900px) { .progress-body { grid-template-columns: minmax(0, 1fr); } }
 
+/* ---------- Exam countdown card (dashboard) ---------- */
+.exam-card { margin-bottom: 16px; padding: 18px 20px; }
+.exam-empty { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.exam-icon { width: 46px; height: 46px; border-radius: 12px; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; }
+.exam-icon svg { width: 24px; height: 24px; }
+.exam-grid { display: grid; grid-template-columns: minmax(190px, .8fr) minmax(260px, 1.3fr) minmax(280px, 1.5fr); gap: 22px; align-items: start; }
+.exam-grid h3 { margin: 0 0 10px; font-size: 14px; }
+.exam-count { padding: 14px 16px; border-radius: 14px; background: var(--accent-soft); }
+.exam-count.soon { background: var(--warn-soft); }
+.exam-days { font-size: 40px; font-weight: 720; letter-spacing: -.02em; line-height: 1.05; margin-top: 2px; font-variant-numeric: tabular-nums; }
+.exam-date { font-size: 13px; color: var(--text-2); margin-top: 4px; }
+.ready-row { display: grid; grid-template-columns: 70px minmax(80px, 1fr) 34px 84px; align-items: center; gap: 8px; padding: 5px 0; }
+.ready-row.overall { border-top: 1px solid var(--border); margin-top: 4px; padding-top: 9px; font-weight: 650; }
+.ready-track { position: relative; height: 10px; border-radius: 5px; background: var(--surface-3); overflow: visible; }
+.ready-track .bar-fill { height: 100%; border-radius: 5px; }
+.ready-target { position: absolute; top: -4px; bottom: -4px; width: 2px; background: var(--text); border-radius: 1px; }
+.ready-gap.high { color: var(--good); }
+.ready-gap.mid { color: var(--warn); }
+.ready-gap.low { color: var(--bad); }
+.ready-gap.none { color: var(--text-3); }
+.exam-plan { display: flex; flex-direction: column; gap: 8px; }
+.plan-item { display: grid; grid-template-columns: 82px 1fr; gap: 10px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface-2); }
+.plan-item.exam-day { border-color: var(--accent); background: var(--accent-soft); }
+.plan-when { font-size: 12.5px; font-weight: 650; color: var(--text-2); }
+.plan-task { display: flex; gap: 7px; font-size: 13px; line-height: 1.45; }
+.plan-task + .plan-task { margin-top: 4px; }
+.plan-task svg { width: 15px; height: 15px; flex: 0 0 15px; margin-top: 2px; color: var(--accent); }
+.field { display: flex; flex-direction: column; gap: 5px; }
+@media (max-width: 1100px) { .exam-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .exam-plan { grid-column: 1 / -1; } }
+@media (max-width: 700px) { .exam-grid { grid-template-columns: minmax(0, 1fr); } }
+

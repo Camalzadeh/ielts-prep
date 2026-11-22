@@ -1,6 +1,7 @@
 """AI analysis endpoints + settings."""
 from __future__ import annotations
 
+import re
 import sqlite3
 from typing import Any, Optional
 
@@ -98,6 +99,18 @@ def put_settings(body: dict[str, Any] = Body(...), conn: sqlite3.Connection = De
     for key, value in body.items():
         if not isinstance(key, str) or not key or len(key) > 100:
             raise HTTPException(422, "invalid setting key")
+        if key == "exam_date" and value not in (None, "") and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(value)):
+            raise HTTPException(422, "exam_date must be YYYY-MM-DD (or empty)")
+        if key == "exam_date_kind" and value not in ("exact", "predicted"):
+            raise HTTPException(422, "exam_date_kind must be exact or predicted")
+        if key == "target_band":
+            try:
+                tb = float(value)
+            except (TypeError, ValueError):
+                tb = -1
+            if not (4 <= tb <= 9 and (tb * 2).is_integer()):
+                raise HTTPException(422, "target_band must be a band from 4 to 9 in steps of 0.5")
+            value = str(tb).rstrip("0").rstrip(".")
         if key == "ai_provider" and value not in ai_runner.PROVIDERS:
             raise HTTPException(422, f"ai_provider must be one of {list(ai_runner.PROVIDERS)}")
         if key.startswith("ai_cmd_"):

@@ -32,6 +32,9 @@ DEFAULT_SETTINGS: dict[str, str] = {
     "translate_to": "az",     # study assistant: target language of the translator
     "assist_in_mock": "0",    # "1" = study assistant also available during mock exams
     "show_general_training": "0",  # "1" = General Training reading tests in the library (mocks never use them)
+    "exam_date": "",          # the learner's IELTS exam day, YYYY-MM-DD ("" = not set): dashboard countdown + plan
+    "exam_date_kind": "exact",  # "exact" (booked) or "predicted" (a planned / estimated date)
+    "target_band": "7",       # overall band the learner is aiming for
 }
 
 _init_lock = threading.Lock()

@@ -124,4 +124,31 @@ def stats(conn: sqlite3.Connection = Depends(db.get_db)) -> dict:
 
     return {"bands_over_time": bands, "by_question_type": by_type, "counts": counts,
             "streak_days": streak(_activity_days(conn)), "recent": recent[:15],
-            "external_results": external, "baseline": baseline}
+            "external_results": external, "baseline": baseline, "exam": exam_info(conn),
+            "speaking_priorities": speaking_priorities(conn)}
+
+
+def exam_info(conn: sqlite3.Connection) -> dict:
+    """The exam day from Settings (exact or predicted), days left and the target band."""
+    raw = db.get_setting(conn, "exam_date") or ""
+    try:
+        target = float(db.get_setting(conn, "target_band") or 7)
+    except ValueError:
+        target = 7.0
+    out = {"date": None, "kind": db.get_setting(conn, "exam_date_kind") or "exact", "days_left": None, "target": target}
+    try:
+        d = date.fromisoformat(raw)
+    except ValueError:
+        return out
+    out.update(date=d.isoformat(), days_left=(d - date.today()).days)
+    return out
+
+
+def speaking_priorities(conn: sqlite3.Connection) -> list[str]:
+    """Priorities from the latest examiner speaking report (data/manual_results.json), if any."""
+    for (plan,) in conn.execute("SELECT plan_json FROM speaking_sessions WHERE plan_json LIKE '%\"report\"%' "
+                                "ORDER BY COALESCE(created_at, '') DESC, id DESC"):
+        rep = (db.loads(plan, {}) or {}).get("report") or {}
+        if rep.get("priorities"):
+            return [str(x) for x in rep["priorities"]][:5]
+    return []
