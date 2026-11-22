@@ -167,10 +167,16 @@ export function analysisPanel(opts) {
   function resultView(row) {
     const wrap = h('div');
     const j = parseMaybeJSON(row.result_json, null);
-    if (j && typeof j === 'object') wrap.append(highlightsView(j));
+    const hasJson = j && typeof j === 'object';
+    if (hasJson) wrap.append(overviewView(j, row.result_md || ''));
+    // the full written report (and the per-item lists) folded away under the visual summary
+    const full = h('details', { class: 'ai-full', open: !hasJson });
+    full.append(h('summary', null, h('span', { html: icon('doc') }), 'Full report'));
     const md = h('div', { class: 'md' });
-    md.innerHTML = renderMarkdown(row.result_md || (j ? '' : '_No report text returned._'));
-    wrap.append(md);
+    md.innerHTML = renderMarkdown(row.result_md || (hasJson ? '' : '_No report text returned._'));
+    full.append(md);
+    if (hasJson) full.append(highlightsView(j, { listsOnly: true }));
+    wrap.append(full);
     wrap.append(h('div', { class: 'small muted', style: { marginTop: '14px' } },
       `${providerName(row.provider)} · ${fmtDate(row.finished_at || row.created_at)}`));
     return wrap;
@@ -200,11 +206,114 @@ const CRIT_NAMES = {
   GRA: 'Grammar Range & Accuracy', FC: 'Fluency & Coherence', P: 'Pronunciation', PR: 'Pronunciation',
 };
 
-export function highlightsView(j) {
+const CRIT_LONG = {
+  ...CRIT_NAMES, L: 'Listening', R: 'Reading', W: 'Writing', S: 'Speaking',
+  listening: 'Listening', reading: 'Reading', writing: 'Writing', speaking: 'Speaking',
+};
+const pretty = (s) => String(s || '').replace(/[-_]+/g, ' ').replace(/\s+/g, ' ').trim().replace(/^./, (c) => c.toUpperCase());
+const num = (v) => (v && typeof v === 'object' ? Number(v.band ?? v.score) : Number(v));
+
+/** First sentence of the report's Summary section (headline for analyses made before `headline` existed). */
+function summaryLine(md) {
+  const m = md.match(/##\s*Summary\s*\n+([\s\S]*?)(?:\n##|$)/i);
+  const text = (m ? m[1] : md).replace(/[*_`>#]/g, '').replace(/\s+/g, ' ').trim();
+  const first = text.match(/^(.{20,260}?[.!?])(\s|$)/);
+  if (first) return first[1];
+  const cut = text.slice(0, 200);
+  return text.length > 200 ? `${cut.slice(0, cut.lastIndexOf(' ') > 120 ? cut.lastIndexOf(' ') : 200)}…` : cut;
+}
+
+/** Group mistakes into causes when the analysis has no `causes` list (older reports). */
+function causesOf(j) {
+  if (Array.isArray(j.causes) && j.causes.length) {
+    return j.causes.map((c) => ({ label: String(c.label ?? c.cause ?? c.name ?? ''), count: Number(c.count ?? c.n ?? 0) }))
+      .filter((c) => c.label && c.count > 0).sort((a, b) => b.count - a.count);
+  }
+  const counts = new Map();
+  for (const m of Array.isArray(j.mistakes) ? j.mistakes : []) {
+    if (!m || typeof m !== 'object' || !m.category) continue;
+    const k = pretty(m.category);
+    counts.set(k, (counts.get(k) || 0) + 1);
+  }
+  return [...counts].map(([label, count]) => ({ label, count })).sort((a, b) => b.count - a.count);
+}
+
+/**
+ * Visual summary of one analysis: band + headline, criteria against the target band, what went wrong (chart)
+ * and up to three focus cards. Works with older analyses too (derived headline / causes / tips).
+ */
+export function overviewView(j, md = '') {
+  const wrap = h('div', { class: 'ai-v' });
+  const band = j.band ?? j.overall_band ?? j.estimated_band;
+  const target = Number(state.settings?.target_band || 7);
+  const headline = (typeof j.headline === 'string' && j.headline.trim()) || summaryLine(md);
+  const top = h('div', { class: 'ai-v-top' });
+  if (band !== undefined && band !== null) top.append(h('div', { class: 'ai-band' }, h('b', null, fmtBand(band) === '–' ? String(band) : fmtBand(band)), h('span', null, 'Est. band')));
+  const right = h('div', { class: 'ai-v-head' });
+  if (headline) right.append(h('p', { class: 'ai-headline' }, headline));
+  const strengths = (Array.isArray(j.strengths) ? j.strengths : []).filter(Boolean).slice(0, 4);
+  if (strengths.length) right.append(h('div', { class: 'ai-chips' }, ...strengths.map((x) => h('span', { class: 'chip good-chip', title: String(x) }, '✓ ', String(x).length > 70 ? `${String(x).slice(0, 67)}…` : String(x)))));
+  top.append(right);
+  wrap.append(top);
+
+  const panels = h('div', { class: 'ai-v-grid' });
+  // ------------------------------------------------ criteria vs target
+  const crit = j.criteria && typeof j.criteria === 'object' ? Object.entries(j.criteria).filter(([, v]) => Number.isFinite(num(v))) : [];
+  if (crit.length) {
+    const box = h('div', { class: 'ai-v-panel' }, h('h3', null, 'Scores'), h('div', { class: 'small muted' }, `Line = your target ${fmtBand(target)}`));
+    const lo = 4, hi = 9, pos = (b) => `${((Math.min(hi, Math.max(lo, b)) - lo) / (hi - lo)) * 100}%`;
+    for (const [k, v] of crit) {
+      const b = num(v), gap = target - b;
+      const tone = gap <= 0 ? 'high' : gap <= 0.5 ? 'mid' : 'low';
+      const row = h('div', { class: 'ready-row', title: CRIT_LONG[k] || k });
+      row.innerHTML = `<span class="small">${esc(CRIT_LONG[k] || pretty(k))}</span>
+        <div class="ready-track" role="img" aria-label="${esc(CRIT_LONG[k] || k)} ${fmtBand(b)}, target ${fmtBand(target)}"><div class="bar-fill ${tone}" style="width:${pos(b)}"></div><div class="ready-target" style="left:${pos(target)}"></div></div>
+        <span class="small num">${fmtBand(b)}</span><span class="small ready-gap ${tone}">${gap <= 0 ? '✓' : `+${gap.toFixed(1)}`}</span>`;
+      box.append(row);
+    }
+    panels.append(box);
+  }
+  // ------------------------------------------------ what went wrong
+  const causes = causesOf(j).slice(0, 6);
+  const flat = causes.length && causes.every((c) => c.count === 1);   // older reports: one entry per category
+  if (flat) {
+    panels.append(h('div', { class: 'ai-v-panel' }, h('h3', null, 'Mistake types'),
+      h('div', { class: 'ai-chips', style: { marginTop: '8px' } }, ...causes.map((c) => h('span', { class: 'chip' }, c.label)))));
+  } else if (causes.length) {
+    const max = Math.max(...causes.map((c) => c.count));
+    const total = causes.reduce((n, c) => n + c.count, 0);
+    const box = h('div', { class: 'ai-v-panel' }, h('h3', null, 'What went wrong'), h('div', { class: 'small muted' }, `${total} in total, biggest first`));
+    for (const c of causes) {
+      const row = h('div', { class: 'cause-row' });
+      row.innerHTML = `<span class="small cause-label" title="${esc(c.label)}">${esc(c.label)}</span>
+        <div class="bar-track" role="img" aria-label="${esc(c.label)}: ${c.count}"><div class="bar-fill cause-fill" style="width:${Math.max(6, (c.count / max) * 100)}%"></div></div>
+        <span class="small num">${c.count}</span>`;
+      box.append(row);
+    }
+    panels.append(box);
+  }
+  if (panels.childNodes.length) wrap.append(panels);
+
+  // ------------------------------------------------ focus
+  let focus = (Array.isArray(j.focus) ? j.focus : []).filter((f) => f && (f.title || f.how)).slice(0, 3);
+  if (!focus.length) focus = (Array.isArray(j.tips) ? j.tips : []).slice(0, 3).map((t) => ({ title: '', how: typeof t === 'string' ? t : (t.text || '') }));
+  if (focus.length) {
+    wrap.append(h('h3', { class: 'ai-v-title' }, 'Focus on these'));
+    wrap.append(h('div', { class: 'focus-cards' }, ...focus.map((f, i) => h('div', { class: 'focus-card' },
+      h('div', { class: 'focus-num' }, String(i + 1)),
+      h('div', null,
+        f.title ? h('b', null, f.title) : null,
+        f.why ? h('div', { class: 'small muted' }, f.why) : null,
+        f.how ? h('div', { class: 'focus-how' }, f.how) : null)))));
+  }
+  return wrap;
+}
+
+export function highlightsView(j, { listsOnly = false } = {}) {
   const wrap = h('div');
   const band = j.band ?? j.overall_band ?? j.estimated_band;
   const crit = j.criteria && typeof j.criteria === 'object' ? j.criteria : null;
-  if (band !== undefined && band !== null || crit) {
+  if (!listsOnly && (band !== undefined && band !== null || crit)) {
     const row = h('div', { class: 'ai-highlights' });
     row.append(band !== undefined && band !== null
       ? h('div', { class: 'ai-band' }, h('b', null, fmtBand(band) === '–' ? String(band) : fmtBand(band)), h('span', null, 'Est. band'))
@@ -255,10 +364,10 @@ export function highlightsView(j) {
     wrap.append(ul);
   }
   const tips = Array.isArray(j.tips) ? j.tips : [];
-  if (tips.length) {
+  if (tips.length && !listsOnly) {
     wrap.append(h('h3', null, 'Tips'));
     wrap.append(h('ul', { class: 'tips' }, ...tips.map((t) => h('li', { html: sanitize(typeof t === 'string' ? esc(t) : esc(t.text || JSON.stringify(t))) }))));
   }
-  if (wrap.childNodes.length) wrap.append(h('hr', { style: { border: '0', borderTop: '1px solid var(--border)', margin: '18px 0' } }));
+  if (wrap.childNodes.length && !listsOnly) wrap.append(h('hr', { style: { border: '0', borderTop: '1px solid var(--border)', margin: '18px 0' } }));
   return wrap;
 }

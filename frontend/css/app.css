@@ -895,3 +895,26 @@ html.is-fullscreen .main-col { padding-bottom: 0; }
 .focus-list { margin: 0; padding-left: 1.3em; }
 .focus-list li { margin: 4px 0; }
 
+/* ---------- AI analysis: visual summary ---------- */
+.ai-v { margin-bottom: 14px; }
+.ai-v-top { display: flex; gap: 16px; align-items: center; margin-bottom: 14px; }
+.ai-v-head { flex: 1; min-width: 0; }
+.ai-headline { font-size: 16.5px; line-height: 1.45; font-weight: 600; margin: 0 0 8px; }
+.ai-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.good-chip { background: var(--good-soft); color: var(--good); border-color: transparent; cursor: default; }
+.ai-v-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-bottom: 14px; }
+.ai-v-panel { border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; background: var(--surface-2); }
+.ai-v-panel h3 { margin: 0; font-size: 14px; }
+.ai-v-panel .ready-row { grid-template-columns: minmax(96px, 1.1fr) minmax(70px, 1.4fr) 30px 34px; }
+.cause-row { display: grid; grid-template-columns: minmax(110px, 1.3fr) minmax(70px, 1.4fr) 24px; align-items: center; gap: 8px; padding: 5px 0; }
+.cause-label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cause-fill { background: var(--series-1); }
+.ai-v-title { margin: 4px 0 8px; font-size: 14px; }
+.focus-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+.focus-card { display: flex; gap: 10px; border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: var(--surface); }
+.focus-num { flex: 0 0 26px; height: 26px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-weight: 700; display: grid; place-items: center; font-size: 13px; }
+.focus-how { font-size: 13.5px; margin-top: 4px; line-height: 1.45; }
+.ai-full { border-top: 1px solid var(--border); padding-top: 10px; }
+.ai-full > summary { cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--text-2); padding: 4px 0; }
+.ai-full > summary svg { width: 15px; height: 15px; }
+.ai-full[open] > summary { margin-bottom: 8px; }
